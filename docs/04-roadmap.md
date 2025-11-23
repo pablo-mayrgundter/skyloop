@@ -1,39 +1,33 @@
-# Roadmap
+# Roadmap (Cargo-First)
 
-This document outlines the phased deployment plan for the Skyloop project.
+This document outlines a cargo-first deployment plan for the Skyloop project.
 
-## Phase 0: Research & Development
+## Phase 0 – Research & Development
+- Conduct feasibility studies for buoyant vacuum tubes and dart-like cargo pods.
+- Develop prototype pods and tube segments optimized for cargo payloads, including loading and unloading mechanisms.
+- Work with regulators to define certification pathways for unmanned high-altitude cargo transport.
 
-- Establish research partnerships with universities and aerospace companies.
-- Develop materials and buoyancy prototypes.
-- Simulate stratospheric tube dynamics and pod performance.
+## Phase 1 – Demonstrator Segment (Cargo)
+- Build a 10‑50 km test segment anchored near an aerospace facility to carry unmanned cargo pods.
+- Demonstrate safe launch, travel, and recovery of cargo payloads with buoyant lift cells and vacuum integrity.
+- Validate energy recovery, maintenance procedures and reliability at operational speeds.
 
-## Phase 1: Demonstrator Segment
+## Phase 2 – Commercial Cargo Route
+- Deploy the first operational cargo corridor between two logistics hubs (e.g., Los Angeles–San Francisco or New York–Chicago).
+- Operate high-frequency cargo pods carrying high-value, time-sensitive goods, integrating with existing supply chains.
+- Refine automated loading/unloading, vertical access at hubs, and optimize throughput and unit economics.
 
-- Build a 10–50 km prototype tube segment anchored near an existing aerospace facility.
-- Test buoyant lift cells, vacuum integrity and launch/recovery mechanisms.
-- Validate pod performance at Mach 2.
+## Phase 3 – Extended Cargo Network & Passenger Trials
+- Expand the cargo network across multiple city pairs, including transcontinental corridors.
+- Begin limited passenger trials using modified pods once safety is thoroughly demonstrated in cargo operations.
+- Adapt station and tube designs to support both cargo pods and early passenger capsules.
 
-## Phase 2: First Commercial Route
+## Phase 4 – Global Network
+- Construct transoceanic segments to connect major continents for cargo transport, gradually introducing passenger service.
+- Scale manufacturing of pods and tube segments while building out global maintenance and logistics operations.
+- Collaborate with international regulators to establish standards for stratospheric cargo and passenger transport.
 
-- Deploy a regional corridor (e.g., Los Angeles–San Francisco) with stations every 30 km.
-- Certify the system with regulatory authorities.
-- Begin limited passenger operations with commuter pods.
-
-## Phase 3: Intercontinental Expansion
-
-- Construct a long-haul corridor linking New York and London, with mid-ocean support platforms.
-- Introduce Mach 4 intercontinental pods.
-- Scale station infrastructure for high throughput.
-
-## Phase 4: Global Network
-
-- Extend corridors to connect major global cities such as Tokyo, Dubai, Paris and Singapore.
-- Integrate with existing transportation networks for seamless first/last mile access.
-- Expand cargo variants for rapid logistics.
-
-## Phase 5: Autonomous Cargo & Continuous Improvement
-
-- Deploy dedicated cargo pods and unmanned operations.
-- Refine materials, energy recovery and service models.
-- Work towards fully autonomous maintenance and operations across the network.
+## Phase 5 – Continuous Improvement & Autonomous Operation
+- Transition to fully autonomous cargo and passenger operations with minimal human oversight.
+- Enhance pod designs, improve energy efficiency and increase throughput.
+- Explore new business models and integration with urban logistics networks as the system matures.
