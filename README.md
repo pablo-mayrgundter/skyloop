@@ -1,5 +1,7 @@
 # Skyloop  
 
+![Skyloop pod and tube](docs/imgs/skyloop-pod-tube.png)  
+
 Skyloop is a vision for a buoyant, near‑vacuum sky transport system connecting major cities via stratospheric corridors. By suspending lightweight tubes high above the weather and launching tiny dart‑like pods inside them, Skyloop aims to deliver intercity travel at Mach 2–6 speeds with energy efficiency and throughput orders of magnitude better than current aviation.  
 
 ## Documents  
