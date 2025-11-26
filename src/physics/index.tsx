@@ -1,15 +1,15 @@
 import { ReactNode } from 'react'
-import { RigidBody } from '@react-three/rapier'
 import { useFrame } from '@react-three/fiber'
 import { useSimulationStore } from '../state/simulationStore'
 
 // TODO: Refactor to use react-three-rapier Physics component API
-// World and RigidBodyDesc are not exported from @react-three/rapier v1.4
+// World and RigidBodyDesc are not exported from @react-three/rapier v2.x
 // Physics should be managed through the Physics component
 
 export const usePhysicsBody = (descriptor: any) => {
   // TODO: Implement using react-three-rapier API
-  return { ref: undefined as unknown as React.RefObject<RigidBody> }
+  // Using any for now since RigidBody type isn't easily accessible
+  return { ref: undefined as unknown as React.RefObject<any> }
 }
 
 export const PhysicsProvider = ({ children, mode }: { children: ReactNode; mode: string }) => {
