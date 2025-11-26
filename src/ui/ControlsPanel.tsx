@@ -1,14 +1,12 @@
 import { useSimulationStore } from '../state/simulationStore'
 
 const ControlsPanel = () => {
-  const { isPlaying, play, pause, simSpeed, setSimSpeed, toggleOverlay } = useSimulationStore((state) => ({
-    isPlaying: state.isPlaying,
-    play: state.play,
-    pause: state.pause,
-    simSpeed: state.simSpeed,
-    setSimSpeed: state.setSimSpeed,
-    toggleOverlay: state.toggleOverlay
-  }))
+  const isPlaying = useSimulationStore((state) => state.isPlaying)
+  const play = useSimulationStore((state) => state.play)
+  const pause = useSimulationStore((state) => state.pause)
+  const simSpeed = useSimulationStore((state) => state.simSpeed)
+  const setSimSpeed = useSimulationStore((state) => state.setSimSpeed)
+  const toggleOverlay = useSimulationStore((state) => state.toggleOverlay)
 
   return (
     <div className="controls-grid">

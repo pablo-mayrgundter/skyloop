@@ -1,4 +1,4 @@
-export type SimulationMode = 'firstPerson' | 'birdseye'
+export type SimulationMode = 'firstPerson' | 'birdseye' | 'follow'
 
 export type SkyloopModuleId =
   | 'main'

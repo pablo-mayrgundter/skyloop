@@ -10,6 +10,12 @@ const ModeSwitcher = ({ value, onChange }: { value: SimulationMode; onChange: (m
         First Person
       </button>
       <button
+        className={`tab-button ${value === 'follow' ? 'active' : ''}`}
+        onClick={() => onChange('follow')}
+      >
+        Follow
+      </button>
+      <button
         className={`tab-button ${value === 'birdseye' ? 'active' : ''}`}
         onClick={() => onChange('birdseye')}
       >

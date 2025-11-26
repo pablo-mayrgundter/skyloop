@@ -1,4 +1,4 @@
-import { act } from 'react-dom/test-utils'
+import { act } from 'react'
 import { useSimulationStore } from '../src/state/simulationStore'
 
 describe('simulation store', () => {

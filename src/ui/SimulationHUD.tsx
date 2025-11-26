@@ -1,12 +1,10 @@
 import { useSimulationStore } from '../state/simulationStore'
 
 const SimulationHUD = () => {
-  const { time, simSpeed, mode, isPlaying } = useSimulationStore((state) => ({
-    time: state.time,
-    simSpeed: state.simSpeed,
-    mode: state.mode,
-    isPlaying: state.isPlaying
-  }))
+  const time = useSimulationStore((state) => state.time)
+  const simSpeed = useSimulationStore((state) => state.simSpeed)
+  const mode = useSimulationStore((state) => state.mode)
+  const isPlaying = useSimulationStore((state) => state.isPlaying)
 
   return (
     <div className="controls-grid">

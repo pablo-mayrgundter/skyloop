@@ -14,10 +14,8 @@ const modules: { id: SkyloopModuleId; label: string }[] = [
 ]
 
 const ModuleSelector = () => {
-  const { selectedModule, setSelectedModule } = useSimulationStore((state) => ({
-    selectedModule: state.selectedModule,
-    setSelectedModule: state.setSelectedModule
-  }))
+  const selectedModule = useSimulationStore((state) => state.selectedModule)
+  const setSelectedModule = useSimulationStore((state) => state.setSelectedModule)
 
   return (
     <div className="module-list">

@@ -4,11 +4,9 @@ import LoopGliders from '../../three/loop/LoopGliders'
 import { useSimulationStore } from '../../state/simulationStore'
 
 const GlidersModule = () => {
-  const { play, pause, isPlaying } = useSimulationStore((state) => ({
-    play: state.play,
-    pause: state.pause,
-    isPlaying: state.isPlaying
-  }))
+  const play = useSimulationStore((state) => state.play)
+  const pause = useSimulationStore((state) => state.pause)
+  const isPlaying = useSimulationStore((state) => state.isPlaying)
 
   return (
     <div className="canvas-wrapper" style={{ height: 320 }}>
