@@ -1,0 +1,16 @@
+import react from '@vitejs/plugin-react-swc'
+import {defineConfig} from 'vite'
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 5173,
+    host: true
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    setupFiles: './vitest.setup.ts',
+    exclude: ['**/node_modules/**', '**/dist/**', '**/tests/**']
+  }
+})
