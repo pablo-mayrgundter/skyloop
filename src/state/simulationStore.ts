@@ -1,6 +1,6 @@
-import {create} from 'zustand'
-import {DEFAULT_SIM_SPEED} from '../config/simulation'
-import {OverlayFlags, SimulationMode, SkyloopModuleId} from '../types'
+import { create } from 'zustand'
+import { DEFAULT_SIM_SPEED } from '../config/simulation'
+import { OverlayFlags, SimulationMode, SkyloopModuleId } from '../types'
 
 type SimulationState = {
   time: number

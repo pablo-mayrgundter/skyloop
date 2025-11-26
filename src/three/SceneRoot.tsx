@@ -1,7 +1,7 @@
-import {Environment} from '@react-three/drei'
-import {useMemo} from 'react'
-import {Color, DoubleSide, MeshStandardMaterial} from 'three'
-import {useSimulationStore} from '../state/simulationStore'
+import { Environment } from '@react-three/drei'
+import { useMemo } from 'react'
+import { Color, DoubleSide, MeshStandardMaterial } from 'three'
+import { useSimulationStore } from '../state/simulationStore'
 import BirdsEyeRig from './cameras/BirdsEyeRig'
 import FirstPersonRig from './cameras/FirstPersonRig'
 import Globe from './Globe'
@@ -27,7 +27,7 @@ const Atmosphere = () => {
 
 const SceneRoot = () => {
   const mode = useSimulationStore((s) => s.mode)
-  const {showAtmosphere, showGliders, showSections, showTethers} = useSimulationStore((s) => ({
+  const { showAtmosphere, showGliders, showSections, showTethers } = useSimulationStore((s) => ({
     showAtmosphere: s.showAtmosphere,
     showGliders: s.showGliders,
     showSections: s.showSections,

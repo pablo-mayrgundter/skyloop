@@ -1,5 +1,5 @@
-import {RapierRigidBody, RigidBodyProps} from '@react-three/rapier'
-import {useMemo} from 'react'
+import { RapierRigidBody, RigidBodyProps } from '@react-three/rapier'
+import { useMemo } from 'react'
 
 export type PhysicsBodyConfig = RigidBodyProps & {
   initialVelocity?: [number, number, number]

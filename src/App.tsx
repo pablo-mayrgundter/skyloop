@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import ModuleLabView from './views/ModuleLabView'
 import MainSimulationView from './views/MainSimulationView'
 import ModeSwitcher from './ui/ModeSwitcher'

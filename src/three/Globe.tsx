@@ -1,8 +1,8 @@
-import {Line} from '@react-three/drei'
-import {useMemo} from 'react'
-import {Vector3} from 'three'
-import {EARTH_RADIUS_KM, LOS_ANGELES, RENDER_SCALE, SAN_FRANCISCO} from '../config/simulation'
-import {GreatCirclePoint} from '../types'
+import { Line } from '@react-three/drei'
+import { useMemo } from 'react'
+import { Vector3 } from 'three'
+import { EARTH_RADIUS_KM, LOS_ANGELES, RENDER_SCALE, SAN_FRANCISCO } from '../config/simulation'
+import { GreatCirclePoint } from '../types'
 
 const degToRad = (deg: number) => (deg * Math.PI) / 180
 
@@ -43,4 +43,4 @@ const Globe = () => {
 }
 
 export default Globe
-export {buildGreatCircleArc}
+export { buildGreatCircleArc }

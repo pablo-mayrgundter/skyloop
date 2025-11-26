@@ -1,12 +1,12 @@
-import {Physics} from '@react-three/rapier'
-import {Canvas, useFrame} from '@react-three/fiber'
-import {Suspense} from 'react'
-import {Color} from 'three'
-import {useSimulationStore} from '../state/simulationStore'
+import { Physics } from '@react-three/rapier'
+import { Canvas, useFrame } from '@react-three/fiber'
+import { Suspense } from 'react'
+import { Color } from 'three'
+import { useSimulationStore } from '../state/simulationStore'
 import SceneRoot from './SceneRoot'
 
 const SimulationTicker = () => {
-  const {isPlaying, setTime, simSpeed, time} = useSimulationStore((s) => ({
+  const { isPlaying, setTime, simSpeed, time } = useSimulationStore((s) => ({
     isPlaying: s.isPlaying,
     setTime: s.setTime,
     simSpeed: s.simSpeed,

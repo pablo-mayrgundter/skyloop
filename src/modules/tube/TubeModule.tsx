@@ -1,4 +1,4 @@
-import {Canvas} from '@react-three/fiber'
+import { Canvas } from '@react-three/fiber'
 import LoopTube from '../../three/loop/LoopTube'
 import Globe from '../../three/Globe'
 

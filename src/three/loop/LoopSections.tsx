@@ -1,8 +1,8 @@
-import {Instances, Instance} from '@react-three/drei'
-import {useMemo} from 'react'
-import {Vector3} from 'three'
-import {LOS_ANGELES, SAN_FRANCISCO} from '../../config/simulation'
-import {buildGreatCircleArc} from '../Globe'
+import { Instances, Instance } from '@react-three/drei'
+import { useMemo } from 'react'
+import { Vector3 } from 'three'
+import { LOS_ANGELES, SAN_FRANCISCO } from '../../config/simulation'
+import { buildGreatCircleArc } from '../Globe'
 
 type LoopSectionsProps = {
   count?: number

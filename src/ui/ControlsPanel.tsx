@@ -1,7 +1,7 @@
-import {useSimulationStore} from '../state/simulationStore'
+import { useSimulationStore } from '../state/simulationStore'
 
 const ControlsPanel = () => {
-  const {isPlaying, simSpeed, play, pause, setSimSpeed, toggleOverlay} = useSimulationStore((s) => ({
+  const { isPlaying, simSpeed, play, pause, setSimSpeed, toggleOverlay } = useSimulationStore((s) => ({
     isPlaying: s.isPlaying,
     simSpeed: s.simSpeed,
     play: s.play,

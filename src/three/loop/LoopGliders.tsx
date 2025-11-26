@@ -1,9 +1,9 @@
-import {useFrame} from '@react-three/fiber'
-import {useMemo, useRef} from 'react'
-import {Group, Vector3} from 'three'
-import {LOS_ANGELES, SAN_FRANCISCO} from '../../config/simulation'
-import {useSimulationStore} from '../../state/simulationStore'
-import {buildGreatCircleArc} from '../Globe'
+import { useFrame } from '@react-three/fiber'
+import { useMemo, useRef } from 'react'
+import { Group, Vector3 } from 'three'
+import { LOS_ANGELES, SAN_FRANCISCO } from '../../config/simulation'
+import { useSimulationStore } from '../../state/simulationStore'
+import { buildGreatCircleArc } from '../Globe'
 
 type LoopGlidersProps = {
   count?: number

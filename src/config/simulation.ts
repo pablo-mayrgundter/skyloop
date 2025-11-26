@@ -1,4 +1,4 @@
-import {GreatCirclePoint} from '../types'
+import { GreatCirclePoint } from '../types'
 
 export const EARTH_RADIUS_KM = 6371
 export const RENDER_SCALE = 0.001

@@ -7,7 +7,7 @@ import SectionsModule from '../modules/sections/SectionsModule'
 import TethersModule from '../modules/tethers/TethersModule'
 import TubeModule from '../modules/tube/TubeModule'
 import WeatherModule from '../modules/weather/WeatherModule'
-import {useSimulationStore} from '../state/simulationStore'
+import { useSimulationStore } from '../state/simulationStore'
 import ModuleSelector from '../ui/ModuleSelector'
 
 const ModuleLabView = () => {

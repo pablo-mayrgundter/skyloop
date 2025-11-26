@@ -1,4 +1,4 @@
-import {DEFAULT_WIND_PROFILE} from '../../config/simulation'
+import { DEFAULT_WIND_PROFILE } from '../../config/simulation'
 
 const WeatherModule = () => (
   <div className="panel">

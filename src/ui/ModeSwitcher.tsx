@@ -1,5 +1,5 @@
-import {useSimulationStore} from '../state/simulationStore'
-import {SimulationMode} from '../types'
+import { useSimulationStore } from '../state/simulationStore'
+import { SimulationMode } from '../types'
 
 const modes: { label: string; value: SimulationMode }[] = [
   { label: 'First Person', value: 'firstPerson' },

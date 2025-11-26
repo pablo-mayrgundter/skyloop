@@ -1,6 +1,6 @@
-import {OrbitControls, PerspectiveCamera} from '@react-three/drei'
-import {useRef} from 'react'
-import {PerspectiveCamera as PerspectiveCameraImpl} from 'three'
+import { OrbitControls, PerspectiveCamera } from '@react-three/drei'
+import { useRef } from 'react'
+import { PerspectiveCamera as PerspectiveCameraImpl } from 'three'
 
 const BirdsEyeRig = () => {
   const camRef = useRef<PerspectiveCameraImpl>(null)

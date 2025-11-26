@@ -1,4 +1,4 @@
-import {DEFAULT_ATMOSPHERIC_LAYERS} from '../../config/simulation'
+import { DEFAULT_ATMOSPHERIC_LAYERS } from '../../config/simulation'
 
 const AtmosphereModule = () => (
   <div className="panel">

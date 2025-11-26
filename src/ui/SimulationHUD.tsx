@@ -1,11 +1,11 @@
-import {useMemo} from 'react'
-import {SimulationMetrics} from '../types'
-import {useSimulationStore} from '../state/simulationStore'
+import { useMemo } from 'react'
+import { SimulationMetrics } from '../types'
+import { useSimulationStore } from '../state/simulationStore'
 
 const formatTime = (seconds: number) => seconds.toFixed(1)
 
 const SimulationHUD = () => {
-  const {mode, simSpeed, time} = useSimulationStore((s) => ({
+  const { mode, simSpeed, time } = useSimulationStore((s) => ({
     mode: s.mode,
     simSpeed: s.simSpeed,
     time: s.time

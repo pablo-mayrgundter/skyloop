@@ -1,5 +1,5 @@
-import {describe, expect, it} from 'vitest'
-import {useSimulationStore} from './simulationStore'
+import { describe, expect, it } from 'vitest'
+import { useSimulationStore } from './simulationStore'
 
 describe('simulation store', () => {
   it('toggles overlays', () => {
@@ -9,7 +9,7 @@ describe('simulation store', () => {
   })
 
   it('sets mode and module', () => {
-    const {setMode, setSelectedModule} = useSimulationStore.getState()
+    const { setMode, setSelectedModule } = useSimulationStore.getState()
     setMode('firstPerson')
     setSelectedModule('economics')
     expect(useSimulationStore.getState().mode).toBe('firstPerson')

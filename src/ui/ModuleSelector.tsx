@@ -1,5 +1,5 @@
-import {useSimulationStore} from '../state/simulationStore'
-import {SkyloopModuleId} from '../types'
+import { useSimulationStore } from '../state/simulationStore'
+import { SkyloopModuleId } from '../types'
 
 const modules: { id: SkyloopModuleId; label: string }[] = [
   { id: 'sections', label: 'Sections' },

@@ -1,6 +1,6 @@
-import {describe, expect, it} from 'vitest'
-import {EARTH_RADIUS_KM, LOS_ANGELES, SAN_FRANCISCO} from '../config/simulation'
-import {buildGreatCircleArc, latLonToVector3} from './Globe'
+import { describe, expect, it } from 'vitest'
+import { EARTH_RADIUS_KM, LOS_ANGELES, SAN_FRANCISCO } from '../config/simulation'
+import { buildGreatCircleArc, latLonToVector3 } from './Globe'
 
 const SCALE = EARTH_RADIUS_KM * 0.001
 

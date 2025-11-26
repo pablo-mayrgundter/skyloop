@@ -1,9 +1,10 @@
-import {PerspectiveCamera, useFrame} from '@react-three/drei'
-import {useMemo, useRef} from 'react'
-import {PerspectiveCamera as PerspectiveCameraImpl, Vector3} from 'three'
-import {LOS_ANGELES, SAN_FRANCISCO} from '../../config/simulation'
-import {useSimulationStore} from '../../state/simulationStore'
-import {buildGreatCircleArc} from '../Globe'
+import { PerspectiveCamera } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
+import { useMemo, useRef } from 'react'
+import { PerspectiveCamera as PerspectiveCameraImpl, Vector3 } from 'three'
+import { LOS_ANGELES, SAN_FRANCISCO } from '../../config/simulation'
+import { useSimulationStore } from '../../state/simulationStore'
+import { buildGreatCircleArc } from '../Globe'
 
 const FirstPersonRig = () => {
   const cameraRef = useRef<PerspectiveCameraImpl>(null)
