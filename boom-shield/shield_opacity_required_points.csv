@@ -1,0 +1,10 @@
+Case,Mach,Altitude_kft,Shape_penalty_Cs,Open_case_PLdB_est,Required_opacity_dB,Equivalent_pressure_amplitude_transmission_Areq
+X-59 baseline,1.4,55,1.0,75.0,0.0,1.0
+X-59 baseline,1.4,55,2.0,81.02,6.02,0.5
+X-59 baseline,1.4,55,3.0,84.54,9.54,0.3333
+SR-71-like,3.2,85,1.0,82.93,7.93,0.4011
+SR-71-like,3.2,85,2.0,88.96,13.96,0.2006
+SR-71-like,3.2,85,3.0,92.48,17.48,0.1337
+SR-72-like,6.0,90,1.0,90.75,15.75,0.1631
+SR-72-like,6.0,90,2.0,96.77,21.77,0.0815
+SR-72-like,6.0,90,3.0,100.29,25.29,0.0544
