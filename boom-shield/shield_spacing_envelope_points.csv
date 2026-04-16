@@ -1,0 +1,21 @@
+Target,Mach,Altitude_kft,Cs,A_mat,A_req,Emax_m
+SR-71-like optimistic,3.2,85,1.0,0.02,0.4011,690.2
+SR-71-like shape penalty,3.2,85,2.0,0.02,0.2006,475.1
+SR-72-like optimistic,6.0,90,1.0,0.02,0.1631,422.9
+SR-72-like shape penalty,6.0,90,2.0,0.02,0.0815,277.3
+SR-71-like optimistic,3.2,85,1.0,0.05,0.4011,662.5
+SR-71-like shape penalty,3.2,85,2.0,0.05,0.2006,433.8
+SR-72-like optimistic,6.0,90,1.0,0.05,0.1631,375.9
+SR-72-like shape penalty,6.0,90,2.0,0.05,0.0815,198.5
+SR-71-like optimistic,3.2,85,1.0,0.1,0.4011,613.5
+SR-71-like shape penalty,3.2,85,2.0,0.1,0.2006,354.5
+SR-72-like optimistic,6.0,90,1.0,0.1,0.1631,280.8
+SR-72-like shape penalty,6.0,90,2.0,0.1,0.0815,0.0
+SR-71-like optimistic,3.2,85,1.0,0.15,0.4011,560.3
+SR-71-like shape penalty,3.2,85,2.0,0.15,0.2006,251.4
+SR-72-like optimistic,6.0,90,1.0,0.15,0.1631,127.8
+SR-72-like shape penalty,6.0,90,2.0,0.15,0.0815,0.0
+SR-71-like optimistic,3.2,85,1.0,0.2,0.4011,501.4
+SR-71-like shape penalty,3.2,85,2.0,0.2,0.2006,26.3
+SR-72-like optimistic,6.0,90,1.0,0.2,0.1631,0.0
+SR-72-like shape penalty,6.0,90,2.0,0.2,0.0815,0.0
