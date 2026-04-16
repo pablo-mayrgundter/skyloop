@@ -1,6 +1,6 @@
 # Boom Shield
 
-This directory collects the first-pass acoustic analysis for the Skyloop boom-shield concept.
+This directory collects the first-pass acoustic analysis for a bouyant sonic-boom shield concept, to reflect the main wave of sonic booms from overflying aircraft away from their ground tracks.
 
 ## Contents
 
@@ -12,7 +12,7 @@ This directory collects the first-pass acoustic analysis for the Skyloop boom-sh
 
 ## Main result
 
-The analysis suggests that a **1 km-wide boom shield** with aircraft flying on the order of **250 m above the shield** may be acoustically plausible for suppressing the **direct centerline boom wave**, especially for **SR-71-class** overland flight and potentially for **optimistic SR-72-class** scenarios.
+The analysis suggests that a **Width W=1 km-wide boom shield** with aircraft flying on the order of **Elevation E=250 m above the shield** may be acoustically plausible for suppressing the **direct centerline boom wave**, especially for **SR-71-class** overland flight and potentially for **optimistic SR-72-class** scenarios.
 
 The central viability condition is:
 
@@ -25,6 +25,6 @@ where:
 
 That means the next design thread should focus on shield material, buoyancy, tethering, structural motion, and control margins.
 
-## Note on chart images
-
-The analysis also generated chart images in the local working set during the thread. The current GitHub write path used here cleanly supports the text artifacts and summary files above. Those chart images can be mirrored into this directory in a later pass if desired.
+<img width="640" alt="image" src="https://github.com/user-attachments/assets/ea8d2b0b-5731-4b88-b698-0fdf8acaab59" />
+<img width="640" alt="image" src="https://github.com/user-attachments/assets/e04fadad-679b-497b-a106-292406f3ee56" />
+<img width="640" alt="image" src="https://github.com/user-attachments/assets/c29d7f8f-a720-4306-b50d-39c54013f077" />
