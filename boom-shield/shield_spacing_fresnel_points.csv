@@ -1,0 +1,49 @@
+lambda_eff_m,A_mat,Target,Mach,Cs,A_req,Emax_m
+10,0.02,SR-71-like optimistic,3.2,1.0,0.4011,17918.5
+10,0.02,SR-71-like shape penalty,3.2,2.0,0.2006,4021.8
+10,0.02,SR-72-like optimistic,6.0,1.0,0.1631,2525.3
+10,0.02,SR-72-like shape penalty,6.0,2.0,0.0815,467.2
+10,0.05,SR-71-like optimistic,3.2,1.0,0.4011,15208.5
+10,0.05,SR-71-like shape penalty,3.2,2.0,0.2006,2796.3
+10,0.05,SR-72-like optimistic,6.0,1.0,0.1631,1577.3
+10,0.05,SR-72-like shape penalty,6.0,2.0,0.0815,122.7
+10,0.1,SR-71-like optimistic,3.2,1.0,0.4011,11185.3
+10,0.1,SR-71-like shape penalty,3.2,2.0,0.2006,1247.4
+10,0.1,SR-72-like optimistic,6.0,1.0,0.1631,490.8
+10,0.1,SR-72-like shape penalty,6.0,2.0,0.0815,0.0
+10,0.15,SR-71-like optimistic,3.2,1.0,0.4011,7779.0
+10,0.15,SR-71-like shape penalty,3.2,2.0,0.2006,315.3
+10,0.15,SR-72-like optimistic,6.0,1.0,0.1631,21.1
+10,0.15,SR-72-like shape penalty,6.0,2.0,0.0815,0.0
+30,0.02,SR-71-like optimistic,3.2,1.0,0.4011,5972.8
+30,0.02,SR-71-like shape penalty,3.2,2.0,0.2006,1340.6
+30,0.02,SR-72-like optimistic,6.0,1.0,0.1631,841.8
+30,0.02,SR-72-like shape penalty,6.0,2.0,0.0815,155.7
+30,0.05,SR-71-like optimistic,3.2,1.0,0.4011,5069.5
+30,0.05,SR-71-like shape penalty,3.2,2.0,0.2006,932.1
+30,0.05,SR-72-like optimistic,6.0,1.0,0.1631,525.8
+30,0.05,SR-72-like shape penalty,6.0,2.0,0.0815,40.9
+30,0.1,SR-71-like optimistic,3.2,1.0,0.4011,3728.4
+30,0.1,SR-71-like shape penalty,3.2,2.0,0.2006,415.8
+30,0.1,SR-72-like optimistic,6.0,1.0,0.1631,163.6
+30,0.1,SR-72-like shape penalty,6.0,2.0,0.0815,0.0
+30,0.15,SR-71-like optimistic,3.2,1.0,0.4011,2593.0
+30,0.15,SR-71-like shape penalty,3.2,2.0,0.2006,105.1
+30,0.15,SR-72-like optimistic,6.0,1.0,0.1631,7.0
+30,0.15,SR-72-like shape penalty,6.0,2.0,0.0815,0.0
+100,0.02,SR-71-like optimistic,3.2,1.0,0.4011,1791.8
+100,0.02,SR-71-like shape penalty,3.2,2.0,0.2006,402.2
+100,0.02,SR-72-like optimistic,6.0,1.0,0.1631,252.5
+100,0.02,SR-72-like shape penalty,6.0,2.0,0.0815,46.7
+100,0.05,SR-71-like optimistic,3.2,1.0,0.4011,1520.9
+100,0.05,SR-71-like shape penalty,3.2,2.0,0.2006,279.6
+100,0.05,SR-72-like optimistic,6.0,1.0,0.1631,157.7
+100,0.05,SR-72-like shape penalty,6.0,2.0,0.0815,12.3
+100,0.1,SR-71-like optimistic,3.2,1.0,0.4011,1118.5
+100,0.1,SR-71-like shape penalty,3.2,2.0,0.2006,124.7
+100,0.1,SR-72-like optimistic,6.0,1.0,0.1631,49.1
+100,0.1,SR-72-like shape penalty,6.0,2.0,0.0815,0.0
+100,0.15,SR-71-like optimistic,3.2,1.0,0.4011,777.9
+100,0.15,SR-71-like shape penalty,3.2,2.0,0.2006,31.5
+100,0.15,SR-72-like optimistic,6.0,1.0,0.1631,2.1
+100,0.15,SR-72-like shape penalty,6.0,2.0,0.0815,0.0
