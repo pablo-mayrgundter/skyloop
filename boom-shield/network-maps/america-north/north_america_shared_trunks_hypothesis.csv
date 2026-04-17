@@ -1,0 +1,13 @@
+corridor_id,segment_order,segment_type,from_iata,to_iata,from_city,to_city,distance_km,target_mach,target_elevation_above_shield_m,notes
+trunk_west_east_01,1,trunk,LAX,DEN,Los Angeles,Denver,1385,1.5,300,Western ramp and acceleration segment
+trunk_west_east_01,2,trunk,DEN,ORD,Denver,Chicago O'Hare,1426,2.0,300,Mid-continent shared mainline
+trunk_west_east_01,3,trunk,ORD,JFK,Chicago O'Hare,New York JFK,1188,1.5,300,Northeast approach and deceleration segment
+trunk_west_east_01,4,spur,SFO,LAX,San Francisco,Los Angeles,544,0.8,300,Short feeder spur likely below dedicated shield threshold
+trunk_west_east_01,5,spur,SEA,LAX,Seattle,Los Angeles,1537,2.0,300,Northwest feeder into western interchange
+trunk_west_east_01,6,spur,DFW,DEN,Dallas/Fort Worth,Denver,1031,1.5,300,Texas feeder into central interchange
+trunk_west_east_01,7,spur,IAH,DFW,Houston Intercontinental,Dallas/Fort Worth,362,0.8,300,Short feeder placeholder
+trunk_west_east_01,8,spur,ATL,ORD,Atlanta,Chicago O'Hare,976,1.5,300,Southeast feeder into Midwest interchange
+trunk_west_east_01,9,spur,MIA,ATL,Miami,Atlanta,959,1.5,300,Florida feeder into Southeast interchange
+trunk_west_east_01,10,spur,YYZ,ORD,Toronto Pearson,Chicago O'Hare,701,1.5,300,Canada feeder into Midwest interchange
+trunk_west_east_01,11,spur,YVR,SEA,Vancouver,Seattle,205,0.8,300,Very short feeder placeholder
+trunk_west_east_01,12,spur,MEX,DFW,Mexico City,Dallas/Fort Worth,1511,2.0,300,Mexico feeder into central interchange
