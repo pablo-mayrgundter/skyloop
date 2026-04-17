@@ -15,11 +15,14 @@ The framing from the thread is:
 - `README.md` — this summary and methodology
 - `north_america_seed_airports.csv` — seed airport set for the first solve
 - `north_america_candidate_pairs.csv` — all pairwise distances for the seed set, with a first-pass Mach-regime classification by stage length
+- `north_america_top_pairs_template.csv` — starter table for plugging in recent-year top O&D volumes
+- `north_america_shared_trunks_hypothesis.csv` — first hand-built trunk and feeder hypothesis
+- `north_america_corridor_graph.geojson` — simple renderable graph skeleton for mapping
 - `network_flow_scaffold.py` — scaffold for turning a recent-year traffic table into a shared-corridor graph solve
 
 ## Status
 
-This commit sets up the **geometry and solve scaffold**.
+This commit sets up the **geometry, starter files, and solve scaffold**.
 
 The traffic-weighted solve still needs a recent reference-year commercial passenger dataset. The intended next input is a table like:
 
@@ -65,6 +68,24 @@ That is only a placeholder rule. It should later be replaced by a utility model 
 - merge / egress complexity
 - plausible cruise Mach by corridor class
 
+## Hand-built starter hypothesis
+
+The first skeleton trunk is:
+
+- `LAX -> DEN -> ORD -> JFK`
+
+with feeder ideas from:
+
+- `SEA -> LAX`
+- `SFO -> LAX`
+- `DFW -> DEN`
+- `ATL -> ORD`
+- `MIA -> ATL`
+- `YYZ -> ORD`
+- `MEX -> DFW`
+
+This is only a starting structure to render and critique. It is not yet traffic-optimized.
+
 ## Next suggested files
 
 Once recent-year O&D data is available, add:
@@ -72,5 +93,4 @@ Once recent-year O&D data is available, add:
 - `north_america_recent_year_od.csv`
 - `north_america_top_pairs_by_volume.csv`
 - `north_america_shared_trunks.csv`
-- `north_america_corridor_graph.geojson`
-- simple maps for western, central, and eastern trunk candidates
+- richer map layers for western, central, and eastern trunk candidates
