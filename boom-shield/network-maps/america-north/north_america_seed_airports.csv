@@ -1,0 +1,16 @@
+iata,city,lat_deg,lon_deg
+LAX,Los Angeles,33.9416,-118.4085
+SFO,San Francisco,37.6213,-122.379
+LAS,Las Vegas,36.084,-115.1537
+SEA,Seattle,47.4502,-122.3088
+DEN,Denver,39.8561,-104.6737
+DFW,Dallas/Fort Worth,32.8998,-97.0403
+IAH,Houston Intercontinental,29.9902,-95.3368
+ORD,Chicago O'Hare,41.9742,-87.9073
+ATL,Atlanta,33.6407,-84.4277
+MCO,Orlando,28.4312,-81.3081
+MIA,Miami,25.7959,-80.287
+JFK,New York JFK,40.6413,-73.7781
+YYZ,Toronto Pearson,43.6777,-79.6248
+YVR,Vancouver,49.1967,-123.1815
+MEX,Mexico City,19.4361,-99.0719
