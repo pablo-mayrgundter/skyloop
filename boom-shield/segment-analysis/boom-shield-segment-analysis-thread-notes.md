@@ -1,6 +1,10 @@
 # Boom Shield segment analysis — thread notes
 
-Context: these notes capture the tube-to-envelope-to-Boom-Shield pivot from one thread, to be combined later with material from the other Boom Shield thread.
+Context: these notes now merge the pre-Boom-Shield segment thread with the parallel Boom Shield structural/material thread. The combined picture is:
+- keep the Skyloop tensioned-envelope / ringed-segmentation logic
+- flatten the section into a wide acoustic deck
+- treat the system as a pressure-shaped, tension-first structure
+- judge concepts by boom reduction per areal mass, not by structural elegance alone
 
 ## 1. Structural pivot
 
@@ -18,7 +22,7 @@ Boom Shield logic:
 
 Primary load path becomes:
 
-`deck load -> radial/catenary tethers -> rings -> outer envelope / global tethers`
+`deck load -> radial/catenary tethers -> rings -> outer envelope / local station tethers`
 
 This is favorable because it keeps most members in tension.
 
@@ -160,10 +164,19 @@ For `W = 300 m`:
 | 6 kg/m^2 | 1800 kg/m |
 | 8 kg/m^2 | 2400 kg/m |
 
-Working rubric:
+Original working rubric from the segment thread:
 - green: 2 to 4 kg/m^2
 - yellow: 4 to 8 kg/m^2
 - red: > 8 kg/m^2
+
+Updated note from the parallel thread:
+- for a truly large-area floating acoustic deck, even 2 to 4 kg/m^2 may already be quite heavy if total buoyant support must be carried at stratospheric density
+- stretch target for the acoustically active deck itself may be closer to sub-kg/m^2, with the total system then built back up by tendons, rings, envelope, trim systems, and safety margin
+- the real design fight is likely to be in shaving every non-acoustic kilogram
+
+So keep both scales in mind:
+- `sigma_total = 2 to 8 kg/m^2` remains useful for current segment comparisons
+- but a deeper buoyancy-led analysis may force a much more aggressive target for the active deck and support stack
 
 ## 6. Tethering recap
 
@@ -228,6 +241,10 @@ For a constant-buoyancy family, flattening reduces thickness `T` and therefore r
 - boom interception geometry
 - crosswind side force
 
+Additional interpretation from the parallel thread:
+- dynamic pressure at stratospheric density is small in Pa, but when integrated over huge area it can still set very large global tensions
+- this reinforces the need for segmentation, venting, local support spans, and avoiding a monolithic pressure-catching plate
+
 ## 8. Structural interpretation of the catenary ring-to-ring concept
 
 The catenary-ring concept says:
@@ -245,7 +262,66 @@ For Boom Shield, this evolves toward:
 
 A useful picture is a lenticular suspension bridge in section.
 
-## 9. Nominal candidate configurations to compare
+## 9. Support-regime design tree
+
+The parallel thread sharpened a major fork that was implicit before.
+
+### A. Positive-buoyancy gas support
+- helium or hydrogen cells carry most lift
+- easiest physical interpretation
+- operational burden is gas volume, leakage, and large draggy support bodies
+
+### B. Pumped-out / invballoon support
+- use external atmosphere and a tensioned shell with internal low pressure or partial vacuum
+- philosophically closest to the Skyloop tube work
+- could avoid huge lifting-gas inventory
+- but wide, shallow sections are more vulnerable to wrinkling, snap-through, and geometry loss than closed tubes
+
+### C. Hybrid support
+- pressure-shaped shell sets geometry and contributes support
+- smaller gas cells provide trim, startup margin, redundancy, and graceful fault behavior
+- deck hangs below as the acoustic working surface
+
+Current working lead:
+- hybrid support looks strongest
+- pure gas support remains baseline-simple
+- pure invballoon support is still worth reanalysis, but is more suspect here than it was for the tube because the Boom Shield wants a much flatter, less naturally pressure-stable section
+
+## 10. Pressure-shaped acoustic deck
+
+A useful merged phrasing is:
+
+**How light a segmented, tensioned, pressure-shaped acoustic deck can we make, and how much ground boom reduction per kg/m^2 does it buy?**
+
+That reframes the structure correctly:
+- not a rigid floor
+- not just a balloon
+- not primarily an absorber
+- but a controlled wavefront-shaping surface held aloft by a tensioned envelope system
+
+This deck should likely:
+- have slight camber or double curvature
+- avoid coherent specular reflection straight to ground
+- spread boom energy laterally and temporally
+- use segmentation, serration, or multi-layer offsets to act as more of a wavefront mangler than a simple reflector
+
+## 11. Material stack intuition
+
+No hard material closure yet, but the parallel thread converged on:
+
+- primary design principle: avoid bending-dominated solids over giant area
+- use thin membranes for envelope functions
+- use high-specific-strength tendons / filaments for primary load path
+- use sparse local stiffeners only where needed to hold curvature and suppress flutter modes
+- aerogel-like materials may be useful as selective damping / thermal layers, but probably not as the main structural-acoustic body
+
+So the rough hierarchy is:
+- membranes for enclosure and shaping
+- fibers for load
+- local ribs for figure control
+- very selective damping layers where acoustically useful
+
+## 12. Nominal candidate configurations to compare
 
 ### Flight cases
 
@@ -267,20 +343,40 @@ A useful picture is a lenticular suspension bridge in section.
 | S3 | 300 m | 12 m | 250 m | 4 kg/m^2 |
 | S4 | 250 m | 15 m | 250 m | 8 kg/m^2 |
 
-## 10. Early conclusions from this thread
+Additional structure cases worth adding next:
 
-- Flattening is the right move.
+| Case | Support regime | Notes |
+|---|---|---|
+| R1 | gas-dominant | simplest baseline |
+| R2 | invballoon-dominant | maximum tension-shell inheritance from Skyloop |
+| R3 | hybrid | likely current lead |
+
+## 13. Early merged conclusions
+
+- Flattening is still the right move.
 - Higher Mach helps shield width strongly by simple footprint geometry.
-- 200 to 300 m width is the right first shield band to study.
-- Internal suspension looks manageable in static dead-load terms.
+- 200 to 300 m width remains the right first shield band to study.
+- Internal suspension still looks manageable in static dead-load terms.
 - Ground/station tethering is likely the real positioning challenge.
 - The sweet regime for Boom Shield may sit above X-59 territory, not below it, because shield width becomes easier with Mach even though aircraft-side penalties rise.
-- The concept likely lives or dies on areal density and acoustic effectiveness, not on obvious static structural impossibility.
+- The concept still likely lives or dies on areal density and acoustic effectiveness, not on obvious static structural impossibility.
+- The older Skyloop tension-envelope logic survives the pivot well, but the flatter Boom Shield section makes pure invballoon support less automatically favorable than it was for a tube.
+- The most promising architectural family now looks like a segmented, tensioned, pressure-shaped deck with hybrid support.
 
-## 11. Recommended next synthesis step
+## 14. Recommended next synthesis step
 
-Combine this file with notes from the parallel Boom Shield thread, then produce:
+Produce the next pass around the merged design question:
+
 1. one merged `Lambda(M, h, W)` design-space matrix
 2. one areal-mass budget by subsystem
-3. one tethering/load-path summary sketch
-4. one first cost rubric based on width, areal density, module length, and ground anchor spacing
+3. one support-regime comparison: gas vs invballoon vs hybrid
+4. one tethering/load-path summary sketch
+5. one first cost rubric based on width, areal density, module length, support regime, and ground anchor spacing
+
+## 15. Immediate TODOs for the next thread
+
+- Reanalyse the invballoon / partial-vacuum branch specifically for wide shallow sections rather than tubes.
+- Split `sigma` into subsystem buckets: deck, tendons, rings, envelope, support cells, control, safety margin.
+- Add a first buoyancy / enclosed-volume sanity check for the candidate cross-sections.
+- Turn the qualitative wavefront-mangler idea into 2D acoustic geometry cases.
+- Identify whether hybrid support really dominates once mass and fault tolerance are counted.
