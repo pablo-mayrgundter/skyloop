@@ -59,7 +59,7 @@ This initial pass uses only great-circle stage length:
 That is only a placeholder rule. It should later be replaced by a utility model that combines:
 
 - annual passengers
-n- total passenger-hours saved
+- total passenger-hours saved
 - route overlap / shared-trunk benefit
 - capex per shield-km
 - merge / egress complexity
