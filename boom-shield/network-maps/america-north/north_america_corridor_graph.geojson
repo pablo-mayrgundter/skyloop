@@ -1,0 +1,186 @@
+{
+  "type": "FeatureCollection",
+  "name": "north_america_corridor_graph",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 1,
+        "segment_type": "trunk",
+        "from_iata": "LAX",
+        "to_iata": "DEN",
+        "from_city": "Los Angeles",
+        "to_city": "Denver",
+        "target_mach": 1.5,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-118.4085,33.9416],[-104.6737,39.8561]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 2,
+        "segment_type": "trunk",
+        "from_iata": "DEN",
+        "to_iata": "ORD",
+        "from_city": "Denver",
+        "to_city": "Chicago O'Hare",
+        "target_mach": 2.0,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-104.6737,39.8561],[-87.9073,41.9742]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 3,
+        "segment_type": "trunk",
+        "from_iata": "ORD",
+        "to_iata": "JFK",
+        "from_city": "Chicago O'Hare",
+        "to_city": "New York JFK",
+        "target_mach": 1.5,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-87.9073,41.9742],[-73.7781,40.6413]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 4,
+        "segment_type": "spur",
+        "from_iata": "SEA",
+        "to_iata": "LAX",
+        "from_city": "Seattle",
+        "to_city": "Los Angeles",
+        "target_mach": 2.0,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-122.3088,47.4502],[-118.4085,33.9416]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 5,
+        "segment_type": "spur",
+        "from_iata": "SFO",
+        "to_iata": "LAX",
+        "from_city": "San Francisco",
+        "to_city": "Los Angeles",
+        "target_mach": 0.8,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-122.379,37.6213],[-118.4085,33.9416]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 6,
+        "segment_type": "spur",
+        "from_iata": "DFW",
+        "to_iata": "DEN",
+        "from_city": "Dallas/Fort Worth",
+        "to_city": "Denver",
+        "target_mach": 1.5,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-97.0403,32.8998],[-104.6737,39.8561]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 7,
+        "segment_type": "spur",
+        "from_iata": "ATL",
+        "to_iata": "ORD",
+        "from_city": "Atlanta",
+        "to_city": "Chicago O'Hare",
+        "target_mach": 1.5,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-84.4277,33.6407],[-87.9073,41.9742]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 8,
+        "segment_type": "spur",
+        "from_iata": "MIA",
+        "to_iata": "ATL",
+        "from_city": "Miami",
+        "to_city": "Atlanta",
+        "target_mach": 1.5,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-80.287,25.7959],[-84.4277,33.6407]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 9,
+        "segment_type": "spur",
+        "from_iata": "YYZ",
+        "to_iata": "ORD",
+        "from_city": "Toronto Pearson",
+        "to_city": "Chicago O'Hare",
+        "target_mach": 1.5,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-79.6248,43.6777],[-87.9073,41.9742]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "corridor_id": "trunk_west_east_01",
+        "segment_order": 10,
+        "segment_type": "spur",
+        "from_iata": "MEX",
+        "to_iata": "DFW",
+        "from_city": "Mexico City",
+        "to_city": "Dallas/Fort Worth",
+        "target_mach": 2.0,
+        "target_e_m": 300
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [[-99.0719,19.4361],[-97.0403,32.8998]]
+      }
+    }
+  ]
+}
