@@ -233,7 +233,9 @@ def apply(stack: Stack, t, p, V, atm, pad_factor: int = 4, reference: str = "air
     Uses rfft with the record zero-padded to >= pad_factor * len(p) and centred in the
     padded buffer, so both causal tails and the (physical, see module doc) non-causal
     precursor of evanescent layers have room before being cropped back. Inputs should
-    already carry some quiet margin on both sides. By default the transfer is
+    already carry some quiet margin on both sides; evanescent layers smooth with a
+    heavy-tailed (~1/t^2, Lorentzian) kernel of width ~ d sqrt(1/V^2 - 1/c_gas^2), whose
+    far tails are cropped with the record. By default the transfer is
     referenced to an equal thickness of ambient air (pure delay removed).
     """
     t = np.asarray(t, dtype=float)
