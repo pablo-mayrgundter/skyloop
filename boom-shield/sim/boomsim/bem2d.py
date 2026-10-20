@@ -188,8 +188,69 @@ def _laplace_panel(x, nx, c, t, n, a, which, self_mask):
     return out
 
 
+def pair_integrals(kern, X, NX, P: Panels, ii, jj, which, selfm=None, near=1.5, mid=3.0):
+    """Kernel integrals for the target/panel pairs (X[ii], panel jj): dict name -> (npairs,)."""
+    ii = np.asarray(ii, int)
+    jj = np.asarray(jj, int)
+    if selfm is None:
+        selfm = np.zeros(ii.size, bool)
+    out = {w: np.empty(ii.size, complex) for w in which}
+    if ii.size == 0:
+        return out
+    x = X[ii]
+    nx = NX[ii]
+    dist = np.hypot(x[:, 0] - P.c[jj, 0], x[:, 1] - P.c[jj, 1])
+    ratio = dist / P.L[jj]
+    for m, sel in ((2, ratio >= mid), (6, (ratio < mid) & (ratio >= near))):
+        k = np.nonzero(sel)[0]
+        if k.size == 0:
+            continue
+        gg, ww = _GL[m]
+        j = jj[k]
+        ys = P.c[j][:, None, :] + (0.5 * P.L[j])[:, None, None] * gg[None, :, None] * P.t[j][:, None, :]
+        kv = _kernel_values(kern, x[k][:, None, :] - ys, nx[k][:, None, :], P.n[j][:, None, :], which)
+        wts = (0.5 * P.L[j])[:, None] * ww[None, :]
+        for w in which:
+            out[w][k] = np.sum(kv[w] * wts, axis=1)
+    k = np.nonzero(ratio < near)[0]
+    if k.size:
+        j = jj[k]
+        sm = selfm[k]
+        lap = _laplace_panel(x[k], nx[k], P.c[j], P.t[j], P.n[j], 0.5 * P.L[j], which, sm)
+        g16, w16 = _GL[16]
+        ys = P.c[j][:, None, :] + (0.5 * P.L[j])[:, None, None] * g16[None, :, None] * P.t[j][:, None, :]
+        kv = _kernel_values(kern, x[k][:, None, :] - ys, nx[k][:, None, :], P.n[j][:, None, :], which, diff=True)
+        wts = (0.5 * P.L[j])[:, None] * w16[None, :]
+        diff = {w: np.sum(kv[w] * wts, axis=1) for w in which}
+        if np.any(sm):
+            # self panels: s = +-a u^2 on each half (removes the log singularity at s=0)
+            si = np.nonzero(sm)[0]
+            js = j[si]
+            a = 0.5 * P.L[js]
+            u = 0.5 * (g16 + 1.0)
+            wu = 0.5 * w16
+            s = a[:, None] * u[None, :] ** 2
+            ds = 2 * a[:, None] * u[None, :] * wu[None, :]
+            acc = {w: np.zeros(si.size, complex) for w in which}
+            for sign in (1.0, -1.0):
+                ys = P.c[js][:, None, :] + sign * s[:, :, None] * P.t[js][:, None, :]
+                kvs = _kernel_values(kern, x[k][si][:, None, :] - ys, nx[k][si][:, None, :],
+                                     P.n[js][:, None, :], which, diff=True)
+                for w in which:
+                    acc[w] += np.sum(kvs[w] * ds, axis=1)
+            for w in which:
+                diff[w][si] = acc[w]
+            for w in ("K", "A"):
+                if w in which:   # vanish identically on a flat panel
+                    diff[w][si] = 0.0
+                    lap[w][si] = 0.0
+        for w in which:
+            out[w][k] = lap[w] + diff[w]
+    return out
+
+
 def panel_integrals(kern, X, NX, P: Panels, which=("S", "K"), self_of=None,
-                    near=1.5, mid=3.0, chunk_elems=3_000_000):
+                    near=1.5, mid=3.0, chunk_pairs=400_000):
     """Integrals over every panel of P of the kernels in ``which`` for targets X.
 
     Returns dict name -> (M, N) complex array with
@@ -202,64 +263,16 @@ def panel_integrals(kern, X, NX, P: Panels, which=("S", "K"), self_of=None,
     NX = np.zeros_like(X) if NX is None else np.asarray(NX, float).reshape(-1, 2)
     if self_of is None:
         self_of = -np.ones(M, int)
+    self_of = np.asarray(self_of, int)
     out = {w: np.empty((M, N), complex) for w in which}
-    # --- regular quadrature (2 or 6 points by distance) in row chunks
-    rows = max(1, chunk_elems // max(1, N * 6))
-    g2, w2 = _GL[2]
-    g6, w6 = _GL[6]
-    near_pairs = []
+    rows = max(1, chunk_pairs // max(1, N))
     for i0 in range(0, M, rows):
         i1 = min(M, i0 + rows)
-        x = X[i0:i1]
-        dist = np.hypot(x[:, None, 0] - P.c[None, :, 0], x[:, None, 1] - P.c[None, :, 1])
-        ratio = dist / P.L[None, :]
-        for gg, ww, sel in ((g2, w2, ratio >= mid), (g6, w6, (ratio < mid) & (ratio >= near))):
-            ii, jj = np.nonzero(sel)
-            if ii.size == 0:
-                continue
-            ys = P.c[jj][:, None, :] + (0.5 * P.L[jj])[:, None, None] * gg[None, :, None] * P.t[jj][:, None, :]
-            rvec = x[ii][:, None, :] - ys
-            kv = _kernel_values(kern, rvec, NX[i0 + ii][:, None, :], P.n[jj][:, None, :], which)
-            wts = (0.5 * P.L[jj])[:, None] * ww[None, :]
-            for w in which:
-                out[w][i0 + ii, jj] = np.sum(kv[w] * wts, axis=1)
-        ii, jj = np.nonzero(ratio < near)
-        near_pairs.append((i0 + ii, jj))
-    ii = np.concatenate([p[0] for p in near_pairs]) if near_pairs else np.zeros(0, int)
-    jj = np.concatenate([p[1] for p in near_pairs]) if near_pairs else np.zeros(0, int)
-    if ii.size:
-        selfm = self_of[ii] == jj
-        lap = _laplace_panel(X[ii], NX[ii], P.c[jj], P.t[jj], P.n[jj], 0.5 * P.L[jj], which, selfm)
-        # difference kernel, 16-point Gauss (non-self)
-        g16, w16 = _GL[16]
-        ys = P.c[jj][:, None, :] + (0.5 * P.L[jj])[:, None, None] * g16[None, :, None] * P.t[jj][:, None, :]
-        rvec = X[ii][:, None, :] - ys
-        kv = _kernel_values(kern, rvec, NX[ii][:, None, :], P.n[jj][:, None, :], which, diff=True)
-        wts = (0.5 * P.L[jj])[:, None] * w16[None, :]
-        diff = {w: np.sum(kv[w] * wts, axis=1) for w in which}
-        if np.any(selfm):
-            # self panels: s = +-a u^2 on each half (removes the log singularity at s=0)
-            si = np.nonzero(selfm)[0]
-            a = 0.5 * P.L[jj[si]]
-            u = 0.5 * (g16 + 1.0)
-            wu = 0.5 * w16
-            s = a[:, None] * u[None, :] ** 2
-            ds = 2 * a[:, None] * u[None, :] * wu[None, :]
-            for sign in (1.0, -1.0):
-                ys = P.c[jj[si]][:, None, :] + sign * s[:, :, None] * P.t[jj[si]][:, None, :]
-                rvec = X[ii[si]][:, None, :] - ys
-                kvs = _kernel_values(kern, rvec, NX[ii[si]][:, None, :], P.n[jj[si]][:, None, :],
-                                     which, diff=True)
-                for w in which:
-                    if sign > 0:
-                        diff[w][si] = 0.0
-                    diff[w][si] += np.sum(kvs[w] * ds, axis=1)
-            for w in ("K", "A"):
-                if w in which:   # vanish identically on a flat panel
-                    diff[w][si] = 0.0
-                    lap[w][si] = 0.0
+        ii, jj = np.meshgrid(np.arange(i0, i1), np.arange(N), indexing="ij")
+        ii, jj = ii.ravel(), jj.ravel()
+        vals = pair_integrals(kern, X, NX, P, ii, jj, which, self_of[ii] == jj, near, mid)
         for w in which:
-            out[w][ii, jj] = lap[w] + diff[w]
+            out[w][i0:i1] = vals[w].reshape(i1 - i0, N)
     return out
 
 
