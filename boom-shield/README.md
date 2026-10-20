@@ -11,6 +11,10 @@ Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac
 - [shield_opacity_required_points.csv](shield_opacity_required_points.csv): required direct-wave opacity versus speed for X-59, SR-71-like, and SR-72-like cases.
 - [shield_spacing_envelope_points.csv](shield_spacing_envelope_points.csv): first toy spacing-envelope results using a simple edge-leakage law.
 - [shield_spacing_fresnel_points.csv](shield_spacing_fresnel_points.csv): improved spacing-envelope results using a Fresnel / knife-edge diffraction surrogate.
+- [handoff/2026-10-20-boomshield-handoff.md](handoff/2026-10-20-boomshield-handoff.md): concept and design handoff (October 2026 working draft).
+- [handoff/2026-10-20-review-addendum.md](handoff/2026-10-20-review-addendum.md): review of the handoff with independent checks and the proposed Gate 0.
+- [handoff/quick_checks.py](handoff/quick_checks.py): back-of-envelope buoyancy, mass-law, inventory, and load checks behind the review.
+- [sim/DESIGN.md](sim/DESIGN.md): design contract for the Gate 0 boom-through-shield-to-ground simulation.
 
 ## Main result
 
