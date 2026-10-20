@@ -240,3 +240,200 @@ def test_below_opts_linear_leg():
     assert np.max(np.diff(p2)) > 1.5 * np.max(np.diff(p1))
     with pytest.raises(ValueError):
         ground_signature(ac, below_opts={"linear": True}, **opts)
+
+
+# ------------------------------------------------------------------ off-track rays
+from boomsim.propagate import (circle_start_factors, ground_carpet,  # noqa: E402
+                               lateral_cutoff, propagate_from_circle)
+from boomsim.proxy import RISE_SIGMA_S, rise_time_proxy, scored_metrics  # noqa: E402
+from boomsim.source import near_field  # noqa: E402
+
+
+def test_raypath_phi0_is_legacy_formula():
+    ray = RayPath(17000.0, 590.0, phi=0.0)
+    ray_d = RayPath(17000.0, 590.0)
+    for name in ("nz_tab", "s_tab", "lat_tab", "rhoc_tab", "h_tab"):
+        assert np.array_equal(getattr(ray, name), getattr(ray_d, name))
+    # A = c s_z int_z^{z_a} dz'/s_z, s_z = sqrt(1/c^2 - 1/V^2) (trapezoid)
+    from scipy.integrate import cumulative_trapezoid
+    z, c = ray.z_tab, ray.c_tab
+    sz = np.sqrt(1 / c ** 2 - 1 / 590.0 ** 2)
+    I1 = -cumulative_trapezoid(1 / sz[::-1], z[::-1], initial=0.0)[::-1]
+    zz = np.linspace(0, 16990, 101)
+    assert np.array_equal(ray.area(zz), np.interp(zz, z, c * sz) * np.interp(zz, z, I1))
+    # general (off-track) cell rule is continuous as phi -> 0
+    ray_e = RayPath(17000.0, 590.0, phi=1e-7)
+    assert np.allclose(ray_e.area(zz), ray.area(zz), rtol=1e-6)
+    assert np.allclose(ray_e.s(zz), ray.s(zz), rtol=1e-6)
+    assert ray.y_ground == 0.0 and not ray.cutoff
+
+
+@pytest.mark.parametrize("phi", [0.0, 0.3, 0.8, -0.6])
+def test_raypath_uniform_offtrack_straight(phi):
+    za, V = 20000.0, 2.0 * C0
+    ray = RayPath(za, V, atmosphere=uniform_atmosphere(0.0), phi=phi,
+                  humidity=lambda z: np.full_like(np.asarray(z, float), 1.0))
+    cmu = np.sqrt(1 - (C0 / V) ** 2)
+    tmu = (C0 / V) / cmu
+    z = np.array([za - 50.0, za - 1000.0, 7000.0, 0.0])
+    dz = za - z
+    r = dz / np.cos(phi)                           # distance from the flight axis
+    assert np.allclose(ray.y(z), dz * np.tan(phi), rtol=1e-9, atol=1e-9)
+    assert np.allclose(ray.x(z), r * tmu, rtol=1e-9)
+    assert np.allclose(ray.s(z), r / cmu, rtol=1e-9)
+    assert np.allclose(ray.travel_time(z), r / cmu / C0, rtol=1e-9)
+    assert np.allclose(ray.nz(z), cmu * np.cos(phi), rtol=1e-12)
+    assert np.allclose(ray.area(z), C0 * r, rtol=1e-6)          # cylindrical, A -> c r
+    assert ray.y_ground == pytest.approx(za * np.tan(phi), rel=1e-9, abs=1e-9)
+    arr = ray.arrival()
+    assert arr["delay"] == pytest.approx(arr["T"] - arr["x"] / V)
+    # straight-line geometry: emission-to-arrival distance = c T
+    assert np.hypot(np.hypot(arr["x"], arr["y"]), za) == pytest.approx(C0 * arr["T"], rel=1e-9)
+    # linear lossless amplitude ~ r^-1/2 along the off-track ray
+    fs = 20e3
+    t = np.arange(-0.05, 0.05, 1 / fs)
+    p = 100.0 * np.exp(-(t / 2e-3) ** 2)
+    _, p2 = propagate(t, p, ray, z[1], z[3], linear=True, lossless=True)
+    assert p2.max() / p.max() == pytest.approx(np.sqrt(r[1] / r[3]), rel=1e-6)
+
+
+@pytest.mark.parametrize("phi", [0.2, 0.6, 0.9])
+def test_offtrack_tube_area_matches_neighbouring_rays(phi):
+    """Analytic lateral Jacobian = finite difference of traced neighbours (std atm)."""
+    za, V = CONCORDE.altitude, CONCORDE.V
+    d = 1e-5
+    ray = RayPath(za, V, phi=phi)
+    rp, rm = RayPath(za, V, phi=phi + d), RayPath(za, V, phi=phi - d)
+    z = np.array([za - 500.0, 11000.0, 3000.0, 0.0])
+    fd = (rp.y(z) - rm.y(z)) / (2 * d)
+    assert np.allclose(ray.dy_dphi(z), fd, rtol=1e-6)
+    # tube area = |n_z| dY/dphi (dX/dx0 = 1), normalised by cos(mu0)/c_a
+    assert np.allclose(ray.area(z), ray.nz(z) * ray.dy_dphi(z) * ray.c_a / ray.cos_mu0,
+                       rtol=1e-12)
+    # near the source A -> c_a r
+    dz = 20.0
+    assert float(ray.area(za - dz)) == pytest.approx(ray.c_a * dz / np.cos(phi), rel=2e-3)
+
+
+def test_lateral_cutoff_concorde():
+    za, V = CONCORDE.altitude, CONCORDE.V
+    phi_c, y_c = lateral_cutoff(za, V)
+    # analytic: sin(phi_c) = c_a sqrt(1/c_0^2 - 1/V^2)/cos(mu0) (c is largest at the ground)
+    c_a, c_0 = float(std_atm(za).c), float(std_atm(0.0).c)
+    assert np.sin(phi_c) == pytest.approx(c_a * np.sqrt(1 / c_0 ** 2 - 1 / V ** 2)
+                                          / np.sqrt(1 - (c_a / V) ** 2), rel=1e-9)
+    assert 35e3 < y_c < 50e3                     # ~1 mile per 1000 ft rule: ~44 km
+    below = RayPath(za, V, phi=phi_c - 1e-3)
+    above = RayPath(za, V, phi=phi_c + 1e-3)
+    assert not below.cutoff and below.y_ground < y_c
+    assert above.cutoff and 0.0 < above.z_turn < 2000.0 and np.isnan(above.y_ground)
+    with pytest.raises(ValueError):
+        RayPath(za, V, phi=phi_c + 1e-3, allow_cutoff=False)
+    with pytest.raises(ValueError):
+        propagate(np.arange(100) / 1e4, np.zeros(100), above, 5000.0, 0.0)
+    with pytest.raises(ValueError):
+        ground_signature(CONCORDE, phi=phi_c + 0.01, fs=5e3)
+    # uniform air: no cut-off below 90 deg
+    assert lateral_cutoff(17000.0, 2 * C0, atmosphere=uniform_atmosphere(0.0))[0] == pytest.approx(np.pi / 2)
+
+
+def test_offtrack_ground_signature_concorde():
+    t0, p0 = ground_signature(CONCORDE, fs=10e3)
+    t1, p1 = ground_signature(CONCORDE, fs=10e3, phi=0.0)
+    assert np.array_equal(p0, p1)
+    t2, p2 = ground_signature(CONCORDE, fs=10e3, phi=np.radians(45.0))
+    assert 0.4 * p0.max() < p2.max() < 0.8 * p0.max()
+
+
+def _uniform_kw():
+    return dict(atmosphere=uniform_atmosphere(0.0),
+                humidity=lambda z: np.full_like(np.asarray(z, float), 1.0))
+
+
+def test_circle_start_uniform_air_equals_direct():
+    ac = Aircraft("t", length=30.0, mach=2.0, altitude=15000.0, weight=3e5, volume=60.0)
+    kw = _uniform_kw()
+    fs, r0, Rm = 10e3, 45.0, 1500.0
+    for phi in (0.0, 0.5):
+        # linear lossless: circle start == direct start (uniform air: factor exactly 1)
+        tc, pc = near_field(ac, Rm, fs, phi=phi)
+        info = {}
+        tg, pg, yg = propagate_from_circle(ac, phi, tc, pc, Rm, info=info, linear=True,
+                                           lossless=True, **kw)
+        assert info["factor"] == pytest.approx(1.0, abs=1e-6)
+        assert yg == pytest.approx(ac.altitude * np.tan(phi), rel=1e-9, abs=1e-9)
+        td, pd = ground_signature(ac, r0=r0, fs=fs, phi=phi, linear=True, lossless=True, **kw)
+        assert pg.max() == pytest.approx(pd.max(), rel=1e-4)
+        # nonlinear: aging correction from r0 reproduces the direct run
+        tg, pg, _ = propagate_from_circle(ac, phi, tc, pc, Rm, age_from=r0, **kw)
+        td, pd = ground_signature(ac, r0=r0, fs=fs, phi=phi, **kw)
+        n = min(pg.size, pd.size)
+        assert np.allclose(pg[:n], pd[:n], atol=1e-6 * pd.max())
+        # without it the ground boom is too strong (missing nonlinear age inside R_m)
+        tg, pg, _ = propagate_from_circle(ac, phi, tc, pc, Rm, **kw)
+        assert pg.max() > 1.05 * pd.max()
+
+
+def test_circle_start_wkb_factor_isothermal():
+    ac = Aircraft("t", length=30.0, mach=2.0, altitude=19000.0, weight=3e5, volume=60.0)
+    H = 287.0531 * float(std_atm(15000.0).T) / 9.80665
+    for phi, Rm in ((0.0, 2000.0), (0.6, 4000.0)):
+        f = circle_start_factors(ac, phi, Rm)
+        dz = Rm * np.cos(phi)
+        assert f["z_start"] == pytest.approx(19000.0 - dz)
+        # 11-20 km isothermal: c cancels, rho ~ exp(-z/H); straight rays: geometric = 1
+        assert f["impedance"] == pytest.approx(np.exp(dz / (2 * H)), rel=2e-3)
+        assert f["geometric"] == pytest.approx(1.0, abs=1e-3)
+        f_ref = circle_start_factors(ac, phi, Rm, z_ref=18000.0, anchor="ref")
+        assert f_ref["impedance"] == pytest.approx(np.exp((18000.0 - (19000.0 - dz)) / (2 * H)), rel=2e-3)
+
+
+def test_ground_carpet_structure():
+    ac = Aircraft("t", length=30.0, mach=2.0, altitude=15000.0, weight=3e5, volume=60.0)
+    phi_c, y_c = lateral_cutoff(ac.altitude, ac.V)
+    phis = [0.0, 0.5, phi_c - 0.02, phi_c + 0.05]
+    opts = dict(fs=8e3, linear=True, lossless=True)
+    res = ground_carpet(ac, phis, procs=2, **opts)
+    assert list(res["cutoff"]) == [False, False, False, True]
+    assert res["y_g"][0] == 0.0 and np.all(np.diff(res["y_g"][:3]) > 0) and np.isnan(res["y_g"][3])
+    assert res["t"][3] is None and res["metrics"][3] is None
+    assert np.all(np.diff(res["peak_pa"][:3]) < 0)          # weaker off-track
+    c = res["carpet"]
+    assert c["half_width_m"] == pytest.approx(y_c) and c["phi_cutoff"] == pytest.approx(phi_c)
+    assert c["undertrack_pldb"] == res["pldb"][0] == c["max_pldb"]
+    assert res["y_g"][2] < y_c
+    # identical to the serial direct call
+    t0, p0 = ground_signature(ac, phi=0.5, **opts)
+    assert np.array_equal(res["p"][1], p0)
+    m = scored_metrics(t0, p0)
+    assert res["pldb_proxy"][1] == m["pldb_proxy"]
+    # circle start (dict of signatures)
+    Rm = 1000.0
+    circ = {f: near_field(ac, Rm, 8e3, phi=f) for f in phis[:2]}
+    rc = ground_carpet(ac, phis[:2], start="circle", circle=circ, R_m=Rm, procs=1, **opts)
+    assert np.allclose(rc["peak_pa"], res["peak_pa"][:2], rtol=0.02)
+
+
+def test_proxy_matches_gate0_definition():
+    from scipy.ndimage import gaussian_filter1d
+    fs = 50e3
+    t, p = ground_signature(Aircraft("t", length=30.0, mach=2.0, altitude=15000.0,
+                                     weight=3e5, volume=60.0), fs=fs, linear=True, lossless=True)
+    ps = gaussian_filter1d(p, RISE_SIGMA_S * fs, mode="constant")
+    assert np.allclose(rise_time_proxy(t, p), ps, rtol=1e-9, atol=1e-12 * np.abs(p).max())
+
+
+def test_aged_near_field_reproduces_direct():
+    from boomsim.propagate import aged_near_field
+    ac = Aircraft("t", length=30.0, mach=2.0, altitude=15000.0, weight=3e5, volume=60.0)
+    kw = _uniform_kw()
+    fs, r0, Rm = 10e3, 45.0, 1500.0
+    for phi in (0.0, 0.5):
+        tc, pc = aged_near_field(ac, Rm, fs, phi=phi, r0=r0, **kw)
+        tg, pg, _ = propagate_from_circle(ac, phi, tc, pc, Rm, **kw)
+        td, pd = ground_signature(ac, r0=r0, fs=fs, phi=phi, **kw)
+        n = min(pg.size, pd.size)
+        # same physics; only the absorption-chunk boundaries differ (one more stop at R_m)
+        assert np.allclose(pg[:n], pd[:n], atol=2e-3 * pd.max())
+    t1, p1 = aged_near_field(ac, 30.0, fs, r0=r0)          # inside r0: linear near field
+    assert np.array_equal(p1, near_field(ac, 30.0, fs)[1])

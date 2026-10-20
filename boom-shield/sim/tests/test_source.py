@@ -99,3 +99,34 @@ def test_reference_aircraft_shape_factor():
         I = np.max(np.cumsum(F) * (y[1] - y[0]))
         ks = 2 ** 0.25 * 1.4 / np.sqrt(2.4) * np.sqrt(I) / ac.length ** 0.75
         assert lo < ks < hi
+
+
+# ------------------------------------------------------------------ azimuth (off-track)
+def test_equivalent_area_azimuth():
+    x = np.linspace(-5.0, 1.5 * AC.length, 777)
+    from boomsim.source import lift_area
+    assert np.array_equal(equivalent_area(AC, x, phi=0.0), equivalent_area(AC, x))
+    assert np.array_equal(equivalent_area_slope(AC, x, phi=0.0), equivalent_area_slope(AC, x))
+    for phi in (0.3, 0.9, -0.9):
+        assert np.allclose(equivalent_area(AC, x, phi),
+                           volume_area(AC, x) + np.cos(phi) * lift_area(AC, x), rtol=1e-12)
+        xm = np.linspace(1.0, AC.length - 1.0, 40)
+        num = (equivalent_area(AC, xm + 1e-4, phi) - equivalent_area(AC, xm - 1e-4, phi)) / 2e-4
+        assert np.allclose(equivalent_area_slope(AC, xm, phi), num, rtol=1e-5, atol=1e-8)
+
+
+def test_f_function_and_near_field_azimuth():
+    y = np.linspace(0, 2.5 * AC.length, 501)
+    F0 = f_function(AC, y)
+    assert np.array_equal(f_function(AC, y, phi=0.0), F0)
+    Fv = f_function(AC, y, phi=0.5 * np.pi)            # cos = 6e-17: volume only
+    for phi in (0.4, 1.0):
+        # F is linear in A_e: F(phi) = F_v + cos(phi) (F(0) - F_v)
+        assert np.allclose(f_function(AC, y, phi=phi), Fv + np.cos(phi) * (F0 - Fv),
+                           atol=1e-9 * np.abs(F0).max())
+    t0, p0 = near_field(CONCORDE, 90.0, 10e3)
+    t1, p1 = near_field(CONCORDE, 90.0, 10e3, phi=0.0)
+    assert np.array_equal(p0, p1) and np.array_equal(t0, t1)
+    # off-track the lift part (which dominates the Concorde F-function) is weaker
+    _, p2 = near_field(CONCORDE, 90.0, 10e3, phi=0.8)
+    assert p2.max() < p0.max()

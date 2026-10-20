@@ -14,6 +14,8 @@ propagate_from_circle(ac, phi, t, p, R_m, z_ref=20000.0, anchor="source", age_fr
                       **opts) -> (t_g, p_g, y_g)
     start from a uniform-air matching-circle signature (3-D pipeline), WKB-corrected.
 circle_start_factors(ac, phi, R_m, ...) -> dict (the linear start factors alone)
+aged_near_field(ac, r, fs, phi=0.0, r0=None, **opts) -> (t, p)
+    nonlinearly aged near field at radius r in the circle convention (pre-shield ageing).
 ground_carpet(ac, phis, start="near_field" | "circle", procs=4, **opts) -> dict
     per-phi ground signatures, y_g, loudness (raw + Gate-0 rise-time proxy) and carpet
     metrics (undertrack PLdB, max PLdB, half-width).
@@ -644,6 +646,8 @@ def propagate_from_circle(ac, phi, t, p, R_m, z_ref=20000.0, anchor="source",
     the path only through that age).  Use r_f = 1.5 L (the near-field start of the
     direct calculation) for the part of the field that never met the shield, or the
     shield's slant distance for the transmitted part; default None = no correction.
+    The distortion *before* the shield (r0 -> shield, large near the aircraft) must
+    enter through the incident field: see :func:`aged_near_field`.
     """
     phi = float(phi)
     ray = RayPath(ac.altitude, ac.V, atmosphere=atmosphere, humidity=humidity,
@@ -667,6 +671,30 @@ def propagate_from_circle(ac, phi, t, p, R_m, z_ref=20000.0, anchor="source",
                     impedance=fac["impedance"], factor=fac["factor"],
                     z_anchor=fac["z_anchor"], y_g=y_g, arrival=ray.arrival(z_ground))
     return t, reflection * p, y_g
+
+
+def aged_near_field(ac, r, fs, phi=0.0, r0=None, atmosphere=None, humidity=None, **opts):
+    """Nonlinearly aged near field at radius ``r`` from the flight axis (azimuth phi),
+    expressed in the uniform-air matching-circle convention of :func:`propagate_from_circle`.
+
+    Whitham near field at r0 (default 1.5 L) -> full model along the actual ray to the
+    point at radius r -> divided by the linear circle start factor.  Feeding this to
+    ``propagate_from_circle(..., R_m=r)`` reproduces the direct calculation; using it as
+    the *incident* signature at the shield's slant distance (an "effective F-function",
+    F_eff(y) = p sqrt(2 beta r)/(p_inf gamma M^2)) puts the nonlinear distortion that
+    happens between the aircraft and the shield (large: the near field is a few hundred
+    Pa and k p ~ 3e-4 s/m at 20 km, i.e. tens of ms of waveform shift per 100 m) into a
+    linear shield solver.  For r <= r0 returns the linear near field.
+    """
+    r0 = 1.5 * ac.length if r0 is None else float(r0)
+    if r <= r0:
+        return near_field(ac, r, fs, phi=phi)
+    t, p = near_field(ac, r0, fs, phi=phi)
+    ray = RayPath(ac.altitude, ac.V, atmosphere=atmosphere, humidity=humidity,
+                  phi=phi, allow_cutoff=True)
+    cphi = float(np.cos(phi))
+    t, p = propagate(t, p, ray, ac.altitude - r0 * cphi, ac.altitude - float(r) * cphi, **opts)
+    return t, p / circle_start_factors(ac, phi, r, ray=ray)["factor"]
 
 
 # ------------------------------------------------------------------------------
