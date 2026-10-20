@@ -15,6 +15,8 @@ Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac
 - [handoff/2026-10-20-review-addendum.md](handoff/2026-10-20-review-addendum.md): review of the handoff with independent checks and the proposed Gate 0.
 - [handoff/quick_checks.py](handoff/quick_checks.py): back-of-envelope buoyancy, mass-law, inventory, and load checks behind the review.
 - [sim/DESIGN.md](sim/DESIGN.md): design contract for the Gate 0 boom-through-shield-to-ground simulation.
+- [sim/results/gate0_summary.md](sim/results/gate0_summary.md): Gate 0 results: ground PLdB with lift-closed membrane/gas/membrane shields in full nonlinear propagation (1-D, infinite shield).
+- [sim/results/review_evanescent.md](sim/results/review_evanescent.md): adversarial review of the evanescent gas-layer shielding mechanism and its realistic floors.
 
 ## Main result
 

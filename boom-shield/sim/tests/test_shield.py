@@ -8,7 +8,7 @@ import pytest
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from boomsim.shield import (GasLayer, Membrane, Screen, Stack, apply, gas,  # noqa: E402
-                            lift_margin, transfer)
+                            gas_mixture, lift_margin, transfer)
 
 # 20 km ambient (US Std 1976): 216.65 K, 5474.9 Pa
 T20, P20 = 216.65, 5474.9
@@ -146,3 +146,125 @@ def test_lift_margin():
     st = Stack([Membrane(0.2), GasLayer(he, 15.0), Membrane(0.3), Screen(100.0, m=0.05)])
     assert lift_margin(st, ATM) == pytest.approx((ATM.rho - he.rho) * 15.0 - 0.55)
     assert lift_margin(Stack([GasLayer(_air, 10.0)]), ATM) == pytest.approx(0.0)
+
+
+# ------------------------------------------------------------------ tie stiffness
+def _budget(g, d):
+    return (ATM.rho - g.rho) * d
+
+
+def _tied(g, d, K, m1=None, m2=None):
+    b = _budget(g, d)
+    m1 = b / 2 if m1 is None else m1
+    m2 = b / 2 if m2 is None else m2
+    return Stack([Membrane(m1), GasLayer(g, d, tie_K=K), Membrane(m2)])
+
+
+def test_tie_zero_is_untied():
+    f = np.logspace(-1, 4, 300)
+    for V in (1.4 * ATM.c, 2.0 * ATM.c, 3.2 * ATM.c, np.inf):
+        for g, d in ((HE, 15.0), (H2, 60.0), (HE, 300.0)):
+            T0, R0 = transfer(_tied(g, d, 0.0), f, V, ATM)
+            b = _budget(g, d)
+            T1, R1 = transfer(Stack([Membrane(b / 2), GasLayer(g, d), Membrane(b / 2)]), f, V, ATM)
+            np.testing.assert_array_equal(T0, T1)
+            np.testing.assert_array_equal(R0, R1)
+
+
+@pytest.mark.parametrize("K", [1.0, 35.0, 300.0, 1e4, 1e8])
+@pytest.mark.parametrize("V", [1.4 * 295.07, 2.0 * 295.07, 3.2 * 295.07, np.inf])
+def test_tie_energy_conservation(K, V):
+    f = np.logspace(-1, 4, 300)
+    stack = Stack([Membrane(0.3, N=50.0), GasLayer(HE, 30.0, tie_K=K), Membrane(0.2),
+                   GasLayer(H2, 300.0, tie_K=K / 3), Membrane(0.05)])
+    T, R = transfer(stack, f, V, ATM)
+    assert np.all(np.isfinite(T)) and np.all(np.isfinite(R))
+    np.testing.assert_allclose(np.abs(T) ** 2 + np.abs(R) ** 2, 1.0, atol=1e-9)
+
+
+@pytest.mark.parametrize("mach", [1.4, 2.0])
+@pytest.mark.parametrize("g,d", [(HE, 15.0), (H2, 30.0), (HE, 60.0)])
+def test_rigid_tie_mass_law(mach, g, d):
+    """K -> infinity: faces move together; at low f the stack is one limp sheet of mass
+    m1 + m2 + rho_g d (the gas between rigidly coupled faces is carried along and its
+    (negative) compliance is short-circuited)."""
+    V = mach * ATM.c
+    b = _budget(g, d)
+    f = np.array([0.2, 0.5, 1.0, 2.0])
+    T, _ = transfer(_tied(g, d, 1e9, 0.3 * b, 0.7 * b), f, V, ATM)
+    Tm, _ = transfer(Stack([Membrane(b + g.rho * d)]), f, V, ATM)
+    np.testing.assert_allclose(np.abs(T), np.abs(Tm), rtol=2e-2)
+    # and it is close to the plain mass law of the faces alone (gas mass is small)
+    Tf, _ = transfer(Stack([Membrane(b)]), f, V, ATM)
+    assert np.all(np.abs(20 * np.log10(np.abs(T) / np.abs(Tf))) < 1.0)
+
+
+def test_tie_large_kappa_d_no_overflow():
+    V = 2.0 * ATM.c
+    for K in (1e-3, 1.0, 1e3):
+        T, R = transfer(_tied(HE, 300.0, K), [1e3, 1e4], V, ATM)
+        assert np.all(np.isfinite(T)) and np.all(np.isfinite(R))
+        np.testing.assert_allclose(np.abs(T) ** 2 + np.abs(R) ** 2, 1.0, atol=1e-9)
+
+
+# Reference values: independent direct 2x2 face-velocity solve from the adversarial
+# review (results/review_evanescent.md section 3.1; scratch misc.py ``tie``), M 2, 10 Hz.
+@pytest.mark.parametrize("g,d,K,ref_db", [
+    (HE, 15.0, 0.0, -17.8), (HE, 15.0, 100.0, -19.8), (HE, 15.0, 1e3, -10.8),
+    (HE, 15.0, 1e4, -3.4), (HE, 60.0, 1e3, -26.3), (HE, 60.0, 1e4, -8.8),
+])
+def test_tie_matches_review_values(g, d, K, ref_db):
+    T, _ = transfer(_tied(g, d, K), [10.0], 2.0 * ATM.c, ATM)
+    assert 20 * np.log10(abs(T[0])) == pytest.approx(ref_db, abs=0.06)
+
+
+@pytest.mark.parametrize("mach,g,d,K6", [
+    (2.0, HE, 60.0, 35.0), (2.0, H2, 30.0, 105.0), (1.4, HE, 15.0, 275.0), (2.0, HE, 15.0, 955.0),
+])
+def test_tie_6db_loss_threshold_matches_review(mach, g, d, K6):
+    """Review table 3.1: smallest K at which 10 Hz transmission is 6 dB above K = 0."""
+    V = mach * ATM.c
+    T0 = 20 * np.log10(abs(transfer(_tied(g, d, 0.0), [10.0], V, ATM)[0][0]))
+    Ks = np.logspace(-1, 5, 601)
+    TT = np.array([20 * np.log10(abs(transfer(_tied(g, d, K), [10.0], V, ATM)[0][0])) for K in Ks])
+    K_found = Ks[np.argmax(TT > T0 + 6)]
+    assert K_found == pytest.approx(K6, rel=0.03)
+
+
+def test_tie_static_cancellation_scale():
+    """At K = rho_g/(a^2 d) the tie cancels the evanescent gas layer's negative static
+    stiffness: the layer is infinitely compliant at low f and T -> 0 there."""
+    V = 2.0 * ATM.c
+    d = 30.0
+    a2 = 1 / V ** 2 - 1 / HE.c ** 2
+    Kc = HE.rho / (a2 * d)
+    f = np.array([0.05, 0.1])
+    Tc, _ = transfer(_tied(HE, d, Kc), f, V, ATM)
+    T0, _ = transfer(_tied(HE, d, 0.0), f, V, ATM)
+    assert np.all(np.abs(Tc) < 0.05) and np.all(np.abs(T0) > 0.9)
+
+
+# ------------------------------------------------------------------- gas mixtures
+def test_gas_mixture():
+    pure = gas_mixture({"helium": 1.0}, T20, P20)
+    assert pure.c == pytest.approx(HE.c, rel=1e-12) and pure.rho == pytest.approx(HE.rho, rel=1e-12)
+    airmix = gas_mixture({"air": 1.0}, T20, P20)
+    assert airmix.c == pytest.approx(ATM.c, rel=1e-12)
+    # review section 3.4: 5 % air drops c_He to ~751 m/s and c_H2 to ~867 m/s
+    he5 = gas_mixture({"helium": 0.95, "air": 0.05}, T20, P20)
+    h25 = gas_mixture({"hydrogen": 0.95, "air": 0.05}, T20, P20)
+    assert he5.c == pytest.approx(751.3, abs=0.5)
+    assert h25.c == pytest.approx(867.4, abs=0.5)
+    # ideal mixing: M linear in mole fraction, density linear, gamma between components
+    he10 = gas_mixture({"helium": 0.9, "air": 0.1}, T20, P20)
+    assert he10.M == pytest.approx(0.9 * 4.0026e-3 + 0.1 * 28.964e-3)
+    assert he10.rho == pytest.approx(0.9 * HE.rho + 0.1 * ATM.rho, rel=1e-12)
+    assert 1.4 < he10.gamma < 5 / 3
+    # cv additivity check: monatomic + diatomic 50/50 -> cv = 2 R -> gamma = 1.5
+    assert gas_mixture({"helium": 0.5, "air": 0.5}, T20, P20).gamma == pytest.approx(1.5)
+    with pytest.raises(ValueError):
+        gas_mixture({"helium": 0.9}, T20, P20)
+    with pytest.raises(ValueError):
+        gas_mixture({"neon": 1.0}, T20, P20)
+    # contaminated layer gives less lift
+    assert lift_margin(Stack([GasLayer(he5, 15.0)]), ATM) < lift_margin(Stack([GasLayer(HE, 15.0)]), ATM)

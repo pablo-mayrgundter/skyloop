@@ -361,13 +361,15 @@ def propagate(t, p, ray: RayPath, z_from, z_to, linear=False, lossless=False,
 
 
 def ground_signature(ac, r0=None, insert=None, fs=50e3, reflection=1.9, z_ground=0.0,
-                     atmosphere=None, humidity=None, **opts):
+                     atmosphere=None, humidity=None, below_opts=None, **opts):
     """Near field at r0 below the aircraft -> augmented Burgers to the ground.
 
     r0 defaults to 1.5 body lengths.  ``insert=(z_ins, fn)``: propagate to z_ins,
     apply ``p = fn(t, p)`` there (fn may also return a new ``(t, p)``), continue to
     the ground.  The ground reflection factor is applied last.  Extra keyword options
-    go to :func:`propagate`.
+    go to :func:`propagate`; ``below_opts`` (dict, needs ``insert``) overrides them
+    for the leg below z_ins only, e.g. ``below_opts={"linear": True}`` to switch
+    nonlinearity off after the insert (re-steepening diagnostics).
     """
     r0 = 1.5 * ac.length if r0 is None else float(r0)
     t, p = near_field(ac, r0, fs)
@@ -384,7 +386,9 @@ def ground_signature(ac, r0=None, insert=None, fs=50e3, reflection=1.9, z_ground
             t, p = out
         else:
             p = np.asarray(out, dtype=float)
-        t, p = propagate(t, p, ray, z_ins, z_ground, **opts)
+        t, p = propagate(t, p, ray, z_ins, z_ground, **{**opts, **(below_opts or {})})
     else:
+        if below_opts:
+            raise ValueError("below_opts requires insert")
         t, p = propagate(t, p, ray, z0, z_ground, **opts)
     return t, reflection * p

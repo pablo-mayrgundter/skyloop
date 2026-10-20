@@ -18,6 +18,8 @@ Normal-velocity (positive downward) impedance of a wave travelling in +zeta is
 
 * Membrane / Screen (series impedance Z_s):  [[1, Z_s], [0, 1]]
 * Gas layer of thickness d:  [[cos k_z d, j Z sin k_z d], [j sin(k_z d)/Z, cos k_z d]]
+  (optionally with face-to-face tie springs ``tie_K`` in parallel, see
+  :func:`_tie_layer_scaled`)
 
 Branch choice. ``k_z = sqrt((omega/c)^2 - k_x^2)`` with Im(k_z) <= 0. For a gas
 "subsonic" relative to the trace speed (V < c_gas) this gives ``k_z = -j kappa``,
@@ -89,6 +91,34 @@ def gas(kind: str, T: float, p: float) -> Gas:
     return Gas(kind, float(T), float(p), M, gamma)
 
 
+def gas_mixture(fractions: dict, T: float, p: float) -> Gas:
+    """Ideal-gas mixture at T [K], absolute pressure p [Pa].
+
+    ``fractions`` maps gas kind (see :func:`gas`) to **mole** (= volume) fraction,
+    e.g. ``{"helium": 0.95, "air": 0.05}``; fractions are normalised to sum to 1
+    (they must already sum to 1 within 1e-6). Ideal mixing:
+
+        M = sum x_i M_i,  c_v = sum x_i R/(gamma_i - 1),  gamma = (c_v + R)/c_v
+
+    (molar heat capacities add; frozen composition, no relaxation of the mixture).
+    """
+    if not fractions:
+        raise ValueError("empty mixture")
+    xs = {k.lower(): float(v) for k, v in fractions.items()}
+    tot = sum(xs.values())
+    if any(v < 0 for v in xs.values()) or abs(tot - 1.0) > 1e-6:
+        raise ValueError(f"mole fractions must be >= 0 and sum to 1 (got {tot})")
+    M = cv = 0.0
+    for k, x in xs.items():
+        if k not in _GASES:
+            raise ValueError(f"unknown gas {k!r}; choose from {sorted(_GASES)}")
+        Mi, gi = _GASES[k]
+        M += x / tot * Mi
+        cv += x / tot * R_UNIVERSAL / (gi - 1.0)
+    label = "+".join(f"{k}{x / tot:.3g}" for k, x in xs.items() if x > 0)
+    return Gas(label, float(T), float(p), M, (cv + R_UNIVERSAL) / cv)
+
+
 # ---------------------------------------------------------------------- elements
 @dataclass
 class Membrane:
@@ -128,9 +158,17 @@ class Screen:
 
 @dataclass
 class GasLayer:
-    """Slab of gas ``gas`` (see :func:`gas`) of thickness d [m]."""
+    """Slab of gas ``gas`` (see :func:`gas`, :func:`gas_mixture`) of thickness d [m].
+
+    ``tie_K`` [Pa/m]: smeared spring stiffness per unit area tying the layer's top
+    and bottom boundaries (tendons/drop-threads/webs between the two faces, smeared
+    over the footprint: tension per tie / tie spacing^2), acting in parallel with the
+    gas. The spring is massless and lossless; only the thickness change w_bot - w_top
+    loads it. See :func:`_tie_layer_scaled` for the derivation.
+    """
     gas: Gas
     d: float
+    tie_K: float = 0.0
 
     @property
     def areal_mass(self) -> float:  # buoyancy is handled in lift_margin
@@ -179,7 +217,68 @@ def _layer_matrix_scaled(layer: GasLayer, omega, sx):
     rw_safe = np.where(rw == 0, 1.0, rw)
     c = np.where(rw == 0, 0.0, 1j * kz * sin_s / rw_safe)  # j sin(phi) / Z
     d = cos_s
+    if layer.tie_K:
+        return _tie_layer_scaled(a, b, c, d, B, layer.tie_K, omega)
     return a, b, c, d, B
+
+
+def _tie_layer_scaled(a, b, c, d, B, K, omega):
+    """Add a smeared tie spring K [Pa/m] in parallel with a gas layer.
+
+    Derivation (true, unscaled quantities; state (p, v), v positive downward,
+    1 = top face, 2 = bottom face of the layer). Impedance (2-port) form of the gas
+    layer, from p1 = a p2 + b v2, v1 = c p2 + d v2 (ad - bc = 1):
+
+        p1 = (a/c) v1 - (1/c) v2,   p2 = (1/c) v1 - (d/c) v2.
+
+    The tie carries tension K e, e = w2 - w1 = (v2 - v1)/(j w) (thickness change).
+    It pulls the top face down and the bottom face up by K e, so in the face
+    equations it acts exactly like replacing the gas pressures by
+    P_i = p_i - K e = p_i + s (v1 - v2), s = K/(j w):
+
+        [P1, P2] = (Z_gas + s [[1, -1], [1, -1]]) [v1, v2]
+
+    (= the textbook (K/jw)[[1,-1],[-1,1]] once v2 is taken positive *into* the layer
+    from below, i.e. v2 -> -v2 and P2 -> -P2). Converting back to chain form gives
+
+        A' = (a + s c)/(1 + s c),            C' = c/(1 + s c),
+        D' = (d + s c)/(1 + s c),            B' = (b + s(a + d - 2))/(1 + s c),
+
+    (B' simplified with ad - bc = 1; A'D' - B'C' = 1 still, so reciprocity and the
+    lossless energy balance survive). We use this direct chain form rather than
+    building Z explicitly because Z has 1/c, singular wherever c = 0.
+
+    Scaling. The inputs are scaled: true = e^B * (a_s, b_s, c_s, d_s). With
+    u = e^{-B} (may underflow to 0 for huge kappa d):
+
+        M' = N / (u + s c_s),  N = [[a_s + s c_s, b_s + s(a_s + d_s - 2u)],
+                                    [c_s,         d_s + s c_s]],
+
+    every entry of N is O(1 + |s|) and the denominator stays finite, so this is
+    overflow-safe. Physically: once e^{kappa d} is large any finite tie dominates the
+    face-to-face coupling (M' ~ N/(s c_s), no exponential factor), i.e. the ties
+    are the transmission path, as expected. We return N/n_max * |den|/den with log
+    scale ln(n_max/|den|) so the caller's (scaled entries, log scale) bookkeeping
+    is unchanged.
+
+    Note 1 + s c -> 1 - K d (1/V^2 - 1/c_g^2)/rho_g as w -> 0 (evanescent layer:
+    the gas has *negative* static stiffness rho_g/(a^2 d) under the travelling
+    load); at K = rho_g/(a^2 d) the two cancel, C' blows up and T -> 0 at low f.
+    """
+    s = K / (1j * omega)
+    u = np.exp(-B)
+    sc = s * c
+    den = u + sc
+    den = np.where(den == 0, 1e-300, den)
+    n11 = a + sc
+    n12 = b + s * (a + d - 2.0 * u)
+    n21 = c
+    n22 = d + sc
+    nmax = np.maximum.reduce([np.abs(n11), np.abs(n12), np.abs(n21), np.abs(n22)])
+    nmax = np.where(nmax == 0, 1.0, nmax)
+    ph = np.abs(den) / den / nmax
+    logscale = np.log(nmax) - np.log(np.abs(den))
+    return n11 * ph, n12 * ph, n21 * ph, n22 * ph, logscale
 
 
 def _stack_matrix(stack: Stack, omega, sx):

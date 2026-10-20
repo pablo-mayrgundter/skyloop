@@ -220,3 +220,23 @@ def test_concorde_ground_signature():
     dur = (i_end - i10) * dt
     assert 0.2 < dur < 0.35
     assert -1.1 * pk < p.min() < -0.6 * pk
+
+
+def test_below_opts_linear_leg():
+    """below_opts applies only below the insert: linear below == propagate legs by hand."""
+    from boomsim.source import near_field
+    ac = CONCORDE
+    opts = dict(fs=10e3, r0=90.0)
+    z_ins = 10000.0
+    t1, p1 = ground_signature(ac, insert=(z_ins, lambda t, p: (t, p)), below_opts={"linear": True},
+                              reflection=1.0, **opts)
+    t0, p0 = near_field(ac, 90.0, 10e3)
+    ray = RayPath(ac.altitude, ac.V)
+    t0, p0 = propagate(t0, p0, ray, ac.altitude - 90.0, z_ins)
+    t0, p0 = propagate(t0, p0, ray, z_ins, 0.0, linear=True)
+    np.testing.assert_allclose(p1, p0, atol=1e-9 * np.max(np.abs(p0)))
+    # linear below the insert leaves a much less steep front than the nonlinear run
+    t2, p2 = ground_signature(ac, insert=(z_ins, lambda t, p: (t, p)), reflection=1.0, **opts)
+    assert np.max(np.diff(p2)) > 1.5 * np.max(np.diff(p1))
+    with pytest.raises(ValueError):
+        ground_signature(ac, below_opts={"linear": True}, **opts)

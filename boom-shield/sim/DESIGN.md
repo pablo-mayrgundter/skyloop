@@ -29,7 +29,7 @@ boomsim/
   loudness.py     Stevens Mark VII PLdB + other waveform metrics
 tests/            pytest; run with `python -m pytest boom-shield/sim/tests`
 results/          generated CSV/PNG/MD from run scripts
-run_initial.py    Gate-0 study driver (written after modules land)
+run_gate0.py      Gate-0 study driver -> results/gate0_*
 ```
 
 ## Module interfaces
@@ -54,13 +54,20 @@ run_initial.py    Gate-0 study driver (written after modules land)
   Gives arc length `s(z)`, ray-tube area `A(z)` (up to a constant), local Atm.
 - `propagate(t, p, ray, z_from, z_to, **opts) -> (t, p)`: augmented Burgers from altitude
   `z_from` down to `z_to` (z_to < z_from). Linear-only and lossless switches in opts.
-- `ground_signature(ac, r0=None, insert=None, fs=..., reflection=1.9) -> (t, p)`:
+- `ground_signature(ac, r0=None, insert=None, fs=..., reflection=1.9, below_opts=None) -> (t, p)`:
   near field at r0 → propagate to ground. If `insert=(z_ins, fn)`, propagate to `z_ins`,
-  apply `p = fn(t, p)` there, then continue to the ground. Ground reflection factor applied last.
+  apply `p = fn(t, p)` there, then continue to the ground (`below_opts` overrides propagate
+  options for that lower leg only, e.g. `{"linear": True}`). Ground reflection factor applied last.
 
 ### shield.py
 - Gas helpers: `gas(kind, T, p)` for `"air"`, `"helium"`, `"hydrogen"`; partial-pressure air allowed.
-- Elements: `Membrane(m, N=0.0, eta=0.0)`, `GasLayer(gas, d)`, `Screen(R)` (flow-resistive sheet).
+  `gas_mixture({"helium": 0.95, "air": 0.05}, T, p)`: ideal mixing by mole fraction
+  (M = Σx·M_i, molar c_v additive, γ = (c_v+R)/c_v).
+- Elements: `Membrane(m, N=0.0, eta=0.0)`, `GasLayer(gas, d, tie_K=0.0)`, `Screen(R)` (flow-resistive sheet).
+  `tie_K` [Pa/m]: smeared, massless, lossless spring stiffness per unit area tying the layer's
+  top and bottom faces, in parallel with the gas (added in 2-port impedance form, converted back
+  to chain form; overflow-safe for large κd). Reproduces the adversarial review's independent
+  tie solver to ~1e-11 dB.
 - `Stack(layers)`; ambient air both sides.
 - `transfer(stack, f, V, atm) -> (T, R)` complex pressure transmission/reflection at
   frequencies `f` for a wave with horizontal trace velocity `V`.
