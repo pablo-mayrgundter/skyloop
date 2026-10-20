@@ -687,10 +687,8 @@ def solve_fast(prob: Problem, inc_p, inc_dpdn, groups, tol=1e-7, r_near_factor=3
     ZF = ZF.tocsr()
     alpha = prob.alpha if prob.alpha is not None else -1j / k_ext
     h = float(np.median(P.L))
-    import os as _os
     if r_near is None:
         r_near = r_near_factor * h
-    r_near = float(_os.environ.get("BEM_RNEAR", r_near))
     # maps from unknowns to full-N vectors (sparse N x nunk)
     E_pA = sps.csr_matrix((np.ones(Nm), (mem, np.arange(Nm))), shape=(N, nunk))
     E_v = sps.csr_matrix((Dm[mem], (mem, Nm + np.arange(Nm))), shape=(N, nunk))

@@ -18,7 +18,7 @@ import numpy as np
 
 from . import crossplane as cp
 from . import shield as SH
-from .source import CONCORDE, Aircraft, near_field
+from .source import CONCORDE, Aircraft
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.join(os.path.dirname(HERE), "results")
@@ -211,8 +211,22 @@ def block_full(workers=4):
     return out
 
 
+def block_edges_full(workers=4):
+    """Full matching runs (aged incident, 100 Hz) for the edge-treatment variants."""
+    out = {}
+    R = _he30(1000.0).matching_radius()
+    for lab, cfg in (("b asymmetric", _he30(None, y_left=-400.0, y_right=600.0, incident="aged", R_m=R)),
+                     ("c fringe 150 m", _he30(1000.0, fringe_width=150.0, incident="aged", R_m=R,
+                                              df=_he30(1000.0).auto_df()))):
+        t0 = time.time()
+        sig, (f, P) = cp.matching_signatures(cfg, workers=workers, return_spectra=True)
+        out[lab] = dict(sig=sig, f=f, P=P, time=time.time() - t0, df=f[1], nf=f.size)
+        print(f"  {lab}: {f.size} freqs, {time.time() - t0:.0f} s")
+    return out
+
+
 BLOCKS = dict(incident=block_incident, maps=block_maps, overlap=block_overlap, floor=block_floor,
-              cells=block_cells, edges=block_edges, full=block_full)
+              cells=block_cells, edges=block_edges, full=block_full, edges_full=block_edges_full)
 
 
 # ------------------------------------------------------------------------- figure / summary
@@ -277,7 +291,8 @@ def make_figure(D, path):
             t, p = F["W1000"]["sig"][ph]
             t0, p0 = F["none"]["sig"][ph]
             m = (t > -0.3) & (t < 2.0)
-            ax.plot(t0[m], p0[m] / 10, f"C{i}", alpha=0.35, lw=1, label=f"unshielded/10 phi={ph:.0f}")
+            m0 = (t0 > -0.3) & (t0 < 2.0)
+            ax.plot(t0[m0], p0[m0] / 10, f"C{i}", alpha=0.35, lw=1, label=f"unshielded/10 phi={ph:.0f}")
             ax.plot(t[m], p[m], f"C{i}", lw=1, label=f"W=1 km He 30 phi={ph:.0f}")
         ax.set_xlabel("retarded time [s]"); ax.set_ylabel("p [Pa]"); ax.legend(fontsize=7)
         ax.set_title(f"Matching signatures, R_m={F['W1000']['R_m']:.0f} m (aged incident, 100 Hz)")
@@ -322,16 +337,21 @@ def make_figure(D, path):
         ax.set_title("Edge treatments: centre track phi=0"); ax.set_xlabel("f [Hz]")
         ax.set_ylabel("|p/p_inc| [dB]"); ax.legend(fontsize=7); ax.grid(alpha=0.3)
         ax = fig.add_subplot(gs[4, 1])
+        under = np.abs(E["phis"]) <= 50.0
         for j, lab in enumerate(("a sharp", "b asymmetric", "c fringe 150 m")):
-            r = _ratio_db(E[lab], E["p0"])
+            r = _ratio_db(E[lab], E["p0"])[:, under]
             ax.semilogx(E["f"], r.max(axis=1), f"C{j}-", label=lab + ": max over |phi|<=50")
         ax.set_xlabel("f [Hz]"); ax.set_ylabel("dB"); ax.legend(fontsize=7); ax.grid(alpha=0.3)
         ax.set_title("Edge treatments: worst azimuth under the shield")
+    if "edges_full" in D and "full" in D:
         ax = fig.add_subplot(gs[4, 2])
-        for j, lab in enumerate(("a sharp", "b asymmetric", "c fringe 150 m")):
-            ax.plot(E["phis"], _band_db(E[lab], E["p0"], E["f"], 5, 41), f"C{j}o-", label=lab)
-        ax.set_xlabel("phi [deg]"); ax.set_ylabel("5-40 Hz band |p/p_inc|^2 [dB]"); ax.legend(fontsize=7)
-        ax.set_title("Edge treatments vs azimuth (BEM)"); ax.grid(alpha=0.3)
+        runs = [("a sharp", D["full"]["W1000"])] + list(D["edges_full"].items())
+        for j, (lab, d) in enumerate(runs):
+            t, p = d["sig"][0.0]
+            m = (t > -0.3) & (t < 2.5)
+            ax.plot(t[m], p[m], f"C{j}", lw=1, label=f"{lab}, phi=0")
+        ax.set_xlabel("retarded time [s]"); ax.set_ylabel("p [Pa]"); ax.legend(fontsize=7)
+        ax.set_title("Edge treatments: matching signature phi=0 (aged, 100 Hz)")
     fig.savefig(path, dpi=110, bbox_inches="tight")
 
 
@@ -367,17 +387,29 @@ def summary_md(D):
                      + ", ".join(f"{np.abs(d[(O['f'] >= 14) & (O['f'] <= 25), i]).max():.1f}" for i in range(d.shape[1]))
                      + " dB (max |diff|)")
         L.append("")
-    if "edges" in D:
-        E = D["edges"]
-        L += ["## Edge treatments (W = 1 km He 30 m, M 2, h = 250 m), change vs sharp symmetric edge", "",
-              "| variant | band | centre track phi=0 | max over phi in [-70, 70] |", "|---|---|---|---|"]
-        a = E["a sharp"]
-        for lab in ("b asymmetric", "c fringe 150 m", "c' fringe 150 m (top-level sheet)"):
-            for lo, hi in ((2, 5), (5, 10), (10, 20), (20, 41)):
-                ba = _band_db(a, E["p0"], E["f"], lo, hi)
-                bb = _band_db(E[lab], E["p0"], E["f"], lo, hi)
-                i0 = list(E["phis"]).index(0.0)
-                L.append(f"| {lab} | {lo}-{hi} Hz | {bb[i0] - ba[i0]:+.1f} dB | {bb.max() - ba.max():+.1f} dB |")
+    if "edges_full" in D and "full" in D:
+        A = D["full"]["W1000"]
+        phis = np.array(sorted(A["sig"].keys()))
+        under = np.abs(phis) <= 50.0
+        i0 = list(phis).index(0.0)
+        L += ["## Edge treatments (W = 1 km He 30 m slab, M 2, h = 250 m, aged incident, 100 Hz)", "",
+              "Change vs the sharp symmetric edge (a), from the full matching runs: band-mean "
+              "|P|^2 on the matching circle (R_m = 716 m) at phi = 0 and for the worst azimuth "
+              "under the shield (|phi| <= 50 deg), and signature peaks.", "",
+              "| variant | band | centre track phi=0 | worst |phi|<=50 |", "|---|---|---|---|"]
+
+        def band(d, lo, hi):
+            m = (d["f"] >= lo) & (d["f"] < hi)
+            return 10 * np.log10(np.mean(np.abs(d["P"][m]) ** 2, axis=0))
+        for lab, d in D["edges_full"].items():
+            for lo, hi in ((2, 5), (5, 10), (10, 20), (20, 50), (50, 100)):
+                ba, bb = band(A, lo, hi), band(d, lo, hi)
+                L.append(f"| {lab} | {lo}-{hi} Hz | {bb[i0] - ba[i0]:+.1f} dB | "
+                         f"{bb[under].max() - ba[under].max():+.1f} dB |")
+        L += ["", "| variant | peak phi=0 [Pa] | max peak over |phi|<=50 [Pa] |", "|---|---|---|"]
+        for lab, d in [("a sharp", A)] + list(D["edges_full"].items()):
+            pk = np.array([d["sig"][p][1].max() for p in phis])
+            L.append(f"| {lab} | {pk[i0]:.2f} | {pk[under].max():.2f} |")
         L.append("")
     if "full" in D:
         F = D["full"]
@@ -413,7 +445,7 @@ def main(argv=None):
                 continue
             t0 = time.time()
             print(f"block {name} ...", flush=True)
-            D[name] = fn(a.workers) if name == "full" else fn()
+            D[name] = fn(a.workers) if name in ("full", "edges_full") else fn()
             print(f"block {name}: {time.time() - t0:.0f} s", flush=True)
             if a.cache:
                 pickle.dump(D, open(a.cache, "wb"))

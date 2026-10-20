@@ -1,5 +1,21 @@
 """Cross-plane (y, z) solver for a finite-width BoomShield under a supersonic aircraft.
 
+API
+---
+CrossPlaneConfig(aircraft, h, W | y_left/y_right, T, profile, gas, m_top, m_bot, m_side,
+                 m_part, partitions, tie_K, line_ties, T_rim, lens_q, fringe_width,
+                 fringe_profile, fringe_level, f_max, df, f_split, R_m, phis, incident, ...)
+matching_signatures(cfg) -> {phi_deg: (tau, p)}  total field on the matching circle R_m
+                            (retarded time tau = t - beta R_m/V; unshielded if no shield)
+matching_spectra(cfg, X=None) -> (f, P[f, point])
+field_at(cfg, f, X, method="auto"|"bem"|"po"), field_map(cfg, f, y, z) -> complex p
+incident_coefficients(cfg, f), multipole_field(a, k, y, z), aging_radius(cfg, phi)
+incident_vs_whitham(ac, r, phi)
+Downstream: ``propagate.propagate_from_circle(ac, radians(phi), t, p, cfg.matching_radius(),
+age_from=aging_radius(cfg, radians(phi)))`` (the aged incident already contains the
+nonlinear distortion up to aging_radius).
+Validation: ``python -m boomsim.crossplane_validation`` -> results/crossplane_validation.*
+
 Contract: ``DESIGN-3D.md``. Steady level flight along x at speed V over a shield that is
 invariant along x. Every field is ``P(y, z; omega) exp(j(omega t - k_x x))``, ``k_x =
 omega/V``, so each frequency is a 2-D problem in the cross-plane (y lateral, z up;
@@ -47,23 +63,35 @@ callable of y) between top and bottom faces at the same y, and/or ``line_ties`` 
 [(y, k_line [Pa = N/m per m of length])] discrete springs.
 
 Edge fringe (apodised / serrated edge), ``fringe_width`` w_f > 0: on each side a
-coverage profile tau(y) runs from 1 (body) to 0 over w_f, centred on the nominal edge
-(tau = 1/2 at y_left / y_right, so the covered area equals that of a sharp edge).
-Physical picture: plan-view serrations of period Lambda along x. Valid when
-(i) Lambda << the along-track Fresnel zone at the receiver, sqrt(lambda_x R) (the
-receiver then averages over x; lambda_x = V/f), and (ii) Lambda << lambda_perp is NOT
-required for the averaging, but the fringe acts as a graded *y*-profile only on scales
-w_f >~ lambda_perp/2: features much narrower than lambda_perp = V/(f beta)
-(~30-170 m at 2-10 Hz, M 2) are invisible at the lowest frequencies, which still see a
-sharp edge at the mean position. Models:
+coverage profile tau(y) (fraction of x covered by shield at lateral position y) runs
+from 1 (body) to 0 over w_f, centred on the nominal edge (tau = 1/2 at y_left /
+y_right, so the covered area equals that of a sharp edge). Physical picture: plan-view
+serrations or a random edge profile of period/correlation length Lambda along x.
+The model keeps only the x-averaged (zeroth-order) field. Validity:
+  (i)   Lambda << sqrt(lambda R), the along-track Fresnel zone at the receiver distance R
+        (lambda = c/f), so the receiver averages over several periods;
+  (ii)  higher orders k_x +- 2 pi n/Lambda are dropped: they are evanescent (no leak) if
+        Lambda < lambda M/(M + 1); otherwise they radiate as separate weak cones whose total
+        power is bounded by the coverage variance, ~ tau (1 - tau) |1 - T_stack|^2;
+  (iii) the fringe acts as a graded edge only where w_f >~ lambda_perp/2,
+        lambda_perp = V/(f beta) (~170 m at 2 Hz, ~34 m at 10 Hz, Mach 2): at the lowest
+        frequencies a fringe narrower than that is invisible and the shield behaves like a
+        sharp edge at tau = 1/2.
+Models:
   * Kirchhoff path: transmitted aperture field tau T_stack p + (1 - tau) p, reflected
     tau R_stack p (exact coverage averaging of the two local responses).
   * BEM path: a zero-thickness sheet (``fringe_level``: body mid-plane, default, or
-    top-face level) with impedance Z_eq(y) chosen so
-    that the plane-wave sheet transmission 1/(1 + Z_eq k_z/(2 rho omega)) equals
-    1 - tau(y) (1 - T_stack) at the local incidence (k_y = k y/r from the axis).
-    Exact for transmission at that angle; its reflection 1 - T_sheet differs in phase
-    from tau R_stack (only matters above the shield).
+    top-face level) with impedance Z_eq(y) chosen so that the plane-wave sheet
+    transmission 1/(1 + Z_eq k_z/(2 rho omega)) equals 1 - tau(y) (1 - T_stack) at the
+    local incidence (k_y = k y/r from the axis). Exact for transmission at that angle
+    (BEM and Kirchhoff agree to ~1 dB under a wide fringe); its reflection 1 - T_sheet
+    differs in phase from tau R_stack (matters only above the shield). The fringe teeth
+    carry the rim thickness. The sheet level changes the deep-shadow benefit by a few dB
+    (both variants are reported in the validation).
+
+Lens rim: ``T_rim`` (minimum rim thickness, default 0.1 T) and ``lens_q`` (taper exponent)
+shape the rim; a graded rim is itself an apodisation, but thin rims also leak (review
+sec. 3.3): both are in the BEM (rim side membranes of height T_rim).
 
 Solvers
 -------
@@ -95,6 +123,19 @@ line ties smeared to K = k_line/spacing, lens face curvature ignored. Accuracy: 
 real edge waves depend on the face impedances (rigid faces diffract more than a black
 screen, the lift-closed He stack less), so PO is off by 2-10 dB there (validation).
 
+Accuracy and limitations (see results/crossplane_validation.md)
+* BEM transmission floor: the extinction residual of the discretisation limits resolvable
+  transmitted power to about -52...-56 dB re incident (He 60 m emulation; mesh dependent);
+  levels at the circle below
+  ~-45 dB re incident are bounds. Deep-shadow levels move by ~1-3 dB with mesh density at
+  70 Hz (7-10 elements/lambda); partitions converge as O(h) (~1-2 dB at -40 dB).
+* Lens above f_split is PO only (no structured solver for curved faces).
+* The matching-circle field is exact; edge waves arriving there are not radial from the
+  axis, so ray marching from the circle is approximate unless R_m >> W (or use a larger
+  R_m: cost is only more evaluation points).
+* The f = 0 bin and the low-frequency tail carry the 2-D static lift dipole (net impulse
+  W/(2 pi V r)) that Whitham's asymptote lacks.
+
 Incident field: ``incident="aged"`` (default) adds to the exact linear field a
 multipole correction fitted to the nonlinear aging between the aircraft and the shield
 (see :func:`incident_coefficients`, :func:`aging_radius`); ``"linear"`` is the exact
@@ -104,8 +145,8 @@ from __future__ import annotations
 
 import math
 import os
-from dataclasses import dataclass, field, replace
-from typing import Callable, Sequence
+from dataclasses import dataclass
+from typing import Sequence
 
 import numpy as np
 from scipy import special as sp
@@ -948,18 +989,6 @@ def matching_signatures(cfg: CrossPlaneConfig, workers=None, return_spectra=Fals
     out = {float(ph): (t, p[:, i]) for i, ph in enumerate(cfg.phis)}
     if return_spectra:
         return out, (f, P)
-    return out
-
-
-def whitham_spectrum(ac: Aircraft, r: float, f):
-    """Continuous spectrum of ``source.near_field(ac, r, fs)`` (retarded time), direct
-    transform at frequencies f (for comparisons)."""
-    from .source import near_field
-    fs = max(20000.0, 40 * float(np.max(f)))
-    t, p = near_field(ac, r, fs, y_max_factor=12.0)
-    out = np.empty(len(f), complex)
-    for i0 in range(0, len(f), 64):
-        out[i0:i0 + 64] = np.exp(-2j * np.pi * np.outer(f[i0:i0 + 64], t)) @ p / fs
     return out
 
 

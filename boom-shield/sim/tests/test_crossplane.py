@@ -159,7 +159,6 @@ def test_unshielded_matching_signatures_equal_incident_and_whitham():
         np.testing.assert_allclose(P[i], cp.multipole_field(A[i], k[i], X[:, 0], X[:, 1]), rtol=1e-12)
     t, p = sig[0.0]
     tw, pw = near_field(CONCORDE, cfg.matching_radius(), 20000.0, y_max_factor=12.0)
-    pwi = np.interp(t, tw, pw)
     # the exact field carries the static lift footprint (f=0) that Whitham lacks; compare peaks
     assert p.max() == pytest.approx(pw.max(), rel=0.08)   # band-limited (100 Hz) vs. exact shock
 
@@ -220,6 +219,17 @@ def test_fringe_sheet_matches_coverage_model():
     db_b = 20 * np.log10(np.abs(cp.field_at(c, 10.0, X, method="bem") / p0))
     db_p = 20 * np.log10(np.abs(cp.field_at(c, 10.0, X, method="po") / p0))
     assert np.max(np.abs(db_b - db_p)) < 1.5, (db_b, db_p)
+
+
+def test_lens_bem_and_po_consistent():
+    """Elliptic lens (rim 3 m): BEM and PO agree to a few dB under the shield at 10 Hz
+    (thin rims behave like thin screens; measured max |diff| ~2.5 dB)."""
+    cfg = _lin(h=250.0, W=1000.0, T=30.0, profile="lens", T_rim=3.0, R_m=716.0,
+               phis=[-40.0, -20.0, 0.0])
+    X = cfg.circle_points()
+    pb = cp.field_at(cfg, 10.0, X, method="bem")
+    pp = cp.field_at(cfg, 10.0, X, method="po")
+    assert np.max(np.abs(20 * np.log10(np.abs(pb / pp)))) < 3.5
 
 
 def test_coverage_profile_area_preserving():
