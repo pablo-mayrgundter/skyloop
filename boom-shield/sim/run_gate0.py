@@ -38,13 +38,14 @@ from boomsim import shield as S  # noqa: E402
 from boomsim.atmosphere import std_atm  # noqa: E402
 from boomsim.loudness import metrics, pldb  # noqa: E402
 from boomsim.propagate import ground_signature  # noqa: E402
+# rise-time proxy (Gaussian sigma = 1 ms) and metric taper: shared with the 3-D carpet code
+from boomsim.proxy import METRIC_TAPER_S, RISE_SIGMA_S  # noqa: E402
 from boomsim.source import CONCORDE, SR71  # noqa: E402
 
 RESULTS = os.path.join(HERE, "results")
 
 H_S = 20000.0                 # shield top [m]
 FS = 50e3                     # sample rate [Hz] (unshielded shocks need it)
-RISE_SIGMA_S = 1.0e-3         # rise-time proxy: Gaussian kernel std -> ideal step 10-90 % = 2.56 ms
 RISE_TAU_S = 1.14e-3          # shape check: one-sided exponential kernel -> ideal step 10-90 % = 2.5 ms
 HS_LIST = [100.0, 250.0]      # aircraft height above shield top [m]
 AIRCRAFT = [("Concorde", 1.4), ("Concorde", 2.0), ("Concorde", 2.5), ("SR-71", 3.2)]
@@ -53,7 +54,6 @@ TIE_KS = [0.0, 30.0, 100.0, 300.0, 1000.0]
 PLOT_WIN = (-0.10, 0.50)      # s, retarded-time window kept for plotting
 PLOT_DEC = 5                  # 50 kHz -> 10 kHz for stored plot traces
 TAPER_FRAC = 0.5              # outer fraction of each shield pad tapered to zero (half-cosine)
-METRIC_TAPER_S = 0.05         # half-Hann taper at both record ends for the loudness metrics
 LEAK_DB = [-6.0, -12.0, -18.0, -25.0]   # "leak floor": unshielded wave x 10^(dB/20) at 20 km
 
 ATM20 = std_atm(H_S)

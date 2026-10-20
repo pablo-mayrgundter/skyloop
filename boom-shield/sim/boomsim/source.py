@@ -3,10 +3,10 @@
 Public API
 ----------
 Aircraft(name, length, mach, altitude, weight, volume, lift_start=0.4, lift_end=1.0)
-equivalent_area(ac, x)       A_e(x) = A_v(x) + A_L(x)                      [m^2]
-equivalent_area_slope(ac, x) A_e'(x) (analytic)                            [m]
-f_function(ac, y)            Whitham F(y) = (1/2pi) int_0^y A_e''(xi)/sqrt(y-xi) dxi  [m^1/2]
-near_field(ac, r0, fs)       (t, p): dp = p_inf gamma M^2 F(y)/sqrt(2 beta r0), t = y/V
+equivalent_area(ac, x, phi=0)       A_e(x, phi) = A_v(x) + A_L(x) cos(phi)      [m^2]
+equivalent_area_slope(ac, x, phi=0) dA_e/dx (analytic)                          [m]
+f_function(ac, y, phi=0)            Whitham F(y) = (1/2pi) int_0^y A_e''(xi)/sqrt(y-xi) dxi  [m^1/2]
+near_field(ac, r0, fs, phi=0)       (t, p): dp = p_inf gamma M^2 F(y)/sqrt(2 beta r0), t = y/V
 CONCORDE, SR71               reference aircraft used for validation (see docstrings)
 
 Model
@@ -14,6 +14,13 @@ Model
 * Volume: Sears-Haack body, A_v = (16 Vol/(3 pi L)) [4 xi (1 - xi)]^{3/2}, xi = x/L.
 * Lift: A_L(x) = beta/(rho V^2) int_0^x l dx with a sin^2 lift distribution on
   [lift_start L, lift_end L] integrating to the weight (l and l' vanish at both ends).
+* Azimuth: phi is the downward azimuth around the flight axis, measured from straight
+  down (phi = 0 undertrack, +-90 deg horizontal).  In linearised supersonic theory the
+  volume is an axisymmetric line of sources and the lift a line of vertical dipoles,
+  whose field carries cos(phi); so the equivalent area seen at azimuth phi is
+  A_e(x, phi) = A_v(x) + A_L(x) cos(phi) (e.g. Plotkin 2002, Int. J. Acoust. Vib. 7;
+  Carlson NASA TP-1122 lift term).  phi = 0 reproduces the undertrack values bit for
+  bit.
 * F-function: A_e'' is treated as piecewise constant on a uniform grid of spacing h
   (cell value from the *analytic* slope, (A'(x_{i+1}) - A'(x_i))/h, so the integrable
   x^{-1/2} nose singularity of the Sears-Haack A'' is handled exactly in the mean),
@@ -107,24 +114,27 @@ def lift_area(ac: Aircraft, x):
     return _lift_scale(ac) * _lift_cumulative(ac, x)
 
 
-def equivalent_area(ac: Aircraft, x):
-    """A_e(x) = A_v(x) + A_L(x) [m^2]; constant (= beta W/(rho V^2)) behind the body."""
-    return volume_area(ac, x) + lift_area(ac, x)
+def equivalent_area(ac: Aircraft, x, phi: float = 0.0):
+    """A_e(x, phi) = A_v(x) + A_L(x) cos(phi) [m^2]; behind the body the lift part is
+    constant (= beta W cos(phi)/(rho V^2))."""
+    if phi == 0.0:
+        return volume_area(ac, x) + lift_area(ac, x)
+    return volume_area(ac, x) + np.cos(phi) * lift_area(ac, x)
 
 
-def equivalent_area_slope(ac: Aircraft, x):
-    """Analytic dA_e/dx [m]."""
+def equivalent_area_slope(ac: Aircraft, x, phi: float = 0.0):
+    """Analytic dA_e/dx [m] at downward azimuth phi [rad]."""
     x = np.asarray(x, dtype=float)
     xi = x / ac.length
     inside = (xi > 0) & (xi < 1)
     xc = np.clip(xi, 0.0, 1.0)
     dAv = np.where(inside, _sears_haack_smax(ac) * 1.5 * np.sqrt(4 * xc * (1 - xc))
                    * 4.0 * (1 - 2 * xc) / ac.length, 0.0)
-    return dAv + _lift_scale(ac) * lift_distribution(ac, x)
+    return dAv + (_lift_scale(ac) * float(np.cos(phi))) * lift_distribution(ac, x)
 
 
 # --- F-function -----------------------------------------------------------------
-def _f_on_grid(ac: Aircraft, h: float, n_y: int, oversample: int = 1):
+def _f_on_grid(ac: Aircraft, h: float, n_y: int, oversample: int = 1, phi: float = 0.0):
     """F at y_m = m h, m = 0..n_y-1 (F(0) = 0 by the left-limit convention).
 
     The cell-constant A'' approximation has an O(m^-3/2) relative error at the m-th
@@ -132,10 +142,10 @@ def _f_on_grid(ac: Aircraft, h: float, n_y: int, oversample: int = 1):
     ``oversample`` evaluates on an h/oversample grid and decimates.
     """
     if oversample > 1:
-        return _f_on_grid(ac, h / oversample, (n_y - 1) * oversample + 1)[::oversample]
+        return _f_on_grid(ac, h / oversample, (n_y - 1) * oversample + 1, phi=phi)[::oversample]
     n_body = int(np.ceil(ac.length / h))
     x_nodes = np.arange(n_body + 1) * h
-    dA = equivalent_area_slope(ac, np.minimum(x_nodes, ac.length))
+    dA = equivalent_area_slope(ac, np.minimum(x_nodes, ac.length), phi)
     A2 = np.diff(dA) / h                            # piecewise-constant A'' per cell
     j = np.arange(1, n_y)                           # m - i for cells fully left of y_m
     w = 2.0 * np.sqrt(h) * (np.sqrt(j) - np.sqrt(j - 1))
@@ -145,8 +155,8 @@ def _f_on_grid(ac: Aircraft, h: float, n_y: int, oversample: int = 1):
     return F
 
 
-def f_function(ac: Aircraft, y, h=None):
-    """Whitham F(y) [m^1/2] at arbitrary y (F = 0 for y <= 0).
+def f_function(ac: Aircraft, y, h=None, phi: float = 0.0):
+    """Whitham F(y) [m^1/2] at arbitrary y (F = 0 for y <= 0), downward azimuth phi [rad].
 
     Computed on a uniform grid of spacing ``h`` (default L/20000) and linearly
     interpolated.
@@ -155,14 +165,16 @@ def f_function(ac: Aircraft, y, h=None):
     h = ac.length / 20000.0 if h is None else h
     y_max = max(float(np.max(y)), h) if y.size else h
     n_y = int(np.ceil(y_max / h)) + 2
-    F = _f_on_grid(ac, h, n_y, oversample=4)
+    F = _f_on_grid(ac, h, n_y, oversample=4, phi=phi)
     return np.interp(y, np.arange(n_y) * h, F, left=0.0)
 
 
 # --- near field ---------------------------------------------------------------------
 def near_field(ac: Aircraft, r0: float, fs: float, y_max_factor: float = 3.0,
-               pad_before: float | None = None, pad_after: float | None = None):
-    """Linear Whitham near-field signature at radial distance r0 below the flight axis.
+               pad_before: float | None = None, pad_after: float | None = None,
+               phi: float = 0.0):
+    """Linear Whitham near-field signature at radial distance r0 from the flight axis
+    at downward azimuth ``phi`` [rad] (0 = straight below; uses A_e(x, phi)).
 
     dp = p_inf gamma M^2 F(y)/sqrt(2 beta r0), t = y/V (retarded time; t = 0 at the
     nose characteristic).  F is computed directly on the sample grid (dy = V/fs) up to
@@ -173,7 +185,7 @@ def near_field(ac: Aircraft, r0: float, fs: float, y_max_factor: float = 3.0,
     V = ac.V
     h = V / fs
     n_y = int(np.ceil(y_max_factor * ac.length / h)) + 1
-    F = _f_on_grid(ac, h, n_y, oversample=8)
+    F = _f_on_grid(ac, h, n_y, oversample=8, phi=phi)
     p_sig = float(a.p) * GAMMA * ac.mach ** 2 * F / np.sqrt(2.0 * ac.beta * r0)
     tL = ac.length / V
     nb = int(round((2 * tL if pad_before is None else pad_before) * fs))
