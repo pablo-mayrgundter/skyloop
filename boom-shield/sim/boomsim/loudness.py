@@ -10,8 +10,11 @@ Procedure (``pldb``)
    ``E(f) = 2 |P(f)|^2`` with ``P(f) = dt * rfft(p)``, so that
    ``integral E(f) df = integral p(t)^2 dt``.  The record is zero-padded to at
    least ``_MIN_RECORD_S`` seconds so that even the 1.25 Hz band (0.29 Hz wide)
-   spans several FFT bins; this makes the result independent of the caller's
-   padding and sample rate (see tests).
+   spans a few FFT bins; this makes the result independent of the caller's
+   padding and sample rate (see tests).  No window is applied by default; a
+   record that does not start and end at ambient pressure produces a spurious
+   step (PyLdB tapers both ends with a half-Hann window for that reason; the
+   same taper is available through ``taper_s``).
 2. Band energies ``E_i`` in the 42 one-third-octave bands with nominal centres
    1 Hz ... 12.5 kHz (exact base-10 band edges ``10^((n +- 0.5)/10)``), by
    trapezoidal integration of the ESD with the band edges inserted.
@@ -56,7 +59,9 @@ PyLdB cites as their origin:
   https://ntrs.nasa.gov/citations/19920002547  [application to booms].
 The NASA and journal originals could not be retrieved from this environment,
 so the tables were not independently re-checked against them; the sone table
-was checked to follow 2^((L-32)/9) to table rounding above ~25 dB.
+was checked to follow 2^((L-32)/9) to table rounding (< 1 %) from 13 dB up.
+The whole chain reproduces PyLdB to ~0.01 dB (see tests), and PyLdB's authors
+report agreement with NASA LCASB within 0.2 PLdB.
 PyLdB's own nominal band edges (rounded ANSI values) were replaced by exact
 base-10 edges here (differences < 0.5 % in frequency).
 
@@ -68,6 +73,8 @@ positive impulse.
 
 from __future__ import annotations
 
+import warnings
+
 import numpy as np
 from scipy.fft import next_fast_len
 
@@ -76,7 +83,8 @@ __all__ = ["pldb", "metrics", "band_levels", "PSF_TO_PA", "P_REF"]
 PSF_TO_PA = 47.880259  # 1 lbf/ft^2 in Pa
 P_REF = 20e-6  # Pa
 T_EAR = 0.07  # s, Mark VII / Johnson-Robinson integration time
-_MIN_RECORD_S = 32.0  # s, minimum zero-padded FFT record length
+_MIN_RECORD_S = 10.0  # s, minimum zero-padded FFT record length (PL converged
+                      # to < 0.001 dB already at 4 s for a 300 ms N-wave)
 
 # --- One-third-octave bands: nominal centres 1 Hz .. 12.5 kHz (n = 0..41) ---
 _BAND_N = np.arange(42)
@@ -168,13 +176,32 @@ def _band_energies(f, esd, lo, hi):
     return np.maximum(cum_at(hi) - cum_at(lo), 0.0)
 
 
-def band_levels(t, p):
+def _taper(p, dt, taper_s):
+    """Half-Hann taper over ``taper_s`` seconds at each end (PyLdB ``window``)."""
+    n = int(round(taper_s / dt)) if taper_s else 0
+    if n <= 0:
+        if p.size and max(abs(p[0]), abs(p[-1])) > 1e-3 * np.max(np.abs(p)):
+            warnings.warn("signal does not start/end at ambient; the end step "
+                          "adds spurious high-frequency energy (use taper_s)",
+                          RuntimeWarning, stacklevel=3)
+        return p
+    if 2 * n > p.size:
+        raise ValueError("taper longer than half the record")
+    w = np.hanning(2 * n)
+    p = p.copy()
+    p[:n] *= w[:n]
+    p[-n:] *= w[n:]
+    return p
+
+
+def band_levels(t, p, taper_s=0.0):
     """One-third-octave band levels used by Mark VII (step 3 of the module doc).
 
     Returns ``(fc, L)``: nominal centre frequencies [Hz] (1 Hz ... 12.5 kHz) and
     band levels [dB re 20 uPa, 0.07 s convention].  Bands above fs/2 get -inf.
     """
     t, p, dt = _check_signal(t, p)
+    p = _taper(p, dt, taper_s)
     f, esd = _esd(p, dt)
     e = _band_energies(f, esd, _BAND_LO, _BAND_HI)
     e[_BAND_LO >= f[-1]] = 0.0
@@ -239,7 +266,7 @@ def _total_sones(Leq):
     return Sm + F * (S.sum() - Sm), S
 
 
-def pldb(t, p):
+def pldb(t, p, taper_s=0.0):
     """Stevens Mark VII Perceived Level [PLdB] of a pressure history.
 
     Parameters
@@ -247,13 +274,16 @@ def pldb(t, p):
     t : array, uniformly sampled time [s].
     p : array, overpressure [Pa].  The record should start and end at ambient
         (p ~ 0); it is zero-padded internally, so any padding the caller adds
-        does not matter.
+        does not matter.  A RuntimeWarning is issued if it does not.
+    taper_s : float, optional.  Length [s] of a half-Hann taper applied to each
+        end of the record before analysis (0 = none).  PyLdB's default is 800
+        samples.
 
     Returns
     -------
     float, PL in PLdB (``-inf`` for an all-zero signal).
     """
-    _, L = band_levels(t, p)
+    _, L = band_levels(t, p, taper_s)
     St, _ = _total_sones(_equivalent_level(L))
     if St <= 0:
         return float("-inf")
@@ -297,7 +327,7 @@ def _crossing(t, p, i, level):
     return t[i] + (level - p0) / (p1 - p0) * (t[i + 1] - t[i])
 
 
-def metrics(t, p):
+def metrics(t, p, taper_s=0.0):
     """Waveform metrics of a boom signature.
 
     Returns a dict with
@@ -306,7 +336,7 @@ def metrics(t, p):
         Maximum overpressure ``max(p)``.
     ``rise_time_ms``
         sBOOM convention: ``max(p) / max(dp/dt)`` with the slope taken by
-        first differences over the whole record (for a booms, the steepest
+        first differences over the whole record (for a boom the steepest
         compression is the front or rear shock).
     ``rise_time_10_90_ms``
         Time for the front shock to rise from 10 % to 90 % of ``max(p)``:
@@ -323,7 +353,10 @@ def metrics(t, p):
     ``pldb``
         Stevens Mark VII PL, see :func:`pldb`.
     ``asel``, ``csel``
-        A- and C-weighted sound exposure levels [dB re (20 uPa)^2 s].
+        A- and C-weighted sound exposure levels [dB re (20 uPa)^2 s]
+        (IEC 61672 weightings applied to the energy spectral density).
+
+    ``taper_s`` is passed to :func:`pldb` (and used for the SELs).
     """
     t, p, dt = _check_signal(t, p)
     out = {}
@@ -362,9 +395,9 @@ def metrics(t, p):
     out["rise_time_10_90_ms"] = rt1090
     out["duration_ms"] = dur
     out["pos_impulse_pa_s"] = imp
-    out["pldb"] = pldb(t, p)
+    out["pldb"] = pldb(t, p, taper_s)
 
-    f, esd = _esd(p, dt)
+    f, esd = _esd(_taper(p, dt, taper_s) if taper_s else p, dt)
     out["asel"] = _sel(f, esd, _weight_a2(f) * _A1K2)
     out["csel"] = _sel(f, esd, _weight_c2(f) * _C1K2)
     return out
