@@ -58,7 +58,8 @@ w_f >~ lambda_perp/2: features much narrower than lambda_perp = V/(f beta)
 sharp edge at the mean position. Models:
   * Kirchhoff path: transmitted aperture field tau T_stack p + (1 - tau) p, reflected
     tau R_stack p (exact coverage averaging of the two local responses).
-  * BEM path: a zero-thickness sheet at the mid-plane with impedance Z_eq(y) chosen so
+  * BEM path: a zero-thickness sheet (``fringe_level``: body mid-plane, default, or
+    top-face level) with impedance Z_eq(y) chosen so
     that the plane-wave sheet transmission 1/(1 + Z_eq k_z/(2 rho omega)) equals
     1 - tau(y) (1 - T_stack) at the local incidence (k_y = k y/r from the axis).
     Exact for transmission at that angle; its reflection 1 - T_sheet differs in phase
@@ -66,25 +67,38 @@ sharp edge at the mean position. Models:
 
 Solvers
 -------
-f <= f_split: 2-D multi-domain BEM (:mod:`boomsim.bem2d`): exterior Helmholtz with
-Burton-Miller (no fictitious resonances), each gas cell its own K0 (or Helmholtz)
-domain, membranes/partitions as coupling sheets with p_A - p_B = Z v - f_tie,
-piecewise-constant collocation, analytic Laplace singular parts, >= ``n_per_lambda``
-elements per exterior wavelength and per gas wavelength, element <= 1/kappa near
-nothing coarser than W/40 or 1.5 T, corner elements graded 1/4, 1/4, 1/2.
+BEM (:mod:`boomsim.bem2d`), used for f <= f_split (default: slab -> the whole band up
+to f_max, lens -> 25 Hz): exterior Helmholtz with Burton-Miller (alpha = -j/k; no
+fictitious resonances), each gas cell its own K0 (or Helmholtz) domain, membranes,
+sides and partitions as coupling panels with p_A - p_B = Z v - f_tie, piecewise-constant
+collocation, Laplace singular parts integrated analytically (incl. the finite-part
+hypersingular term), elements <= lambda_perp/n (n = n_per_lambda = 10 up to 30 Hz,
+tapering to n_per_lambda_hf = 7 at >= 60 Hz), <= gas wavelength/n, <= kappa_res/kappa,
+<= W/40, <= 1.5 T; outer corner elements graded 1/4, 1/4, 1/2. Small problems use a
+dense LU; slabs above ``n_dense`` panels use a uniform mesh whose face blocks are
+Toeplitz (FFT matvecs) with GMRES preconditioned by the exact infinite-slab inverse
+(Strang block-circulant, 4x4 per k_y mode) plus a near-field LU for sides/partitions.
 
-f > f_split: physical optics + exact angular spectrum. The incident field on the
-mid-plane is written as its exact plane-wave spectrum (propagating part with
-k_y = k sin(theta), evanescent with k_y = +-k cosh(u); no singular 1/k_z left).
-Inside the covered strip each k_y component is multiplied by the infinite-stack
-response at horizontal slowness s_h = sqrt(1/V^2 + k_y^2/omega^2) (the
+Physical optics (Kirchhoff) + exact angular spectrum, for f > f_split (and always
+available as ``method="po"``): the incident field on the shield mid-plane is written
+as its exact plane-wave spectrum (propagating k_y = k sin(theta), evanescent
+k_y = +-k cosh(u)). Inside the covered strip each k_y component is multiplied by the
+infinite-stack response at horizontal slowness s_h = sqrt(1/V^2 + k_y^2/omega^2) (the
 ``shield.transfer`` chain matrices, vectorised; local thickness for a lens), referenced
 to the mid-plane (an equal air path removed, so the stack is a thin sheet there);
-outside the strip the incident field passes. The aperture differences are radiated
-with the exact 2-D Rayleigh integral (equivalent to the angular spectrum) downward
-(transmitted) and upward (reflected). Approximations: Kirchhoff truncation at the
-edges (no edge-wave correction, thickness lumped at the mid-plane), no partitions,
-discrete line ties smeared to K = k_line/spacing, curvature of a lens face ignored.
+outside the strip the incident field passes. The aperture differences are radiated with
+the exact 2-D Rayleigh integral (equivalent to the angular spectrum) downward
+(transmitted) and upward (reflected). Approximations: Kirchhoff truncation at the edges
+(black-screen edge waves, thickness lumped at the mid-plane), no partitions, discrete
+line ties smeared to K = k_line/spacing, lens face curvature ignored. Accuracy: within
+~1 dB of the BEM where transmission dominates; in the deep shadow of an opaque stack the
+real edge waves depend on the face impedances (rigid faces diffract more than a black
+screen, the lift-closed He stack less), so PO is off by 2-10 dB there (validation).
+
+Incident field: ``incident="aged"`` (default) adds to the exact linear field a
+multipole correction fitted to the nonlinear aging between the aircraft and the shield
+(see :func:`incident_coefficients`, :func:`aging_radius`); ``"linear"`` is the exact
+slender-body field.
 """
 from __future__ import annotations
 
@@ -125,18 +139,22 @@ class CrossPlaneConfig:
     lens_q: float = 0.5               # lens taper exponent (0.5 elliptic)
     fringe_width: float = 0.0         # edge fringe width w_f [m]
     fringe_profile: object = "raised_cosine"  # "linear" | "raised_cosine" | callable(u in [0,1]) -> tau
+    fringe_level: str = "mid"         # BEM fringe sheet at the body "mid"-plane or "top"-face level
     f_max: float = 100.0              # Hz, band limit (raised-cosine taper from taper_from*f_max)
     df: float | None = None           # Hz; None = from geometry (record covers all edge-wave delays)
-    f_split: float = 20.0             # Hz, BEM below / Kirchhoff above
+    f_split: float | None = None      # Hz, BEM below / Kirchhoff above (None: slab -> f_max, lens -> 25)
+    n_dense: int = 700                # slab: dense BEM up to this many panels, structured above
     R_m: float | None = None          # matching-circle radius (default: encloses the shield)
     phis: Sequence | None = None      # degrees; default -70..70 step 10
     atm: object = None                # uniform medium (default std_atm(altitude - h))
     fs: float | None = None           # output sample rate (default 10 f_max)
     t_pre: float = 0.4                # s of record before tau = 0
     taper_from: float = 0.75
-    n_per_lambda: float = 8.0
+    n_per_lambda: float = 10.0
+    n_per_lambda_hf: float = 7.0      # used from 60 Hz up (linear taper from 30 Hz)
     kappa_res: float = 1.0            # element <= kappa_res / kappa
     workers: int = 4
+    incident: str = "aged"            # "aged" (aged to the shield, see incident_coefficients) | "linear"
 
     # ---- derived -------------------------------------------------------------
     def __post_init__(self):
@@ -279,6 +297,11 @@ class CrossPlaneConfig:
         T_rec = max(2.0, math.ceil(T_rec * 2) / 2)
         return 1.0 / T_rec
 
+    def split_frequency(self) -> float:
+        if self.f_split is not None:
+            return float(self.f_split)
+        return float(self.f_max) if self.profile == "slab" else 25.0
+
     def frequencies(self):
         df = self.df if self.df is not None else self.auto_df()
         n = int(math.floor(self.f_max / df + 1e-9))
@@ -351,27 +374,136 @@ def static_lift_coefficient(ac: Aircraft, beta_medium=None):
     return q / ac.V * AL / (2 * np.pi * b)
 
 
-def incident_field(Sv, SL, k, Y, Zc, grad=False):
-    """p (and dp/dy, dp/dz) of S_v H0(k r) + S_L cos(phi) H1(k r), cos(phi) = -z/r."""
+def multipole_field(a, k, Y, Zc, grad=False):
+    """p = sum_n a_n cos(n phi) H_n^(2)(k r), phi = atan2(y, -z) (azimuth from straight
+    down); with grad=True also returns dp/dy, dp/dz. a = [S_v, S_L] is the linear
+    slender-body field."""
+    a = np.atleast_1d(np.asarray(a, complex))
     Y = np.asarray(Y, float)
     Zc = np.asarray(Zc, float)
     r = np.hypot(Y, Zc)
     z = k * r
-    H0 = sp.hankel2(0, z)
-    H1 = sp.hankel2(1, z)
-    cphi = -Zc / r
-    p = Sv * H0 + SL * cphi * H1
-    if not grad:
-        return p
-    ry, rz = Y / r, Zc / r
-    # grad H0 = -k H1 rhat
-    gy = -k * H1 * ry * Sv
-    gz = -k * H1 * rz * Sv
-    # g = cos(phi) H1 = (1/k) d_z H0;  d_i g = -[k H1' rh_i rh_z + H1 (delta_iz - rh_i rh_z)/r]
-    H1p = H0 - H1 / z
-    gy += SL * -(k * H1p * ry * rz + H1 * (0.0 - ry * rz) / r)
-    gz += SL * -(k * H1p * rz * rz + H1 * (1.0 - rz * rz) / r)
-    return p, gy, gz
+    ph = np.arctan2(Y, -Zc)
+    nmax = len(a) - 1
+    H = [sp.hankel2(n, z) for n in range(nmax + 2)]
+    p = np.zeros(np.broadcast(Y, Zc).shape, complex)
+    gy = np.zeros_like(p)
+    gz = np.zeros_like(p)
+    sph, cph = np.sin(ph), np.cos(ph)
+    for n, an in enumerate(a):
+        if an == 0:
+            continue
+        cn = np.cos(n * ph)
+        p += an * cn * H[n]
+        if grad:
+            Hp = -H[1] if n == 0 else 0.5 * (H[n - 1] - H[n + 1])
+            dr = an * cn * k * Hp                       # d/dr
+            dphi = -an * n * np.sin(n * ph) * H[n] / r  # (1/r) d/dphi
+            gy += dr * sph + dphi * cph
+            gz += -dr * cph + dphi * sph
+    if grad:
+        return p, gy, gz
+    return p
+
+
+def incident_field(Sv, SL, k, Y, Zc, grad=False):
+    """p (and dp/dy, dp/dz) of S_v H0(k r) + S_L cos(phi) H1(k r)."""
+    return multipole_field([Sv, SL], k, Y, Zc, grad)
+
+
+def _spectral_weight(a, theta):
+    """Plane-wave amplitude of sum_n a_n cos(n phi) H_n(k r) in the lower half-space:
+    cos(n phi) H_n(k r) = (1/pi) int j^n cos(n theta) e^{-j k (y sin theta + |z| cos theta)} d theta
+    (theta = +-(pi/2 + j u) on the evanescent branches, d theta -> j du)."""
+    a = np.atleast_1d(np.asarray(a, complex))
+    out = np.zeros(np.shape(theta), complex)
+    for n, an in enumerate(a):
+        if an != 0:
+            out += an * (1j ** n) * np.cos(n * theta)
+    return out
+
+
+AGING_PHIS = np.radians(np.arange(0.0, 80.1, 5.0))
+
+
+def aging_radius(cfg, phi):
+    """Radius [m] at which the incident field is matched to the aged near field at
+    azimuth phi [rad]: the slant distance to the shield's top plane, h / cos(phi),
+    capped at the matching radius. Pass it as ``age_from`` to
+    ``propagate.propagate_from_circle`` for consistency."""
+    phi = np.asarray(phi, float)
+    return np.minimum(cfg.h / np.maximum(np.cos(phi), 1e-6), cfg.matching_radius())
+
+
+def _signature_spectrum(t, p, f):
+    """Continuous FT int p e^{-j 2 pi f t} dt at frequencies f (FFT when f = n df)."""
+    t = np.asarray(t, float)
+    p = np.asarray(p, float)
+    f = np.asarray(f, float)
+    dt = t[1] - t[0]
+    if f.size > 2 and f[0] == 0 and np.allclose(np.diff(f), f[1]):
+        N = int(round(1.0 / (f[1] * dt)))
+        if N >= p.size and abs(N * f[1] * dt - 1) < 1e-9:
+            X = np.fft.rfft(p, N)[:f.size]
+            if X.size == f.size:
+                return X * dt * np.exp(-2j * np.pi * f * t[0])
+    out = np.empty(len(f), complex)
+    for i0 in range(0, len(f), 32):
+        out[i0:i0 + 32] = np.exp(-2j * np.pi * np.outer(f[i0:i0 + 32], t)) @ p * dt
+    return out
+
+
+def incident_coefficients(cfg, f):
+    """Multipole coefficients A[i, n] of the incident field at frequencies f.
+
+    ``cfg.incident == "linear"``: A = [S_v, S_L] (exact slender-body field).
+    ``"aged"``: the linear coefficients plus a least-squares correction dA[i, n],
+    n <= min(8, 0.4 k h), chosen so that at radius r_j = aging_radius(phi_j) on
+    azimuths phi_j = 0..80 deg (step 5) the field changes by exactly what nonlinear aging
+    changes the signature there: FT[propagate.aged_near_field(r_j, phi_j)] -
+    FT[source.near_field(r_j, phi_j)] (uniform-air matching convention; converted from
+    retarded to absolute phase with exp(-j omega beta r_j / V)). The exact Hankel
+    near-zone structure of the linear field is kept; only the aging increment is carried
+    by the fitted multipoles (symmetric in phi, as the source is)."""
+    f = np.atleast_1d(np.asarray(f, float))
+    Sv, SL = source_strengths(cfg.aircraft, f)
+    if cfg.incident == "linear":
+        return np.stack([Sv, SL], axis=1)
+    if cfg.incident != "aged":
+        raise ValueError("incident must be 'linear' or 'aged'")
+    key = (repr(cfg.aircraft), cfg.h, cfg.matching_radius(), cfg.c, f.tobytes())
+    if key in _COEF_CACHE:
+        return _COEF_CACHE[key]
+    from . import propagate as PR
+    from .source import near_field
+    ac = cfg.aircraft
+    nmax = 8
+    A = np.zeros((f.size, nmax + 1), complex)
+    A[:, 0], A[:, 1] = Sv, SL
+    phis = AGING_PHIS
+    rj = aging_radius(cfg, phis)
+    fs = max(20000.0, 40 * float(np.max(f)))
+    D = np.zeros((phis.size, f.size), complex)
+    for j, (ph, r) in enumerate(zip(phis, rj)):
+        ta, pa = PR.aged_near_field(ac, float(r), fs, phi=float(ph))
+        tl, pl = near_field(ac, float(r), fs, phi=float(ph))
+        D[j] = _signature_spectrum(ta, pa, f) - _signature_spectrum(tl, pl, f)
+    w = 2 * np.pi * f
+    k = w * math.sqrt(1 / cfg.c ** 2 - 1 / cfg.V ** 2)
+    for i in range(f.size):
+        if f[i] == 0:
+            continue
+        N = int(np.clip(np.floor(0.4 * k[i] * cfg.h), 1, nmax))
+        B = np.stack([np.cos(n * phis) * sp.hankel2(n, k[i] * rj) for n in range(N + 1)], axis=1)
+        rhs = D[:, i] * np.exp(-1j * w[i] * cfg.beta * rj / cfg.V)
+        sc = np.linalg.norm(B, axis=0)
+        x, *_ = np.linalg.lstsq(B / sc, rhs, rcond=1e-8)
+        A[i, :N + 1] += x / sc
+    _COEF_CACHE[key] = A
+    return A
+
+
+_COEF_CACHE = {}
 
 
 # ======================================================================= geometry / BEM
@@ -381,28 +513,44 @@ def _wavenumbers(cfg: CrossPlaneConfig, f):
     w = 2 * np.pi * f
     k = w * math.sqrt(1 / cfg.c ** 2 - 1 / cfg.V ** 2)
     g = cfg.gas
+    if g is None:
+        return w, k, ("mod", 0.0)
     s2 = 1 / g.c ** 2 - 1 / cfg.V ** 2
     if s2 > 0:
         return w, k, ("helm", w * math.sqrt(s2))
     return w, k, ("mod", w * math.sqrt(-s2))
 
 
-def _split_interval(s0, s1, h, grade=True):
+def _split_interval(s0, s1, h, grade=(True, True)):
+    """Nodes on [s0, s1] with spacing <= h; the end element at a graded end is split
+    1/4, 1/4, 1/2 (outer shield corners only: grading at partition junctions slowed
+    convergence in tests)."""
     n = max(1, int(math.ceil((s1 - s0) / h - 1e-9)))
     e = np.linspace(s0, s1, n + 1)
-    if grade and n >= 1:
-        d = e[1] - e[0]
-        e = np.unique(np.concatenate([e, [s0 + 0.25 * d, s0 + 0.5 * d, s1 - 0.25 * d, s1 - 0.5 * d]]))
-    return e
+    d = e[1] - e[0]
+    extra = []
+    if grade[0]:
+        extra += [s0 + 0.25 * d, s0 + 0.5 * d]
+    if grade[1]:
+        extra += [s1 - 0.25 * d, s1 - 0.5 * d]
+    return np.unique(np.concatenate([e, extra])) if extra else e
 
 
-def build_mesh(cfg: CrossPlaneConfig, f: float, h_elem: float | None = None):
-    """Panels + bookkeeping for the BEM at frequency f."""
+def build_mesh(cfg: CrossPlaneConfig, f: float, h_elem: float | None = None, uniform: bool = False):
+    """Panels + bookkeeping for the BEM at frequency f.
+
+    uniform=True (slab only): equal face panels (no corner grading), partitions snapped
+    to the nearest face node, fringe sheets with the face spacing, so that all face and
+    sheet panels form uniform collinear groups (``mesh["groups"]``) for the structured
+    FFT solver."""
     w, k, (gkind, gk) = _wavenumbers(cfg, f)
     lam = 2 * np.pi / k
-    h_e = lam / cfg.n_per_lambda
+    # elements per exterior wavelength: n_per_lambda up to 30 Hz, tapering linearly to
+    # n_per_lambda_hf at 60 Hz and above (deep-shadow levels move by ~1-3 dB, see docs)
+    npl = float(np.interp(f, [30.0, 60.0], [cfg.n_per_lambda, min(cfg.n_per_lambda, cfg.n_per_lambda_hf)]))
+    h_e = lam / npl
     if gkind == "helm":
-        h_e = min(h_e, 2 * np.pi / gk / cfg.n_per_lambda)
+        h_e = min(h_e, 2 * np.pi / gk / npl)
     else:
         h_e = min(h_e, cfg.kappa_res / max(gk, 1e-12))
     y0, y1 = cfg.body
@@ -414,6 +562,13 @@ def build_mesh(cfg: CrossPlaneConfig, f: float, h_elem: float | None = None):
     zc = cfg.z_mid
     # ---- face nodes in y, equal arc length on the top curve between breakpoints
     parts = sorted(p for p in cfg.partitions if y0 < p < y1)
+    if uniform:
+        if cfg.profile != "slab":
+            raise ValueError("uniform mesh needs a slab")
+        n_u = int(math.ceil((y1 - y0) / h_e))
+        h_e = (y1 - y0) / n_u
+        parts = sorted(set(float(y0 + round((p - y0) / h_e) * h_e) for p in parts))
+        parts = [p for p in parts if y0 < p < y1]
     brk = [y0] + parts + [y1]
     yc, a = 0.5 * (y0 + y1), 0.5 * (y1 - y0)
     th_f = np.linspace(-np.pi / 2, np.pi / 2, 40001)
@@ -423,7 +578,8 @@ def build_mesh(cfg: CrossPlaneConfig, f: float, h_elem: float | None = None):
     ynodes = []
     for b0, b1 in zip(brk[:-1], brk[1:]):
         s0, s1 = np.interp([b0, b1], yf, sf)
-        se = _split_interval(s0, s1, h_e)
+        gr = (not uniform and b0 == y0, not uniform and b1 == y1)
+        se = _split_interval(s0, s1, h_e * (1 + 1e-9), grade=gr)
         ye = np.interp(se, sf, yf)
         ye[0], ye[-1] = b0, b1
         ynodes.append(ye if not ynodes else ye[1:])
@@ -462,25 +618,36 @@ def build_mesh(cfg: CrossPlaneConfig, f: float, h_elem: float | None = None):
     for i, yp in enumerate(parts):
         dp = float(cfg.thickness(np.array([yp]))[0])
         vertical(yp, zc - 0.5 * dp, zc + 0.5 * dp, i + 1, i + 2, Zp, 4, even=False)
-    # fringe sheets (mid-plane, left->right, n down, both sides exterior)
+    # fringe sheets (left->right, n down, exterior both sides) at the body mid-plane
+    # (default; matches the coverage-averaged transmission to ~1 dB) or at the top-face
+    # level ("top": continues the top face, no exposed corner at the fringe root)
     if cfg.fringe_width > 0:
         wf = cfg.fringe_width
+        z_sh = top[0, 1] if cfg.fringe_level == "top" else zc
         for s0, s1 in ((y0 - wf, y0), (y1, y1 + wf)):
-            n = max(4, int(math.ceil(wf / h_e_fr)))
-            ys = np.linspace(s0, s1, n + 1)
-            A.append(np.stack([ys[:-1], np.full(n, zc)], 1)); Bp.append(np.stack([ys[1:], np.full(n, zc)], 1))
+            if uniform:
+                n = max(4, int(round(wf / h_e)))
+                ys = (np.arange(n + 1) * h_e + s0) if s0 >= y1 else (s1 - h_e * np.arange(n, -1, -1))
+            else:
+                n = max(4, int(math.ceil(wf / h_e_fr)))
+                ys = np.linspace(s0, s1, n + 1)
+            A.append(np.stack([ys[:-1], np.full(n, z_sh)], 1)); Bp.append(np.stack([ys[1:], np.full(n, z_sh)], 1))
             sa.append(np.zeros(n, int)); sb.append(np.zeros(n, int)); kind.append(np.ones(n, int))
             Zs.append(np.zeros(n, complex)); tag.append(np.full(n, 5))
+    sizes = np.cumsum([0] + [len(a_) for a_ in A])
+    groups = [np.arange(sizes[0], sizes[1]), np.arange(sizes[1], sizes[2])]
+    if cfg.fringe_width > 0:
+        groups += [np.arange(sizes[-3], sizes[-2]), np.arange(sizes[-2], sizes[-1])]
     P = bem2d.Panels(np.concatenate(A), np.concatenate(Bp))
     mesh = dict(P=P, side_a=np.concatenate(sa), side_b=np.concatenate(sb), kind=np.concatenate(kind),
                 Z=np.concatenate(Zs).astype(complex), tag=np.concatenate(tag), nf=nf, ncell=ncell,
-                h_e=h_e, w=w, k=k, gkind=gkind, gk=gk)
+                h_e=h_e, w=w, k=k, gkind=gkind, gk=gk, groups=groups, uniform=uniform)
     # ---- fringe sheet impedances
     if cfg.fringe_width > 0:
         sh = np.nonzero(mesh["kind"] == 1)[0]
         yy = P.c[sh, 0]
         tau = cfg.coverage(yy)
-        ky = k * yy / np.hypot(yy, zc)               # local incidence from the axis
+        ky = k * yy / np.hypot(yy, P.c[sh, 1])       # local incidence from the axis
         kz = np.sqrt(k * k - ky * ky)
         rim = cfg.T if cfg.profile == "slab" else cfg.T_rim
         Kt = cfg.tie_K_at(yy)
@@ -510,16 +677,19 @@ def build_mesh(cfg: CrossPlaneConfig, f: float, h_elem: float | None = None):
     return mesh
 
 
-def bem_solve(cfg: CrossPlaneConfig, f: float, Sv=None, SL=None, mesh=None, inc=None):
+def bem_solve(cfg: CrossPlaneConfig, f: float, a=None, mesh=None, inc=None, fast_tol=1e-5):
     """BEM solution at one frequency. ``inc(Y, Z) -> (p, py, pz)`` overrides the aircraft
-    incident field (used by tests)."""
+    incident field (used by tests). Slabs with more than ``cfg.n_dense`` panels use the
+    structured FFT/GMRES solver on a uniform mesh, everything else the dense solver."""
     if mesh is None:
         mesh = build_mesh(cfg, f)
+        if cfg.profile == "slab" and len(mesh["P"]) > cfg.n_dense:
+            mesh = build_mesh(cfg, f, uniform=True)
     w, k = mesh["w"], mesh["k"]
     if inc is None:
-        if Sv is None:
-            Sv, SL = (x[0] for x in source_strengths(cfg.aircraft, [f]))
-        inc = lambda Y, Z: incident_field(Sv, SL, k, Y, Z, grad=True)
+        if a is None:
+            a = incident_coefficients(cfg, [f])[0]
+        inc = lambda Y, Z: multipole_field(a, k, Y, Z, grad=True)
     P = mesh["P"]
     gas = cfg.gas
     gk = mesh["gk"]
@@ -530,7 +700,10 @@ def bem_solve(cfg: CrossPlaneConfig, f: float, Sv=None, SL=None, mesh=None, inc=
                          ties=mesh["ties"])
     p, py, pz = inc(P.c[:, 0], P.c[:, 1])
     dpdn = py * P.n[:, 0] + pz * P.n[:, 1]
-    sol = bem2d.solve(prob, p, dpdn)
+    if mesh.get("uniform"):
+        sol = bem2d.solve_fast(prob, p, dpdn, mesh["groups"], tol=fast_tol)
+    else:
+        sol = bem2d.solve(prob, p, dpdn)
     sol.inc = inc
     sol.mesh = mesh
     return sol
@@ -573,16 +746,16 @@ def _stack_TR(cfg, omega, ky, d, K=0.0):
 
 
 def _gl(n, a, b):
-    x, w = np.polynomial.legendre.leggauss(int(n))
+    x, w = sp.roots_legendre(int(n))
     return 0.5 * (b - a) * x + 0.5 * (a + b), 0.5 * (b - a) * w
 
 
-def po_solve(cfg: CrossPlaneConfig, f: float, Sv=None, SL=None, theta_factor=1.0, dy_lambda=10.0):
+def po_solve(cfg: CrossPlaneConfig, f: float, a=None, theta_factor=1.0, dy_lambda=10.0):
     """Physical-optics aperture fields at frequency f. Returns a dict with the aperture
     grid y, spacing dy, plane z_a, transmitted difference d(y) and reflected r(y)."""
     w, k, _ = _wavenumbers(cfg, f)
-    if Sv is None:
-        Sv, SL = (x[0] for x in source_strengths(cfg.aircraft, [f]))
+    if a is None:
+        a = incident_coefficients(cfg, [f])[0]
     za = cfg.z_mid
     e0, e1 = cfg.extent
     n_y = max(16, int(math.ceil((e1 - e0) / (2 * np.pi / k / dy_lambda))))
@@ -601,11 +774,11 @@ def po_solve(cfg: CrossPlaneConfig, f: float, Sv=None, SL=None, theta_factor=1.0
     n_th = int(theta_factor * (0.7 * k * rho_max * np.pi / 2 + 60))
     th, wth = _gl(n_th, -np.pi / 2, np.pi / 2)
     ky_p = k * np.sin(th)
-    wp = (1 / np.pi) * np.exp(-1j * k * np.cos(th) * abs(za)) * (Sv + 1j * SL * np.cos(th)) * wth
+    wp = (1 / np.pi) * np.exp(-1j * k * np.cos(th) * abs(za)) * _spectral_weight(a, th) * wth
     u_max = math.asinh(40.0 / (k * abs(za)))
     uu, wu = _gl(48, 0.0, u_max)
     ky_e = k * np.cosh(uu)
-    we = (1 / np.pi) * np.exp(-k * np.sinh(uu) * abs(za)) * (1j * Sv + 1j * SL * np.sinh(uu)) * wu
+    we = (1 / np.pi) * np.exp(-k * np.sinh(uu) * abs(za)) * _spectral_weight(a, np.pi / 2 + 1j * uu) * 1j * wu
     ky_all = np.concatenate([ky_p, ky_e, -ky_e])
     w_all = np.concatenate([wp, we, we])
     E = np.exp(-1j * np.outer(y, ky_all))
@@ -626,14 +799,14 @@ def po_solve(cfg: CrossPlaneConfig, f: float, Sv=None, SL=None, theta_factor=1.0
             Tm, Rm = _stack_TR(cfg, w, np.abs(ky_all)[None, :], dthk[idx][:, None], kk)
             dfield[idx] = np.sum(E[idx] * (Tm - 1.0) * w_all[None, :], axis=1)
             rfield[idx] = np.sum(E[idx] * Rm * w_all[None, :], axis=1)
-    return dict(y=y, dy=dy, za=za, d=tau * dfield, r=tau * rfield, k=k, Sv=Sv, SL=SL)
+    return dict(y=y, dy=dy, za=za, d=tau * dfield, r=tau * rfield, k=k, a=a)
 
 
 def po_field(ap, X):
     """Total field at points X (M, 2) from the PO aperture fields (Rayleigh integrals)."""
     X = np.asarray(X, float).reshape(-1, 2)
     k, za = ap["k"], ap["za"]
-    p = incident_field(ap["Sv"], ap["SL"], k, X[:, 0], X[:, 1])
+    p = multipole_field(ap["a"], k, X[:, 0], X[:, 1])
     below = X[:, 1] < za
     for sel, src in ((below, ap["d"]), (~below, ap["r"])):
         if not np.any(sel):
@@ -653,20 +826,20 @@ def po_field(ap, X):
 # ======================================================================= drivers
 
 
-def field_at(cfg: CrossPlaneConfig, f: float, X, method="auto", Sv=None, SL=None):
+def field_at(cfg: CrossPlaneConfig, f: float, X, method="auto", a=None):
     """Total complex pressure spectrum [Pa s] at points X (M, 2) at frequency f > 0.
     method: "auto" (BEM if f <= f_split), "bem", "po"."""
     X = np.asarray(X, float).reshape(-1, 2)
     w, k, _ = _wavenumbers(cfg, f)
-    if Sv is None:
-        Sv, SL = (x[0] for x in source_strengths(cfg.aircraft, [f]))
+    if a is None:
+        a = incident_coefficients(cfg, [f])[0]
     if not cfg.has_shield:
-        return incident_field(Sv, SL, k, X[:, 0], X[:, 1])
+        return multipole_field(a, k, X[:, 0], X[:, 1])
     if method == "auto":
-        method = "bem" if f <= cfg.f_split else "po"
+        method = "bem" if f <= cfg.split_frequency() else "po"
     if method == "bem":
-        return bem_field(bem_solve(cfg, f, Sv, SL), X)
-    return po_field(po_solve(cfg, f, Sv, SL), X)
+        return bem_field(bem_solve(cfg, f, a), X)
+    return po_field(po_solve(cfg, f, a), X)
 
 
 def field_map(cfg: CrossPlaneConfig, f: float, y, z, method="auto"):
@@ -688,8 +861,8 @@ _WORK = {}
 
 def _work_one(args):
     i, f, method = args
-    cfg, X, Sv, SL = _WORK["cfg"], _WORK["X"], _WORK["Sv"][i], _WORK["SL"][i]
-    return i, field_at(cfg, f, X, method=method, Sv=Sv, SL=SL)
+    cfg, X, a = _WORK["cfg"], _WORK["X"], _WORK["A"][i]
+    return i, field_at(cfg, f, X, method=method, a=a)
 
 
 def matching_spectra(cfg: CrossPlaneConfig, X=None, workers=None, method="auto"):
@@ -697,15 +870,15 @@ def matching_spectra(cfg: CrossPlaneConfig, X=None, workers=None, method="auto")
     (default: the matching circle points of cfg.phis). f = 0 is the static lift limit."""
     f = cfg.frequencies()
     X = cfg.circle_points() if X is None else np.asarray(X, float).reshape(-1, 2)
-    Sv, SL = source_strengths(cfg.aircraft, f)
+    A = incident_coefficients(cfg, f)
     P = np.zeros((f.size, X.shape[0]), complex)
     r = np.hypot(X[:, 0], X[:, 1])
     P[0] = static_lift_coefficient(cfg.aircraft, cfg.beta) * (-X[:, 1] / r) / r
     jobs = [(i, f[i], method) for i in range(1, f.size)]
     # heaviest (high-f BEM) first
-    jobs.sort(key=lambda j: -(j[1] if j[1] <= cfg.f_split else 0.2 * j[1]))
+    jobs.sort(key=lambda j: -(j[1] if j[1] <= cfg.split_frequency() else 0.05 * j[1]))
     workers = cfg.workers if workers is None else workers
-    _WORK.update(cfg=cfg, X=X, Sv=Sv, SL=SL)
+    _WORK.update(cfg=cfg, X=X, A=A)
     if workers > 1 and len(jobs) > 1:
         import multiprocessing as mp
         ctx = mp.get_context("fork")
@@ -788,3 +961,26 @@ def whitham_spectrum(ac: Aircraft, r: float, f):
     for i0 in range(0, len(f), 64):
         out[i0:i0 + 64] = np.exp(-2j * np.pi * np.outer(f[i0:i0 + 64], t)) @ p / fs
     return out
+
+
+def incident_vs_whitham(ac: Aircraft, r: float, phi: float = 0.0, f_max: float = 100.0, df: float = 0.25):
+    """(tau, p_exact, p_whitham) at radius r, azimuth phi [rad]: the exact linear Hankel
+    incident field (medium = flight altitude, f = 0 static-lift bin dropped) and
+    ``source.near_field(ac, r, phi=phi)``, both band-limited identically (raised-cosine
+    taper to f_max)."""
+    from .source import near_field
+    cfg = CrossPlaneConfig(ac, h=r, W=None, f_max=f_max, df=df, R_m=r, phis=[math.degrees(phi)],
+                           atm=ac.atm, incident="linear")
+    f = cfg.frequencies()
+    A = incident_coefficients(cfg, f)
+    w = 2 * np.pi * f
+    k = w * math.sqrt(1 / cfg.c ** 2 - 1 / cfg.V ** 2)
+    X = cfg.circle_points()
+    P = np.array([multipole_field(A[i], k[i], X[:, 0], X[:, 1]) if f[i] > 0 else 0 * X[:, 0]
+                  for i in range(f.size)])
+    t, p = spectra_to_signatures(cfg, f, P)
+    tw, pw = near_field(ac, r, 20000.0, y_max_factor=12.0, phi=phi)
+    G = _signature_spectrum(tw, pw, f) * np.exp(-1j * w * cfg.beta * r / cfg.V)
+    G[0] = 0.0
+    _, pW = spectra_to_signatures(cfg, f, G[:, None])
+    return t, p[:, 0], pW[:, 0]
