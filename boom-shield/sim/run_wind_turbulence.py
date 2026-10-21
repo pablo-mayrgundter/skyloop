@@ -457,7 +457,7 @@ def report():
               + " | ".join(f"{r[k]:.1f}" for k in r if k.startswith("T_")) + " |")
         csv_rows.append(dict(kind="frame1d", config=r["cfg"], case=f"dV{r['dV']:+g}",
                              **{k: v for k, v in r.items() if k.startswith("T_")}))
-    print("\nground effect of the frame change alone (spectra x T(V_g)/T(V), no wind), Δ vs calm:")
+    print("\nground effect of the frame change alone (transmitted part P_inc (T(V_g) - T(V)) added; 'scale' = whole field x T(V_g)/T(V), diagnostic), no wind, Δ vs calm:")
     for cfgkey in ("W1000", "W500"):
         for tag in ("frame_m15", "frame_p15", "frame_m60", "frame_p60", "frame_m15scale",
                     "frame_p15scale", "frame_m60scale", "frame_p60scale"):
@@ -573,7 +573,7 @@ def plot(W, geo):
     a.legend(frameon=False, fontsize=7.5, loc="lower right")
     a.grid(color=grid, lw=0.6)
     # (b, c) ground PLdB (proxy) vs y_g: unshielded and W1000
-    for axx, cfgkey, ttl in ((ax[0, 1], "none", "(b) unshielded"), (ax[0, 2], "W1000", "(c) W 1 km, H2 30 m")):
+    for axx, cfgkey, ttl in ((ax[0, 1], "none", "(b) unshielded"), (ax[0, 2], "W1000", "(c) W 1 km H2 30 m (colours as b)")):
         for case in ["calm"] + list(CASES):
             phs = PHI_UN if case == "calm" else phis_for(cfgkey, case)
             pts = [(W[(cfgkey, case, p)]["y_g"], W[(cfgkey, case, p)]["metrics"]["pldb_proxy"])
