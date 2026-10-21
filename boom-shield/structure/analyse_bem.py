@@ -67,23 +67,23 @@ def plot(d):
     ink, ink2, grid = "#0b0b0b", "#52514e", "#e4e3df"
     s1, s2, s3, s4 = "#2a78d6", "#eb6834", "#1baf7a", "#6250d6"
     panels = [
-        ("Raft D 30 m vs slab: superpressure", [
+        ("Raft D 30 m: hoop-stretch stiffness Et (Δp 300 Pa)", [
             ("slab_H2_30", "slab H₂ 30 m", ink2, "-"),
-            ("raft_D30_limp", "raft D30, limp (Δp 0)", s2, "-"),
-            ("raft_D30_dp300", "raft D30, Δp 300 Pa", s1, "-"),
-            ("raft_D30_dp3000", "raft D30, Δp 3000 Pa", s4, "-")]),
-        ("Raft geometry: gaps and diameter (Δp 300 Pa)", [
+            ("raft_D30_dp300", "raft, Et 1e5 N/m (Et/R² 444)", s1, "-"),
+            ("raft_D30_dp300_Et3e5", "raft, Et 3e5 (1,333)", s2, "-"),
+            ("raft_D30_dp300_Et1e6", "raft, Et 1e6 (4,444)", s4, "-")]),
+        ("Raft geometry: air gaps and diameter", [
             ("slab_H2_30", "slab H₂ 30 m", ink2, "-"),
-            ("raft_D30_dp300_gap5", "raft D30, 5 m air gaps", s2, "-"),
-            ("raft_D60_dp300", "raft D60", s1, "-"),
-            ("raft_D20_dp300", "raft D20", s3, "-")]),
-        ("Soft-tie floating lid (heavy top, light floor)", [
+            ("raft_D30_dp300_gap2", "raft D30, 2 m air gaps", s2, "-"),
+            ("raft_D30_dp300_gap5", "raft D30, 5 m air gaps", s4, "-"),
+            ("raft_D60_dp300", "raft D60, touching", s1, "-")]),
+        ("Floating lid (heavy top, light floor) and ties", [
             ("slab_H2_30", "slab H₂ 30 m, no ties", ink2, "-"),
             ("slab_H2_30_heavytop_K10", "floating lid, K 10 Pa/m", s1, "-"),
-            ("slab_H2_30_heavytop_K100", "floating lid, K 100 Pa/m", s2, "-"),
+            ("slab_H2_30_light_K10", "light lid 0.15, K 10", s3, "-"),
             ("slab_H2_30_K300", "lift-closed, K 300 Pa/m", s4, "-")]),
     ]
-    fig, axs = plt.subplots(1, 3, figsize=(15, 4.6), sharey=True)
+    fig, axs = plt.subplots(1, 3, figsize=(15, 5.6), sharey=True)
     for ax, (title, series) in zip(axs, panels):
         for key, lab, col, ls in series:
             if key not in d:
@@ -99,7 +99,8 @@ def plot(d):
         ax.grid(True, color=grid, lw=0.8)
         for sp_ in ("top", "right"):
             ax.spines[sp_].set_visible(False)
-        ax.legend(frameon=False, fontsize=9, loc="upper right")
+        ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
+        ax.legend(frameon=False, fontsize=9, loc="upper center", bbox_to_anchor=(0.5, -0.16), ncol=2)
     axs[0].set_ylabel("transmitted, dB re unshielded\n(power mean φ 0–50°, R 3 km)", color=ink2)
     axs[0].set_ylim(-45, 0)
     fig.suptitle("Cross-plane BEM, Concorde M2, h 250 m, W 1 km, H₂ at 20 km (lift-closed faces unless noted)",
