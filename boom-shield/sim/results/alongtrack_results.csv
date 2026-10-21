@@ -1,0 +1,875 @@
+key,label,shape,Lam_m,w_f_m,seed,joint_kind,L_m,g_m,R_m,phi_deg,y_g_m,pldb_n0,pldb_proxy_n0,pldb,pldb_proxy,d_raw,d_proxy,d_headline,d_headline_scat100,d_headline_scat200,pldb_scat_only,pldb_proxy_scat_only
+sharp,sharp edge (run_3d cache),,,,,,,,3000,0,0,61.86,59.19,61.86,59.19,-46.53,-38.53,-38.53,-38.53,-38.53,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,1,374.5,50.42,48.95,50.42,48.95,-57.97,-48.77,-48.77,-48.77,-48.77,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,2,749.3,52.72,50.97,52.72,50.97,-55.67,-46.74,-46.74,-46.74,-46.74,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,3,1125,53.6,51.94,53.6,51.94,-54.77,-45.76,-45.76,-45.76,-45.76,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,4,1501,54.17,52.45,54.17,52.45,-54.18,-45.24,-45.24,-45.24,-45.24,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,5,1878,54.78,52.98,54.78,52.98,-53.55,-44.69,-44.69,-44.69,-44.69,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,6,2257,55.64,53.73,55.64,53.73,-52.66,-43.92,-43.92,-43.92,-43.92,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,8,3020,57.37,55.31,57.37,55.31,-50.86,-42.28,-42.28,-42.28,-42.28,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,10,3791,59.3,57.03,59.3,57.03,-48.83,-40.49,-40.49,-40.49,-40.49,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,12,4575,61.33,58.81,61.33,58.81,-46.69,-38.62,-38.62,-38.62,-38.62,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,14,5373,63.37,60.59,63.37,60.59,-44.5,-36.73,-36.73,-36.73,-36.73,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,16,6188,65.35,62.25,65.35,62.25,-42.35,-34.95,-34.95,-34.95,-34.95,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,18,7024,67.16,63.75,67.16,63.75,-40.37,-33.31,-33.31,-33.31,-33.31,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,20,7883,68.79,65.07,68.79,65.07,-38.53,-31.82,-31.82,-31.82,-31.82,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,22,8771,70.14,66.23,70.14,66.23,-36.92,-30.49,-30.49,-30.49,-30.49,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,24,9691,71.09,67.15,71.09,67.15,-35.73,-29.37,-29.37,-29.37,-29.37,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,26,1.065e+04,71.79,67.85,71.79,67.85,-34.72,-28.46,-28.46,-28.46,-28.46,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,28,1.165e+04,72.32,68.37,72.32,68.37,-33.88,-27.69,-27.69,-27.69,-27.69,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,30,1.27e+04,72.72,68.76,72.72,68.76,-33.13,-27.01,-27.01,-27.01,-27.01,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,33,1.439e+04,73.13,69.19,73.13,69.19,-32.11,-26.08,-26.08,-26.08,-26.08,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,36,1.625e+04,73.51,69.74,73.51,69.74,-31.04,-24.97,-24.97,-24.97,-24.97,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,39,1.833e+04,73.97,70.38,73.97,70.38,-29.82,-23.79,-23.79,-23.79,-23.79,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,42,2.07e+04,74.32,70.94,74.32,70.94,-28.59,-22.68,-22.68,-22.68,-22.68,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,45,2.348e+04,74.56,71.17,74.56,71.17,-27.31,-21.74,-21.74,-21.74,-21.74,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,48,2.691e+04,75.15,71.8,75.15,71.8,-25.49,-20.25,-20.25,-20.25,-20.25,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,51,3.148e+04,75.51,71.99,75.51,71.99,-23.67,-19,-19,-19,-19,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,3000,54,3.93e+04,75.95,72.69,75.95,72.69,-21.16,-17.04,-17.04,-17.04,-17.04,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,8000,0,0,67.48,64.04,67.48,64.04,-40.91,-33.68,-33.68,-33.68,-33.68,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,8000,4,1501,59.68,57.58,59.68,57.58,-48.67,-40.11,-40.11,-40.11,-40.11,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,8000,12,4575,66.34,63.14,66.34,63.14,-41.67,-34.29,-34.29,-34.29,-34.29,-inf,-inf
+sharp,sharp edge (run_3d cache),,,,,,,,8000,24,9691,72.48,68.48,72.48,68.48,-34.34,-28.04,-28.04,-28.04,-28.04,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,6,2257,-0.08636,-inf,-0.08636,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,8,3020,7.831,5.545,7.831,5.545,-100.4,-92.05,-92.05,-92.05,-92.05,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,10,3791,13.1,11.47,13.1,11.47,-95.04,-86.05,-86.05,-86.05,-86.05,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,12,4575,18.04,16.37,18.04,16.37,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.74,-76.8,-76.8,-76.8,-76.8,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.95,-67.98,-67.98,-67.98,-67.98,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,22,8771,32.8,31,32.8,31,-74.26,-65.72,-65.72,-65.72,-65.72,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,24,9691,35.01,33.25,35.01,33.25,-71.81,-63.27,-63.27,-63.27,-63.27,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,26,1.065e+04,36.98,35.25,36.98,35.25,-69.53,-61.06,-61.06,-61.06,-61.06,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,28,1.165e+04,38.42,36.92,38.42,36.92,-67.78,-59.14,-59.14,-59.14,-59.14,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,30,1.27e+04,39.75,38.27,39.75,38.27,-66.1,-57.49,-57.49,-57.49,-57.49,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,33,1.439e+04,41.58,39.94,41.58,39.94,-63.66,-55.33,-55.33,-55.33,-55.33,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,36,1.625e+04,42.86,41.2,42.86,41.2,-61.69,-53.51,-53.51,-53.51,-53.51,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,39,1.833e+04,43.79,42.26,43.79,42.26,-60.01,-51.91,-51.91,-51.91,-51.91,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,42,2.07e+04,44.13,42.56,44.13,42.56,-58.78,-51.05,-51.05,-51.05,-51.05,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,45,2.348e+04,45,43.45,45,43.45,-56.86,-49.46,-49.46,-49.46,-49.46,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,48,2.691e+04,46.19,44.63,46.19,44.63,-54.45,-47.42,-47.42,-47.42,-47.42,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,51,3.148e+04,52.26,50.87,52.26,50.87,-46.93,-40.12,-40.12,-40.12,-40.12,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,3000,54,3.93e+04,67.38,64.98,67.38,64.98,-29.72,-24.74,-24.74,-24.74,-24.74,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+fringe_xavg,x-averaged raised-cosine fringe 150 m (n = 0 only),x-averaged,,150,,,,,8000,24,9691,34.64,32.88,34.64,32.88,-72.18,-63.64,-63.64,-63.64,-63.64,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,6,2257,-0.08636,-inf,0.01371,-inf,-108.3,-inf,-108.3,-108.3,-108.3,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,8,3020,7.831,5.545,7.866,5.583,-100.4,-92.01,-92.01,-92.02,-92.01,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,10,3791,13.1,11.47,13.12,11.5,-95.02,-86.02,-86.02,-86.03,-86.02,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,12,4575,18.04,16.37,18.06,16.39,-89.96,-81.04,-81.04,-81.05,-81.04,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,14,5373,22.13,20.53,22.14,20.54,-85.72,-76.79,-76.79,-76.79,-76.79,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,16,6188,25.07,23.51,25.08,23.52,-82.63,-73.68,-73.68,-73.69,-73.68,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,18,7024,27.63,26.12,27.64,26.13,-79.89,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,20,7883,30.37,28.92,30.71,28.92,-76.61,-67.97,-67.97,-67.97,-67.97,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,22,8771,32.8,31,32.82,31.32,-74.24,-65.39,-65.39,-65.71,-65.39,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,24,9691,35.01,33.25,35.04,33.26,-71.78,-63.26,-63.26,-63.27,-63.26,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,26,1.065e+04,36.98,35.25,37,35.26,-69.51,-61.05,-61.05,-61.06,-61.05,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.43,36.93,-67.76,-59.12,-59.12,-59.14,-59.12,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,30,1.27e+04,39.75,38.27,39.77,38.29,-66.07,-57.47,-57.47,-57.49,-57.47,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.62,39.96,-63.62,-55.31,-55.31,-55.33,-55.31,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,36,1.625e+04,42.86,41.2,42.91,41.24,-61.64,-53.48,-53.48,-53.5,-53.48,0.4555,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,39,1.833e+04,43.79,42.26,43.87,42.33,-59.92,-51.84,-51.84,-51.91,-51.84,7.533,0.81
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,42,2.07e+04,44.13,42.56,44.55,42.73,-58.37,-50.89,-50.89,-51.02,-50.9,18.32,12.27
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,45,2.348e+04,45,43.45,47.33,45.29,-54.54,-47.62,-47.62,-48.06,-47.64,38.67,35.77
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,48,2.691e+04,46.19,44.63,61.33,57.44,-39.31,-34.61,-34.61,-40.68,-35.85,60.46,56.08
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,51,3.148e+04,52.26,50.87,59.94,56.75,-39.24,-34.23,-34.23,-39.04,-35,56.95,52.87
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,3000,54,3.93e+04,67.38,64.98,67.51,65.11,-29.59,-24.62,-24.62,-24.69,-24.63,47.61,43.55
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,8000,12,4575,17.57,15.26,17.58,15.27,-90.43,-82.16,-82.16,-82.17,-82.16,-inf,-inf
+random_L1_w150_s0,"random-phase teeth, Lambda 1 m, w_f 150 m",random,1,150,0,,,,8000,24,9691,34.64,32.88,34.67,32.9,-72.15,-63.62,-63.62,-63.63,-63.62,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,6,2257,-0.08636,-inf,0.3258,-inf,-108,-inf,-108,-108,-108,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,8,3020,7.831,5.545,7.98,5.688,-100.2,-91.91,-91.91,-91.93,-91.91,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,10,3791,13.1,11.47,13.19,11.56,-94.95,-85.96,-85.96,-85.97,-85.96,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,12,4575,18.04,16.37,18.12,16.45,-89.9,-80.98,-80.98,-81.01,-80.98,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,14,5373,22.13,20.53,22.2,20.59,-85.67,-76.73,-76.73,-76.75,-76.73,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,16,6188,25.07,23.51,25.12,23.56,-82.59,-73.64,-73.64,-73.66,-73.64,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,18,7024,27.63,26.12,27.68,26.17,-79.85,-70.89,-70.89,-70.9,-70.89,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,20,7883,30.37,28.92,30.77,28.96,-76.55,-67.93,-67.93,-67.95,-67.93,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,22,8771,32.8,31,33.17,31.38,-73.9,-65.34,-65.34,-65.69,-65.34,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,24,9691,35.01,33.25,35.11,33.32,-71.72,-63.2,-63.2,-63.24,-63.2,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,26,1.065e+04,36.98,35.25,37.08,35.55,-69.44,-60.75,-60.75,-61.02,-60.75,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.5,37,-67.7,-59.06,-59.06,-59.1,-59.06,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,30,1.27e+04,39.75,38.27,40.04,38.37,-65.81,-57.4,-57.4,-57.45,-57.4,0.9803,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.73,40.05,-63.51,-55.22,-55.22,-55.28,-55.22,6.688,2.344
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,36,1.625e+04,42.86,41.2,43.06,41.51,-61.49,-53.21,-53.21,-53.44,-53.36,12.48,8.958
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,39,1.833e+04,43.79,42.26,44.32,42.62,-59.48,-51.56,-51.56,-51.73,-51.57,21.54,18.94
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,42,2.07e+04,44.13,42.56,46.54,44.62,-56.38,-48.99,-48.99,-49.56,-49,37.75,35.38
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,45,2.348e+04,45,43.45,53.82,51.63,-48.05,-41.28,-41.28,-43.71,-41.52,52.13,49.72
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,48,2.691e+04,46.19,44.63,72.01,67.59,-28.63,-24.46,-24.46,-33.42,-25.65,71.85,67.36
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,51,3.148e+04,52.26,50.87,69.54,66.03,-29.64,-24.95,-24.95,-31.95,-25.53,69.01,65.29
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,3000,54,3.93e+04,67.38,64.98,68.86,66.24,-28.24,-23.49,-23.49,-24.21,-23.51,61.61,58.64
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,8000,12,4575,17.57,15.26,17.65,15.94,-90.36,-81.49,-81.49,-82.13,-81.49,-inf,-inf
+random_L3_w150_s0,"random-phase teeth, Lambda 3 m, w_f 150 m",random,3,150,0,,,,8000,24,9691,34.64,32.88,34.74,32.96,-72.08,-63.57,-63.57,-63.61,-63.57,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,6,2257,-0.08636,-inf,1.317,-0.7189,-107,-98.37,-98.37,-98.61,-98.37,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,8,3020,7.831,5.545,8.337,6.804,-99.89,-90.79,-90.79,-90.86,-90.79,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,10,3791,13.1,11.47,14.11,11.78,-94.03,-85.74,-85.74,-85.78,-85.74,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,12,4575,18.04,16.37,18.88,16.65,-89.14,-80.78,-80.78,-80.88,-80.78,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,14,5373,22.13,20.53,22.37,20.76,-85.5,-76.56,-76.56,-76.63,-76.56,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,16,6188,25.07,23.51,25.25,23.68,-82.46,-73.52,-73.52,-73.58,-73.52,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,18,7024,27.63,26.12,28.57,26.27,-78.96,-70.78,-70.78,-70.83,-70.78,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,20,7883,30.37,28.92,31.3,29.06,-76.02,-67.83,-67.83,-67.88,-67.83,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,22,8771,32.8,31,33.4,31.54,-73.66,-65.18,-65.18,-65.62,-65.18,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,24,9691,35.01,33.25,35.56,33.73,-71.26,-62.79,-62.79,-62.91,-62.79,4.108,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,26,1.065e+04,36.98,35.25,37.28,35.75,-69.23,-60.55,-60.55,-60.94,-60.55,6.975,2.433
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.95,37.2,-67.25,-58.85,-58.85,-59.01,-58.85,9.776,5.897
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,30,1.27e+04,39.75,38.27,40.33,38.59,-65.51,-57.18,-57.18,-57.34,-57.18,11.6,8.053
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,33,1.439e+04,41.58,39.94,42.44,40.53,-62.8,-54.73,-54.73,-54.91,-54.73,17.54,13.59
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,36,1.625e+04,42.86,41.2,44.01,42.25,-60.54,-52.46,-52.46,-52.92,-52.48,25.16,21.27
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,39,1.833e+04,43.79,42.26,46.21,44.3,-57.59,-49.88,-49.88,-50.42,-49.9,34.15,31.49
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,42,2.07e+04,44.13,42.56,51.18,49.5,-51.73,-44.11,-44.11,-45.18,-44.26,48.58,46.69
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,45,2.348e+04,45,43.45,66.52,64.79,-35.35,-28.11,-28.11,-30.76,-28.32,66.36,64.63
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,48,2.691e+04,46.19,44.63,78.35,76.48,-22.29,-15.58,-15.58,-18.25,-15.82,78.32,76.44
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,51,3.148e+04,52.26,50.87,76.79,74.36,-22.39,-16.63,-16.63,-21.01,-16.92,76.67,74.21
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,3000,54,3.93e+04,67.38,64.98,70.48,68.16,-26.62,-21.57,-21.57,-22.47,-21.71,66.2,63.84
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,8000,12,4575,17.57,15.26,17.86,16.15,-90.16,-81.28,-81.28,-82,-81.28,-inf,-inf
+random_L10_w150_s0,"random-phase teeth, Lambda 10 m, w_f 150 m",random,10,150,0,,,,8000,24,9691,34.64,32.88,34.96,33.1,-71.86,-63.42,-63.42,-63.54,-63.42,4.108,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,3,1125,-inf,-inf,0.1837,-inf,-108.2,-inf,-108.2,-inf,-108.2,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,4,1501,-inf,-inf,0.9106,-inf,-107.4,-inf,-107.4,-inf,-107.4,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,5,1878,-inf,-inf,2.712,-0.4796,-105.6,-98.15,-98.15,-107.6,-98.15,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,6,2257,-0.08636,-inf,5.786,2.117,-102.5,-95.53,-95.53,-96.11,-95.53,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,8,3020,7.831,5.545,10.81,8.664,-97.42,-88.93,-88.93,-89.8,-88.93,-0.5482,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,10,3791,13.1,11.47,16.31,13.24,-91.83,-84.28,-84.28,-85.14,-84.28,1.245,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,12,4575,18.04,16.37,20.81,17.93,-87.21,-79.5,-79.5,-79.79,-79.5,4.413,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,14,5373,22.13,20.53,24.09,21.3,-83.78,-76.02,-76.02,-76.25,-76.02,6.47,0.6513
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,16,6188,25.07,23.51,26.87,24.61,-80.84,-72.59,-72.59,-73.27,-72.59,7.68,4.161
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,18,7024,27.63,26.12,30.06,27.58,-77.47,-69.47,-69.47,-70.14,-69.47,9.876,5.919
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,20,7883,30.37,28.92,32.39,30.32,-74.93,-66.58,-66.58,-67.61,-66.58,11.45,7.636
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,22,8771,32.8,31,34.92,32.69,-72.15,-64.03,-64.03,-65.06,-64.03,13.66,10.24
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,24,9691,35.01,33.25,36.86,34.66,-69.96,-61.86,-61.86,-62.58,-61.86,15.31,12.33
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,26,1.065e+04,36.98,35.25,38.61,36.43,-67.91,-59.87,-59.87,-60.6,-59.87,18.98,14.74
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,28,1.165e+04,38.42,36.92,40.33,38.37,-65.87,-57.69,-57.69,-58.4,-57.9,22.04,18.96
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,30,1.27e+04,39.75,38.27,42.03,39.94,-63.81,-55.83,-55.83,-56.59,-55.86,26.4,23.24
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,33,1.439e+04,41.58,39.94,44.53,42.46,-60.72,-52.81,-52.81,-53.72,-52.83,33.14,29.91
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,36,1.625e+04,42.86,41.2,47.83,45.82,-56.73,-48.89,-48.89,-50.27,-49.07,41.24,38.8
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,39,1.833e+04,43.79,42.26,55.6,53.92,-48.2,-40.25,-40.25,-41.94,-40.42,54.58,52.83
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,42,2.07e+04,44.13,42.56,68.98,66.86,-33.94,-26.75,-26.75,-30.28,-27.18,68.89,66.76
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,45,2.348e+04,45,43.45,72.82,71.01,-29.05,-21.9,-21.9,-24.73,-22.2,72.76,70.94
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,48,2.691e+04,46.19,44.63,73.76,72.05,-26.88,-20,-20,-22.68,-20.26,73.7,71.98
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,51,3.148e+04,52.26,50.87,75.66,74.19,-23.52,-16.8,-16.8,-18.78,-16.97,75.54,74.06
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,3000,54,3.93e+04,67.38,64.98,75.74,73.91,-21.36,-15.82,-15.82,-17.51,-15.86,74.35,72.65
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,8000,0,0,-inf,-inf,-0.457,-inf,-108.8,-inf,-108.8,-inf,-108.8,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,8000,4,1501,-inf,-inf,1.404,-inf,-106.9,-inf,-106.9,-109.2,-106.9,-inf,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,8000,12,4575,17.57,15.26,20.38,17.48,-87.64,-79.95,-79.95,-80.27,-79.95,4.413,-inf
+random_L30_w150_s0,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,0,,,,8000,24,9691,34.64,32.88,36.55,34.33,-70.27,-62.19,-62.19,-62.94,-62.19,15.31,12.33
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,5,1878,-inf,-inf,0.2607,-inf,-108.1,-inf,-108.1,-108.7,-108.1,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,6,2257,-0.08636,-inf,2.926,1.023,-105.4,-96.63,-96.63,-97.08,-96.63,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,8,3020,7.831,5.545,9.74,7.605,-98.49,-89.99,-89.99,-90.16,-89.99,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,10,3791,13.1,11.47,14.71,12.87,-93.43,-84.65,-84.65,-85.4,-84.65,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,12,4575,18.04,16.37,19.32,17.63,-88.7,-79.8,-79.8,-80.01,-79.8,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,14,5373,22.13,20.53,23.21,21.06,-84.66,-76.26,-76.26,-76.42,-76.26,0.6481,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,16,6188,25.07,23.51,26.46,23.92,-81.24,-73.28,-73.28,-73.41,-73.28,3.574,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,18,7024,27.63,26.12,29.34,26.92,-78.19,-70.14,-70.14,-70.68,-70.14,6.015,0.3414
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,20,7883,30.37,28.92,31.7,29.7,-75.62,-67.19,-67.19,-67.74,-67.19,7.498,4.104
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,22,8771,32.8,31,34.28,32.1,-72.79,-64.62,-64.62,-65.49,-64.62,9.759,5.818
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,24,9691,35.01,33.25,36.21,34.34,-70.61,-62.18,-62.18,-62.73,-62.18,11.28,7.446
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,26,1.065e+04,36.98,35.25,38.12,36.08,-68.39,-60.22,-60.22,-60.76,-60.22,13.91,10.55
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,28,1.165e+04,38.42,36.92,39.59,37.54,-66.61,-58.51,-58.51,-58.84,-58.51,15.99,12.78
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,30,1.27e+04,39.75,38.27,41.16,39.13,-64.68,-56.63,-56.63,-56.95,-56.63,19.52,15.3
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,33,1.439e+04,41.58,39.94,43.23,41.27,-62.01,-54,-54,-54.58,-54.02,26.3,23.26
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,36,1.625e+04,42.86,41.2,45.73,43.81,-58.82,-50.91,-50.91,-51.62,-50.93,35.06,32.47
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,39,1.833e+04,43.79,42.26,52.87,51.39,-50.92,-42.79,-42.79,-43.93,-42.9,51.1,49.65
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,42,2.07e+04,44.13,42.56,69.79,67.71,-33.12,-25.91,-25.91,-29.26,-26.31,69.71,67.61
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,45,2.348e+04,45,43.45,72.94,71.16,-28.93,-21.75,-21.75,-24.45,-22.04,72.87,71.08
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,48,2.691e+04,46.19,44.63,74.1,72.41,-26.54,-19.64,-19.64,-22.35,-19.9,74.04,72.35
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,51,3.148e+04,52.26,50.87,74.73,73.17,-24.45,-17.82,-17.82,-20.2,-18.02,74.59,73.01
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,3000,54,3.93e+04,67.38,64.98,75.13,73.44,-21.97,-16.29,-16.29,-17.52,-16.33,73.62,72.08
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,8000,12,4575,17.57,15.26,18.87,17.16,-89.14,-80.27,-80.27,-80.5,-80.27,-inf,-inf
+random_L30_w150_s1,"random-phase teeth, Lambda 30 m, w_f 150 m",random,30,150,1,,,,8000,24,9691,34.64,32.88,35.88,34,-70.95,-62.53,-62.53,-63.09,-62.53,11.28,7.446
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,0,0,-inf,-inf,24.2,21.26,-84.19,-76.46,-76.46,-78.7,-76.46,23.8,20.44
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,1,374.5,-inf,-inf,24.47,21.55,-83.92,-76.17,-76.17,-78.42,-76.17,24.11,20.75
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,2,749.3,-inf,-inf,25.21,22.33,-83.17,-75.38,-75.38,-77.65,-75.38,24.88,21.97
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,3,1125,-inf,-inf,26.56,23.75,-81.81,-73.96,-73.96,-76.24,-73.96,26.28,23.44
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,4,1501,-inf,-inf,28.18,25.47,-80.17,-72.21,-72.21,-74.55,-72.21,27.95,25.21
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,5,1878,-inf,-inf,30.11,27.77,-78.22,-69.9,-69.9,-72.63,-70.23,29.89,27.53
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,6,2257,-0.08636,-inf,32.19,29.91,-76.11,-67.74,-67.74,-70.58,-67.79,31.99,29.69
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,8,3020,7.831,5.545,37.32,34.8,-70.91,-62.8,-62.8,-66,-62.84,37.13,34.59
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,10,3791,13.1,11.47,42.86,40.2,-65.28,-57.33,-57.33,-61.23,-57.62,42.47,39.83
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,12,4575,18.04,16.37,47.86,44.88,-60.15,-52.56,-52.56,-56.97,-52.92,47.67,44.67
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,14,5373,22.13,20.53,51.61,48.83,-56.26,-48.5,-48.5,-53.26,-49.01,51.48,48.65
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,16,6188,25.07,23.51,54.19,51.47,-53.51,-45.73,-45.73,-50.34,-46.25,54.07,51.31
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,18,7024,27.63,26.12,55.99,53.31,-51.54,-43.75,-43.75,-48.21,-44.28,55.87,53.18
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,20,7883,30.37,28.92,57.39,54.72,-49.93,-42.17,-42.17,-46.69,-42.72,57.27,54.58
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,22,8771,32.8,31,58.7,56,-48.36,-40.72,-40.72,-45.33,-41.27,58.57,55.83
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,24,9691,35.01,33.25,59.88,57.24,-46.95,-39.28,-39.28,-43.76,-39.87,59.73,57.08
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,26,1.065e+04,36.98,35.25,60.9,58.32,-45.62,-37.98,-37.98,-42.27,-38.56,60.74,58.17
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,28,1.165e+04,38.42,36.92,61.91,59.36,-44.29,-36.69,-36.69,-40.81,-37.25,61.72,59.16
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,30,1.27e+04,39.75,38.27,62.81,60.39,-43.03,-35.38,-35.38,-39.34,-35.91,62.63,60.18
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,33,1.439e+04,41.58,39.94,64.05,61.72,-41.2,-33.55,-33.55,-37.29,-34.04,63.89,61.56
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,36,1.625e+04,42.86,41.2,65.2,63.01,-39.35,-31.7,-31.7,-35.21,-32.15,65.06,62.86
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,39,1.833e+04,43.79,42.26,66.19,64.09,-37.6,-30.09,-30.09,-33.41,-30.49,66.06,63.93
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,42,2.07e+04,44.13,42.56,67.04,65.04,-35.87,-28.58,-28.58,-31.75,-28.95,66.91,64.89
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,45,2.348e+04,45,43.45,67.87,66.02,-34,-26.89,-26.89,-29.85,-27.2,67.74,65.87
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,48,2.691e+04,46.19,44.63,68.87,67.12,-31.77,-24.93,-24.93,-27.64,-25.18,68.73,66.97
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,51,3.148e+04,52.26,50.87,69.95,68.4,-29.23,-22.59,-22.59,-24.81,-22.78,69.65,68.06
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,3000,54,3.93e+04,67.38,64.98,72.54,70.8,-24.56,-18.93,-18.93,-19.55,-18.95,69.72,68.36
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,8000,0,0,-inf,-inf,24.28,21.35,-84.11,-76.37,-76.37,-78.6,-76.37,23.8,20.44
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,8000,4,1501,-inf,-inf,28.22,25.52,-80.13,-72.17,-72.17,-74.5,-72.17,27.95,25.21
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,8000,12,4575,17.57,15.26,47.86,44.87,-60.16,-52.57,-52.57,-56.98,-52.93,47.67,44.67
+random_L100_w150_s0,"random-phase teeth, Lambda 100 m, w_f 150 m",random,100,150,0,,,,8000,24,9691,34.64,32.88,59.87,57.24,-46.95,-39.29,-39.29,-43.77,-39.87,59.73,57.08
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,0,0,-inf,-inf,58.02,55.05,-50.37,-42.67,-42.67,-47.78,-43.38,58.01,55.04
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,1,374.5,-inf,-inf,58.02,55.06,-50.37,-42.66,-42.66,-47.77,-43.37,58.02,55.05
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,2,749.3,-inf,-inf,58.04,55.08,-50.34,-42.63,-42.63,-47.74,-43.35,58.03,55.07
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,3,1125,-inf,-inf,58.07,55.11,-50.3,-42.59,-42.59,-47.7,-43.3,58.06,55.1
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,4,1501,-inf,-inf,58.11,55.16,-50.24,-42.53,-42.53,-47.63,-43.24,58.1,55.15
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,5,1878,-inf,-inf,58.16,55.22,-50.17,-42.45,-42.45,-47.54,-43.16,58.15,55.21
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,6,2257,-0.08636,-inf,58.22,55.29,-50.08,-42.36,-42.36,-47.44,-43.07,58.21,55.28
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,8,3020,7.831,5.545,58.38,55.47,-49.85,-42.12,-42.12,-47.17,-42.83,58.37,55.45
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,10,3791,13.1,11.47,58.58,55.69,-49.56,-41.83,-41.83,-46.84,-42.52,58.56,55.67
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,12,4575,18.04,16.37,58.81,55.95,-49.2,-41.48,-41.48,-46.44,-42.17,58.79,55.92
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,14,5373,22.13,20.53,59.08,56.25,-48.79,-41.08,-41.08,-45.98,-41.76,59.04,56.2
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,16,6188,25.07,23.51,59.37,56.57,-48.33,-40.63,-40.63,-45.47,-41.3,59.33,56.51
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,18,7024,27.63,26.12,59.69,56.92,-47.84,-40.14,-40.14,-44.9,-40.79,59.63,56.84
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,20,7883,30.37,28.92,60.03,57.3,-47.28,-39.6,-39.6,-44.27,-40.23,59.95,57.21
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,22,8771,32.8,31,60.39,57.7,-46.68,-39.02,-39.02,-43.6,-39.63,60.29,57.6
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,24,9691,35.01,33.25,60.76,58.13,-46.06,-38.4,-38.4,-42.8,-38.99,60.64,58
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,26,1.065e+04,36.98,35.25,61.2,58.61,-45.32,-37.69,-37.69,-41.96,-38.27,61.05,58.46
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,28,1.165e+04,38.42,36.92,61.64,59.08,-44.56,-36.98,-36.98,-41.06,-37.52,61.44,58.91
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,30,1.27e+04,39.75,38.27,62.09,59.65,-43.75,-36.12,-36.12,-40.02,-36.64,61.88,59.42
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,33,1.439e+04,41.58,39.94,62.74,60.45,-42.5,-34.81,-34.81,-38.5,-35.29,62.55,60.24
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,36,1.625e+04,42.86,41.2,63.49,61.32,-41.06,-33.4,-33.4,-36.85,-33.83,63.29,61.11
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,39,1.833e+04,43.79,42.26,64.29,62.24,-39.5,-31.93,-31.93,-35.09,-32.29,64.11,62.03
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,42,2.07e+04,44.13,42.56,65.15,63.2,-37.76,-30.41,-30.41,-33.33,-30.72,64.97,63
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,45,2.348e+04,45,43.45,66.03,64.23,-35.83,-28.68,-28.68,-31.37,-28.94,65.85,64.02
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,48,2.691e+04,46.19,44.63,67,65.36,-33.63,-26.69,-26.69,-29.2,-26.92,66.83,65.15
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,51,3.148e+04,52.26,50.87,68.07,66.6,-31.11,-24.39,-24.39,-26.43,-24.56,67.65,66.16
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,3000,54,3.93e+04,67.38,64.98,70.99,69.14,-26.11,-20.59,-20.59,-21.03,-20.59,66.82,65.43
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,8000,0,0,-inf,-inf,58.02,55.06,-50.37,-42.66,-42.66,-47.78,-43.38,58.01,55.04
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,8000,4,1501,-inf,-inf,58.11,55.16,-50.24,-42.53,-42.53,-47.63,-43.24,58.1,55.15
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,8000,12,4575,17.57,15.26,58.81,55.95,-49.2,-41.48,-41.48,-46.44,-42.17,58.79,55.92
+random_L300_w150_s0,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,0,,,,8000,24,9691,34.64,32.88,60.76,58.12,-46.07,-38.4,-38.4,-42.81,-39,60.64,58
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,0,0,-inf,-inf,58.04,55.08,-50.35,-42.64,-42.64,-47.75,-43.36,58.03,55.07
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,1,374.5,-inf,-inf,58.04,55.08,-50.35,-42.64,-42.64,-47.74,-43.35,58.03,55.07
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,2,749.3,-inf,-inf,58.06,55.1,-50.33,-42.61,-42.61,-47.71,-43.32,58.05,55.09
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,3,1125,-inf,-inf,58.09,55.14,-50.28,-42.57,-42.57,-47.67,-43.28,58.08,55.12
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,4,1501,-inf,-inf,58.13,55.18,-50.23,-42.51,-42.51,-47.6,-43.22,58.12,55.17
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,5,1878,-inf,-inf,58.18,55.24,-50.15,-42.43,-42.43,-47.51,-43.14,58.17,55.23
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,6,2257,-0.08636,-inf,58.24,55.31,-50.06,-42.34,-42.34,-47.41,-43.04,58.23,55.3
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,8,3020,7.831,5.545,58.4,55.49,-49.83,-42.1,-42.1,-47.14,-42.8,58.38,55.47
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,10,3791,13.1,11.47,58.59,55.71,-49.54,-41.81,-41.81,-46.81,-42.5,58.58,55.69
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,12,4575,18.04,16.37,58.83,55.97,-49.19,-41.46,-41.46,-46.41,-42.15,58.81,55.94
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,14,5373,22.13,20.53,59.09,56.26,-48.78,-41.06,-41.06,-45.96,-41.74,59.06,56.22
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,16,6188,25.07,23.51,59.39,56.58,-48.32,-40.62,-40.62,-45.44,-41.28,59.34,56.53
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,18,7024,27.63,26.12,59.71,56.94,-47.83,-40.12,-40.12,-44.87,-40.77,59.65,56.86
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,20,7883,30.37,28.92,60.05,57.31,-47.27,-39.58,-39.58,-44.25,-40.21,59.96,57.23
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,22,8771,32.8,31,60.41,57.72,-46.66,-39,-39,-43.57,-39.61,60.31,57.62
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,24,9691,35.01,33.25,60.82,58.19,-46.01,-38.33,-38.33,-42.71,-38.92,60.66,58.02
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,26,1.065e+04,36.98,35.25,61.21,58.63,-45.3,-37.67,-37.67,-41.92,-38.24,61.06,58.48
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,28,1.165e+04,38.42,36.92,61.66,59.15,-44.54,-36.91,-36.91,-40.96,-37.45,61.46,58.94
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,30,1.27e+04,39.75,38.27,62.11,59.68,-43.73,-36.08,-36.08,-39.98,-36.6,61.9,59.45
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,33,1.439e+04,41.58,39.94,62.77,60.5,-42.47,-34.77,-34.77,-38.44,-35.24,62.59,60.29
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,36,1.625e+04,42.86,41.2,63.54,61.37,-41.02,-33.34,-33.34,-36.79,-33.77,63.34,61.17
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,39,1.833e+04,43.79,42.26,64.34,62.29,-39.46,-31.89,-31.89,-35.05,-32.25,64.16,62.07
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,42,2.07e+04,44.13,42.56,65.21,63.28,-37.7,-30.34,-30.34,-33.25,-30.65,65.03,63.07
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,45,2.348e+04,45,43.45,66.15,64.36,-35.72,-28.55,-28.55,-31.21,-28.81,65.96,64.16
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,48,2.691e+04,46.19,44.63,67.33,65.69,-33.31,-26.36,-26.36,-28.84,-26.59,67.16,65.5
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,51,3.148e+04,52.26,50.87,68.4,66.92,-30.78,-24.07,-24.07,-26.1,-24.24,68.01,66.51
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,3000,54,3.93e+04,67.38,64.98,71.23,69.41,-25.88,-20.32,-20.32,-20.78,-20.33,67.34,65.95
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,8000,0,0,-inf,-inf,58.04,55.08,-50.35,-42.64,-42.64,-47.75,-43.36,58.03,55.07
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,8000,4,1501,-inf,-inf,58.13,55.18,-50.23,-42.51,-42.51,-47.6,-43.22,58.12,55.17
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,8000,12,4575,17.57,15.26,58.83,55.97,-49.19,-41.46,-41.46,-46.42,-42.15,58.81,55.94
+random_L300_w150_s1,"random-phase teeth, Lambda 300 m, w_f 150 m",random,300,150,1,,,,8000,24,9691,34.64,32.88,60.81,58.18,-46.01,-38.34,-38.34,-42.73,-38.93,60.66,58.02
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,6,2257,-0.08636,-inf,-0.08636,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,8,3020,7.831,5.545,7.831,5.545,-100.4,-92.05,-92.05,-92.05,-92.05,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,10,3791,13.1,11.47,13.1,11.47,-95.04,-86.05,-86.05,-86.05,-86.05,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,12,4575,18.04,16.37,18.04,16.37,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.74,-76.8,-76.8,-76.8,-76.8,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.95,-67.98,-67.98,-67.98,-67.98,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,22,8771,32.8,31,32.8,31,-74.26,-65.72,-65.72,-65.72,-65.72,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,24,9691,35.01,33.25,35.01,33.25,-71.81,-63.27,-63.27,-63.27,-63.27,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,26,1.065e+04,36.98,35.25,36.98,35.25,-69.53,-61.06,-61.06,-61.06,-61.06,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.42,36.92,-67.78,-59.14,-59.14,-59.14,-59.14,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,30,1.27e+04,39.75,38.27,39.75,38.27,-66.1,-57.49,-57.49,-57.49,-57.49,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.58,39.94,-63.66,-55.33,-55.33,-55.33,-55.33,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,36,1.625e+04,42.86,41.2,42.86,41.2,-61.69,-53.51,-53.51,-53.51,-53.51,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,39,1.833e+04,43.79,42.26,43.79,42.26,-60.01,-51.91,-51.91,-51.91,-51.91,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,42,2.07e+04,44.13,42.56,44.13,42.56,-58.78,-51.05,-51.05,-51.05,-51.05,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,45,2.348e+04,45,43.45,45,43.45,-56.86,-49.46,-49.46,-49.46,-49.46,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,48,2.691e+04,46.19,44.63,46.43,44.63,-54.2,-47.42,-47.42,-47.42,-47.42,9.494,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,51,3.148e+04,52.26,50.87,53.62,51.07,-45.56,-39.91,-39.91,-40.12,-40.12,37.32,11.9
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,3000,54,3.93e+04,67.38,64.98,67.39,64.99,-29.71,-24.74,-24.74,-24.74,-24.74,26.23,4.452
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+rc_teeth_L1_w150_s0,"raised-cosine teeth, Lambda 1 m, w_f 150 m",rc_teeth,1,150,0,,,,8000,24,9691,34.64,32.88,34.64,32.88,-72.18,-63.64,-63.64,-63.64,-63.64,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,6,2257,-0.08636,-inf,-0.08598,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,8,3020,7.831,5.545,7.831,5.545,-100.4,-92.05,-92.05,-92.05,-92.05,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,10,3791,13.1,11.47,13.1,11.47,-95.04,-86.05,-86.05,-86.05,-86.05,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,12,4575,18.04,16.37,18.04,16.37,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.74,-76.8,-76.8,-76.8,-76.8,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.95,-67.98,-67.98,-67.98,-67.98,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,22,8771,32.8,31,32.8,31,-74.26,-65.72,-65.72,-65.72,-65.72,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,24,9691,35.01,33.25,35.01,33.25,-71.81,-63.27,-63.27,-63.27,-63.27,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,26,1.065e+04,36.98,35.25,36.98,35.25,-69.53,-61.06,-61.06,-61.06,-61.06,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.42,36.92,-67.78,-59.14,-59.14,-59.14,-59.14,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,30,1.27e+04,39.75,38.27,39.75,38.27,-66.1,-57.49,-57.49,-57.49,-57.49,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.58,39.94,-63.66,-55.33,-55.33,-55.33,-55.33,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,36,1.625e+04,42.86,41.2,42.87,41.2,-61.69,-53.51,-53.51,-53.51,-53.51,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,39,1.833e+04,43.79,42.26,43.79,42.27,-60,-51.91,-51.91,-51.91,-51.91,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,42,2.07e+04,44.13,42.56,44.2,42.62,-58.72,-51,-51,-51.05,-51,6.26,-1.046
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,45,2.348e+04,45,43.45,47.77,45.16,-54.1,-47.75,-47.75,-49.46,-48.07,37.09,29.9
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,48,2.691e+04,46.19,44.63,70.39,64.92,-30.25,-27.13,-27.13,-47.42,-28.48,69.63,63.71
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,51,3.148e+04,52.26,50.87,68.5,64.87,-30.68,-26.11,-26.11,-40.12,-26.56,67.02,62.85
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,3000,54,3.93e+04,67.38,64.98,69.56,66.96,-27.54,-22.77,-22.77,-24.74,-22.79,61.42,58.28
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+rc_teeth_L3_w150_s0,"raised-cosine teeth, Lambda 3 m, w_f 150 m",rc_teeth,3,150,0,,,,8000,24,9691,34.64,32.88,34.64,32.88,-72.18,-63.64,-63.64,-63.64,-63.64,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,6,2257,-0.08636,-inf,-0.08397,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,8,3020,7.831,5.545,7.832,5.546,-100.4,-92.05,-92.05,-92.05,-92.05,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,10,3791,13.1,11.47,13.1,11.47,-95.04,-86.05,-86.05,-86.05,-86.05,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,12,4575,18.04,16.37,18.04,16.37,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.74,-76.8,-76.8,-76.8,-76.8,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.95,-67.98,-67.98,-67.98,-67.98,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,22,8771,32.8,31,32.8,31,-74.26,-65.71,-65.71,-65.71,-65.71,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,24,9691,35.01,33.25,35.02,33.25,-71.81,-63.27,-63.27,-63.27,-63.27,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,26,1.065e+04,36.98,35.25,36.98,35.25,-69.53,-61.06,-61.06,-61.06,-61.06,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.42,36.92,-67.78,-59.13,-59.13,-59.13,-59.13,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,30,1.27e+04,39.75,38.27,39.75,38.28,-66.09,-57.49,-57.49,-57.49,-57.49,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.6,39.95,-63.65,-55.32,-55.32,-55.32,-55.32,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,36,1.625e+04,42.86,41.2,42.89,41.23,-61.66,-53.48,-53.48,-53.49,-53.48,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,39,1.833e+04,43.79,42.26,43.92,42.39,-59.88,-51.78,-51.78,-51.82,-51.78,13.23,11.43
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,42,2.07e+04,44.13,42.56,46.19,44.7,-56.72,-48.91,-48.91,-49.19,-48.92,38.12,36.46
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,45,2.348e+04,45,43.45,65.94,64.34,-35.93,-28.57,-28.57,-30.83,-28.73,65.75,64.13
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,48,2.691e+04,46.19,44.63,78.66,76.86,-21.98,-15.19,-15.19,-17.59,-15.42,78.61,76.81
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,51,3.148e+04,52.26,50.87,77.51,75.11,-21.67,-15.87,-15.87,-21.22,-16.13,77.38,74.95
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,3000,54,3.93e+04,67.38,64.98,70.09,67.69,-27.01,-22.04,-22.04,-22.83,-22.25,64.72,62.08
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+rc_teeth_L10_w150_s0,"raised-cosine teeth, Lambda 10 m, w_f 150 m",rc_teeth,10,150,0,,,,8000,24,9691,34.64,32.88,34.64,32.89,-72.18,-63.64,-63.64,-63.64,-63.64,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,6,2257,-0.08636,-inf,-0.07779,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,8,3020,7.831,5.545,7.835,5.549,-100.4,-92.04,-92.04,-92.05,-92.04,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,10,3791,13.1,11.47,13.1,11.48,-95.04,-86.04,-86.04,-86.04,-86.04,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,12,4575,18.04,16.37,18.04,16.38,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.73,-76.79,-76.79,-76.8,-76.79,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.95,-67.98,-67.98,-67.98,-67.98,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,22,8771,32.8,31,32.81,31.01,-74.26,-65.71,-65.71,-65.71,-65.71,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,24,9691,35.01,33.25,35.02,33.25,-71.8,-63.27,-63.27,-63.27,-63.27,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,26,1.065e+04,36.98,35.25,36.99,35.26,-69.52,-61.05,-61.05,-61.05,-61.05,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.43,36.93,-67.77,-59.12,-59.12,-59.12,-59.12,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,30,1.27e+04,39.75,38.27,39.77,38.3,-66.07,-57.47,-57.47,-57.47,-57.47,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.63,39.99,-63.61,-55.28,-55.28,-55.28,-55.28,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,36,1.625e+04,42.86,41.2,43.75,42.18,-60.8,-52.54,-52.54,-52.56,-52.54,16.21,14.85
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,39,1.833e+04,43.79,42.26,51.23,50.03,-52.56,-44.15,-44.15,-44.81,-44.16,48.55,47.49
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,42,2.07e+04,44.13,42.56,69.96,67.91,-32.95,-25.71,-25.71,-28.99,-26.11,69.88,67.82
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,45,2.348e+04,45,43.45,73.01,71.24,-28.86,-21.67,-21.67,-24.42,-21.96,72.95,71.18
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,48,2.691e+04,46.19,44.63,73.44,71.7,-27.2,-20.35,-20.35,-23.01,-20.61,73.38,71.63
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,51,3.148e+04,52.26,50.87,75.05,73.59,-24.14,-17.39,-17.39,-19.45,-17.56,74.92,73.45
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,3000,54,3.93e+04,67.38,64.98,76.13,74.3,-20.97,-15.43,-15.43,-16.87,-15.47,74.8,73.14
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+rc_teeth_L30_w150_s0,"raised-cosine teeth, Lambda 30 m, w_f 150 m",rc_teeth,30,150,0,,,,8000,24,9691,34.64,32.88,34.65,32.89,-72.18,-63.63,-63.63,-63.63,-63.63,-inf,-inf
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,0,0,-inf,-inf,6.727,4.983,-101.7,-92.74,-92.74,-92.74,-92.74,4.938,4.101
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,1,374.5,-inf,-inf,7.694,6.181,-100.7,-91.54,-91.54,-91.54,-91.54,6.312,5.554
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,2,749.3,-inf,-inf,9.621,8.182,-98.76,-89.53,-89.53,-89.59,-89.53,8.41,7.585
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,3,1125,-inf,-inf,12.68,11.65,-95.69,-86.05,-86.05,-86.69,-86.05,12.14,11.23
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,4,1501,-inf,-inf,18.57,16.82,-89.79,-80.87,-80.87,-81.76,-80.87,18.21,16.46
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,5,1878,-inf,-inf,22.6,20.57,-85.73,-77.1,-77.1,-78.82,-77.1,21.36,19.27
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,6,2257,-0.08636,-inf,26.23,24.58,-82.07,-73.07,-73.07,-75.06,-73.07,25.82,24.13
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,8,3020,7.831,5.545,34.29,32.09,-73.94,-65.51,-65.51,-68.5,-65.55,34.01,31.78
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,10,3791,13.1,11.47,41.35,38.74,-66.79,-58.78,-58.78,-62.72,-59.06,41.06,38.52
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,12,4575,18.04,16.37,47.5,44.5,-60.52,-52.94,-52.94,-57.42,-53.3,47.28,44.23
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,14,5373,22.13,20.53,51.63,48.85,-56.24,-48.47,-48.47,-53.19,-48.98,51.49,48.68
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,16,6188,25.07,23.51,54.32,51.65,-53.38,-45.55,-45.55,-50.02,-46.06,54.21,51.53
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,18,7024,27.63,26.12,56.12,53.49,-51.41,-43.56,-43.56,-47.92,-44.09,56,53.37
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,20,7883,30.37,28.92,57.54,54.89,-49.78,-42,-42,-46.48,-42.55,57.42,54.76
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,22,8771,32.8,31,58.86,56.17,-48.2,-40.54,-40.54,-45.12,-41.09,58.73,56.02
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,24,9691,35.01,33.25,60.06,57.45,-46.77,-39.07,-39.07,-43.42,-39.65,59.88,57.25
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,26,1.065e+04,36.98,35.25,61.11,58.6,-45.41,-37.7,-37.7,-41.89,-38.26,60.93,58.41
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,28,1.165e+04,38.42,36.92,62.11,59.59,-44.09,-36.46,-36.46,-40.53,-37.01,61.93,59.38
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,30,1.27e+04,39.75,38.27,62.94,60.54,-42.91,-35.23,-35.23,-39.15,-35.75,62.79,60.37
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,33,1.439e+04,41.58,39.94,64.15,61.84,-41.09,-33.43,-33.43,-37.15,-33.92,63.99,61.68
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,36,1.625e+04,42.86,41.2,65.25,63.06,-39.3,-31.65,-31.65,-35.15,-32.1,65.11,62.91
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,39,1.833e+04,43.79,42.26,66.22,64.13,-37.57,-30.05,-30.05,-33.37,-30.46,66.09,63.97
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,42,2.07e+04,44.13,42.56,67.02,65.02,-35.89,-28.6,-28.6,-31.76,-28.96,66.9,64.87
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,45,2.348e+04,45,43.45,67.75,65.91,-34.11,-27,-27,-29.93,-27.32,67.62,65.75
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,48,2.691e+04,46.19,44.63,68.53,66.8,-32.11,-25.25,-25.25,-27.89,-25.49,68.39,66.65
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,51,3.148e+04,52.26,50.87,69.58,68.02,-29.6,-22.96,-22.96,-25.16,-23.15,69.25,67.67
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,3000,54,3.93e+04,67.38,64.98,72.31,70.55,-24.79,-19.18,-19.18,-19.79,-19.19,69.36,67.99
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,8000,0,0,-inf,-inf,7.027,5.15,-101.4,-92.57,-92.57,-92.57,-92.57,4.938,4.101
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,8000,4,1501,-inf,-inf,18.61,16.86,-89.74,-80.83,-80.83,-81.72,-80.83,18.21,16.46
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,8000,12,4575,17.57,15.26,47.49,44.48,-60.53,-52.95,-52.95,-57.43,-53.31,47.28,44.23
+rc_teeth_L100_w150_s0,"raised-cosine teeth, Lambda 100 m, w_f 150 m",rc_teeth,100,150,0,,,,8000,24,9691,34.64,32.88,60.05,57.44,-46.78,-39.08,-39.08,-43.44,-39.66,59.88,57.25
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,0,0,-inf,-inf,58.03,55.07,-50.36,-42.65,-42.65,-47.76,-43.37,58.02,55.06
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,1,374.5,-inf,-inf,58.04,55.08,-50.35,-42.64,-42.64,-47.75,-43.36,58.03,55.06
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,2,749.3,-inf,-inf,58.05,55.1,-50.33,-42.62,-42.62,-47.73,-43.33,58.04,55.08
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,3,1125,-inf,-inf,58.08,55.13,-50.29,-42.57,-42.57,-47.68,-43.29,58.07,55.12
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,4,1501,-inf,-inf,58.12,55.17,-50.23,-42.52,-42.52,-47.61,-43.23,58.11,55.16
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,5,1878,-inf,-inf,58.17,55.23,-50.16,-42.44,-42.44,-47.53,-43.15,58.16,55.22
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,6,2257,-0.08636,-inf,58.23,55.3,-50.07,-42.35,-42.35,-47.42,-43.05,58.22,55.29
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,8,3020,7.831,5.545,58.39,55.48,-49.84,-42.11,-42.11,-47.16,-42.81,58.38,55.47
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,10,3791,13.1,11.47,58.59,55.7,-49.55,-41.82,-41.82,-46.83,-42.51,58.57,55.68
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,12,4575,18.04,16.37,58.82,55.96,-49.19,-41.47,-41.47,-46.43,-42.15,58.8,55.93
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,14,5373,22.13,20.53,59.09,56.26,-48.78,-41.07,-41.07,-45.97,-41.75,59.05,56.21
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,16,6188,25.07,23.51,59.38,56.57,-48.32,-40.63,-40.63,-45.46,-41.29,59.33,56.52
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,18,7024,27.63,26.12,59.7,56.92,-47.84,-40.13,-40.13,-44.9,-40.78,59.64,56.85
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,20,7883,30.37,28.92,60.04,57.3,-47.28,-39.59,-39.59,-44.27,-40.23,59.95,57.22
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,22,8771,32.8,31,60.39,57.7,-46.67,-39.01,-39.01,-43.6,-39.63,60.29,57.6
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,24,9691,35.01,33.25,60.8,58.17,-46.02,-38.36,-38.36,-42.75,-38.95,60.64,58
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,26,1.065e+04,36.98,35.25,61.2,58.61,-45.32,-37.69,-37.69,-41.96,-38.27,61.05,58.46
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,28,1.165e+04,38.42,36.92,61.63,59.11,-44.57,-36.94,-36.94,-41,-37.49,61.44,58.91
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,30,1.27e+04,39.75,38.27,62.08,59.65,-43.76,-36.12,-36.12,-40.02,-36.64,61.87,59.42
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,33,1.439e+04,41.58,39.94,62.74,60.45,-42.51,-34.82,-34.82,-38.5,-35.29,62.55,60.24
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,36,1.625e+04,42.86,41.2,63.47,61.3,-41.08,-33.41,-33.41,-36.88,-33.85,63.28,61.1
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,39,1.833e+04,43.79,42.26,64.28,62.22,-39.52,-31.96,-31.96,-35.13,-32.32,64.1,62
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,42,2.07e+04,44.13,42.56,65.11,63.15,-37.81,-30.46,-30.46,-33.4,-30.78,64.92,62.95
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,45,2.348e+04,45,43.45,65.94,64.14,-35.93,-28.77,-28.77,-31.46,-29.04,65.75,63.93
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,48,2.691e+04,46.19,44.63,66.81,65.17,-33.83,-26.88,-26.88,-29.34,-27.1,66.62,64.96
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,51,3.148e+04,52.26,50.87,67.88,66.43,-31.3,-24.56,-24.56,-26.54,-24.72,67.45,65.98
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,3000,54,3.93e+04,67.38,64.98,70.9,69.05,-26.2,-20.68,-20.68,-21.11,-20.68,66.63,65.25
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,8000,0,0,-inf,-inf,58.03,55.07,-50.36,-42.65,-42.65,-47.76,-43.37,58.02,55.06
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,8000,4,1501,-inf,-inf,58.12,55.17,-50.23,-42.51,-42.51,-47.61,-43.23,58.11,55.16
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,8000,12,4575,17.57,15.26,58.82,55.96,-49.2,-41.47,-41.47,-46.43,-42.16,58.8,55.93
+rc_teeth_L300_w150_s0,"raised-cosine teeth, Lambda 300 m, w_f 150 m",rc_teeth,300,150,0,,,,8000,24,9691,34.64,32.88,60.79,58.16,-46.03,-38.36,-38.36,-42.76,-38.96,60.64,58
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,6,2257,-0.08636,-inf,-0.08636,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,8,3020,7.831,5.545,7.831,5.545,-100.4,-92.05,-92.05,-92.05,-92.05,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,10,3791,13.1,11.47,13.1,11.47,-95.04,-86.05,-86.05,-86.05,-86.05,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,12,4575,18.04,16.37,18.04,16.37,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.74,-76.8,-76.8,-76.8,-76.8,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.95,-67.98,-67.98,-67.98,-67.98,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,22,8771,32.8,31,32.8,31,-74.26,-65.72,-65.72,-65.72,-65.72,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,24,9691,35.01,33.25,35.01,33.25,-71.81,-63.27,-63.27,-63.27,-63.27,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,26,1.065e+04,36.98,35.25,36.98,35.25,-69.53,-61.06,-61.06,-61.06,-61.06,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.42,36.92,-67.78,-59.14,-59.14,-59.14,-59.14,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,30,1.27e+04,39.75,38.27,39.75,38.27,-66.1,-57.49,-57.49,-57.49,-57.49,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.58,39.94,-63.66,-55.33,-55.33,-55.33,-55.33,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,36,1.625e+04,42.86,41.2,42.86,41.2,-61.69,-53.51,-53.51,-53.51,-53.51,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,39,1.833e+04,43.79,42.26,43.79,42.26,-60.01,-51.91,-51.91,-51.91,-51.91,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,42,2.07e+04,44.13,42.56,44.13,42.56,-58.78,-51.05,-51.05,-51.05,-51.05,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,45,2.348e+04,45,43.45,45,43.45,-56.86,-49.46,-49.46,-49.46,-49.46,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,48,2.691e+04,46.19,44.63,46.49,44.63,-54.15,-47.42,-47.42,-47.42,-47.42,11.97,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,51,3.148e+04,52.26,50.87,53.75,51.09,-45.44,-39.89,-39.89,-40.12,-40.12,38.16,13.17
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,3000,54,3.93e+04,67.38,64.98,67.39,64.99,-29.71,-24.74,-24.74,-24.74,-24.74,26.11,5.168
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+sawtooth_L1_w150_s0,"sawtooth, Lambda 1 m, w_f 150 m",sawtooth,1,150,0,,,,8000,24,9691,34.64,32.88,34.64,32.88,-72.18,-63.64,-63.64,-63.64,-63.64,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,6,2257,-0.08636,-inf,-0.08597,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,8,3020,7.831,5.545,7.831,5.545,-100.4,-92.05,-92.05,-92.05,-92.05,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,10,3791,13.1,11.47,13.1,11.47,-95.04,-86.05,-86.05,-86.05,-86.05,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,12,4575,18.04,16.37,18.04,16.37,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.74,-76.8,-76.8,-76.8,-76.8,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.95,-67.98,-67.98,-67.98,-67.98,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,22,8771,32.8,31,32.8,31,-74.26,-65.72,-65.72,-65.72,-65.72,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,24,9691,35.01,33.25,35.01,33.25,-71.81,-63.27,-63.27,-63.27,-63.27,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,26,1.065e+04,36.98,35.25,36.98,35.25,-69.53,-61.06,-61.06,-61.06,-61.06,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.42,36.92,-67.78,-59.14,-59.14,-59.14,-59.14,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,30,1.27e+04,39.75,38.27,39.75,38.27,-66.09,-57.49,-57.49,-57.49,-57.49,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.58,39.94,-63.66,-55.33,-55.33,-55.33,-55.33,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,36,1.625e+04,42.86,41.2,42.87,41.2,-61.69,-53.51,-53.51,-53.51,-53.51,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,39,1.833e+04,43.79,42.26,43.79,42.27,-60,-51.91,-51.91,-51.91,-51.91,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,42,2.07e+04,44.13,42.56,44.2,42.62,-58.71,-51,-51,-51.05,-51,6.67,-0.5059
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,45,2.348e+04,45,43.45,48.79,45.88,-53.08,-47.02,-47.02,-49.46,-47.39,41.16,34.38
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,48,2.691e+04,46.19,44.63,73.32,68.15,-27.32,-23.9,-23.9,-47.42,-25.03,72.77,67.3
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,51,3.148e+04,52.26,50.87,68.68,65.44,-30.5,-25.55,-25.55,-40.12,-25.96,67.29,63.61
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,3000,54,3.93e+04,67.38,64.98,68.72,66.17,-28.38,-23.56,-23.56,-24.74,-23.59,58.49,55.31
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+sawtooth_L3_w150_s0,"sawtooth, Lambda 3 m, w_f 150 m",sawtooth,3,150,0,,,,8000,24,9691,34.64,32.88,34.64,32.88,-72.18,-63.64,-63.64,-63.64,-63.64,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,6,2257,-0.08636,-inf,-0.08399,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,8,3020,7.831,5.545,7.832,5.546,-100.4,-92.05,-92.05,-92.05,-92.05,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,10,3791,13.1,11.47,13.1,11.47,-95.04,-86.05,-86.05,-86.05,-86.05,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,12,4575,18.04,16.37,18.04,16.37,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.74,-76.8,-76.8,-76.8,-76.8,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.95,-67.98,-67.98,-67.98,-67.98,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,22,8771,32.8,31,32.8,31,-74.26,-65.71,-65.71,-65.71,-65.71,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,24,9691,35.01,33.25,35.02,33.25,-71.81,-63.27,-63.27,-63.27,-63.27,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,26,1.065e+04,36.98,35.25,36.98,35.25,-69.53,-61.06,-61.06,-61.06,-61.06,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,28,1.165e+04,38.42,36.92,38.42,36.92,-67.78,-59.13,-59.13,-59.14,-59.13,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,30,1.27e+04,39.75,38.27,39.75,38.28,-66.09,-57.49,-57.49,-57.49,-57.49,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,33,1.439e+04,41.58,39.94,41.59,39.95,-63.65,-55.32,-55.32,-55.32,-55.32,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,36,1.625e+04,42.86,41.2,42.9,41.24,-61.66,-53.48,-53.48,-53.49,-53.48,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,39,1.833e+04,43.79,42.26,44.16,42.66,-59.63,-51.51,-51.51,-51.55,-51.51,20.38,18.87
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,42,2.07e+04,44.13,42.56,57.64,56.54,-45.28,-37.08,-37.08,-38.2,-37.13,57.14,56
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,45,2.348e+04,45,43.45,77.47,75.69,-24.4,-17.22,-17.22,-20.05,-17.49,77.44,75.66
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,48,2.691e+04,46.19,44.63,79.99,78.21,-20.65,-13.85,-13.85,-17.07,-14.09,79.95,78.16
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,51,3.148e+04,52.26,50.87,74.32,71.55,-24.86,-19.43,-19.43,-26.17,-19.74,74.1,71.27
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,3000,54,3.93e+04,67.38,64.98,69.45,67.19,-27.65,-22.54,-22.54,-22.95,-22.71,62.72,60.25
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+sawtooth_L10_w150_s0,"sawtooth, Lambda 10 m, w_f 150 m",sawtooth,10,150,0,,,,8000,24,9691,34.64,32.88,34.64,32.89,-72.18,-63.64,-63.64,-63.64,-63.64,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,1,374.5,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,2,749.3,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,3,1125,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,5,1878,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,6,2257,-0.08636,-inf,-0.07782,-inf,-108.4,-inf,-108.4,-108.4,-108.4,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,8,3020,7.831,5.545,7.835,5.549,-100.4,-92.04,-92.04,-92.05,-92.04,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,10,3791,13.1,11.47,13.1,11.48,-95.04,-86.04,-86.04,-86.04,-86.04,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,12,4575,18.04,16.37,18.04,16.38,-89.98,-81.06,-81.06,-81.06,-81.06,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,14,5373,22.13,20.53,22.13,20.53,-85.73,-76.79,-76.79,-76.8,-76.79,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,16,6188,25.07,23.51,25.07,23.51,-82.64,-73.69,-73.69,-73.69,-73.69,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,18,7024,27.63,26.12,27.63,26.12,-79.9,-70.93,-70.93,-70.93,-70.93,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,20,7883,30.37,28.92,30.37,28.92,-76.94,-67.97,-67.97,-67.97,-67.97,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,22,8771,32.8,31,32.82,31.02,-74.25,-65.7,-65.7,-65.7,-65.7,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,24,9691,35.01,33.25,35.75,34.05,-71.07,-62.47,-62.47,-62.47,-62.47,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,26,1.065e+04,36.98,35.25,38.46,36.85,-68.06,-59.45,-59.45,-59.47,-59.45,16.41,15.77
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,28,1.165e+04,38.42,36.92,42.65,41.32,-63.55,-54.73,-54.73,-55.16,-54.73,35.98,34.77
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,30,1.27e+04,39.75,38.27,52.27,50.57,-53.57,-45.19,-45.19,-47.33,-45.35,51.29,49.57
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,33,1.439e+04,41.58,39.94,66.13,63.76,-39.11,-31.51,-31.51,-35.38,-32.01,66.02,63.64
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,36,1.625e+04,42.86,41.2,70,68.04,-34.55,-26.67,-26.67,-29.66,-27.04,69.94,67.98
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,39,1.833e+04,43.79,42.26,71.25,69.36,-32.55,-24.82,-24.82,-27.81,-25.17,71.2,69.3
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,42,2.07e+04,44.13,42.56,72.7,70.91,-30.21,-22.7,-22.7,-25.49,-23.01,72.66,70.86
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,45,2.348e+04,45,43.45,73.77,72,-28.1,-20.91,-20.91,-23.79,-21.19,73.73,71.95
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,48,2.691e+04,46.19,44.63,76.88,75.32,-23.76,-16.73,-16.73,-19.03,-16.95,76.84,75.28
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,51,3.148e+04,52.26,50.87,76.69,75.24,-22.5,-15.74,-15.74,-17.64,-15.91,76.57,75.12
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,3000,54,3.93e+04,67.38,64.98,73.96,71.9,-23.14,-17.83,-17.83,-19.92,-17.86,71.97,69.88
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,8000,0,0,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,8000,4,1501,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,8000,12,4575,17.57,15.26,17.57,15.26,-90.45,-82.17,-82.17,-82.17,-82.17,-inf,-inf
+sawtooth_L30_w150_s0,"sawtooth, Lambda 30 m, w_f 150 m",sawtooth,30,150,0,,,,8000,24,9691,34.64,32.88,35.38,33.69,-71.44,-62.83,-62.83,-62.83,-62.83,-inf,-inf
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,0,0,-inf,-inf,60.29,57.56,-48.1,-40.16,-40.16,-44.84,-40.79,60.28,57.56
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,1,374.5,-inf,-inf,60.3,57.58,-48.09,-40.14,-40.14,-44.82,-40.78,60.3,57.57
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,2,749.3,-inf,-inf,60.33,57.61,-48.05,-40.1,-40.1,-44.78,-40.74,60.33,57.61
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,3,1125,-inf,-inf,60.39,57.67,-47.98,-40.03,-40.03,-44.71,-40.67,60.38,57.66
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,4,1501,-inf,-inf,60.46,57.75,-47.89,-39.94,-39.94,-44.61,-40.58,60.46,57.74
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,5,1878,-inf,-inf,60.56,57.84,-47.77,-39.83,-39.83,-44.49,-40.46,60.55,57.83
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,6,2257,-0.08636,-inf,60.67,57.95,-47.64,-39.7,-39.7,-44.36,-40.33,60.66,57.94
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,8,3020,7.831,5.545,60.98,58.27,-47.25,-39.32,-39.32,-43.94,-39.95,60.94,58.22
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,10,3791,13.1,11.47,61.32,58.62,-46.82,-38.9,-38.9,-43.48,-39.53,61.3,58.61
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,12,4575,18.04,16.37,61.7,59.02,-46.32,-38.41,-38.41,-42.95,-39.03,61.68,59
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,14,5373,22.13,20.53,62.15,59.5,-45.72,-37.83,-37.83,-42.31,-38.44,62.1,59.43
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,16,6188,25.07,23.51,62.59,59.98,-45.12,-37.22,-37.22,-41.65,-37.82,62.53,59.91
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,18,7024,27.63,26.12,63.06,60.51,-44.47,-36.55,-36.55,-40.9,-37.13,63.02,60.46
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,20,7883,30.37,28.92,63.51,61.02,-43.8,-35.87,-35.87,-40.16,-36.45,63.47,60.97
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,22,8771,32.8,31,64,61.53,-43.06,-35.19,-35.19,-39.4,-35.75,63.94,61.47
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,24,9691,35.01,33.25,64.48,62.04,-42.34,-34.48,-34.48,-38.55,-35.03,64.42,61.97
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,26,1.065e+04,36.98,35.25,64.95,62.59,-41.56,-33.72,-33.72,-37.68,-34.24,64.89,62.51
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,28,1.165e+04,38.42,36.92,65.44,63.12,-40.76,-32.93,-32.93,-36.75,-33.44,65.35,63.04
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,30,1.27e+04,39.75,38.27,65.9,63.62,-39.94,-32.15,-32.15,-35.86,-32.63,65.81,63.52
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,33,1.439e+04,41.58,39.94,66.63,64.44,-38.61,-30.82,-30.82,-34.37,-31.27,66.54,64.34
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,36,1.625e+04,42.86,41.2,67.29,65.17,-37.26,-29.55,-29.55,-32.97,-29.97,67.19,65.06
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,39,1.833e+04,43.79,42.26,68.05,66.08,-35.74,-28.09,-28.09,-31.24,-28.47,67.96,65.97
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,42,2.07e+04,44.13,42.56,68.96,67.11,-33.96,-26.51,-26.51,-29.34,-26.82,68.87,67.01
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,45,2.348e+04,45,43.45,69.76,68.02,-32.1,-24.89,-24.89,-27.61,-25.17,69.67,67.92
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,48,2.691e+04,46.19,44.63,72.76,71.2,-27.88,-20.86,-20.86,-23.14,-21.08,72.7,71.12
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,51,3.148e+04,52.26,50.87,73.13,71.53,-26.05,-19.46,-19.46,-21.71,-19.63,72.94,71.32
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,3000,54,3.93e+04,67.38,64.98,74.79,73.23,-22.31,-16.5,-16.5,-17.13,-16.51,72.99,71.7
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,8000,0,0,-inf,-inf,60.29,57.57,-48.1,-40.16,-40.16,-44.84,-40.79,60.28,57.56
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,8000,4,1501,-inf,-inf,60.46,57.75,-47.89,-39.94,-39.94,-44.61,-40.58,60.46,57.74
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,8000,12,4575,17.57,15.26,61.7,59.02,-46.32,-38.41,-38.41,-42.96,-39.03,61.68,59
+sawtooth_L100_w150_s0,"sawtooth, Lambda 100 m, w_f 150 m",sawtooth,100,150,0,,,,8000,24,9691,34.64,32.88,64.48,62.03,-42.35,-34.49,-34.49,-38.56,-35.03,64.42,61.97
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,0,0,-inf,-inf,61.95,59.21,-46.44,-38.51,-38.51,-43.16,-39.16,61.95,59.2
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,1,374.5,-inf,-inf,61.96,59.21,-46.43,-38.5,-38.5,-43.15,-39.15,61.95,59.21
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,2,749.3,-inf,-inf,61.97,59.23,-46.42,-38.49,-38.49,-43.13,-39.13,61.96,59.22
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,3,1125,-inf,-inf,61.99,59.25,-46.38,-38.46,-38.46,-43.1,-39.1,61.98,59.24
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,4,1501,-inf,-inf,62.01,59.28,-46.34,-38.41,-38.41,-43.05,-39.06,62,59.27
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,5,1878,-inf,-inf,62.04,59.31,-46.28,-38.36,-38.36,-42.99,-39,62.04,59.3
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,6,2257,-0.08636,-inf,62.08,59.36,-46.22,-38.29,-38.29,-42.91,-38.93,62.07,59.35
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,8,3020,7.831,5.545,62.18,59.47,-46.05,-38.12,-38.12,-42.72,-38.76,62.17,59.46
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,10,3791,13.1,11.47,62.33,59.65,-45.8,-37.87,-37.87,-42.42,-38.49,62.29,59.6
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,12,4575,18.04,16.37,62.48,59.83,-45.54,-37.6,-37.6,-42.11,-38.22,62.44,59.78
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,14,5373,22.13,20.53,62.65,60.03,-45.22,-37.29,-37.29,-41.76,-37.9,62.6,59.97
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,16,6188,25.07,23.51,62.87,60.29,-44.84,-36.91,-36.91,-41.3,-37.5,62.78,60.19
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,18,7024,27.63,26.12,63.07,60.54,-44.46,-36.51,-36.51,-40.85,-37.09,63.04,60.5
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,20,7883,30.37,28.92,63.3,60.82,-44.02,-36.08,-36.08,-40.35,-36.64,63.25,60.76
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,22,8771,32.8,31,63.54,61.1,-43.52,-35.62,-35.62,-39.82,-36.16,63.48,61.04
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,24,9691,35.01,33.25,63.82,61.41,-43.01,-35.12,-35.12,-39.18,-35.64,63.74,61.33
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,26,1.065e+04,36.98,35.25,64.1,61.72,-42.42,-34.58,-34.58,-38.54,-35.09,64.01,61.64
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,28,1.165e+04,38.42,36.92,64.38,62.06,-41.82,-33.99,-33.99,-37.81,-34.48,64.29,61.96
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,30,1.27e+04,39.75,38.27,64.7,62.43,-41.15,-33.34,-33.34,-37.05,-33.81,64.59,62.31
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,33,1.439e+04,41.58,39.94,65.15,62.94,-40.1,-32.32,-32.32,-35.88,-32.76,65.01,62.82
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,36,1.625e+04,42.86,41.2,65.6,63.5,-38.95,-31.21,-31.21,-34.6,-31.62,65.47,63.36
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,39,1.833e+04,43.79,42.26,66.23,64.24,-37.56,-29.94,-29.94,-33.11,-30.3,66.1,64.09
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,42,2.07e+04,44.13,42.56,67,65.13,-35.91,-28.49,-28.49,-31.34,-28.79,66.87,64.98
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,45,2.348e+04,45,43.45,67.91,66.2,-33.96,-26.71,-26.71,-29.31,-26.96,67.78,66.06
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,48,2.691e+04,46.19,44.63,69.62,67.97,-31.02,-24.08,-24.08,-26.57,-24.3,69.5,67.84
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,51,3.148e+04,52.26,50.87,70.86,69.46,-28.32,-21.53,-21.53,-23.46,-21.69,70.6,69.18
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,3000,54,3.93e+04,67.38,64.98,72.86,71.15,-24.24,-18.58,-18.58,-19.2,-18.59,70.11,68.81
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,8000,0,0,-inf,-inf,61.96,59.21,-46.44,-38.51,-38.51,-43.16,-39.16,61.95,59.2
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,8000,4,1501,-inf,-inf,62.01,59.28,-46.34,-38.41,-38.41,-43.05,-39.06,62,59.27
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,8000,12,4575,17.57,15.26,62.48,59.83,-45.54,-37.6,-37.6,-42.11,-38.22,62.44,59.78
+sawtooth_L300_w150_s0,"sawtooth, Lambda 300 m, w_f 150 m",sawtooth,300,150,0,,,,8000,24,9691,34.64,32.88,63.81,61.4,-43.01,-35.12,-35.12,-39.18,-35.65,63.74,61.33
+joint_open_L250_g1,"joint open, L_m 250 m, g 1 m",,,,,open,250,1,3000,0,0,62.03,59.38,76.14,72.77,-32.25,-24.95,-24.95,-29.35,-25.67,75.72,72.29
+joint_open_L250_g1,"joint open, L_m 250 m, g 1 m",,,,,open,250,1,3000,8,3020,57.77,55.75,75.67,72.33,-32.56,-25.26,-25.26,-30.26,-26.07,75.46,72.02
+joint_open_L250_g1,"joint open, L_m 250 m, g 1 m",,,,,open,250,1,3000,16,6188,65.48,62.41,75.53,72.22,-32.18,-24.98,-24.98,-28.5,-25.56,74.76,71.3
+joint_open_L250_g1,"joint open, L_m 250 m, g 1 m",,,,,open,250,1,3000,24,9691,71.13,67.19,75.9,72.35,-30.93,-24.17,-24.17,-26.31,-24.45,73.5,70.09
+joint_open_L250_g1,"joint open, L_m 250 m, g 1 m",,,,,open,250,1,3000,33,1.439e+04,73.15,69.21,75.76,72.12,-29.48,-23.14,-23.14,-24.39,-23.29,71.34,68
+joint_open_L250_g1,"joint open, L_m 250 m, g 1 m",,,,,open,250,1,3000,42,2.07e+04,74.34,70.97,75.55,72.32,-27.36,-21.3,-21.3,-21.84,-21.35,68.02,64.9
+joint_open_L250_g1,"joint open, L_m 250 m, g 1 m",,,,,open,250,1,3000,51,3.148e+04,75.35,71.94,75.53,72.18,-23.65,-18.8,-18.8,-18.88,-18.81,58.43,55.64
+joint_open_L250_g1,"joint open, L_m 250 m, g 1 m",,,,,open,250,1,8000,0,0,67.56,64.14,76.7,73.27,-31.7,-24.45,-24.45,-27.85,-25,75.72,72.29
+joint_open_L250_g1_n0,"joint open, L_m 250 m, g 1 m (n = 0 only)",,,,,open,250,1,3000,0,0,62.03,59.38,62.03,59.38,-46.37,-38.34,-38.34,-38.34,-38.34,-inf,-inf
+joint_open_L250_g1_n0,"joint open, L_m 250 m, g 1 m (n = 0 only)",,,,,open,250,1,3000,8,3020,57.77,55.75,57.77,55.75,-50.46,-41.84,-41.84,-41.84,-41.84,-inf,-inf
+joint_open_L250_g1_n0,"joint open, L_m 250 m, g 1 m (n = 0 only)",,,,,open,250,1,3000,16,6188,65.48,62.41,65.48,62.41,-42.22,-34.79,-34.79,-34.79,-34.79,-inf,-inf
+joint_open_L250_g1_n0,"joint open, L_m 250 m, g 1 m (n = 0 only)",,,,,open,250,1,3000,24,9691,71.13,67.19,71.13,67.19,-35.7,-29.33,-29.33,-29.33,-29.33,-inf,-inf
+joint_open_L250_g1_n0,"joint open, L_m 250 m, g 1 m (n = 0 only)",,,,,open,250,1,3000,33,1.439e+04,73.15,69.21,73.15,69.21,-32.1,-26.06,-26.06,-26.06,-26.06,-inf,-inf
+joint_open_L250_g1_n0,"joint open, L_m 250 m, g 1 m (n = 0 only)",,,,,open,250,1,3000,42,2.07e+04,74.34,70.97,74.34,70.97,-28.57,-22.65,-22.65,-22.65,-22.65,-inf,-inf
+joint_open_L250_g1_n0,"joint open, L_m 250 m, g 1 m (n = 0 only)",,,,,open,250,1,3000,51,3.148e+04,75.35,71.94,75.35,71.94,-23.83,-19.05,-19.05,-19.05,-19.05,-inf,-inf
+joint_open_L250_g1_n0,"joint open, L_m 250 m, g 1 m (n = 0 only)",,,,,open,250,1,8000,0,0,67.56,64.14,67.56,64.14,-40.83,-33.58,-33.58,-33.58,-33.58,-inf,-inf
+joint_open_L250_g5,"joint open, L_m 250 m, g 5 m",,,,,open,250,5,3000,0,0,70.42,66.79,86.33,83.75,-22.07,-13.97,-13.97,-17.17,-14.4,86.04,83.58
+joint_open_L250_g5,"joint open, L_m 250 m, g 5 m",,,,,open,250,5,3000,8,3020,69.79,66.09,86.07,83.51,-22.15,-14.08,-14.08,-17.29,-14.51,85.8,83.35
+joint_open_L250_g5,"joint open, L_m 250 m, g 5 m",,,,,open,250,5,3000,16,6188,70.72,67.28,85.48,82.95,-22.23,-14.25,-14.25,-17.3,-14.65,85.16,82.73
+joint_open_L250_g5,"joint open, L_m 250 m, g 5 m",,,,,open,250,5,3000,24,9691,72.89,69.19,84.55,82.01,-22.27,-14.51,-14.51,-17.13,-14.82,84,81.62
+joint_open_L250_g5,"joint open, L_m 250 m, g 5 m",,,,,open,250,5,3000,33,1.439e+04,74.01,70.21,82.96,80.36,-22.28,-14.91,-14.91,-17.03,-15.13,81.97,79.62
+joint_open_L250_g5,"joint open, L_m 250 m, g 5 m",,,,,open,250,5,3000,42,2.07e+04,74.69,71.35,80.77,78.19,-22.14,-15.43,-15.43,-16.95,-15.54,78.81,76.48
+joint_open_L250_g5,"joint open, L_m 250 m, g 5 m",,,,,open,250,5,3000,51,3.148e+04,74.99,71.57,77.12,74.15,-22.06,-16.84,-16.84,-17.53,-16.86,71.3,69.08
+joint_open_L250_g5,"joint open, L_m 250 m, g 5 m",,,,,open,250,5,8000,0,0,71.83,68.2,86.38,83.8,-22.01,-13.92,-13.92,-16.98,-14.34,86.04,83.58
+joint_open_L250_g5_n0,"joint open, L_m 250 m, g 5 m (n = 0 only)",,,,,open,250,5,3000,0,0,70.42,66.79,70.42,66.79,-37.97,-30.93,-30.93,-30.93,-30.93,-inf,-inf
+joint_open_L250_g5_n0,"joint open, L_m 250 m, g 5 m (n = 0 only)",,,,,open,250,5,3000,8,3020,69.79,66.09,69.79,66.09,-38.44,-31.5,-31.5,-31.5,-31.5,-inf,-inf
+joint_open_L250_g5_n0,"joint open, L_m 250 m, g 5 m (n = 0 only)",,,,,open,250,5,3000,16,6188,70.72,67.28,70.72,67.28,-36.98,-29.92,-29.92,-29.92,-29.92,-inf,-inf
+joint_open_L250_g5_n0,"joint open, L_m 250 m, g 5 m (n = 0 only)",,,,,open,250,5,3000,24,9691,72.89,69.19,72.89,69.19,-33.93,-27.34,-27.34,-27.34,-27.34,-inf,-inf
+joint_open_L250_g5_n0,"joint open, L_m 250 m, g 5 m (n = 0 only)",,,,,open,250,5,3000,33,1.439e+04,74.01,70.21,74.01,70.21,-31.23,-25.06,-25.06,-25.06,-25.06,-inf,-inf
+joint_open_L250_g5_n0,"joint open, L_m 250 m, g 5 m (n = 0 only)",,,,,open,250,5,3000,42,2.07e+04,74.69,71.35,74.69,71.35,-28.22,-22.27,-22.27,-22.27,-22.27,-inf,-inf
+joint_open_L250_g5_n0,"joint open, L_m 250 m, g 5 m (n = 0 only)",,,,,open,250,5,3000,51,3.148e+04,74.99,71.57,74.99,71.57,-24.19,-19.42,-19.42,-19.42,-19.42,-inf,-inf
+joint_open_L250_g5_n0,"joint open, L_m 250 m, g 5 m (n = 0 only)",,,,,open,250,5,8000,0,0,71.83,68.2,71.83,68.2,-36.56,-29.52,-29.52,-29.52,-29.52,-inf,-inf
+joint_open_L250_g20,"joint open, L_m 250 m, g 20 m",,,,,open,250,20,3000,0,0,81.45,76.92,93.91,91.17,-14.48,-6.548,-6.548,-8.933,-6.837,93.16,90.87
+joint_open_L250_g20,"joint open, L_m 250 m, g 20 m",,,,,open,250,20,3000,8,3020,81.19,76.66,93.68,90.95,-14.55,-6.64,-6.64,-9.012,-6.922,92.93,90.65
+joint_open_L250_g20,"joint open, L_m 250 m, g 20 m",,,,,open,250,20,3000,16,6188,80.76,76.32,93.04,90.33,-14.66,-6.864,-6.864,-9.172,-7.134,92.29,90.01
+joint_open_L250_g20,"joint open, L_m 250 m, g 20 m",,,,,open,250,20,3000,24,9691,80.28,75.98,91.88,89.29,-14.94,-7.228,-7.228,-9.44,-7.47,91.11,88.94
+joint_open_L250_g20,"joint open, L_m 250 m, g 20 m",,,,,open,250,20,3000,33,1.439e+04,79.17,75.18,89.95,87.49,-15.29,-7.781,-7.781,-9.804,-7.982,89.14,87.06
+joint_open_L250_g20,"joint open, L_m 250 m, g 20 m",,,,,open,250,20,3000,42,2.07e+04,79.13,75.93,87.37,85.11,-15.55,-8.51,-8.51,-10.1,-8.633,86.13,84.21
+joint_open_L250_g20,"joint open, L_m 250 m, g 20 m",,,,,open,250,20,3000,51,3.148e+04,75.11,71.85,82.52,80.46,-16.66,-10.52,-10.52,-11.71,-10.56,80.89,79.35
+joint_open_L250_g20,"joint open, L_m 250 m, g 20 m",,,,,open,250,20,8000,0,0,81.64,77.15,93.92,91.18,-14.47,-6.536,-6.536,-8.901,-6.823,93.16,90.87
+joint_open_L250_g20_n0,"joint open, L_m 250 m, g 20 m (n = 0 only)",,,,,open,250,20,3000,0,0,81.45,76.92,81.45,76.92,-26.94,-20.8,-20.8,-20.8,-20.8,-inf,-inf
+joint_open_L250_g20_n0,"joint open, L_m 250 m, g 20 m (n = 0 only)",,,,,open,250,20,3000,8,3020,81.19,76.66,81.19,76.66,-27.04,-20.94,-20.94,-20.94,-20.94,-inf,-inf
+joint_open_L250_g20_n0,"joint open, L_m 250 m, g 20 m (n = 0 only)",,,,,open,250,20,3000,16,6188,80.76,76.32,80.76,76.32,-26.94,-20.88,-20.88,-20.88,-20.88,-inf,-inf
+joint_open_L250_g20_n0,"joint open, L_m 250 m, g 20 m (n = 0 only)",,,,,open,250,20,3000,24,9691,80.28,75.98,80.28,75.98,-26.55,-20.54,-20.54,-20.54,-20.54,-inf,-inf
+joint_open_L250_g20_n0,"joint open, L_m 250 m, g 20 m (n = 0 only)",,,,,open,250,20,3000,33,1.439e+04,79.17,75.18,79.17,75.18,-26.08,-20.09,-20.09,-20.09,-20.09,-inf,-inf
+joint_open_L250_g20_n0,"joint open, L_m 250 m, g 20 m (n = 0 only)",,,,,open,250,20,3000,42,2.07e+04,79.13,75.93,79.13,75.93,-23.78,-17.68,-17.68,-17.68,-17.68,-inf,-inf
+joint_open_L250_g20_n0,"joint open, L_m 250 m, g 20 m (n = 0 only)",,,,,open,250,20,3000,51,3.148e+04,75.11,71.85,75.11,71.85,-24.07,-19.13,-19.13,-19.13,-19.13,-inf,-inf
+joint_open_L250_g20_n0,"joint open, L_m 250 m, g 20 m (n = 0 only)",,,,,open,250,20,8000,0,0,81.64,77.15,81.64,77.15,-26.75,-20.57,-20.57,-20.57,-20.57,-inf,-inf
+joint_open_L500_g1,"joint open, L_m 500 m, g 1 m",,,,,open,500,1,3000,0,0,61.89,59.23,73.23,69.75,-35.17,-27.97,-27.97,-32.11,-28.7,72.5,68.9
+joint_open_L500_g1,"joint open, L_m 500 m, g 1 m",,,,,open,500,1,3000,8,3020,57.45,55.41,72.6,69.14,-35.63,-28.45,-28.45,-33.41,-29.31,72.23,68.64
+joint_open_L500_g1,"joint open, L_m 500 m, g 1 m",,,,,open,500,1,3000,16,6188,65.39,62.29,72.85,69.45,-34.85,-27.75,-27.75,-30.72,-28.29,71.53,67.91
+joint_open_L500_g1,"joint open, L_m 500 m, g 1 m",,,,,open,500,1,3000,24,9691,71.1,67.16,74.13,70.39,-32.69,-26.13,-26.13,-27.71,-26.34,70.26,66.68
+joint_open_L500_g1,"joint open, L_m 500 m, g 1 m",,,,,open,500,1,3000,33,1.439e+04,73.13,69.19,74.66,70.84,-30.58,-24.42,-24.42,-25.24,-24.52,68.07,64.56
+joint_open_L500_g1,"joint open, L_m 500 m, g 1 m",,,,,open,500,1,3000,42,2.07e+04,74.33,70.95,74.98,71.69,-27.93,-21.92,-21.92,-22.23,-21.95,64.71,61.41
+joint_open_L500_g1,"joint open, L_m 500 m, g 1 m",,,,,open,500,1,3000,51,3.148e+04,75.39,71.95,75.49,72.06,-23.69,-18.92,-18.92,-18.96,-18.92,54.92,51.96
+joint_open_L500_g1,"joint open, L_m 500 m, g 1 m",,,,,open,500,1,8000,0,0,67.5,64.07,74.18,70.6,-34.21,-27.12,-27.12,-30.02,-27.61,72.5,68.9
+joint_open_L500_g1_n0,"joint open, L_m 500 m, g 1 m (n = 0 only)",,,,,open,500,1,3000,0,0,61.89,59.23,61.89,59.23,-46.5,-38.49,-38.49,-38.49,-38.49,-inf,-inf
+joint_open_L500_g1_n0,"joint open, L_m 500 m, g 1 m (n = 0 only)",,,,,open,500,1,3000,8,3020,57.45,55.41,57.45,55.41,-50.78,-42.19,-42.19,-42.19,-42.19,-inf,-inf
+joint_open_L500_g1_n0,"joint open, L_m 500 m, g 1 m (n = 0 only)",,,,,open,500,1,3000,16,6188,65.39,62.29,65.39,62.29,-42.32,-34.91,-34.91,-34.91,-34.91,-inf,-inf
+joint_open_L500_g1_n0,"joint open, L_m 500 m, g 1 m (n = 0 only)",,,,,open,500,1,3000,24,9691,71.1,67.16,71.1,67.16,-35.72,-29.36,-29.36,-29.36,-29.36,-inf,-inf
+joint_open_L500_g1_n0,"joint open, L_m 500 m, g 1 m (n = 0 only)",,,,,open,500,1,3000,33,1.439e+04,73.13,69.19,73.13,69.19,-32.11,-26.07,-26.07,-26.07,-26.07,-inf,-inf
+joint_open_L500_g1_n0,"joint open, L_m 500 m, g 1 m (n = 0 only)",,,,,open,500,1,3000,42,2.07e+04,74.33,70.95,74.33,70.95,-28.58,-22.66,-22.66,-22.66,-22.66,-inf,-inf
+joint_open_L500_g1_n0,"joint open, L_m 500 m, g 1 m (n = 0 only)",,,,,open,500,1,3000,51,3.148e+04,75.39,71.95,75.39,71.95,-23.79,-19.04,-19.04,-19.04,-19.04,-inf,-inf
+joint_open_L500_g1_n0,"joint open, L_m 500 m, g 1 m (n = 0 only)",,,,,open,500,1,8000,0,0,67.5,64.07,67.5,64.07,-40.89,-33.65,-33.65,-33.65,-33.65,-inf,-inf
+joint_open_L500_g5,"joint open, L_m 500 m, g 5 m",,,,,open,500,5,3000,0,0,63.49,61.04,83.02,80.43,-25.38,-17.29,-17.29,-20.98,-17.82,82.88,80.29
+joint_open_L500_g5,"joint open, L_m 500 m, g 5 m",,,,,open,500,5,3000,8,3020,60.78,58.71,82.74,80.17,-25.49,-17.42,-17.42,-21.27,-17.97,82.64,80.06
+joint_open_L500_g5,"joint open, L_m 500 m, g 5 m",,,,,open,500,5,3000,16,6188,66.34,63.44,82.24,79.65,-25.46,-17.55,-17.55,-20.85,-18,81.98,79.42
+joint_open_L500_g5,"joint open, L_m 500 m, g 5 m",,,,,open,500,5,3000,24,9691,71.37,67.52,81.55,78.81,-25.28,-17.71,-17.71,-20.2,-18,80.79,78.27
+joint_open_L500_g5,"joint open, L_m 500 m, g 5 m",,,,,open,500,5,3000,33,1.439e+04,73.27,69.37,80.18,77.38,-25.06,-17.89,-17.89,-19.77,-18.07,78.68,76.17
+joint_open_L500_g5,"joint open, L_m 500 m, g 5 m",,,,,open,500,5,3000,42,2.07e+04,74.4,71.04,78.57,75.74,-24.34,-17.88,-17.88,-19.07,-17.96,75.39,72.98
+joint_open_L500_g5,"joint open, L_m 500 m, g 5 m",,,,,open,500,5,3000,51,3.148e+04,75.26,71.91,76.43,73.3,-22.75,-17.68,-17.68,-18.08,-17.69,67.93,65.56
+joint_open_L500_g5,"joint open, L_m 500 m, g 5 m",,,,,open,500,5,8000,0,0,68.19,64.92,83.19,80.53,-25.2,-17.19,-17.19,-20.45,-17.64,82.88,80.29
+joint_open_L500_g5_n0,"joint open, L_m 500 m, g 5 m (n = 0 only)",,,,,open,500,5,3000,0,0,63.49,61.04,63.49,61.04,-44.91,-36.68,-36.68,-36.68,-36.68,-inf,-inf
+joint_open_L500_g5_n0,"joint open, L_m 500 m, g 5 m (n = 0 only)",,,,,open,500,5,3000,8,3020,60.78,58.71,60.78,58.71,-47.45,-38.88,-38.88,-38.88,-38.88,-inf,-inf
+joint_open_L500_g5_n0,"joint open, L_m 500 m, g 5 m (n = 0 only)",,,,,open,500,5,3000,16,6188,66.34,63.44,66.34,63.44,-41.36,-33.76,-33.76,-33.76,-33.76,-inf,-inf
+joint_open_L500_g5_n0,"joint open, L_m 500 m, g 5 m (n = 0 only)",,,,,open,500,5,3000,24,9691,71.37,67.52,71.37,67.52,-35.45,-29,-29,-29,-29,-inf,-inf
+joint_open_L500_g5_n0,"joint open, L_m 500 m, g 5 m (n = 0 only)",,,,,open,500,5,3000,33,1.439e+04,73.27,69.37,73.27,69.37,-31.97,-25.9,-25.9,-25.9,-25.9,-inf,-inf
+joint_open_L500_g5_n0,"joint open, L_m 500 m, g 5 m (n = 0 only)",,,,,open,500,5,3000,42,2.07e+04,74.4,71.04,74.4,71.04,-28.51,-22.57,-22.57,-22.57,-22.57,-inf,-inf
+joint_open_L500_g5_n0,"joint open, L_m 500 m, g 5 m (n = 0 only)",,,,,open,500,5,3000,51,3.148e+04,75.26,71.91,75.26,71.91,-23.92,-19.08,-19.08,-19.08,-19.08,-inf,-inf
+joint_open_L500_g5_n0,"joint open, L_m 500 m, g 5 m (n = 0 only)",,,,,open,500,5,8000,0,0,68.19,64.92,68.19,64.92,-40.2,-32.8,-32.8,-32.8,-32.8,-inf,-inf
+joint_open_L500_g20,"joint open, L_m 500 m, g 20 m",,,,,open,500,20,3000,0,0,76.55,72.16,90.55,87.94,-17.84,-9.781,-9.781,-12.4,-10.11,90.05,87.72
+joint_open_L500_g20,"joint open, L_m 500 m, g 20 m",,,,,open,500,20,3000,8,3020,76.23,71.8,90.32,87.72,-17.91,-9.875,-9.875,-12.49,-10.2,89.82,87.51
+joint_open_L500_g20,"joint open, L_m 500 m, g 20 m",,,,,open,500,20,3000,16,6188,76.16,72.02,89.69,87.14,-18.01,-10.06,-10.06,-12.6,-10.37,89.17,86.88
+joint_open_L500_g20,"joint open, L_m 500 m, g 20 m",,,,,open,500,20,3000,24,9691,76.4,72.57,88.64,86.16,-18.18,-10.36,-10.36,-12.72,-10.63,88.04,85.82
+joint_open_L500_g20,"joint open, L_m 500 m, g 20 m",,,,,open,500,20,3000,33,1.439e+04,76.25,72.51,86.81,84.42,-18.43,-10.85,-10.85,-12.88,-11.06,86.06,83.94
+joint_open_L500_g20,"joint open, L_m 500 m, g 20 m",,,,,open,500,20,3000,42,2.07e+04,75.63,72.33,84.22,81.92,-18.69,-11.69,-11.69,-13.38,-11.82,83.03,81.03
+joint_open_L500_g20,"joint open, L_m 500 m, g 20 m",,,,,open,500,20,3000,51,3.148e+04,74.58,71.04,80.11,77.78,-19.07,-13.2,-13.2,-14.12,-13.23,77.61,75.92
+joint_open_L500_g20,"joint open, L_m 500 m, g 20 m",,,,,open,500,20,8000,0,0,77,72.73,90.57,87.96,-17.82,-9.76,-9.76,-12.34,-10.09,90.05,87.72
+joint_open_L500_g20_n0,"joint open, L_m 500 m, g 20 m (n = 0 only)",,,,,open,500,20,3000,0,0,76.55,72.16,76.55,72.16,-31.84,-25.56,-25.56,-25.56,-25.56,-inf,-inf
+joint_open_L500_g20_n0,"joint open, L_m 500 m, g 20 m (n = 0 only)",,,,,open,500,20,3000,8,3020,76.23,71.8,76.23,71.8,-32,-25.8,-25.8,-25.8,-25.8,-inf,-inf
+joint_open_L500_g20_n0,"joint open, L_m 500 m, g 20 m (n = 0 only)",,,,,open,500,20,3000,16,6188,76.16,72.02,76.16,72.02,-31.55,-25.18,-25.18,-25.18,-25.18,-inf,-inf
+joint_open_L500_g20_n0,"joint open, L_m 500 m, g 20 m (n = 0 only)",,,,,open,500,20,3000,24,9691,76.4,72.57,76.4,72.57,-30.42,-23.95,-23.95,-23.95,-23.95,-inf,-inf
+joint_open_L500_g20_n0,"joint open, L_m 500 m, g 20 m (n = 0 only)",,,,,open,500,20,3000,33,1.439e+04,76.25,72.51,76.25,72.51,-28.99,-22.75,-22.75,-22.75,-22.75,-inf,-inf
+joint_open_L500_g20_n0,"joint open, L_m 500 m, g 20 m (n = 0 only)",,,,,open,500,20,3000,42,2.07e+04,75.63,72.33,75.63,72.33,-27.28,-21.29,-21.29,-21.29,-21.29,-inf,-inf
+joint_open_L500_g20_n0,"joint open, L_m 500 m, g 20 m (n = 0 only)",,,,,open,500,20,3000,51,3.148e+04,74.58,71.04,74.58,71.04,-24.6,-19.94,-19.94,-19.94,-19.94,-inf,-inf
+joint_open_L500_g20_n0,"joint open, L_m 500 m, g 20 m (n = 0 only)",,,,,open,500,20,8000,0,0,77,72.73,77,72.73,-31.4,-24.99,-24.99,-24.99,-24.99,-inf,-inf
+joint_membranes_L250_g1,"joint membranes, L_m 250 m, g 1 m",,,,,membranes,250,1,3000,0,0,61.82,59.17,62.46,59.88,-45.93,-37.84,-37.84,-38.02,-37.85,49.01,46.93
+joint_membranes_L250_g1,"joint membranes, L_m 250 m, g 1 m",,,,,membranes,250,1,3000,8,3020,57.42,55.36,58.37,56.27,-49.86,-41.33,-41.33,-41.65,-41.36,48.02,45.15
+joint_membranes_L250_g1,"joint membranes, L_m 250 m, g 1 m",,,,,membranes,250,1,3000,16,6188,65.34,62.25,65.51,62.44,-42.2,-34.76,-34.76,-34.81,-34.77,46.63,42.58
+joint_membranes_L250_g1,"joint membranes, L_m 250 m, g 1 m",,,,,membranes,250,1,3000,24,9691,71.07,67.13,71.12,67.2,-35.7,-29.32,-29.32,-29.34,-29.32,45.41,42.26
+joint_membranes_L250_g1,"joint membranes, L_m 250 m, g 1 m",,,,,membranes,250,1,3000,33,1.439e+04,73.14,69.2,73.16,69.23,-32.08,-26.04,-26.04,-26.04,-26.04,40.56,37.01
+joint_membranes_L250_g1,"joint membranes, L_m 250 m, g 1 m",,,,,membranes,250,1,3000,42,2.07e+04,74.48,71.11,74.49,71.12,-28.43,-22.49,-22.49,-22.49,-22.49,37.52,34.15
+joint_membranes_L250_g1,"joint membranes, L_m 250 m, g 1 m",,,,,membranes,250,1,3000,51,3.148e+04,75.43,71.93,75.43,71.94,-23.75,-19.05,-19.05,-19.05,-19.05,27.95,24.06
+joint_membranes_L250_g1,"joint membranes, L_m 250 m, g 1 m",,,,,membranes,250,1,8000,0,0,67.47,64.03,67.71,64.35,-40.68,-33.37,-33.37,-33.5,-33.37,49.01,46.93
+joint_membranes_L250_g1_n0,"joint membranes, L_m 250 m, g 1 m (n = 0 only)",,,,,membranes,250,1,3000,0,0,61.82,59.17,61.82,59.17,-46.57,-38.56,-38.56,-38.56,-38.56,-inf,-inf
+joint_membranes_L250_g1_n0,"joint membranes, L_m 250 m, g 1 m (n = 0 only)",,,,,membranes,250,1,3000,8,3020,57.42,55.36,57.42,55.36,-50.81,-42.24,-42.24,-42.24,-42.24,-inf,-inf
+joint_membranes_L250_g1_n0,"joint membranes, L_m 250 m, g 1 m (n = 0 only)",,,,,membranes,250,1,3000,16,6188,65.34,62.25,65.34,62.25,-42.36,-34.95,-34.95,-34.95,-34.95,-inf,-inf
+joint_membranes_L250_g1_n0,"joint membranes, L_m 250 m, g 1 m (n = 0 only)",,,,,membranes,250,1,3000,24,9691,71.07,67.13,71.07,67.13,-35.75,-29.39,-29.39,-29.39,-29.39,-inf,-inf
+joint_membranes_L250_g1_n0,"joint membranes, L_m 250 m, g 1 m (n = 0 only)",,,,,membranes,250,1,3000,33,1.439e+04,73.14,69.2,73.14,69.2,-32.1,-26.07,-26.07,-26.07,-26.07,-inf,-inf
+joint_membranes_L250_g1_n0,"joint membranes, L_m 250 m, g 1 m (n = 0 only)",,,,,membranes,250,1,3000,42,2.07e+04,74.48,71.11,74.48,71.11,-28.44,-22.51,-22.51,-22.51,-22.51,-inf,-inf
+joint_membranes_L250_g1_n0,"joint membranes, L_m 250 m, g 1 m (n = 0 only)",,,,,membranes,250,1,3000,51,3.148e+04,75.43,71.93,75.43,71.93,-23.75,-19.05,-19.05,-19.05,-19.05,-inf,-inf
+joint_membranes_L250_g1_n0,"joint membranes, L_m 250 m, g 1 m (n = 0 only)",,,,,membranes,250,1,8000,0,0,67.47,64.03,67.47,64.03,-40.92,-33.69,-33.69,-33.69,-33.69,-inf,-inf
+joint_membranes_L250_g5,"joint membranes, L_m 250 m, g 5 m",,,,,membranes,250,5,3000,0,0,61.75,59.19,66.09,64.07,-42.3,-33.65,-33.65,-34.15,-33.65,61.89,60.32
+joint_membranes_L250_g5,"joint membranes, L_m 250 m, g 5 m",,,,,membranes,250,5,3000,8,3020,57.73,55.66,62.94,60.99,-45.29,-36.6,-36.6,-37.52,-36.67,60.25,58.26
+joint_membranes_L250_g5,"joint membranes, L_m 250 m, g 5 m",,,,,membranes,250,5,3000,16,6188,65.35,62.31,66.96,64.2,-40.74,-32.99,-32.99,-33.29,-33.01,59.27,56.85
+joint_membranes_L250_g5,"joint membranes, L_m 250 m, g 5 m",,,,,membranes,250,5,3000,24,9691,71.01,67.08,71.64,67.92,-35.18,-28.6,-28.6,-28.7,-28.6,58.54,56.49
+joint_membranes_L250_g5,"joint membranes, L_m 250 m, g 5 m",,,,,membranes,250,5,3000,33,1.439e+04,73.21,69.36,73.51,69.79,-31.73,-25.48,-25.48,-25.5,-25.48,55.42,53.22
+joint_membranes_L250_g5,"joint membranes, L_m 250 m, g 5 m",,,,,membranes,250,5,3000,42,2.07e+04,75.03,71.64,75.2,71.86,-27.71,-21.76,-21.76,-21.77,-21.76,53.06,50.8
+joint_membranes_L250_g5,"joint membranes, L_m 250 m, g 5 m",,,,,membranes,250,5,3000,51,3.148e+04,75.3,71.93,75.35,71.98,-23.84,-19,-19,-19.01,-19,45.03,42.64
+joint_membranes_L250_g5,"joint membranes, L_m 250 m, g 5 m",,,,,membranes,250,5,8000,0,0,67.44,64.02,69.61,66.68,-38.78,-31.04,-31.04,-31.45,-31.04,61.89,60.32
+joint_membranes_L250_g5_n0,"joint membranes, L_m 250 m, g 5 m (n = 0 only)",,,,,membranes,250,5,3000,0,0,61.75,59.19,61.75,59.19,-46.64,-38.53,-38.53,-38.53,-38.53,-inf,-inf
+joint_membranes_L250_g5_n0,"joint membranes, L_m 250 m, g 5 m (n = 0 only)",,,,,membranes,250,5,3000,8,3020,57.73,55.66,57.73,55.66,-50.5,-41.93,-41.93,-41.93,-41.93,-inf,-inf
+joint_membranes_L250_g5_n0,"joint membranes, L_m 250 m, g 5 m (n = 0 only)",,,,,membranes,250,5,3000,16,6188,65.35,62.31,65.35,62.31,-42.36,-34.89,-34.89,-34.89,-34.89,-inf,-inf
+joint_membranes_L250_g5_n0,"joint membranes, L_m 250 m, g 5 m (n = 0 only)",,,,,membranes,250,5,3000,24,9691,71.01,67.08,71.01,67.08,-35.81,-29.44,-29.44,-29.44,-29.44,-inf,-inf
+joint_membranes_L250_g5_n0,"joint membranes, L_m 250 m, g 5 m (n = 0 only)",,,,,membranes,250,5,3000,33,1.439e+04,73.21,69.36,73.21,69.36,-32.04,-25.91,-25.91,-25.91,-25.91,-inf,-inf
+joint_membranes_L250_g5_n0,"joint membranes, L_m 250 m, g 5 m (n = 0 only)",,,,,membranes,250,5,3000,42,2.07e+04,75.03,71.64,75.03,71.64,-27.88,-21.98,-21.98,-21.98,-21.98,-inf,-inf
+joint_membranes_L250_g5_n0,"joint membranes, L_m 250 m, g 5 m (n = 0 only)",,,,,membranes,250,5,3000,51,3.148e+04,75.3,71.93,75.3,71.93,-23.88,-19.06,-19.06,-19.06,-19.06,-inf,-inf
+joint_membranes_L250_g5_n0,"joint membranes, L_m 250 m, g 5 m (n = 0 only)",,,,,membranes,250,5,8000,0,0,67.44,64.02,67.44,64.02,-40.95,-33.7,-33.7,-33.7,-33.7,-inf,-inf
+joint_membranes_L250_g20,"joint membranes, L_m 250 m, g 20 m",,,,,membranes,250,20,3000,0,0,63.35,61.19,72.06,70.63,-36.33,-27.1,-27.1,-27.74,-27.1,70.33,69.12
+joint_membranes_L250_g20,"joint membranes, L_m 250 m, g 20 m",,,,,membranes,250,20,3000,8,3020,60.44,58.56,69.62,68.12,-38.61,-29.47,-29.47,-30.45,-29.52,68.44,66.93
+joint_membranes_L250_g20,"joint membranes, L_m 250 m, g 20 m",,,,,membranes,250,20,3000,16,6188,66.32,63.47,71.1,68.87,-36.61,-28.33,-28.33,-29.04,-28.36,67.9,66.01
+joint_membranes_L250_g20,"joint membranes, L_m 250 m, g 20 m",,,,,membranes,250,20,3000,24,9691,71.17,67.35,73.62,70.64,-33.2,-25.89,-25.89,-26.14,-25.89,67.14,65.47
+joint_membranes_L250_g20,"joint membranes, L_m 250 m, g 20 m",,,,,membranes,250,20,3000,33,1.439e+04,74.02,70.3,75.31,72.03,-29.93,-23.24,-23.24,-23.34,-23.25,64.48,62.81
+joint_membranes_L250_g20,"joint membranes, L_m 250 m, g 20 m",,,,,membranes,250,20,3000,42,2.07e+04,77.08,73.26,77.67,74.06,-25.24,-19.56,-19.56,-19.61,-19.56,62.22,60.64
+joint_membranes_L250_g20,"joint membranes, L_m 250 m, g 20 m",,,,,membranes,250,20,3000,51,3.148e+04,75.99,72.72,76.26,73.07,-22.92,-17.91,-17.91,-17.93,-17.91,56.27,54.82
+joint_membranes_L250_g20,"joint membranes, L_m 250 m, g 20 m",,,,,membranes,250,20,8000,0,0,67.93,64.85,73.73,71.73,-34.66,-25.99,-25.99,-26.49,-25.99,70.33,69.12
+joint_membranes_L250_g20_n0,"joint membranes, L_m 250 m, g 20 m (n = 0 only)",,,,,membranes,250,20,3000,0,0,63.35,61.19,63.35,61.19,-45.05,-36.54,-36.54,-36.54,-36.54,-inf,-inf
+joint_membranes_L250_g20_n0,"joint membranes, L_m 250 m, g 20 m (n = 0 only)",,,,,membranes,250,20,3000,8,3020,60.44,58.56,60.44,58.56,-47.79,-39.04,-39.04,-39.04,-39.04,-inf,-inf
+joint_membranes_L250_g20_n0,"joint membranes, L_m 250 m, g 20 m (n = 0 only)",,,,,membranes,250,20,3000,16,6188,66.32,63.47,66.32,63.47,-41.38,-33.73,-33.73,-33.73,-33.73,-inf,-inf
+joint_membranes_L250_g20_n0,"joint membranes, L_m 250 m, g 20 m (n = 0 only)",,,,,membranes,250,20,3000,24,9691,71.17,67.35,71.17,67.35,-35.66,-29.17,-29.17,-29.17,-29.17,-inf,-inf
+joint_membranes_L250_g20_n0,"joint membranes, L_m 250 m, g 20 m (n = 0 only)",,,,,membranes,250,20,3000,33,1.439e+04,74.02,70.3,74.02,70.3,-31.22,-24.97,-24.97,-24.97,-24.97,-inf,-inf
+joint_membranes_L250_g20_n0,"joint membranes, L_m 250 m, g 20 m (n = 0 only)",,,,,membranes,250,20,3000,42,2.07e+04,77.08,73.26,77.08,73.26,-25.84,-20.35,-20.35,-20.35,-20.35,-inf,-inf
+joint_membranes_L250_g20_n0,"joint membranes, L_m 250 m, g 20 m (n = 0 only)",,,,,membranes,250,20,3000,51,3.148e+04,75.99,72.72,75.99,72.72,-23.19,-18.27,-18.27,-18.27,-18.27,-inf,-inf
+joint_membranes_L250_g20_n0,"joint membranes, L_m 250 m, g 20 m (n = 0 only)",,,,,membranes,250,20,8000,0,0,67.93,64.85,67.93,64.85,-40.46,-32.87,-32.87,-32.87,-32.87,-inf,-inf
+joint_membranes_L500_g1,"joint membranes, L_m 500 m, g 1 m",,,,,membranes,500,1,3000,0,0,61.84,59.18,62.18,59.56,-46.21,-38.17,-38.17,-38.29,-38.17,44.94,42.83
+joint_membranes_L500_g1,"joint membranes, L_m 500 m, g 1 m",,,,,membranes,500,1,3000,8,3020,57.39,55.33,57.9,55.82,-50.33,-41.78,-41.78,-41.95,-41.79,43.85,40.64
+joint_membranes_L500_g1,"joint membranes, L_m 500 m, g 1 m",,,,,membranes,500,1,3000,16,6188,65.35,62.25,65.43,62.34,-42.27,-34.85,-34.85,-34.88,-34.86,42.37,37.89
+joint_membranes_L500_g1,"joint membranes, L_m 500 m, g 1 m",,,,,membranes,500,1,3000,24,9691,71.08,67.14,71.11,67.17,-35.72,-29.35,-29.35,-29.35,-29.35,40.94,37.75
+joint_membranes_L500_g1,"joint membranes, L_m 500 m, g 1 m",,,,,membranes,500,1,3000,33,1.439e+04,73.14,69.19,73.15,69.21,-32.1,-26.06,-26.06,-26.06,-26.06,35.43,31.84
+joint_membranes_L500_g1,"joint membranes, L_m 500 m, g 1 m",,,,,membranes,500,1,3000,42,2.07e+04,74.4,71.03,74.4,71.03,-28.51,-22.58,-22.58,-22.58,-22.58,32.27,28.67
+joint_membranes_L500_g1,"joint membranes, L_m 500 m, g 1 m",,,,,membranes,500,1,3000,51,3.148e+04,75.47,71.94,75.47,71.95,-23.71,-19.04,-19.04,-19.04,-19.04,21.66,17.64
+joint_membranes_L500_g1,"joint membranes, L_m 500 m, g 1 m",,,,,membranes,500,1,8000,0,0,67.48,64.04,67.6,64.2,-40.79,-33.52,-33.52,-33.59,-33.52,44.94,42.83
+joint_membranes_L500_g1_n0,"joint membranes, L_m 500 m, g 1 m (n = 0 only)",,,,,membranes,500,1,3000,0,0,61.84,59.18,61.84,59.18,-46.55,-38.54,-38.54,-38.54,-38.54,-inf,-inf
+joint_membranes_L500_g1_n0,"joint membranes, L_m 500 m, g 1 m (n = 0 only)",,,,,membranes,500,1,3000,8,3020,57.39,55.33,57.39,55.33,-50.84,-42.26,-42.26,-42.26,-42.26,-inf,-inf
+joint_membranes_L500_g1_n0,"joint membranes, L_m 500 m, g 1 m (n = 0 only)",,,,,membranes,500,1,3000,16,6188,65.35,62.25,65.35,62.25,-42.36,-34.95,-34.95,-34.95,-34.95,-inf,-inf
+joint_membranes_L500_g1_n0,"joint membranes, L_m 500 m, g 1 m (n = 0 only)",,,,,membranes,500,1,3000,24,9691,71.08,67.14,71.08,67.14,-35.74,-29.38,-29.38,-29.38,-29.38,-inf,-inf
+joint_membranes_L500_g1_n0,"joint membranes, L_m 500 m, g 1 m (n = 0 only)",,,,,membranes,500,1,3000,33,1.439e+04,73.14,69.19,73.14,69.19,-32.11,-26.07,-26.07,-26.07,-26.07,-inf,-inf
+joint_membranes_L500_g1_n0,"joint membranes, L_m 500 m, g 1 m (n = 0 only)",,,,,membranes,500,1,3000,42,2.07e+04,74.4,71.03,74.4,71.03,-28.52,-22.59,-22.59,-22.59,-22.59,-inf,-inf
+joint_membranes_L500_g1_n0,"joint membranes, L_m 500 m, g 1 m (n = 0 only)",,,,,membranes,500,1,3000,51,3.148e+04,75.47,71.94,75.47,71.94,-23.71,-19.04,-19.04,-19.04,-19.04,-inf,-inf
+joint_membranes_L500_g1_n0,"joint membranes, L_m 500 m, g 1 m (n = 0 only)",,,,,membranes,500,1,8000,0,0,67.48,64.04,67.48,64.04,-40.91,-33.68,-33.68,-33.68,-33.68,-inf,-inf
+joint_membranes_L500_g5,"joint membranes, L_m 500 m, g 5 m",,,,,membranes,500,5,3000,0,0,61.79,59.14,64.51,62.22,-43.88,-35.5,-35.5,-35.87,-35.5,58.14,56.44
+joint_membranes_L500_g5,"joint membranes, L_m 500 m, g 5 m",,,,,membranes,500,5,3000,8,3020,57.51,55.45,60.88,58.9,-47.34,-38.7,-38.7,-39.35,-38.75,56.58,54.44
+joint_membranes_L500_g5,"joint membranes, L_m 500 m, g 5 m",,,,,membranes,500,5,3000,16,6188,65.34,62.26,66.26,63.34,-41.45,-33.86,-33.86,-34.02,-33.87,55.64,53.02
+joint_membranes_L500_g5,"joint membranes, L_m 500 m, g 5 m",,,,,membranes,500,5,3000,24,9691,71.05,67.11,71.37,67.54,-35.45,-28.98,-28.98,-29.03,-28.98,54.87,52.69
+joint_membranes_L500_g5,"joint membranes, L_m 500 m, g 5 m",,,,,membranes,500,5,3000,33,1.439e+04,73.16,69.21,73.32,69.43,-31.92,-25.84,-25.84,-25.86,-25.84,51.47,49.07
+joint_membranes_L500_g5,"joint membranes, L_m 500 m, g 5 m",,,,,membranes,500,5,3000,42,2.07e+04,74.7,71.34,74.79,71.46,-28.12,-22.16,-22.16,-22.16,-22.16,48.83,46.35
+joint_membranes_L500_g5,"joint membranes, L_m 500 m, g 5 m",,,,,membranes,500,5,3000,51,3.148e+04,75.35,71.92,75.37,71.95,-23.81,-19.03,-19.03,-19.04,-19.03,40.23,37.61
+joint_membranes_L500_g5,"joint membranes, L_m 500 m, g 5 m",,,,,membranes,500,5,8000,0,0,67.45,64.02,68.7,65.58,-39.69,-32.14,-32.14,-32.53,-32.14,58.14,56.44
+joint_membranes_L500_g5_n0,"joint membranes, L_m 500 m, g 5 m (n = 0 only)",,,,,membranes,500,5,3000,0,0,61.79,59.14,61.79,59.14,-46.6,-38.58,-38.58,-38.58,-38.58,-inf,-inf
+joint_membranes_L500_g5_n0,"joint membranes, L_m 500 m, g 5 m (n = 0 only)",,,,,membranes,500,5,3000,8,3020,57.51,55.45,57.51,55.45,-50.72,-42.14,-42.14,-42.14,-42.14,-inf,-inf
+joint_membranes_L500_g5_n0,"joint membranes, L_m 500 m, g 5 m (n = 0 only)",,,,,membranes,500,5,3000,16,6188,65.34,62.26,65.34,62.26,-42.36,-34.94,-34.94,-34.94,-34.94,-inf,-inf
+joint_membranes_L500_g5_n0,"joint membranes, L_m 500 m, g 5 m (n = 0 only)",,,,,membranes,500,5,3000,24,9691,71.05,67.11,71.05,67.11,-35.78,-29.41,-29.41,-29.41,-29.41,-inf,-inf
+joint_membranes_L500_g5_n0,"joint membranes, L_m 500 m, g 5 m (n = 0 only)",,,,,membranes,500,5,3000,33,1.439e+04,73.16,69.21,73.16,69.21,-32.08,-26.06,-26.06,-26.06,-26.06,-inf,-inf
+joint_membranes_L500_g5_n0,"joint membranes, L_m 500 m, g 5 m (n = 0 only)",,,,,membranes,500,5,3000,42,2.07e+04,74.7,71.34,74.7,71.34,-28.22,-22.28,-22.28,-22.28,-22.28,-inf,-inf
+joint_membranes_L500_g5_n0,"joint membranes, L_m 500 m, g 5 m (n = 0 only)",,,,,membranes,500,5,3000,51,3.148e+04,75.35,71.92,75.35,71.92,-23.83,-19.06,-19.06,-19.06,-19.06,-inf,-inf
+joint_membranes_L500_g5_n0,"joint membranes, L_m 500 m, g 5 m (n = 0 only)",,,,,membranes,500,5,8000,0,0,67.45,64.02,67.45,64.02,-40.94,-33.7,-33.7,-33.7,-33.7,-inf,-inf
+joint_membranes_L500_g20,"joint membranes, L_m 500 m, g 20 m",,,,,membranes,500,20,3000,0,0,62,59.56,69.14,67.5,-39.26,-30.22,-30.22,-30.82,-30.22,66.71,65.44
+joint_membranes_L500_g20,"joint membranes, L_m 500 m, g 20 m",,,,,membranes,500,20,3000,8,3020,58.35,56.3,66.24,64.64,-41.99,-32.95,-32.95,-33.86,-33.01,64.77,63.16
+joint_membranes_L500_g20,"joint membranes, L_m 500 m, g 20 m",,,,,membranes,500,20,3000,16,6188,65.5,62.52,68.9,66.49,-38.81,-30.71,-30.71,-31.2,-30.73,64.3,62.27
+joint_membranes_L500_g20,"joint membranes, L_m 500 m, g 20 m",,,,,membranes,500,20,3000,24,9691,70.98,67.06,72.5,69.07,-34.32,-27.45,-27.45,-27.62,-27.45,63.58,61.8
+joint_membranes_L500_g20,"joint membranes, L_m 500 m, g 20 m",,,,,membranes,500,20,3000,33,1.439e+04,73.52,69.77,74.35,70.83,-30.89,-24.43,-24.43,-24.48,-24.44,60.71,58.89
+joint_membranes_L500_g20,"joint membranes, L_m 500 m, g 20 m",,,,,membranes,500,20,3000,42,2.07e+04,75.62,72.11,76.04,72.67,-26.87,-20.95,-20.95,-20.97,-20.95,58.42,56.69
+joint_membranes_L500_g20,"joint membranes, L_m 500 m, g 20 m",,,,,membranes,500,20,3000,51,3.148e+04,75.29,71.98,75.46,72.21,-23.72,-18.77,-18.77,-18.78,-18.77,52.4,50.8
+joint_membranes_L500_g20,"joint membranes, L_m 500 m, g 20 m",,,,,membranes,500,20,8000,0,0,67.47,64.09,71.59,69.14,-36.8,-28.58,-28.58,-28.99,-28.58,66.71,65.44
+joint_membranes_L500_g20_n0,"joint membranes, L_m 500 m, g 20 m (n = 0 only)",,,,,membranes,500,20,3000,0,0,62,59.56,62,59.56,-46.39,-38.16,-38.16,-38.16,-38.16,-inf,-inf
+joint_membranes_L500_g20_n0,"joint membranes, L_m 500 m, g 20 m (n = 0 only)",,,,,membranes,500,20,3000,8,3020,58.35,56.3,58.35,56.3,-49.88,-41.29,-41.29,-41.29,-41.29,-inf,-inf
+joint_membranes_L500_g20_n0,"joint membranes, L_m 500 m, g 20 m (n = 0 only)",,,,,membranes,500,20,3000,16,6188,65.5,62.52,65.5,62.52,-42.21,-34.68,-34.68,-34.68,-34.68,-inf,-inf
+joint_membranes_L500_g20_n0,"joint membranes, L_m 500 m, g 20 m (n = 0 only)",,,,,membranes,500,20,3000,24,9691,70.98,67.06,70.98,67.06,-35.85,-29.46,-29.46,-29.46,-29.46,-inf,-inf
+joint_membranes_L500_g20_n0,"joint membranes, L_m 500 m, g 20 m (n = 0 only)",,,,,membranes,500,20,3000,33,1.439e+04,73.52,69.77,73.52,69.77,-31.72,-25.5,-25.5,-25.5,-25.5,-inf,-inf
+joint_membranes_L500_g20_n0,"joint membranes, L_m 500 m, g 20 m (n = 0 only)",,,,,membranes,500,20,3000,42,2.07e+04,75.62,72.11,75.62,72.11,-27.3,-21.51,-21.51,-21.51,-21.51,-inf,-inf
+joint_membranes_L500_g20_n0,"joint membranes, L_m 500 m, g 20 m (n = 0 only)",,,,,membranes,500,20,3000,51,3.148e+04,75.29,71.98,75.29,71.98,-23.89,-19,-19,-19,-19,-inf,-inf
+joint_membranes_L500_g20_n0,"joint membranes, L_m 500 m, g 20 m (n = 0 only)",,,,,membranes,500,20,8000,0,0,67.47,64.09,67.47,64.09,-40.92,-33.63,-33.63,-33.63,-33.63,-inf,-inf

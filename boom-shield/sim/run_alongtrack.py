@@ -58,6 +58,7 @@ import run_3d as R3  # noqa: E402  (read-only use: configs, cache, crop, constan
 from boomsim import alongtrack as AT  # noqa: E402
 from boomsim import crossplane as cp  # noqa: E402
 from boomsim import propagate as PR  # noqa: E402
+from boomsim import loudness as LD  # noqa: E402
 from boomsim.proxy import scored_metrics  # noqa: E402
 
 RESULTS = os.path.join(HERE, "results")
@@ -763,6 +764,24 @@ def report():
             print(f"| {kind}, L {L:g}, g {g:g} | {s['ut3']:.1f} / {s['ut8']:.1f} | {s['mx']:.1f} ({s['y_mx'] / 1e3:.1f} km) | "
                   f"{s0['ut8']:.1f} / {s0['mx']:.1f} | {s['mx100']:.1f} |")
 
+    # ---- Delta profiles at fixed azimuths (R_m 3 km; phi 0 also at R_m 8 km)
+    prof_phi = [0.0, 12.0, 24.0, 33.0, 39.0, 45.0, 51.0, 54.0]
+    print("\n## Delta PLdB profiles (headline), R_m 3 km; first column R_m 8 km")
+    yref = {r["phi_deg"]: r["y_g_m"] for r in by.get(("sharp", 3000.0), [])}
+    print("| case | 0 (R 8 km) | " + " | ".join(f"{yref.get(p, np.nan) / 1e3:.1f} km" for p in prof_phi) + " |")
+    print("|---|---|" + "---|" * len(prof_phi))
+    profiles = {}
+    for key in order + [f"joint_{k}_L{L:g}_g{g:g}" + sfx for k in JOINT_KINDS for (L, g) in JOINT_LG for sfx in ("", "_n0")]:
+        r3 = {r["phi_deg"]: r for r in by.get((key, 3000.0), [])}
+        r8 = {r["phi_deg"]: r for r in by.get((key, 8000.0), [])}
+        if not r3:
+            continue
+        vals = [r8[0.0]["d_headline"] if 0.0 in r8 else np.nan] + \
+               [r3[p]["d_headline"] if p in r3 else np.nan for p in prof_phi]
+        profiles[key] = vals
+        lab = r3[next(iter(r3))]["label"]
+        print(f"| {lab} | " + " | ".join("" if np.isnan(v) else f"{v:.1f}" for v in vals) + " |")
+
     # ---- scattered-only maxima (incl. beyond the carpet edge)
     print("\n## Scattered orders alone (x-averaged), max PL over |y| <= 60 km, and where")
     print("| case | max PLdB raw / proxy (y) | beyond carpet edge |y| > %.1f km: max raw |" % (ycut / 1e3))
@@ -797,7 +816,7 @@ def report():
     if v is not None:
         print_validation(v)
     figures(cases, jsc, rows_csv, so_tab, ycut, v)
-    save("report_tables.pkl", dict(table=table, budget=budget_rows, resteep=resteep, hf=hf, jx=jx))
+    save("report_tables.pkl", dict(table=table, budget=budget_rows, resteep=resteep, hf=hf, jx=jx, profiles=profiles))
     return table
 
 
@@ -876,10 +895,17 @@ def resteep_table(cases, jsc, spec, ref):
         for y in ys:
             Ef = E_at(E, y)
             eb = AT.band_energies_esd(F_S, 2 * Ef)
-            ib = int(np.argmax(eb * fc ** 1.0))          # loudness-weighted dominant band (approx.)
-            if best is None or eb[ib] > best[2]:
-                best = (y, ib, eb[ib])
-        y, ib, e = best
+            with np.errstate(divide="ignore"):
+                Lb = 10.0 * np.log10(eb / (LD.T_EAR * LD.P_REF ** 2)) - 3.0
+            St, S = LD._total_sones(LD._equivalent_level(Lb))
+            if St <= 0:
+                continue
+            ib = int(np.argmax(S))                        # band with the most sones
+            if best is None or St > best[3]:
+                best = (y, ib, eb[ib], St)
+        if best is None:
+            continue
+        y, ib, e, _ = best
         m = (F_S >= LD_lo(ib)) & (F_S < LD_hi(ib))
         wgt = d["ap_ground"][m]
         if wgt.sum() <= 0:
@@ -892,10 +918,57 @@ def resteep_table(cases, jsc, spec, ref):
         except Exception as exc:   # noqa: BLE001
             S = float("nan")
             print("   resteep failed:", exc)
-        out.append(dict(case=key, y=y, band=fc[ib], p_eq=p_eq / AT.REFLECTION, Sigma=S))
+        out.append(dict(case=key, y=y, band=fc[ib], p_eq=p_eq / AT.REFLECTION, Sigma=S, sx=sx, sy=abs(sy)))
         print(f"| {case_label(key[0], key[1], key[2])} | {y / 1e3:.0f} km | {fc[ib]:.0f} Hz | "
               f"{p_eq / AT.REFLECTION:.3f} | {S:.3f} |")
     return out
+
+
+def _burst_job(r):
+    """Tone burst (dominant band frequency, 6 cycles, Hann) with the conservative ground
+    amplitude, scaled back linearly to 1 km below the shield along the order's ray
+    (RayPath with the order's trace speed 1/s_x and lateral slowness s_y), then propagated
+    to the ground with propagate.propagate, nonlinear vs linear (both with absorption)."""
+    from boomsim.atmosphere import std_atm
+    from boomsim.propagate import RayPath, propagate
+    cfg = base_cfg()
+    z_src = cfg.aircraft.altitude + cfg.z_mid
+    z0 = z_src - 1000.0
+    V = 1.0 / max(r["sx"], 1e-12)
+    ca = float(std_atm(np.array([z_src])).c[0])
+    cmu = math.sqrt(1 - (ca / V) ** 2)
+    phi = math.asin(min(r["sy"] * ca / cmu, 0.999999))
+    ray = RayPath(z_src, V, phi=phi, allow_cutoff=True)
+    fb = r["band"]
+    fs = 50e3
+    n_cyc = 6
+    t = np.arange(-0.2, n_cyc / fb + 0.4, 1 / fs)
+    win = np.where((t >= 0) & (t <= n_cyc / fb), np.sin(np.pi * t * fb / n_cyc) ** 2, 0.0)
+    amp0 = r["p_eq"] / float(ray.amplitude_ratio(z0, 0.0))     # free-field amplitude at z0
+    p = amp0 * win * np.sin(2 * np.pi * fb * t)
+    out = {}
+    for lin in (True, False):
+        tg, pg = propagate(t, p, ray, z0, 0.0, linear=lin)
+        m = scored_metrics(tg, AT.REFLECTION * pg)
+        out["lin" if lin else "nl"] = (m["pldb"], m["pldb_proxy"], float(np.max(np.abs(pg))) * AT.REFLECTION)
+    return dict(r, **out)
+
+
+def resteep_burgers(procs=PROCS):
+    d = load("resteep_burgers.pkl")
+    if d is not None:
+        return d
+    rt = load("report_tables.pkl")["resteep"]
+    rows = [r for r in rt if r["Sigma"] > 0.3]
+    with pool(procs) as pl:
+        d = pl.map(_burst_job, rows)
+    save("resteep_burgers.pkl", d)
+    print("\n| case | band | ground amplitude lin / nonlin [Pa] | PLdB lin / nonlin (raw) |")
+    print("|---|---|---|---|")
+    for r in d:
+        print(f"| {case_label(r['case'][0], r['case'][1], r['case'][2])} | {r['band']:.0f} Hz | "
+              f"{r['lin'][2]:.2f} / {r['nl'][2]:.2f} | {r['lin'][0]:.1f} / {r['nl'][0]:.1f} |")
+    return d
 
 
 def LD_lo(i):
@@ -979,7 +1052,7 @@ def figures(cases, jsc, rows_csv, so_tab, ycut, v):
         ax.set_xlabel("ground lateral offset y_g [km]")
         _style(ax)
     axs[0].set_ylabel("Delta PLdB vs unshielded (headline)")
-    axs[0].legend(frameon=False, fontsize=8, loc="lower right")
+    axs[0].legend(frameon=False, fontsize=8, loc="upper left", bbox_to_anchor=(0.0, 0.93))
     ax = axs[2]
     y, d = curve("sharp")
     ax.plot(y, np.maximum(d, -60), color=INK2, lw=1.6, label="no joints (sharp edge)")
@@ -1020,7 +1093,8 @@ def figures(cases, jsc, rows_csv, so_tab, ycut, v):
     ax.set_ylabel("fraction of n != 0 aperture energy reaching the ground")
     ax.set_title("Sawtooth: scattered orders that reach the ground\n(dotted: first order can reach the ground, f = 1/(Lambda(1/V + 1/c_g)))",
                  loc="left", fontsize=9)
-    ax.legend(frameon=False, fontsize=8)
+    ax.set_ylim(0, 0.62)
+    ax.legend(frameon=False, fontsize=8, ncol=3, loc="upper left")
     _style(ax)
     ax = axs[1]
     k = 0
@@ -1037,7 +1111,8 @@ def figures(cases, jsc, rows_csv, so_tab, ycut, v):
     ax.set_xlabel("ground lateral offset y_g [km]")
     ax.set_ylabel("PLdB of the scattered orders alone (raw)")
     ax.set_title("Where the scattered orders land (x-averaged, both fringes)", loc="left", fontsize=9)
-    ax.legend(frameon=False, fontsize=7, ncol=2)
+    ax.set_ylim(0, 100)
+    ax.legend(frameon=False, fontsize=7, ncol=2, loc="upper left")
     _style(ax)
     fig.tight_layout()
     fig.savefig(os.path.join(RESULTS, "alongtrack_orders.png"), dpi=150)
@@ -1100,6 +1175,8 @@ def main():
         print(f"specular done {time.time() - t0:.0f} s", flush=True)
     if "report" in a.stages:
         report()
+    if "burgers" in a.stages:
+        resteep_burgers(procs)
 
 
 if __name__ == "__main__":
