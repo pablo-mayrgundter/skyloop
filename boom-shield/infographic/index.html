@@ -83,6 +83,10 @@ figcaption{font-size:13px;color:var(--ink-2)}
 .legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:13px;color:var(--ink-2)}
 .legend i{display:inline-block;width:18px;height:3px;border-radius:2px;vertical-align:middle;margin-right:6px}
 .chart-wrap{position:relative;overflow-x:auto}
+.scroll-x{overflow-x:auto}
+.swipe-hint{display:none}
+.ac .strip{font-size:13px;color:var(--ink-2)}
+.ac .strip b{font:500 13px var(--f-mono);color:var(--ink)}
 #winds{max-width:520px}
 .tip{position:absolute;pointer-events:none;background:var(--surface);border:1px solid var(--rule);padding:8px 10px;font:12px/1.45 var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink);min-width:150px;box-shadow:0 4px 14px rgba(0,0,0,.12)}
 .tip b{font-weight:600}
@@ -101,13 +105,13 @@ table.vals td.v{font:500 14px var(--f-mono);font-variant-numeric:tabular-nums}
 .chip.sim{border-color:var(--quiet);color:var(--quiet)}
 .chip.pub{border-color:var(--ink-2);color:var(--ink)}
 .chip.ext{border-style:dashed;border-color:var(--film-edge);color:var(--film-edge)}
-.chip.prov{background:transparent;border-style:dotted;color:var(--boom);border-color:var(--boom)}
+
 table.vals .chip{font-size:10px;padding:2px 4px}
 .keyline{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:13px;color:var(--ink-2);align-items:center}
 .callout{border-left:3px solid var(--film);padding:6px 0 6px 14px;display:grid;gap:4px;max-width:80ch}
 .callout b{font-family:var(--f-display);font-size:19px;letter-spacing:.02em}
 /* insets */
-.insets{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px;align-items:start}
+.insets{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:40px;align-items:start}
 .caveat{font-size:13px;color:var(--ink-2);border:1px dashed var(--rule);padding:8px 10px;max-width:60ch}
 .opts{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px 20px}
 .opt{display:grid;gap:6px;align-content:start;min-width:0;padding-top:10px;border-top:1px solid var(--rule)}
@@ -166,6 +170,8 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   .ac .sil{max-width:150px}
   .lede{font-size:17px}
   #cross-svg{min-width:640px}
+  #ruler svg{min-width:560px}
+  .swipe-hint{display:block}
   .hero svg text{font-size:14px}
   .hero svg text.td{font-size:16px}
 }
@@ -239,7 +245,8 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
     <span><span class="chip sim">simulated</span> repo models</span>
     <span><span class="chip pub">published</span> external figure</span>
     <span><span class="chip ext">extrapolated</span> scaled from simulations</span>
-    <span><span class="chip prov">provisional</span> placeholder until final data</span>
+    <span><span class="chip sim">simulated · est.</span> estimated aircraft preset</span>
+    <span>† unverified: checked only at search-summary level</span>
   </div>
   <div class="ac-list" id="ac-list"></div>
   <div class="callout">
@@ -256,8 +263,9 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   <div class="insets">
     <figure>
       <h3>The noise scale</h3>
-      <div id="ruler"></div>
-      <p class="caveat"><b>Indicative only.</b> PLdB rates an impulsive boom by how loud it is perceived; dBA rates a steady sound. The two scales are not the same, so this placement is a rough guide. Everyday levels are typical values at the distance given and are <span class="chip prov">provisional</span>.</p>
+      <div id="ruler" class="scroll-x"></div>
+      <p class="small muted swipe-hint">Swipe the ruler sideways to see the dBA scale.</p>
+      <p class="caveat"><b>Two different scales.</b> PLdB (Stevens perceived level) rates a short impulsive boom; dBA rates a steady or slowly varying sound. No fixed conversion between them is published, so the two rulers sit side by side, and NASA's comparisons with familiar impulsive sounds bridge them. Everyday levels are typical values at the distance given, from CDC/NIOSH, NIDCD, FAA and state transport agency tables, all checked only at search-summary level (†). <span data-k="noise.rule"></span></p>
     </figure>
     <div style="display:grid;gap:14px;min-width:0">
       <h3>Shield cross-section options</h3>
@@ -276,7 +284,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
     <div class="concerns" id="concerns"></div>
     <figure>
       <div id="moor"></div>
-      <figcaption>Side view along the corridor, altitude to scale, tether spacing not. Propulsion is ruled out: holding station by thrust would take about <span data-k="mooring.propulsion_kW_per_m"></span> kW per metre of corridor.</figcaption>
+      <figcaption>Side view along the corridor, altitude to scale, tether spacing not. Propulsion is ruled out: holding station by thrust would take about <span data-k="mooring.propulsion_kW_per_m"></span> kW per metre of corridor, <span data-k="mooring.propulsion_GW"></span> GW for 4,000 km.</figcaption>
       <h3 style="margin-top:14px;font-size:19px">Wind moves the carpet</h3>
       <div id="winds"></div>
       <figcaption>Cutoff extent of the boom carpet each side of the track, Concorde Mach 2, simulated with moving-medium rays. The shield's reductions barely change (≤ 0.4 dB under the track), but the carpet, and the shadow with it, moves by kilometres to tens of kilometres. <span data-k="winds.note"></span></figcaption>
@@ -308,7 +316,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 </div>
 
 <script>
-/* ===== Every number on the page lives here. Values marked prov:true are placeholders. ===== */
+/* ===== Every number on the page lives here (final values from data.json, 21 Oct 2026). ===== */
 const DATA = {
   meta:{status:"screening study, October 2026", statusDate:"21 October 2026",
     repoText:"github.com/pablo-mayrgundter/skyloop, folder boom-shield/",
@@ -332,61 +340,77 @@ const DATA = {
       {id:"w1000", label:"1 km (H₂ 30 m)", short:"1 km", cls:"s-quiet", sw:"var(--quiet)",
        v:[59.2,49.0,51.0,51.9,52.5,53.0,53.7,55.3,57.0,58.8,60.6,62.2,63.8,65.1,66.2,67.2,67.8,68.4,68.8,69.2,69.7,70.4,70.9,71.2,71.8,72.0,72.7]}
     ]},
-  /* PLdB, proxy headline. Shielded = 1 km shield, 250 m clearance. Undertrack uses R_m 8 km where available. */
+  /* PLdB, proxy headline. Shielded = 1 km H2 30 m shield, aircraft 250 m above it (20.25 km).
+     Undertrack at R_m 8 km, carpet max and >=10 dB strip at R_m 3 km. Source: data.json.
+     uv:true = published figure checked only at search-summary level (shown with a dagger). est:true = simulated with an estimated preset. */
   aircraft:[
-    {id:"concorde", name:"Concorde", mach:2.0, kind:"Airliner, 1976–2003",
+    {id:"concorde", name:"Concorde", mach:2.0, machTag:"sim", kind:"Airliner, 1976–2003",
      un:{ut:{v:97.7,tag:"sim"}, max:{v:97.7,tag:"sim"}},
      sh:{ut:{v:64.0,tag:"sim"}, max:{v:72.7,tag:"sim"}},
-     note:"H₂ 30 m shield. Cuts 34 dB under the track, 25 dB at the carpet edge (39 km out). Raw model level unshielded: 108.4 PLdB; flight measurements were about 105."},
-    {id:"sr71", name:"SR-71", mach:3.2, kind:"Reconnaissance aircraft",
+     delta:{ut:-33.7, max:-25.0}, strip:{half:39.3, carpet:47.7, tag:"sim"},
+     note:"Raw model level unshielded: 108.4 PLdB. Measured Concorde booms were about 105 PLdB†; at a cruise-like 16.8 km the model gives 109.7 raw and 98.9 proxy, so the measurement sits between the two."},
+    {id:"sr71", name:"SR-71", mach:3.2, machTag:"sim", kind:"Reconnaissance aircraft",
      un:{ut:{v:93.1,tag:"sim"}, max:{v:93.1,tag:"sim"}},
      sh:{ut:{v:57.6,tag:"sim"}, max:{v:72.2,tag:"sim"}},
-     note:"H₂ 30 m shield (helium is too slow at Mach 3.2). Cuts 35 dB under the track, 21 dB at the carpet maximum; computed to 42 of 54 km."},
-    {id:"x59", name:"NASA X-59", mach:1.4, kind:"Low-boom research aircraft",
-     un:{ut:{v:75,tag:"pub"}, max:{v:75,tag:"ext",prov:true}},
-     sh:{ut:{v:42,tag:"ext",prov:true}, max:{v:46,tag:"ext",prov:true}},
-     note:"Unshielded value is NASA's ~75 PLdB design target. Shielded values apply the simulated Concorde Mach 1.4 reductions (−33 dB under the track, −29 dB at the carpet maximum)."},
-    {id:"overture", name:"Boom Overture", mach:1.7, kind:"Airliner in development",
-     un:{ut:{v:95,tag:"ext",prov:true}, max:{v:95,tag:"ext",prov:true}},
-     sh:{ut:{v:62,tag:"ext",prov:true}, max:{v:71,tag:"ext",prov:true}},
-     note:"Interpolated between the simulated Concorde Mach 1.4 and 2.0 cases. Placeholder until a dedicated run."}
+     delta:{ut:-35.4, max:-20.8}, strip:{half:42.3, carpet:54.5, tag:"sim"},
+     note:"Highest Mach and widest carpet, so the far-edge shielding (about −21 dB) is weakest. Helium is too slow at Mach 3.2; hydrogen is needed."},
+    {id:"x59", name:"NASA X-59", mach:1.4, machTag:"pub", machUv:true, kind:"Low-boom research aircraft",
+     un:{ut:{v:75,tag:"pub",uv:true}, max:{v:75,tag:"pub",uv:true}},
+     sh:{ut:{v:42,tag:"ext",approx:true}, max:{v:46,tag:"ext",approx:true}},
+     delta:{ut:-33.4, max:-28.8}, strip:{half:24.5, carpet:33.1, tag:"ext"},
+     note:"Unshielded: NASA's 75 PLdB design target at 16.8 km. Shielded: 75 plus the simulated Concorde Mach 1.4 reductions. The model cannot represent a shaped boom, so these are rough. Already quiet by shaping; a shield adds little."},
+    {id:"overture", name:"Boom Overture", mach:1.7, machTag:"pub", machUv:true, kind:"Airliner in development",
+     un:{ut:{v:92.8,tag:"sim",est:true}, max:{v:92.8,tag:"sim",est:true}},
+     sh:{ut:{v:56.4,tag:"sim",est:true}, max:{v:65.7,tag:"sim",est:true}},
+     delta:{ut:-36.4, max:-27.1}, strip:{half:35.3, carpet:42.9, tag:"sim"},
+     note:"Simulated with an estimated preset: 62 t mid-cruise from a pre-2022 77 t MTOW†, and a generic body shape. Absolute levels are uncertain by a few dB; the reductions depend less on weight."}
   ],
-  boomless:{text:"Boom Supersonic plans to fly Overture over land at about Mach 1.1–1.3 using Mach cutoff: at those speeds, with suitable temperature and wind profiles, the boom bends back up before it reaches the ground. It works only in that narrow speed band. The shield is aimed at Mach 1.4 and above, where cutoff cannot help."},
+  boomless:{text:"Boom Supersonic plans to fly Overture over land using Mach cutoff: typically at Mach 1.1–1.2, up to 1.3, the boom bends back up before it reaches the ground (XB-1 demonstrated it at Mach 1.12 in February 2025)†. It works only in that narrow speed band. At its Mach 1.7 cruise over water Overture does boom, and that faster flight is the shield's niche."},
   noise:{
     min:30, max:130,
     boom:[
-      {label:"Concorde, measured", v:105, tag:"pub", prov:true},
+      {label:"Concorde, measured", v:105, tag:"pub", uv:true},
       {label:"Unshielded, simulated", lo:93, hi:98, tag:"sim"},
-      {label:"X-59 design target", v:75, tag:"pub"},
-      {label:"Shielded (1 km), simulated", lo:58, hi:73, tag:"sim", quiet:true}
+      {label:"X-59 design target", v:75, tag:"pub", uv:true},
+      {label:"Shielded (1 km), simulated", lo:56, hi:73, tag:"sim", quiet:true}
     ],
+    analogies:[
+      {at:105, lines:["≈ nearby thunder, or a car door","slam heard from inside the car"]},
+      {at:75, lines:["≈ distant thunder, or a car door","slam across the street"]}
+    ],
+    /* dBA, typical values at the distance given; all from agency pages checked only at search-summary level */
     everyday:[
-      {label:"Rock concert, near stage", v:112},
-      {label:"Siren, 30 m", v:108},
-      {label:"Airliner takeoff, 300 m", v:100},
-      {label:"Motorcycle passing, 8 m", v:95},
-      {label:"Lawnmower, at operator", v:90},
-      {label:"Dog bark, 5 m", v:85},
-      {label:"Semi truck, 15 m", v:82},
-      {label:"Car passing, 15 m", v:70},
-      {label:"Conversation, 1 m", v:60},
-      {label:"Quiet library", v:40}
-    ], prov:true},
+      {label:"Jet takeoff, 60 m", v:120, txt:"120"},
+      {label:"Siren, nearby", v:120, txt:"110–129"},
+      {label:"Rock concert, 15 m", v:110, txt:"110"},
+      {label:"Jet fly-over, 300 m", v:107.5, txt:"105–110"},
+      {label:"Motorcycle, nearby", v:95, txt:"95"},
+      {label:"Gas lawn mower, 1 m", v:90, txt:"80–100"},
+      {label:"Diesel truck, 15 m", v:87.5, txt:"85–90"},
+      {label:"Dog bark, 1 m", v:85, txt:"75–96"},
+      {label:"Freeway traffic, 15 m", v:70, txt:"70"},
+      {label:"Conversation, 1 m", v:60, txt:"60–70"},
+      {label:"Light traffic, 15 m", v:60, txt:"60"},
+      {label:"Whisper, 1 m", v:30, txt:"30"}
+    ],
+    rule:"+10 dB sounds about twice as loud; a 5 dB change is noticeable (FAA)."},
   options:[
-    {id:"lid", name:"Floating-lid pillow", verdict:"baseline", why:"Mass sits on the top face, the floor is a light film, ties are soft (K ≈ 10 Pa/m). Best acoustics modelled: −33 dB under the track in 2-D."},
-    {id:"raft", name:"Touching compliant-hoop tube raft", verdict:"alternate", why:"D ≈ 60 m tubes match a 60 m slab with no ties, but the hoop must be strong (3–9 kN/m) and soft (3–9 % strain)."},
-    {id:"lens", name:"Lens with cross-width struts", verdict:"rejected", why:"Needs 9–130 kg/m² of structure for 2–4 kg/m² of lift, and the struts carry sound across."},
-    {id:"drop", name:"Drop-stitch pillow", verdict:"rejected", why:"Ties every ~8 m hold it flat at superpressure, and they are 12–80× too stiff."},
-    {id:"vac", name:"Vacuum (inverted) balloon", verdict:"rejected", why:"Structure weighs 1.23–1.44× its lift, and the rings act as studs (−0.3 to −1.9 dB)."},
-    {id:"gaps", name:"Raft with gaps", verdict:"rejected", why:"Air slits leak straight through: a 2 m gap costs 15 dB."},
-    {id:"narrow", name:"Narrow 200–300 m modules", verdict:"narrow", verdictText:"too narrow", why:"A 250 m shield gives only −8 dB under the track and −3 dB at the carpet maximum, and is louder than no shield beyond 18 km out."}
+    {id:"lid", name:"Floating-lid pillow", verdict:"baseline", why:"Mass on the lid (≈2.4 kg/m²), 0.1 kg/m² floor film, soft ties K ≈ 10 Pa/m. Best modelled acoustics, −33.4 dB under the track in 2-D, and no static load on the soft parts."},
+    {id:"raft", name:"Touching compliant-hoop tube raft", verdict:"alternate", why:"D ≈ 60 m tubes match the 60 m slab (−36 to −38 dB under the track) with no ties, but the hoop must be strong (3–9 kN/m) and soft (3–9 % strain)."},
+    {id:"lens", name:"Lens with cross-width struts", verdict:"rejected", why:"About 200 kN/m of face tension needs 1 km compression struts: 9–130 kg/m² of structure for 2–4 kg/m² of lift."},
+    {id:"drop", name:"Drop-stitch pillow", verdict:"rejected", why:"The ties that hold it flat couple the faces at 1,210–2,420 Pa/m, 12–80× too stiff, short-circuiting the gas layer."},
+    {id:"vac", name:"Vacuum (inverted) balloon", verdict:"rejected", why:"Nothing floats (structure 1.23–1.44× lift), and the rings that hold it open act as studs (−0.3 to −1.9 dB)."},
+    {id:"gaps", name:"Raft with gaps", verdict:"rejected", why:"Air slits leak straight through: 2 / 5 / 15 m gaps give only −12 / −8 / −4 dB, against −27 dB touching."},
+    {id:"narrow", name:"Narrow 200–300 m modules", verdict:"narrow", verdictText:"too narrow", why:"Edge diffraction dominates: 250 m wide gives −8 to −9 dB under the track and −3 dB at the carpet maximum, and is 0–2 dB louder than no shield beyond ~18 km."}
   ],
   mooring:{
-    tetherDrag_kN:"350–630", tetherDia_cm:5, jetWind_ms:"60–80",
-    stationLoad_MN:"2.2–5.6", spacing_km:"2–5", tetherCount:"800–2,000", corridor_km:"4,000",
-    liftSwing_pct:10, breathing_pct:"5–10",
-    h2_Mt:0.74, h2_share_pct:0.8, h2_tnt_kt_per_km:5, compartment_m:250,
-    propulsion_kW_per_m:67, sideForce_kN_per_m:"0.5–2.0", wind20km_ms:"20–40"},
+    tetherDrag_kN:"350–630", tetherDia_cm:5, jetWind_ms:"60–80", sizedDrag_MN:"0.6–1.0", sizedDia_cm:"6–10",
+    stationLoad_MN:"2.2–5.6", tetherMass_t:"90–220", spacing_km:"2–5", tetherCount:"800–2,000", corridor_km:"4,000",
+    liftSwing_pct:10, breathing_pct:"5–10", dp_Pa:"255 / 510 / 995", superheat_K:"10 / 20 / 39",
+    boomLoad_Pa:"200–600", cycles:"2×10⁵–10⁶",
+    h2_Mt:0.74, h2_share_pct:0.8, helium_years:45, h2_tnt_kt_per_km:5, compartment_m:250, replenish_pct:"5–20",
+    propulsion_kW_per_m:67, propulsion_GW:270, sideForce:"0.50 / 1.12 / 1.99", sideWind:"20 / 30 / 40",
+    cutoffRange_km:"35–115", crosswindShift_km:2.4},
   winds:{
     note:"*Tailwind cutoff is sensitive to the lowest kilometre: 63 km with a 10 m/s boundary layer.",
     cases:[
@@ -397,24 +421,25 @@ const DATA = {
       {label:"Jet-stream crosswind", lo:-28.4, hi:114.7}
     ]},
   findings:[
-    "Width sets the result, not gas thickness. With the aircraft 250 m above, a 1 km shield cuts Concorde (Mach 2) loudness by about 34 dB under the track and 25 dB at the loudest point of the carpet. A 500 m shield gives −21 / −8 dB; a 250 m shield −8 / −3 dB.",
-    "At 1 km every simulated case is 33–41 dB quieter under the track: Concorde at Mach 1.4 and 2.0, at 100 m and 250 m clearance, and the SR-71 at Mach 3.2. The whole computed carpet is at least 10 dB quieter.",
-    "The leak is edge diffraction above 5 Hz. The pulse that crosses the gas holds 80–98 % of the energy and is inaudible on its own.",
-    "Wind and turbulence leave the reductions intact (≤ 0.4 dB under the track). Turbulence suggests the headline is 5.6–8.3 dB conservative. Wind does move the carpet, so siting needs wind climatology.",
-    "Module joints must be sealed: open gaps above ~0.1 m leak, membrane-covered gaps of 1–2 m are fine. Serrated edges help only at a pitch under ~1 m.",
-    "Structure must be soft: anything holding the faces apart or the volume fixed acts as a stud. The shield is quasi-zero-pressure and breathes 5–10 % a day. Baseline: the floating-lid pillow. An earlier result that tie lines make the shield transparent was a mesh artefact.",
-    "Hydrogen is forced. A 4,000 km corridor holds 0.74 Mt of H₂, 0.8 % of a year's world supply; in helium it would be 45 years of world output. The vacuum-balloon branch is closed."
+    "A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and 25 dB at the loudest point of the carpet: from ~98 PLdB (conservative proxy; ~108 raw) to ~64 under the track and at most ~73 anywhere in the computed carpet.",
+    "Width sets the result, not gas or thickness: 250 m wide gives only −8 to −9 dB and 500 m about −21 dB under the track, because sound diffracts around the edges.",
+    "It holds from Mach 1.4 to 3.2: about −33 to −36 dB under the track and −21 to −29 dB at the loudest point for Concorde, Overture and the SR-71.",
+    "These are conservative. With realistic turbulence the reduction is about 5–8 dB larger. Wind changes it by ≤ 0.4 dB under the track, but moves where the carpet lands.",
+    "Only a soft structure works. Struts, drop-stitch, vacuum frames, a stiff load-bearing skin or open gaps leak the boom through. Ties are fine if soft: smeared-equivalent K ≤ ~150 Pa/m for H₂ at Mach 2. The earlier result that 25 m line ties make the shield transparent was a mesh bug; with realistic face tension they act like smeared ties. Baseline: the floating-lid pillow.",
+    "The hard problems are not acoustic: mooring a 1 km layer at 20 km against the jet stream (350–630 kN of drag per tether, 800–2,000 tethers), a ~10 % daily lift swing, and 0.74 Mt of hydrogen next to air traffic.",
+    "Shaping (X-59, ~75 PLdB) and Mach-cutoff Boomless Cruise (Mach 1.1–1.3) work only at low Mach. The shield's niche is faster flight: Overture's Mach 1.7 and especially Mach 2 and above."
   ],
   caveats:[
-    "Models only: 2-D cross-plane BEM plus nonlinear ray propagation. No test or flight data.",
-    "Near-track values are still about 1.5 dB optimistic at R_m 8 km (2–7 dB at 3 km).",
-    "3-D runs used idealised slabs with lift-closed faces, which is optimistic. The floating-lid baseline has no full 3-D ground carpet yet.",
-    "The residual low-frequency pulse on buildings (ΔCSEL only −20 to −50 dB) is not assessed.",
-    "Structure, materials and hydrogen figures are screening values; several sources were checked only at abstract level."
+    "Concept-level 2-D/3-D models, linear at the shield and nonlinear in propagation. No hardware, no flight test.",
+    "Loudness uses the conservative rise-time proxy. Near-track values at R_m 8 km are still about 1.5 dB optimistic (2–7 dB at 3 km).",
+    "3-D runs used a lift-closed H₂ slab standing in for the floating lid; 2-D BEM shows the two match (−33.4 vs −32.0 dB under the track).",
+    "Module joints must be sealed: a 1 m open gap every 250 m costs about 9 dB under the track.",
+    "The residual low-frequency pulse on buildings is not assessed. The hydrogen fire hazard is unresolved.",
+    "Published figures marked † were checked only at search-summary level. Overture's weight and shape are estimates."
   ],
   next:[
     "Full 3-D ground carpet for the floating lid with discrete soft ties (K 3–30 Pa/m), bellows partitions every 100 m and lid mass 1.2–2.4 kg/m².",
-    "Re-run the tie cases with the corrected line-tie width.",
+    "Re-run the 3-D tie cases with tensioned faces; the current solver treats the faces as limp, which flatters discrete ties.",
     "Slack-lid response to the 200–600 Pa load of each pass, and fatigue over 10⁵–10⁶ cycles.",
     "Pick a diurnal lift scheme: tethers, a solar gas shuttle or low-superheat coatings.",
     "Tether field design through the jet stream, and wind climatology for corridor siting.",
@@ -677,62 +702,72 @@ const SIL={
   overture:`<path d="M140 28 L118 25.5 L14 25.5 L7 28 L14 30.5 L118 30.5 Z" class="f-ink2"/><path d="M92 27 L46 5 L32 5 L28 27 L32 51 L46 51 L92 29 Z" class="f-ink2"/><rect x="28" y="12" width="14" height="3.5" class="f-ink3"/><rect x="28" y="18" width="14" height="3.5" class="f-ink3"/><rect x="28" y="34.5" width="14" height="3.5" class="f-ink3"/><rect x="28" y="40.5" width="14" height="3.5" class="f-ink3"/><path d="M18 28 L8 18 L5 18 L8 28 L5 38 L8 38 Z" class="f-ink2"/>`
 };
 const TAGTXT={sim:'simulated',pub:'published',ext:'extrapolated'};
-const chip=o=>`<span class="chip ${o.tag}${o.prov?' prov':''}">${TAGTXT[o.tag]}${o.prov?' · prov.':''}</span>`;
+const chip=o=>`<span class="chip ${o.tag}">${TAGTXT[o.tag]}${o.est?' · est.':''}${o.uv?'†':''}</span>`;
+const val=o=>`${o.approx?'~':''}${o.v.toFixed?(Number.isInteger(o.v)?o.v:o.v.toFixed(1)):o.v}`;
 function dumbbell(a){
-  const lo=40, hi=110, x=v=>14+(v-lo)/(hi-lo)*392;
+  const lo=30, hi=110, x=v=>14+(v-lo)/(hi-lo)*392;
   let s=`<svg viewBox="0 0 420 92" role="img" aria-label="${a.name} ground loudness, unshielded vs shielded">`;
-  for(let v=40; v<=110; v+=10){ s+=`<line x1="${x(v)}" x2="${x(v)}" y1="8" y2="70" class="s-grid" fill="none"/><text x="${x(v)}" y="86" font-size="10" text-anchor="middle" class="f-ink3 tm">${v}</text>`; }
+  for(let v=30; v<=110; v+=10){ s+=`<line x1="${x(v)}" x2="${x(v)}" y1="8" y2="70" class="s-grid" fill="none"/><text x="${x(v)}" y="86" font-size="10" text-anchor="middle" class="f-ink3 tm">${v}</text>`; }
   [['ut','under track',24],['max','carpet max',54]].forEach(([key,lab,y])=>{
     const u=a.un[key], h=a.sh[key];
     s+=`<text x="${x(lo)}" y="${y-9}" font-size="10" class="f-ink3 tm">${lab}</text>`;
-    s+=`<line x1="${x(h.v)}" x2="${x(u.v)}" y1="${y}" y2="${y}" class="s-ink3" stroke-width="2" ${h.prov||u.prov?'stroke-dasharray="3 3"':''} fill="none"/>`;
-    const dot=(o,cls)=> o.prov?`<circle cx="${x(o.v)}" cy="${y}" r="5" class="f-surface ${cls.replace('f-','s-')}" stroke-width="2"/>`:`<circle cx="${x(o.v)}" cy="${y}" r="5.5" class="${cls} s-surface" stroke-width="2"/>`;
+    s+=`<line x1="${x(h.v)}" x2="${x(u.v)}" y1="${y}" y2="${y}" class="s-ink3" stroke-width="2" ${h.tag==='ext'?'stroke-dasharray="3 3"':''} fill="none"/>`;
+    const dot=(o,cls)=> o.tag==='ext'?`<circle cx="${x(o.v)}" cy="${y}" r="5" class="f-surface ${cls.replace('f-','s-')}" stroke-width="2"/>`:`<circle cx="${x(o.v)}" cy="${y}" r="5.5" class="${cls} s-surface" stroke-width="2"/>`;
     s+=dot(h,'f-quiet')+dot(u,'f-boom');
-    s+=`<text x="${x(u.v)+9}" y="${y+4}" font-size="11" class="f-ink tm">${u.v}</text><text x="${x(h.v)-9}" y="${y+4}" font-size="11" text-anchor="end" class="f-ink tm">${h.v}</text>`;
+    s+=`<text x="${x(u.v)+9}" y="${y+4}" font-size="11" class="f-ink tm">${val(u)}</text><text x="${x(h.v)-9}" y="${y+4}" font-size="11" text-anchor="end" class="f-ink tm">${val(h)}</text>`;
+    s+=`<text x="${(x(u.v)+x(h.v))/2}" y="${y-5}" font-size="10" text-anchor="middle" class="f-ink3 tm">${a.delta[key].toFixed(1)} dB</text>`;
   });
   return s+'</svg>';
 }
 $('#ac-list').innerHTML=DATA.aircraft.map(a=>`<div class="ac">
   <div class="sil"><svg viewBox="0 0 146 56" role="img" aria-label="${a.name} planform, generic silhouette">${SIL[a.id]}</svg></div>
-  <div class="meta"><h3>${a.name} <span class="mono" style="font-size:16px;color:var(--ink-2)">Mach ${a.mach.toFixed(1)}</span></h3>
+  <div class="meta"><h3>${a.name} <span class="mono" style="font-size:16px;color:var(--ink-2)">Mach ${a.mach.toFixed(1)}${a.machUv?'†':''}</span></h3>
     <span class="small muted">${a.kind}</span>
     <table class="vals"><thead><tr><th></th><th>no shield</th><th>1 km shield</th></tr></thead><tbody>
-      <tr><th>under track</th><td><span class="mono num">${a.un.ut.v}</span>${chip(a.un.ut)}</td><td><span class="mono num">${a.sh.ut.v}</span>${chip(a.sh.ut)}</td></tr>
-      <tr><th>carpet max</th><td><span class="mono num">${a.un.max.v}</span>${chip(a.un.max)}</td><td><span class="mono num">${a.sh.max.v}</span>${chip(a.sh.max)}</td></tr>
+      <tr><th>under track</th><td><span class="mono num">${val(a.un.ut)}</span>${chip(a.un.ut)}</td><td><span class="mono num">${val(a.sh.ut)}</span>${chip(a.sh.ut)}</td></tr>
+      <tr><th>carpet max</th><td><span class="mono num">${val(a.un.max)}</span>${chip(a.un.max)}</td><td><span class="mono num">${val(a.sh.max)}</span>${chip(a.sh.max)}</td></tr>
     </tbody></table>
+    <span class="strip">≥ 10 dB quieter from the track out to <b>≥ ${a.strip.half} km</b> (whole computed width; carpet half-width ${a.strip.carpet} km)${a.strip.tag==='ext'?', from the Concorde Mach 1.4 run':''}.</span>
     <p class="note">${a.note}</p></div>
   <div class="chart">${dumbbell(a)}</div></div>`).join('');
 /* the values table can be wide on phones: let it scroll inside its own box */
 document.querySelectorAll('table.vals').forEach(t=>{const d=document.createElement('div'); d.style.overflowX='auto'; t.parentNode.insertBefore(d,t); d.appendChild(t);});
 
-/* ===== NOISE RULER ===== */
+/* ===== NOISE RULER: two parallel scales, NASA analogies as the bridge ===== */
 (function(){
-  const n=DATA.noise, Y=v=>40+(n.max-v)*4.6, x0=196;
-  let s=`<svg viewBox="0 0 440 520" role="img" aria-label="Loudness ruler comparing boom levels in PLdB with everyday sounds in dBA">`;
-  s+=`<text x="${x0-16}" y="16" font-size="11" text-anchor="end" class="f-ink tm" font-weight="600">BOOMS · PLdB</text>`;
-  s+=`<text x="${x0+30}" y="16" font-size="11" class="f-ink tm" font-weight="600">EVERYDAY · dBA</text>`;
-  s+=`<rect x="${x0}" y="${Y(n.max)}" width="14" height="${Y(n.min)-Y(n.max)}" class="f-grid s-rule" stroke-width="1"/>`;
-  for(let v=n.min; v<=n.max; v+=5){ const big=v%10===0; s+=`<line x1="${x0}" x2="${x0+(big?14:7)}" y1="${Y(v)}" y2="${Y(v)}" class="s-ink3" fill="none"/>`; if(big) s+=`<text x="${x0+7}" y="${Y(v)-3}" font-size="9" text-anchor="middle" class="f-ink3 tm">${v}</text>`; }
-  // boom items (left)
+  const n=DATA.noise, Y=v=>48+(n.max-v)*4.4, xL=170, xR=392;
+  let s=`<svg viewBox="0 0 600 512" role="img" aria-label="Boom levels in PLdB beside everyday sounds in dBA, on separate scales">`;
+  s+=`<text x="${xL+6}" y="16" font-size="11" text-anchor="middle" class="f-ink tm" font-weight="600">BOOMS · PLdB</text>`;
+  s+=`<text x="${xL+24}" y="34" font-size="10.5" class="f-ink3 tm">NASA'S COMPARISON†</text>`;
+  s+=`<text x="${xR+6}" y="16" font-size="11" text-anchor="middle" class="f-ink tm" font-weight="600">EVERYDAY · dBA†</text>`;
+  [xL,xR].forEach(x0=>{
+    s+=`<rect x="${x0}" y="${Y(n.max)}" width="12" height="${Y(n.min)-Y(n.max)}" class="f-grid s-rule" stroke-width="1"/>`;
+    for(let v=n.min; v<=n.max; v+=5){ const big=v%10===0; s+=`<line x1="${x0}" x2="${x0+(big?12:6)}" y1="${Y(v)}" y2="${Y(v)}" class="s-ink3" fill="none"/>`; if(big) s+=`<text x="${x0+6}" y="${Y(v)-3}" font-size="8.5" text-anchor="middle" class="f-ink3 tm">${v}</text>`; }
+  });
+  // bridge: analogies at the PL level, right of the PL ruler
+  n.analogies.forEach(a=>{const y=Y(a.at);
+    s+=`<line x1="${xL+12}" x2="${xL+22}" y1="${y}" y2="${y}" class="s-ink3" stroke-dasharray="2 2" fill="none"/>`;
+    a.lines.forEach((t,i)=>{s+=`<text x="${xL+26}" y="${r1(y+4+i*14)}" font-size="11" font-style="italic" class="f-ink2">${t}</text>`;});
+  });
+  // boom items (left of PL ruler)
   const L=n.boom.map(b=>({b, y:Y(b.v!=null?b.v:(b.lo+b.hi)/2)})).sort((a,b)=>a.y-b.y);
-  for(let i=1;i<L.length;i++) if(L[i].y-L[i-1].y<30) L[i].y=L[i-1].y+30;
+  for(let i=1;i<L.length;i++) if(L[i].y-L[i-1].y<32) L[i].y=L[i-1].y+32;
   L.forEach(({b,y})=>{
-    const cls=b.quiet?'quiet':'boom';
-    if(b.v!=null){ s+=`<circle cx="${x0-6}" cy="${Y(b.v)}" r="4" class="f-${cls}"/>`; s+=`<path d="M${x0-12} ${Y(b.v)} L${x0-22} ${r1(y-4)}" class="s-ink3" stroke-width=".7" fill="none"/>`; }
-    else { s+=`<rect x="${x0-9}" y="${Y(b.hi)}" width="6" height="${Y(b.lo)-Y(b.hi)}" rx="2" class="f-${cls}"/>`; s+=`<path d="M${x0-12} ${r1((Y(b.hi)+Y(b.lo))/2)} L${x0-22} ${r1(y-4)}" class="s-ink3" stroke-width=".7" fill="none"/>`; }
+    const cls=b.quiet?'quiet':'boom', x0=xL;
+    if(b.v!=null){ s+=`<circle cx="${x0-6}" cy="${Y(b.v)}" r="4" class="f-${cls}"/>`; s+=`<path d="M${x0-12} ${Y(b.v)} L${x0-18} ${r1(y-4)}" class="s-ink3" stroke-width=".7" fill="none"/>`; }
+    else { s+=`<rect x="${x0-9}" y="${Y(b.hi)}" width="6" height="${Y(b.lo)-Y(b.hi)}" rx="2" class="f-${cls}"/>`; s+=`<path d="M${x0-12} ${r1((Y(b.hi)+Y(b.lo))/2)} L${x0-18} ${r1(y-4)}" class="s-ink3" stroke-width=".7" fill="none"/>`; }
     const val=b.v!=null?`~${b.v}`:`${b.lo}–${b.hi}`;
-    s+=`<text x="${x0-26}" y="${r1(y-4)}" font-size="12" text-anchor="end" class="f-ink">${b.label}</text>`;
-    s+=`<text x="${x0-26}" y="${r1(y+10)}" font-size="11.5" text-anchor="end" class="f-${cls} tm" font-weight="600">${val}${b.prov?' *':''}</text>`;
+    s+=`<text x="${x0-21}" y="${r1(y-4)}" font-size="11.5" text-anchor="end" class="f-ink">${b.label}</text>`;
+    s+=`<text x="${x0-21}" y="${r1(y+10)}" font-size="11.5" text-anchor="end" class="f-${cls} tm" font-weight="600">${val}${b.uv?'†':''}</text>`;
   });
-  // everyday (right)
+  // everyday (right of dBA ruler)
   const R=n.everyday.map(e=>({e,y:Y(e.v)})).sort((a,b)=>a.y-b.y);
-  for(let i=1;i<R.length;i++) if(R[i].y-R[i-1].y<17) R[i].y=R[i-1].y+17;
+  for(let i=1;i<R.length;i++) if(R[i].y-R[i-1].y<16) R[i].y=R[i-1].y+16;
   R.forEach(({e,y})=>{
-    s+=`<line x1="${x0+14}" x2="${x0+22}" y1="${Y(e.v)}" y2="${Y(e.v)}" class="s-ink2" stroke-width="1.5" fill="none"/>`;
-    s+=`<path d="M${x0+22} ${Y(e.v)} L${x0+28} ${r1(y-4)}" class="s-ink3" stroke-width=".7" fill="none"/>`;
-    s+=`<text x="${x0+31}" y="${r1(y)}" font-size="12" class="f-ink2"><tspan class="tm f-ink" font-weight="600">${e.v}</tspan>  ${e.label}</text>`;
+    s+=`<line x1="${xR+12}" x2="${xR+18}" y1="${Y(e.v)}" y2="${Y(e.v)}" class="s-ink2" stroke-width="1.5" fill="none"/>`;
+    s+=`<path d="M${xR+18} ${Y(e.v)} L${xR+24} ${r1(y-4)}" class="s-ink3" stroke-width=".7" fill="none"/>`;
+    s+=`<text x="${xR+27}" y="${r1(y)}" font-size="11.5" class="f-ink2"><tspan class="tm f-ink" font-weight="600">${e.txt}</tspan> ${e.label}</text>`;
   });
-  s+=`<text x="${x0-26}" y="${Y(n.min)+4}" font-size="10" text-anchor="end" class="f-ink3">* provisional</text>`;
   $('#ruler').innerHTML=s+'</svg>';
 })();
 
@@ -782,12 +817,13 @@ $('#opts').innerHTML=DATA.options.map(o=>`<div class="opt"><svg viewBox="0 0 200
   s+=`<text x="${(anchors[0]+anchors[1])/2+18}" y="${yG+38}" font-size="10.5" text-anchor="middle" class="f-ink2 tm">every ${m.spacing_km} km</text>`;
   $('#moor').innerHTML=s+'</svg>';
   const C=[
-    ['Tether drag',`${m.tetherDrag_kN} kN`,`Per ${m.tetherDia_cm} cm tether crossing about 8 km of ${m.jetWind_ms} m/s jet-stream wind. Tether drag, not the shield's own drag, likely sets the mooring design.`],
-    ['Tether field',`${m.tetherCount}`,`Tethers every ${m.spacing_km} km along ${m.corridor_km} km, each carrying ${m.stationLoad_MN} MN at 30 m/s. Every one is an obstacle in the airspace below the corridor.`],
-    ['Daily lift swing',`~${m.liftSwing_pct} %`,`Sun heats the gas by 10–40 K, so lift rises about 10 % each day. The shield must breathe ${m.breathing_pct} % in volume; tethers, a solar gas shuttle or coatings must absorb the rest.`],
-    ['Hydrogen near traffic',`${m.h2_Mt} Mt H₂`,`About ${m.h2_tnt_kt_per_km} kt TNT-equivalent of combustion energy per km. At 55 mbar the layer is marginal for sparks and not safe against engine exhaust. Needs compartments every ≤ ${m.compartment_m} m and leak detection that closes sections to traffic.`],
-    ['Side wind on the shield',`${m.sideForce_kN_per_m} kN/m`,`Per metre of corridor at ${m.wind20km_ms} m/s winds at 20 km. Gusts, mountain waves and flutter of slack faces are still open.`],
-    ['Wind shifts the carpet','35–88 km',`Cutoff half-width with a jet-stream headwind or tailwind (48 km in calm air). Corridors need wind climatology.`]
+    ['Tether drag in the jet stream',`${m.tetherDrag_kN} kN`,`Per ${m.tetherDia_cm} cm tether crossing about 8 km of ${m.jetWind_ms} m/s wind; sized ${m.sizedDia_cm} cm UHMWPE tethers see ${m.sizedDrag_MN} MN each. Tether drag, more than the shield's own side load, likely sets station-keeping.`],
+    ['Tether field',`${m.tetherCount}`,`Tethers every ${m.spacing_km} km along ${m.corridor_km} km, each carrying ${m.stationLoad_MN} MN at 30 m/s and weighing ${m.tetherMass_t} t. Every one is an obstacle in the airspace below the corridor.`],
+    ['Daily lift swing',`~${m.liftSwing_pct} %`,`Solar superheat of ~20 K raises lift about 10 % every day. Held at constant volume that is ${m.dp_Pa} Pa for ${m.superheat_K} K, so the layer must breathe ${m.breathing_pct} % daily, with tethers, a gas shuttle or coatings taking up the rest.`],
+    ['Boom load on the shield',`${m.boomLoad_Pa} Pa`,`Each pass hits the top face with 10–25× the lid's weight: ${m.cycles} cycles over 30 years. Flex-crack pinholes are the main leak driver.`],
+    ['Hydrogen near traffic',`${m.h2_Mt} Mt H₂`,`${m.h2_share_pct} % of a year's world supply (as helium, ${m.helium_years} years of output), about ${m.h2_tnt_kt_per_km} kt TNT-equivalent per km. At 55 mbar the layer is marginal for spark ignition. Needs compartments every ≤ ${m.compartment_m} m and leak detection; ${m.replenish_pct} % top-up a year.`],
+    ['Side wind on the shield',`${m.sideForce} kN/m`,`Per metre of corridor at ${m.sideWind} m/s. Winds at 20 km average 10–20 m/s, 20–30 in winter, peaks ~50. Gusts, mountain waves and flutter of slack faces are still open.`],
+    ['Wind shifts the carpet',`${m.cutoffRange_km} km`,`Cutoff extent with jet-stream and QBO winds (48 km in calm air); a crosswind moves the shadow ${m.crosswindShift_km} km downwind. Corridors need wind climatology.`]
   ];
   $('#concerns').innerHTML=C.map(([h,f,p])=>`<div><b>${h}</b><span class="fig">${f}</span><p>${p}</p></div>`).join('');
   // winds

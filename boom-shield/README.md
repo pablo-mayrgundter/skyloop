@@ -5,6 +5,7 @@ This directory collects the first-pass acoustic analysis for a bouyant sonic-boo
 ## Contents
 
 - **[STATUS.md](STATUS.md): current concept status (start here).**
+- **[infographic/index.html](infographic/index.html): illustrated explainer (scene, aircraft comparison, loudness scale, cross-sections, mooring).**
 
 Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac-83e8-9bbd-eb2f741c8bd0).
 
