@@ -61,6 +61,7 @@ CASES = {
 CASE_LABEL = {"calm": "calm", "jet_head": "jet, headwind", "jet_tail": "jet, tailwind",
               "jet_cross": "jet, crosswind (+y)", "qbo_head": "QBO easterly, headwind"}
 PHI_SH = [0.0, 6.0, 16.0, 24.0, 36.0, 48.0]                 # shielded configs
+PHI_W500 = [0.0, 16.0, 24.0, 48.0]                          # (cost: W 500 m runs are slowest)
 PHI_UN = [0.0, 3.0, 6.0, 12.0, 16.0, 24.0, 30.0, 36.0, 42.0, 48.0, 54.0]
 TURB_PHI = [0.0, 24.0, 48.0]
 Z_SCREEN = 500.0
@@ -168,7 +169,9 @@ def calm_row(cfgkey, phi_deg):
 
 
 def phis_for(cfgkey, case):
-    base = PHI_UN if cfgkey == "none" else PHI_SH
+    base = {"none": PHI_UN, "W1000": PHI_SH, "W500": PHI_W500}[cfgkey]
+    if cfgkey == "none" and case == "qbo_head":
+        base = PHI_SH
     if case == "jet_cross":
         return [-p for p in base[::-1] if p > 0] + base
     return base
@@ -342,7 +345,7 @@ def wind_rows():
     out = {}
     for cfgkey in KEYS:
         for case in ["calm"] + list(CASES):
-            for ph in phis_for(cfgkey, case if case != "calm" else "jet_head"):
+            for ph in (PHI_UN if case == "calm" else phis_for(cfgkey, case)):
                 if case == "calm":
                     out[(cfgkey, case, ph)] = calm_row(cfgkey, ph)
                 else:
@@ -554,7 +557,7 @@ def plot(W, geo):
     # (b, c) ground PLdB (proxy) vs y_g: unshielded and W1000
     for axx, cfgkey, ttl in ((ax[0, 1], "none", "(b) unshielded"), (ax[0, 2], "W1000", "(c) W 1 km, H2 30 m")):
         for case in ["calm"] + list(CASES):
-            phs = phis_for(cfgkey, "jet_cross" if case == "jet_cross" else "jet_head")
+            phs = PHI_UN if case == "calm" else phis_for(cfgkey, case)
             pts = [(W[(cfgkey, case, p)]["y_g"], W[(cfgkey, case, p)]["metrics"]["pldb_proxy"])
                    for p in phs if (cfgkey, case, p) in W and W[(cfgkey, case, p)]["metrics"]]
             if case == "calm":
@@ -573,7 +576,7 @@ def plot(W, geo):
     a = ax[1, 0]
     for cfgkey, ls in (("W1000", "-"), ("W500", "--")):
         for case in ["calm"] + list(CASES):
-            phs = phis_for(cfgkey, "jet_cross" if case == "jet_cross" else "jet_head")
+            phs = PHI_UN if case == "calm" else phis_for(cfgkey, case)
             pts = []
             for p in phs:
                 r, b = W.get((cfgkey, case, p)), W.get(("none", case, p))
@@ -599,29 +602,29 @@ def plot(W, geo):
         pos, lab = 0, []
         for k in KEYS:
             for ph in TURB_PHI:
-                L = [x["pldb"] for x in TA[(k, ph)]]
                 d = load(f"turbprep_{k}_{ph:g}")["det"]
+                L = [x["pldb"] - d["pldb"] for x in TA[(k, ph)]]
                 B = load(f"turbB_moderate_{k}_{ph:g}")
                 a.vlines(pos, _pc(L, 10), _pc(L, 90), color=COL["jet_tail"], lw=5, alpha=0.55)
                 a.plot(pos, np.median(L), "o", color=COL["jet_tail"], ms=5)
                 if B is not None:
-                    LB = [x["pldb"] for x in B]
+                    LB = [x["pldb"] - d["pldb"] for x in B]
                     a.vlines(pos + 0.25, _pc(LB, 10), _pc(LB, 90), color=COL["jet_head"], lw=5, alpha=0.55)
                     a.plot(pos + 0.25, np.median(LB), "o", color=COL["jet_head"], ms=5)
-                a.plot(pos - 0.25, d["pldb"], "_", color=ink, ms=10, mew=2)
-                a.plot(pos - 0.25, d["pldb_proxy"], "x", color=ink2, ms=6)
+                a.plot(pos - 0.25, d["pldb_proxy"] - d["pldb"], "x", color=ink, ms=7, mew=1.5)
                 lab.append(f"{ {'none': 'un', 'W1000': '1k', 'W500': '500'}[k]} {ph:g}°")
                 pos += 1
         a.set_xticks(range(pos))
         a.set_xticklabels(lab, rotation=60, fontsize=7)
-        a.set_ylabel("ground PLdB")
-        a.set_title("(e) turbulence (moderate PBL): P10–P90 bar, median dot", loc="left", fontsize=9)
+        a.axhline(0.0, color=ink2, lw=0.8)
+        a.set_ylabel("PLdB − deterministic raw PLdB [dB]")
+        a.set_title("(e) moderate PBL turbulence: P10–P90 bar, median dot", loc="left", fontsize=9)
         from matplotlib.lines import Line2D
         a.legend(handles=[Line2D([], [], color=COL["jet_tail"], lw=5, alpha=.55, label="linear below screen"),
                           Line2D([], [], color=COL["jet_head"], lw=5, alpha=.55, label="nonlinear below screen"),
-                          Line2D([], [], color=ink, marker="_", ls="", ms=10, mew=2, label="deterministic raw"),
-                          Line2D([], [], color=ink2, marker="x", ls="", label="rise-time proxy")],
-                 frameon=False, fontsize=7, loc="lower left")
+                          Line2D([], [], color=ink, marker="x", ls="", mew=1.5, label="Gate-0 rise-time proxy")],
+                 frameon=False, fontsize=7, loc="lower right")
+        a.set_ylim(-13.0, 4.5)
         a.grid(color=grid, lw=0.6, axis="y")
     # (f) example signatures with turbulence
     a = ax[1, 2]
@@ -631,15 +634,15 @@ def plot(W, geo):
             d = load(f"turbprep_{k}_0")
             tg, pg = d["tg"], d["pg"]
             if k == "none":
-                i = np.argmax(pg)
+                i = int(np.argmax(np.diff(pg)))
                 win = (tg > tg[i] - 0.004) & (tg < tg[i] + 0.012)
                 scale, lbl = 1.0, "unshielded front shock"
             else:
                 P = np.fft.rfft(pg)
                 f = np.fft.rfftfreq(pg.size, tg[1] - tg[0])
                 ph_ = np.fft.irfft(np.where(f >= 20, P, 0), pg.size)
-                i = np.argmax(np.abs(ph_))
-                win = (tg > tg[i] - 0.010) & (tg < tg[i] + 0.010)
+                i = int(np.argmax(np.diff(ph_)))
+                win = (tg > tg[i] - 0.010) & (tg < tg[i] + 0.012)
                 scale, lbl = 10.0, "1 km shield: leak pulse ×10"
             t0 = tg[i]
             for j in range(4):
@@ -647,7 +650,7 @@ def plot(W, geo):
                 pt = TU.apply_kernel(pg, kk, i0)
                 a.plot(1e3 * (tg[win] - t0), scale * pt[win], color=col, lw=0.8, alpha=0.5)
             a.plot(1e3 * (tg[win] - t0), scale * pg[win], color=ink if k == "none" else col, lw=2.0, label=lbl)
-        a.set_xlabel("time re peak [ms]")
+        a.set_xlabel("time re steepest compression [ms]")
         a.set_ylabel("overpressure [Pa]")
         a.set_title("(f) φ = 0: deterministic (thick) and 4 turbulent realisations", loc="left", fontsize=9)
         a.legend(frameon=False, fontsize=7)
