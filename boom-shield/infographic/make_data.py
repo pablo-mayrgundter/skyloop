@@ -280,8 +280,9 @@ def sim_entry(f, base, sh, far, src, cutoff_km, ovr=None):
                               note=("at the outermost computed azimuth; the carpet edge beyond it was not computed"
                                     if abs(g(sh, "y_at_max_km") - g(sh, "y_max_km")) < 0.05 else None))),
         delta_headline_db=dict(
-            undertrack=V(r1(d8), src, R_m="8 km", note="less favourable of raw and proxy"),
-            carpet_max=V(r1(g(sh, "d_max")), src, R_m="3 km"),
+            undertrack=V(r1(d8), src, R_m="8 km", note="less favourable of raw and proxy",
+                         raw=r1(ut8_r - un_ut_r)),
+            carpet_max=V(r1(g(sh, "d_max")), src, R_m="3 km", raw=r1(g(sh, "d_max_raw"))),
             turbulence_paired_note=V("headline deltas conservative by ~5.6-8.3 dB at W 1 km (Concorde M2); paired turbulent delta ~ raw delta",
                                      "wt", tag="simulated")),
         shielded_strip=V(dict(half_width_km_ge10dB=r1(g(sh, "strip_half_km")),
@@ -327,7 +328,10 @@ def build(cache):
               cruise_reference=dict(
                   published_overpressure_psf=V(0.9, ["nasa_fs016", "valp"], "published",
                                                note="M3 at 80,000 ft (24.4 km); repo model gives 0.99 psf"),
-                  measured_pldb=V(None, [], "published", note="no published PLdB found")),
+                  measured_pldb=V(None, [], "published", note="no published PLdB found"),
+                  simulated_at_24_4_km=V({k: r1(v) for k, v in ovr["sr71_cruise_24_4km"].items()} if ovr and "sr71_cruise_24_4km" in ovr else None,
+                                         "ovr_run", "simulated",
+                                         note="unshielded undertrack, M3.0 at 80,000 ft (repo SR-71 validation preset), direct near-field path")),
               note="Highest Mach simulated; widest carpet, so the far-edge shielding (about -21 dB) is weakest.")
 
     if ovr and "O1.7_h250_W1000_H230" in ovr:
@@ -352,8 +356,10 @@ def build(cache):
                                 note="Mach cut-off: the boom refracts upward and does not reach the ground; at M1.7 over water Overture does boom"),
               note="Same pipeline and numerics as Concorde/SR-71 (R_m 3 km all azimuths, 8 km near track); Overture's real shape is not modelled (Sears-Haack + lift).")
     if ovr and "O1.7_h250_none" in ovr and "cruise_18_3km" in ovr:
-        ov["cruise_reference"] = dict(simulated_at_18_3_km=V(ovr["cruise_18_3km"], "ovr_run", "simulated",
-                                                             note="unshielded undertrack, direct near-field path"))
+        ov["cruise_reference"] = dict(simulated_at_18_3_km=V({k: r1(v) for k, v in ovr["cruise_18_3km"].items()},
+                                                             "ovr_run", "simulated",
+                                                             note="unshielded undertrack at 60,000 ft, direct near-field path; the modelled front is not yet fully steepened there (~13 ms rise vs ~1 ms at 20.25 km), so it comes out ~2 dB quieter than at 20.25 km; indicative only"),
+                                      published_pldb=V(None, [], "published", note="Boom publishes no Mach 1.7 boom level"))
 
     c14 = "C1.4_h250_W1000_He30"
     d_ut14, d_mx14 = f(c14 + "_R8000", "d_ut"), f(c14, "d_max")
@@ -485,16 +491,16 @@ def build(cache):
     ovl = ov_sim.get("delta_headline_db", {}) if isinstance(ov_sim, dict) else {}
     ovtxt = ""
     if ovl:
-        ovtxt = (f" Boom Overture (M1.7, simulated): {ovl['undertrack']['value']} dB undertrack, "
-                 f"{ovl['carpet_max']['value']} dB at the carpet maximum.")
+        ovtxt = " (Boom Overture, M1.7, simulated with an estimated preset: %s dB undertrack, %s dB at the carpet maximum)" % (
+            ovl['undertrack']['value'], ovl['carpet_max']['value'])
     findings = [
-        V("A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and about 25 dB at the loudest point of the carpet (conservative), turning a ~98-108 PLdB boom into ~64-73 PLdB.", ["r3d_sum", "r3d_csv"]),
+        V("A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and about 25 dB at the loudest point of the carpet (conservative), taking it from ~98 PLdB (conservative proxy scale; ~108 raw) to ~64 PLdB under the track and at most ~73 PLdB anywhere in the computed carpet.", ["r3d_sum", "r3d_csv"]),
         V("Width, not gas or thickness, sets the result: 250 m wide gives only -8 to -9 dB and 500 m about -21 dB undertrack, because sound diffracts around the edges.", "r3d_sum"),
-        V("The result holds across speeds: about -33 to -35 dB undertrack for Concorde at Mach 1.4 and 2 and the SR-71 at Mach 3.2." + ovtxt, ["r3d_csv", "ovr_run"]),
+        V("The result holds from Mach 1.4 to 3.2: about -33 to -36 dB under the track and -21 to -29 dB at the loudest point for Concorde, Overture and the SR-71" + ovtxt + ".", ["r3d_csv", "ovr_run"]),
         V("These are conservative: with realistic turbulence the reduction is about 5-8 dB larger, and wind barely changes it (<=0.4 dB undertrack) though it moves where the carpet lands.", "wt"),
         V("Only a soft structure works: anything stiff that holds the faces apart (struts, stiff ties, drop-stitch, vacuum frames) or any open gap leaks the boom through; the floating-lid pillow is the baseline.", ["struct", "vac", "at"]),
         V("The hard problems are not acoustic: mooring a 1 km layer at 20 km against the jet stream (350-630 kN drag per tether, 800-2,000 tethers), a ~10 % daily lift swing, and 0.74 Mt of hydrogen next to air traffic.", ["addendum", "struct"]),
-        V("Shaping (X-59, ~75 PLdB) and Boom's Mach-cutoff 'Boomless Cruise' (M1.1-1.3) attack the same problem at low Mach; a shield's niche is Mach 1.7 and above, where neither applies.", ["x59_target_ntrs", "boomless_faq", "addendum"]),
+        V("Shaping (X-59, ~75 PLdB) and Boom's Mach-cutoff 'Boomless Cruise' (M1.1-1.3) work only at low Mach; a shield's niche is faster flight (Overture's Mach 1.7 and especially Mach 2+), where neither applies.", ["x59_target_ntrs", "boomless_faq", "addendum"]),
     ]
 
     data = dict(

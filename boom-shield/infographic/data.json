@@ -354,7 +354,8 @@
      "metric": "proxy (headline)",
      "raw_pldb": 76.0,
      "R_m": "3 km (all azimuths)",
-     "at_y_km": 39.3
+     "at_y_km": 39.3,
+     "note": "at the outermost computed azimuth; the carpet edge beyond it was not computed"
     }
    },
    "delta_headline_db": {
@@ -366,7 +367,8 @@
      ],
      "tag": "simulated",
      "R_m": "8 km",
-     "note": "less favourable of raw and proxy"
+     "note": "less favourable of raw and proxy",
+     "raw": -40.9
     },
     "carpet_max": {
      "value": -25.0,
@@ -375,7 +377,8 @@
       "r3d_sum"
      ],
      "tag": "simulated",
-     "R_m": "3 km"
+     "R_m": "3 km",
+     "raw": -32.5
     },
     "turbulence_paired_note": {
      "value": "headline deltas conservative by ~5.6-8.3 dB at W 1 km (Concorde M2); paired turbulent delta ~ raw delta",
@@ -514,7 +517,8 @@
      "metric": "proxy (headline)",
      "raw_pldb": 75.5,
      "R_m": "3 km (all azimuths)",
-     "at_y_km": 42.3
+     "at_y_km": 42.3,
+     "note": "at the outermost computed azimuth; the carpet edge beyond it was not computed"
     }
    },
    "delta_headline_db": {
@@ -526,7 +530,8 @@
      ],
      "tag": "simulated",
      "R_m": "8 km",
-     "note": "less favourable of raw and proxy"
+     "note": "less favourable of raw and proxy",
+     "raw": -42.9
     },
     "carpet_max": {
      "value": -20.8,
@@ -535,7 +540,8 @@
       "r3d_sum"
      ],
      "tag": "simulated",
-     "R_m": "3 km"
+     "R_m": "3 km",
+     "raw": -27.5
     },
     "turbulence_paired_note": {
      "value": "headline deltas conservative by ~5.6-8.3 dB at W 1 km (Concorde M2); paired turbulent delta ~ raw delta",
@@ -573,6 +579,21 @@
      "src": [],
      "tag": "published",
      "note": "no published PLdB found"
+    },
+    "simulated_at_24_4_km": {
+     "value": {
+      "altitude_m": 24400.0,
+      "mach": 3.0,
+      "pldb_raw": 101.9,
+      "pldb_proxy": 92.3,
+      "peak_pa": 47.4,
+      "peak_psf": 1.0
+     },
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "note": "unshielded undertrack, M3.0 at 80,000 ft (repo SR-71 validation preset), direct near-field path"
     }
    },
    "note": "Highest Mach simulated; widest carpet, so the far-edge shielding (about -21 dB) is weakest."
@@ -701,11 +722,11 @@
    },
    "preset": {
     "value": {
-     "weight_N": null,
+     "weight_N": 608220.0,
      "mid_cruise_mass_t": 62,
-     "volume_m3": null,
-     "lift_start": null,
-     "lift_end": null
+     "volume_m3": 300.0,
+     "lift_start": 0.4,
+     "lift_end": 0.9
     },
     "src": [
      "ovr_preset"
@@ -730,7 +751,101 @@
     "note": "up to 60,000 ft"
    },
    "shield_case": "W 1 km, H2 30 m slab, h 250 m",
-   "pending": "run make_data.py --run first",
+   "unshielded": {
+    "undertrack_pldb": {
+     "value": 92.8,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 102.4
+    },
+    "carpet_max_pldb": {
+     "value": 92.8,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 102.4,
+     "note": "unshielded carpet maximum is undertrack"
+    }
+   },
+   "shielded": {
+    "undertrack_pldb": {
+     "value": 56.4,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 58.8,
+     "R_m": "8 km near-track re-run"
+    },
+    "undertrack_pldb_R3": {
+     "value": 51.3,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy",
+     "raw_pldb": 53.2,
+     "R_m": "3 km (2-7 dB optimistic near track)"
+    },
+    "carpet_max_pldb": {
+     "value": 65.7,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 68.7,
+     "R_m": "3 km (all azimuths)",
+     "at_y_km": 24.5,
+     "note": null
+    }
+   },
+   "delta_headline_db": {
+    "undertrack": {
+     "value": -36.4,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "R_m": "8 km",
+     "note": "less favourable of raw and proxy",
+     "raw": -43.6
+    },
+    "carpet_max": {
+     "value": -27.1,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "R_m": "3 km",
+     "raw": -33.7
+    },
+    "turbulence_paired_note": {
+     "value": "headline deltas conservative by ~5.6-8.3 dB at W 1 km (Concorde M2); paired turbulent delta ~ raw delta",
+     "src": [
+      "wt"
+     ],
+     "tag": "simulated"
+    }
+   },
+   "shielded_strip": {
+    "value": {
+     "half_width_km_ge10dB": 35.3,
+     "computed_to_km": 35.3,
+     "carpet_half_width_km": 42.9
+    },
+    "src": [
+     "ovr_run"
+    ],
+    "tag": "simulated",
+    "note": "contiguous half-width from the track with headline delta <= -10 dB; '>=' when it reaches the last computed azimuth"
+   },
    "boomless_cruise": {
     "value": {
      "mach_typical": "1.1-1.2",
@@ -744,7 +859,30 @@
     "tag": "published",
     "note": "Mach cut-off: the boom refracts upward and does not reach the ground; at M1.7 over water Overture does boom"
    },
-   "note": "Same pipeline and numerics as Concorde/SR-71 (R_m 3 km all azimuths, 8 km near track); Overture's real shape is not modelled (Sears-Haack + lift)."
+   "note": "Same pipeline and numerics as Concorde/SR-71 (R_m 3 km all azimuths, 8 km near track); Overture's real shape is not modelled (Sears-Haack + lift).",
+   "cruise_reference": {
+    "simulated_at_18_3_km": {
+     "value": {
+      "altitude_m": 18288.0,
+      "mach": 1.7,
+      "pldb_raw": 100.3,
+      "pldb_proxy": 91.6,
+      "peak_pa": 53.9,
+      "peak_psf": 1.1
+     },
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "note": "unshielded undertrack at 60,000 ft, direct near-field path; the modelled front is not yet fully steepened there (~13 ms rise vs ~1 ms at 20.25 km), so it comes out ~2 dB quieter than at 20.25 km; indicative only"
+    },
+    "published_pldb": {
+     "value": null,
+     "src": [],
+     "tag": "published",
+     "note": "Boom publishes no Mach 1.7 boom level"
+    }
+   }
   }
  ],
  "boom_refs": [
@@ -1265,7 +1403,7 @@
  ],
  "headline_findings": [
   {
-   "value": "A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and about 25 dB at the loudest point of the carpet (conservative), turning a ~98-108 PLdB boom into ~64-73 PLdB.",
+   "value": "A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and about 25 dB at the loudest point of the carpet (conservative), taking it from ~98 PLdB (conservative proxy scale; ~108 raw) to ~64 PLdB under the track and at most ~73 PLdB anywhere in the computed carpet.",
    "src": [
     "r3d_sum",
     "r3d_csv"
@@ -1280,7 +1418,7 @@
    "tag": "simulated"
   },
   {
-   "value": "The result holds across speeds: about -33 to -35 dB undertrack for Concorde at Mach 1.4 and 2 and the SR-71 at Mach 3.2.",
+   "value": "The result holds from Mach 1.4 to 3.2: about -33 to -36 dB under the track and -21 to -29 dB at the loudest point for Concorde, Overture and the SR-71 (Boom Overture, M1.7, simulated with an estimated preset: -36.4 dB undertrack, -27.1 dB at the carpet maximum).",
    "src": [
     "r3d_csv",
     "ovr_run"
@@ -1312,7 +1450,7 @@
    "tag": "simulated"
   },
   {
-   "value": "Shaping (X-59, ~75 PLdB) and Boom's Mach-cutoff 'Boomless Cruise' (M1.1-1.3) attack the same problem at low Mach; a shield's niche is Mach 1.7 and above, where neither applies.",
+   "value": "Shaping (X-59, ~75 PLdB) and Boom's Mach-cutoff 'Boomless Cruise' (M1.1-1.3) work only at low Mach; a shield's niche is faster flight (Overture's Mach 1.7 and especially Mach 2+), where neither applies.",
    "src": [
     "x59_target_ntrs",
     "boomless_faq",
