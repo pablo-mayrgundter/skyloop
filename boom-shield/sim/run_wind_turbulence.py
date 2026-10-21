@@ -61,7 +61,7 @@ CASES = {
 CASE_LABEL = {"calm": "calm", "jet_head": "jet, headwind", "jet_tail": "jet, tailwind",
               "jet_cross": "jet, crosswind (+y)", "qbo_head": "QBO easterly, headwind"}
 PHI_SH = [0.0, 6.0, 16.0, 24.0, 36.0, 48.0]                 # shielded configs
-PHI_W500 = [0.0, 16.0, 24.0, 48.0]                          # (cost: W 500 m runs are slowest)
+PHI_W500 = [0.0, 16.0, 24.0, 48.0]          # W 500 m runs are slowest (cross: -24, -48 added)
 PHI_UN = [0.0, 3.0, 6.0, 12.0, 16.0, 24.0, 30.0, 36.0, 42.0, 48.0, 54.0]
 TURB_PHI = [0.0, 24.0, 48.0]
 Z_SCREEN = 500.0
@@ -173,7 +173,8 @@ def phis_for(cfgkey, case):
     if cfgkey == "none" and case == "qbo_head":
         base = PHI_SH
     if case == "jet_cross":
-        return [-p for p in base[::-1] if p > 0] + base
+        neg = [p for p in base if p > 0] if cfgkey != "W500" else [24.0, 48.0]
+        return [-p for p in neg[::-1]] + base
     return base
 
 
@@ -258,6 +259,8 @@ def frame_table():
 def run_frame():
     for cfgkey in ("W1000", "W500"):
         for dV, tag in ((-15.0, "frame_m15"), (15.0, "frame_p15"), (-60.0, "frame_m60"), (60.0, "frame_p60")):
+            if cfgkey == "W500" and abs(dV) > 20:
+                continue
             for ph in (0.0,):
                 wind_job(cfgkey, "calm", ph, spec_factor=frame_transfer(cfgkey, dV), tag=tag)
 
