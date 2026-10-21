@@ -29,8 +29,15 @@ Stages (cached under results/alongtrack_cache/, resumable):
   scatter   non-specular orders of the serrated fringes (all cases)
   joints    joint orders + n = 0 leak spectra on the matching circles
   specular  nonlinear ground propagation of the n = 0 parts
+  hf        short-period serrations with the scattered field to 1 kHz
+  jextra    extra joint gaps (open 0.1-0.5 m, membranes 2 and 10 m), scattered part
   report    tables (stdout), results/alongtrack_results.csv, alongtrack_budget.csv,
             figures results/alongtrack_*.png
+  burgers   re-steepening check: dominant scattered tone burst through propagate(),
+            nonlinear vs linear (needs report first)
+
+Full run used: valid scatter joints specular; then hf jextra; then report burgers
+(~5.5 h with 2 worker processes).
 
 Run:  python boom-shield/sim/run_alongtrack.py [stage ...] [--procs 2]
 Uses at most --procs worker processes (default 2) with single-threaded BLAS.
@@ -628,7 +635,6 @@ def report():
         d = load(case_name(shape, Lam, w_f, seed) + ".pkl")
         if d is not None:
             cases[(shape, Lam, w_f, seed)] = d
-    summ = []
 
     def add_rows(label, key, tag, E, phis, R, extra):
         out = []
@@ -650,9 +656,6 @@ def report():
             out.append(row)
         return out
 
-    # references
-    for tag, label in (("sharp_cached", "sharp edge (run_3d)"), ("fringe", "x-averaged raised-cosine fringe 150 m")):
-        pass
     ref_rows = []
     for (ph, b, cr), r in sorted(g_sharp.items()):
         if b != "full" or cr != R3.CROP_REL or r["metrics"] is None:
@@ -1111,7 +1114,8 @@ def figures(cases, jsc, rows_csv, so_tab, ycut, v):
     ax.set_xlabel("ground lateral offset y_g [km]")
     ax.set_ylabel("PLdB of the scattered orders alone (raw)")
     ax.set_title("Where the scattered orders land (x-averaged, both fringes)", loc="left", fontsize=9)
-    ax.set_ylim(0, 100)
+    ax.set_ylim(0, 125)
+    ax.set_yticks(range(0, 101, 20))
     ax.legend(frameon=False, fontsize=7, ncol=2, loc="upper left")
     _style(ax)
     fig.tight_layout()
