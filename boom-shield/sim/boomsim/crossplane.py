@@ -60,7 +60,15 @@ closed by vertical rim membranes of height T_rim. Top/bottom faces: limp membran
 ``shield.Membrane`` with x-tension); sides ``m_side``; internal vertical partitions at
 ``partitions`` (y list) with ``m_part``. Ties: smeared ``tie_K`` [Pa/m] (float or
 callable of y) between top and bottom faces at the same y, and/or ``line_ties`` =
-[(y, k_line [Pa = N/m per m of length])] discrete springs.
+[(y, k_line [Pa = N/m per m of length]) or (y, k_line, b)] discrete springs attached to
+each face over a strip of width b (``line_tie_width`` if not given per tie). The BEM
+faces have no lateral (y) tension, so a line tie on them is a spring between two face
+strips of mass m b: its effect depends on b (strip resonance ~ sqrt(2 k_line/(m b))/2pi,
+and it decouples as b -> 0). With b given, the strip is resolved by the mesh (non-uniform
+mesh: nodes at y +- b/2; uniform mesh: spread over the overlapping panels, a warning if
+b < panel size). With b = None (legacy) the tie acts on the single panel containing y, so
+the result depends on the element size (which is lambda_perp/10 ~ 34/f m at Mach 2) -
+see results/line_ties_check.md; a RuntimeWarning is issued.
 
 Edge fringe (apodised / serrated edge), ``fringe_width`` w_f > 0: on each side a
 coverage profile tau(y) (fraction of x covered by shield at lateral position y) runs
@@ -145,6 +153,7 @@ from __future__ import annotations
 
 import math
 import os
+import warnings
 from dataclasses import dataclass
 from typing import Sequence
 
@@ -173,7 +182,8 @@ class CrossPlaneConfig:
     m_part: object = None             # None -> m_bot
     partitions: Sequence = ()         # y positions of internal vertical partitions
     tie_K: object = 0.0               # Pa/m, float or callable(y)
-    line_ties: Sequence = ()          # [(y, k_line [Pa])]
+    line_ties: Sequence = ()          # [(y, k_line [Pa])] or [(y, k_line, b [m])]
+    line_tie_width: float | None = None  # attachment width b [m] of line ties (None: one panel, legacy)
     y_left: float | None = None       # asymmetric edges (override W)
     y_right: float | None = None
     T_rim: float | None = None        # lens rim thickness (default 0.1 T)
@@ -347,6 +357,15 @@ class CrossPlaneConfig:
         df = self.df if self.df is not None else self.auto_df()
         n = int(math.floor(self.f_max / df + 1e-9))
         return np.arange(n + 1) * df
+
+
+def _line_tie_list(cfg):
+    """[(y, k_line, b or None)] from cfg.line_ties / cfg.line_tie_width."""
+    out = []
+    for t in cfg.line_ties:
+        b = t[2] if len(t) > 2 else cfg.line_tie_width
+        out.append((float(t[0]), float(t[1]), None if b is None else float(b)))
+    return out
 
 
 def _as_membrane(m):
@@ -611,6 +630,13 @@ def build_mesh(cfg: CrossPlaneConfig, f: float, h_elem: float | None = None, uni
         parts = sorted(set(float(y0 + round((p - y0) / h_e) * h_e) for p in parts))
         parts = [p for p in parts if y0 < p < y1]
     brk = [y0] + parts + [y1]
+    ltl = _line_tie_list(cfg)
+    if not uniform:   # resolve the attachment strips of line ties with a given width
+        edges = [e for (yk, _, b) in ltl if b is not None for e in (yk - 0.5 * b, yk + 0.5 * b)]
+        for e in edges:
+            if y0 < e < y1 and min(abs(e - x) for x in brk) > 1e-6:
+                brk.append(float(e))
+        brk = sorted(brk)
     yc, a = 0.5 * (y0 + y1), 0.5 * (y1 - y0)
     th_f = np.linspace(-np.pi / 2, np.pi / 2, 40001)
     yf = yc + a * np.sin(th_f)
@@ -708,12 +734,31 @@ def build_mesh(cfg: CrossPlaneConfig, f: float, h_elem: float | None = None, uni
         c_b = K[i] * s * abs(nzb[i]) * db[i]
         ties += [(it[i], ib[i], c_t * db[i]), (it[i], it[i], -c_t * dt[i]),
                  (ib[i], ib[i], -c_b * db[i]), (ib[i], it[i], c_b * dt[i])]
-    for (yk, kl) in cfg.line_ties:
-        i = int(np.clip(np.searchsorted(yn, yk) - 1, 0, nf - 1))
-        c_t = kl * s / P.L[it[i]] * dt[i]
-        c_b = kl * s / P.L[ib[i]] * db[i]
-        ties += [(it[i], ib[i], c_t * db[i]), (it[i], it[i], -c_t * dt[i]),
-                 (ib[i], ib[i], -c_b * db[i]), (ib[i], it[i], c_b * dt[i])]
+    legacy = False
+    for (yk, kl, bw) in ltl:
+        if bw is None:   # legacy: the single panel containing yk (element-size dependent)
+            legacy = True
+            idx = np.array([int(np.clip(np.searchsorted(yn, yk) - 1, 0, nf - 1))])
+            wts = np.ones(1)
+        else:            # uniform force over [yk - b/2, yk + b/2]; elongation = strip mean
+            ov = np.minimum(yn[1:], yk + 0.5 * bw) - np.maximum(yn[:-1], yk - 0.5 * bw)
+            idx = np.nonzero(ov > 1e-9 * bw)[0]
+            if idx.size == 0:
+                continue
+            wts = ov[idx] / np.sum(ov[idx])
+            if uniform and bw < 0.99 * h_e:
+                warnings.warn(f"line tie width {bw:g} m < panel size {h_e:.3g} m on the uniform "
+                              "mesh: the tie acts over the panel (mesh-dependent)", RuntimeWarning)
+        for i, wi in zip(idx, wts):
+            c_t = kl * s * wi / P.L[it[i]] * dt[i]
+            c_b = kl * s * wi / P.L[ib[i]] * db[i]
+            for j, wj in zip(idx, wts):
+                ties += [(it[i], ib[j], c_t * wj * db[j]), (it[i], it[j], -c_t * wj * dt[j]),
+                         (ib[i], ib[j], -c_b * wj * db[j]), (ib[i], it[j], c_b * wj * dt[j])]
+    if legacy:
+        warnings.warn("line ties without a width act on one boundary element: on the tension-free "
+                      "BEM faces the result depends on the element size (set line_tie_width; see "
+                      "results/line_ties_check.md)", RuntimeWarning)
     mesh["ties"] = ties
     return mesh
 
@@ -808,7 +853,7 @@ def po_solve(cfg: CrossPlaneConfig, f: float, a=None, theta_factor=1.0, dy_lambd
     if len(cfg.line_ties):
         yt = np.sort([t[0] for t in cfg.line_ties])
         sp_ = np.gradient(yt) if yt.size > 1 else np.array([cfg.W])
-        for (yk, kl), s in zip(sorted(cfg.line_ties), sp_):
+        for (yk, kl, _), s in zip(sorted(_line_tie_list(cfg)), sp_):
             m = np.abs(y - yk) <= 0.5 * s
             K[m] += kl / s
     rho_max = float(np.max(np.hypot(np.abs(za), np.maximum(abs(e0), abs(e1)))))

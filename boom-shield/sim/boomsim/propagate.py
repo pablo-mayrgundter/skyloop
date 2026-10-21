@@ -24,6 +24,17 @@ propagation_filter(f, T, p, c, h, ds, ...) -> complex H(f) for one linear step
 propagation_exponent(...) -> ln H(f) (attenuation + dispersive phase)
 uniform_atmosphere(z_ref=0.0) -> callable giving a height-independent Atm (tests)
 
+Wind (optional; every entry point takes ``wind=None`` = the windless model, unchanged)
+------------------------------------------------------------------------------------
+WindProfile(z, u, v=None, name="")  horizontally stratified wind, u along the flight track
+    (+x), v across it (+y = side of positive phi).  WindProfile.uniform(u, v),
+    WindProfile.from_speed(z, speed, toward_deg), calm(), jet_stream_winter(toward_deg),
+    qbo_easterly(toward_deg) (representative profiles, sources in their docstrings).
+RayPath(..., wind=...), propagate(..., wind=...), ground_signature(..., wind=...),
+propagate_from_circle(..., wind=...), circle_start_factors(..., wind=...),
+ground_carpet(..., wind=...), lateral_cutoff(..., wind=..., side=+1|-1).
+See the "Moving medium" section below.
+
 Geometry (no wind, stratified)
 ------------------------------
 Off-track rays: see :class:`RayPath` (horizontal slowness (1/V, s_y) conserved,
@@ -37,6 +48,38 @@ width from an azimuth increment (s_y = dphi * s_z(z_a) conserved, so
 dy = dphi s_z(z_a) int_z^{z_a} dz'/s_z):  A(z) ~ c s_z * int_z^{z_a} dz'/s_z.
 In a uniform atmosphere this is A ~ (z_a - z) ~ distance (cylindrical spreading).
 Linear amplitude invariant (Blokhintzev, no wind): p sqrt(A/(rho c)) = const.
+
+Moving medium (``wind`` given; ground frame, aircraft holding a ground track along +x)
+-----------------------------------------------------------------------------------
+Wind w(z) = (u, v, 0).  The aircraft flies at air speed V = M c(z_a) and crabs into the
+crosswind so that its ground velocity is (V_g, 0), V_g = sqrt(V^2 - v_a^2) + u_a (yaw
+eps = -asin(v_a/V)).  Launch wave normals n lie on the Mach cone about the AIR velocity
+(azimuth phi about that axis, as in the cross-plane solver); the ground-frame slowness is
+s = n/(c_a + w_a.n) (eikonal c|s| = 1 - w.s), which gives s.V_g = 1, i.e. s_x = 1/V_g for
+every phi.  In a horizontally stratified, steady medium (s_x, s_y) is conserved; with the
+Doppler ratio Omega(z) = 1 - w.s_h (= intrinsic/ground frequency) the vertical slowness is
+s_z^2 = Omega^2/c^2 - s_x^2 - s_y^2 (cut-off where it vanishes), and the ray velocity is
+c n + w = c^2 s/Omega + w, so per unit depth
+    dx = (s_x + u Omega/c^2) dz/s_z,  dy = (s_y + v Omega/c^2) dz/s_z,  dt = Omega dz/(c^2 s_z).
+Amplitude: Blokhintzev invariant (wave-action flux, Pierce 1989 sec. 8-6)
+p^2 |v_ray| A/(rho c^2 Omega) = const; with |v_ray| A = v_z A_h and the horizontal footprint
+A_h ~ dY/dphi (steady flight) this is p^2 s_z (dY/dphi)/(rho Omega^2) = const, with
+dY/dphi = (ds_y/dphi) int [(1 - v^2/c^2)/s_z + a^2/s_z^3] dz, a = s_y + v Omega/c^2.
+``area`` returns K c s_z (dY/dphi)/Omega^2 (K: -> c_a r at the source, r = air-frame
+distance from the flight axis), so ``amplitude_ratio`` keeps its windless form.
+Retarded time is the ground-frame tau = t - T(x) (what a ground microphone records).
+In the local air frame a plane wave obeys Burgers with intrinsic retarded time
+tau' = tau/Omega over air-frame path dsigma = c dt, so in tau:
+    nonlinearity  dp/ds_e = beta/(rho c^3) p dp/dtau  with ds_e = Omega dsigma
+                  (``nz`` returns dz/ds_e = c s_z/Omega^2, used by :func:`propagate`);
+    absorption/dispersion: the windless filter at the intrinsic frequency Omega f over
+                  dsigma (``s`` returns sigma; ``omega(z)`` gives Omega).
+Signatures specified in the air frame (near field, uniform-air matching circle) have their
+time axis multiplied by Omega at the start point (a ground observer sees the pattern
+sweep by at V_g, not V).  Uniform wind therefore reduces exactly to a Galilean shift of the
+windless solution (tested).  Not included: wind shear across the matching circle and the
+crab angle in the source/shield model; the shield itself sees the ground-frame trace
+speed V_g (see run_wind_turbulence.py).
 
 The near field from :func:`boomsim.source.near_field` is computed at radial distance
 r0 from the flight axis; for the undertrack ray that is exactly the depth below the
@@ -104,6 +147,96 @@ def uniform_atmosphere(z_ref: float = 0.0):
         return Atm(z=z, T=a0.T * one, p=a0.p * one, rho=a0.rho * one, c=a0.c * one)
 
     return atm
+
+
+# ------------------------------------------------------------------------------
+# wind profiles (horizontally stratified moving medium)
+# ------------------------------------------------------------------------------
+class WindProfile:
+    """Horizontal wind (u(z), v(z)) [m/s] in flight-track axes: u along the track (+x,
+    the flight direction; u > 0 = tailwind), v across it (+y, toward positive phi).
+    Piecewise-linear in z between the knots, constant beyond them.  Callable:
+    ``wind(z) -> (u, v)`` (arrays shaped like z)."""
+
+    def __init__(self, z, u, v=None, name=""):
+        self.z = np.asarray(z, dtype=float)
+        self.u = np.asarray(u, dtype=float) * np.ones_like(self.z)
+        self.v = (np.zeros_like(self.z) if v is None
+                  else np.asarray(v, dtype=float) * np.ones_like(self.z))
+        if self.z.ndim != 1 or np.any(np.diff(self.z) <= 0):
+            raise ValueError("WindProfile knots z must be strictly increasing")
+        self.name = name
+
+    def __call__(self, z):
+        z = np.asarray(z, dtype=float)
+        return np.interp(z, self.z, self.u), np.interp(z, self.z, self.v)
+
+    def __repr__(self):
+        return f"WindProfile({self.name or 'unnamed'})"
+
+    @classmethod
+    def uniform(cls, u=0.0, v=0.0, name=""):
+        return cls([-1e6, 1e6], [u, u], [v, v], name=name or f"uniform({u:g},{v:g})")
+
+    @classmethod
+    def from_speed(cls, z, speed, toward_deg=0.0, name=""):
+        """Unidirectional profile: ``speed(z)`` blowing TOWARD ``toward_deg`` measured from
+        the flight track (0 = tailwind, 180 = headwind, 90 = crosswind toward +y)."""
+        a = np.radians(float(toward_deg))
+        sp = np.asarray(speed, dtype=float)
+        return cls(z, sp * np.cos(a), sp * np.sin(a), name=name)
+
+    def is_calm(self) -> bool:
+        return bool(np.all(self.u == 0.0) and np.all(self.v == 0.0))
+
+
+def calm():
+    """No wind (as a WindProfile; exercises the moving-medium code with w = 0)."""
+    return WindProfile.uniform(0.0, 0.0, name="calm")
+
+
+# Representative profiles (speed [m/s] vs altitude [km]); see results/wind_turbulence.md.
+JET_KM = [0.0, 0.5, 1.0, 3.0, 6.0, 9.0, 10.5, 12.0, 13.5, 15.0, 17.0, 20.0, 22.0, 26.0]
+JET_MS = [3.0, 8.0, 10.0, 18.0, 35.0, 55.0, 65.0, 65.0, 50.0, 35.0, 22.0, 15.0, 15.0, 15.0]
+QBO_KM = [0.0, 0.5, 2.0, 6.0, 12.0, 15.0, 17.0, 19.0, 20.0, 22.0, 26.0]
+QBO_MS = [3.0, 6.0, 7.0, 5.0, 6.0, 8.0, 12.0, 20.0, 25.0, 28.0, 30.0]
+
+
+def jet_stream_winter(toward_deg=0.0):
+    """Mid-latitude winter jet stream (westerly; one-directional for simplicity).
+
+    65 m/s core at 10.5-12 km (just below the ~11-12 km winter tropopause), 35 m/s at
+    6 and 15 km, 15 m/s at 20 km and above, 3-10 m/s in the boundary layer.  Within the
+    typical range of winter polar-front jets over North America/Europe (core 250-300 hPa,
+    typically ~100 kt = 50 m/s, up to 200 kt; e.g. SKYbrary "Jet Stream"; Holton & Hakim,
+    An Introduction to Dynamic Meteorology, 5th ed., 2013, ch. 1 and 10, DJF zonal-mean
+    cross-sections) and of the lower-stratospheric wind minimum near 50 hPa (~20 km)
+    in winter mid-latitudes, where the westerlies drop to 10-20 m/s.
+    ``toward_deg``: 0 = tailwind, 180 = headwind, 90 = crosswind toward +y."""
+    return WindProfile.from_speed(np.array(JET_KM) * 1e3, JET_MS, toward_deg,
+                                  name=f"winter jet -> {toward_deg:g} deg")
+
+
+def qbo_easterly(toward_deg=180.0):
+    """Stratospheric easterly (QBO easterly phase, equatorial): 25 m/s at 20 km rising to
+    30 m/s at 26 km, weak easterlies (5-8 m/s, trades) below 15 km.  Baldwin et al., The
+    quasi-biennial oscillation, Rev. Geophys. 39 (2001) 179-229 (Singapore winds; easterly
+    phase stronger than westerly, ~30-35 m/s near 20-30 hPa); Pahlavan et al., QBO in
+    ERA5, QJRMS 2021 (arXiv:2008.10146).  ``toward_deg`` relative to the track; the default
+    180 (headwind) is an eastbound flight."""
+    return WindProfile.from_speed(np.array(QBO_KM) * 1e3, QBO_MS, toward_deg,
+                                  name=f"QBO easterly -> {toward_deg:g} deg")
+
+
+def _as_wind(wind):
+    """None -> None; (u, v) tuple -> uniform profile; callable z -> (u, v) kept."""
+    if wind is None:
+        return None
+    if isinstance(wind, tuple) and len(wind) == 2 and np.isscalar(wind[0]):
+        return WindProfile.uniform(float(wind[0]), float(wind[1]))
+    if not callable(wind):
+        raise TypeError("wind must be None, a (u, v) tuple or a callable z -> (u, v)")
+    return wind
 
 
 # ------------------------------------------------------------------------------
@@ -209,13 +342,21 @@ class RayPath:
     equals the finite difference of neighbouring traced rays (tested).
     """
 
+    wind = None          # windless model (class default; see _init_wind)
+
     def __init__(self, altitude, V, atmosphere=None, humidity=None, dz=2.0, z_min=0.0,
-                 phi=0.0, allow_cutoff=None):
+                 phi=0.0, allow_cutoff=None, wind=None):
         self.altitude = float(altitude)
         self.V = float(V)
         self.phi = float(phi)
         if not abs(self.phi) < 0.5 * np.pi:
             raise ValueError("phi must satisfy |phi| < pi/2 (downward rays)")
+        wind = _as_wind(wind)
+        self._ctor = dict(atmosphere=atmosphere, humidity=humidity, dz=dz, z_min=z_min,
+                          allow_cutoff=allow_cutoff)
+        if wind is not None:
+            self._init_wind(atmosphere, humidity, dz, z_min, allow_cutoff, wind)
+            return
         legacy = self.phi == 0.0
         if allow_cutoff is None:
             allow_cutoff = not legacy
@@ -286,6 +427,117 @@ class RayPath:
             self.lat_tab = float(np.cos(self.phi)) * self.I13_tab
         self.rhoc_tab = self.rho_tab * self.c_tab
 
+    # --- moving medium -----------------------------------------------------------
+    def _init_wind(self, atmosphere, humidity, dz, z_min, allow_cutoff, wind):
+        """Tables for the stratified moving medium (see the module docstring)."""
+        self.wind = wind
+        if allow_cutoff is None:
+            allow_cutoff = self.phi != 0.0
+        self._atm_fn = std_atm if atmosphere is None else atmosphere
+        n = int(np.ceil((self.altitude - z_min) / dz)) + 1
+        z = np.linspace(z_min, self.altitude, n)
+        a = self._atm_fn(z)
+        c = np.asarray(a.c, dtype=float) * np.ones_like(z)
+        c_a = float(c[-1])
+        if c_a >= self.V:
+            raise ValueError("no Mach cone: V <= c at the aircraft altitude")
+        ua, va = (float(np.asarray(x)) for x in wind(np.array(self.altitude)))
+        if abs(va) >= self.V:
+            raise ValueError("crosswind at the aircraft exceeds its air speed")
+        Vax = float(np.sqrt(self.V ** 2 - va ** 2))
+        self.c_a = c_a
+        self.V_ground = Vax + ua
+        self.yaw = float(np.arctan2(-va, Vax))       # air-velocity heading re the track
+        sin_mu = c_a / self.V
+        self.cos_mu0 = float(np.sqrt(1.0 - sin_mu ** 2))
+        ce, se = np.cos(self.yaw), np.sin(self.yaw)
+        sp, cp = np.sin(self.phi), np.cos(self.phi)
+        nt = np.array([sin_mu, self.cos_mu0 * sp, -self.cos_mu0 * cp])   # air-velocity axes
+        dnt = np.array([0.0, self.cos_mu0 * cp, self.cos_mu0 * sp])
+        rot = np.array([[ce, -se, 0.0], [se, ce, 0.0], [0.0, 0.0, 1.0]])
+        nv, dnv = rot @ nt, rot @ dnt
+        D = c_a + ua * nv[0] + va * nv[1]
+        dD = ua * dnv[0] + va * dnv[1]
+        s_launch = nv / D
+        self.sx = float(s_launch[0])                  # = 1/V_ground
+        self.sy = float(s_launch[1])
+        self.dsy_dphi = float((dnv[1] * D - nv[1] * dD) / D ** 2)
+        self.n_launch = nv
+
+        def tables(z):
+            a = self._atm_fn(z)
+            c = np.asarray(a.c, dtype=float) * np.ones_like(z)
+            u, v = (np.asarray(x, dtype=float) * np.ones_like(z) for x in wind(z))
+            om = 1.0 - u * self.sx - v * self.sy
+            q = om ** 2 / c ** 2 - self.sx ** 2 - self.sy ** 2
+            return a, c, u, v, om, q
+
+        a, c, u, v, om, q = tables(z)
+        if np.any(om <= 0.0):
+            raise ValueError("critical layer: wind component >= trace speed on the path")
+        if q[-1] <= 0.0:
+            raise ValueError("launch wave normal is not downward (phi too close to 90 deg)")
+        self.cutoff = False
+        self.z_turn = float("nan")
+        if np.any(q <= 0.0):
+            if not allow_cutoff:
+                raise ValueError(f"ray cut-off: turns above z_min (phi={self.phi:g})")
+            i = int(np.flatnonzero(q <= 0.0)[-1])
+            zt = float(z[i] + (z[i + 1] - z[i]) * (-q[i]) / (q[i + 1] - q[i]))
+            self.cutoff = True
+            self.z_turn = zt
+            z = np.concatenate([[zt], z[i + 1:]])
+            a, c, u, v, om, q = tables(z)
+            q[0] = 0.0
+        self.z_tab = z
+        self.T_tab = np.asarray(a.T, dtype=float) * np.ones_like(z)
+        self.p_tab = np.asarray(a.p, dtype=float) * np.ones_like(z)
+        self.rho_tab = np.asarray(a.rho, dtype=float) * np.ones_like(z)
+        self.c_tab = c
+        self.u_tab, self.v_tab, self.omega_tab = u, v, om
+        if humidity is None:
+            self.h_tab = molar_humidity(z, atm=a) * np.ones_like(z)
+        else:
+            self.h_tab = np.asarray(humidity(z), dtype=float) * np.ones_like(z)
+        sz = np.sqrt(np.maximum(q, 0.0))
+        self.sz_tab = sz
+
+        def cum(d):                         # integral from z_tab[k] up to z_a
+            return np.concatenate([np.cumsum(d[::-1])[::-1], [0.0]])
+
+        dzc = np.diff(z)
+        rs = sz[:-1] + sz[1:]
+        with np.errstate(divide="ignore", invalid="ignore"):
+            dI1 = 2.0 * dzc / rs
+            dI3 = 2.0 * dzc / (sz[:-1] * sz[1:] * rs)
+        cm, um, vm, omm = (0.5 * (x[:-1] + x[1:]) for x in (c, u, v, om))
+        am = self.sy + vm * omm / cm ** 2
+        self.xw_tab = cum((self.sx + um * omm / cm ** 2) * dI1)
+        self.yw_tab = cum(am * dI1)
+        self.tt_tab = cum(omm / cm ** 2 * dI1)
+        self.s_tab = cum(omm / cm * dI1)                       # air-frame path sigma
+        self.se_tab = cum(omm ** 2 / cm * dI1)                 # nonlinear path s_e
+        self.dY_tab = self.dsy_dphi * cum((1.0 - vm ** 2 / cm ** 2) * dI1 + am ** 2 * dI3)
+        # normalisation K: area -> c_a r at the source (air frame, locally uniform medium)
+        oa, sza, va_, aa = om[-1], sz[-1], v[-1], self.sy + v[-1] * om[-1] / c_a ** 2
+        dY1 = self.dsy_dphi * ((1.0 - va_ ** 2 / c_a ** 2) / sza + aa ** 2 / sza ** 3)
+        sig1 = oa / (c_a * sza)
+        K = c_a * sig1 * self.cos_mu0 / (c_a * dY1 * sza / oa ** 2)
+        self.nz_tab = c * sz / om ** 2                          # dz/ds_e
+        with np.errstate(invalid="ignore"):                     # inf * 0 at a turning point
+            self.area_tab = K * c * self.dY_tab * sz / om ** 2
+        self.rhoc_tab = self.rho_tab * self.c_tab
+
+    def with_wind(self, wind):
+        """The same ray (altitude, V, phi, atmosphere, ...) in the wind ``wind``."""
+        return RayPath(self.altitude, self.V, phi=self.phi, wind=wind, **self._ctor)
+
+    def omega(self, z):
+        """Doppler ratio Omega = 1 - w.s_h (intrinsic / ground-frame frequency); 1 if no wind."""
+        if self.wind is None:
+            return np.ones_like(np.asarray(z, dtype=float))
+        return self._i(self.omega_tab, z)
+
     def _i(self, tab, z):
         return np.interp(z, self.z_tab, tab)
 
@@ -300,16 +552,21 @@ class RayPath:
                    rho=self._i(self.rho_tab, z), c=self._i(self.c_tab, z))
 
     def nz(self, z):
-        """Vertical direction cosine of the ray, c s_z."""
+        """Vertical direction cosine of the ray, c s_z (with wind: dz/ds_e = c s_z/Omega^2,
+        the step factor of the nonlinear operator, see the module docstring)."""
         return self._i(self.nz_tab, z)
 
     def s(self, z):
-        """Arc length along the ray from the aircraft down to altitude z [m]."""
+        """Arc length along the ray from the aircraft down to altitude z [m] (with wind:
+        the air-frame path sigma = int c dt)."""
         return self._i(self.s_tab, z)
 
     def area(self, z):
         """Ray-tube area up to a constant: c s_z cos(phi) (I1 + s_y^2 I3) (-> c_a r at the
-        source; = c s_z int_z^{z_a} dz'/s_z undertrack)."""
+        source; = c s_z int_z^{z_a} dz'/s_z undertrack).  With wind: the Blokhintzev
+        effective area K c s_z (dY/dphi)/Omega^2."""
+        if self.wind is not None:
+            return self._i(self.area_tab, z)
         return self._i(self.nz_tab, z) * self._i(self.lat_tab, z)
 
     def humidity(self, z):
@@ -323,10 +580,14 @@ class RayPath:
     # --- ray position / timing -------------------------------------------------
     def x(self, z):
         """Along-track offset of the ray point at altitude z from the emission point [m]."""
+        if self.wind is not None:
+            return self._i(self.xw_tab, z)
         return self._i(self.I1_tab, z) / self.V
 
     def y(self, z):
         """Lateral offset of the ray point at altitude z [m] (sign of phi)."""
+        if self.wind is not None:
+            return self._i(self.yw_tab, z)
         return self.sy * self._i(self.I1_tab, z)
 
     def travel_time(self, z):
@@ -335,6 +596,8 @@ class RayPath:
 
     def dy_dphi(self, z):
         """Lateral Jacobian dY/dphi [m/rad] of the ray family at altitude z."""
+        if self.wind is not None:
+            return self._i(self.dY_tab, z)
         return self.cos_mu0 * np.cos(self.phi) / self.c_a * self._i(self.I13_tab, z)
 
     def arrival(self, z=None):
@@ -351,7 +614,8 @@ class RayPath:
             return dict(x=nan, y=nan, z=z, T=nan, delay=nan)
         x = float(self.x(z))
         T = float(self.travel_time(z))
-        return dict(x=x, y=float(self.y(z)), z=z, T=T, delay=T - x / self.V)
+        Vg = self.V if self.wind is None else self.V_ground
+        return dict(x=x, y=float(self.y(z)), z=z, T=T, delay=T - x / Vg)
 
     @property
     def y_ground(self) -> float:
@@ -359,14 +623,21 @@ class RayPath:
         return float("nan") if self.cutoff else float(self.y(self.z_tab[0]))
 
 
-def lateral_cutoff(altitude, V, atmosphere=None, z_ground=0.0, dz=2.0):
+def lateral_cutoff(altitude, V, atmosphere=None, z_ground=0.0, dz=2.0, wind=None, side=1):
     """Lateral cut-off of the boom carpet (no wind).
 
     The ray with azimuth phi reaches the ground iff s_y^2 < min_{z_g<=z<=z_a}(1/c^2 - 1/V^2).
     Returns (phi_c [rad], y_c [m]): limiting azimuth and the ground lateral offset of
     the (grazing) limiting ray, i.e. the carpet half-width.  phi_c = pi/2, y_c = inf if
     no cut-off occurs below 90 deg.
+
+    With ``wind`` the carpet is asymmetric: ``side`` = +1 or -1 picks the edge on the
+    positive- or negative-phi side; phi_c (signed) is found by bisection on traced rays
+    and y_c (signed) is the ground offset of the last ray that reaches the ground.
     """
+    if _as_wind(wind) is not None:
+        return _lateral_cutoff_wind(altitude, V, atmosphere, z_ground, dz, _as_wind(wind),
+                                    1.0 if side >= 0 else -1.0)
     atm = std_atm if atmosphere is None else atmosphere
     n = int(np.ceil((altitude - z_ground) / dz)) + 1
     z = np.linspace(z_ground, altitude, n)
@@ -386,6 +657,32 @@ def lateral_cutoff(altitude, V, atmosphere=None, z_ground=0.0, dz=2.0):
         if not ray.cutoff:
             return phi_c, ray.y_ground
     return phi_c, float("nan")
+
+
+def _lateral_cutoff_wind(altitude, V, atmosphere, z_ground, dz, wind, sgn, tol=1e-7):
+    def reaches(phi):
+        try:
+            r = RayPath(altitude, V, atmosphere=atmosphere, dz=dz, z_min=z_ground, phi=phi,
+                        allow_cutoff=True, wind=wind)
+        except ValueError:
+            return False, None
+        return (not r.cutoff), r
+
+    lo, hi = 0.0, 0.5 * np.pi * (1.0 - 1e-6)
+    ok, r = reaches(sgn * hi)
+    if ok:
+        return sgn * 0.5 * np.pi, sgn * float("inf")
+    ok0, r_lo = reaches(0.0)
+    if not ok0:
+        return 0.0, 0.0
+    while hi - lo > tol:
+        mid = 0.5 * (lo + hi)
+        ok, r = reaches(sgn * mid)
+        if ok:
+            lo, r_lo = mid, r
+        else:
+            hi = mid
+    return sgn * lo, float(r_lo.y_ground)
 
 
 # ------------------------------------------------------------------------------
@@ -460,7 +757,7 @@ def _extend(t, p, dt, front, back):
 def propagate(t, p, ray: RayPath, z_from, z_to, linear=False, lossless=False,
               thermoviscous=True, relaxation=True, dispersion=True, beta_n=BETA_AIR,
               cfl=0.8, ds_lin=20.0, auto_extend=True, edge_frac=0.03, edge_tol=1e-3,
-              stats=None):
+              stats=None, wind=None):
     """Augmented-Burgers propagation along ``ray`` from z_from down to z_to (< z_from).
 
     Options: ``linear`` (skip nonlinearity), ``lossless`` (skip absorption/dispersion),
@@ -468,7 +765,15 @@ def propagate(t, p, ray: RayPath, z_from, z_to, linear=False, lossless=False,
     (nonlinear CFL number), ``ds_lin`` (max arc length per linear chunk [m]),
     ``auto_extend`` (zero-pad when the signal reaches the record ends).  If ``stats``
     is a dict it receives step counts.  Returns (t, p) (t may be longer than input).
+    ``wind``: the moving medium is carried by the ray (``RayPath(..., wind=...)``); if given
+    here and the ray has no wind, the same ray is rebuilt in it.  ``t`` is ground-frame
+    retarded time (see the module docstring).
     """
+    wind = _as_wind(wind)
+    if wind is not None and ray.wind is not wind:
+        if ray.wind is not None:
+            raise ValueError("ray already carries a different wind profile")
+        ray = ray.with_wind(wind)
     if z_to > z_from:
         raise ValueError("propagate marches downward: need z_to <= z_from")
     if ray.cutoff and z_to < ray.z_turn:
@@ -510,6 +815,8 @@ def propagate(t, p, ray: RayPath, z_from, z_to, linear=False, lossless=False,
             am = ray.atm(zm)
             ds = float(ray.s(z_end) - ray.s(z))
             f = sfft.rfftfreq(p.size, dt)
+            if ray.wind is not None:            # intrinsic frequency in the moving air
+                f = f * float(ray.omega(zm))
             H = propagation_filter(f, am.T, am.p, am.c, ray.humidity(zm), ds,
                                    thermoviscous=thermoviscous, relaxation=relaxation,
                                    dispersion=dispersion)
@@ -530,7 +837,8 @@ def propagate(t, p, ray: RayPath, z_from, z_to, linear=False, lossless=False,
 
 
 def ground_signature(ac, r0=None, insert=None, fs=50e3, reflection=1.9, z_ground=0.0,
-                     atmosphere=None, humidity=None, below_opts=None, phi=0.0, **opts):
+                     atmosphere=None, humidity=None, below_opts=None, phi=0.0, wind=None,
+                     **opts):
     """Near field at r0 from the flight axis -> augmented Burgers to the ground.
 
     r0 defaults to 1.5 body lengths.  ``phi`` [rad] is the downward launch azimuth
@@ -542,16 +850,25 @@ def ground_signature(ac, r0=None, insert=None, fs=50e3, reflection=1.9, z_ground
     Extra keyword options go to :func:`propagate`; ``below_opts`` (dict, needs ``insert``)
     overrides them for the leg below z_ins only, e.g. ``below_opts={"linear": True}`` to
     switch nonlinearity off after the insert (re-steepening diagnostics).
+    ``wind``: moving medium (module docstring); the near field's (air-frame) time axis is
+    multiplied by the Doppler ratio Omega at its start point; ``t`` is then ground-frame.
     """
     r0 = 1.5 * ac.length if r0 is None else float(r0)
     phi = float(phi)
     t, p = near_field(ac, r0, fs, phi=phi)
-    ray = RayPath(ac.altitude, ac.V, atmosphere=atmosphere, humidity=humidity,
-                  z_min=min(0.0, z_ground), phi=phi)
+    wind = _as_wind(wind)
+    if wind is None:
+        ray = RayPath(ac.altitude, ac.V, atmosphere=atmosphere, humidity=humidity,
+                      z_min=min(0.0, z_ground), phi=phi)
+    else:
+        ray = RayPath(ac.altitude, ac.V, atmosphere=atmosphere, humidity=humidity,
+                      z_min=min(0.0, z_ground), phi=phi, allow_cutoff=True, wind=wind)
     if ray.cutoff and ray.z_turn > z_ground:
         raise ValueError(f"phi = {phi:g} rad is beyond the lateral cut-off (turns at "
                          f"z = {ray.z_turn:.0f} m)")
     z0 = ac.altitude - r0 * float(np.cos(phi))
+    if wind is not None:
+        t = t * float(ray.omega(z0))
     if insert is not None:
         z_ins, fn = insert
         if not (z_ground <= z_ins <= z0):
@@ -574,16 +891,18 @@ def ground_signature(ac, r0=None, insert=None, fs=50e3, reflection=1.9, z_ground
 # start from a matching circle (3-D pipeline)
 # ------------------------------------------------------------------------------
 def circle_start_factors(ac, phi, R_m, ray=None, z_ref=20000.0, anchor="source",
-                         atmosphere=None, humidity=None, z_ground=0.0):
+                         atmosphere=None, humidity=None, z_ground=0.0, wind=None):
     """Linear factors that map a uniform-air signature on the matching circle onto the
     actual stratified ray (see :func:`propagate_from_circle`).
 
-    Returns dict(ray, z_start, geometric, impedance, factor, z_anchor).
+    Returns dict(ray, z_start, geometric, impedance, factor, z_anchor, omega); ``omega`` is
+    the Doppler ratio at the start (time-axis factor air frame -> ground frame; 1 if no
+    wind).
     """
     phi = float(phi)
     if ray is None:
         ray = RayPath(ac.altitude, ac.V, atmosphere=atmosphere, humidity=humidity,
-                      z_min=min(0.0, z_ground), phi=phi, allow_cutoff=True)
+                      z_min=min(0.0, z_ground), phi=phi, allow_cutoff=True, wind=wind)
     z_s = ac.altitude - float(R_m) * float(np.cos(phi))
     if z_s <= ray.z_bottom:
         raise ValueError(f"matching circle start z = {z_s:g} m is below the ray table")
@@ -598,12 +917,12 @@ def circle_start_factors(ac, phi, R_m, ray=None, z_ref=20000.0, anchor="source",
     imp = float(np.sqrt((a_s.rho * a_s.c) / (a_0.rho * a_0.c))[0])
     geo = float(np.sqrt(ray.c_a * float(R_m) / float(ray.area(z_s))))
     return dict(ray=ray, z_start=z_s, geometric=geo, impedance=imp, factor=geo * imp,
-                z_anchor=z_anchor)
+                z_anchor=z_anchor, omega=float(ray.omega(z_s)))
 
 
 def propagate_from_circle(ac, phi, t, p, R_m, z_ref=20000.0, anchor="source",
                           age_from=None, reflection=1.9, z_ground=0.0, atmosphere=None,
-                          humidity=None, info=None, **opts):
+                          humidity=None, info=None, wind=None, **opts):
     """Propagate a matching-circle signature to the ground along the off-track ray.
 
     ``(t, p)`` is the signature at radius ``R_m`` [m] from the flight axis at downward
@@ -648,10 +967,16 @@ def propagate_from_circle(ac, phi, t, p, R_m, z_ref=20000.0, anchor="source",
     shield's slant distance for the transmitted part; default None = no correction.
     The distortion *before* the shield (r0 -> shield, large near the aircraft) must
     enter through the incident field: see :func:`aged_near_field`.
+
+    ``wind``: moving medium (module docstring).  The circle signature is taken as the
+    air-frame field (aircraft at air speed V, azimuth phi about its air velocity); its time
+    axis is multiplied by Omega(z_s) and the march follows the wind-traced ray; ``y_g``
+    is the ground-frame lateral offset.  The shield's own response to the changed
+    ground-frame trace speed is NOT modelled here.
     """
     phi = float(phi)
     ray = RayPath(ac.altitude, ac.V, atmosphere=atmosphere, humidity=humidity,
-                  z_min=min(0.0, z_ground), phi=phi, allow_cutoff=True)
+                  z_min=min(0.0, z_ground), phi=phi, allow_cutoff=True, wind=wind)
     if ray.cutoff and ray.z_turn > z_ground:
         if info is not None:
             info.update(cutoff=True, z_turn=ray.z_turn)
@@ -659,6 +984,8 @@ def propagate_from_circle(ac, phi, t, p, R_m, z_ref=20000.0, anchor="source",
     fac = circle_start_factors(ac, phi, R_m, ray=ray, z_ref=z_ref, anchor=anchor)
     z_s = fac["z_start"]
     t = np.asarray(t, dtype=float)
+    if ray.wind is not None:
+        t = t * fac["omega"]
     p = np.asarray(p, dtype=float) * fac["factor"]
     z_from = z_s
     if age_from is not None and float(age_from) < float(R_m):
@@ -705,7 +1032,7 @@ def _carpet_job(job):
     ac = job["ac"]
     zg = job["z_ground"]
     ray = RayPath(ac.altitude, ac.V, atmosphere=job["atmosphere"], humidity=job["humidity"],
-                  z_min=min(0.0, zg), phi=phi, allow_cutoff=True)
+                  z_min=min(0.0, zg), phi=phi, allow_cutoff=True, wind=job.get("wind"))
     out = dict(phi=phi, cutoff=bool(ray.cutoff and ray.z_turn > zg), z_turn=ray.z_turn)
     arr = ray.arrival(zg)
     out.update(y_g=arr["y"], x_g=arr["x"], delay=arr["delay"])
@@ -715,14 +1042,16 @@ def _carpet_job(job):
     if job["start"] == "near_field":
         t, p = ground_signature(ac, r0=job["r0"], fs=job["fs"], reflection=job["reflection"],
                                 z_ground=zg, atmosphere=job["atmosphere"],
-                                humidity=job["humidity"], phi=phi, **job["opts"])
+                                humidity=job["humidity"], phi=phi, wind=job.get("wind"),
+                                **job["opts"])
     else:
         tc, pc = job["circle"]
         t, p, _ = propagate_from_circle(ac, phi, tc, pc, job["R_m"], z_ref=job["z_ref"],
                                         anchor=job["anchor"], age_from=job["age_from"],
                                         reflection=job["reflection"], z_ground=zg,
                                         atmosphere=job["atmosphere"],
-                                        humidity=job["humidity"], **job["opts"])
+                                        humidity=job["humidity"], wind=job.get("wind"),
+                                        **job["opts"])
     out["metrics"] = scored_metrics(t, p, taper_s=job["taper_s"], sigma_s=job["sigma_s"])
     if job["keep"]:
         out.update(t=t, p=p)
@@ -734,7 +1063,8 @@ def _carpet_job(job):
 def ground_carpet(ac, phis, start="near_field", circle=None, R_m=None, r0=None, fs=50e3,
                   reflection=1.9, z_ground=0.0, atmosphere=None, humidity=None,
                   z_ref=20000.0, anchor="source", age_from=None, procs=4,
-                  taper_s=METRIC_TAPER_S, sigma_s=RISE_SIGMA_S, keep=True, **opts):
+                  taper_s=METRIC_TAPER_S, sigma_s=RISE_SIGMA_S, keep=True, wind=None,
+                  **opts):
     """Ground signatures, lateral offsets and loudness across the boom carpet.
 
     ``phis``: downward launch azimuths [rad] (0 = undertrack; the carpet is symmetric,
@@ -746,7 +1076,10 @@ def ground_carpet(ac, phis, start="near_field", circle=None, R_m=None, r0=None, 
         with :func:`propagate_from_circle` (``z_ref``, ``anchor``, ``age_from``).
     Runs the azimuths in a multiprocessing pool of ``procs`` workers (serial if 1 or if
     the job cannot be pickled, e.g. a closure atmosphere).  Extra keywords go to
-    :func:`propagate`.
+    :func:`propagate`.  ``wind``: moving medium (module docstring); phis may then be
+    negative (the carpet is asymmetric in a crosswind) and ``carpet`` also holds
+    ``y_cut_pos``/``y_cut_neg`` (signed ground offsets of the two cut-off rays),
+    ``phi_cut_pos``/``phi_cut_neg``, with ``half_width_m`` = (y_cut_pos - y_cut_neg)/2.
 
     Returns dict with arrays ``phi``, ``y_g`` [m], ``x_g``, ``delay`` [s] (boom arrival
     after the aircraft passes over the point's x), ``cutoff`` (bool), ``pldb``,
@@ -772,6 +1105,8 @@ def ground_carpet(ac, phis, start="near_field", circle=None, R_m=None, r0=None, 
                    z_ground=z_ground, atmosphere=atmosphere, humidity=humidity,
                    R_m=R_m, z_ref=z_ref, anchor=anchor, age_from=age_from,
                    taper_s=taper_s, sigma_s=sigma_s, keep=keep, opts=opts, circle=None)
+        if wind is not None:
+            job["wind"] = wind
         if start == "circle":
             sig = circle(phi) if callable(circle) else circle[phi]
             job["circle"] = (np.asarray(sig[0], float), np.asarray(sig[1], float))
@@ -801,7 +1136,15 @@ def ground_carpet(ac, phis, start="near_field", circle=None, R_m=None, r0=None, 
                t=[r["t"] for r in rows], p=[r["p"] for r in rows],
                pldb=col("pldb"), pldb_proxy=col("pldb_proxy"), peak_pa=col("peak_pa"),
                csel=col("csel"), rise_ms=col("rise_time_10_90_ms"))
-    phi_c, y_c = lateral_cutoff(ac.altitude, ac.V, atmosphere=atmosphere, z_ground=z_ground)
+    wind = _as_wind(wind)
+    if wind is None:
+        phi_c, y_c = lateral_cutoff(ac.altitude, ac.V, atmosphere=atmosphere, z_ground=z_ground)
+    else:
+        pp, yp = lateral_cutoff(ac.altitude, ac.V, atmosphere=atmosphere, z_ground=z_ground,
+                                wind=wind, side=1)
+        pn, yn = lateral_cutoff(ac.altitude, ac.V, atmosphere=atmosphere, z_ground=z_ground,
+                                wind=wind, side=-1)
+        phi_c, y_c = 0.5 * (pp - pn), 0.5 * (yp - yn)
     i0 = [i for i, f in enumerate(phis) if f == 0.0]
     ok = ~res["cutoff"]
     res["carpet"] = dict(
@@ -812,4 +1155,6 @@ def ground_carpet(ac, phis, start="near_field", circle=None, R_m=None, r0=None, 
         max_pldb_proxy=float(np.nanmax(res["pldb_proxy"])) if ok.any() else nan,
         half_width_m=y_c, phi_cutoff=phi_c,
         y_max_computed=float(np.nanmax(np.abs(res["y_g"][ok]))) if ok.any() else nan)
+    if wind is not None:
+        res["carpet"].update(y_cut_pos=yp, y_cut_neg=yn, phi_cut_pos=pp, phi_cut_neg=pn)
     return res
