@@ -489,19 +489,55 @@ BL_VARIANTS = {
 }
 
 
-def score(spec_row, E_f, ref, variant="full"):
+def score(spec_row, E_f, ref, variant="full", f=None):
     """Combined metrics at one ground point: specular (n = 0) row + scattered E(f)."""
     if spec_row["bands"] is None:
         return None
-    Ew = E_f * BL_VARIANTS[variant](F_S)
-    raw, prx = AT.combined_pl(spec_row["bands"], F_S, Ew)
+    f = F_S if f is None else f
+    Ew = E_f * BL_VARIANTS[variant](f)
+    raw, prx = AT.combined_pl(spec_row["bands"], f, Ew)
     dr, dp = raw - ref["pldb"], prx - ref["pldb_proxy"]
     return dict(pldb=raw, pldb_proxy=prx, d_raw=dr, d_proxy=dp, d=max(dr, dp))
 
 
-def scat_only_pl(E_f, variant="full"):
+def scat_only_pl(E_f, variant="full", f=None):
+    f = F_S if f is None else f
     z = [np.zeros(42), np.zeros(42)]
-    return AT.combined_pl(z, F_S, E_f * BL_VARIANTS[variant](F_S))
+    return AT.combined_pl(z, f, E_f * BL_VARIANTS[variant](f))
+
+
+def hf_report(spec, ref):
+    """Short-period serrations with the scattered field computed to 1 kHz: headline
+    deltas (scattered <= 400 Hz vs <= 1 kHz) and the loudest scattered-only point."""
+    print("\n## Short periods, scattered field to 1 kHz (R_m 3 km, n = 0 = x-averaged fringe)")
+    print("| case | max Delta, scat <= 400 Hz | max Delta, scat <= 1 kHz (y) | scattered-only max PLdB <= 1 kHz (y) |")
+    print("|---|---|---|---|")
+    out = {}
+    phis = sorted(ph for (t, ph, R) in spec if t == "fringe" and R == 3000.0)
+    for c in HF_CASES:
+        d = load(case_name(*c) + "_hf.pkl")
+        if d is None:
+            continue
+        E = scat_E(d)
+        f = d["f"]
+        best = None
+        rows = []
+        for ph in phis:
+            sr = spec[("fringe", ph, 3000.0)]
+            if sr["metrics"] is None:
+                continue
+            Ef = E_at(E, sr["y_g"])
+            s4 = score(sr, Ef * (f <= 400.0), ref[ph], f=f)
+            s10 = score(sr, Ef, ref[ph], f=f)
+            rows.append((ph, sr["y_g"], s4["d"], s10["d"]))
+        ys = np.arange(0.0, 60001.0, 1000.0)
+        pl = np.array([scat_only_pl(E_at(E, y), f=f)[0] for y in ys])
+        i4 = max(rows, key=lambda r: r[2])
+        i10 = max(rows, key=lambda r: r[3])
+        out[c] = dict(rows=rows, so=(ys, pl))
+        print(f"| {case_label(c[0], c[1], c[2])} | {i4[2]:.1f} ({i4[1] / 1e3:.1f} km) | {i10[3]:.1f} ({i10[1] / 1e3:.1f} km) | "
+              f"{pl.max():.1f} ({ys[np.argmax(pl)] / 1e3:.0f} km) |")
+    return out
 
 
 def band_sum(f, x, lo, hi):
@@ -714,6 +750,7 @@ def report():
                 print(f"| joint {kind} L {L:g} g {g:g} | {pl[i, 0]:.1f} / {pl[i, 1]:.1f} ({ys[i] / 1e3:.0f} km) | "
                       f"{np.max(pl[ys > ycut, 0]):.1f} |")
 
+    hf = hf_report(spec, ref)
     # ---- budgets
     budget_rows = budgets(cases, jsc)
     resteep = resteep_table(cases, jsc, spec, ref)
@@ -721,7 +758,7 @@ def report():
     if v is not None:
         print_validation(v)
     figures(cases, jsc, rows_csv, so_tab, ycut, v)
-    save("report_tables.pkl", dict(table=table, budget=budget_rows, resteep=resteep))
+    save("report_tables.pkl", dict(table=table, budget=budget_rows, resteep=resteep, hf=hf))
     return table
 
 

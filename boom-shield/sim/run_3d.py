@@ -26,7 +26,12 @@ Outputs: results/3d_results.csv (per phi), results/3d_carpet_summary.csv,
 results/3d_carpets.png, results/3d_signatures.png; tables printed for 3d_summary.md.
 Cache (resumable, per config and per phi): results/3d_cache/.
 
-Run:  python boom-shield/sim/run_3d.py [--only KEY ...] [--report] [--procs 4]
+Line ties: discrete ties of physical attachment width TIE_B (crossplane ``line_tie_width``;
+the legacy one-element ties were mesh-dependent, see results/line_ties_check.md). Where
+the structured solver's uniform panel exceeds TIE_REFINE * b, it is refined to b/2 so
+each attachment strip is two whole panels (tie_mesh below).
+
+Run:  python boom-shield/sim/run_3d.py [--only KEY ...] [--report] [--procs 4] [--workers 4]
 """
 from __future__ import annotations
 
@@ -71,6 +76,9 @@ R_FAR = 8000.0            # far circle for the near-track re-runs (circle start 
 PLOT_PHIS = (0, 10, 20, 30, 39, 45, 51)
 SIG_WIN = (-0.2, 1.6)     # s, stored ground-signature window
 SIG_DEC = 5               # 50 kHz -> 10 kHz for stored traces
+TIE_B = 0.5               # line-tie attachment width b [m] (physical strip, line_ties_check.md)
+TIE_REFINE = 1.75         # uniform mesh with line ties: refine panels to b/2 if panel > 1.75 b
+WORKERS = 4               # cross-plane frequency workers (--workers)
 
 ATM20 = std_atm(H_S)
 T20, P20, RHO20 = float(ATM20.T), float(ATM20.p), float(ATM20.rho)
@@ -96,9 +104,9 @@ def build_configs():
     C = []
 
     def add(key, group, acn, mach, h, W=None, fill=None, T=0.0, profile="slab", fringe=0.0,
-            cells=0.0, tieK=0.0, R=R_MAIN, phis=None, label=None):
+            cells=0.0, tieK=0.0, ties="line", R=R_MAIN, phis=None, label=None):
         C.append(dict(key=key, group=group, acn=acn, mach=mach, h=h, W=W, fill=fill, T=T,
-                      profile=profile, fringe=fringe, cells=cells, tieK=tieK, R=R,
+                      profile=profile, fringe=fringe, cells=cells, tieK=tieK, ties=ties, R=R,
                       phis=phis, label=label or key))
 
     def base(acn, mach, h):
@@ -122,7 +130,9 @@ def build_configs():
         cells=100.0, label="W 1000 m, He 30 m, partitions every 100 m")
     for K in (30.0, 300.0):
         add(f"{k}_W1000_H230_ties{K:g}", "ties", "Concorde", 2.0, 250, 1000.0, "hydrogen", 30.0,
-            tieK=K, label=f"W 1000 m, H2 30 m, line ties 25 m (K = {K:g} Pa/m)")
+            tieK=K, label=f"W 1000 m, H2 30 m, line ties 25 m, b {TIE_B:g} m (K = {K:g} Pa/m)")
+    add(f"{k}_W1000_H230_ties300sm", "ties", "Concorde", 2.0, 250, 1000.0, "hydrogen", 30.0,
+        tieK=300.0, ties="smeared", label="W 1000 m, H2 30 m, smeared ties (K = 300 Pa/m)")
     for R in R_SENS:
         add(f"{k}_W1000_He30_R{R:g}", "Rsens", "Concorde", 2.0, 250, 1000.0, "helium", 30.0,
             R=R, phis=PHI_SENS if R <= 4000.0 else PHI_SENS_FAR,
@@ -171,7 +181,7 @@ def make_cfg(c, phis=None):
     ac = aircraft(c["acn"], c["mach"], c["h"])
     phis = c["phis"] if phis is None else phis
     phis = phis_for(ac) if phis is None else [float(p) for p in phis]
-    kw = dict(h=float(c["h"]), f_max=F_MAX, R_m=c["R"], phis=phis, incident="aged", workers=4)
+    kw = dict(h=float(c["h"]), f_max=F_MAX, R_m=c["R"], phis=phis, incident="aged", workers=WORKERS)
     if c["W"] is None:
         cfg = cp.CrossPlaneConfig(ac, W=None, df=DF_MAX, **kw)
         return cfg
@@ -186,13 +196,38 @@ def make_cfg(c, phis=None):
     extra = {}
     if c["cells"]:
         extra["partitions"] = list(np.arange(-W / 2 + c["cells"], W / 2 - 1e-6, c["cells"]))
-    if c["tieK"]:
+    if c["tieK"] and c.get("ties", "line") == "smeared":
+        extra["tie_K"] = c["tieK"]
+    elif c["tieK"]:
         s = 25.0
         extra["line_ties"] = [(float(y), c["tieK"] * s) for y in np.arange(-W / 2 + s / 2, W / 2, s)]
+        extra["line_tie_width"] = TIE_B
     cfg = cp.CrossPlaneConfig(ac, W=W, T=T, profile=c["profile"], gas=g, m_top=face, m_bot=face,
                               fringe_width=c["fringe"], **extra, **kw)
     cfg.df = min(DF_MAX, cfg.auto_df())
     return cfg
+
+
+_build_mesh0 = cp.build_mesh
+
+
+def tie_mesh(cfg, f, h_elem=None, uniform=False):
+    """crossplane.build_mesh, but with line ties of width b on the structured (uniform)
+    mesh: panels of b/2 where the default panel exceeds TIE_REFINE * b (the default spreads
+    the tie over a whole panel, i.e. b_eff = panel; mesh-dependent, 10-50 Hz here). With
+    25 m pitch, b = 0.5 m and W = 1 km the strips are then exactly two panels."""
+    import warnings
+    b = cfg.line_tie_width
+    with warnings.catch_warnings():
+        if uniform and h_elem is None and b and len(cfg.line_ties):
+            warnings.simplefilter("ignore", RuntimeWarning)
+        m = _build_mesh0(cfg, f, h_elem, uniform)
+        if uniform and h_elem is None and b and len(cfg.line_ties) and m["h_e"] > TIE_REFINE * b:
+            m = _build_mesh0(cfg, f, h_elem=0.5 * b, uniform=True)
+    return m
+
+
+cp.build_mesh = tie_mesh
 
 
 # ----------------------------------------------------------------------------- caching
@@ -708,7 +743,7 @@ def plot_carpets(C, allrows, path, floor=-5.0):
         ("(c) W 1 km variants (Concorde M2, h 250 m)", "C2_h250_none",
          ["C2_h250_W1000_He60", "C2_h250_W1000_He60lens", "C2_h250_W1000_He30_fr150",
           "C2_h250_W1000_H230_fr150", "C2_h250_W1000_He30_cells100", "C2_h250_W1000_H230_ties30",
-          "C2_h250_W1000_H230_ties300"]),
+          "C2_h250_W1000_H230_ties300", "C2_h250_W1000_H230_ties300sm"]),
         ("(d) other aircraft / height, W 1 km (dotted: own unshielded)", None,
          [("S3.2_h250_none", "S3.2_h250_W1000_H230"), ("C1.4_h250_none", "C1.4_h250_W1000_He30"),
           ("C2_h100_none", "C2_h100_W1000_He30")]),
@@ -833,10 +868,13 @@ def run(C, procs, only=None):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--procs", type=int, default=4)
-    ap.add_argument("--only", nargs="*", default=None)
+    ap.add_argument("--only", nargs="*", default=None, help="run only these config keys")
+    ap.add_argument("--workers", type=int, default=4, help="cross-plane frequency workers")
     ap.add_argument("--report", action="store_true", help="only rebuild outputs from the cache")
     ap.add_argument("--list", action="store_true")
     a = ap.parse_args()
+    global WORKERS
+    WORKERS = a.workers
     C = build_configs()
     if a.list:
         for c in C:
