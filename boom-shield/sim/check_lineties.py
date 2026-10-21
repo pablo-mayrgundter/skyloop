@@ -298,7 +298,7 @@ def bem_compare(freqs=(2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14, 20), K=300.0, P=25.0)
     runs = [("none", None, None, 0.0), ("smeared", None, None, 0.0)]
     runs += [("line", None, h, 0.0) for h in (None, 6.0, 3.0, 1.5, 0.75)]
     runs += [("line", 1.5, h, 0.0) for h in (None, 3.0)]
-    runs += [("line", 1.5, h, 1e4) for h in (3.0, 1.5)]
+    runs += [("line", 1.5, h, 1e4) for h in (3.0, 1.5, 0.75)]
     runs += [("none", None, 3.0, 1e4), ("smeared", None, 3.0, 1e4)]
     for (kind, b, h, N) in runs:
         for f in freqs:
@@ -368,8 +368,13 @@ def report():
         ax[1].plot(fs, 10 * np.log10(o[("hydrogen", 2.0, 300.0, N, 25.0)][1]), color=c, lw=1, label=f"25 m ties, N = {N:g}")
     ax[1].plot(fs, 10 * np.log10(o[("hydrogen", 2.0, 300.0, 1e4, "smeared")]), "k-", label="smeared K = 300")
     ax[1].plot(fs, 10 * np.log10(o[("hydrogen", 2.0, 0.0 if False else 1e4, "free")]), "k:", label="no ties")
+    pts = sorted((k[4], v) for k, v in bem.items() if k[:4] == ("line", 1.5, 0.75, 1e4))
+    ax[1].plot([p[0] for p in pts], [db(p[1]["T0"]) for p in pts], "D", color="C2", mfc="none", ms=6,
+               label="BEM + y-tension 1e4, b = 1.5 m (|T_0|^2)")
+    ax[1].plot(ff[ff <= 14], [db(floquet(f, V, g, 30.0, m, 300.0, 25.0, b=1.5, N=1e4, eta=ETA)[0])
+                              for f in ff[ff <= 14]], "--", color="C2", lw=0.8, label="Floquet same case")
     ax[1].set(xlim=(1, 40), ylim=(-100, 5), xlabel="f [Hz]", ylabel="total transmitted power [dB]",
-              title="Floquet, b = 0.5 m, eta = 0.05: face tension")
+              title="H2 30 m M2, 25 m ties (K = 300), b = 0.5 m, eta = 0.05")
     ax[1].legend(fontsize=7, loc="lower left")
     for N, c in zip(TENSIONS, ("C3", "C1", "C2", "C0")):
         ax[2].semilogy(PITCHES, [rule[("hydrogen", 2.0, N, P)] for P in PITCHES], "o-", color=c, label=f"H2 M2, N = {N:g}")
