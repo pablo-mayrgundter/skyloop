@@ -5,3 +5,4 @@ __pycache__/
 boom-shield/sim/results/3d_cache/
 # along-track study cache (rebuildable)
 boom-shield/sim/results/alongtrack_cache/
+boom-shield/infographic/__pycache__/
