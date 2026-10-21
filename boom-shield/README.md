@@ -17,6 +17,7 @@ Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac
 - [sim/DESIGN.md](sim/DESIGN.md): design contract for the Gate 0 boom-through-shield-to-ground simulation.
 - [sim/results/gate0_summary.md](sim/results/gate0_summary.md): Gate 0 results: ground PLdB with lift-closed membrane/gas/membrane shields in full nonlinear propagation (1-D, infinite shield).
 - [sim/results/review_evanescent.md](sim/results/review_evanescent.md): adversarial review of the evanescent gas-layer shielding mechanism and its realistic floors.
+- [sim/results/3d_summary.md](sim/results/3d_summary.md): 3-D finite-width corridor study: ground carpets vs shield width, stack, edge treatment, cell walls, ties, aircraft.
 - [vacuum/vacuum-balloon-review.md](vacuum/vacuum-balloon-review.md): screening review of the inverted (vacuum) balloon option: acoustics, structural closure, pumping, failure modes.
 
 ## Main result
