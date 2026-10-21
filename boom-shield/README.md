@@ -4,6 +4,8 @@ This directory collects the first-pass acoustic analysis for a bouyant sonic-boo
 
 ## Contents
 
+- **[STATUS.md](STATUS.md): current concept status (start here).**
+
 Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac-83e8-9bbd-eb2f741c8bd0).
 
 - [boom-shield-summary.md](boom-shield-summary.md): narrative summary of the findings from the acoustic analysis thread.
