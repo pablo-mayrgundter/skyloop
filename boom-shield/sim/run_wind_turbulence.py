@@ -105,12 +105,14 @@ def config(cfgkey):
 
 
 def circle_signature(cfgkey, phi_deg, spec_factor=None):
-    """Cropped matching-circle signature (as run_3d), optionally with the spectrum scaled."""
+    """Cropped matching-circle signature (as run_3d).  ``spec_factor(f, j)`` -> (factor,
+    additive) modifies the circle spectrum column j: P -> factor P + additive."""
     c, sp, g, cfg = config(cfgkey)
     j = int(np.flatnonzero(np.isclose(sp["phis"], abs(phi_deg)))[0])
     P = sp["P"][:, [j]]
     if spec_factor is not None:
-        P = P * spec_factor(sp["f"])[:, None]
+        fac, add = spec_factor(sp["f"], j)
+        P = P * fac[:, None] + add[:, None]
     t, p = cp.spectra_to_signatures(cfg, sp["f"], P)
     tc, pc = R3.crop(t, p[:, 0])
     phi = math.radians(phi_deg)
@@ -223,18 +225,27 @@ def shield_stack(cfgkey):
                      SH.Membrane(float(cfg.m_bot))]), gas
 
 
-def frame_transfer(cfgkey, dV):
-    """T(f, V + dV)/T(f, V) of the infinite 1-D stack (ground-frame trace speed)."""
+def frame_transfer(cfgkey, dV, mode="transmitted"):
+    """Circle-spectrum modification for a ground-frame trace speed V + dV at the shield.
+
+    mode "transmitted" (used): only the part of the field that goes THROUGH the gas
+    changes, P -> P + P_inc (T(V+dV) - T(V)), with P_inc the unshielded circle spectrum
+    at the same azimuth and T the 1-D stack transmission (insertion, re ambient air); the
+    edge-diffracted part is unchanged.  mode "scale" (diagnostic, not physical): the whole
+    shielded field multiplied by T(V+dV)/T(V)."""
     stack, gas = shield_stack(cfgkey)
     c, sp, g, cfg = config(cfgkey)
     V = cfg.aircraft.V
     atm = R3.ATM20
+    P_inc = config("none")[1]["P"]
 
-    def fac(f):
+    def fac(f, j):
         f = np.asarray(f, float)
         T0, _ = SH.transfer(stack, np.maximum(f, 1e-3), V, atm, reference="air")
         T1, _ = SH.transfer(stack, np.maximum(f, 1e-3), V + dV, atm, reference="air")
-        return T1 / T0
+        if mode == "scale":
+            return T1 / T0, np.zeros(f.size, complex)
+        return np.ones(f.size), P_inc[:, j] * (T1 - T0)
     return fac
 
 
@@ -262,6 +273,8 @@ def run_frame():
             if cfgkey == "W500" and abs(dV) > 20:
                 continue
             for ph in (0.0,):
+                wind_job(cfgkey, "calm", ph, spec_factor=frame_transfer(cfgkey, dV, "scale"),
+                         tag=tag + "scale")
                 wind_job(cfgkey, "calm", ph, spec_factor=frame_transfer(cfgkey, dV), tag=tag)
 
 
@@ -446,7 +459,8 @@ def report():
                              **{k: v for k, v in r.items() if k.startswith("T_")}))
     print("\nground effect of the frame change alone (spectra x T(V_g)/T(V), no wind), Δ vs calm:")
     for cfgkey in ("W1000", "W500"):
-        for tag in ("frame_m15", "frame_p15", "frame_m60", "frame_p60"):
+        for tag in ("frame_m15", "frame_p15", "frame_m60", "frame_p60", "frame_m15scale",
+                    "frame_p15scale", "frame_m60scale", "frame_p60scale"):
             for ph in (0.0, 24.0):
                 r = load(f"wind_{cfgkey}_{tag}_{ph:+g}")
                 if r is None:
@@ -520,7 +534,8 @@ def report():
                   f"{1e3 * np.median([i['dT_rms_inner'] for _, _, i in K]):.2f} ms (analytic infinite screen "
                   f"{1e3 * TU.delay_sigma(TU.PRESETS[pre]):.2f} ms)")
 
-    cols = sorted({k for r in csv_rows for k in r}, key=lambda s: (s not in ("kind", "config", "case", "phi_deg"), s))
+    first = ["kind", "config", "case", "phi_deg", "y_g_m"]
+    cols = first + sorted({k for r in csv_rows for k in r} - set(first))
     with open(os.path.join(RESULTS, "wind_turbulence.csv"), "w", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=cols)
         w.writeheader()
