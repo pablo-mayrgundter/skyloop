@@ -213,22 +213,28 @@ def scatter_case(shape, Lam, w_f=150.0, seed=0, procs=PROCS, hf=False):
 
 
 # ----------------------------------------------------------------------------- joints
+JOINT_EXTRA = {"open": [(250.0, 0.1), (250.0, 0.25), (250.0, 0.5), (500.0, 0.1), (500.0, 0.25), (500.0, 0.5)],
+               "membranes": [(250.0, 2.0), (250.0, 10.0), (500.0, 2.0), (500.0, 10.0)]}
+
+
 def _jt_job(i):
     f = float(F_S[i])
     cfg = _W["cfg"]
     out = {}
     for kind in JOINT_KINDS:
-        js = [AT.Joint(L, g, kind) for (L, g) in JOINT_LG]
+        js = [AT.Joint(L, g, kind) for (L, g) in _W["jlg"][kind]]
         out[kind] = AT.joint_orders(cfg, js, f, _W["rays"], Y_GRID, a=_W["A"][i])
     return i, out
 
 
-def joint_scatter(procs=PROCS):
-    d = load("joints_scat.pkl")
+def joint_scatter(procs=PROCS, extra=False):
+    name = "joints_scat_extra.pkl" if extra else "joints_scat.pkl"
+    d = load(name)
     if d is not None:
         return d
     cfg = base_cfg()
-    _W.update(cfg=cfg, rays=rays_for(cfg), A=incident_S())
+    jlg = JOINT_EXTRA if extra else {k: JOINT_LG for k in JOINT_KINDS}
+    _W.update(cfg=cfg, rays=rays_for(cfg), A=incident_S(), jlg=jlg)
     t0 = time.time()
     res = [None] * F_S.size
     with pool(procs) as pl:
@@ -237,11 +243,11 @@ def joint_scatter(procs=PROCS):
     d = dict(f=F_S, y=Y_GRID, wall=time.time() - t0)
     keys = ["ap_D", "ap_spec", "ap_scat", "ap_prop", "ap_ground"]
     for kind in JOINT_KINDS:
-        for jj, (L, g) in enumerate(JOINT_LG):
+        for jj, (L, g) in enumerate(jlg[kind]):
             rr = [res[i][kind][jj] for i in range(F_S.size)]
             d[(kind, L, g)] = dict(E=np.array([o["E"] for o in rr]),
                                    **{k: np.array([o[k] for o in rr]) for k in keys})
-    save("joints_scat.pkl", d)
+    save(name, d)
     print(f"  joint orders: {time.time() - t0:.0f} s", flush=True)
     return d
 
@@ -506,6 +512,38 @@ def scat_only_pl(E_f, variant="full", f=None):
     return AT.combined_pl(z, f, E_f * BL_VARIANTS[variant](f))
 
 
+def joint_extra_report(spec, ref):
+    """Extra gap widths: scattered orders computed for the gap; the n = 0 part is taken
+    from the next larger computed gap of the same kind and L_m (conservative: its
+    coherent leak (g/L) dD is larger)."""
+    d = load("joints_scat_extra.pkl")
+    if d is None:
+        return {}
+    print("\n## Extra joint gaps (n = 0 from the next larger computed gap: conservative)")
+    print("| joint | Delta undertrack R3 | Delta max over phi (y) | scattered-only undertrack PLdB |")
+    print("|---|---|---|---|")
+    out = {}
+    for kind in JOINT_KINDS:
+        for (L, g) in JOINT_EXTRA[kind]:
+            gb = min(gg for (LL, gg) in JOINT_LG if LL == L and gg >= g)
+            tag = f"joint_{kind}_L{L:g}_g{gb:g}"
+            E = smooth_y(d[(kind, L, g)]["E"])
+            rows = []
+            for ph in PHI_J:
+                sr = spec.get((tag, ph, 3000.0))
+                if sr is None or sr["metrics"] is None:
+                    continue
+                sc = score(sr, E_at(E, sr["y_g"]), ref[ph])
+                rows.append((ph, sr["y_g"], sc["d"]))
+            if not rows:
+                continue
+            mx = max(rows, key=lambda r: r[2])
+            so = scat_only_pl(E_at(E, 0.0))[0]
+            out[(kind, L, g)] = dict(ut=rows[0][2], mx=mx[2], y_mx=mx[1], so0=so, rows=rows)
+            print(f"| {kind}, L {L:g}, g {g:g} | {rows[0][2]:.1f} | {mx[2]:.1f} ({mx[1] / 1e3:.1f} km) | {so:.1f} |")
+    return out
+
+
 def hf_report(spec, ref):
     """Short-period serrations with the scattered field computed to 1 kHz: headline
     deltas (scattered <= 400 Hz vs <= 1 kHz) and the loudest scattered-only point."""
@@ -751,6 +789,7 @@ def report():
                       f"{np.max(pl[ys > ycut, 0]):.1f} |")
 
     hf = hf_report(spec, ref)
+    jx = joint_extra_report(spec, ref)
     # ---- budgets
     budget_rows = budgets(cases, jsc)
     resteep = resteep_table(cases, jsc, spec, ref)
@@ -758,7 +797,7 @@ def report():
     if v is not None:
         print_validation(v)
     figures(cases, jsc, rows_csv, so_tab, ycut, v)
-    save("report_tables.pkl", dict(table=table, budget=budget_rows, resteep=resteep, hf=hf))
+    save("report_tables.pkl", dict(table=table, budget=budget_rows, resteep=resteep, hf=hf, jx=jx))
     return table
 
 
@@ -1047,6 +1086,10 @@ def main():
         for c in HF_CASES:
             scatter_case(*c, procs=procs, hf=True)
         print(f"hf done {time.time() - t0:.0f} s", flush=True)
+    if "jextra" in a.stages:
+        incident_S()
+        joint_scatter(procs, extra=True)
+        print(f"jextra done {time.time() - t0:.0f} s", flush=True)
     if "joints" in a.stages:
         incident_S()
         joint_scatter(procs)
