@@ -32,8 +32,9 @@ From `run_3d.py` (about 8 h, 4 cores). Data: `3d_results.csv` (per φ, with y_g)
 | He 30 m + 150 m fringe | 1 km | −∞ / **−∞** | −33.4 | ≥ 39 km | 0.95 |
 | H₂ 30 m + 150 m fringe | 1 km | −∞ / **−∞** | −32.7 | ≥ 39 km | 0.98 |
 | He 30 m, partitions every 100 m | 1 km | −38.9 / **−33.9** | −25.6 | ≥ 39 km | 0.95 |
-| H₂ 30 m, 25 m line ties, K = 30 | 1 km | −38.6 / **−33.8** | −24.5 | ≥ 39 km | 0.96 |
-| H₂ 30 m, 25 m line ties, K = 300 | 1 km | −0.2 / **−0.3** | +0.1 | 0 | 0.35 |
+| H₂ 30 m, 25 m line ties (b = 0.5 m), K = 30 | 1 km | −39.1 / **−33.2** | −26.0 | ≥ 39 km | 0.75 |
+| H₂ 30 m, 25 m line ties (b = 0.5 m), K = 300 | 1 km | −27.5 / **−33.3** | −24.4 | ≥ 39 km | 0.91 |
+| H₂ 30 m, smeared ties, K = 300 | 1 km | −9.4 / **−9.4** | −9.1 | 0 | 0.93 |
 
 Unshielded: 108.4 / 97.7 PLdB (raw / proxy). The unshielded circle pipeline matches the direct near-field path to within 0.06 dB at every φ, and is R_m-independent.
 
@@ -54,13 +55,14 @@ R_m = 3W is not enough near the track: the shadow keeps filling in with distance
 
 - **150 m fringe:** undertrack is inaudible and the carpet maximum is 8 dB lower. **Treat this as qualitative only.** The levels lie below the BEM floor (about −52 dB), and the x-averaged model drops the cones scattered by real serrations.
 - **Limp partitions every 100 m:** no effect (±0.3 dB). The leak is edge diffraction, not sloshing.
-- **Line ties at K = 300 (25 m pitch) make the shield transparent.** The 1-D smeared K = 300 still gave −9.4. A circle check (H₂ 30 m, φ = 0) shows the discreteness effect:
-
-| 5–10 Hz band, dB re unshielded | no ties | line 25 m | 12.5 m | 5 m | smeared |
-|---|---|---|---|---|---|
-| | −29.9 | −2.7 | −14.0 | −18.3 | −19.0 |
-
-  Ties spaced wider than the gas's lateral decay length (about 20 m at 5 Hz) leak far more than their smeared equivalent. This is unexpected and needs an independent check.
+- **Ties (H₂ 30 m, W = 1 km; undertrack at R_m 8 km / carpet maximum at 3 km).**
+  - 25 m line ties with b = 0.5 m: K = 30 gives −33.2 / −26.0, and K = 300 gives −33.3 / −24.4. Neither loses anything against the untied slab (−33.7 / −25.0).
+  - Smeared ties at K = 300 give −9.4 / −9.1, matching the 1-D Gate-0 value of −9.4.
+- **The earlier "K = 300 line ties make the shield transparent" result (−0.3 dB) is withdrawn. It was a mesh bug.**
+  - **Bug:** each tie acted on a single boundary element whose width was the element size (about 34/f m). On the tension-free BEM faces, the strip resonance f_s ≈ (1/2π)√(2k_line/(m b)) therefore moved with the mesh, and at 25 m pitch it landed in 5–10 Hz.
+  - **Fix:** `boomsim/crossplane.py` now takes a physical tie width (`line_tie_width`). The rerun uses b = 0.5 m, with structured-solver panels refined to b/2 between 10 and 46 Hz (`run_3d.tie_mesh`).
+- **Caveat: the BEM faces are limp, so the line-tie result is optimistic.** A narrow tie on a limp face moves only its own strip. [line_ties_check.md](line_ties_check.md) shows that with realistic face tension (N ≥ 10⁴ N/m), discrete ties at P ≤ 25 m behave about like smeared ones. The smeared row is the relevant one: K = 300 costs about 24 dB undertrack.
+- **Design rule:** design to the rule in [line_ties_check.md](line_ties_check.md), not to the limp-face line-tie rows. For H₂ at Mach 2 with N ≥ 10⁴ N/m and P ≤ 25 m, it requires K ≤ ~150 Pa/m (40 Pa/m at Mach 1.4), halved at 50 m pitch.
 
 ## Other aircraft (W = 1 km)
 
@@ -82,7 +84,7 @@ The < 5 Hz band holds 80–98 % of the circle energy at W ≥ 500 m: the transmi
   - 1 km: better than predicted. The leak is concentrated above 5 Hz in weak edge pulses, so the flat-leak mapping overstates it.
 - **Fragility:**
   - The two edge waves of the symmetric strip add up on the track (an Arago-type spot). This makes y = 0 5–10 dB louder than φ = 1–2°.
-  - Stiff 25 m-pitch ties erase the benefit.
+  - Stiff ties: smeared K = 300 Pa/m cuts the 1 km benefit to about −9 dB. Keep K within the [line_ties_check.md](line_ties_check.md) design rule (≤ ~150 Pa/m for H₂ at Mach 2).
 
 ## Not included
 
