@@ -76,6 +76,11 @@ CONFIGS = [
     ("slab_H2_30_light_hold10", "slab", dict(T=30.0, m_top=Mount(0.15, 10.0), m_bot=0.05, tie_K=3.0)),
     ("slab_H2_30_light_hold100", "slab", dict(T=30.0, m_top=Mount(0.15, 100.0), m_bot=0.05, tie_K=3.0)),
     ("slab_H2_20_heavytop_K10", "slab", dict(T=20.0, m_top=LIFT * 20 - 0.1, m_bot=0.1, tie_K=10.0)),
+    # breathing-stiffness sweep (Et/R^2 = 111 ... 1778 Pa/m)
+    ("raft_D30_dp300_Et3e5", "raft", dict(D=30.0, b=1.0, dp=300.0, Et=3e5)),
+    ("raft_D20_dp300_Et4e4", "raft", dict(D=20.0, b=1.0, dp=300.0, Et=4e4)),
+    ("raft_D60_dp300_Et4e5", "raft", dict(D=60.0, b=1.0, dp=300.0, Et=4e5)),
+    ("raft_D60_dp300_Et1.6e6", "raft", dict(D=60.0, b=1.0, dp=300.0, Et=1.6e6)),
 ]
 
 

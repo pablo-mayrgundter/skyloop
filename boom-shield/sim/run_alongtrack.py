@@ -160,10 +160,17 @@ _W = {}
 _BLK = {}
 
 
+F_HF = np.concatenate([F_S, np.arange(404.0, 1000.001, 4.0)])
+HF_EDGES = BLOCK_EDGES + [500.0, 600.0, 700.0, 800.0, 900.0, 1000.0]
+HF_CASES = [("sawtooth", 1.0, 150.0, 0), ("sawtooth", 2.0, 150.0, 0), ("sawtooth", 3.0, 150.0, 0),
+            ("random", 1.0, 150.0, 0), ("random", 3.0, 150.0, 0)]
+
+
 def _fr_job(i):
-    f = float(F_S[i])
+    F = _W.get("F", F_S)
+    f = float(F[i])
     serr, cfg = _W["serr"], _W["cfg"]
-    e = next(x for x in BLOCK_EDGES if x >= f - 1e-9)
+    e = next(x for x in _W.get("edges", BLOCK_EDGES) if x >= f - 1e-9)
     if e not in _BLK:
         _BLK.clear()           # one block at a time (jobs arrive in descending f)
         _BLK[e] = AT.fringe_block(serr, e, cfg.c, cfg.V)
@@ -171,23 +178,33 @@ def _fr_job(i):
     return i, o
 
 
-def scatter_case(shape, Lam, w_f=150.0, seed=0, procs=PROCS):
-    name = case_name(shape, Lam, w_f, seed) + ".pkl"
+def incident_HF():
+    A = load("incident_FHF.pkl")
+    if A is None:
+        A = cp.incident_coefficients(base_cfg(), F_HF)
+        save("incident_FHF.pkl", A)
+    return A
+
+
+def scatter_case(shape, Lam, w_f=150.0, seed=0, procs=PROCS, hf=False):
+    name = case_name(shape, Lam, w_f, seed) + ("_hf" if hf else "") + ".pkl"
     d = load(name)
     if d is not None:
         return d
     cfg = base_cfg()
     serr = AT.Serration(Lam, w_f, shape, seed=seed)
-    _W.update(serr=serr, cfg=cfg, rays=rays_for(cfg), A=incident_S())
+    F = F_HF if hf else F_S
+    _W.update(serr=serr, cfg=cfg, rays=rays_for(cfg), A=incident_HF() if hf else incident_S(),
+              F=F, edges=HF_EDGES if hf else BLOCK_EDGES)
     _BLK.clear()
     t0 = time.time()
-    res = [None] * F_S.size
-    jobs = list(range(F_S.size))[::-1]
+    res = [None] * F.size
+    jobs = list(range(F.size))[::-1]
     with pool(procs) as pl:
         for i, o in pl.imap_unordered(_fr_job, jobs, chunksize=4):
             res[i] = o
     keys = ["ap_D", "ap_spec", "ap_scat", "ap_prop", "ap_ground", "y_mean", "sx_mean", "sy_mean"]
-    d = dict(shape=shape, Lam=Lam, w_f=w_f, seed=seed, f=F_S, y=Y_GRID,
+    d = dict(shape=shape, Lam=Lam, w_f=w_f, seed=seed, f=F, y=Y_GRID,
              E=np.array([o["E"] for o in res]), E0=np.array([o["E0"] for o in res]),
              **{k: np.array([o[k] for o in res]) for k in keys}, wall=time.time() - t0)
     save(name, d)
@@ -989,6 +1006,10 @@ def main():
         for c in sorted(SCAT_CASES, key=lambda c: (c[1] * (8 if c[0] == "random" else 1), c[0])):
             scatter_case(*c, procs=procs)
         print(f"scatter done {time.time() - t0:.0f} s", flush=True)
+    if "hf" in a.stages:
+        for c in HF_CASES:
+            scatter_case(*c, procs=procs, hf=True)
+        print(f"hf done {time.time() - t0:.0f} s", flush=True)
     if "joints" in a.stages:
         incident_S()
         joint_scatter(procs)
