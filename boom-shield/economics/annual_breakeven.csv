@@ -1,0 +1,19 @@
+design,case,vs,capex_musd_km,usd_m2,opex_musd_km_yr,annual_cost_musd_km_yr,min_saved_per_1000km,value_usd_per_pax_km,breakeven_pax_yr_vtts,breakeven_flights_day_each_way,breakeven_pax_yr_fullfare
+"M2.0 (Concorde-class, psf baseline)",low,subsonic M0.85,44.63,29.76,1.769,4.673,38.21,0.05364,8.712e+07,2448,7.629e+06
+"M2.0 (Concorde-class, psf baseline)",low,Boomless M1.15,44.63,29.76,1.769,4.673,20.87,0.0293,1.595e+08,4481,7.629e+06
+"M2.0 (Concorde-class, psf baseline)",low,Boomless M1.3,44.63,29.76,1.769,4.673,15.21,0.02135,2.189e+08,6151,7.629e+06
+"M2.0 (Concorde-class, psf baseline)",base,subsonic M0.85,157,89.73,9.867,23.34,38.21,0.05199,4.489e+08,1.261e+04,3.931e+07
+"M2.0 (Concorde-class, psf baseline)",base,Boomless M1.15,157,89.73,9.867,23.34,20.87,0.02841,8.217e+08,2.309e+04,3.931e+07
+"M2.0 (Concorde-class, psf baseline)",base,Boomless M1.3,157,89.73,9.867,23.34,15.21,0.02069,1.128e+09,3.17e+04,3.931e+07
+"M2.0 (Concorde-class, psf baseline)",high,subsonic M0.85,677.9,338.9,66.38,135.4,38.21,0.04926,2.749e+09,7.726e+04,2.408e+08
+"M2.0 (Concorde-class, psf baseline)",high,Boomless M1.15,677.9,338.9,66.38,135.4,20.87,0.02691,5.033e+09,1.414e+05,2.408e+08
+"M2.0 (Concorde-class, psf baseline)",high,Boomless M1.3,677.9,338.9,66.38,135.4,15.21,0.0196,6.908e+09,1.941e+05,2.408e+08
+"M1.7 (Overture-class, lift-set)",low,subsonic M0.85,36.59,24.39,1.476,3.856,33.22,0.04664,8.267e+07,2323,6.295e+06
+"M1.7 (Overture-class, lift-set)",low,Boomless M1.15,36.59,24.39,1.476,3.856,15.89,0.02231,1.729e+08,4857,6.295e+06
+"M1.7 (Overture-class, lift-set)",low,Boomless M1.3,36.59,24.39,1.476,3.856,10.22,0.01435,2.687e+08,7550,6.295e+06
+"M1.7 (Overture-class, lift-set)",base,subsonic M0.85,116.2,77.49,7.294,17.27,33.22,0.04521,3.819e+08,1.073e+04,2.908e+07
+"M1.7 (Overture-class, lift-set)",base,Boomless M1.15,116.2,77.49,7.294,17.27,15.89,0.02162,7.986e+08,2.244e+04,2.908e+07
+"M1.7 (Overture-class, lift-set)",base,Boomless M1.3,116.2,77.49,7.294,17.27,10.22,0.01391,1.241e+09,3.488e+04,2.908e+07
+"M1.7 (Overture-class, lift-set)",high,subsonic M0.85,576.6,288.3,55.63,114.4,33.22,0.04283,2.67e+09,7.502e+04,2.033e+08
+"M1.7 (Overture-class, lift-set)",high,Boomless M1.15,576.6,288.3,55.63,114.4,15.89,0.02049,5.582e+09,1.569e+05,2.033e+08
+"M1.7 (Overture-class, lift-set)",high,Boomless M1.3,576.6,288.3,55.63,114.4,10.22,0.01318,8.677e+09,2.438e+05,2.033e+08

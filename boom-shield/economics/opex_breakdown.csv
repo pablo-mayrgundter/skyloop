@@ -1,0 +1,21 @@
+design,line,low_musd_km_yr,base_musd_km_yr,high_musd_km_yr
+"M2.0 (Concorde-class, psf baseline)",H2 make-up,0.051,0.328,1.498
+"M2.0 (Concorde-class, psf baseline)","Envelope replacement (UV, fatigue)",0.994,6.151,44.542
+"M2.0 (Concorde-class, psf baseline)",Tether replacement,0.139,0.370,1.111
+"M2.0 (Concorde-class, psf baseline)",O&M on stations/controls,0.102,0.494,2.675
+"M2.0 (Concorde-class, psf baseline)",Inspection,0.050,0.150,0.500
+"M2.0 (Concorde-class, psf baseline)",Power,0.066,0.257,1.006
+"M2.0 (Concorde-class, psf baseline)",Staffing,0.140,0.530,1.420
+"M2.0 (Concorde-class, psf baseline)",Insurance,0.223,1.570,13.558
+"M2.0 (Concorde-class, psf baseline)",Easement rent,0.004,0.017,0.075
+"M2.0 (Concorde-class, psf baseline)",TOTAL,1.769,9.867,66.384
+"M1.7 (Overture-class, lift-set)",H2 make-up,0.033,0.184,0.980
+"M1.7 (Overture-class, lift-set)","Envelope replacement (UV, fatigue)",0.794,4.270,36.616
+"M1.7 (Overture-class, lift-set)",Tether replacement,0.103,0.276,0.827
+"M1.7 (Overture-class, lift-set)",O&M on stations/controls,0.102,0.469,2.675
+"M1.7 (Overture-class, lift-set)",Inspection,0.050,0.150,0.500
+"M1.7 (Overture-class, lift-set)",Power,0.066,0.237,1.006
+"M1.7 (Overture-class, lift-set)",Staffing,0.140,0.530,1.420
+"M1.7 (Overture-class, lift-set)",Insurance,0.183,1.162,11.532
+"M1.7 (Overture-class, lift-set)",Easement rent,0.004,0.017,0.075
+"M1.7 (Overture-class, lift-set)",TOTAL,1.476,7.294,55.631
