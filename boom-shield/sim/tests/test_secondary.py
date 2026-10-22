@@ -154,7 +154,9 @@ def test_shield_mirror_and_family_classification():
     med = S.Medium()
     sh = S.Shield(z=20000.0, phi_max=math.atan2(500, 250), mode="reflect")
     tr, rows = S.fan(AC, med, np.radians([30.0, 45.0, 70.0]), shield=sh, dt=0.5)
-    fams = {round(math.degrees(r["phi"])): r["family"] for r in rows}
+    fams = {}
+    for r in rows:
+        fams.setdefault(round(math.degrees(r["phi"])), r["family"])
     assert fams.get(30) == "shield" and fams.get(45) == "shield"
     assert tr["kind"][2, 0] == 0 or tr["n_hits"][2] == 0 or fams.get(70) != "shield"
 

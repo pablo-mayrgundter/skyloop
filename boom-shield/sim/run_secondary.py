@@ -100,7 +100,7 @@ def run_case(acn, atmn, cache, quick=False):
     ac = AIRCRAFT[acn]
     wind = ATMOS[atmn]()
     med = S.Medium(wind)
-    two_sided = wind is not None and np.any(np.abs(med.v) > 0)
+    two_sided = wind is not None and bool(np.any(np.abs(med.v) > 1e-6))
     step = DPHI_FINE * (4 if quick else 1)
     ph = np.arange(0.0, 180.0 + 1e-9, step)
     if two_sided:

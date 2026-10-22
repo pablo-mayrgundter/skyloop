@@ -245,7 +245,7 @@ def run_case(c):
         tau = lf_tau(c["fill"], c["d"], c["lid"], c["mach"], c["H_s"]) if V < g.c else 0.0
         # pad: Gate-0 rule (15 Lorentz widths, >= 1 s) extended to 8 low-frequency time
         # constants (thick layers), capped at 12 s
-        pad = min(12.0, max(1.0, 15.0 * a * c["d"], 8.0 * tau))
+        pad = min(30.0 if c["variant"] == "pad30" else 12.0, max(1.0, 15.0 * a * c["d"], 8.0 * tau))
         res.update(lift=lift, lid_m=top, floor_m=bot, margin=margin, c_gas=g.c,
                    regime="evanescent" if V < g.c else "propagating", tau_lf=tau)
     fn = (lambda tt, pp: S.apply(st, tt, pp, V, atmS)) if st is not None else (lambda tt, pp: pp.copy())
@@ -442,7 +442,7 @@ def plot(rows, path):
            "Concorde M2.5": "#8f4fd6", "SR-71 M3.2": "#c43c5a"}
     plt.rcParams.update({"font.size": 8.5, "axes.edgecolor": muted, "axes.labelcolor": ink,
                          "xtick.color": ink2, "ytick.color": ink2, "axes.titlecolor": ink})
-    fig, axes = plt.subplots(2, 3, figsize=(15, 9.2))
+    fig, axes = plt.subplots(2, 4, figsize=(20, 9.4))
     fig.patch.set_facecolor(surf)
 
     def series(a, m, H, fill, lid):
@@ -549,7 +549,61 @@ def plot(rows, path):
     ax.set_ylabel("ground overpressure [Pa]")
     ax.set_title("Concorde M2, shield 20 km: ground swell (unshielded clipped)", fontsize=9)
     ax.legend(frameon=False, fontsize=7.5)
+    # (0,3) 3-D carpets: peak vs ground offset (Concorde M2, h 250 m, shield 20 km)
+    ax = axes[0, 3]
+    pts3 = {}
+    with open(os.path.join(RESULTS, "3d_results.csv")) as fh:
+        for r in csv.DictReader(fh):
+            pts3.setdefault(r["key"], []).append((float(r["y_g_m"]) / 1e3, float(r["peak_pa"])))
+    for k, lab, col, ls in (("C2_h250_none", "unshielded (÷4)", ink2, ":"),
+                            ("C2_h250_W1000_H230", "W 1 km, H₂ 30 m (lift-closed split)", "#eb6834", "-"),
+                            ("C2_h250_W1000_He60", "W 1 km, He 60 m (split)", "#8f4fd6", "-")):
+        if k in pts3:
+            y, pk = zip(*sorted(pts3[k]))
+            pk = np.array(pk) / (4.0 if "none" in k else 1.0)
+            ax.plot(y, pk, ls, color=col, lw=1.4, label=lab + " [3d_results]")
+    for W, col in ((1000.0, "#2a78d6"), (2000.0, "#1baf7a")):
+        o = load(f"3d_Concorde_M2_hy60_float_W{W:g}_R3000", "aux")
+        if o:
+            rr = [r for r in o["rows"] if "peak_pa" in r]
+            ax.plot([r["y_g"] / 1e3 for r in rr], [r["peak_pa"] for r in rr], "-", marker="o", ms=3.5,
+                    color=col, lw=1.8, label=f"W {W / 1e3:g} km, H₂ 60 m floating lid [new 3-D]")
+    offs = []
+    for phi in (0.0, 24.0, 39.0, 54.0):
+        o = load(f"off_Concorde_M2_H20_hy60_float_phi{phi:g}", "aux")
+        if o:
+            offs.append((phi, o["peak_pa"]))
+    if offs:
+        ys = {0.0: 0.0, 24.0: 9.6, 39.0: 18.3, 54.0: 39.3}
+        ax.plot([ys[p] for p, _ in offs], [v for _, v in offs], "x", color="#2a78d6", ms=7, mew=1.6,
+                label="H₂ 60 m, INFINITE shield, off-track 1-D")
+    ax.axhline(LIMIT_PA, color=ink, lw=1.0, ls=":")
+    ax.set_xlabel("ground offset from track y_g [km]")
+    ax.set_ylabel("ground peak [Pa]")
+    ax.set_title("3-D check: finite width puts the peak in the outer carpet", fontsize=9)
+    ax.legend(frameon=False, fontsize=6.8)
+    ax.set_ylim(0, 26)
+    # (1,3) 1-D vs 3-D: undertrack peak and carpet-maximum peak
+    ax = axes[1, 3]
+    for x, yu, ym, lab in compare_1d_3d():
+        ax.plot([x, x], [yu, ym], color=muted, lw=0.8)
+        ax.plot(x, yu, "o", color="#2a78d6", ms=5)
+        ax.plot(x, ym, "^", color="#eb6834", ms=6)
+        ax.annotate(lab, (x, ym), textcoords="offset points", xytext=(4, 3), fontsize=6.5, color=ink2)
+    ax.plot([], [], "o", color="#2a78d6", label="3-D undertrack (R_m 8 km where run)")
+    ax.plot([], [], "^", color="#eb6834", label="3-D maximum over the computed carpet")
+    lim = np.array([2, 40])
+    ax.plot(lim, lim, color=ink, lw=0.8)
+    ax.axhline(LIMIT_PA, color=ink, lw=1.0, ls=":")
+    ax.set_xscale("log")
+    ax.set_yscale("log")
+    ax.set_xlabel("1-D undertrack ground peak [Pa]")
+    ax.set_ylabel("3-D ground peak [Pa]")
+    ax.set_title("1-D screen vs 3-D (W = 1 km unless noted)", fontsize=9)
+    ax.legend(frameon=False, fontsize=7, loc="upper left")
     for ax in axes.flat:
+        if not ax.axison:
+            continue
         ax.set_facecolor(surf)
         ax.grid(True, color=grid, lw=0.6, which="both")
         for s in ("top", "right"):
@@ -559,6 +613,34 @@ def plot(rows, path):
     fig.tight_layout(rect=(0, 0, 1, 0.97))
     fig.savefig(path, dpi=120, facecolor=surf)
     plt.close(fig)
+
+
+def compare_1d_3d():
+    """[(1-D peak, 3-D undertrack peak, 3-D carpet max, label)] for the 3-D cases that exist."""
+    pts3 = {}
+    with open(os.path.join(RESULTS, "3d_results.csv")) as fh:
+        for r in csv.DictReader(fh):
+            pts3.setdefault(r["key"], []).append((float(r["phi_deg"]), float(r["peak_pa"])))
+    out = []
+    for k3, k1, lab in (("C2_h250_W1000_H230", "Concorde_M2_H20_hy30_split", "C M2 H₂30"),
+                        ("C2_h250_W1000_He30", "Concorde_M2_H20_he30_split", "C M2 He30"),
+                        ("C2_h250_W1000_He60", "Concorde_M2_H20_he60_split", "C M2 He60"),
+                        ("S3.2_h250_W1000_H230", "SR-71_M3.2_H20_hy30_split", "SR-71 H₂30"),
+                        ("C1.4_h250_W1000_He30", "Concorde_M1.4_H20_he30_split", "C M1.4 He30")):
+        r1 = load(k1)
+        if r1 is None or k3 not in pts3:
+            continue
+        far = dict(pts3.get(k3 + "_R8000", []))
+        yu = far.get(0.0, dict(pts3[k3])[0.0])
+        out.append((r1["peak_pa"], yu, max(v for _, v in pts3[k3]), lab))
+    for W in (1000.0, 2000.0):
+        o = load(f"3d_Concorde_M2_hy60_float_W{W:g}_R3000", "aux")
+        r1 = load("Concorde_M2_H20_hy60_float")
+        if o and r1:
+            rr = [r for r in o["rows"] if "peak_pa" in r]
+            out.append((r1["peak_pa"], rr[0]["peak_pa"], max(r["peak_pa"] for r in rr),
+                        f"C M2 H₂60 float W{W / 1e3:g}km"))
+    return out
 
 
 # ----------------------------------------------------------------------------- floor model
@@ -815,6 +897,8 @@ def main():
             r = ymax_case(d)
             print(r["key"], f"{r['peak_pa']:.3f}")
         tie = [mk("Concorde", 2.0, 20e3, "gas", "hydrogen", d, "float", tie_K=10.0) for d in (30.0, 60.0, 100.0, 200.0)]
+        tie += [mk(a, m, 20e3, "gas", "hydrogen", 200.0, "float", variant="pad30")
+                for a, m in (("Concorde", 1.4), ("Concorde", 2.0))]
         run_all(tie, args.procs, "ties K=10")
     elif args.phase == "3d":
         W = None if args.W <= 0 else args.W
