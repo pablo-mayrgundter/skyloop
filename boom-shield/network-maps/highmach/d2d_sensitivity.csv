@@ -1,0 +1,73 @@
+M,thrust,a_acc,overhead,block_min,d2d_h,peak_mach
+1.700,Overture thrust (0.23 m/s2),0.230,base (130 min),197.809,5.463,1.700
+1.700,Overture thrust (0.23 m/s2),0.230,fast (100 min),197.809,4.963,1.700
+1.700,Overture thrust (0.23 m/s2),0.230,walk-on (70 min),197.809,4.463,1.700
+1.700,concept thrust,0.230,base (130 min),197.809,5.463,1.700
+1.700,concept thrust,0.230,fast (100 min),197.809,4.963,1.700
+1.700,concept thrust,0.230,walk-on (70 min),197.809,4.463,1.700
+1.700,2x concept thrust,0.460,base (130 min),196.383,5.440,1.700
+1.700,2x concept thrust,0.460,fast (100 min),196.383,4.940,1.700
+1.700,2x concept thrust,0.460,walk-on (70 min),196.383,4.440,1.700
+2.000,Overture thrust (0.23 m/s2),0.230,base (130 min),184.706,5.245,2.000
+2.000,Overture thrust (0.23 m/s2),0.230,fast (100 min),184.706,4.745,2.000
+2.000,Overture thrust (0.23 m/s2),0.230,walk-on (70 min),184.706,4.245,2.000
+2.000,concept thrust,0.397,base (130 min),182.271,5.205,2.000
+2.000,concept thrust,0.397,fast (100 min),182.271,4.705,2.000
+2.000,concept thrust,0.397,walk-on (70 min),182.271,4.205,2.000
+2.000,2x concept thrust,0.793,base (130 min),180.624,5.177,2.000
+2.000,2x concept thrust,0.793,fast (100 min),180.624,4.677,2.000
+2.000,2x concept thrust,0.793,walk-on (70 min),180.624,4.177,2.000
+2.200,Overture thrust (0.23 m/s2),0.230,base (130 min),178.685,5.145,2.200
+2.200,Overture thrust (0.23 m/s2),0.230,fast (100 min),178.685,4.645,2.200
+2.200,Overture thrust (0.23 m/s2),0.230,walk-on (70 min),178.685,4.145,2.200
+2.200,concept thrust,0.433,base (130 min),174.921,5.082,2.200
+2.200,concept thrust,0.433,fast (100 min),174.921,4.582,2.200
+2.200,concept thrust,0.433,walk-on (70 min),174.921,4.082,2.200
+2.200,2x concept thrust,0.865,base (130 min),172.894,5.048,2.200
+2.200,2x concept thrust,0.865,fast (100 min),172.894,4.548,2.200
+2.200,2x concept thrust,0.865,walk-on (70 min),172.894,4.048,2.200
+2.500,Overture thrust (0.23 m/s2),0.230,base (130 min),172.422,5.040,2.500
+2.500,Overture thrust (0.23 m/s2),0.230,fast (100 min),172.422,4.540,2.500
+2.500,Overture thrust (0.23 m/s2),0.230,walk-on (70 min),172.422,4.040,2.500
+2.500,concept thrust,0.479,base (130 min),166.342,4.939,2.500
+2.500,concept thrust,0.479,fast (100 min),166.342,4.439,2.500
+2.500,concept thrust,0.479,walk-on (70 min),166.342,3.939,2.500
+2.500,2x concept thrust,0.958,base (130 min),163.796,4.897,2.500
+2.500,2x concept thrust,0.958,fast (100 min),163.796,4.397,2.500
+2.500,2x concept thrust,0.958,walk-on (70 min),163.796,3.897,2.500
+3.000,Overture thrust (0.23 m/s2),0.230,base (130 min),167.844,4.964,3.000
+3.000,Overture thrust (0.23 m/s2),0.230,fast (100 min),167.844,4.464,3.000
+3.000,Overture thrust (0.23 m/s2),0.230,walk-on (70 min),167.844,3.964,3.000
+3.000,concept thrust,0.518,base (130 min),157.677,4.795,3.000
+3.000,concept thrust,0.518,fast (100 min),157.677,4.295,3.000
+3.000,concept thrust,0.518,walk-on (70 min),157.677,3.795,3.000
+3.000,2x concept thrust,1.035,base (130 min),154.127,4.735,3.000
+3.000,2x concept thrust,1.035,fast (100 min),154.127,4.235,3.000
+3.000,2x concept thrust,1.035,walk-on (70 min),154.127,3.735,3.000
+3.500,Overture thrust (0.23 m/s2),0.230,base (130 min),167.193,4.953,3.500
+3.500,Overture thrust (0.23 m/s2),0.230,fast (100 min),167.193,4.453,3.500
+3.500,Overture thrust (0.23 m/s2),0.230,walk-on (70 min),167.193,3.953,3.500
+3.500,concept thrust,0.831,base (130 min),149.143,4.652,3.500
+3.500,concept thrust,0.831,fast (100 min),149.143,4.152,3.500
+3.500,concept thrust,0.831,walk-on (70 min),149.143,3.652,3.500
+3.500,2x concept thrust,1.662,base (130 min),146.808,4.613,3.500
+3.500,2x concept thrust,1.662,fast (100 min),146.808,4.113,3.500
+3.500,2x concept thrust,1.662,walk-on (70 min),146.808,3.613,3.500
+4.000,Overture thrust (0.23 m/s2),0.230,base (130 min),168.050,4.968,3.558
+4.000,Overture thrust (0.23 m/s2),0.230,fast (100 min),168.050,4.468,3.558
+4.000,Overture thrust (0.23 m/s2),0.230,walk-on (70 min),168.050,3.968,3.558
+4.000,concept thrust,0.885,base (130 min),145.236,4.587,4.000
+4.000,concept thrust,0.885,fast (100 min),145.236,4.087,4.000
+4.000,concept thrust,0.885,walk-on (70 min),145.236,3.587,4.000
+4.000,2x concept thrust,1.771,base (130 min),142.416,4.540,4.000
+4.000,2x concept thrust,1.771,fast (100 min),142.416,4.040,4.000
+4.000,2x concept thrust,1.771,walk-on (70 min),142.416,3.540,4.000
+inf,Overture thrust (0.23 m/s2),0.230,base (130 min),168.050,4.968,3.558
+inf,Overture thrust (0.23 m/s2),0.230,fast (100 min),168.050,4.468,3.558
+inf,Overture thrust (0.23 m/s2),0.230,walk-on (70 min),168.050,3.968,3.558
+inf,concept thrust,0.885,base (130 min),138.234,4.471,6.518
+inf,concept thrust,0.885,fast (100 min),138.234,3.971,6.518
+inf,concept thrust,0.885,walk-on (70 min),138.234,3.471,6.518
+inf,2x concept thrust,1.771,base (130 min),131.290,4.355,7.833
+inf,2x concept thrust,1.771,fast (100 min),131.290,3.855,7.833
+inf,2x concept thrust,1.771,walk-on (70 min),131.290,3.355,7.833
