@@ -1,5 +1,7 @@
 # BoomShield: first-cut economics
 
+> **Note (22 Oct 2026):** the ~100 flights/day lid-fatigue cap used here is retired; see [fatigue/lid-fatigue.md] (base cap ≥ 10,000/day) and STATUS.md. The tether field is two rows (~2,700 tethers), per operations/tethers-build-failure.md.
+
 **Skyloop · 22 October 2026 · screening level.** All figures are in 2025 US$ per km of corridor unless stated. The design points come from [STATUS](../STATUS.md) §6, [altitude-trade](../altitude/altitude-trade.md) §6–7 and [structure-concept](../structure/structure-concept.md) §2–4. Two layers are costed:
 
 - **M2.0 baseline:** 55 m of H₂, 1.5 / 1.75 / 2.0 km wide (low / base / high), lid 3.9 kg/m².

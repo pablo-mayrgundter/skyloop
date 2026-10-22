@@ -1,5 +1,7 @@
 # BoomShield trunk: does a shared cross-country spine change the economics?
 
+> **Note (22 Oct 2026):** the ~100 flights/day lid-fatigue cap used here is retired; see [fatigue/lid-fatigue.md] (base cap ≥ 10,000/day) and STATUS.md. The tether field is two rows (~2,700 tethers), per operations/tethers-build-failure.md.
+
 **Skyloop · 22 October 2026 · screening model.** `build_trunk.py` → `metros.csv`, `calibration_anchors.csv`, `od_matrix.csv`, `trees.csv`, `greedy_growth.csv`, `trunk_summary.csv`, `trunk_segments.csv`, `ramps.csv`, `cost_per_km_by_mach.csv`, `figures/`. Builds on [routes](../routes/routes.md), [economics](../../economics/economics.md) (`cost_model.py` imported directly) and [STATUS](../../STATUS.md).
 
 ## Bottom line

@@ -8,7 +8,7 @@
   --sky-top:#b4c9d8; --sky-mid:#d6e2ea; --sky-low:#e9f0f3;
   --boom:#c4421b; --quiet:#136f7e; --quiet-2:#4f9aa7; --quiet-3:#93c3cb;
   --film:#d2ab3d; --film-edge:#9c7b1f; --ground:#b9c3a6; --ground-edge:#8f9b7c; --house:#4f5d68;
-  --jet:#7f93b8; --chip-bg:#e4ebef;
+  --jet:#7f93b8; --chip-bg:#e4ebef; --bc-bl:#9c7b1f;
   --f-display:"Saira Condensed","Arial Narrow","Roboto Condensed",sans-serif;
   --f-body:"Public Sans","Segoe UI",system-ui,-apple-system,sans-serif;
   --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
@@ -20,11 +20,12 @@
     --sky-top:#04090d; --sky-mid:#0b1822; --sky-low:#13242f;
     --boom:#ff7a4e; --quiet:#4cc4d4; --quiet-2:#3593a1; --quiet-3:#2b6872;
     --film:#e0bf5c; --film-edge:#a88a33; --ground:#2b3a2d; --ground-edge:#46593f; --house:#a3b0b8;
-    --jet:#4e6490; --chip-bg:#162732;
+    --jet:#4e6490; --chip-bg:#162732; --bc-bl:#e0bf5c;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
+  --bc-bl:#e0bf5c;
   --bg:#0a141b; --surface:#0f1c25; --ink:#dde7ec; --ink-2:#9fb0bb; --ink-3:#6c7f8b;
   --rule:#243742; --grid:#172833;
   --sky-top:#04090d; --sky-mid:#0b1822; --sky-low:#13242f;
@@ -129,6 +130,22 @@ table.vals .chip{font-size:10px;padding:2px 4px}
 .concerns b{font-weight:600}
 .concerns .fig{font:500 15px var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 .concerns p{grid-column:1/-1;font-size:13px;color:var(--ink-2)}
+/* network and economics */
+.eco{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:40px;align-items:start}
+.bcr{display:grid;gap:12px}
+.bcr-row{display:grid;gap:3px}
+.bcr-row .lab{font-size:13px;color:var(--ink-2)}
+.bcr-row .lab b{color:var(--ink);font-weight:600}
+.bar-line{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:8px;align-items:center}
+.track{position:relative;height:11px}
+.track::after{content:"";position:absolute;left:55.56%;top:-4px;bottom:-4px;border-left:1.5px dashed var(--ink-3)}
+.bar{height:100%;border-radius:0 4px 4px 0;min-width:2px}
+.bar.bl{background:var(--bc-bl)} .bar.sub{background:var(--quiet)}
+.bar-line .v{font:500 13px var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+.bcr-axis{display:grid;grid-template-columns:minmax(0,1fr) 44px;gap:8px;font:500 11px var(--f-mono);color:var(--ink-3)}
+.bcr-axis div{position:relative;height:16px;border-top:1px solid var(--rule)}
+.bcr-axis span{position:absolute;top:2px;transform:translateX(-50%);white-space:nowrap}
+.bcr-axis span:first-child{transform:none}
 /* status */
 .status{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr) minmax(0,1fr);gap:32px}
 .status h3{font-size:20px;margin-bottom:8px}
@@ -155,7 +172,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 @media (prefers-reduced-motion: reduce){.pulse{animation:none;display:none}}
 /* responsive */
 @media (max-width:900px){
-  .split,.insets,.status{grid-template-columns:minmax(0,1fr)}
+  .split,.insets,.status,.eco{grid-template-columns:minmax(0,1fr)}
   .ac{grid-template-columns:110px minmax(0,1fr)}
   .ac .chart{grid-column:1/-1}
 }
@@ -296,11 +313,38 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   </div>
 </section>
 
+<section aria-labelledby="eco-h">
+  <div class="sec-head">
+    <div class="eyebrow">Network and economics</div>
+    <h2 id="eco-h">One spine carries the traffic, and the costs still win</h2>
+    <p class="lede" data-k="network.lede"></p>
+  </div>
+  <div class="spec">
+    <div><b>~<span data-k="network.trips_M"></span> M</b><span>US domestic one-way trips a year</span></div>
+    <div><b>~<span data-k="network.addressable_M"></span> M</b><span>addressable at Mach 2 (≥ 10 min saved)</span></div>
+    <div><b>~<span data-k="network.spine_M"></span> M</b><span>on the spine, ~<span data-k="network.spineShare_pct"></span> % of the time a shield could save</span></div>
+    <div><b><span data-k="network.spine_km"></span> km</b><span>spine length, LAS–DEN–OMA–CHI–CLE–NYC</span></div>
+  </div>
+  <div class="eco">
+    <figure>
+      <h3>The spine and its feeders</h3>
+      <div id="spine-map"></div>
+      <figcaption data-k="network.mapCaption"></figcaption>
+    </figure>
+    <figure>
+      <h3>Benefit/cost of the spine</h3>
+      <div class="legend"><span><i style="background:var(--bc-bl)"></i>vs Boomless Cruise</span><span><i style="background:var(--quiet)"></i>vs subsonic</span><span>dashed line: B/C = 1</span></div>
+      <div class="bcr" id="bcr"></div>
+      <figcaption data-k="network.bcrCaption"></figcaption>
+    </figure>
+  </div>
+</section>
+
 <section aria-labelledby="st-h">
   <div class="sec-head">
     <div class="eyebrow">Status, <span data-k="meta.statusDate"></span></div>
     <h2 id="st-h">Where it stands</h2>
-    <p class="lede">In loudness terms the acoustics look strong at 1 km width. The FAA's proposed 0.11 psf peak limit asks for more: a thicker (~55–80 m of H₂) and wider (~1.5–2 km) layer at 19–22 km. The open questions are structural and operational: lift swing, tethers, hydrogen, and whether the soft parts survive a million boom loads.</p>
+    <p class="lede">The acoustics pass a screen: about 55 m of H₂, 1.5–2 km wide at 20 km, meets the proposed 0.11 psf limit at Mach 2, superbooms included, and lid fatigue no longer caps traffic. Buildability is open: tethers, hydrogen and failure modes. The economics do not close: the best benefit/cost against Boomless Cruise is 0.55, and against subsonic flight it passes 1 only with aggressive cost-down and full capture.</p>
   </div>
   <div class="status">
     <div><h3>Key findings</h3><ol id="findings"></ol></div>
@@ -314,13 +358,14 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 </section>
 
 <footer>
-  <span>Sources in the repo: sim/results/psf_sweep.md, psf_sweep.csv, secondary_booms.md; altitude/altitude-trade.md; sim/results/3d_summary.md, 3d_carpet_summary.csv, 3d_results.csv, gate0_summary.md, wind_turbulence.md, alongtrack_summary.md, line_ties_check.md; structure/structure-concept.md; vacuum/vacuum-balloon-review.md; handoff/2026-10-20-review-addendum.md.</span>
+  <span>Sources in the repo: STATUS.md; sim/results/psf_sweep.md, psf_sweep.csv, secondary_booms.md, focus_booms.md, onramp_shield.md; fatigue/lid-fatigue.md; operations/tethers-build-failure.md; network-maps/routes, trunk, coverage and demand (incl. demand/joint_costdown.csv); economics/economics.md, economics/cost-down/cost-down.md; altitude/altitude-trade.md; sim/results/3d_summary.md, 3d_carpet_summary.csv, 3d_results.csv, gate0_summary.md, wind_turbulence.md, alongtrack_summary.md, line_ties_check.md; structure/structure-concept.md; vacuum/vacuum-balloon-review.md; handoff/2026-10-20-review-addendum.md.</span>
+  <span>Benefit/cost (B/C): time saved at $86/h × 95 % availability over the annualised cost of the shield; "capture" is the share of each pair's traffic the shield's aircraft carries. Traffic and costs are screening estimates; web figures were checked only at search-summary level.</span>
   <span>PLdB: Stevens Mark VII perceived level, the standard loudness metric for sonic booms. "Proxy" values apply a 1 ms rise-time smoothing and are the conservative headline used throughout the study.</span>
 </footer>
 </div>
 
 <script>
-/* ===== Every number on the page lives here (values from data.json, 21 Oct 2026; psf values from sim/results/psf_sweep.md/.csv and 3d_carpet_summary.csv, 22 Oct 2026). ===== */
+/* ===== Every number on the page lives here (values from data.json, 21 Oct 2026; psf values from sim/results/psf_sweep.md/.csv and 3d_carpet_summary.csv; superboom, fatigue, operations, network and economics values from the studies listed in the footer and STATUS.md, 22 Oct 2026). ===== */
 const DATA = {
   meta:{status:"screening study, October 2026", statusDate:"22 October 2026",
     repoText:"github.com/pablo-mayrgundter/skyloop, folder boom-shield/",
@@ -375,7 +420,7 @@ const DATA = {
   ],
   psfLimit:{title:"Proposed FAA limit: 0.11 psf (5.3 Pa) peak",
     text:"The FAA's proposed overland rule (NPRM, docket FAA-2026-6935) caps the ground peak overpressure of primary and secondary booms, not loudness. The 30 m shield fails it at Mach 2 (0.24 psf): what gets through is an inaudible slow swell, but it still counts. About 54 m of H₂ passes under the track at Mach 2 (Overture Mach 1.7 ~20 m, Mach 2.5 ~77 m), and the full carpet needs the shield ~1.5–2 km wide. Simulated for a shield at 20 km."},
-  boomless:{text:"Boom Supersonic plans to fly Overture over land using Mach cutoff: typically at Mach 1.1–1.2, up to 1.3, the boom bends back up before it reaches the ground (XB-1 demonstrated it at Mach 1.12 in February 2025)†. It works only in that narrow speed band. At its Mach 1.7 cruise over water Overture does boom, and that faster flight is the shield's niche."},
+  boomless:{text:"Boom Supersonic plans to fly Overture over land using Mach cutoff: typically at Mach 1.1–1.2, up to 1.3, the boom bends back up before it reaches the ground (XB-1 demonstrated it at Mach 1.12 in February 2025)†. It works only in that narrow speed band and saves ~62 min coast to coast with no infrastructure; a shield adds ~51 min more. Whether Boomless Cruise is allowed and reliable overland decides what the shield competes against."},
   noise:{
     min:30, max:130,
     boom:[
@@ -413,13 +458,15 @@ const DATA = {
     {id:"gaps", name:"Raft with gaps", verdict:"rejected", why:"Air slits leak straight through: 2 / 5 / 15 m gaps give only −12 / −8 / −4 dB, against −27 dB touching."},
     {id:"narrow", name:"Narrow 200–300 m modules", verdict:"narrow", verdictText:"too narrow", why:"Edge diffraction dominates: 250 m wide gives −8 to −9 dB under the track and −3 dB at the carpet maximum, and is 0–2 dB louder than no shield beyond ~18 km."}
   ],
+  /* psf layer 54 m × 1.5 km, bare UHMWPE tethers every 3 km, two anchor rows: operations/tethers-build-failure.md; lid strain and cap: fatigue/lid-fatigue.md */
   mooring:{
-    tetherDrag_kN:"350–630", tetherDia_cm:5, jetWind_ms:"60–80", sizedDrag_MN:"0.6–1.0", sizedDia_cm:"6–10",
-    stationLoad_MN:"2.2–5.6", tetherMass_t:"90–220", spacing_km:"2–5", tetherCount:"800–2,000", corridor_km:"4,000",
+    topTension_MN:28.4, tetherDia_cm:21.5, tetherMass_t:555, jetWind_ms:"60–80", roundRim_MN:11.3,
+    spacing_km:3, tetherCount:"2,700", corridor_km:"4,000", land_ha_km:"3–20",
     liftSwing_pct:10, breathing_pct:"5–10", dp_Pa:"255 / 510 / 995", superheat_K:"10 / 20 / 39",
-    boomLoad_Pa:"200–600", cycles:"2×10⁵–10⁶",
+    boomLoad_Pa:"300–650", lidStrain:"1–6 × 10⁻⁵", fatigueCap:"10,000",
     h2_Mt:"2–4", h2_share_pct:"2–4", helium_years:"over 200", h2_tnt_kt_per_km:"14–27", compartment_m:250, replenish_pct:"5–20",
-    propulsion_kW_per_m:67, propulsion_GW:270, sideForce:"0.50 / 1.12 / 1.99", sideWind:"20 / 30 / 40",
+    upliftTime_s:100,
+    propulsion_kW_per_m:67, propulsion_GW:270,
     cutoffRange_km:"35–115", crosswindShift_km:2.4},
   winds:{
     note:"*Tailwind cutoff is sensitive to the lowest kilometre: 63 km with a 10 m/s boundary layer.",
@@ -430,31 +477,50 @@ const DATA = {
       {label:"Jet-stream tailwind*", lo:-88.1, hi:88.1},
       {label:"Jet-stream crosswind", lo:-28.4, hi:114.7}
     ]},
+  /* network-maps/coverage/coverage.md (M2.0, 100 % capture); trunk/trunk.md (spine, ramps); demand/joint_costdown.csv (B/C, spine M2.0) */
+  network:{
+    trips_M:650, addressable_M:217, spine_M:81, spineShare_pct:37, spine_km:"3,614", busiest_M:80,
+    lede:"Overture needs ~1,100 km just to climb, accelerate and descend, so a shield only helps long flights, and only where they pile up. A network search finds one spine; every added arm lowers benefit/cost. Even on the spine the shield falls short of Boomless Cruise in every case studied.",
+    mapCaption:"The 3,614 km Mach 2 spine (teal) with Boomless feeder legs at Mach 1.15 (dashed), flown by the same aircraft. Las Vegas takes 32 % of joins, New York 14 %. The southern flows (Florida–West, Texas–Northeast) are not captured. Schematic projection.",
+    bcrCaption:"Spine at Mach 2, 100 % capture, from demand/joint_costdown.csv; the demand scenario is named in each row. At 10 % capture every value is 10× lower. Full capture against subsonic implies fares near parity; the carbon cost of that switch is 1.4–3× its time benefit and is not included. These bars also omit the second tether row (+17–19 % capital); with it the aggressive case against subsonic drops by roughly a sixth (1.11 → 0.92 at fixed demand), back under break-even except with high induced demand.",
+    /* lat, lon */
+    metros:{LAS:[36.08,-115.15],DEN:[39.86,-104.67],OMA:[41.30,-95.89],CHI:[41.97,-87.91],CLE:[41.41,-81.85],NYC:[40.78,-73.87],
+      LAX:[33.94,-118.41],SFO:[37.62,-122.38],PHX:[33.43,-112.01],SEA:[47.45,-122.31],BOS:[42.37,-71.01],PHL:[39.87,-75.24],WAS:[38.85,-77.04],YYZ:[43.68,-79.63],wPA:[41.15,-79.3]},
+    spine:["LAS","DEN","OMA","CHI","CLE","NYC"],
+    feeders:[["LAX","LAS"],["SFO","LAS"],["PHX","LAS"],["SEA","LAS"],["BOS","wPA"],["PHL","wPA"],["WAS","wPA"],["YYZ","wPA"]],
+    bcr:[
+      {cost:"Base cost", dem:"fixed demand", bl:0.044, sub:0.159},
+      {cost:"Base cost", dem:"base demand", bl:0.047, sub:0.166},
+      {cost:"Plausible cost-down (÷2.85)", dem:"base demand", bl:0.134, sub:0.475},
+      {cost:"Aggressive cost-down (÷7.0)", dem:"base demand", bl:0.328, sub:1.161},
+      {cost:"Aggressive cost-down (÷7.0)", dem:"high demand", bl:0.549, sub:1.611}
+    ]},
   findings:[
     "A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and 25 dB at the loudest point of the carpet: from ~98 PLdB (conservative proxy; ~108 raw) to ~64 under the track and at most ~73 anywhere in the computed carpet.",
-    "The FAA's proposed 0.11 psf (5.3 Pa) peak limit binds harder than loudness. The 30 m shield leaves an inaudible 0.24 psf swell at Mach 2. Passing needs ~54 m of H₂ at Mach 2 (~20 m for Overture, 71–77 m at Mach 2.5–3.2) and a shield ~1.5–2 km wide for the whole carpet.",
-    "The ground peak rises with aircraft weight and falls with thickness (roughly as d^−1.2 to d^−1.5): about 66 t of aircraft per 30 m of H₂ at Mach 2. The thicker layer lifts more than the structure weighs, and the spare covers tether hold-down.",
-    "For loudness, width sets the result, not gas or thickness: 250 m wide gives only −8 to −9 dB and 500 m about −21 dB under the track. From Mach 1.4 to 3.2 a 1 km shield gives about −33 to −36 dB under the track.",
-    "The shield does not make secondary booms worse. Unshaped Mach 2–3 aircraft at 20 km exceed 0.11 psf in secondary booms when stratospheric winds form a duct, shield or not (0.14–0.37 psf modelled, about ×2 high vs Concorde observations).",
-    "19–22 km stays the best altitude, 20 km for Mach 2. Flying lower needs slightly less gas thickness, but more hydrogen in total and worse weather, tethers and airspace.",
-    "Only a soft structure works. Struts, drop-stitch, vacuum frames, a stiff skin or open gaps leak the boom through; soft ties are fine. Baseline: the floating-lid pillow.",
-    "The hard problems are not acoustic: tethers through the jet stream, a ~10 % daily lift swing, and now 2–4 Mt of hydrogen next to air traffic."
+    "The FAA's proposed 0.11 psf (5.3 Pa) peak limit binds harder than loudness. Passing needs ~54 m of H₂ at Mach 2 (~20 m for Overture, 71–77 m at Mach 2.5–3.2) and a shield ~1.5–2 km wide for the whole carpet.",
+    "Superbooms vanish over the shield: accelerating through Mach cut-off focuses 4.6–5.0 psf on the ground unshielded (Overture class), but only 0.011–0.017 psf over 55 m of H₂. Merging below cut-off, then accelerating, means on-ramps add only ~20 km of shield to the whole spine.",
+    "Lid fatigue is not a traffic cap. The lid carries each boom by inertia at a strain 40–200× below cold endurance; with fatigue-aware details it allows ≥ 10,000 flights a day, which retires the old ~100/day cap.",
+    "The shield does not make secondary booms worse, but unshaped Mach 2–3 aircraft exceed 0.11 psf in secondary booms when stratospheric winds form a duct, shield or not.",
+    "Only a soft structure works: the floating-lid pillow. Struts, drop-stitch, vacuum frames, a stiff skin or open gaps leak the boom through.",
+    "Tethers and failure are the hard engineering: two anchor rows (~2,700 tethers at 28.4 MN each), a hydrogen hose on every ~10th tether, and a worst case of a bay rising into the flight level ~100 s after losing its hold-down.",
+    "Of ~650 M US domestic trips a year, ~217 M are addressable at Mach 2. The best network is a single 3,614 km spine carrying ~81 M passengers a year, ~37 % of the time a shield could save.",
+    "It does not pay against Boomless Cruise: B/C 0.044 at base cost (100 % capture), 0.55 at best with aggressive cost-down and high induced demand. Against subsonic it passes 1 only with aggressive cost-down at full capture (1.16 base demand, 1.61 high demand), and the second tether row (+17–19 % capital) pulls the base-demand case back under 1."
   ],
   caveats:[
-    "Concept-level 2-D/3-D models, linear at the shield and nonlinear in propagation. No hardware, no flight test.",
-    "The psf thicknesses come from a 1-D under-track screen; the 3-D width check covers only Concorde at Mach 2 and 20 km.",
-    "The NPRM's Federal Register text was not fetched; the rule's details come from law-firm summaries.",
-    "Secondary-boom levels hinge on winds (15–40× between cases) and read about ×2 high against Concorde observations.",
-    "Loudness uses the conservative rise-time proxy; near-track values are still about 1.5 dB optimistic. The hydrogen fire hazard is unresolved.",
+    "Simulation only: 1-D/2-D/3-D screening models, linear at the shield, unshaped sources. No hardware, no flight test.",
+    "The psf thicknesses come from a 1-D under-track screen; the 3-D width check covers only Concorde at Mach 2. On-ramp widths are scaled, not run.",
+    "The NPRM's Federal Register text was not fetched; the rule's details come from law-firm summaries. Boomless Cruise's legal status overland is unresolved.",
+    "Traffic comes from mirrored DOT Table 1 data plus a gravity fill; costs are engineering estimates without supplier quotes; capture is assumed, not modelled from fares.",
+    "Emissions are not in any B/C: moving trips from subsonic to supersonic carries a carbon cost 1.4–3× the time benefit, before non-CO₂ effects and H₂ leakage.",
     "Published figures marked † were checked only at search-summary level. Overture's weight and shape are estimates."
   ],
   next:[
-    "3-D width runs at the psf thickness for each aircraft, not just Concorde at Mach 2.",
-    "Floating-lid 3-D carpet at ~55 m × 1.5 km with soft ties; the tie limits were set for 30 m.",
-    "A docket comment: a peak rule penalises an inaudible swell; building rattle is the real issue.",
-    "Graded and upturned edges: the first for loudness, the second to keep reflected booms out of the stratospheric duct.",
-    "Slack-lid fatigue over 10⁵–10⁶ boom cycles, and a diurnal lift scheme that keeps the volume soft.",
-    "Hydrogen hazard analysis before any hardware, now for 2–4 Mt."
+    "Settle the regulatory baseline: is Boomless Cruise allowed and reliable overland? It sets what the shield competes against. File a docket comment on peak vs building-response metrics.",
+    "Model capture as a function of fare; full capture against subsonic needs fares near parity.",
+    "Supplier quotes for sheet, filled ballast and UHMWPE; cold (−56 °C) coupon tests of seams, tie pads and lobe hinges to 10⁸ cycles.",
+    "Hydrogen hazard analysis: bay uplift, compartment fire, aircraft–tether strikes.",
+    "3-D runs: a rounded rim (the main tether lever), width near cut-off at Mach 1.2, and psf-thickness width for each aircraft.",
+    "Emissions: non-CO₂ effects at FL600 and stratospheric H₂ leakage."
   ]
 };
 
@@ -823,18 +889,18 @@ $('#opts').innerHTML=DATA.options.map(o=>`<div class="opt"><svg viewBox="0 0 200
   s+=`<path d="M60 ${zs-34} l9 -16 l9 16 Z" class="f-film s-film" stroke-width="1"/><text x="69" y="${zs-37}" font-size="10" text-anchor="middle" class="f-ink" font-weight="600">!</text>`;
   s+=`<text x="84" y="${zs-38}" font-size="11" class="f-ink2 tm">H₂ next to the flight level</text>`;
   // labels
-  s+=`<rect x="${anchors[1]+44}" y="${Z(13.6)-13}" width="222" height="34" class="f-surface s-rule" stroke-width="1"/><text x="${anchors[1]+50}" y="${Z(13.6)}" font-size="11" class="f-ink tm">tether drag in the jet:</text>`;
-  s+=`<text x="${anchors[1]+50}" y="${Z(13.6)+14}" font-size="11" class="f-boom tm" font-weight="600">${m.tetherDrag_kN} kN per ${m.tetherDia_cm} cm tether</text>`;
+  s+=`<rect x="${anchors[1]+44}" y="${Z(14.8)-13}" width="222" height="34" class="f-surface s-rule" stroke-width="1"/><text x="${anchors[1]+50}" y="${Z(14.8)}" font-size="11" class="f-ink tm">top tension, each tether:</text>`;
+  s+=`<text x="${anchors[1]+50}" y="${Z(14.8)+14}" font-size="11" class="f-boom tm" font-weight="600">${m.topTension_MN} MN · ${m.tetherDia_cm} cm · ${m.tetherMass_t} t</text>`;
   s+=`<path d="M${anchors[0]+18} ${yG+26} H${anchors[1]+18}" class="s-ink2" stroke-width=".8" fill="none"/>`;
   s+=`<text x="${(anchors[0]+anchors[1])/2+18}" y="${yG+38}" font-size="10.5" text-anchor="middle" class="f-ink2 tm">every ${m.spacing_km} km</text>`;
   $('#moor').innerHTML=s+'</svg>';
   const C=[
-    ['Tether drag in the jet stream',`${m.tetherDrag_kN} kN`,`Per ${m.tetherDia_cm} cm tether crossing about 8 km of ${m.jetWind_ms} m/s wind; sized ${m.sizedDia_cm} cm UHMWPE tethers see ${m.sizedDrag_MN} MN each. Tether drag, more than the shield's own side load, likely sets station-keeping.`],
-    ['Tether field',`${m.tetherCount}`,`Tethers every ${m.spacing_km} km along ${m.corridor_km} km, each carrying ${m.stationLoad_MN} MN at 30 m/s and weighing ${m.tetherMass_t} t. Every one is an obstacle in the airspace below the corridor.`],
+    ['Tether tension',`${m.topTension_MN} MN`,`Per bare UHMWPE tether (${m.tetherDia_cm} cm, ${m.tetherMass_t} t) holding the 54 m × 1.5 km layer in design wind. The shield's bluff rim sets most of it; drag on the tether itself is ~13 %. A rounded rim could bring it to ${m.roundRim_MN} MN, if the edge still passes acoustically.`],
+    ['Tether field',`~${m.tetherCount}`,`Two anchor rows, one for each crosswind direction (winds at 20 km reverse with the seasons), every ${m.spacing_km} km along ${m.corridor_km} km. Point sites take ${m.land_ha_km} ha per km of corridor; every line is an obstacle in the airspace below.`],
     ['Daily lift swing',`~${m.liftSwing_pct} %`,`Solar superheat of ~20 K raises lift about 10 % every day. Held at constant volume that is ${m.dp_Pa} Pa for ${m.superheat_K} K, so the layer must breathe ${m.breathing_pct} % daily, with tethers, a gas shuttle or coatings taking up the rest.`],
-    ['Boom load on the shield',`${m.boomLoad_Pa} Pa`,`Each pass hits the top face with 10–25× the lid's weight: ${m.cycles} cycles over 30 years. Flex-crack pinholes are the main leak driver.`],
-    ['Hydrogen near traffic',`${m.h2_Mt} Mt H₂`,`${m.h2_share_pct} % of a year's world supply (as helium, ${m.helium_years} years of output), about ${m.h2_tnt_kt_per_km} kt TNT-equivalent per km. At 55 mbar the layer is marginal for spark ignition. Needs compartments every ≤ ${m.compartment_m} m and leak detection; ${m.replenish_pct} % top-up a year.`],
-    ['Side wind on the shield',`${m.sideForce} kN/m`,`Per metre of corridor at ${m.sideWind} m/s. Winds at 20 km average 10–20 m/s, 20–30 in winter, peaks ~50. Gusts, mountain waves and flutter of slack faces are still open.`],
+    ['Boom load on the lid',`${m.boomLoad_Pa} Pa`,`The lid carries each pass by inertia, heaving 0.1–0.2 m at a strain of ${m.lidStrain}, 40–200× below cold endurance. Fatigue-aware details (mass-matched flaps, spread tie pads, rolling-lobe partitions) allow ≥ ${m.fatigueCap} flights a day.`],
+    ['Hydrogen near traffic',`${m.h2_Mt} Mt H₂`,`${m.h2_share_pct} % of a year's world supply (as helium, ${m.helium_years} years of output), about ${m.h2_tnt_kt_per_km} kt TNT-equivalent per km. Needs compartments every ≤ ${m.compartment_m} m and leak detection; the ${m.replenish_pct} % yearly top-up goes up a hose on every ~10th tether.`],
+    ['Worst failure',`~${m.upliftTime_s} s`,`A bay that loses its hold-down rises 250 m into the flight level in about ${m.upliftTime_s} s. Twin ropes, anti-cascade stations and automatic traffic stops answer it; compartment fire and aircraft–tether strikes remain high residual risks.`],
     ['Wind shifts the carpet',`${m.cutoffRange_km} km`,`Cutoff extent with jet-stream and QBO winds (48 km in calm air); a crosswind moves the shadow ${m.crosswindShift_km} km downwind. Corridors need wind climatology.`]
   ];
   $('#concerns').innerHTML=C.map(([h,f,p])=>`<div><b>${h}</b><span class="fig">${f}</span><p>${p}</p></div>`).join('');
@@ -847,6 +913,35 @@ $('#opts').innerHTML=DATA.options.map(o=>`<div class="opt"><svg viewBox="0 0 200
     w+=`<text x="416" y="${y+10}" font-size="10.5" text-anchor="end" class="f-ink tm">${Math.abs(c.lo)===c.hi?'±'+c.hi+' km':c.lo+' / +'+c.hi+' km'}</text>`;
     w+=`<rect x="${x(c.lo)}" y="${y+15}" width="${x(c.hi)-x(c.lo)}" height="12" rx="2" class="f-boom" opacity="${i===0?.55:.3}"/>`;});
   $('#winds').innerHTML=w+'</svg>';
+})();
+
+/* ===== NETWORK AND ECONOMICS ===== */
+(function(){
+  const N=DATA.network, k=9.6, c=Math.cos(39*Math.PI/180);
+  const P=([la,lo])=>[(lo+125)*k*c+12, (49.6-la)*k+12];
+  const pt=code=>P(N.metros[code]);
+  // coarse contiguous-US outline (lon, lat), schematic only
+  const US=[[-124.7,48.4],[-123,49],[-95.2,49],[-94.8,49.4],[-89.6,48],[-84.6,46.5],[-82.4,43],[-79,43.3],[-76.3,44.1],[-74.7,45],[-71.5,45],[-70,46.7],[-69.2,47.4],[-67.8,47.1],[-67,45],[-70.2,43.6],[-70.6,42.6],[-70,41.8],[-71.9,41.3],[-74,40.6],[-74.9,38.9],[-76,37],[-75.5,35.2],[-77.9,33.9],[-79.9,32.7],[-81.4,30.7],[-80.6,28.4],[-80.1,26],[-80.4,25.2],[-81.1,25.1],[-81.8,26.7],[-82.7,28],[-83,29.1],[-84.3,30],[-85.4,29.7],[-86.5,30.4],[-88,30.4],[-89.6,30.2],[-89.4,29],[-90.5,29.1],[-92,29.6],[-93.8,29.7],[-94.8,29.3],[-96.8,28],[-97.4,26],[-99.1,26.4],[-99.5,27.5],[-101.4,29.8],[-103.1,29],[-104.7,30],[-106.5,31.8],[-108.2,31.8],[-111.1,31.3],[-114.8,32.5],[-117.1,32.5],[-118.5,34],[-120.6,34.6],[-121.9,36.6],[-122.5,37.8],[-123.8,39.8],[-124.2,41.8],[-124.5,43],[-124,46.3]];
+  let s=`<svg viewBox="0 0 470 262" role="img" aria-label="Map of the 3,614 km spine from Las Vegas to New York with feeder legs">`;
+  s+=`<path d="M${US.map(([lo,la])=>P([la,lo]).map(v=>v.toFixed(1)).join(' ')).join(' L')} Z" class="f-surface s-rule" stroke-width="1"/>`;
+  N.feeders.forEach(([a,b])=>{const [x1,y1]=pt(a),[x2,y2]=pt(b); s+=`<path d="M${x1.toFixed(1)} ${y1.toFixed(1)} L${x2.toFixed(1)} ${y2.toFixed(1)}" class="s-ink3" stroke-width="1.3" stroke-dasharray="4 3" fill="none"/>`;});
+  s+=`<path d="M${N.spine.map(code=>pt(code).map(v=>v.toFixed(1)).join(' ')).join(' L')}" class="s-quiet" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`;
+  const L={LAS:[-6,16,'end'],DEN:[0,-10,'middle'],OMA:[0,-10,'middle'],CHI:[-2,-10,'middle'],CLE:[0,18,'middle'],NYC:[8,4,'start'],
+    LAX:[-6,4,'end'],SFO:[-6,4,'end'],PHX:[0,16,'middle'],SEA:[6,4,'start'],BOS:[6,0,'start'],WAS:[0,16,'middle'],YYZ:[0,-8,'middle'],PHL:null,wPA:null};
+  Object.keys(N.metros).forEach(code=>{const [x,y]=pt(code), sp=N.spine.includes(code);
+    if(code==='wPA'){s+=`<circle cx="${x}" cy="${y}" r="3" class="f-surface s-quiet" stroke-width="2"/>`;return;}
+    s+=`<circle cx="${x}" cy="${y}" r="${sp?4.5:3}" class="${sp?'f-ink s-surface':'f-ink3'}" stroke-width="1.5"/>`;
+    const l=L[code]; if(l) s+=`<text x="${x+l[0]}" y="${y+l[1]}" font-size="${sp?13:11.5}" text-anchor="${l[2]}" class="${sp?'f-ink':'f-ink2'} tm" font-weight="${sp?600:400}">${code}</text>`;});
+  const [ox,oy]=pt('OMA'),[dx,dy]=pt('DEN');
+  s+=`<text x="${ox-22}" y="${oy+26}" font-size="11.5" class="f-ink2 tm">busiest km</text><text x="${ox-22}" y="${oy+40}" font-size="11.5" class="f-ink2 tm">~${N.busiest_M} M pax/yr</text>`;
+  s+=`<text x="16" y="250" font-size="11.5" class="f-ink2 tm">${N.spine_km} km spine · ~${N.spine_M} M pax/yr</text>`;
+  $('#spine-map').innerHTML=s+'</svg>';
+  const max=1.8, w=v=>(Math.min(v,max)/max*100).toFixed(1)+'%', f=v=>v<0.1?v.toFixed(3):v.toFixed(2);
+  let h=N.bcr.map(r=>`<div class="bcr-row"><div class="lab"><b>${r.cost}</b> · ${r.dem}</div>
+    <div class="bar-line" title="${r.cost}, ${r.dem}: B/C ${f(r.bl)} vs Boomless Cruise, 100 % capture"><div class="track"><div class="bar bl" style="width:${w(r.bl)}"></div></div><span class="v">${f(r.bl)}</span></div>
+    <div class="bar-line" title="${r.cost}, ${r.dem}: B/C ${f(r.sub)} vs subsonic, 100 % capture"><div class="track"><div class="bar sub" style="width:${w(r.sub)}"></div></div><span class="v">${f(r.sub)}</span></div></div>`).join('');
+  h+=`<div class="bcr-axis"><div>${[0,0.5,1,1.5].map(t=>`<span style="left:${w(t)}">${t===1?'1 = break-even':t}</span>`).join('')}</div><span></span></div>`;
+  $('#bcr').innerHTML=h;
 })();
 
 /* ===== STATUS ===== */

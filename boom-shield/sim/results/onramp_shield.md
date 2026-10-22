@@ -1,5 +1,7 @@
 # On-ramp shields for the BoomShield trunk
 
+> **Note (22 Oct 2026):** the ~100 flights/day lid-fatigue cap used here is retired; see [fatigue/lid-fatigue.md] (base cap ≥ 10,000/day) and STATUS.md. The tether field is two rows (~2,700 tethers), per operations/tethers-build-failure.md.
+
 How should the shield be laid out where traffic joins the Mach-2 spine LAS–DEN–OMA–CHI–CLE–NYC? The spine has 12 on-ramps; LAS takes 32 % of joins and NYC 14 % ([trunk](../../network-maps/trunk/trunk.md)). Feeders arrive at Boomless Cruise, M ≈ 1.15.
 
 Code: `run_focus.py --phase onramp`. Data: `onramp_shield.csv`. Figure: `onramp_shield.png`. Physics and validation are in [focus_booms](focus_booms.md).
