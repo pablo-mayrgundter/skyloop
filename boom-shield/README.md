@@ -38,6 +38,7 @@ This directory collects the first-pass acoustic analysis for a bouyant sonic-boo
 - [network-maps/trunk/trunk.md](network-maps/trunk/trunk.md): shared cross-country trunk (gravity-model O&D, Mach sweep 1.4-3.2), traffic per km and benefit/cost.
 - [network-maps/coverage/coverage.md](network-maps/coverage/coverage.md): total US long-haul traffic (DOT Table 1 based), addressable share, spine coverage, network-size curve.
 - [network-maps/demand/demand.md](network-maps/demand/demand.md): induced demand from shorter trips (elasticities, day-trip thresholds, rule-of-half), revised B/C and side effects. Its [joint_costdown.csv](network-maps/demand/joint_costdown.csv) is the authoritative cost-down + demand table.
+- [network-maps/highmach/highmach.md](network-maps/highmach/highmach.md): higher-Mach aircraft (M1.7-4.0, adaptive-cycle/TBCC), door-to-door decomposition, shield vs Mach, B/C gross and net of fuel/CO2.
 - [economics/economics.md](economics/economics.md): first-cut cost, land-rights and benefit model.
 - [economics/cost-down/cost-down.md](economics/cost-down/cost-down.md): unit-cost reduction levers and dual-use revenue; scenario B/C (its own joint-demand section is superseded).
 - [economics/integration/integration.md](economics/integration/integration.md): vertical integration of the main cost drivers (make vs buy, plants, learning curves) and updated B/C.

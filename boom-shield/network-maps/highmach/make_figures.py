@@ -152,20 +152,35 @@ def fig_aircraft():
 def fig_bcr():
     R = pd.read_csv(HERE / "bcr_by_mach.csv")
     R = R[(R.network == "spine") & (R.demand == "base") & (R.capture == 1.0) & ~R.design.str.startswith("repo")]
-    fig, (a1, a2) = plt.subplots(1, 2, figsize=(12.5, 4.4), dpi=150, sharey=True)
-    for a_, vs, ttl in ((a1, "bl", "(a) vs Boomless Cruise"), (a2, "sub", "(b) vs subsonic")):
-        for lvl, col in (("base", C4), ("plausible", C1), ("aggressive", C3)):
-            s = R[(R.vs == vs) & (R.cost == lvl)].sort_values("M")
-            a_.plot(s.M, s.bcr, "-o", color=col, lw=1.8, ms=4, label=f"{lvl} cost, time + induced")
-            a_.plot(s.M, s.bcr_net_fuel_carbon, ls=(0, (4, 2)), color=col, lw=1.4,
-                    label=f"{lvl} cost, net of extra fuel + CO2")
-        a_.axhline(1.0, color=INK, lw=0.9)
-        a_.set_yscale("symlog", linthresh=0.05)
-        a_.set_xlabel("Cruise Mach (spine, 100 % capture, base demand, two tether rows)")
-        a_.set_title(ttl, loc="left", fontsize=9.5)
-        tidy(a_)
-    a1.set_ylabel("B/C (symlog; below 0 = extra fuel exceeds the time benefit)")
-    a2.legend(fontsize=7, frameon=False, loc="lower left")
+    S = pd.read_csv(HERE / "summary_by_mach.csv")
+    S = S[~S.design.str.startswith("repo")].sort_values("M")
+    fig, (a1, a2) = plt.subplots(1, 2, figsize=(12.5, 4.4), dpi=150)
+    for col_, lab, c in (("bl_base_100", "base cost", C4), ("bl_plausible_100", "plausible cost", C1),
+                         ("bl_aggressive_100", "aggressive cost", C3), ("bl_integrated_100", "integrated (sibling)", C2)):
+        a1.plot(S.M, S[col_], "-o", color=c, lw=1.8, ms=4)
+        a1.text(4.05, S[col_].iloc[-1], lab, fontsize=7.5, color=INK2, va="center")
+    a1.axhline(1.0, color=INK, lw=0.9)
+    a1.text(1.72, 1.02, "break-even", fontsize=7.5, color=INK)
+    a1.set_xlim(1.6, 4.6)
+    a1.set_ylim(0, 1.15)
+    a1.set_xlabel("Cruise Mach (spine, 100 % capture, base demand, two tether rows)")
+    a1.set_ylabel("B/C vs Boomless (time + induced; fuel not charged)")
+    a1.set_title("(a) Mach roughly doubles B/C; it stops rising after M2.5", loc="left", fontsize=9.5)
+    tidy(a1)
+    b = R[(R.vs == "bl") & (R.cost == "base")].sort_values("M")
+    a2.plot(b.M, b.benefit_busd, "-o", color=C1, lw=1.8, ms=4)
+    a2.plot(b.M, b.extra_fuel_busd, "-o", color=C2, lw=1.8, ms=4)
+    a2.plot(b.M, b.extra_fuel_busd + b.carbon_busd, ls=(0, (4, 2)), color=C2, lw=1.6)
+    a2.plot(b.M, b.cost_busd, "-", color=GREY, lw=1.6)
+    for y, lab in ((b.benefit_busd.iloc[-1], "time + induced benefit"), (b.extra_fuel_busd.iloc[-1], "extra fuel vs Overture-class"),
+                   (b.extra_fuel_busd.iloc[-1] + b.carbon_busd.iloc[-1], "extra fuel + CO2 ($190/t)"),
+                   (b.cost_busd.iloc[-1], "shield cost, base")):
+        a2.text(4.05, y, lab, fontsize=7.5, color=INK2, va="center")
+    a2.set_xlim(1.6, 4.9)
+    a2.set_xlabel("Cruise Mach (spine, 100 % capture vs Boomless)")
+    a2.set_ylabel("$ B per year")
+    a2.set_title("(b) Above ~M2.3 the extra fuel outweighs the time saved", loc="left", fontsize=9.5)
+    tidy(a2)
     fig.tight_layout()
     fig.savefig(FIG / "highmach_bcr.png", facecolor="white")
 
