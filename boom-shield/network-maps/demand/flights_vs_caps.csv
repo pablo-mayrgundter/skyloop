@@ -1,0 +1,11 @@
+network,variant,peak_seg_pax_M,peak_flights_day,share_of_cap_10000,share_of_cap_1000
+spine,fixed,80.07,4500,0.45,4.5
+spine,low,81.6,4586,0.4586,4.586
+spine,base,85.18,4787,0.4787,4.787
+spine,high,95.99,5395,0.5395,5.395
+spine,base + growth,119.3,6702,0.6702,6.702
+greedy step 6,fixed,109.3,6143,0.6143,6.143
+greedy step 6,low,111.4,6261,0.6261,6.261
+greedy step 6,base,116.3,6536,0.6536,6.536
+greedy step 6,high,132.4,7440,0.744,7.44
+greedy step 6,base + growth,162.8,9150,0.915,9.15
