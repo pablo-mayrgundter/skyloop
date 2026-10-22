@@ -23,6 +23,7 @@ Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac
 - [sim/results/3d_summary.md](sim/results/3d_summary.md): 3-D finite-width corridor study: ground carpets vs shield width, stack, edge treatment, cell walls, ties, aircraft.
 - [sim/results/alongtrack_summary.md](sim/results/alongtrack_summary.md): along-track (3-D) study of serrated edges and module joints.
 - [sim/results/wind_turbulence.md](sim/results/wind_turbulence.md): wind (moving-medium rays) and boundary-layer turbulence effects on shielded vs unshielded ground carpets.
+- [sim/results/psf_sweep.md](sim/results/psf_sweep.md): sweep of gas, thickness, shield altitude and aircraft against the proposed FAA 0.11 psf overland limit.
 - [sim/results/line_ties_check.md](sim/results/line_ties_check.md): line-tie bug finding, independent Floquet check, and tie-stiffness design rule.
 - [vacuum/vacuum-balloon-review.md](vacuum/vacuum-balloon-review.md): screening review of the inverted (vacuum) balloon option: acoustics, structural closure, pumping, failure modes.
 - [structure/structure-concept.md](structure/structure-concept.md): structural concept study for a ~1 km-wide H2 shield with acoustically decoupled faces; recommends the "floating-lid" pillow baseline.

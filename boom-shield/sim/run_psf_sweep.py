@@ -562,12 +562,12 @@ def plot(rows, path):
             y, pk = zip(*sorted(pts3[k]))
             pk = np.array(pk) / (4.0 if "none" in k else 1.0)
             ax.plot(y, pk, ls, color=col, lw=1.4, label=lab + " [3d_results]")
-    for W, col in ((1000.0, "#2a78d6"), (2000.0, "#1baf7a")):
-        o = load(f"3d_Concorde_M2_hy60_float_W{W:g}_R3000", "aux")
+    for W, col in ((1000.0, "#2a78d6"), (1500.0, "#c43c5a"), (2000.0, "#1baf7a")):
+        o = load(f"3d_Concorde_M2_hy60_float_W{W:g}_R3000_f30", "aux")
         if o:
             rr = [r for r in o["rows"] if "peak_pa" in r]
             ax.plot([r["y_g"] / 1e3 for r in rr], [r["peak_pa"] for r in rr], "-", marker="o", ms=3.5,
-                    color=col, lw=1.8, label=f"W {W / 1e3:g} km, H₂ 60 m floating lid [new 3-D]")
+                    color=col, lw=1.8, label=f"W {W / 1e3:g} km, H₂ 60 m floating lid [new 3-D, f ≤ 30 Hz]")
     offs = []
     for phi in (0.0, 24.0, 39.0, 54.0):
         o = load(f"off_Concorde_M2_H20_hy60_float_phi{phi:g}", "aux")
@@ -589,7 +589,9 @@ def plot(rows, path):
         ax.plot([x, x], [yu, ym], color=muted, lw=0.8)
         ax.plot(x, yu, "o", color="#2a78d6", ms=5)
         ax.plot(x, ym, "^", color="#eb6834", ms=6)
-        ax.annotate(lab, (x, ym), textcoords="offset points", xytext=(4, 3), fontsize=6.5, color=ink2)
+        if lab:
+            ax.annotate(lab, (x, ym), textcoords="offset points", xytext=(4, -10 if "1.5" in lab else 3),
+                        fontsize=6.5, color=ink2)
     ax.plot([], [], "o", color="#2a78d6", label="3-D undertrack (R_m 8 km where run)")
     ax.plot([], [], "^", color="#eb6834", label="3-D maximum over the computed carpet")
     lim = np.array([2, 40])
@@ -633,13 +635,13 @@ def compare_1d_3d():
         far = dict(pts3.get(k3 + "_R8000", []))
         yu = far.get(0.0, dict(pts3[k3])[0.0])
         out.append((r1["peak_pa"], yu, max(v for _, v in pts3[k3]), lab))
-    for W in (1000.0, 2000.0):
-        o = load(f"3d_Concorde_M2_hy60_float_W{W:g}_R3000", "aux")
+    for W in (1000.0, 1500.0, 2000.0):
+        o = load(f"3d_Concorde_M2_hy60_float_W{W:g}_R3000_f30", "aux")
         r1 = load("Concorde_M2_H20_hy60_float")
         if o and r1:
             rr = [r for r in o["rows"] if "peak_pa" in r]
             out.append((r1["peak_pa"], rr[0]["peak_pa"], max(r["peak_pa"] for r in rr),
-                        f"C M2 H₂60 float W{W / 1e3:g}km"))
+                        {1000.0: "C M2 H₂60 float W1km", 1500.0: "", 2000.0: "H₂60 W1.5 & 2 km"}[W]))
     return out
 
 
@@ -771,17 +773,21 @@ def ymax_case(d):
 
 # ----------------------------------------------------------------------------- 3-D check
 def run_3d_confirm(fill, d, lid="float", mach=2.0, acn="Concorde", W=1000.0, R_m=3000.0,
-                   phis=(0.0, 12.0, 24.0, 33.0, 39.0, 45.0, 51.0, 54.0), workers=2):
+                   phis=(0.0, 12.0, 24.0, 33.0, 39.0, 45.0, 51.0, 54.0), workers=2, f_max=None):
     """Finite-width slab through the run_3d.py pipeline (cross-plane BEM -> matching
     circle -> propagate_from_circle), floating-lid face masses, shield top at 20 km.
     Cached in results/psf_cache."""
     key = f"3d_{acn}_M{mach:g}_{fill[:2]}{d:g}_{lid}_W{W:g}_R{R_m:g}"
+    if f_max:
+        key += f"_f{f_max:g}"
     got = load(key, "aux")
     if got is not None:
         return got
     import run_3d as R3
     from boomsim import crossplane as cp
     R3.WORKERS = workers
+    if f_max:
+        R3.F_MAX = float(f_max)     # peak-only check: band limit lowered (PLdB not valid)
     ac = aircraft(acn, mach, R3.H_S)
     if W is None:
         cfg = cp.CrossPlaneConfig(ac, W=None, h=H_AC, f_max=R3.F_MAX, R_m=R_m, phis=list(phis),
@@ -865,6 +871,8 @@ def main():
                     choices=["validate", "baseline", "coarse", "refine", "extra", "3d", "offtrack", "report",
                              "time"])
     ap.add_argument("--W", type=float, default=1000.0)
+    ap.add_argument("--lid", default="float")
+    ap.add_argument("--fmax", type=float, default=0.0)
     ap.add_argument("--R", type=float, default=3000.0)
     ap.add_argument("--procs", type=int, default=2)
     ap.add_argument("--fill", default="hydrogen")
@@ -902,7 +910,8 @@ def main():
         run_all(tie, args.procs, "ties K=10")
     elif args.phase == "3d":
         W = None if args.W <= 0 else args.W
-        run_3d_confirm(args.fill, args.d, "float", args.mach, args.ac, W=W, R_m=args.R, workers=args.procs)
+        run_3d_confirm(args.fill, args.d, args.lid, args.mach, args.ac, W=W, R_m=args.R, workers=args.procs,
+                       f_max=args.fmax or None)
     elif args.phase == "offtrack":
         import itertools
         jobs = list(itertools.product([(None, 0.0), ("hydrogen", 30.0), ("hydrogen", 60.0), ("helium", 60.0)],
