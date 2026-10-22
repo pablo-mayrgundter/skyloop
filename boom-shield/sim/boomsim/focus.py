@@ -739,9 +739,10 @@ def nkz_focus(t, p, L_c, R, c, rho, beta=BETA_AIR, T0=None, n_rise=4.0, omega_cu
     dt = t[1] - t[0]
     pk = p.max()
     if rise_s is None:
-        i90 = int(np.argmax(p >= 0.9 * pk))
-        i10 = np.flatnonzero(p[:i90] < 0.1 * pk)
-        rise_s = (i90 - i10[-1]) * dt if i10.size else 1e-3
+        # shock rise from the steepest compression (0.8 peak / max slope = the 10-90 %
+        # time of a linear ramp); robust to slow precursors that fool a 10-90 % search
+        smax = float(np.max(np.diff(p))) / dt
+        rise_s = 0.8 * pk / smax if smax > 0 else 1e-3
     if T0 is None:
         T0 = max(5e-5, rise_s / n_rise)
     if dT is None:
@@ -797,15 +798,19 @@ def nkz_focus(t, p, L_c, R, c, rho, beta=BETA_AIR, T0=None, n_rise=4.0, omega_cu
     a_half = 0.5 * amp * pk
     rise_n = rise_s / T0
     Gamma = 0.0 if linear else mu * a_half * rise_n / 4.39
+    # Taylor balance at every height: the incident amplitude falls as Z^(-1/4) away from
+    # the caustic, so Gamma(Z) = Gamma min(1, Z^(-1/4)) keeps the incident shock at its
+    # rise time all the way in (a uniform Gamma would over-smooth the far incident)
+    GZ = Gamma * np.minimum(1.0, np.maximum(Zg, 1.0) ** -0.25)
     P_ref_w = sfft.rfft(P_ref, axis=1, workers=workers) if Gamma > 0 else None
 
     def lin_factors(dX):
         diff = np.exp(1j * np.outer(kz ** 2, 1.0 / Omp) * dX)
         diff[:, 0] = 0.0
         refr_half = np.exp(-1j * np.outer(Zg, Om) * dX / 2)
-        absn = np.exp(-Gamma * Om ** 2 * dX)
+        absn = np.exp(-np.outer(GZ, Om ** 2) * dX)
         damp = np.exp(-sig * dX)[:, None]
-        dref = (sfft.irfft(P_ref_w * (absn - 1.0)[None, :], NT, axis=1, workers=workers)
+        dref = (sfft.irfft(P_ref_w * (absn - 1.0), NT, axis=1, workers=workers)
                 if Gamma > 0 else 0.0)
         return diff, refr_half, absn, damp, dref
     lin_peak0 = float(P_ref[(Zg >= -Z_bot) & (Zg <= 6.0)].max())
@@ -821,7 +826,10 @@ def nkz_focus(t, p, L_c, R, c, rho, beta=BETA_AIR, T0=None, n_rise=4.0, omega_cu
         dX = dX_max
         if mu > 0:
             pmax = max(pmax0, float(np.abs(P_ref + D).max()))
-            dX = min(dX, cfl * dT / (mu * pmax))
+            lim = cfl * dT / (mu * pmax)
+            # step ladder dX_max 2^(-k/2) so the linear factors are reused (cache hits)
+            k = max(0, int(math.ceil(2.0 * math.log2(dX_max / lim)))) if lim < dX_max else 0
+            dX = dX_max * 2.0 ** (-0.5 * k)
         dX = min(dX, X_end - X)
         key = round(dX, 12)
         if key not in cache:
@@ -835,7 +843,7 @@ def nkz_focus(t, p, L_c, R, c, rho, beta=BETA_AIR, T0=None, n_rise=4.0, omega_cu
         Dk *= diff
         Dw = sfft.ifft(Dk, axis=0, workers=workers)
         Dw *= refr_half
-        Dw *= absn[None, :]
+        Dw *= absn
         D = sfft.irfft(Dw, NT, axis=1, workers=workers)
         D += dref
         D *= damp
