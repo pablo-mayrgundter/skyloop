@@ -1,0 +1,517 @@
+load_case,detail,material,case,eps_boom,N_boom,eps_weather,weather_cycles_yr,N_weather,note
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),LLDPE balloon film,low,2.73e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),LLDPE balloon film,base,1.36e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),LLDPE balloon film,high,9.09e-06,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),PE/PET laminate,low,2.73e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),PE/PET laminate,base,1.36e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),PE/PET laminate,high,9.09e-06,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),low,2.73e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),base,1.36e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),high,9.09e-06,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Vectran scrim,low,2.73e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Vectran scrim,base,1.36e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Vectran scrim,high,9.09e-06,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Aramid scrim,low,2.73e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Aramid scrim,base,1.36e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Aramid scrim,high,9.09e-06,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),low,2.73e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),base,1.36e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),high,9.09e-06,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,LLDPE balloon film,low,0.000109,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,LLDPE balloon film,base,4.09e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,LLDPE balloon film,high,1.82e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,PE/PET laminate,low,0.000109,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,PE/PET laminate,base,4.09e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,PE/PET laminate,high,1.82e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),low,0.000109,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),base,4.09e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),high,1.82e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Vectran scrim,low,0.000109,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Vectran scrim,base,4.09e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Vectran scrim,high,1.82e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Aramid scrim,low,0.000109,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Aramid scrim,base,4.09e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Aramid scrim,high,1.82e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),low,0.000109,4.41e+12,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),base,4.09e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),high,1.82e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,low,0.000985,8.38e+06,0.0246,365,6.85e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,base,0.000492,7.56e+13,0.0064,365,1.65e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,high,0.000328,1e+15,0.00427,365,4.87e+07,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,low,0.000985,1.08e+08,0.0246,365,2.21e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,base,0.000492,1e+15,0.0064,365,1.74e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,high,0.000328,1e+15,0.00427,365,4.87e+07,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),low,0.000985,7.56e+13,0.0246,365,4.38e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),base,0.000492,1e+15,0.0064,365,9.29e+07,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),high,0.000328,1e+15,0.00427,365,4.99e+10,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,low,0.000985,1.41e+11,0.0246,365,5.82e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,base,0.000492,1e+15,0.0064,365,8.08e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,high,0.000328,1e+15,0.00427,365,5.36e+09,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,low,0.000985,7.93e+09,0.0246,365,5.32e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,base,0.000492,1e+15,0.0064,365,4.63e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,high,0.000328,1e+15,0.00427,365,1.87e+09,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),low,0.000985,3.24e+06,0.0246,365,5.77e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),base,0.000492,3.45e+11,0.0064,365,8.54e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),high,0.000328,1e+15,0.00427,365,4.65e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,low,6.57e-05,1e+15,0.00164,365,3.91e+06,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,base,3.28e-05,1e+15,0.000427,365,3.16e+14,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,high,2.19e-05,1e+15,0.000285,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,low,6.57e-05,1e+15,0.00164,365,5.72e+06,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,base,3.28e-05,1e+15,0.000427,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,high,2.19e-05,1e+15,0.000285,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),low,6.57e-05,1e+15,0.00164,365,4.57e+11,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),base,3.28e-05,1e+15,0.000427,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),high,2.19e-05,1e+15,0.000285,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,low,6.57e-05,1e+15,0.00164,365,8.51e+08,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,base,3.28e-05,1e+15,0.000427,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,high,2.19e-05,1e+15,0.000285,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,low,6.57e-05,1e+15,0.00164,365,4.8e+07,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,base,3.28e-05,1e+15,0.000427,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,high,2.19e-05,1e+15,0.000285,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),low,6.57e-05,7.04e+14,0.00164,365,1.71e+06,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),base,3.28e-05,1e+15,0.000427,365,1.44e+12,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),high,2.19e-05,1e+15,0.000285,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,low,0.0125,1.88e+05,0.025,2.04e+04,6.7e+04,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,base,0.0025,9.28e+06,0.00625,1.04e+04,1.73e+06,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,high,0.0005,1e+15,0.00125,365,1.05e+13,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,low,0.0125,8.87e+04,0.025,2.04e+04,2.14e+04,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,base,0.0025,1.18e+08,0.00625,1.04e+04,1.85e+06,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,high,0.0005,1e+15,0.00125,365,1.05e+13,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,low,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,base,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,high,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,low,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,base,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,high,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,low,0.05,2.38e+04,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,base,0.025,1.36e+05,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,high,0.01,2.18e+06,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,low,0.05,5.16e+03,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,base,0.025,5.64e+04,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,high,0.01,1.41e+06,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),low,0.05,1.13e+05,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),base,0.025,7.28e+05,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),high,0.01,1e+07,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,low,0.05,2.39e+05,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,base,0.025,9.16e+05,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,high,0.01,6.66e+06,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,low,0.05,1.24e+04,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,base,0.025,1.22e+05,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,high,0.01,3.63e+06,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),low,0.05,2.38e+04,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),base,0.025,9.42e+04,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),high,0.01,8.86e+05,0,0,1e+15,sag ~0.19 m per pass -> hinge fold R 5/10/25 mm
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",LLDPE balloon film,low,8.18e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",LLDPE balloon film,base,4.09e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",LLDPE balloon film,high,2.73e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",PE/PET laminate,low,8.18e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",PE/PET laminate,base,4.09e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",PE/PET laminate,high,2.73e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),low,8.18e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),base,4.09e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),high,2.73e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Vectran scrim,low,8.18e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Vectran scrim,base,4.09e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Vectran scrim,high,2.73e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Aramid scrim,low,8.18e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Aramid scrim,base,4.09e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Aramid scrim,high,2.73e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),low,8.18e-05,7.83e+13,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),base,4.09e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),high,2.73e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),low,3e-05,1e+15,0.006,1e+03,6.53e+06,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),base,1.5e-05,1e+15,0.00225,300,3.23e+12,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,Vectran scrim,low,3e-05,1e+15,0.006,1e+03,3.43e+06,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,Vectran scrim,base,1.5e-05,1e+15,0.00225,300,9.12e+10,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,Vectran scrim,high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,Aramid scrim,low,3e-05,1e+15,0.006,1e+03,9.65e+05,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,Aramid scrim,base,1.5e-05,1e+15,0.00225,300,1.95e+10,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",Tether/tendon attachment,Aramid scrim,high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),LLDPE balloon film,low,4.75e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),LLDPE balloon film,base,2.37e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),LLDPE balloon film,high,1.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),PE/PET laminate,low,4.75e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),PE/PET laminate,base,2.37e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),PE/PET laminate,high,1.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),low,4.75e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),base,2.37e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),high,1.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Vectran scrim,low,4.75e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Vectran scrim,base,2.37e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Vectran scrim,high,1.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Aramid scrim,low,4.75e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Aramid scrim,base,2.37e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Aramid scrim,high,1.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),low,4.75e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),base,2.37e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),high,1.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,LLDPE balloon film,low,0.00019,4.31e+13,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,LLDPE balloon film,base,7.12e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,LLDPE balloon film,high,3.17e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,PE/PET laminate,low,0.00019,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,PE/PET laminate,base,7.12e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,PE/PET laminate,high,3.17e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),low,0.00019,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),base,7.12e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),high,3.17e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Vectran scrim,low,0.00019,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Vectran scrim,base,7.12e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Vectran scrim,high,3.17e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Aramid scrim,low,0.00019,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Aramid scrim,base,7.12e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Aramid scrim,high,3.17e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),low,0.00019,1.72e+10,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),base,7.12e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),high,3.17e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,low,0.0012,6.28e+06,0.0299,365,5.13e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,base,0.000598,1.09e+13,0.00777,365,1.16e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,high,0.000398,1e+15,0.00518,365,9.26e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,low,0.0012,1.57e+07,0.0299,365,1.48e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,base,0.000598,1.94e+14,0.00777,365,1.07e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,high,0.000398,1e+15,0.00518,365,9.06e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),low,0.0012,1.09e+13,0.0299,365,3.03e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),base,0.000598,1e+15,0.00777,365,1.34e+07,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),high,0.000398,1e+15,0.00518,365,7.21e+09,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,low,0.0012,2.04e+10,0.0299,365,4.56e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,base,0.000598,1e+15,0.00777,365,5.93e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,high,0.000398,1e+15,0.00518,365,7.74e+08,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,low,0.0012,1.15e+09,0.0299,365,3.58e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,base,0.000598,1e+15,0.00777,365,2.76e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,high,0.000398,1e+15,0.00518,365,2.7e+08,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),low,0.0012,2.54e+06,0.0299,365,4.53e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),base,0.000598,4.99e+10,0.00777,365,6.25e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),high,0.000398,1e+15,0.00518,365,3.19e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,low,7.97e-05,1e+15,0.00199,365,2.93e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,base,3.98e-05,1e+15,0.000518,365,4.57e+13,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,high,2.66e-05,1e+15,0.000345,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,low,7.97e-05,1e+15,0.00199,365,3.84e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,base,3.98e-05,1e+15,0.000518,365,8.12e+14,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,high,2.66e-05,1e+15,0.000345,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),low,7.97e-05,1e+15,0.00199,365,6.61e+10,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),base,3.98e-05,1e+15,0.000518,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),high,2.66e-05,1e+15,0.000345,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,low,7.97e-05,1e+15,0.00199,365,1.23e+08,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,base,3.98e-05,1e+15,0.000518,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,high,2.66e-05,1e+15,0.000345,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,low,7.97e-05,1e+15,0.00199,365,9.28e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,base,3.98e-05,1e+15,0.000518,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,high,2.66e-05,1e+15,0.000345,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),low,7.97e-05,1.02e+14,0.00199,365,1.34e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),base,3.98e-05,1e+15,0.000518,365,2.09e+11,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),high,2.66e-05,1e+15,0.000345,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,low,0.0125,1.88e+05,0.025,2.04e+04,6.7e+04,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,base,0.0025,9.28e+06,0.00625,1.04e+04,1.73e+06,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,high,0.0005,1e+15,0.00125,365,1.05e+13,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,low,0.0125,8.87e+04,0.025,2.04e+04,2.14e+04,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,base,0.0025,1.18e+08,0.00625,1.04e+04,1.85e+06,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,high,0.0005,1e+15,0.00125,365,1.05e+13,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,low,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,base,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,high,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,low,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,base,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,high,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,low,0.05,2.38e+04,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,base,0.025,1.36e+05,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,high,0.01,2.18e+06,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,low,0.05,5.16e+03,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,base,0.025,5.64e+04,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,high,0.01,1.41e+06,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),low,0.05,1.13e+05,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),base,0.025,7.28e+05,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),high,0.01,1e+07,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,low,0.05,2.39e+05,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,base,0.025,9.16e+05,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,high,0.01,6.66e+06,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,low,0.05,1.24e+04,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,base,0.025,1.22e+05,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,high,0.01,3.63e+06,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),low,0.05,2.38e+04,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),base,0.025,9.42e+04,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),high,0.01,8.86e+05,0,0,1e+15,sag ~0.40 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",LLDPE balloon film,low,0.000142,7.65e+14,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",LLDPE balloon film,base,7.12e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",LLDPE balloon film,high,4.75e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",PE/PET laminate,low,0.000142,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",PE/PET laminate,base,7.12e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",PE/PET laminate,high,4.75e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),low,0.000142,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),base,7.12e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),high,4.75e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Vectran scrim,low,0.000142,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Vectran scrim,base,7.12e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Vectran scrim,high,4.75e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Aramid scrim,low,0.000142,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Aramid scrim,base,7.12e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Aramid scrim,high,4.75e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),low,0.000142,3.05e+11,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),base,7.12e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),high,4.75e-05,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),low,3e-05,1e+15,0.006,1e+03,6.53e+06,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),base,1.5e-05,1e+15,0.00225,300,3.23e+12,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,Vectran scrim,low,3e-05,1e+15,0.006,1e+03,3.43e+06,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,Vectran scrim,base,1.5e-05,1e+15,0.00225,300,9.12e+10,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,Vectran scrim,high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,Aramid scrim,low,3e-05,1e+15,0.006,1e+03,9.65e+05,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,Aramid scrim,base,1.5e-05,1e+15,0.00225,300,1.95e+10,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",Tether/tendon attachment,Aramid scrim,high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),LLDPE balloon film,low,0.000123,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),LLDPE balloon film,base,6.16e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),LLDPE balloon film,high,4.11e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),PE/PET laminate,low,0.000123,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),PE/PET laminate,base,6.16e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),PE/PET laminate,high,4.11e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),low,0.000123,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),base,6.16e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),high,4.11e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Vectran scrim,low,0.000123,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Vectran scrim,base,6.16e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Vectran scrim,high,4.11e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Aramid scrim,low,0.000123,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Aramid scrim,base,6.16e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Aramid scrim,high,4.11e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),low,0.000123,1.3e+12,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),base,6.16e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),high,4.11e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,LLDPE balloon film,low,0.000493,3.11e+09,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,LLDPE balloon film,base,0.000185,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,LLDPE balloon film,high,8.21e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,PE/PET laminate,low,0.000493,1.1e+11,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,PE/PET laminate,base,0.000185,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,PE/PET laminate,high,8.21e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),low,0.000493,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),base,0.000185,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),high,8.21e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Vectran scrim,low,0.000493,1.43e+14,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Vectran scrim,base,0.000185,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Vectran scrim,high,8.21e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Aramid scrim,low,0.000493,8.06e+12,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Aramid scrim,base,0.000185,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Aramid scrim,high,8.21e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),low,0.000493,7.7e+06,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),base,0.000185,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),high,8.21e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,low,0.00361,1.2e+06,0.0902,365,9.85e+03,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,base,0.0018,1.73e+08,0.0235,365,1.53e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,high,0.0012,1.54e+13,0.0156,365,8.14e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,low,0.00361,1.13e+06,0.0902,365,1.54e+03,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,base,0.0018,3.07e+09,0.0235,365,6.62e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,high,0.0012,1.54e+13,0.0156,365,4e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),low,0.00361,1.73e+08,0.0902,365,3.65e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),base,0.0018,2.93e+13,0.0235,365,8.42e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),high,0.0012,1e+15,0.0156,365,3.23e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,low,0.00361,6.49e+06,0.0902,365,1.14e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,base,0.0018,8.27e+11,0.0235,365,1.01e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,high,0.0012,1e+15,0.0156,365,2.94e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,low,0.00361,2.74e+06,0.0902,365,3.7e+03,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,base,0.0018,1.77e+11,0.0235,365,1.44e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,high,0.0012,5.89e+14,0.0156,365,9.14e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),low,0.00361,6.38e+05,0.0902,365,1.14e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),base,0.0018,6.63e+06,0.0235,365,1.04e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),high,0.0012,6.17e+10,0.0156,365,3.71e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,low,0.000241,4.04e+12,0.00602,365,5.62e+05,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,base,0.00012,1e+15,0.00156,365,7.23e+08,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,high,8.02e-05,1e+15,0.00104,365,6.42e+13,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,low,0.000241,1.43e+14,0.00602,365,3.98e+05,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,base,0.00012,1e+15,0.00156,365,1.28e+10,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,high,8.02e-05,1e+15,0.00104,365,6.42e+13,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),low,0.000241,1e+15,0.00602,365,6.49e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),base,0.00012,1e+15,0.00156,365,1.22e+14,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),high,8.02e-05,1e+15,0.00104,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,low,0.000241,1e+15,0.00602,365,3.42e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,base,0.00012,1e+15,0.00156,365,3.46e+12,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,high,8.02e-05,1e+15,0.00104,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,low,0.000241,1e+15,0.00602,365,9.6e+05,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,base,0.00012,1e+15,0.00156,365,7.41e+11,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,high,8.02e-05,1e+15,0.00104,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),low,0.000241,1.61e+09,0.00602,365,3.37e+05,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),base,0.00012,1e+15,0.00156,365,8.36e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),high,8.02e-05,1e+15,0.00104,365,2.58e+11,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,low,0.0125,1.88e+05,0.025,2.04e+04,6.7e+04,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,base,0.0025,9.28e+06,0.00625,1.04e+04,1.73e+06,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,high,0.0005,1e+15,0.00125,365,1.05e+13,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,low,0.0125,8.87e+04,0.025,2.04e+04,2.14e+04,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,base,0.0025,1.18e+08,0.00625,1.04e+04,1.85e+06,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,high,0.0005,1e+15,0.00125,365,1.05e+13,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,low,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,base,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,high,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,low,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,base,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,high,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,low,0.05,2.38e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,base,0.025,1.36e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,high,0.01,2.18e+06,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,low,0.05,5.16e+03,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,base,0.025,5.64e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,high,0.01,1.41e+06,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),low,0.05,1.13e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),base,0.025,7.28e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),high,0.01,1e+07,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,low,0.05,2.39e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,base,0.025,9.16e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,high,0.01,6.66e+06,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,low,0.05,1.24e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,base,0.025,1.22e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,high,0.01,3.63e+06,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),low,0.05,2.38e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),base,0.025,9.42e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),high,0.01,8.86e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",LLDPE balloon film,low,0.00037,5.53e+10,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",LLDPE balloon film,base,0.000185,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",LLDPE balloon film,high,0.000123,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",PE/PET laminate,low,0.00037,1.96e+12,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",PE/PET laminate,base,0.000185,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",PE/PET laminate,high,0.000123,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),low,0.00037,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),base,0.000185,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),high,0.000123,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Vectran scrim,low,0.00037,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Vectran scrim,base,0.000185,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Vectran scrim,high,0.000123,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Aramid scrim,low,0.00037,1.43e+14,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Aramid scrim,base,0.000185,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Aramid scrim,high,0.000123,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),low,0.00037,2.2e+07,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),base,0.000185,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),high,0.000123,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),low,3e-05,1e+15,0.006,1e+03,6.53e+06,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),base,1.5e-05,1e+15,0.00225,300,3.23e+12,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,Vectran scrim,low,3e-05,1e+15,0.006,1e+03,3.43e+06,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,Vectran scrim,base,1.5e-05,1e+15,0.00225,300,9.12e+10,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,Vectran scrim,high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,Aramid scrim,low,3e-05,1e+15,0.006,1e+03,9.65e+05,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,Aramid scrim,base,1.5e-05,1e+15,0.00225,300,1.95e+10,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",Tether/tendon attachment,Aramid scrim,high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),LLDPE balloon film,low,0.000112,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),LLDPE balloon film,base,5.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),LLDPE balloon film,high,3.72e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),PE/PET laminate,low,0.000112,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),PE/PET laminate,base,5.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),PE/PET laminate,high,3.72e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),low,0.000112,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),base,5.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),UHMWPE scrim (Dyneema),high,3.72e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Vectran scrim,low,0.000112,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Vectran scrim,base,5.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Vectran scrim,high,3.72e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Aramid scrim,low,0.000112,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Aramid scrim,base,5.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Aramid scrim,high,3.72e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),low,0.000112,3.51e+12,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),base,5.58e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Lid field (sheet),Coated fabric (PU/PVF on polyester),high,3.72e-05,1e+15,0,0,1e+15,membrane 0.5 slope^2 + bending kappa t/2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,LLDPE balloon film,low,0.000446,8.4e+09,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,LLDPE balloon film,base,0.000167,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,LLDPE balloon film,high,7.44e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,PE/PET laminate,low,0.000446,2.97e+11,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,PE/PET laminate,base,0.000167,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,PE/PET laminate,high,7.44e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),low,0.000446,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),base,0.000167,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,UHMWPE scrim (Dyneema),high,7.44e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Vectran scrim,low,0.000446,3.86e+14,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Vectran scrim,base,0.000167,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Vectran scrim,high,7.44e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Aramid scrim,low,0.000446,2.17e+13,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Aramid scrim,base,0.000167,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Aramid scrim,high,7.44e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),low,0.000446,8.72e+06,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),base,0.000167,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Heat-sealed lap seam,Coated fabric (PU/PVF on polyester),high,7.44e-05,1e+15,0,0,1e+15,Kt 2-4 at the stiffness step
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,low,0.00317,1.46e+06,0.0792,365,1.2e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,base,0.00158,6.4e+08,0.0206,365,1.94e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",LLDPE balloon film,high,0.00106,5.68e+13,0.0137,365,1.09e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,low,0.00317,1.48e+06,0.0792,365,2.01e+03,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,base,0.00158,1.14e+10,0.0206,365,9.21e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",PE/PET laminate,high,0.00106,5.68e+13,0.0137,365,5.78e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),low,0.00317,6.4e+08,0.0792,365,4.69e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),base,0.00158,1.08e+14,0.0206,365,1.14e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",UHMWPE scrim (Dyneema),high,0.00106,1e+15,0.0137,365,4.5e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,low,0.00317,7.65e+06,0.0792,365,1.34e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,base,0.00158,3.06e+12,0.0206,365,1.25e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Vectran scrim,high,0.00106,1e+15,0.0137,365,3.74e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,low,0.00317,3.58e+06,0.0792,365,4.84e+03,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,base,0.00158,6.55e+11,0.0206,365,2.05e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Aramid scrim,high,0.00106,1e+15,0.0137,365,1.37e+06,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),low,0.00317,7.51e+05,0.0792,365,1.34e+04,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),base,0.00158,8.19e+06,0.0206,365,1.29e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 50 mm grommet",Coated fabric (PU/PVF on polyester),high,0.00106,2.29e+11,0.0137,365,4.78e+05,Kt 3; daily breathing puts 0-27 Pa/tie (13-25x the boom swing)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,low,0.000211,1.5e+13,0.00528,365,6.83e+05,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,base,0.000106,1e+15,0.00137,365,2.68e+09,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",LLDPE balloon film,high,7.04e-05,1e+15,0.000915,365,2.38e+14,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,low,0.000211,5.29e+14,0.00528,365,5.2e+05,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,base,0.000106,1e+15,0.00137,365,4.75e+10,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",PE/PET laminate,high,7.04e-05,1e+15,0.000915,365,2.38e+14,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),low,0.000211,1e+15,0.00528,365,8.34e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),base,0.000106,1e+15,0.00137,365,4.53e+14,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",UHMWPE scrim (Dyneema),high,7.04e-05,1e+15,0.000915,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,low,0.000211,1e+15,0.00528,365,4.03e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,base,0.000106,1e+15,0.00137,365,1.28e+13,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Vectran scrim,high,7.04e-05,1e+15,0.000915,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,low,0.000211,1e+15,0.00528,365,1.26e+06,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,base,0.000106,1e+15,0.00137,365,2.74e+12,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Aramid scrim,high,7.04e-05,1e+15,0.000915,365,1e+15,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),low,0.000211,5.96e+09,0.00528,365,3.97e+05,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),base,0.000106,1e+15,0.00137,365,1.22e+07,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Tie fitting, 0.5 m spread pad",Coated fabric (PU/PVF on polyester),high,7.04e-05,1e+15,0.000915,365,9.56e+11,"Kt 2, doubler/load-spreading patch"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,low,0.0125,1.88e+05,0.025,2.04e+04,6.7e+04,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,base,0.0025,9.28e+06,0.00625,1.04e+04,1.73e+06,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Slack partition hem/crease (50 um),LLDPE balloon film,high,0.0005,1e+15,0.00125,365,1.05e+13,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,low,0.0125,8.87e+04,0.025,2.04e+04,2.14e+04,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,base,0.0025,1.18e+08,0.00625,1.04e+04,1.85e+06,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Slack partition hem/crease (50 um),PE/PET laminate,high,0.0005,1e+15,0.00125,365,1.05e+13,"crease R 2/10/50 mm per pass; breathing folds tighter (R 1/4/20 mm), 365/yr plus gravity-wave strokes 1-2e4/yr (low/base)"
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,low,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,base,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Rolling-lobe partition / rim (R 0.5 m),LLDPE balloon film,high,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,low,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,base,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Rolling-lobe partition / rim (R 0.5 m),PE/PET laminate,high,5e-05,1e+15,5e-05,2.04e+04,1e+15,pre-formed lobe fixes the bend radius (air-spring style)
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,low,0.05,2.38e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,base,0.025,1.36e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",LLDPE balloon film,high,0.01,2.18e+06,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,low,0.05,5.16e+03,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,base,0.025,5.64e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",PE/PET laminate,high,0.01,1.41e+06,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),low,0.05,1.13e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),base,0.025,7.28e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",UHMWPE scrim (Dyneema),high,0.01,1e+07,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,low,0.05,2.39e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,base,0.025,9.16e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Vectran scrim,high,0.01,6.66e+06,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,low,0.05,1.24e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,base,0.025,1.22e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Aramid scrim,high,0.01,3.63e+06,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),low,0.05,2.38e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),base,0.025,9.42e+04,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, light (0.5 kg/m2, 1 m)",Coated fabric (PU/PVF on polyester),high,0.01,8.86e+05,0,0,1e+15,sag ~0.39 m per pass -> hinge fold R 5/10/25 mm
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",LLDPE balloon film,low,0.000335,1.49e+11,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",LLDPE balloon film,base,0.000167,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",LLDPE balloon film,high,0.000112,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",PE/PET laminate,low,0.000335,5.28e+12,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",PE/PET laminate,base,0.000167,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",PE/PET laminate,high,0.000112,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),low,0.000335,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),base,0.000167,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",UHMWPE scrim (Dyneema),high,0.000112,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Vectran scrim,low,0.000335,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Vectran scrim,base,0.000167,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Vectran scrim,high,0.000112,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Aramid scrim,low,0.000335,3.86e+14,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Aramid scrim,base,0.000167,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Aramid scrim,high,0.000112,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),low,0.000335,5.95e+07,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),base,0.000167,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2","Joint flap, mass-matched",Coated fabric (PU/PVF on polyester),high,0.000112,1e+15,0,0,1e+15,same areal mass as the lid: moves with it; seam-like
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),low,3e-05,1e+15,0.006,1e+03,6.53e+06,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),base,1.5e-05,1e+15,0.00225,300,3.23e+12,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,UHMWPE scrim (Dyneema),high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,Vectran scrim,low,3e-05,1e+15,0.006,1e+03,3.43e+06,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,Vectran scrim,base,1.5e-05,1e+15,0.00225,300,9.12e+10,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,Vectran scrim,high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,Aramid scrim,low,3e-05,1e+15,0.006,1e+03,9.65e+05,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,Aramid scrim,base,1.5e-05,1e+15,0.00225,300,1.95e+10,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",Tether/tendon attachment,Aramid scrim,high,1e-05,1e+15,0.001,100,1e+15,boom ~0.1 % of 26 MN working load; wind/gust cycles dominate

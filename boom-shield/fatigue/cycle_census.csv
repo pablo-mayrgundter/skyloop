@@ -1,0 +1,7 @@
+source,cycles_yr,lid_load_pa,thickness_stroke_m,note
+"Boom pass, 100 flights/day",36500.0,300-650 (doubled),0.1-0.3,one reversal per pass; lid strain ~1e-5
+"Boom pass, 4,400 flights/day (trunk, full capture)",1600000.0,300-650,0.1-0.3,
+Diurnal breathing,365,0-27 through ties,~5 (55 m layer),"largest stroke: partitions, ties, rim fold fully"
+Gravity / mountain waves (periods 4-60 min),1e4-5e4,few,0.1-0.5 (est.),T' ~ 1 K per 100 m displacement -> 0.5 % volume; strong over the Rockies [S16]
+Gusts / turbulence (quasi-steady lift 5-22 Pa),1e5-1e6,5-22 over km,<0.05,added mass ~70 kg/m2 makes the layer ride gusts (structure §3)
+Synoptic wind events (side force 0.5-2 kN/m),50-100,-,-,"tethers, rim tendons; not a lid-face cycle"
