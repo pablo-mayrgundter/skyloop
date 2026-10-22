@@ -732,7 +732,7 @@ def extras():
 TRUNK = os.path.join(HERE, "..", "network-maps", "trunk")
 A_TRUNK = 0.23             # m/s^2, trunk acceleration (network-maps/trunk/build_trunk.py)
 A_TRUNK_DEC = 0.46
-EDGE_MARGIN_M2 = 450.0     # m inside the edge that passed in 3-D at Mach 2 (psf_sweep: 1.5 km)
+EDGE_MARGIN_M2 = 450.0     # m inside the edge that passed in 3-D (Concorde M2, H2 60 m, 1.5 km)
 
 
 def cutoff_with_wind():
@@ -821,7 +821,9 @@ def onramp():
     def lam(r):
         V = r["M"] * 295.1
         return V * r["swell_ms"] / 1e3 / math.sqrt(r["M"] ** 2 - 1)
-    ref = [r for r in th if abs(r["M"] - 2.0) < 1e-9][0]
+    # the 3-D width runs that passed (psf_sweep: 1.5 km, rays >= 450 m inside the edge)
+    # were Concorde M2.0 with H2 60 m: anchor the margin there
+    ref = [r for r in out["thick"] if r["ac"] == "Concorde" and abs(r["M"] - 2.0) < 1e-9][0]
     for r in out["thick"]:
         r["lambda_perp_m"] = lam(r)
         r["edge_margin_m"] = EDGE_MARGIN_M2 * lam(r) / lam(ref)
@@ -882,33 +884,42 @@ def plot_onramp(out):
     a.grid(alpha=0.3)
     a.legend(fontsize=7)
     b = ax[1]
-    rr = [r for r in out["thick"] if r["ac"] == "Overture"]
-    b.plot([r["M"] for r in rr], [r["ys_max"] for r in rr], "o-", label="rays' max |y| at the shield")
-    b.plot([r["M"] for r in rr], [r["edge_margin_m"] for r in rr], "s--", label="edge margin (scaled from 450 m at M2)")
-    b.plot([r["M"] for r in rr], [r["W_req_m"] / 2 for r in rr], "k-", lw=2, label="required half-width")
+    for acn, col in (("Overture", "#2471a3"), ("Concorde", "#c0392b")):
+        rr = [r for r in out["thick"] if r["ac"] == acn]
+        b.plot([r["M"] for r in rr], [r["W_req_m"] / 1e3 for r in rr], "o-", color=col, lw=2,
+               label=f"{acn}: required width")
+        b.plot([r["M"] for r in rr], [2 * r["ys_max"] / 1e3 for r in rr], ":", color=col,
+               label=f"{acn}: ray footprint at the shield (2 max|y|)")
+    b.axhline(1.5, color="0.4", ls="--", lw=1)
+    b.text(1.17, 1.53, "trunk baseline 1.5 km", fontsize=7, color="0.3")
     b.set_xlabel("Mach")
-    b.set_ylabel("m")
-    b.set_title("(b) Ramp half-width (scaling estimate)")
+    b.set_ylabel("km")
+    b.set_title("(b) Shield width: footprint + edge margin (scaling)")
     b.grid(alpha=0.3)
     b.legend(fontsize=7)
     c = ax[2]
-    # merge schematic: trunk along x, feeders at 0/30/60 deg merging at x = 0 (M <= cut-off),
-    # acceleration then on the trunk axis
+    # merge schematic (not to scale across track): trunk along x, feeders at 0/30/60 deg
+    # meeting the trunk axis at x = 0 at M <= day's cut-off, acceleration on the axis
     km = out["km"]
-    W = 1.5
-    c.fill_between([-20, 120], -W / 2, W / 2, color="#aed6f1", label="trunk shield (1.5 km)")
-    c.fill_between([-8, 0], -W / 2, W / 2, color="#2471a3", alpha=0.6, label="apron upstream of accel start")
-    for th_ in (0, 30, 60):
-        t = math.radians(th_)
-        c.plot([-60 * math.cos(t), 0], [-60 * math.sin(t), 0], color="0.4", lw=1)
-    c.annotate("feeders at M <= day's cut-off\n(no ground boom, no shield)", (-55, -40), fontsize=7)
-    c.axvspan(0, km["accel_cut_to_Mf"], color="#d68910", alpha=0.5, label="focus emission zone (M_cut-M_f)")
-    c.annotate(f"accelerate on axis: M2 after {km['accel_cut_to_M2']:.0f} km", (5, 4), fontsize=7)
-    c.set_xlim(-65, 120)
-    c.set_ylim(-60, 15)
-    c.set_aspect("equal")
-    c.set_xlabel("km along trunk")
-    c.set_title("(c) Merge first, then accelerate (schematic)")
+    W = 1.6
+    c.fill_between([-30, 160], -W / 2, W / 2, color="#aed6f1", label="trunk shield, ~1.6 km wide")
+    c.fill_between([-10, 0], -W / 2, W / 2, color="#1f618d", label="apron, 10 km before accel start")
+    c.fill_between([0, km["accel_cut_to_Mf"]], -W / 2, W / 2, color="#d68910",
+                   label=f"focus-emitting stretch (M_cut to M_f, {km['accel_cut_to_Mf']:.0f} km)")
+    c.fill_between([0, km["onset_115_130"]], W / 2, W / 2 + 0.6, color="#f5b041", alpha=0.6,
+                   label=f"M1.15-1.3 ({km['onset_115_130']:.0f} km)")
+    for th_ in (30, 60):
+        dx = 4.0 / math.tan(math.radians(th_))
+        c.plot([-25 - dx, -25], [-4.0, 0.0], color="0.35", lw=1)
+    c.plot([-32, 0], [0, 0], color="0.35", lw=1)
+    c.text(-22, -2.6, "feeders at M <= day's cut-off:\nno ground boom, turn freely", fontsize=7)
+    c.text(80, 2.6, f"M2.0 reached {km['accel_cut_to_M2']:.0f} km downstream\n(0.023 g; off chart)",
+           fontsize=7)
+    c.set_xlim(-32, 160)
+    c.set_ylim(-4.5, 4.0)
+    c.set_xlabel("km along trunk (accel start at 0)")
+    c.set_ylabel("km across (exaggerated)")
+    c.set_title("(c) Merge at cut-off Mach, then accelerate on axis")
     c.legend(fontsize=6, loc="lower right")
     fig.tight_layout()
     path = os.path.join(RESULTS, "onramp_shield.png")
