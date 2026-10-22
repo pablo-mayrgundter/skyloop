@@ -1,0 +1,29 @@
+alt_km,source,p_tube_Pa,Q_Pa_m3_s_per_km,S_m3_s_per_km,P_pump_kW_per_km,P_ideal_W_per_km,pump_mass_kg_per_km,hours,min_energy_kWh_per_km
+0,"outgassing CFRP/epoxy, unlined (1e-5 Pa m3/s/m2)",1,0.09425,0.09425,0.9425,1.086,23.56,,
+0,"outgassing CFRP/epoxy, unlined (1e-5 Pa m3/s/m2)",10,0.09425,0.009425,0.09425,0.8693,2.356,,
+0,"outgassing metal-lined, unbaked (1e-7)",1,0.0009425,0.0009425,0.009425,0.01086,0.2356,,
+0,"outgassing metal-lined, unbaked (1e-7)",10,0.0009425,9.425e-05,0.0009425,0.008693,0.02356,,
+0,"seal permeation, 20 joints/km x 9.4 m (1e-7 Pa m3/s per m)",1,1.885e-05,1.885e-05,0.0001885,0.0002173,0.004712,,
+0,"seal permeation, 20 joints/km x 9.4 m (1e-7 Pa m3/s per m)",10,1.885e-05,1.885e-06,1.885e-05,0.0001739,0.0004712,,
+0,holes 0.1 cm2/km,1,103.9,103.9,1039,1197,2.597e+04,,
+0,holes 0.1 cm2/km,10,103.9,10.39,103.9,958.1,2597,,
+0,holes 1 cm2/km,1,1039,1039,1.039e+04,1.197e+04,2.597e+05,,
+0,holes 1 cm2/km,10,1039,103.9,1039,9581,2.597e+04,,
+0,holes 10 cm2/km,1,1.039e+04,1.039e+04,1.039e+05,1.197e+05,2.597e+06,,
+0,holes 10 cm2/km,10,1.039e+04,1039,1.039e+04,9.581e+04,2.597e+05,,
+0,"re-evacuate to 10 Pa, S=10 m3/s/km",10,nan,10,100,nan,2500,1.811,199
+0,"re-evacuate to 10 Pa, S=50 m3/s/km",10,nan,50,500,nan,1.25e+04,0.3622,199
+20,"outgassing CFRP/epoxy, unlined (1e-5 Pa m3/s/m2)",1,0.09425,0.09425,0.9425,0.8122,23.56,,
+20,"outgassing CFRP/epoxy, unlined (1e-5 Pa m3/s/m2)",10,0.09425,0.009425,0.09425,0.5952,2.356,,
+20,"outgassing metal-lined, unbaked (1e-7)",1,0.0009425,0.0009425,0.009425,0.008122,0.2356,,
+20,"outgassing metal-lined, unbaked (1e-7)",10,0.0009425,9.425e-05,0.0009425,0.005952,0.02356,,
+20,"seal permeation, 20 joints/km x 9.4 m (1e-7 Pa m3/s per m)",1,1.885e-05,1.885e-05,0.0001885,0.0001624,0.004712,,
+20,"seal permeation, 20 joints/km x 9.4 m (1e-7 Pa m3/s per m)",10,1.885e-05,1.885e-06,1.885e-05,0.000119,0.0004712,,
+20,holes 0.1 cm2/km,1,6.537,6.537,65.37,56.34,1634,,
+20,holes 0.1 cm2/km,10,6.537,0.6537,6.537,41.28,163.4,,
+20,holes 1 cm2/km,1,65.37,65.37,653.7,563.4,1.634e+04,,
+20,holes 1 cm2/km,10,65.37,6.537,65.37,412.8,1634,,
+20,holes 10 cm2/km,1,653.7,653.7,6537,5634,1.634e+05,,
+20,holes 10 cm2/km,10,653.7,65.37,653.7,4128,1.634e+04,,
+20,"re-evacuate to 10 Pa, S=10 m3/s/km",10,nan,10,100,nan,2500,1.24,10.86
+20,"re-evacuate to 10 Pa, S=50 m3/s/km",10,nan,50,500,nan,1.25e+04,0.248,10.86

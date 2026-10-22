@@ -1,0 +1,7 @@
+case,payload_kg_m,env_R_m,lift_kg_m,film_kg_m,holddown_kg_m,side_load_design_kN_m,tether_T_MN,tether_t,H2_t_per_km,lift_over_payload
+"baseline: C_D 0.6, V/H 1.5, film 0.10",183.8,82.2,1756,51.65,1485,7.016,45.8,894.4,131.4,9.553
+faired/lenticular envelope C_D 0.3,183.8,55.17,791.1,34.67,539.8,2.355,16.65,325.1,59.18,4.304
+flatter tethers V/H 0.75,183.8,57.81,868.6,36.32,615.4,4.934,22.4,606.7,64.98,4.725
+C_D 0.3 and V/H 0.75,183.8,43.45,490.6,27.3,247.8,1.854,9.019,244.3,36.7,2.669
+light film 0.05 kg/m2,183.8,81.01,1705,25.45,1465,6.914,45.17,882.2,127.6,9.279
+untethered (lift for payload + film only),183.8,29.94,233,18.81,0,2.556,17.93,350.2,17.43,1.268

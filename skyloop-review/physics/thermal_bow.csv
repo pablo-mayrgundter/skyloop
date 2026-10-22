@@ -1,0 +1,25 @@
+Mach,dT_across_D_K,material,kappa_per_m,R_bow_km,lat_acc_g_if_free
+2,0.1,CFRP quasi-iso,6.667e-08,1.5e+04,0.002368
+2,0.1,aluminium rail,7.667e-07,1304,0.02723
+2,1,CFRP quasi-iso,6.667e-07,1500,0.02368
+2,1,aluminium rail,7.667e-06,130.4,0.2723
+2,5,CFRP quasi-iso,3.333e-06,300,0.1184
+2,5,aluminium rail,3.833e-05,26.09,1.361
+2,20,CFRP quasi-iso,1.333e-05,75,0.4735
+2,20,aluminium rail,0.0001533,6.522,5.445
+4,0.1,CFRP quasi-iso,6.667e-08,1.5e+04,0.00947
+4,0.1,aluminium rail,7.667e-07,1304,0.1089
+4,1,CFRP quasi-iso,6.667e-07,1500,0.0947
+4,1,aluminium rail,7.667e-06,130.4,1.089
+4,5,CFRP quasi-iso,3.333e-06,300,0.4735
+4,5,aluminium rail,3.833e-05,26.09,5.445
+4,20,CFRP quasi-iso,1.333e-05,75,1.894
+4,20,aluminium rail,0.0001533,6.522,21.78
+6,0.1,CFRP quasi-iso,6.667e-08,1.5e+04,0.02131
+6,0.1,aluminium rail,7.667e-07,1304,0.245
+6,1,CFRP quasi-iso,6.667e-07,1500,0.2131
+6,1,aluminium rail,7.667e-06,130.4,2.45
+6,5,CFRP quasi-iso,3.333e-06,300,1.065
+6,5,aluminium rail,3.833e-05,26.09,12.25
+6,20,CFRP quasi-iso,1.333e-05,75,4.262
+6,20,aluminium rail,0.0001533,6.522,49.01
