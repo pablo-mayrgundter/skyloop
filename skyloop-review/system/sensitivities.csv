@@ -1,0 +1,217 @@
+network,vs,case,bores,capex_busd,benefit_busd,bc_gross,bc_net
+spine+LAX all-stop,sub,central,1,568.8,14.38,0.3615,0.4705
+spine+LAX all-stop,sub,ground overhead 70 min (walk-on),1,571,19.35,0.4413,0.5478
+spine+LAX all-stop,sub,ground overhead 130 min (airport-like),1,567,10.25,0.2944,0.4083
+spine+LAX all-stop,sub,20 km station by lift (+49 min),1,566.5,8.378,0.2531,0.37
+spine+LAX all-stop,sub,accel 0.15 g,1,679.7,10.22,0.252,0.3455
+spine+LAX all-stop,sub,"brick-wall headway, 50-seat pods",12,6288,14.38,0.0298,0.03882
+spine+LAX all-stop,sub,"brick-wall headway, 150-seat pods",4,2129,14.38,0.08804,0.1149
+spine+LAX all-stop,sub,30 % capture,1,568.8,14.38,0.1408,0.1827
+spine+LAX all-stop,sub,low cost,1,155.4,14.38,1.422,1.852
+spine+LAX all-stop,sub,high cost,1,2060,14.38,0.09035,0.1176
+spine+LAX all-stop,sub,opening 2045,1,568.8,14.38,0.3361,0.4443
+spine+LAX all-stop,sub,opening 2060,1,568.8,14.38,0.4131,0.5218
+spine+LAX all-stop,sub,"benign energy (cheap fuel, low SCC)",1,568.8,14.38,0.3615,0.3976
+spine+LAX all-stop,sub,stringent energy,1,568.8,14.38,0.3615,0.5296
+spine+LAX all-stop,sub,grid stalls at ~0.3 kg/kWh,1,568.8,14.38,0.3615,0.4421
+spine+LAX all-stop,sub,clean grid 0.02 kg/kWh,1,568.8,14.38,0.3615,0.4808
+spine+LAX all-stop,sub,discount 3 %,1,568.8,14.38,0.5949,0.7701
+spine+LAX all-stop,sub,life 50 yr,1,568.8,14.38,0.4392,0.5638
+spine+LAX all-stop,sub,+ avoided airline non-fuel cost - Skyloop ops,1,568.8,14.38,0.3615,0.7197
+spine+LAX all-stop,sub,high world,1,568.8,14.38,0.443,0.5561
+spine+LAX all-stop,bl,central,1,565.5,8.502,0.2765,0.6069
+spine+LAX all-stop,bl,ground overhead 70 min (walk-on),1,567.3,12.19,0.3655,0.7312
+spine+LAX all-stop,bl,ground overhead 130 min (airport-like),1,564.1,5.548,0.1826,0.4643
+spine+LAX all-stop,bl,20 km station by lift (+49 min),1,563.2,4.131,0.1361,0.3799
+spine+LAX all-stop,bl,accel 0.15 g,1,675.9,5.629,0.1546,0.3451
+spine+LAX all-stop,bl,"brick-wall headway, 50-seat pods",8,4205,8.502,0.02657,0.05879
+spine+LAX all-stop,bl,"brick-wall headway, 150-seat pods",3,1605,8.502,0.07651,0.1693
+spine+LAX all-stop,bl,30 % capture,1,565.5,8.502,0.08372,0.1836
+spine+LAX all-stop,bl,low cost,1,153.6,8.502,1.094,2.402
+spine+LAX all-stop,bl,high cost,1,2054,8.502,0.06893,0.1513
+spine+LAX all-stop,bl,opening 2045,1,565.5,8.502,0.2427,0.5528
+spine+LAX all-stop,bl,opening 2060,1,565.5,8.502,0.3392,0.6945
+spine+LAX all-stop,bl,"benign energy (cheap fuel, low SCC)",1,565.5,8.502,0.2765,0.4136
+spine+LAX all-stop,bl,stringent energy,1,565.5,8.502,0.2765,0.7619
+spine+LAX all-stop,bl,grid stalls at ~0.3 kg/kWh,1,565.5,8.502,0.2765,0.5812
+spine+LAX all-stop,bl,clean grid 0.02 kg/kWh,1,565.5,8.502,0.2765,0.6158
+spine+LAX all-stop,bl,discount 3 %,1,565.5,8.502,0.4711,1.021
+spine+LAX all-stop,bl,life 50 yr,1,565.5,8.502,0.3481,0.738
+spine+LAX all-stop,bl,+ avoided airline non-fuel cost - Skyloop ops,1,565.5,8.502,0.2765,0.8274
+spine+LAX all-stop,bl,high world,1,565.5,8.502,0.3673,0.7384
+spine+LAX all-stop,m22,central,1,561.6,5.194,0.1717,0.3205
+spine+LAX all-stop,m22,ground overhead 70 min (walk-on),1,563.1,7.755,0.2556,0.4681
+spine+LAX all-stop,m22,ground overhead 130 min (airport-like),1,561.2,3.222,0.1066,0.2468
+spine+LAX all-stop,m22,20 km station by lift (+49 min),1,561,2.261,0.07481,0.2158
+spine+LAX all-stop,m22,accel 0.15 g,1,673.7,3.756,0.1035,0.2207
+spine+LAX all-stop,m22,"brick-wall headway, 50-seat pods",3,1601,5.194,0.04324,0.08133
+spine+LAX all-stop,m22,"brick-wall headway, 150-seat pods",1,561.6,5.194,0.1233,0.2322
+spine+LAX all-stop,m22,30 % capture,1,561.6,5.194,0.0515,0.09614
+spine+LAX all-stop,m22,low cost,1,151.5,5.194,0.6839,1.277
+spine+LAX all-stop,m22,high cost,1,2046,5.194,0.04266,0.07965
+spine+LAX all-stop,m22,opening 2045,1,561.6,5.194,0.1494,0.2881
+spine+LAX all-stop,m22,opening 2060,1,561.6,5.194,0.2209,0.3881
+spine+LAX all-stop,m22,"benign energy (cheap fuel, low SCC)",1,561.6,5.194,0.1717,0.2336
+spine+LAX all-stop,m22,stringent energy,1,561.6,5.194,0.1717,0.3901
+spine+LAX all-stop,m22,grid stalls at ~0.3 kg/kWh,1,561.6,5.194,0.1717,0.3093
+spine+LAX all-stop,m22,clean grid 0.02 kg/kWh,1,561.6,5.194,0.1717,0.3243
+spine+LAX all-stop,m22,discount 3 %,1,561.6,5.194,0.2937,0.5422
+spine+LAX all-stop,m22,life 50 yr,1,561.6,5.194,0.2272,0.4097
+spine+LAX all-stop,m22,+ avoided airline non-fuel cost - Skyloop ops,1,561.6,5.194,0.1717,0.4125
+spine+LAX all-stop,m22,high world,1,561.6,5.194,0.2637,0.4539
+NYC-LAX direct,sub,central,1,328.7,7.771,0.4388,0.6301
+NYC-LAX direct,sub,ground overhead 70 min (walk-on),1,329,9.087,0.5119,0.7018
+NYC-LAX direct,sub,ground overhead 130 min (airport-like),1,328.1,6.557,0.371,0.5553
+NYC-LAX direct,sub,20 km station by lift (+49 min),1,327.8,5.945,0.3366,0.5185
+NYC-LAX direct,sub,accel 0.15 g,1,372,7.217,0.3601,0.5271
+NYC-LAX direct,sub,"brick-wall headway, 50-seat pods",7,2195,7.771,0.04476,0.06461
+NYC-LAX direct,sub,"brick-wall headway, 150-seat pods",3,950.9,7.771,0.1264,0.1827
+NYC-LAX direct,sub,30 % capture,1,328.7,7.771,0.1316,0.189
+NYC-LAX direct,sub,low cost,1,95.62,7.771,1.621,2.328
+NYC-LAX direct,sub,high cost,1,999,7.771,0.1307,0.1877
+NYC-LAX direct,sub,opening 2045,1,328.7,7.771,0.382,0.5602
+NYC-LAX direct,sub,opening 2060,1,328.7,7.771,0.5546,0.7663
+NYC-LAX direct,sub,"benign energy (cheap fuel, low SCC)",1,328.7,7.771,0.4388,0.5189
+NYC-LAX direct,sub,stringent energy,1,328.7,7.771,0.4388,0.7192
+NYC-LAX direct,sub,grid stalls at ~0.3 kg/kWh,1,328.7,7.771,0.4388,0.6169
+NYC-LAX direct,sub,clean grid 0.02 kg/kWh,1,328.7,7.771,0.4388,0.6347
+NYC-LAX direct,sub,discount 3 %,1,328.7,7.771,0.7508,1.07
+NYC-LAX direct,sub,life 50 yr,1,328.7,7.771,0.5627,0.7919
+NYC-LAX direct,sub,+ avoided airline non-fuel cost - Skyloop ops,1,328.7,7.771,0.4388,1.067
+NYC-LAX direct,sub,high world,1,328.7,7.771,0.6111,0.8359
+NYC-LAX direct,bl,central,1,325.8,4.236,0.2413,0.567
+NYC-LAX direct,bl,ground overhead 70 min (walk-on),1,326.2,5.193,0.2955,0.6455
+NYC-LAX direct,bl,ground overhead 130 min (airport-like),1,325.3,3.399,0.1939,0.4914
+NYC-LAX direct,bl,20 km station by lift (+49 min),1,325.2,2.984,0.1703,0.4602
+NYC-LAX direct,bl,accel 0.15 g,1,368.7,3.908,0.1967,0.4649
+NYC-LAX direct,bl,"brick-wall headway, 50-seat pods",4,1259,4.236,0.04355,0.1033
+NYC-LAX direct,bl,"brick-wall headway, 150-seat pods",2,636.9,4.236,0.1168,0.2757
+NYC-LAX direct,bl,30 % capture,1,325.8,4.236,0.0724,0.1701
+NYC-LAX direct,bl,low cost,1,94.04,4.236,0.8987,2.111
+NYC-LAX direct,bl,high cost,1,993.1,4.236,0.07168,0.1684
+NYC-LAX direct,bl,opening 2045,1,325.8,4.236,0.2101,0.5137
+NYC-LAX direct,bl,opening 2060,1,325.8,4.236,0.3106,0.677
+NYC-LAX direct,bl,"benign energy (cheap fuel, low SCC)",1,325.8,4.236,0.2413,0.3844
+NYC-LAX direct,bl,stringent energy,1,325.8,4.236,0.2413,0.713
+NYC-LAX direct,bl,grid stalls at ~0.3 kg/kWh,1,325.8,4.236,0.2413,0.5596
+NYC-LAX direct,bl,clean grid 0.02 kg/kWh,1,325.8,4.236,0.2413,0.5696
+NYC-LAX direct,bl,discount 3 %,1,325.8,4.236,0.413,0.9568
+NYC-LAX direct,bl,life 50 yr,1,325.8,4.236,0.3195,0.7193
+NYC-LAX direct,bl,+ avoided airline non-fuel cost - Skyloop ops,1,325.8,4.236,0.2413,0.8121
+NYC-LAX direct,bl,high world,1,325.8,4.236,0.3707,0.7871
+NYC-LAX direct,m22,central,1,324.3,2.007,0.1149,0.3698
+NYC-LAX direct,m22,ground overhead 70 min (walk-on),1,325.1,2.743,0.1566,0.4822
+NYC-LAX direct,m22,ground overhead 130 min (airport-like),1,323.9,1.441,0.08257,0.2956
+NYC-LAX direct,m22,20 km station by lift (+49 min),1,323.4,1.174,0.06737,0.2201
+NYC-LAX direct,m22,accel 0.15 g,1,367.4,1.822,0.09207,0.3137
+NYC-LAX direct,m22,"brick-wall headway, 50-seat pods",3,946.5,2.007,0.0324,0.1052
+NYC-LAX direct,m22,"brick-wall headway, 150-seat pods",1,324.3,2.007,0.09455,0.3075
+NYC-LAX direct,m22,30 % capture,1,324.3,2.007,0.03446,0.111
+NYC-LAX direct,m22,low cost,1,93.28,2.007,0.4293,1.382
+NYC-LAX direct,m22,high cost,1,990.2,2.007,0.03406,0.1097
+NYC-LAX direct,m22,opening 2045,1,324.3,2.007,0.09999,0.3377
+NYC-LAX direct,m22,opening 2060,1,324.3,2.007,0.1478,0.4347
+NYC-LAX direct,m22,"benign energy (cheap fuel, low SCC)",1,324.3,2.007,0.1149,0.2274
+NYC-LAX direct,m22,stringent energy,1,324.3,2.007,0.1149,0.4837
+NYC-LAX direct,m22,grid stalls at ~0.3 kg/kWh,1,324.3,2.007,0.1149,0.3653
+NYC-LAX direct,m22,clean grid 0.02 kg/kWh,1,324.3,2.007,0.1149,0.3714
+NYC-LAX direct,m22,discount 3 %,1,324.3,2.007,0.1966,0.6224
+NYC-LAX direct,m22,life 50 yr,1,324.3,2.007,0.1521,0.4651
+NYC-LAX direct,m22,+ avoided airline non-fuel cost - Skyloop ops,1,324.3,2.007,0.1149,0.52
+NYC-LAX direct,m22,high world,1,324.3,2.007,0.1764,0.5024
+NYC-MIA direct,sub,central,1,176.2,4.381,0.5054,0.6191
+NYC-MIA direct,sub,ground overhead 70 min (walk-on),1,176.7,6.686,0.7691,0.883
+NYC-MIA direct,sub,ground overhead 130 min (airport-like),1,175.7,2.985,0.3452,0.451
+NYC-MIA direct,sub,20 km station by lift (+49 min),1,175.1,2.448,0.2842,0.3654
+NYC-MIA direct,sub,accel 0.15 g,1,219.3,3.965,0.3675,0.4572
+NYC-MIA direct,sub,"brick-wall headway, 50-seat pods",5,826.2,4.381,0.0785,0.09645
+NYC-MIA direct,sub,"brick-wall headway, 150-seat pods",2,338.7,4.381,0.2209,0.2717
+NYC-MIA direct,sub,30 % capture,1,176.2,4.381,0.1516,0.1857
+NYC-MIA direct,sub,low cost,1,50.25,4.381,1.918,2.35
+NYC-MIA direct,sub,high cost,1,571.3,4.381,0.1399,0.1713
+NYC-MIA direct,sub,opening 2045,1,176.2,4.381,0.4399,0.5459
+NYC-MIA direct,sub,opening 2060,1,176.2,4.381,0.6504,0.7781
+NYC-MIA direct,sub,"benign energy (cheap fuel, low SCC)",1,176.2,4.381,0.5054,0.5504
+NYC-MIA direct,sub,stringent energy,1,176.2,4.381,0.5054,0.6743
+NYC-MIA direct,sub,grid stalls at ~0.3 kg/kWh,1,176.2,4.381,0.5054,0.6055
+NYC-MIA direct,sub,clean grid 0.02 kg/kWh,1,176.2,4.381,0.5054,0.6238
+NYC-MIA direct,sub,discount 3 %,1,176.2,4.381,0.8164,0.9957
+NYC-MIA direct,sub,life 50 yr,1,176.2,4.381,0.6671,0.806
+NYC-MIA direct,sub,+ avoided airline non-fuel cost - Skyloop ops,1,176.2,4.381,0.5054,0.8602
+NYC-MIA direct,sub,high world,1,176.2,4.381,0.7762,0.9217
+NYC-MIA direct,bl,central,1,175.2,2.935,0.3406,0.5881
+NYC-MIA direct,bl,ground overhead 70 min (walk-on),1,176.3,4.924,0.5678,0.9434
+NYC-MIA direct,bl,ground overhead 130 min (airport-like),1,174.6,1.882,0.2191,0.3866
+NYC-MIA direct,bl,20 km station by lift (+49 min),1,174.5,1.575,0.1835,0.3395
+NYC-MIA direct,bl,accel 0.15 g,1,218.2,2.662,0.2479,0.4405
+NYC-MIA direct,bl,"brick-wall headway, 50-seat pods",3,500.1,2.935,0.08465,0.1472
+NYC-MIA direct,bl,"brick-wall headway, 150-seat pods",1,175.2,2.935,0.2417,0.4206
+NYC-MIA direct,bl,30 % capture,1,175.2,2.935,0.1022,0.1764
+NYC-MIA direct,bl,low cost,1,49.7,2.935,1.3,2.244
+NYC-MIA direct,bl,high cost,1,569.3,2.935,0.09405,0.1624
+NYC-MIA direct,bl,opening 2045,1,175.2,2.935,0.2965,0.5272
+NYC-MIA direct,bl,opening 2060,1,175.2,2.935,0.4384,0.7167
+NYC-MIA direct,bl,"benign energy (cheap fuel, low SCC)",1,175.2,2.935,0.3406,0.448
+NYC-MIA direct,bl,stringent energy,1,175.2,2.935,0.3406,0.7001
+NYC-MIA direct,bl,grid stalls at ~0.3 kg/kWh,1,175.2,2.935,0.3406,0.5796
+NYC-MIA direct,bl,clean grid 0.02 kg/kWh,1,175.2,2.935,0.3406,0.591
+NYC-MIA direct,bl,discount 3 %,1,175.2,2.935,0.5503,0.9404
+NYC-MIA direct,bl,life 50 yr,1,175.2,2.935,0.4496,0.7524
+NYC-MIA direct,bl,+ avoided airline non-fuel cost - Skyloop ops,1,175.2,2.935,0.3406,0.7382
+NYC-MIA direct,bl,high world,1,175.2,2.935,0.5232,0.8396
+NYC-MIA direct,m22,central,1,175.2,2.935,0.3406,0.5881
+NYC-MIA direct,m22,ground overhead 70 min (walk-on),1,176.3,4.924,0.5678,0.9434
+NYC-MIA direct,m22,ground overhead 130 min (airport-like),1,174.6,1.882,0.2191,0.3866
+NYC-MIA direct,m22,20 km station by lift (+49 min),1,174.5,1.575,0.1835,0.3395
+NYC-MIA direct,m22,accel 0.15 g,1,218.2,2.662,0.2479,0.4405
+NYC-MIA direct,m22,"brick-wall headway, 50-seat pods",3,500.1,2.935,0.08465,0.1472
+NYC-MIA direct,m22,"brick-wall headway, 150-seat pods",1,175.2,2.935,0.2417,0.4206
+NYC-MIA direct,m22,30 % capture,1,175.2,2.935,0.1022,0.1764
+NYC-MIA direct,m22,low cost,1,49.7,2.935,1.3,2.244
+NYC-MIA direct,m22,high cost,1,569.3,2.935,0.09405,0.1624
+NYC-MIA direct,m22,opening 2045,1,175.2,2.935,0.2965,0.5272
+NYC-MIA direct,m22,opening 2060,1,175.2,2.935,0.4384,0.7167
+NYC-MIA direct,m22,"benign energy (cheap fuel, low SCC)",1,175.2,2.935,0.3406,0.448
+NYC-MIA direct,m22,stringent energy,1,175.2,2.935,0.3406,0.7001
+NYC-MIA direct,m22,grid stalls at ~0.3 kg/kWh,1,175.2,2.935,0.3406,0.5796
+NYC-MIA direct,m22,clean grid 0.02 kg/kWh,1,175.2,2.935,0.3406,0.591
+NYC-MIA direct,m22,discount 3 %,1,175.2,2.935,0.5503,0.9404
+NYC-MIA direct,m22,life 50 yr,1,175.2,2.935,0.4496,0.7524
+NYC-MIA direct,m22,+ avoided airline non-fuel cost - Skyloop ops,1,175.2,2.935,0.3406,0.7382
+NYC-MIA direct,m22,high world,1,175.2,2.935,0.5232,0.8396
+spine+LAX all-stop,sub,"M2: brick-wall headway, 50-seat pods",5,2054,9.988,0.06521,0.09564
+spine+LAX all-stop,sub,M2: central,1,451.6,9.988,0.3771,0.5518
+spine+LAX all-stop,bl,"M2: brick-wall headway, 50-seat pods",3,1247,5.486,0.07398,0.1603
+spine+LAX all-stop,bl,M2: central,1,445.6,5.486,0.2285,0.493
+NYC-LAX direct,sub,"M2: brick-wall headway, 50-seat pods",2,597,4.337,0.09142,0.142
+NYC-LAX direct,sub,M2: central,1,307.1,4.337,0.2621,0.4047
+NYC-LAX direct,bl,"M2: brick-wall headway, 50-seat pods",2,595,2.29,0.06627,0.1921
+NYC-LAX direct,bl,M2: central,1,305,2.29,0.1393,0.4021
+NYC-MIA direct,sub,"M2: brick-wall headway, 50-seat pods",2,296,2.965,0.1781,0.2241
+NYC-MIA direct,sub,M2: central,1,154.7,2.965,0.3895,0.4891
+NYC-MIA direct,bl,"M2: brick-wall headway, 50-seat pods",1,153.9,2.007,0.1916,0.3251
+NYC-MIA direct,bl,M2: central,1,153.9,2.007,0.2652,0.447
+spine+LAX all-stop,sub,"M3: brick-wall headway, 50-seat pods",8,3370,13.31,0.04946,0.06722
+spine+LAX all-stop,sub,M3: central,1,464.8,13.31,0.4346,0.5898
+spine+LAX all-stop,bl,"M3: brick-wall headway, 50-seat pods",6,2536,7.79,0.0434,0.09935
+spine+LAX all-stop,bl,M3: central,1,461.2,7.79,0.3135,0.712
+NYC-LAX direct,sub,"M3: brick-wall headway, 50-seat pods",5,1479,6.415,0.06052,0.09036
+NYC-LAX direct,sub,M3: central,1,310,6.415,0.3841,0.5706
+NYC-LAX direct,bl,"M3: brick-wall headway, 50-seat pods",3,891.7,3.481,0.05794,0.1419
+NYC-LAX direct,bl,M3: central,1,307,3.481,0.2104,0.5114
+NYC-MIA direct,sub,"M3: brick-wall headway, 50-seat pods",4,588.7,3.958,0.1086,0.1371
+NYC-MIA direct,sub,M3: central,1,157.6,3.958,0.5105,0.6427
+NYC-MIA direct,bl,"M3: brick-wall headway, 50-seat pods",2,300.2,2.657,0.1202,0.2171
+NYC-MIA direct,bl,M3: central,1,156.5,2.657,0.3451,0.6183
+spine+LAX all-stop,sub,"M6: brick-wall headway, 50-seat pods",12,7721,14.73,0.01711,0.02006
+spine+LAX all-stop,sub,M6: central,1,687.3,14.73,0.3014,0.3532
+spine+LAX all-stop,bl,"M6: brick-wall headway, 50-seat pods",12,7718,8.717,0.01457,0.02991
+spine+LAX all-stop,bl,M6: central,1,684.2,8.717,0.2328,0.4745
+NYC-LAX direct,sub,"M6: brick-wall headway, 50-seat pods",11,4029,9.084,0.02768,0.03778
+NYC-LAX direct,sub,M6: central,1,381.6,9.084,0.4377,0.5949
+NYC-LAX direct,bl,"M6: brick-wall headway, 50-seat pods",7,2568,5.005,0.02609,0.05842
+NYC-LAX direct,bl,M6: central,1,379.1,5.005,0.245,0.5437
+NYC-MIA direct,sub,"M6: brick-wall headway, 50-seat pods",8,1743,5.185,0.04397,0.05096
+NYC-MIA direct,sub,M6: central,1,229.8,5.185,0.4586,0.5305
+NYC-MIA direct,bl,"M6: brick-wall headway, 50-seat pods",5,1093,3.278,0.04543,0.07459
+NYC-MIA direct,bl,M6: central,1,228.7,3.278,0.2913,0.4754

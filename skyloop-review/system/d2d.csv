@@ -1,0 +1,47 @@
+pair,gc_km,mode,ground,taxi_climb_desc,ramps,cruise,vertical,d2d_h,peak_mach,day_return_base,day_return_high
+NYC-LAX,3974.385,subsonic,130.000,68.000,0.000,239.441,0.000,7.291,,False,False
+NYC-LAX,3974.385,Boomless M1.15,130.000,79.000,0.000,166.911,0.000,6.265,,False,False
+NYC-LAX,3974.385,BoomShield M2.2,130.000,88.000,17.907,69.014,0.000,5.082,,False,False
+NYC-LAX,3974.385,"Skyloop M2 (ground portal, 100 min)",100.000,0.000,6.685,111.135,0.000,3.630,2.000,True,True
+NYC-LAX,3974.385,"Skyloop M2 (ground portal, walk-on 70 min)",70.000,0.000,6.685,111.135,0.000,3.130,2.000,True,True
+NYC-LAX,3974.385,"Skyloop M2 (ground portal, airport-like 130 min)",130.000,0.000,6.685,111.135,0.000,4.130,2.000,False,True
+NYC-LAX,3974.385,Skyloop M2 (20 km station by lift (20.5 m/s)),100.000,0.000,6.685,111.135,48.520,4.439,2.000,False,True
+NYC-LAX,3974.385,Skyloop M2 (20 km station by aircraft docking),130.000,0.000,6.685,111.135,154.000,6.697,2.000,False,False
+NYC-LAX,3974.385,"Skyloop M3 (ground portal, 100 min)",100.000,0.000,10.027,71.305,0.000,3.022,3.000,True,True
+NYC-LAX,3974.385,"Skyloop M3 (ground portal, walk-on 70 min)",70.000,0.000,10.027,71.305,0.000,2.522,3.000,True,True
+NYC-LAX,3974.385,"Skyloop M3 (ground portal, airport-like 130 min)",130.000,0.000,10.027,71.305,0.000,3.522,3.000,True,True
+NYC-LAX,3974.385,Skyloop M3 (20 km station by lift (20.5 m/s)),100.000,0.000,10.027,71.305,48.520,3.831,3.000,True,True
+NYC-LAX,3974.385,Skyloop M3 (20 km station by aircraft docking),130.000,0.000,10.027,71.305,154.000,6.089,3.000,False,False
+NYC-LAX,3974.385,"Skyloop M4 (ground portal, 100 min)",100.000,0.000,13.370,50.554,0.000,2.732,4.000,True,True
+NYC-LAX,3974.385,"Skyloop M4 (ground portal, walk-on 70 min)",70.000,0.000,13.370,50.554,0.000,2.232,4.000,True,True
+NYC-LAX,3974.385,"Skyloop M4 (ground portal, airport-like 130 min)",130.000,0.000,13.370,50.554,0.000,3.232,4.000,True,True
+NYC-LAX,3974.385,Skyloop M4 (20 km station by lift (20.5 m/s)),100.000,0.000,13.370,50.554,48.520,3.541,4.000,True,True
+NYC-LAX,3974.385,Skyloop M4 (20 km station by aircraft docking),130.000,0.000,13.370,50.554,154.000,5.799,4.000,False,False
+NYC-LAX,3974.385,"Skyloop M6 (ground portal, 100 min)",100.000,0.000,20.054,28.132,0.000,2.470,6.000,True,True
+NYC-LAX,3974.385,"Skyloop M6 (ground portal, walk-on 70 min)",70.000,0.000,20.054,28.132,0.000,1.970,6.000,True,True
+NYC-LAX,3974.385,"Skyloop M6 (ground portal, airport-like 130 min)",130.000,0.000,20.054,28.132,0.000,2.970,6.000,True,True
+NYC-LAX,3974.385,Skyloop M6 (20 km station by lift (20.5 m/s)),100.000,0.000,20.054,28.132,48.520,3.278,6.000,True,True
+NYC-LAX,3974.385,Skyloop M6 (20 km station by aircraft docking),130.000,0.000,20.054,28.132,154.000,5.536,6.000,False,False
+DEN-CHI,1426.230,subsonic,130.000,68.000,0.000,65.051,0.000,4.384,,False,True
+DEN-CHI,1426.230,Boomless M1.15,130.000,79.000,0.000,38.013,0.000,4.117,,False,True
+DEN-CHI,1426.230,BoomShield M2.2,130.000,88.000,17.907,3.598,0.000,3.992,,True,True
+DEN-CHI,1426.230,"Skyloop M2 (ground portal, 100 min)",100.000,0.000,6.685,37.738,0.000,2.407,2.000,True,True
+DEN-CHI,1426.230,"Skyloop M2 (ground portal, walk-on 70 min)",70.000,0.000,6.685,37.738,0.000,1.907,2.000,True,True
+DEN-CHI,1426.230,"Skyloop M2 (ground portal, airport-like 130 min)",130.000,0.000,6.685,37.738,0.000,2.907,2.000,True,True
+DEN-CHI,1426.230,Skyloop M2 (20 km station by lift (20.5 m/s)),100.000,0.000,6.685,37.738,48.520,3.216,2.000,True,True
+DEN-CHI,1426.230,Skyloop M2 (20 km station by aircraft docking),130.000,0.000,6.685,37.738,154.000,5.474,2.000,False,False
+DEN-CHI,1426.230,"Skyloop M3 (ground portal, 100 min)",100.000,0.000,10.027,22.374,0.000,2.207,3.000,True,True
+DEN-CHI,1426.230,"Skyloop M3 (ground portal, walk-on 70 min)",70.000,0.000,10.027,22.374,0.000,1.707,3.000,True,True
+DEN-CHI,1426.230,"Skyloop M3 (ground portal, airport-like 130 min)",130.000,0.000,10.027,22.374,0.000,2.707,3.000,True,True
+DEN-CHI,1426.230,Skyloop M3 (20 km station by lift (20.5 m/s)),100.000,0.000,10.027,22.374,48.520,3.015,3.000,True,True
+DEN-CHI,1426.230,Skyloop M3 (20 km station by aircraft docking),130.000,0.000,10.027,22.374,154.000,5.273,3.000,False,False
+DEN-CHI,1426.230,"Skyloop M4 (ground portal, 100 min)",100.000,0.000,13.370,13.856,0.000,2.120,4.000,True,True
+DEN-CHI,1426.230,"Skyloop M4 (ground portal, walk-on 70 min)",70.000,0.000,13.370,13.856,0.000,1.620,4.000,True,True
+DEN-CHI,1426.230,"Skyloop M4 (ground portal, airport-like 130 min)",130.000,0.000,13.370,13.856,0.000,2.620,4.000,True,True
+DEN-CHI,1426.230,Skyloop M4 (20 km station by lift (20.5 m/s)),100.000,0.000,13.370,13.856,48.520,2.929,4.000,True,True
+DEN-CHI,1426.230,Skyloop M4 (20 km station by aircraft docking),130.000,0.000,13.370,13.856,154.000,5.187,4.000,False,False
+DEN-CHI,1426.230,"Skyloop M6 (ground portal, 100 min)",100.000,0.000,20.054,3.666,0.000,2.062,6.000,True,True
+DEN-CHI,1426.230,"Skyloop M6 (ground portal, walk-on 70 min)",70.000,0.000,20.054,3.666,0.000,1.562,6.000,True,True
+DEN-CHI,1426.230,"Skyloop M6 (ground portal, airport-like 130 min)",130.000,0.000,20.054,3.666,0.000,2.562,6.000,True,True
+DEN-CHI,1426.230,Skyloop M6 (20 km station by lift (20.5 m/s)),100.000,0.000,20.054,3.666,48.520,2.871,6.000,True,True
+DEN-CHI,1426.230,Skyloop M6 (20 km station by aircraft docking),130.000,0.000,20.054,3.666,154.000,5.129,6.000,False,False
