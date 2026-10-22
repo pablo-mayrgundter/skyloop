@@ -309,13 +309,18 @@ def focus_amplitude(inc, fp, nkz=True):
     over = xi[pk > LIMIT_PA]
     res["zone_over_limit_m"] = float((over.max() - over.min()) / sa) if over.size else 0.0
     if nkz:
-        n = F.nkz_focus(t, p, fp["L_c"], fp["R"], fp["c"], fp["rho"], X_end=4.0)
+        # nonlinear march on the rise-time-proxy incident (turbulence-like 2-5 ms shocks;
+        # identical to the raw one for the smooth shielded swell)
+        q = rise_time_proxy(t, p) if inc["stack"] == "none" else p
+        n = F.nkz_focus(t, q, fp["L_c"], fp["R"], fp["c"], fp["rho"], X_end=6.0,
+                        record_from=5.0)
         res.update(nl_peak=REFL * n["peak_nl"], nl_lin_grid=REFL * n["peak_lin"],
                    nl_ratio=n["ratio"], mu=n["mu"], nl_hist=n["hist"], nl_T0=n["T0"],
-                   nl_delta=n["delta"])
-        # PLdB of the linear waveform rescaled to the nonlinear peak (approximation)
-        sc = n["peak_nl"] / lin["peak"]
-        res["nl_pldb"] = metrics(lin["t"], REFL * sc * lin["p"])["pldb"]
+                   nl_delta=n["delta"], nl_Gamma=n["Gamma"], rise_ms=1e3 * F.shock_rise(t, q))
+        # PLdB of the linear (proxy) waveform rescaled to the nonlinear peak (approximate)
+        lw = linp if inc["stack"] == "none" else lin
+        sc = n["peak_nl"] / lw["peak"]
+        res["nl_pldb"] = metrics(lw["t"], REFL * sc * lw["p"])["pldb"]
         res["focus_peak"] = res["nl_peak"]
         res["focus_pldb"] = res["nl_pldb"]
     else:
@@ -410,16 +415,21 @@ def validate():
         print(acn, "cruise", out[f"{acn}_cruise"])
     # Guiraud / Gill-Seebass scaling check of the NKZ solver: step-like incident,
     # peak ~ amplitude^(4/5) in the strongly nonlinear limit
-    tt = np.arange(0, 3.0, 1e-4)
+    tt = np.arange(0, 0.6, 1e-4)
     rise = 2e-3
-    step = 0.5 * (1 + np.tanh((tt - 0.5) / (rise / 2.2))) * np.exp(-np.clip(tt - 0.5, 0, None) / 1.0)
-    step -= step.mean() * (tt > 2.0) * 0      # (no mean removal: long positive phase)
+    step = (0.5 * (1 + np.tanh((tt - 0.1) / (rise / 2.197)))
+            * np.exp(-np.clip(tt - 0.1, 0, None) / 0.1))
     gs = []
-    for amp in (5.0, 20.0, 80.0, 320.0):
-        n = F.nkz_focus(tt, amp * step, 1000.0, 50e3, 340.0, 1.2, X_end=4.0)
-        gs.append(dict(amp=amp, peak=n["peak_nl"], lin=n["peak_lin"], mu=n["mu"],
-                       A=n["amp"] * amp))
+    for amp in (1.0, 4.0, 16.0, 64.0, 256.0, 1024.0):
+        n = F.nkz_focus(tt, amp * step, 1000.0, 50e3, 340.0, 1.2, X_end=4.0, record_from=3.0)
+        lin = F.nkz_focus(tt, amp * step, 1000.0, 50e3, 340.0, 1.2, X_end=0.1, linear=True)
+        gs.append(dict(amp=amp, peak=n["peak_nl"], lin=lin["peak_lin"], mu=n["mu"],
+                       A=n["amp"] * amp, ratio=n["peak_nl"] / lin["peak_lin"]))
         print("  NKZ step", gs[-1], flush=True)
+    a_ = np.log([g["amp"] for g in gs])
+    p_ = np.log([g["peak"] for g in gs])
+    out["guiraud_slopes"] = list(np.diff(p_) / np.diff(a_))
+    print("  d ln(peak)/d ln(amplitude):", np.round(out["guiraud_slopes"], 3))
     out["guiraud"] = gs
     save("validate", out)
     return out
@@ -452,10 +462,16 @@ def collect():
                 if k in v:
                     row[k] = v[k]
             if "focus_peak" in v:
-                row["focus_psf"] = v["focus_peak"] / PSF
+                # unshielded: nonlinear NKZ peak; shielded (mu ~ 1e-4, linear): the full-band
+                # Airy peak if larger (NKZ is band-limited); the ground maximum in the focus
+                # zone is at least the steady value on the same ray
+                fpk = v["focus_peak"] if sk == "none" else max(v["focus_peak"], v["lin_peak"])
+                row["focus_peak"] = fpk
+                row["focus_psf"] = fpk / PSF
                 row["ss_psf"] = v["ss_peak"] / PSF
-                row["focus_factor"] = v["focus_peak"] / v["ss_peak"]
-                row["pass_0.11psf"] = bool(v["focus_peak"] <= LIMIT_PA)
+                row["focus_factor"] = fpk / v["ss_peak"]
+                row["ground_max_psf"] = max(fpk, v["ss_peak"]) / PSF
+                row["pass_0.11psf"] = bool(max(fpk, v["ss_peak"]) <= LIMIT_PA)
             rows.append(row)
     return rows
 

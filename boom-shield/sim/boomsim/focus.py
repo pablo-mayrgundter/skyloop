@@ -722,8 +722,30 @@ def _muscl_burgers(P, k, dT, dX):
     return P - lam * (F[:, 1:] - F[:, :-1])
 
 
+def shock_rise(t, p, window_s=0.02):
+    """10-90 % rise time [s] of the steepest compression (the shock): the jump is taken
+    from the minimum in the ``window_s`` before the steepest point to the maximum in the
+    window after it; robust to slow precursors that fool a global 10-90 % search."""
+    t = np.asarray(t, float)
+    p = np.asarray(p, float)
+    dt = t[1] - t[0]
+    i = int(np.argmax(np.diff(p)))
+    w = max(2, int(window_s / dt))
+    a, b = max(0, i - w), min(p.size, i + w + 1)
+    lo = a + int(np.argmin(p[a:i + 1]))
+    hi = i + int(np.argmax(p[i:b]))
+    p0, p1 = p[lo], p[hi]
+    seg = p[lo:hi + 1]
+    tt = t[lo:hi + 1]
+    f10 = p0 + 0.1 * (p1 - p0)
+    f90 = p0 + 0.9 * (p1 - p0)
+    t10 = np.interp(f10, np.maximum.accumulate(seg), tt)
+    t90 = np.interp(f90, np.maximum.accumulate(seg), tt)
+    return float(max(t90 - t10, 2 * dt))
+
+
 def nkz_focus(t, p, L_c, R, c, rho, beta=BETA_AIR, T0=None, n_rise=4.0, omega_cut=4.0,
-              dT=None, dZ=None, Z_top=None, Z_bot=6.0, X_end=4.0, rise_s=None, linear=False,
+              dT=None, dZ=None, Z_top=None, Z_bot=6.0, X_end=6.0, rise_s=None, linear=False,
               cfl=0.4, dX_max=0.02, record_from=None, verbose=False, workers=1):
     """Nonlinear fold-caustic focus by marching the normalised NKZ equation
     P_XT = P_ZZ - Z P_TT + mu (P^2/2)_TT + Gamma P_TTT in X from the linear (Airy)
@@ -739,12 +761,11 @@ def nkz_focus(t, p, L_c, R, c, rho, beta=BETA_AIR, T0=None, n_rise=4.0, omega_cu
     dt = t[1] - t[0]
     pk = p.max()
     if rise_s is None:
-        # shock rise from the steepest compression (0.8 peak / max slope = the 10-90 %
-        # time of a linear ramp); robust to slow precursors that fool a 10-90 % search
-        smax = float(np.max(np.diff(p))) / dt
-        rise_s = 0.8 * pk / smax if smax > 0 else 1e-3
+        rise_s = shock_rise(t, p)
+    sup0 = np.flatnonzero(np.abs(p) > 1e-3 * np.abs(p).max())
     if T0 is None:
-        T0 = max(5e-5, rise_s / n_rise)
+        # resolve the shock (rise/n_rise) but keep the record within ~600 T0
+        T0 = max(5e-5, rise_s / n_rise, (t[sup0[-1]] - t[sup0[0]]) / 600.0)
     if dT is None:
         dT = math.pi / (1.3 * omega_cut)
     lam = c * T0
@@ -797,7 +818,9 @@ def nkz_focus(t, p, L_c, R, c, rho, beta=BETA_AIR, T0=None, n_rise=4.0, omega_cu
     # absorption: Gamma from Taylor balance at incident half-jump a (at Z = 1)
     a_half = 0.5 * amp * pk
     rise_n = rise_s / T0
-    Gamma = 0.0 if linear else mu * a_half * rise_n / 4.39
+    # Taylor shock of P_X = mu P P_T + Gamma P_TT with half-jump a: tanh(mu a T/(2 Gamma)),
+    # 10-90 % rise = 4 atanh(0.8) Gamma/(mu a) = 4.394 Gamma/(mu a)
+    Gamma = 0.0 if linear else mu * a_half * rise_n / (4.0 * math.atanh(0.8))
     # Taylor balance at every height: the incident amplitude falls as Z^(-1/4) away from
     # the caustic, so Gamma(Z) = Gamma min(1, Z^(-1/4)) keeps the incident shock at its
     # rise time all the way in (a uniform Gamma would over-smooth the far incident)

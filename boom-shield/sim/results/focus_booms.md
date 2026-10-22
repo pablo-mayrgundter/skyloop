@@ -1,11 +1,9 @@
-# Focused sonic booms (superbooms) and BoomShield — DRAFT
+# Focused sonic booms (superbooms) and BoomShield
 
-*Draft written while the runs complete; numbers marked TBD are pending.*
+*DRAFT, numbers being finalised.* Code: `boomsim/focus.py`, `run_focus.py`; tests: `tests/test_focus.py`. Data: `focus_booms.csv`; figure: `focus_booms.png`.
 
-Code: `boomsim/focus.py`, `run_focus.py`; tests `tests/test_focus.py`. Data: `focus_booms.csv`; figure `focus_booms.png`.
+## Physics
 
-## Bottom line (preliminary)
+An aircraft in steady flight lays down a ray pattern that does not change. If it accelerates, turns or pushes over, rays emitted at different times cross. Their envelope is a **caustic**, and where it touches the ground a **focus boom** lands. Here geometric acoustics fails, because the ray-tube area goes to zero.
 
-- Every acceleration through the Mach cut-off focuses on the ground. Overture-like, 20.25 km, 0.02–0.15 g: focus at emission Mach 1.16–1.28, **~4 psf unshielded** (3–4× the steady boom at that Mach), 109–110 PLdB.
-- Over the shield (H₂ 55 m) the same focus is **~0.01 psf**: the layer removes the shock before the rays converge, and the remaining infrasonic swell is too long to focus.
-- Deceleration forms no caustic. Turns at Mach 1.7 focus only above ~15–20° of bank, at the inside carpet edge.
+During acceleration the Mach cone narrows, so later rays are steeper and overtake earlier ones. In a real atmosphere sound is faster near the ground, so the first rays that reach it (Mach cut-off, M_cut = 1.153 at 20.25 km) arrive grazing. Every acceleration through M_cut therefore puts a crescent-shaped focus line on the ground, ahead of the aircraft. A gentle acceleration does not avoid it; it only moves the focus Mach closer to M_cut.
