@@ -30,6 +30,7 @@ Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac
 - [structure/structure-concept.md](structure/structure-concept.md): structural concept study for a ~1 km-wide H2 shield with acoustically decoupled faces; recommends the "floating-lid" pillow baseline.
 - [altitude/altitude-trade.md](altitude/altitude-trade.md): operating-altitude trade study (12-25 km): buoyancy, weather, winds, airspace, aircraft penalty, tethers.
 - [network-maps/routes/routes.md](network-maps/routes/routes.md): route ranking (overland km x seats) and Overture time-savings model.
+- [network-maps/trunk/trunk.md](network-maps/trunk/trunk.md): shared cross-country trunk (gravity-model O&D, Mach sweep 1.4-3.2), traffic per km and benefit/cost.
 - [economics/economics.md](economics/economics.md): first-cut cost, land-rights and benefit model.
 - [operations/tethers-build-failure.md](operations/tethers-build-failure.md): faired and buoyant tethers, construction sequence, H2 make-up, failure modes, land use.
 

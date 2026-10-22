@@ -1,0 +1,46 @@
+gravity: beta=0.50 d0=400 km rms(log)=0.28; modelled O&D 461 M pax/yr
+  M1.4: seed ['NYC', 'CLE', 'LAX', 'CHI', 'LAS', 'DEN', 'OMA'] B=12.11M pax-h, 3994 km
+  M1.4: final 4164 km, B=12.27M pax-h/yr vs Boomless (100 % capture)
+M1.4: pairs kept after upper-bound cut 598/1540, 149/461 M pax
+  M1.7: seed ['NYC', 'CLE', 'LAX', 'CHI', 'LAS', 'DEN', 'OMA'] B=30.49M pax-h, 3994 km
+  M1.7: final 3614 km, B=30.00M pax-h/yr vs Boomless (100 % capture)
+M1.7: pairs kept after upper-bound cut 813/1540, 206/461 M pax
+  M2.0: seed ['NYC', 'CLE', 'LAX', 'CHI', 'LAS', 'DEN', 'OMA'] B=44.25M pax-h, 3994 km
+  M2.0: final 7080 km, B=60.58M pax-h/yr vs Boomless (100 % capture)
+M2.0: pairs kept after upper-bound cut 865/1540, 225/461 M pax
+  M2.5: seed ['LAX', 'IND', 'WAS', 'LAS', 'DEN', 'MCI'] B=58.33M pax-h, 3770 km
+  M2.5: final 7491 km, B=87.56M pax-h/yr vs Boomless (100 % capture)
+M2.5: pairs kept after upper-bound cut 871/1540, 227/461 M pax
+  M3.2: seed ['LAX', 'IND', 'WAS', 'LAS', 'DEN', 'MCI'] B=64.07M pax-h, 3770 km
+  M3.2: final 7491 km, B=101.62M pax-h/yr vs Boomless (100 % capture)
+M3.2: pairs kept after upper-bound cut 871/1540, 227/461 M pax
+  evaluated heuristic_star
+  evaluated heuristic_cle
+  evaluated greedy_M1.4
+  evaluated greedy_branched_M1.4
+  evaluated greedy_M1.7
+  evaluated greedy_branched_M1.7
+  evaluated greedy_M2.0
+  evaluated greedy_branched_M2.0
+  evaluated greedy_M2.5
+  evaluated greedy_branched_M2.5
+  evaluated greedy_M3.2
+  evaluated greedy_branched_M3.2
+done; figures next
+Traceback (most recent call last):
+  File "/home/user/skyloop/boom-shield/network-maps/trunk/build_trunk.py", line 1044, in <module>
+    main()
+    ~~~~^^
+  File "/home/user/skyloop/boom-shield/network-maps/trunk/build_trunk.py", line 1040, in main
+    make_figures(df)
+    ~~~~~~~~~~~~^^^^
+  File "/home/user/skyloop/boom-shield/network-maps/trunk/build_trunk.py", line 756, in make_figures
+    data = pickle.loads((CACHE / f"ev_greedy_M{head_M}.pkl").read_bytes())
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/usr/lib/python3.13/pathlib/_abc.py", line 625, in read_bytes
+    with self.open(mode='rb') as f:
+         ~~~~~~~~~^^^^^^^^^^^
+  File "/usr/lib/python3.13/pathlib/_local.py", line 537, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/user/skyloop/boom-shield/network-maps/trunk/.cache/ev_greedy_M2.0.pkl'
