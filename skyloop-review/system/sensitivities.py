@@ -17,7 +17,8 @@ HEAD = {"spine+LAX all-stop": sm.network_defs()["spine+LAX all-stop"],
 
 
 def one(inp, name, lines, cmp, M=4.0, O_sky=None, a=None, rule="moving block 10 s", seats=None, lvl="base",
-        oy=2050, cap=1.0, energy="central", grid="central", r=0.07, life=25, resource=False, world="base"):
+        oy=2050, cap=1.0, energy="central", grid="central", r=0.07, life=25, resource=False, world="base",
+        align_gw_per_1000km=0.0):
     old_a, old_seats = sm.P["a_acc"], sm.P["seats"]
     if a:
         sm.P["a_acc"] = a
@@ -34,7 +35,9 @@ def one(inp, name, lines, cmp, M=4.0, O_sky=None, a=None, rule="moving block 10 
         t = ev["tot"]
         ann = dict(benefit_busd=t["benefit_busd"], fuel_saved_Mt=t["fuel_saved_Mt"], kwh_TWh=t["kwh_TWh"],
                    pax_M=t["captured_pax_M"] + t["net_induced_M"], pax_km_B=t["pax_km_B"], peak=ev["peak"])
-        lc = sm.lifecycle(ann, capex, sm.OM_FRAC[sm.LVL[lvl]], oy, cap, world=world, energy_case=energy,
+        # active alignment thrust (physics: 0.4-2 GW per 1,000 km, ideal) as extra opex at grid price
+        extra = align_gw_per_1000km * net.km() / 1000 * 8.76 * sm.P["elec_usd_kwh"]          # $B/yr
+        lc = sm.lifecycle(ann, capex, sm.OM_FRAC[sm.LVL[lvl]] + extra / capex, oy, cap, world=world, energy_case=energy,
                           grid_case=grid, r=r, life=life, build=10 if net.km() > 2000 else 7,
                           cap_pax=bores * capyr, resource=resource)
         return dict(bores=bores, capex_busd=capex, benefit_busd=t["benefit_busd"], bc_gross=lc["bc_gross"],
@@ -64,7 +67,8 @@ if __name__ == "__main__":
              ("discount 3 %", dict(r=0.03)),
              ("life 50 yr", dict(life=50)),
              ("+ avoided airline non-fuel cost - Skyloop ops", dict(resource=True)),
-             ("high world", dict(world="high"))]
+             ("high world", dict(world="high")),
+             ("active alignment thrust 1 GW per 1,000 km (physics)", dict(align_gw_per_1000km=1.0))]
     rows = []
     for name, lines in HEAD.items():
         for cmp in ("sub", "bl", "m22"):
