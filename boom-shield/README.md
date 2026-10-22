@@ -1,6 +1,8 @@
 # Boom Shield
 
-This directory collects the first-pass acoustic analysis for a bouyant sonic-boom shield concept, to reflect the main wave of sonic booms from overflying aircraft away from their ground tracks.
+BoomShield is a concept for a long, flat, tethered layer of hydrogen floating at ~20 km under a supersonic flight corridor, so that the sonic boom of the aircraft flying just above it decays in the gas instead of reaching the ground. This directory holds the screening studies (simulation only, with unverified web data): acoustics, structure, operations, network, economics, higher Mach, growth and global corridors. Start with **[STATUS.md](STATUS.md)** and the illustrated **[explainer page](infographic/index.html)**.
+
+**Phase-end verdict (October 2026).** The acoustics pass a screen: ~55 m of H₂, 1.5–2 km wide, meets the FAA's proposed 0.11 psf limit at Mach 2, and buildability is open rather than refuted. The economics do not close: with owned plants (~$14/m²) and a light M2.0–2.2 aircraft the 3,614 km US spine (the best corridor in the world) reaches a gross benefit/cost of ~0.9 against Boomless Cruise, but net of the extra fuel and CO₂ it stays well below 1 against Boomless and negative against subsonic, so the next step is a re-run around 2029–31 once the FAA rule and Overture's real economics are known.
 
 ## Contents
 
@@ -31,19 +33,22 @@ This directory collects the first-pass acoustic analysis for a bouyant sonic-boo
 - [fatigue/lid-fatigue.md](fatigue/lid-fatigue.md): lid fatigue under repeated boom loading; retires the ~100 flights/day cap (revised cap 1,000 / 10,000 / none). Literature notes: [fatigue/sources_notes.md](fatigue/sources_notes.md).
 - [operations/tethers-build-failure.md](operations/tethers-build-failure.md): faired and buoyant tethers, construction sequence, H2 make-up, failure modes, land use.
 
-### Network and economics
+### Network, traffic and aircraft
 
 - [network-maps/america-north/README.md](network-maps/america-north/README.md): first-pass North America corridor framing (trunks and ramps).
 - [network-maps/routes/routes.md](network-maps/routes/routes.md): route ranking (overland km x seats) and Overture time-savings model.
 - [network-maps/trunk/trunk.md](network-maps/trunk/trunk.md): shared cross-country trunk (gravity-model O&D, Mach sweep 1.4-3.2), traffic per km and benefit/cost.
 - [network-maps/coverage/coverage.md](network-maps/coverage/coverage.md): total US long-haul traffic (DOT Table 1 based), addressable share, spine coverage, network-size curve.
-- [network-maps/demand/demand.md](network-maps/demand/demand.md): induced demand from shorter trips (elasticities, day-trip thresholds, rule-of-half), revised B/C and side effects. Its [joint_costdown.csv](network-maps/demand/joint_costdown.csv) is the authoritative cost-down + demand table.
+- [network-maps/demand/demand.md](network-maps/demand/demand.md): induced demand from shorter trips (elasticities, day-trip thresholds, rule-of-half), revised B/C and side effects. Its [joint_costdown.csv](network-maps/demand/joint_costdown.csv) is one tether row; the two-row B/C is in integration's `bcr.csv`.
 - [network-maps/highmach/highmach.md](network-maps/highmach/highmach.md): higher-Mach aircraft (M1.7-4.0, adaptive-cycle/TBCC), door-to-door decomposition, shield vs Mach, B/C gross and net of fuel/CO2.
-- [economics/growth/growth.md](economics/growth/growth.md): traffic-growth projections, ROI by opening year, decision triggers and a staged pilot plan.
-- [network-maps/global/global.md](network-maps/global/global.md): worldwide long-spine corridor ranking vs the US spine.
+- [network-maps/global/global.md](network-maps/global/global.md): worldwide long-spine corridor ranking vs the US spine; first mover.
+
+### Economics and timing
+
 - [economics/economics.md](economics/economics.md): first-cut cost, land-rights and benefit model.
 - [economics/cost-down/cost-down.md](economics/cost-down/cost-down.md): unit-cost reduction levers and dual-use revenue; scenario B/C (its own joint-demand section is superseded).
-- [economics/integration/integration.md](economics/integration/integration.md): vertical integration of the main cost drivers (make vs buy, plants, learning curves) and updated B/C.
+- [economics/integration/integration.md](economics/integration/integration.md): vertical integration of the main cost drivers (make vs buy, plants, learning curves) and two-tether-row B/C.
+- [economics/growth/growth.md](economics/growth/growth.md): traffic-growth projections, ROI by opening year (gross and net of fuel/CO2), decision triggers and a staged pilot plan.
 
 ### Origin and handoff (historical)
 

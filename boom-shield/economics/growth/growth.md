@@ -1,10 +1,12 @@
 # BoomShield: traffic growth, value-of-time growth and timing
 
+> **Note (22 Oct 2026):** sibling studies have since landed. network-maps/global/global.md ranks the US spine first and names the US as first mover; network-maps/highmach/highmach.md has the Mach B/C table. Net-of-fuel B/C values differ between studies by method (life-cycle vs single-year; scaling of cost ratios); see STATUS.md, next step 4.
+
 **Skyloop · 22 October 2026 · screening model.** `growth_model.py` imports [cost_model.py](../cost_model.py) read-only and reads [integration](../integration/integration.md) costs (two tether rows), [highmach](../../network-maps/highmach/highmach.md) 2025 benefits, extra fuel and CO₂, and [demand](../../network-maps/demand/demand.md) peak flights. `make_figure.py` draws `growth.png`. Web figures are unverified search summaries (`sources.csv`); [K] background knowledge, [U] assumption. With growth switched off, the model reproduces the siblings' spine B/C vs Boomless (0.040 / 0.273 / 0.496 for base / aggressive / integrated; `static_check.csv`).
 
 ## Bottom line
 
-- **10× long-haul traffic is not in sight this century.** In the base case, US domestic trips > 1,500 km reach **1.5× in ~2043, 2× in ~2057 and 3× in ~2086**. 10× comes only ~2190 (high case ~2125). Even premium long-haul, growing 1.5 pp faster, reaches 10× only ~2100.
+- **10× long-haul traffic is not in sight this century.** In the base case, US domestic trips > 1,500 km reach **1.5× in ~2043, 2× in ~2057 and 3× in ~2086**. 10× comes only ~2187 (high case ~2125). Even premium long-haul, growing 1.5 pp faster, reaches 10× only ~2100.
 - **Delay helps, slowly.** Traffic growth plus value-of-time growth raise the life-cycle B/C about **3.5 % for each year the opening slips**.
   - **Gross vs Boomless** (spine, integrated $14/m², 100 % capture): 0.62 for a 2035 opening, **0.91 for 2045, 1.07 for 2050**.
   - **Net of fuel and CO₂:** 0.20 → 0.36 → 0.46. It reaches 1 only for a **~2075 opening** (~2055 in the high world).

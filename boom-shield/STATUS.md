@@ -1,23 +1,28 @@
-# BoomShield — concept status
+# BoomShield — concept status (end of phase 1)
 
-**Skyloop · 22 October 2026 · status after the acoustics, 0.11 psf, superboom, on-ramp, fatigue, operations, network, economics and induced-demand rounds.**
+**Skyloop · 22 October 2026 · final status for this phase, after the acoustics, 0.11 psf, superboom, on-ramp, fatigue, operations, network, economics, induced-demand, integration, higher-Mach, growth and global rounds.**
 Everything here is screening level: simulation only (no hardware, no flight test), linear shield physics, unshaped sources, and web figures taken from search-result summaries that were not verified at the source. Unit costs marked [U] in the studies are engineering estimates.
+
+**How B/C is quoted.** Every benefit/cost ratio below is labelled **gross** or **net**. *Gross* = value of time saved ($86/h × 95 % availability) over the annualised cost of the shield. *Net* = the same, after also subtracting the extra fuel and CO₂ of flying supersonic instead of the comparator (highmach and global: fuel $0.80/kg, CO₂ $190/t; growth: a central fuel + SAF + carbon path, $1.43 → 1.91 per kg of fuel). Unless a row says otherwise: spine LAS–DEN–OMA–CHI–CLE–NYC, two tether rows, base induced demand, 100 % capture (10 % capture divides B/C by 10).
 
 ## 1. Bottom line
 
-- **The acoustics pass a screen, and nothing found since undoes them.** At 20 km, a hydrogen layer about **55 m thick and 1.5–2 km wide** meets the FAA's proposed **0.11 psf** limit under a Concorde-class aircraft at Mach 2. Superbooms from acceleration vanish over it, on-ramps need almost no extra shield, and lid fatigue is a detail-design requirement, not a traffic cap.
-- **Buildability is open, not refuted.** Sealed 250 m modules can be launched and joined. The tether field is twice the size first assumed (two rows, ~2,700 tethers), and the worst failure is a bay rising into the flight level about 100 s after losing its hold-down.
-- **The best network is a 3,614 km spine, LAS–DEN–OMA–CHI–CLE–NYC.** It carries ~81 M of the ~217 M addressable passengers a year and **~37 %** of the time the shield could save.
-- **It does not pay against Boomless Cruise under any combination studied.** The best case is a B/C of **0.55**: aggressive cost-down, high induced demand and 100 % capture. Against subsonic flight it exceeds 1 only with aggressive cost-down at ~100 % capture, which implies fares near subsonic parity. Its carbon cost then exceeds its time benefit.
-- **Three things decide the case:** whether Boomless Cruise is allowed and reliable overland, whether supersonic fares can reach parity, and whether all-in cost reaches ~$20/m².
+- **The acoustics pass a screen, and nothing found since undoes them.** At 20 km, a hydrogen layer about **55 m thick and 1.5–2 km wide** meets the FAA's proposed **0.11 psf** limit under a Concorde-class aircraft at Mach 2; a ≤ 50 t M2.0–2.2 aircraft needs only 29–35 m × ~1.25 km. Superbooms vanish over it, on-ramps need almost no extra shield, and lid fatigue is a detail-design requirement.
+- **Buildability is open, not refuted.** Sealed 250 m modules can be launched and joined; two anchor rows (~2,700 tethers) hold them; the worst failure is a bay rising into the flight level ~100 s after losing its hold-down.
+- **Cost can reach ~$14/m² on paper, by owning the plants.** Vertical integration gives **$14.3/m²** ($10.7–21.4), a **$91 B** spine and **$7 B** of plants, against $106/m² bought at base prices.
+- **Gross, the shield can reach B/C ≈ 1 against Boomless Cruise, but only with every lever pulled.** Integrated cost alone gives **0.49 gross**; add a light M2.2 aircraft, **0.90**; M3, 1.03; M2.2 with high induced demand, 1.53; a ~2050 opening, 1.07. All at 100 % capture.
+- **Net of fuel and CO₂ it does not pay.** Under central fuel and carbon prices, net B/C against Boomless stays **≤ 0.5** for openings to 2050 (0.46) and reaches 1 only for a ~2075 opening (base world). Against subsonic, gross B/C is 1.75–2.8, but **net is negative at every Mach, in every corridor and, in the base world, for every opening this century**.
+- **Mach is the weakest lever; the sweet spot is M2.0–2.2.** Ground time dominates the door-to-door trip, and above ~M2.3 the extra fuel costs more than the time it buys.
+- **The US spine is the best corridor in the world and the US the natural first mover.** Europe–Gulf reaches 55–65 % of it.
+- **Timing comes from events, not traffic.** Traffic growth lifts B/C ~3.5 % a year. Re-run the study ~2029–31 (FAA final rule, Boomless status, Overture's real economics); a pilot gate falls ~2038 and the earliest defensible spine opening is ~2055.
 
-## 2. What passes
+## 2. What passes: acoustics
 
-**Evidence chain.** The `boomsim` package ([DESIGN](sim/DESIGN.md), [DESIGN-3D](sim/DESIGN-3D.md)) runs Whitham near field → nonlinear augmented-Burgers rays (US Standard Atmosphere 1976) → 1-D transfer matrix, 2-D cross-plane BEM and along-track Floquet orders at the shield → ground carpet with wind and turbulence → PLdB and peak psf, always against an unshielded run with identical numerics. Anchors: Concorde M2 1.97 psf (NASA 1.94); SR-71 M3 0.99 psf (~0.9); Concorde carpet half-width 42.8 km (~44); secondary-boom delay 8–13 min (10–15).
+**Evidence chain.** `boomsim` ([DESIGN](sim/DESIGN.md), [DESIGN-3D](sim/DESIGN-3D.md)): Whitham near field → nonlinear rays → 1-D/2-D/along-track shield models → ground carpet with wind and turbulence, always against an identical unshielded run. Anchors: Concorde M2 1.97 psf (NASA 1.94); SR-71 M3 0.99 psf (~0.9).
 
-**2.1 Loudness.** The boom sweeps the shield at aircraft speed V, slower than sound in H₂ (to ~Mach 3.8), so it cannot propagate in the layer and decays as exp(−κd). A 1 km × 30 m H₂ layer cuts **−34 dB undertrack and −25 dB at the carpet maximum** (Concorde M2: ~98 → 58–73 PLdB, conservative proxy). Width sets loudness (250 m: only −8 dB); wind moves the carpet but changes undertrack ΔPLdB ≤ 0.4 dB. Anything that locks the volume (stiff ties, struts, stiff skins, open gaps) acts as an acoustic stud, so every viable structure is soft and quasi-zero-pressure.
+**Loudness.** The boom sweeps the shield slower than sound in H₂, so it decays across the layer. A 1 km × 30 m H₂ layer cuts **−34 dB undertrack and −25 dB at the carpet maximum** (Concorde M2: ~98 → 58–73 PLdB, conservative proxy). Width sets loudness (250 m: only −8 dB). Anything stiff or open leaks the boom, so every viable structure is soft.
 
-**2.2 The 0.11 psf limit** (NPRM 91 FR 40470, 2 July 2026, docket FAA-2026-6935; rule text read only via law-firm summaries, **unverified**). It binds harder than loudness: the 30 m layer leaves an inaudible 0.24–0.25 psf swell at Mach 2. The peak scales as W·d^−(1.2…1.5); one fitted constant matches 699 cases within ±1.8 dB ([psf_sweep](sim/results/psf_sweep.md)).
+**The 0.11 psf limit** (NPRM 91 FR 40470, 2 July 2026, docket FAA-2026-6935; rule text read only via law-firm summaries, **unverified**) binds harder than loudness ([psf_sweep](sim/results/psf_sweep.md)):
 
 | Aircraft (shield top 20 km) | Unshielded psf | Min H₂ for 0.11 psf, undertrack |
 |---|---|---|
@@ -25,97 +30,176 @@ Everything here is screening level: simulation only (no hardware, no flight test
 | Concorde M2.0 | 1.77 | **54 m** |
 | Concorde M2.5 | 1.74 | 77 m |
 | SR-71 M3.2 | 1.08 | 71 m |
+| Light M2.2, 50 t (highmach, τ-fit) | — | 35 m |
 
-Width: in 3-D (Concorde M2, 60 m), 1 km fails off-track (11.7 Pa at 39 km); **1.5 and 2 km pass everywhere (≤ 4.2 Pa)**. Only this aircraft has been run in 3-D. Altitude: 19–22 km stands, 20 km for Mach 2 ([altitude-trade](altitude/altitude-trade.md)).
+In 3-D (Concorde M2, 60 m) **1.5 and 2 km pass everywhere**; 1 km fails off-track. Only this aircraft has been run in 3-D.
 
-**2.3 Superbooms with the shield** ([focus_booms](sim/results/focus_booms.md)). Any acceleration through the cut-off Mach focuses on the ground: unshielded **4.6–5.0 psf** for Overture-class (~40× the limit), 8 psf for Concorde-class. Over 55 m of H₂ it falls to **0.011–0.017 psf** (Concorde 0.031–0.043), because the rays cross the layer < 0.5 km ahead of the aircraft, before they converge. Deceleration forms no caustic; steady turns focus only above 18.7° bank at M1.7. Unshielded values are lower bounds (the NKZ solver reads ~1.7× below measured F-16 foci).
+**Superbooms** ([focus_booms](sim/results/focus_booms.md)): unshielded 4.6–5.0 psf (Overture class), **0.011–0.017 psf** over 55 m of H₂. **On-ramps** ([onramp_shield](sim/results/onramp_shield.md)): merge below cut-off, then accelerate; ~10 km aprons, +0.6 % shield. **Secondary booms** ([secondary_booms](sim/results/secondary_booms.md)): not worsened, but ducted returns from unshaped M2–3 aircraft exceed 0.11 psf with or without a shield. **Lid fatigue** ([lid-fatigue](fatigue/lid-fatigue.md)): strain 40–200× below endurance; with fatigue-aware details the cap is **≥ 10,000 flights/day** (low 1,000). Growth brings it back: at 100 % capture the spine reaches 10,000/day by ~2060.
 
-**2.4 On-ramps** ([onramp_shield](sim/results/onramp_shield.md)). **Merge first, then accelerate:** below the day's cut-off (M 1.08–1.23) no ray reaches the ground, so feeders turn, climb and merge without a shield. Each ramp needs only a ~10 km apron (~20 km on the whole spine, +0.6 %). Concorde-class aircraft need the shield flared to 1.7–1.85 km near cut-off (+10 % area); Overture-class needs 1.1–1.25 km. A shield over only the acceleration zone does not work: the steady boom above cut-off is 10–16× the limit. Widths are wavelength-scaled, not 3-D runs.
-
-**2.5 Secondary booms** ([secondary_booms](sim/results/secondary_booms.md)). The shield does not make them worse (worst bins 0.54–1.02× unshielded). But unshaped Mach 2–3 aircraft at 20 km exceed 0.11 psf in secondary booms when winds form a stratospheric duct (0.14–0.37 psf, shield or not; model ~×2 high vs Concorde observations). That is an aircraft and routing problem.
-
-**2.6 Lid fatigue** ([lid-fatigue](fatigue/lid-fatigue.md)). The floating lid is mass-controlled: it carries the reflection-doubled boom (300–650 Pa) by inertia, with strain **~1–6 × 10⁻⁵, 40–200× below cold PE endurance**. Fatigue bites only at bad details (light flaps, slack partition creases, ties on grommets), which weather breaks anyway. With fatigue-aware details (mass-matched flaps, spread tie pads, rolling-lobe partitions, UV top skin) the **cap is ≥ 10,000 flights/day (base; low 1,000, high none)**. **The earlier ~100 flights/day cap is retired.** Spine peak load is 4,500/day (fixed demand) to 6,600/day (base demand + growth).
-
-**Baseline.** Floating-lid H₂ pillow at 20 km, ~55 m at Mach 2 (36 m lift-set for Mach 1.7), 1.5–2 km wide, lid ~3.9 kg/m², soft ties K ≈ 10 Pa/m, 250 m compartments, ~2–4 Mt of H₂ per 4,000 km. Ruled out: narrow modules, mass-law shields, helium, vacuum balloons, drop-stitch/struts/stiff skins, open joints ([3d_summary](sim/results/3d_summary.md), [structure](structure/structure-concept.md), [vacuum](vacuum/vacuum-balloon-review.md)).
+**Baseline.** Floating-lid H₂ pillow at 20 km, 1.5–2 km wide, soft ties, 250 m compartments, ~2–4 Mt of H₂ per 4,000 km ([structure](structure/structure-concept.md), [altitude-trade](altitude/altitude-trade.md)). Ruled out: narrow modules, mass-law shields, helium, vacuum balloons ([vacuum](vacuum/vacuum-balloon-review.md)), struts, stiff skins, open joints.
 
 ## 3. Engineering open items
 
 From [tethers-build-failure](operations/tethers-build-failure.md) unless noted.
 
-- **Tethers.** A bare tether for the psf layer carries **28.4 MN** (21.5 cm, 555 t), and hold-down is **0.62 kg/m², not 0.55**. Seasonal crosswind reversal needs **two anchor rows, ~2,700 tethers** (the one-row ~1,300 figure is retired). Fairings cut tension only ~10 %; **rounding the rim** (C_D 1.0 → 0.3, assumed) brings it to 11.3 MN and 221 t, but needs an acoustic edge check. Self-buoyant tethers are rejected (jet-stream gust loads ~70× bare-rope drag).
-- **Construction.** Sealed 250 m × 1.5 km modules inflate on the ground as a 3.5 m mattress and rise in ~1.4 h. Joints close with membrane flaps (~56,000 km of robotic zips), and tethers are raised per 3 km bay. The pace is **8–16 modules per launch-window day for 10 years** (50–150 window days a year, estimated). Film manufacturing (~24 Mt of lid) sets the pace, not launch.
-- **H₂ make-up.** 0.1–0.8 Mt/yr (5–20 %/yr). Electrolysis on the lid fails for lack of water (5 ppmv), so the plan is **an all-dielectric H₂ hose on every ~10th tether**: 5–42 TWh/yr of ground electricity.
-- **Failure modes.** The top hazard is **a bay rising into the flight level ~100 s after its hold-down is lost**. A bare tether falling from 20 km is lethal (17 kJ/m) and drifts 9–17 km. One lost compartment is survivable, because the bay stays up. Residual risk stays **high** for compartment fire and aircraft–tether strikes. Mitigations: twin ropes, anti-cascade stations, firebreak joints, drogues, automatic traffic stops.
-- **Land use and rights.** Two rows take **3–20 ha/km** of point sites (HSR: ~1.4–8 ha/km of continuous strip), with no severance but fall strips up to 24 km downwind. Land costs $0.01–4 M/km, < 1 % of cost ([economics](economics/economics.md) §3). The binding consent is the FAA's: the shield is a moored balloon under 14 CFR 101, so it needs a Part 73 restricted area. An opaque lid could shade farms up to ~380 h/yr (untested takings risk).
+- **Tethers.** 28.4 MN per bare tether (21.5 cm, 555 t); hold-down 0.62 kg/m²; **two anchor rows, ~2,700 tethers**. A rounded rim (assumed C_D 0.3) brings it to 11.3 MN and 221 t, but needs an acoustic edge check.
+- **Construction.** 250 m × 1.5 km modules inflate on the ground and rise in ~1.4 h; 8–16 per launch-window day for 10 years. Film supply sets the pace.
+- **H₂ make-up.** 0.1–0.8 Mt/yr via a dielectric hose on every ~10th tether.
+- **Failure modes.** Top hazard: bay uplift into the flight level ~100 s after hold-down loss. Residual risk stays **high** for compartment fire and aircraft–tether strikes.
+- **Land and consent.** 3–20 ha/km of point sites; land < 1 % of cost. The binding consent is the FAA's (moored balloon under 14 CFR 101, Part 73 restricted area).
+- **Supply.** The spine's UHMWPE (116 kt/yr) is about **the whole world's fibre capacity**, and China has controlled its fibre exports since July 2024 ([integration](economics/integration/integration.md)).
 
 ## 4. Network and traffic
 
-- **Routes** ([routes](network-maps/routes/routes.md)). Overture's climb, acceleration and descent take ~1,125 km, so a shield buys **nothing below ~1,100 km**. Coast to coast it adds ~51 min over Boomless Cruise, which already saves ~62 min against subsonic. DEN–ORD is the densest shield-km among single routes.
-- **Trunk** ([trunk](network-maps/trunk/trunk.md)). A greedy builder finds a single **3,614 km spine, LAS–DEN–OMA–CHI–CLE–NYC**. Feeders reach it at Boomless speed in the same aircraft. Hub transfers (B/C 0.005) and the hand-drawn fans (B/C halved) both lose. Mach barely matters: M1.7 → M3.2 moves B/C only 0.039 → 0.045.
-- **Coverage** ([coverage](network-maps/coverage/coverage.md), DOT Table 1 + gravity fill, mirrored data). US domestic air is **~650 M one-way O&D trips/yr** (600–700 M). At Mach 2, **~217 M pax/yr are addressable** (≥ 10 min saved on their own great circle), worth 122 M pax-h/yr against Boomless. The spine carries **81 M pax/yr** (38 % of addressable pax, **~37 % of addressable pax-h**). Its busiest km (OMA–DEN) sees ~80 M pax/yr. The misses are mostly southern: Florida–West and Texas–Northeast get 0 %. Every added arm lowers B/C. The knee lies at 5,400–7,000 km (53 % of pax-h, B/C 0.032), and coverage plateaus at ~61 %. trunk.md's gravity model ran 1.22× high; spine users barely change (79 → 81 M).
+- **Routes and trunk** ([routes](network-maps/routes/routes.md), [trunk](network-maps/trunk/trunk.md)). Overture's climb, acceleration and descent take ~1,125 km, so a shield buys nothing below ~1,100 km. A greedy builder finds one **3,614 km spine, LAS–DEN–OMA–CHI–CLE–NYC**, with feeders at Boomless speed in the same aircraft.
+- **Coverage** ([coverage](network-maps/coverage/coverage.md); DOT Table 1 + gravity fill, mirrored data). ~650 M one-way US domestic O&D trips/yr; **~217 M addressable** at Mach 2; the spine carries **81 M** (~37 % of addressable pax-h). Every added arm lowers B/C.
+- **Induced demand** ([demand](network-maps/demand/demand.md)). Base: +4.8 % trips, B/C ×1.066 vs Boomless; high: ×1.78. Against subsonic, Boom's ×3 business fares induce nothing and only ~10 % switch at ×1.5 fares, **so 100 % capture against subsonic implies fare parity.**
 
-## 5. Economics
+## 5. Economics: base, cost-down, demand
 
-**Base** ([economics](economics/economics.md)). The M2.0 layer costs **$90/m², $157 M/km, $23.3 M/km/yr** (M1.7: $77.5/m², $17.3 M/km/yr). That is about California HSR per km, and 9× the handoff's $10/m². The pairwise best (DEN–ORD, 10 % capture) scores B/C 1.5 × 10⁻³. *Economics.md's "~100 flights/day fatigue cap" and "free shield still loses" arguments rest on the retired cap.*
+- **Base** ([economics](economics/economics.md)): $106/m² with two tether rows, $27.3 M/km/yr net. Gross B/C 0.040 vs Boomless, 0.14 vs subsonic.
+- **Cost-down** ([cost-down](economics/cost-down/cost-down.md)): plausible ×2.5 ($42/m²), aggressive ×4.6 ($23/m², two rows; $20 with one). Materials do most of it.
+- **The second tether row** (+17–19 % capex) pulls the aggressive case below 1 against subsonic: **0.97 gross** (1.16 with one row, as published).
+- **Against Boomless,** break-even needs ≤ $1.10 M/km/yr net cost (gross, base demand); even the integrated low-cost case ($1.48) misses.
 
-**Cost-down** ([cost-down](economics/cost-down/cost-down.md)). Plausible levers cut cost **×2.9** ($36/m², $8.2 M/km/yr); aggressive ones **×7.0** ($20/m², $3.4 M/km/yr net of $0.87 M of PV rent). Materials do most of it; the M2 lid mass can be cheap filled ballast. Break-even against Boomless needs ≤ $1.0 M/km/yr, below the aggressive opex alone. Not in the joint table below: the two-row tether correction (+17–19 % capex) drops the aggressive M2.0 B/C vs subsonic from 1.11 to 0.92 (fixed demand).
+## 6. Vertical integration
 
-**Induced demand** ([demand](network-maps/demand/demand.md)). The shield cuts door-to-door time only 9–16 % against Boomless. Base case: **+4.8 % trips (2.3 M net new a year), B/C uplift ×1.066 vs Boomless and ×1.046 vs subsonic**. High case: ×1.78 / ×1.45, driven by day-return thresholds. The rule of half caps the gain, and the spine's knee does not move. Against subsonic, Boom's ×3 business fares induce nothing, and only ~10 % would switch at ×1.5 fares. **So 100 % capture against subsonic implies fare parity.**
+([integration](economics/integration/integration.md)) Replaces bought materials with owned plants plus Wright's-law learning; every row carries the second tether row.
 
-**Joint table: spine, M2.0, B/C** (from [joint_costdown.csv](network-maps/demand/joint_costdown.csv); demand scenario named in each row; cost-down's own `joint_demand.csv` is superseded)
+**Make:** filled sheet and blown film, the module factory, UHMWPE fibre and rope (there is no market to buy 116 kt/yr from), launch bases, station kits. **Buy on long contracts:** PE resin (ethane-indexed offtake; an owned cracker has no edge), H₂ (< 4 % of capex), fluoropolymer, electronics, civil works, CaCO₃.
 
-| Cost | Demand scenario | vs Boomless, 10 % / 100 % capture | vs subsonic, 10 % / 100 % capture |
+| Spine M2.0 · cost case | $/m² | Net $M/km/yr | Spine $B | Gross B/C vs Boomless | Gross B/C vs subsonic |
+|---|---|---|---|---|---|
+| Base | 106 | 27.3 | 672 | 0.040 | 0.14 |
+| Cost-down plausible | 42 | 9.6 | 268 | 0.115 | 0.41 |
+| Cost-down aggressive | 23 | 4.0 | 147 | 0.27 | 0.97 |
+| Integrated, plausible levers | 17.6 (13–26) | 4.1 | 111 | 0.27 | 0.94 |
+| **Integrated, aggressive levers** | **14.3** (10.7–21.4) | **2.2** | **91** | **0.49** | **1.75** |
+| Integrated, low end | 10.7 | 1.5 | — | 0.74 | 2.63 |
+| M1.7 integrated, aggressive | 11.8 | 1.5 | 64 | 0.51 | 2.40 |
+
+- **Plants:** **$7.1 B** ($4.6–12.5 B), ~8 % of spine capex, saving ~$3.5 B a year during the build (payback ~1.6 yr). Of the $8.8/m² saved against bought-aggressive, ~$6.2 is make-vs-buy and ~$2.6 learning.
+- **Net of fuel and CO₂:** the integrated row is ~0.1–0.2 vs Boomless (life-cycle 0.20 for a 2035 opening, growth) and ~−3 vs subsonic.
+- **Risks:** seven first-of-a-kind plants at once; common-mode defects across 14,000 modules; stranded plants after the build (salvage 5–30 %); open-access rules if the owner is tied to an airline.
+
+## 7. Higher Mach
+
+([highmach](network-maps/highmach/highmach.md)) **Why the gain is small: ground time dominates.** At M2, NYC–LAX is 5.2 h door to door, of which only 1.3 h is cruise; 3.6 h is fixed (130 min ground, 88 min taxi, climb, descent, approach). Infinite Mach gives 4.5 h; Boomless 6.3 h. Ramps set the asymptote, and a 70 min walk-on overhead saves 60 min, more than M2 → M∞, lifting B/C ×1.3–1.4 at every Mach.
+
+**Table: spine, base demand, 100 % capture** (two rows; net at aggressive cost; at integrated cost the net figures scale by ~1.8)
+
+| Design | NYC–LAX h | H₂ m | Gross vs BL: aggressive / integrated | Net vs BL (fuel + CO₂) | Vs subsonic: gross / net | Break-even VOT net of fuel |
+|---|---|---|---|---|---|---|
+| Overture M1.7 | 5.46 | 25 | 0.28 / 0.50 | +0.23 | 1.30 / −1.94 | $10/h |
+| Concorde-class M2.0 (147 t) | 5.20 | 55 | 0.27 / 0.49 | +0.07 | 0.96 / −1.55 | $39/h |
+| Light M2.0, adaptive (49 t) | 5.20 | 29 | 0.45 / 0.81 | +0.16 | 1.51 / −2.28 | $34/h |
+| **A: M2.2 Al-limit (50 t)** | 5.08 | 35 | **0.50 / 0.90** | +0.02 | 1.54 / −2.53 | $50/h |
+| M2.5 Ti | 4.94 | 47 | 0.53 / 0.95 | −0.53 | 1.51 / −3.42 | $105/h |
+| **B: M3.0 Ti** | 4.80 | 73 | 0.57 / **1.03** | −1.37 | 1.49 / −4.73 | $177/h |
+| C: M3.5 TBCC | 4.68 | 128 | 0.56 / 1.01 | −3.85 | 1.35 / −8.38 | $414/h |
+
+- **Most of the gain is weight and thrust, not Mach:** a 50 t aircraft cuts the layer from 55 m to 29–35 m, and adaptive-cycle thrust doubles ramp acceleration. M2.0 → M2.2 adds ~10 %; M4 adds 24 %.
+- **Fuel undoes speed above ~M2.3.** Fuel per seat-km is ×1.16 (M2.2) and ×1.74 (M3) an Overture's; the study uses $86/h of time value. **Net vs subsonic is negative at every Mach.**
+- **Engine reality.** The F-47/NGAD-class adaptive-cycle engines (AETP/NGAP) claim +25 % efficiency, but subsonically; in supercruise the cycle is turbojet-like (~3 % SFC gain). The civil gain is thrust margin. The F-47 flies on interim engines in 2028, NGAP integrates ~2030, and export controls push a civil derivative to the **late 2030s–2040s**.
+- **Shield ceiling.** V = c_H₂ gives **M3.80 for pure H₂ but M3.37 at 98 % purity** (2.94 at 95 %). Warming the gas to M4 needs ~1,900 TWh/yr on the spine; solar superheat works only by day. Aluminium airframes stop at ~M2.2 (titanium from ~M2.4).
+- **Sweet spot: M2.0–2.2,** ≤ 50 t, aluminium, adaptive-cycle-class engines, 29–35 m × ~1.25 km of H₂ at 20 km, fast ground processing.
+
+## 8. Growth and timing
+
+([growth](economics/growth/growth.md)) **Traffic.** FAA and OEM forecasts give 2.4–2.8 %/yr for US domestic; history since 2000 is ~1.3 %/yr enplanements, ~2.4 %/yr RPMs, with each shock costing 3–6 years. US trips > 1,500 km (base) reach **1.5× ~2043, 2× ~2057, 3× ~2086, 10× ~2187** (high case ~2125).
+
+**Life-cycle B/C by opening year** (spine M2.0, integrated $14/m², 100 % capture, central energy; 7 %, 25 yr, 5-yr ramp-up):
+
+| Opening | Gross vs BL | Net vs BL | Gross vs subsonic | Net vs subsonic |
+|---|---|---|---|---|
+| 2035 | 0.62 | 0.20 | 2.20 | −3.02 |
+| 2045 | 0.91 | 0.36 | 3.22 | −3.56 |
+| 2050 | **1.07** | 0.46 | 3.78 | −3.68 |
+| 2050, M2.2 aircraft | 1.67 | 0.46 | 5.2 | −5.2 |
+
+- Delay lifts B/C ~3.5 %/yr. Net vs Boomless reaches 1 only for a **~2075 opening** (~2055 in the high world). At 30 % capture nothing passes before ~2090; base cost never passes.
+- **Capture is capped by airports:** at 100 % capture LAX would see ~2,000 supersonic movements a day by 2050, more than all its movements today. Realistic capture is nearer 30 % unless the aircraft grows.
+- **Triggers:** T1 FAA final rule and Boomless status (2027–28); T2 Overture's real fares and capture (2030–32); T3 a ≤ 50 t M2.0–2.2 airliner with a civil adaptive-cycle engine (2035–40); T4 film and fibre at scale, ≤ $20/m² (2028–31); T5 a km-scale structure held ≥ 1 yr at ≥ 18 km; T6 H₂ safety precedent; T7 SAF ≤ $1.5/kg or a stable carbon price (sets the sign of net B/C vs subsonic); T8 long-haul ≥ 1.3× 2025 (~2037).
+
+**Staged plan with gates** ([U] costs)
+
+| Stage | Dates | Cost | Gate |
 |---|---|---|---|
-| Base | fixed | 0.0044 / 0.044 | 0.016 / 0.16 |
-| Base | **base** | 0.0047 / 0.047 | 0.017 / 0.17 |
-| Base | high | 0.0078 / 0.078 | 0.023 / 0.23 |
-| Plausible (÷2.85) | **base** | 0.013 / 0.13 | 0.047 / 0.47 |
-| Plausible | high | 0.022 / 0.22 | 0.066 / 0.66 |
-| Aggressive (÷7.0) | **base** | 0.033 / 0.33 | 0.12 / **1.16** |
-| Aggressive | high | 0.055 / **0.55** | 0.16 / **1.61** |
-| Aggressive | base + growth ×1.4 | 0.046 / 0.46 | 0.16 / 1.63 |
+| 0. Desk studies (§12 steps); full re-run 2029–31 | 2026–29 | $1–3 M | **G-A ~2029:** T1 resolved; if Boomless is legal and reliable, pause to ~2035 unless T4 is strong |
+| 1. Lab acoustics (shock tube / ballistic range), fatigue coupons, supplier pilot lines | 2029–33 | $10–40 M | **G-B ~2032:** measured ΔdB/psf within 3 dB of boomsim; T4 met; T2 shows fares and capture |
+| 2. Subscale tethered module, a year at 18–20 km, supersonic fly-under | 2033–38 | $0.3–1 B | **G-C ~2038:** ≥ 95 % availability; uplift and fire tests; T3, T5 met |
+| 3. On-ramp pilot, 100–200 km at Denver | 2039–45 | $3–8 B | **G-D ~2045:** cost ≤ $20/m², net B/C ≥ 1 on re-run → spine decision, **opening ~2055** |
 
-M1.7 (Overture-class) is similar: aggressive cost with base demand gives 0.34 vs Boomless and 1.60 vs subsonic at 100 % capture (0.54 / 2.18 with high demand).
+## 9. Global corridors
 
-**Reading it.** Against Boomless, no row reaches 1; the best is 0.55 (aggressive cost, high demand, 100 % capture). Against subsonic, B/C > 1 needs aggressive cost *and* ~100 % capture (1.16 base demand, 1.61 high demand). At 10 % capture every row stays ≤ 0.16 (aggressive, high demand, vs subsonic).
+([global](network-maps/global/global.md); M2.2 aircraft, integrated cost, 100 % capture; non-US demand is a gravity model, ±2×)
 
-## 6. Emissions flag
+| Corridor | Overland km | Gross vs BL | Net vs BL (fuel + CO₂) | Gross vs subsonic |
+|---|---|---|---|---|
+| **US north spine** | 3,614 | **0.90** | 0.12 | 2.6 |
+| US south LAX–PHX–DFW–ATL–WAS | 4,043 | 0.77 | 0.01 | 2.5 |
+| Europe–Levant–Gulf (greedy) | 4,939 | 0.57 | 0.03 | 2.3 |
+| Europe–Gulf LON–FRA–IST–DXB | 5,299 | 0.48 | 0.04 | 2.1 |
+| LON–IST–DXB–BOM–HKG | 9,708 | 0.375 | 0.03 | 1.7 |
+| Russia; China X | 2,838; 3,851 | 0.18 | < 0 | 1.1; 1.8 |
+| India, Brazil, Africa, Australia, Andes | — | ≤ 0.05 | ≤ 0.01 | 0.1–1.2 |
 
-Rough, and not in any B/C above ([demand](network-maps/demand/demand.md) §4; CO₂ 90 g/pax-km subsonic, supersonic 3–7×, $190/t). Base-demand induced trips add **3.6 Mt CO₂/yr**, costing **$0.69 B against $0.11 B** of induced consumer surplus. Moving ~200 M trips from subsonic to supersonic adds **100–300 Mt/yr**, comparable to all of today's US domestic aviation (~130 Mt). Its carbon cost is **1.4–3× the time benefit**. So the only cases above B/C 1 (vs subsonic) would not survive carbon pricing. Non-CO₂ effects at FL600 and stratospheric H₂ leakage are not counted.
+- **No corridor matches the US spine;** Europe–Gulf is ~55–65 % of it. LON–IST–DXB–BOM–HKG saves the most time (65 M pax-h) but needs 9,700 km of shield and many trips exceed a 5,000 km range (0.20 capped).
+- **China is big but short** (19 M trips > 2,500 km vs 109 M in the US). In the tropics Boomless works on 84–95 % of days. **Net vs subsonic is negative in every corridor.**
+- **First mover: the US,** the only jurisdiction with a draft numeric boom limit a shield can be engineered to meet. Over nearly empty land, a regulator could simply allow unshielded booms, which competes with a shield on the Asian corridors.
 
-## 7. Decision drivers
+## 10. Emissions
 
-1. **The regulatory baseline: is Boomless Cruise allowed, and reliable?** If it is, it is the comparator and the shield's best B/C is 0.55; there is no transport case. If it is banned or unavailable on most days, the comparator becomes subsonic (B/C 0.16–0.17 at base cost, base demand, 100 % capture). Today §91.817 still bans overland supersonic flight, and the 0.11 psf NPRM is not final.
-2. **Capture and fare parity.** Every 100 % figure assumes the shield's aircraft carries all the traffic on its pairs. Against subsonic, that requires fares near parity. At 10 % capture, B/C falls 10×.
-3. **Cost per m².** $90 (base) → $36 (plausible) → $20 (aggressive). Only the aggressive end crosses 1, against subsonic, and only with full capture. The two-row tether correction pulls it back under 1 at fixed demand.
+Net B/C now carries fuel and CO₂ (§§6–9). Extra CO₂ on the spine is 6 Mt/yr vs Boomless at M2.0 (11 at M2.2, 53 at M3); against subsonic 84–400 Mt/yr, comparable to all US domestic aviation (~130 Mt). **Non-CO₂ effects** (NOx at 22–26 km, stratospheric water vapour) **and H₂ leakage are not counted** and would lower every net figure.
 
-## 8. Next steps (ranked)
+## 11. Decision drivers
+
+1. **The regulatory baseline.** If Boomless Cruise is legal and reliable overland, it is the comparator and the case rests on **net B/C vs Boomless: ≤ 0.5 for openings to 2050, ~1 only by ~2075**. If not, the comparator is subsonic: gross 1.75–2.8, but net negative. Today §91.817 still bans overland supersonic flight; the 0.11 psf NPRM is not final (final rule targeted mid-2027).
+2. **Capture and fares.** Every headline is 100 % capture; 30 % is realistic given airports and fares. Against subsonic, full capture needs fares near parity.
+3. **Cost per m².** $106 → $42 → $23 bought → **$14 integrated**. Only integration gets gross vs Boomless near 0.5 with a Concorde-class aircraft; supplier quotes and coupons must confirm it.
+4. **A light M2.0–2.2 aircraft.** ≤ 50 t with adaptive-cycle-class thrust nearly doubles gross B/C (0.49 → 0.81–0.90) and thins the shield; it does not exist before the late 2030s.
+5. **Ground processing.** A 70 min walk-on overhead adds 30–40 % at every Mach, more than any Mach step, and enables day returns.
+6. **Fuel and CO₂ price.** It sets the gap between gross and net. With cheap fuel and no carbon price, net vs Boomless rises to 0.66 (2045); stringent prices drop it to 0.11, and keep net vs subsonic negative.
+
+## 12. Next steps (ranked)
 
 | # | Step | Why |
 |---|---|---|
-| 1 | Establish the regulatory baseline: Boomless status under §91.817 and the NPRM; docket comment on peak vs building-response metrics | Picks the comparator; a 3–4× swing in B/C |
-| 2 | Make capture a function of fare (endogenous), incl. Boom's pricing | 100 % capture is the main assumption in every B/C > 0.1 |
-| 3 | Supplier quotes (sheet, filled ballast, UHMWPE); 217 K coupons of seam, tie pad, lobe hinge and filled ply to 10⁸ cycles | Cost per m² and the fatigue cap both rest on them |
-| 4 | H₂ hazard analysis: bay uplift, compartment fire, tether strike; twin-rope and traffic-stop design | Highest residual risks |
-| 5 | 3-D acoustic runs: rounded rim, M1.2 width near cut-off, psf-thickness width for each aircraft, 55 m × 1.5 km floating lid with soft ties | Tether lever, on-ramp flare, width beyond Concorde M2 |
-| 6 | Emissions: non-CO₂ at FL600 and H₂ leakage; carbon-priced B/C | Could reverse the only B/C > 1 cases |
-| 7 | Demand: DB1B instead of mirrors and gravity fill; winds, merge sequencing, airport capacity (LAX +45 % movements) | Coverage and spine loads |
-| 8 | Aero-structural model of a 1.5–2 km surface; daily lift-swing scheme | Gusts, mountain waves, ~10 % lift swing |
+| 1 | Regulatory baseline: Boomless status under §91.817 and the final rule; docket comment on peak vs building-response metrics | Picks the comparator (T1, gate G-A) |
+| 2 | Endogenous capture: fares by Mach (esp. M2.2), Boom's pricing, airport capacity | 100 % capture underlies every B/C near 1 |
+| 3 | Supplier quotes (filled sheet, film, UHMWPE rope) and 217 K coupons to 10⁸ cycles | Tests the $14/m² integrated cost and the fatigue cap (T4) |
+| 4 | Reconcile the net-B/C conventions (highmach, growth, global) and add non-CO₂ effects and H₂ leakage | Net B/C now decides the case |
+| 5 | H₂ hazard analysis: bay uplift, compartment fire, tether strike | Highest residual risks |
+| 6 | 3-D acoustic runs: a 50 t M2.2 aircraft (35 m × 1.25 km), rounded rim, on-ramp width near cut-off | The sweet-spot design and the tether lever |
+| 7 | Propulsion/airframe sizing check of the ≤ 50 t M2.2 concept | Half the higher-Mach gain rests on it |
+| 8 | Demand: DB1B instead of mirrors; MIDT/Sabre for Europe–Gulf | Spine loads; the only non-US corridor worth more study |
+| 9 | Aero-structural model of a 1.5–2 km surface; lift-swing scheme | Gusts, mountain waves |
+| 10 | Full re-run in 2029–31 when T1 and T2 resolve | Timing comes from events |
 
-## 9. Evidence map
+## 13. Evidence map
 
 | Claim | File |
 |---|---|
-| Original concept, surrogates; review and Gate 0 | [README](README.md), [handoff](handoff/2026-10-20-boomshield-handoff.md), [review addendum](handoff/2026-10-20-review-addendum.md) |
-| Mechanism, validation, width sets loudness | [gate0](sim/results/gate0_summary.md), [review_evanescent](sim/results/review_evanescent.md), [crossplane](sim/results/crossplane_validation.md), [3d_summary](sim/results/3d_summary.md) |
+| Original concept, review, Gate 0 | [README](README.md), [handoff](handoff/2026-10-20-boomshield-handoff.md), [review addendum](handoff/2026-10-20-review-addendum.md) |
+| Mechanism, validation, width | [gate0](sim/results/gate0_summary.md), [review_evanescent](sim/results/review_evanescent.md), [crossplane](sim/results/crossplane_validation.md), [3d_summary](sim/results/3d_summary.md) |
 | Ties, joints, wind and turbulence | [line_ties_check](sim/results/line_ties_check.md), [alongtrack](sim/results/alongtrack_summary.md), [wind_turbulence](sim/results/wind_turbulence.md) |
-| 0.11 psf thickness, width, weight budget | [psf_sweep](sim/results/psf_sweep.md) |
+| 0.11 psf thickness and width | [psf_sweep](sim/results/psf_sweep.md) |
 | Secondary booms; superbooms; on-ramps | [secondary_booms](sim/results/secondary_booms.md), [focus_booms](sim/results/focus_booms.md), [onramp_shield](sim/results/onramp_shield.md) |
-| Altitude; structure; vacuum branch closed | [altitude-trade](altitude/altitude-trade.md), [structure-concept](structure/structure-concept.md), [vacuum review](vacuum/vacuum-balloon-review.md) |
-| Lid fatigue; revised cap | [lid-fatigue](fatigue/lid-fatigue.md) |
-| Tethers, build, H₂ make-up, failure, land use | [tethers-build-failure](operations/tethers-build-failure.md) |
-| Routes, trunk, coverage | [routes](network-maps/routes/routes.md), [trunk](network-maps/trunk/trunk.md), [coverage](network-maps/coverage/coverage.md) |
-| Base cost, land rights; cost-down | [economics](economics/economics.md), [cost-down](economics/cost-down/cost-down.md) |
-| Induced demand, emissions, **joint B/C** | [demand](network-maps/demand/demand.md), [joint_costdown.csv](network-maps/demand/joint_costdown.csv) |
+| Altitude; structure; vacuum closed | [altitude-trade](altitude/altitude-trade.md), [structure-concept](structure/structure-concept.md), [vacuum review](vacuum/vacuum-balloon-review.md) |
+| Lid fatigue | [lid-fatigue](fatigue/lid-fatigue.md) |
+| Tethers, build, H₂, failure, land | [tethers-build-failure](operations/tethers-build-failure.md) |
+| Routes, trunk, coverage; induced demand | [routes](network-maps/routes/routes.md), [trunk](network-maps/trunk/trunk.md), [coverage](network-maps/coverage/coverage.md), [demand](network-maps/demand/demand.md) |
+| Base cost, cost-down | [economics](economics/economics.md), [cost-down](economics/cost-down/cost-down.md) |
+| Make/buy, plants, learning, **two-row B/C** | [integration](economics/integration/integration.md) (`bcr.csv`, `results.csv`) |
+| Mach sweep, engines, ceiling, **gross and net B/C** | [highmach](network-maps/highmach/highmach.md) (`summary_by_mach.csv`) |
+| Traffic growth, opening year, triggers, staged plan | [growth](economics/growth/growth.md) (`roi_headline.csv`, `crossing_years.csv`) |
+| World corridor ranking; first mover | [global](network-maps/global/global.md) (`ranking.csv`) |
 
-**Superseded statements.** Retired: the ~100 flights/day lid-fatigue cap (economics.md, trunk.md, onramp_shield.md rule 7); one tether row of ~1,300 tethers at ~26 MN (now two rows, ~2,700, 28.4 MN); hold-down 0.55 kg/m² (now 0.62); cost-down's `joint_demand.csv` and the 0.61 / 1.9 figures in its verdict (preliminary uplifts); the README's "Main result" and the handoff's 10⁵–10⁶-cycle lid limit.
+**Superseded statements.**
+- The ~100 flights/day fatigue cap (economics.md, trunk.md, onramp_shield.md); one tether row (~1,300 at ~26 MN); hold-down 0.55 kg/m²; the README's original "Main result"; the handoff's 10⁵–10⁶-cycle lid limit.
+- **One-row B/C figures** in demand/joint_costdown.csv and the previous STATUS (1.16 / 1.61 vs subsonic, best 0.55 vs Boomless): use integration's `bcr.csv`. Cost-down's `joint_demand.csv` was already superseded.
+- **"No case reaches 1 against Boomless":** true net of fuel and CO₂; gross, 1.03–1.5 is reachable with integrated cost, a light fast aircraft and 100 % capture.
+- **"Emissions are not in any B/C":** net B/C is now computed (highmach, growth, global).
+- **trunk.md's "Mach barely matters" (0.039 → 0.045):** with light adaptive-cycle aircraft gross B/C doubles M1.7 → M3 (highmach), though Mach stays the weakest lever.
+- **integration.md's "highmach hook: no B/C table yet"** and **growth.md §4's "global study not yet available":** both studies now exist; global names the US as first mover, not a fast-growing foreign market.
+- **"All-in cost must reach ~$20/m²":** integration reaches $14.3/m² on paper.

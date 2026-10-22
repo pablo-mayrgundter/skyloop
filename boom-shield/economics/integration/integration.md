@@ -1,5 +1,7 @@
 # BoomShield: vertical integration of the main cost drivers
 
+> **Note (22 Oct 2026):** sibling studies have since landed. network-maps/global/global.md ranks the US spine first and names the US as first mover; network-maps/highmach/highmach.md has the Mach B/C table. Net-of-fuel B/C values differ between studies by method (life-cycle vs single-year; scaling of cost ratios); see STATUS.md, next step 4.
+
 **Skyloop · 22 October 2026 · screening level.** `integration.py` imports [cost_model.py](../cost_model.py) and [cost_down.py](../cost-down/cost_down.py) read-only. It replaces cost-down's lever 2 (bought materials and manufacturing) with owned plants plus Wright's-law learning, and keeps the other levers at plausible or aggressive settings. **Every row carries the second tether row**, which adds **+17–19 % capex** (M2.0: $19.8 → 23.2/m² aggressive). Plants are sized on the 3,614 km spine built in 10 years. [U] marks an engineering estimate. Web figures are unverified search summaries (`sources.csv`).
 
 ## Verdict
