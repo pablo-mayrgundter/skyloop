@@ -1,7 +1,7 @@
 reason,pax_M,lost_pax_h_M
-detour (feeders + trunk > 1.15x great circle),106.5,47.84
-geometry: off-axis feeders eat the gain,5.714,3.011
-geometry: trunk run too short for ramps,24.9,8.597
+detour (feeders + trunk > 1.15x great circle),67.14,27.79
+geometry: off-axis feeders eat the gain,5.986,3.543
+geometry: trunk run too short for ramps,62.28,26.54
 ocean baseline (Boomless + M1.7 offshore already close),22.9,0
-partially captured,79.83,17.22
+partially captured,81.44,18.03
 ramp overhead (too short even on own shield),17.67,0

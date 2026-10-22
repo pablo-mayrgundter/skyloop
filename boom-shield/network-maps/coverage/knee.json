@@ -1,0 +1,8 @@
+{
+ "knee_step": 3,
+ "knee_km": 5421.351584419694,
+ "half_rule_step": 0,
+ "shoulder_step": 6,
+ "shoulder_km": 6988.763880524162,
+ "shoulder_edges": "LGA-CLE CLE-ORD ORD-OMA OMA-DEN DEN-LAS LAS-FAT ORD-SDF SDF-JAX JAX-SFB DEN-BZN BZN-GEG"
+}

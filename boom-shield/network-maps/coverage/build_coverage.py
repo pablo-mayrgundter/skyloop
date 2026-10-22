@@ -100,7 +100,8 @@ TRUNK2HERE = {"NYC": "LGA", "CHI": "ORD", "WAS": "DCA", "SFO": "SFO", "FLL": "MI
 SPINE = [("LGA", "CLE"), ("CLE", "ORD"), ("ORD", "OMA"), ("OMA", "DEN"), ("DEN", "LAS")]
 CUT_MIN = 10.0
 MACHS = (1.7, 2.0)
-CFG = dict(bt.BASE_CFG)          # same aircraft, best feeder, 5 min merge, cut 10 min, R=10
+CFG = dict(bt.BASE_CFG, R=40)    # same aircraft, best feeder, 5 min merge, cut 10 min; 40 nearest ramp points
+R_GREEDY = 10                    # ramp points per metro inside the greedy search (speed); final evals use CFG
 
 
 def cached(name, fn):
@@ -257,14 +258,6 @@ def ext_df(df, extra):
     return pd.concat([df, e], ignore_index=True)
 
 
-def route_times(trunk, n_city, mach, cfg, pairs):
-    """Best same-aircraft trunk time for each pair (i, j) using bt.evaluate's routing."""
-    Dfull = np.zeros((len(trunk.df), len(trunk.df)))
-    Tz = np.zeros_like(Dfull)
-    ev = bt.evaluate(trunk, Dfull, Tz, mach, cfg, pairs)
-    return ev
-
-
 def eval_on(trunk, D, mach, cfg, pairs):
     """Trunk routing: returns t_tr, on, off, and geometry (feeder + trunk km)."""
     iu, ju = pairs
@@ -308,31 +301,6 @@ def stage_baseline(dem):
         ub = np.minimum(*(bt.t_trunk(0.0, d, 0.0, M, f, CFG["merge_min"])[0] for f in ("sub", "bl")))
         out[f"t_ub_M{M}"] = ub
     return out
-
-
-def stage_spine_eval(dem, base, edges, mach, pairs_mask=None):
-    df, D = dem["df"], dem["D"]
-    iu, ju = base["iu"], base["ju"]
-    sel = np.arange(len(iu)) if pairs_mask is None else np.where(pairs_mask)[0]
-    tr = bt.Trunk(df, edges)
-    r = eval_on(tr, D, mach, CFG, (iu[sel], ju[sel]))
-    t = np.full(len(iu), np.inf)
-    t[sel] = r["t"]
-    geo = {k: np.full(len(iu), np.nan) for k in ("on", "off", "d_on", "d_off", "L")}
-    for k in geo:
-        geo[k][sel] = r[k]
-    return t, geo, tr
-
-
-def savings(base, T, t_tr, mach=None):
-    """Per-pair savings vs Boomless(+ocean) and vs subsonic, using the >= CUT_MIN rule."""
-    pax = T[base["iu"], base["ju"]]
-    s_bl = base["t_bl"] - t_tr
-    s_bl = np.where(s_bl >= CUT_MIN, s_bl, 0.0)
-    s_sub = base["t_sub"] - t_tr
-    s_sub = np.where(s_sub >= CUT_MIN, s_sub, 0.0)
-    return pax, s_bl, s_sub
-
 
 
 # =====================================================================================
@@ -433,6 +401,16 @@ def greedy(dfx, base, T, mach, sel, start_edges, cand_nodes, G, max_steps=30, lo
            resume=(), km_max=14000.0, stop_frac=0.10):
     """Grow by the attachment path (tree -> candidate city, shortest in G) with the highest marginal
     pax-h/km.  `resume`: node-sequence strings of steps already taken (from a log)."""
+    R_final = CFG["R"]
+    CFG["R"] = R_GREEDY
+    try:
+        return _greedy(dfx, base, T, mach, sel, start_edges, cand_nodes, G, max_steps, log, tag, resume, km_max,
+                       stop_frac)
+    finally:
+        CFG["R"] = R_final
+
+
+def _greedy(dfx, base, T, mach, sel, start_edges, cand_nodes, G, max_steps, log, tag, resume, km_max, stop_frac):
     code = list(dfx.code)
     edges = list(start_edges)
     ne = net_eval(dfx, base, T, edges, mach, sel)
@@ -736,13 +714,14 @@ if __name__ == "__main__":
         return max(k, 0), (c.index.get_loc(half[0]) - 1 if len(half) else len(c) - 1)
     ks = cc[(cc.path == "greedy from spine") & (cc.mach == 2.0)].reset_index(drop=True)
     k_knee, k_half = knee(ks)
-    # 'best expansion' for the map: first step capturing >= 75 % of the curve's final pax-h, but not beyond 12,000 km
-    tgt = 0.75 * ks.pax_h_vs_bl_M.max()
-    k_map = int(ks.index[(ks.pax_h_vs_bl_M >= tgt) | (ks.trunk_km >= 12000)][0])
-    print(f"knee (kneedle) step {k_knee} at {ks.trunk_km[k_knee]:.0f} km; 0.5x-average rule stops at step {k_half}; "
-          f"map network step {k_map} at {ks.trunk_km[k_map]:.0f} km")
-    json.dump(dict(knee_step=k_knee, knee_km=float(ks.trunk_km[k_knee]), half_rule_step=k_half,
-                   map_step=k_map, map_km=float(ks.trunk_km[k_map]), map_edges=ks.edges[k_map]),
+    # 'shoulder' (map network): last step before the marginal pax-h/km first drops below 0.3x the spine's average
+    sp_avg = ks.avg_pax_h_per_km.iloc[0]
+    low = ks.index[ks.marginal_pax_h_per_km < 0.3 * sp_avg]
+    k_map = int(low[0] - 1) if len(low) else len(ks) - 1
+    print(f"knee (kneedle) step {k_knee} at {ks.trunk_km[k_knee]:.0f} km; 0.5x-average rule stops at step {max(k_half, 0)}; "
+          f"shoulder/map network step {k_map} at {ks.trunk_km[k_map]:.0f} km")
+    json.dump(dict(knee_step=k_knee, knee_km=float(ks.trunk_km[k_knee]), half_rule_step=max(k_half, 0),
+                   shoulder_step=k_map, shoulder_km=float(ks.trunk_km[k_map]), shoulder_edges=ks.edges[k_map]),
               open(HERE / "knee.json", "w"), indent=1)
     if args.stage <= 5:
         sys.exit()
@@ -765,7 +744,7 @@ if __name__ == "__main__":
     ne_sp = sp[2.0]
     _, lb_sp = econ(ne_sp, 2.0)
     fig, ax = plt.subplots(figsize=(11, 7.0), dpi=150)
-    ext = (-2450e3 / 1e3, 2350e3 / 1e3, -1650e3 / 1e3, 1400e3 / 1e3)
+    ext = (-2600.0, 2400.0, -1750.0, 1650.0)
     bt._basemap(ax, ext)
     # offshore M1.7 tracks
     for name, pts in OCEAN.items():
@@ -777,7 +756,7 @@ if __name__ == "__main__":
         ei = tr.G[u][v]["edge"]
         a, b = tr.edges[ei]
         return (a, b) in SPINE or (b, a) in SPINE
-    WS = 0.17   # line width per M pax/yr
+    WS = 0.12   # line width per M pax/yr
     for (u, v), (p, ph) in lb_full.items():
         x, y = bt._albers(trf.ll[[u, v], 0], trf.ll[[u, v], 1])
         col = C1 if seg_is_spine(trf, u, v) else C2
@@ -795,14 +774,15 @@ if __name__ == "__main__":
         x, y = bt._albers(arc[:, 0], arc[:, 1])
         ax.plot(x, y, color=C4, lw=0.6 + r.lost_pax_h / 1e6 * 2.2, ls=(0, (4, 2.5)), alpha=0.85, zorder=3)
     lab = set(spine_codes) | {c for e in exp_edges for c in e} | set(Pt.a) | set(Pt.b)
+    is_st = lambda c: len(c) == 3 and c[0] == "S" and c[1:].isdigit()
     for c in lab:
-        if c.startswith("S"):
+        if is_st(c):
             continue
         i = pos[c]
         x, y = bt._albers(df.lat[i], df.lon[i])
         ax.plot(x, y, "o", ms=3.2, color=INK, zorder=6)
         ax.annotate(c, (x, y), xytext=(3, 3), textcoords="offset points", fontsize=7.5, color=INK, zorder=7)
-    for c in {c for e in exp_edges for c in e if c.startswith("S")}:
+    for c in {c for e in exp_edges for c in e if is_st(c)}:
         i = list(dfx.code).index(c)
         x, y = bt._albers(dfx.lat[i], dfx.lon[i])
         ax.plot(x, y, "s", ms=2.5, color=INK2, zorder=6)
@@ -812,7 +792,7 @@ if __name__ == "__main__":
            Line2D([], [], color=C2, lw=3, label=f"Greedy additions to {km_ex:,.0f} km"),
            Line2D([], [], color=C4, lw=1.6, ls=(0, (4, 2.5)), label="Top 12 flows the spine misses (width = pax-h lost)"),
            Line2D([], [], color="#8fb3de", lw=1.4, ls=(0, (1, 1.6)), label="Offshore M1.7 tracks (Boomless baseline)"),
-           Line2D([], [], color=INK2, lw=0, marker="s", ms=4, label="Steiner point")]
+           ]
     for w, lab_ in ((10, "10 M"), (40, "40 M"), (80, "80 M pax/yr")):
         leg.append(Line2D([], [], color=C1, lw=w * WS, label=lab_))
     ax.legend(handles=leg, loc="lower left", fontsize=7.5, frameon=False)
@@ -842,9 +822,12 @@ if __name__ == "__main__":
                 label=f"M{M}, no fatigue cap")
         a2.plot(c.trunk_km / 1e3, c.bcr_bl_cap100_lidcapped, "--", color=col, lw=1.5,
                 label=f"M{M}, lid cap 100 flights/day")
+        if M == 2.0:
+            a2.plot(c.trunk_km / 1e3, c.bcr_bl_cap100_lid1000, ":", color=col, lw=1.8,
+                    label="M2.0, lid cap 1,000 flights/day (fatigue/ revised low)")
         a2.plot(s2.trunk_km / 1e3, s2.bcr_bl_cap100_nofatigue, "D", ms=5, mfc="white", mec=col, mew=1.4, ls="none")
     kk = ks.iloc[k_knee]
-    a1.annotate(f"knee: {kk.trunk_km:,.0f} km", (kk.trunk_km / 1e3, kk.pax_h_vs_bl_M), xytext=(25, -28),
+    a1.annotate(f"knee: {kk.trunk_km:,.0f} km", (kk.trunk_km / 1e3, kk.pax_h_vs_bl_M), xytext=(40, -45),
                 textcoords="offset points", fontsize=8, color=INK, arrowprops=dict(arrowstyle="-", color=INK2, lw=0.8))
     a1.plot([], [], "D", ms=5, mfc="white", mec=INK2, ls="none", label="Named scenarios")
     a1.set_xlabel("Total shield length, 1,000 km")
@@ -855,7 +838,9 @@ if __name__ == "__main__":
     a2.set_yscale("log")
     a2.set_xlabel("Total shield length, 1,000 km")
     a2.set_ylabel("B/C vs Boomless (100 % capture, base cost, log scale)")
-    a2.legend(fontsize=7.5, frameon=False, loc="upper right")
+    a2.text(0.99, 0.01, "10,000 flights/day (fatigue/ revised base) = no cap at these loads", transform=a2.transAxes,
+            ha="right", va="bottom", fontsize=7, color=INK2)
+    a2.legend(fontsize=7.5, frameon=False, loc="center left", bbox_to_anchor=(0.0, 0.42))
     for a in (a1, a2):
         a.grid(color=GRID, lw=0.6)
         a.spines[["top", "right"]].set_visible(False)
