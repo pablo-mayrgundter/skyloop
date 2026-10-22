@@ -157,6 +157,8 @@ The ground peak scales as W·(Vτ)^−3/2, so equal τ means equal psf. The τ-f
 Stacked, they compound to the totals above. Without PV, aggressive M2.0 nets $4.2 M/km/yr.
 
 **Joint scenario with induced demand.**
+> **Superseded (22 Oct 2026):** this paragraph and `joint_demand.csv` use preliminary uplifts (×1.41 / ×1.24); the current base uplifts are ×1.066 / ×1.046, and the authoritative combined table is [network-maps/demand/joint_costdown.csv](../../network-maps/demand/joint_costdown.csv).
+
 The sibling's `demand/scenario_results.csv` (read before its write-up existed: preliminary) gives spine uplifts of ×1.41 vs Boomless and ×1.24 vs subsonic, or ×2.0 / ×1.7 with life-average growth. Aggressive M2.0 then reaches **0.44–0.61 vs Boomless and 1.4–1.9 vs subsonic** at 100 % capture (M1.7: 0.47–0.66 and 1.9–2.7). Peak traffic of 4,500–6,700 flights/day stays under the 10,000/day fatigue cap. `joint_demand.csv` refreshes on re-run.
 
 ## What this means
