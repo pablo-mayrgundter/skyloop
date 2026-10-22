@@ -38,6 +38,7 @@ Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac
 - [operations/tethers-build-failure.md](operations/tethers-build-failure.md): faired and buoyant tethers, construction sequence, H2 make-up, failure modes, land use.
 - [fatigue/lid-fatigue.md](fatigue/lid-fatigue.md): lid fatigue under repeated boom loading; revised traffic cap and trunk B/C.
 - [network-maps/coverage/coverage.md](network-maps/coverage/coverage.md): total US long-haul traffic (DOT Table 1 based), addressable share, spine coverage, network-size curve.
+- [network-maps/demand/demand.md](network-maps/demand/demand.md): induced demand from shorter trips (elasticities, day-trip thresholds, rule-of-half), revised B/C and side effects.
 
 ## Main result
 

@@ -53,9 +53,10 @@ SCEN = {
     #        eps = route-level GC elasticity; n = net-new share; phi = supersonic fare / today's fare
     #        O = door-to-door overhead (min); W = hours at destination for a day return;
     #        d_day / d_eve = $ credit per trip where a day return / after-work arrival becomes feasible
-    "low":  dict(eps=-0.8, n=0.50, phi=5.0, O=150, W=6.0, d_day=0.0, d_eve=0.0),
-    "base": dict(eps=-1.3, n=0.60, phi=3.0, O=130, W=5.0, d_day=60.0, d_eve=20.0),
-    "high": dict(eps=-2.0, n=0.75, phi=1.5, O=100, W=4.0, d_day=150.0, d_eve=50.0),
+    #        Dmax = longest door-to-door leg (h) people accept for a day return
+    "low":  dict(eps=-0.8, n=0.50, phi=5.0, O=150, W=6.0, Dmax=3.5, d_day=0.0, d_eve=0.0),
+    "base": dict(eps=-1.3, n=0.60, phi=3.0, O=130, W=5.0, Dmax=4.0, d_day=60.0, d_eve=20.0),
+    "high": dict(eps=-2.0, n=0.75, phi=1.5, O=100, W=4.0, Dmax=4.5, d_day=100.0, d_eve=30.0),
 }
 GROWTH = 1.40      # background traffic over asset life (~2 %/yr, life-average) [U] - separate from induced
 CO2_SUB = 0.090    # kg CO2 per pax-km, US domestic narrowbody [K]
@@ -146,12 +147,12 @@ def stage_net_evals(inp):
 # =====================================================================================
 # 3. Demand response
 # =====================================================================================
-def day_window(D_h, dz, W):
+def day_window(D_h, dz, W, Dmax):
     """Hours available at destination on a same-day return (leave home 06:00, home by 23:00
     origin local; business window 08:30-18:00 destination local).  dz = dest - origin tz."""
     start = np.maximum(6.0 + D_h + dz, 8.5)
     end = np.minimum(23.0 - D_h + dz, 18.0)
-    return (end - start) >= W
+    return ((end - start) >= W) & (D_h <= Dmax)
 
 
 def evening_ok(D_h, dz):
@@ -159,11 +160,11 @@ def evening_ok(D_h, dz):
     return 17.5 + D_h + dz <= 24.5
 
 
-def feas_gain(T0, T1, O, dz, W):
+def feas_gain(T0, T1, O, dz, W, Dmax):
     """Fraction of the pair's directional trips (0, 0.5, 1) newly gaining day-return /
     after-work-arrival feasibility."""
     d0, d1 = (T0 + O) / 60, (T1 + O) / 60
-    day = sum((day_window(d1, s * dz, W) & ~day_window(d0, s * dz, W)).astype(float) for s in (1, -1)) / 2
+    day = sum((day_window(d1, s * dz, W, Dmax) & ~day_window(d0, s * dz, W, Dmax)).astype(float) for s in (1, -1)) / 2
     eve = sum((evening_ok(d1, s * dz) & ~evening_ok(d0, s * dz)).astype(float) for s in (1, -1)) / 2
     return day, eve
 
@@ -182,7 +183,7 @@ def respond(inp, ne, cmp, sc, cap, growth=1.0, ttb=False, toll=0.0):
     F0 = FX if cmp == "bl" else FS
     O = sc["O"]
     dz = inp["tz"][ju] - inp["tz"][iu]
-    day, eve = feas_gain(T0, T1, O, dz, sc["W"])
+    day, eve = feas_gain(T0, T1, O, dz, sc["W"], sc["Dmax"])
     day, eve = np.where(use, day, 0), np.where(use, eve, 0)
     credit = sc["d_day"] * day + sc["d_eve"] * eve
     GC0 = F0 + V * (T0 + O) / 60
@@ -214,7 +215,7 @@ def summarise(inp, ne, r, cap):
                 pax_h_fixed_M=r["ex_h"].sum() / 1e6,
                 pax_h_equiv_total_M=(ex_usd + r["cred_usd"].sum() + r["ind_usd"].sum()) / V / 1e6,
                 credit_share=r["cred_usd"].sum() / max(ben / AVAIL, 1), induced_share=r["ind_usd"].sum() / max(ben / AVAIL, 1),
-                bcr_fixed=fixed / cost, bcr=ben / cost, uplift=ben / max(fixed, 1e-9),
+                bcr_fixed=fixed / cost, bcr_plus_induced=(ex_usd + r["ind_usd"].sum()) * AVAIL / cost, bcr=ben / cost, uplift=ben / max(fixed, 1e-9),
                 pax_day_return_M=(r["cap_pax"] * r["day"]).sum() / 1e6,
                 pax_evening_M=(r["cap_pax"] * r["eve"]).sum() / 1e6)
 
@@ -373,21 +374,18 @@ if __name__ == "__main__":
               & (R.network.str.startswith("greedy step") | (R.network == "spine"))].copy()
     curve["step"] = curve.network.map(lambda s: 0 if s == "spine" else int(s.split()[-1]))
     curve = curve.sort_values(["scenario", "step"])
+    # B/C-max step, and uplift by network size (does induced demand favour bigger networks?)
+    curve.to_csv(HERE / "curve_induced.csv", index=False, float_format="%.5g",
+                 columns=["step", "km", "scenario", "pax_h_fixed_M", "pax_h_equiv_total_M", "bcr_fixed",
+                          "bcr_plus_induced", "bcr", "uplift", "gross_induced_M"])
     kn = []
     for vname, c in curve.groupby("scenario"):
         c = c.reset_index(drop=True)
-        ben = c.pax_h_equiv_total_M.values
-        x = np.r_[0, c.km.values]
-        y = np.r_[0, ben]
-        k_knee = int(np.argmax(y / y.max() - x / x.max())) - 1
-        marg = np.r_[np.nan, np.diff(ben) / np.diff(c.km.values)]
-        avg0 = ben[0] / c.km.values[0]
-        low_ = np.where(marg < 0.3 * avg0)[0]
-        k_sh = int(low_[0] - 1) if len(low_) else len(c) - 1
-        kn.append(dict(scenario=vname, bcr_max_step=int(c.bcr.idxmax()), bcr_max_km=c.km[c.bcr.idxmax()],
-                       bcr_spine=c.bcr[0], knee_step=k_knee, knee_km=c.km[max(k_knee, 0)],
-                       shoulder_step=k_sh, shoulder_km=c.km[k_sh], bcr_shoulder=c.bcr[k_sh],
-                       uplift_spine=c.uplift[0], uplift_shoulder=c.uplift[k_sh], uplift_last=c.uplift.iloc[-1]))
+        at = lambda km: c.iloc[(c.km - km).abs().idxmin()]
+        kn.append(dict(scenario=vname, bcr_max_km=c.km[c.bcr.idxmax()], bcr_spine=c.bcr[0],
+                       bcr_5421=at(5421).bcr, bcr_6989=at(6989).bcr, bcr_12381=at(12381).bcr,
+                       uplift_spine=c.uplift[0], uplift_5421=at(5421).uplift, uplift_6989=at(6989).uplift,
+                       uplift_12381=at(12381).uplift))
     KN = pd.DataFrame(kn)
     KN.to_csv(HERE / "knee_shift.csv", index=False, float_format="%.4g")
     print(KN.round(4).to_string())
@@ -396,6 +394,23 @@ if __name__ == "__main__":
     cd = NM.parent / "economics" / "cost-down"
     hook = sorted(cd.glob("*.csv")) if cd.exists() else []
     print("cost-down CSVs:", [h.name for h in hook])
+    if (cd / "scenarios.csv").exists():      # sibling cost-reduction study: compose cost factor x demand uplift
+        cdf = pd.read_csv(cd / "scenarios.csv")
+        jrows = []
+        for o in cdf.itertuples():
+            M = 2.0 if str(o.design).startswith("M2.0") else 1.7
+            for vname in ("fixed", "low", "base", "high", "base + life-avg growth x1.4"):
+                row = {"design": o.design, "cost_scenario": o.scenario, "demand_scenario": vname}
+                for cmp in ("bl", "sub"):
+                    for cap in (0.1, 1.0):
+                        q = R[(R.network == "spine") & (R.mach == M) & (R.vs == cmp) & (R.capture == cap)
+                              & (R.scenario == ("base" if vname == "fixed" else vname))].iloc[0]
+                        up = 1.0 if vname == "fixed" else q.bcr / q.bcr_fixed * (q.bcr_fixed / R[(R.network == "spine") & (R.mach == M) & (R.vs == cmp) & (R.capture == cap) & (R.scenario == "base")].bcr_fixed.iloc[0])
+                        row[f"bcr_{cmp}_{int(cap * 100)}"] = getattr(o, f"bcr_{cmp}_{int(cap * 100)}") * up
+                jrows.append(row)
+        J = pd.DataFrame(jrows)
+        J.to_csv(HERE / "joint_costdown.csv", index=False, float_format="%.4g")
+        print(J.round(4).to_string())
 
     # ---------------------------------------------------------------- 5. figure
     import matplotlib
@@ -414,7 +429,9 @@ if __name__ == "__main__":
     a1.set_xlabel("Great-circle distance, km")
     a1.set_ylabel("Gross induced trips, % of captured trips")
     a1.set_title("(a) Induced demand per spine pair (100 % capture)", loc="left", fontsize=9.5)
-    a1.legend(fontsize=7.5, frameon=False)
+    a1.legend(fontsize=7.5, frameon=False, loc="center right")
+    a1.annotate("high case: same-day return newly\nfeasible (100 min access, <= 4.5 h)", (2950, 45), xytext=(3350, 52),
+                fontsize=7.5, color=INK2, arrowprops=dict(arrowstyle="-", color=INK2, lw=0.8))
     # (b) B/C uplift by scenario, spine
     s2 = sp[(sp.capture == 1.0)]
     order = ["low", "base", "high", "TTB bound", "base + life-avg growth x1.4"]
@@ -432,7 +449,7 @@ if __name__ == "__main__":
     a2.set_xticklabels(["low", "base", "high", "TTB\nbound", "base +\ngrowth x1.4"], fontsize=8)
     a2.set_ylabel("B/C, spine M2.0, 100 % capture (log)")
     a2.set_title("(b) B/C with induced demand (dashed: fixed demand)", loc="left", fontsize=9.5)
-    a2.legend(fontsize=7.5, frameon=False, loc="center left")
+    a2.legend(fontsize=7.5, frameon=False, loc="upper left", bbox_to_anchor=(0.0, 0.93))
     # (c) B/C vs network size
     for vname, cl in (("low", C4), ("base", C1), ("high", C2)):
         c = curve[curve.scenario == vname]

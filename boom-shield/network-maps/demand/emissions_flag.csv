@@ -1,7 +1,7 @@
 scenario,vs,induced_net_pax_km_bn,co2_induced_Mt,co2_switch_to_supersonic_Mt,carbon_cost_busd,benefit_busd,carbon_cost_over_benefit
 low,bl,2.679,0.7232,0,0.1374,3.761,0.03653
 low,sub,0,0,100.2,19.04,13.43,1.418
-base,bl,10.77,4.844,0,0.9204,5.252,0.1752
-base,sub,0,0,200.4,38.08,16.68,2.284
-high,bl,43.27,27.26,0,5.179,6.757,0.7665
-high,sub,28.42,17.9,300.6,60.52,20.04,3.02
+base,bl,8.045,3.62,0,0.6878,3.966,0.1734
+base,sub,0,0,200.4,38.08,14.05,2.711
+high,bl,40.74,25.66,0,4.876,6.629,0.7356
+high,sub,16.38,10.32,300.6,59.08,19.49,3.031
