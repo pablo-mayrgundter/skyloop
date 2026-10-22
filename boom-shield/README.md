@@ -40,6 +40,7 @@ This directory collects the first-pass acoustic analysis for a bouyant sonic-boo
 - [network-maps/demand/demand.md](network-maps/demand/demand.md): induced demand from shorter trips (elasticities, day-trip thresholds, rule-of-half), revised B/C and side effects. Its [joint_costdown.csv](network-maps/demand/joint_costdown.csv) is the authoritative cost-down + demand table.
 - [economics/economics.md](economics/economics.md): first-cut cost, land-rights and benefit model.
 - [economics/cost-down/cost-down.md](economics/cost-down/cost-down.md): unit-cost reduction levers and dual-use revenue; scenario B/C (its own joint-demand section is superseded).
+- [economics/integration/integration.md](economics/integration/integration.md): vertical integration of the main cost drivers (make vs buy, plants, learning curves) and updated B/C.
 
 ### Origin and handoff (historical)
 

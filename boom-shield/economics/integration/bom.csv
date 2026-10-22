@@ -1,0 +1,18 @@
+line,quantity_per_km_aggressive_geometry,make_or_buy,base_musd_km,base_share,plausible_musd_km,plausible_share,aggressive_musd_km,aggressive_share
+Contingency,,,61.93,0.333,17.07,0.23,6.74,0.166
+Lid mass (PE sheet/laminate),"7,289 t/km lid (0.30 film + 3.60 ballast kg/m2)",MAKE sheet/film; BUY resin (offtake),26.24,0.141,8.42,0.114,5.98,0.147
+Winch/tension stations,0.40 stations/km,MAKE kit (assemble); BUY winches/drives,16.67,0.09,7.5,0.101,4.0,0.099
+Launch / installation,4 modules/km,"MAKE (own bases, crews)",10.5,0.056,6.12,0.083,3.5,0.086
+Engineering / PM,,own team,20.64,0.111,6.1,0.082,2.5,0.062
+Seams and fabrication,507 km of seam/km; 4 modules/km,MAKE (core competence),10.5,0.056,5.25,0.071,2.62,0.065
+Tethers,"147 t/km UHMWPE (2 rows, rounded rim; bare: ~370)",MAKE fibre + braid,11.11,0.06,4.89,0.066,2.21,0.054
+Load tapes / scrim (UHMWPE),175 t/km UHMWPE,MAKE (fibre plant),5.25,0.028,3.85,0.052,2.62,0.065
+Anchors,"0.40 sites/km, gravity blocks","BUY civil works (standard design, framework contracts)",4.37,0.024,3.5,0.047,3.06,0.075
+Lid UV/weathering skin,1.75 km2/km (~37 t fluoropolymer),MAKE film; BUY fluoropolymer resin,3.5,0.019,2.62,0.035,1.75,0.043
+H2 first fill,650 t/km H2,BUY (BOO contract),3.6,0.019,2.62,0.035,1.63,0.04
+"Controls, sensors, transponders",28 cells/km,DESIGN in-house; BUY (EMS),4.2,0.023,2.1,0.028,1.12,0.028
+Diurnal gas shuttle,"rim reservoirs, pumps","BUY (pumps, valves)",1.75,0.009,1.4,0.019,1.05,0.026
+Partitions and bellows,2.0 km2/km of wall,MAKE,2.02,0.011,1.21,0.016,0.8,0.02
+Floor film,175 t/km film,MAKE,2.62,0.014,0.7,0.009,0.44,0.011
+Soft ties,"~17,500 ties/km",MAKE (simple moulded pads),0.88,0.005,0.61,0.008,0.44,0.011
+Land and easements,,,0.18,0.001,0.14,0.002,0.11,0.003

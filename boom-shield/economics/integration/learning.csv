@@ -1,0 +1,19 @@
+item,units_spine,case,learning_rate,doublings_after_1pct_pilot,cum_avg_vs_pilot,last_unit_vs_pilot,analogue
+modules,14456,low,0.2,6.6,0.323,0.227,shipbuilding 15-20 %; aircraft 15-20 %; Liberty ships >50 % cut
+modules,14456,central,0.15,6.6,0.435,0.34,shipbuilding 15-20 %; aircraft 15-20 %; Liberty ships >50 % cut
+modules,14456,high,0.1,6.6,0.58,0.497,shipbuilding 15-20 %; aircraft 15-20 %; Liberty ships >50 % cut
+seam-metres,1834105000,low,0.15,6.6,0.435,0.34,mature welding process: 7-15 %
+seam-metres,1834105000,central,0.1,6.6,0.58,0.497,mature welding process: 7-15 %
+seam-metres,1834105000,high,0.07,6.6,0.685,0.617,mature welding process: 7-15 %
+tether stations,1446,low,0.15,6.6,0.435,0.34,wind turbines 7-15 % (installed); 14-29 % manufacturing
+tether stations,1446,central,0.12,6.6,0.517,0.428,wind turbines 7-15 % (installed); 14-29 % manufacturing
+tether stations,1446,high,0.08,6.6,0.648,0.575,wind turbines 7-15 % (installed); 14-29 % manufacturing
+control cells,101192,low,0.22,6.6,0.286,0.192,PV modules ~20 % (10-53 %); electronics
+control cells,101192,central,0.18,6.6,0.365,0.268,PV modules ~20 % (10-53 %); electronics
+control cells,101192,high,0.12,6.6,0.517,0.428,PV modules ~20 % (10-53 %); electronics
+launches,14456,low,0.2,6.6,0.323,0.227,as modules; launch-crew learning
+launches,14456,central,0.15,6.6,0.435,0.34,as modules; launch-crew learning
+launches,14456,high,0.1,6.6,0.58,0.497,as modules; launch-crew learning
+anchors (civil),1446,low,0.1,6.6,0.58,0.497,construction: 5-10 %
+anchors (civil),1446,central,0.08,6.6,0.648,0.575,construction: 5-10 %
+anchors (civil),1446,high,0.05,6.6,0.765,0.711,construction: 5-10 %
