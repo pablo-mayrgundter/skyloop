@@ -26,6 +26,7 @@ Copied from the full [ChatG thread here](https://chatgpt.com/share/69e16de1-e3ac
 - [sim/results/line_ties_check.md](sim/results/line_ties_check.md): line-tie bug finding, independent Floquet check, and tie-stiffness design rule.
 - [vacuum/vacuum-balloon-review.md](vacuum/vacuum-balloon-review.md): screening review of the inverted (vacuum) balloon option: acoustics, structural closure, pumping, failure modes.
 - [structure/structure-concept.md](structure/structure-concept.md): structural concept study for a ~1 km-wide H2 shield with acoustically decoupled faces; recommends the "floating-lid" pillow baseline.
+- [altitude/altitude-trade.md](altitude/altitude-trade.md): operating-altitude trade study (12-25 km): buoyancy, weather, winds, airspace, aircraft penalty, tethers.
 
 ## Main result
 
