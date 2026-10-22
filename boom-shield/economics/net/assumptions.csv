@@ -1,0 +1,14 @@
+item,canonical value
+reference year / dollars,"2025 traffic, 2025 $; single-year steady state (life-cycle only in lifecycle.csv)"
+value of time,$86/h x 0.95 availability; day-return credits and induced surplus included (base demand)
+fuel price,$0.8/kg (jet ~$2.4/gal)
+CO2,"3.16 kg/kg fuel at $190/t (EPA 2023, 2 %)"
+km counted,"whole O&D trip, great circle x 1.03 (feeders, ramps, shield), both modes"
+Boomless fuel,"Overture-class fixed-cycle aircraft, domestic-sized (hm_aircraft ref), design-point burn"
+subsonic fuel,90 g CO2 per pax-km
+seats / load factor,65 / 0.75
+induced trips,full fuel and CO2 (no such trip in the comparator world)
+aircraft per Mach,"highmach designs: M1.7 62 t, M2.0 49 t, M2.2 50 t, M3.0 63 t (shield, ramps, fares and fuel)"
+cost,two tether rows; annualised 7 %/25 yr net of dual use; integrated = integration plant model re-run per shield
+capture,30 % and 100 % (linear)
+network,"US spine LAS-DEN-OMA-CHI-CLE-NYC, 3,614 km"

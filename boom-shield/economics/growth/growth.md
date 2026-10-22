@@ -1,6 +1,6 @@
 # BoomShield: traffic growth, value-of-time growth and timing
 
-> **Note (22 Oct 2026):** sibling studies have since landed. network-maps/global/global.md ranks the US spine first and names the US as first mover; network-maps/highmach/highmach.md has the Mach B/C table. Net-of-fuel B/C values differ between studies by method (life-cycle vs single-year; scaling of cost ratios); see STATUS.md, next step 4.
+> **Note (22 Oct 2026):** sibling studies have since landed. network-maps/global/global.md ranks the US spine first and names the US as first mover; network-maps/highmach/highmach.md has the Mach B/C table. **Canonical net values:** see [net-reconciliation](../net/net-reconciliation.md); this study's M2.0 rows use the 147 t legacy shield.
 
 **Skyloop · 22 October 2026 · screening model.** `growth_model.py` imports [cost_model.py](../cost_model.py) read-only and reads [integration](../integration/integration.md) costs (two tether rows), [highmach](../../network-maps/highmach/highmach.md) 2025 benefits, extra fuel and CO₂, and [demand](../../network-maps/demand/demand.md) peak flights. `make_figure.py` draws `growth.png`. Web figures are unverified search summaries (`sources.csv`); [K] background knowledge, [U] assumption. With growth switched off, the model reproduces the siblings' spine B/C vs Boomless (0.040 / 0.273 / 0.496 for base / aggressive / integrated; `static_check.csv`).
 

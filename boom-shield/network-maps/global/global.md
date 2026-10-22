@@ -1,5 +1,7 @@
 # BoomShield worldwide: other long overland spines
 
+> **Canonical net values:** net-of-fuel/CO₂ (and integrated-cost) B/C here are superseded by [net-reconciliation](../../economics/net/net-reconciliation.md).
+
 **Skyloop · 22 October 2026 · screening model.** `build_global.py` writes `corridors.csv`, `ranking.csv`, `greedy.csv`, `calibration.csv`, `demand_bands.csv` and `figures/global_map.png`. Sources are in `evidence.csv`. The time model and routing come from [trunk](../trunk/trunk.md). The aircraft, shield, cost and fuel conventions come from [highmach](../highmach/highmach.md): design A at M2.2 (M2.0 adaptive in the CSVs), base and integrated costs, $86/h × 0.95, and highmach's induced-demand uplift. **Web figures are unverified search summaries; [U] marks author estimates.**
 
 ## Bottom line

@@ -1,0 +1,16 @@
+study,design,step,bc_net_vs_bl,note
+global,M2.2 design A (50 t),published (ranking.csv),0.123,global routing; integrated = aggressive x 0.552; captured trips' fuel only
+global,M2.2 design A (50 t),"highmach routing/demand, same cost and fuel rule",0.11,residual = global's re-implemented routing and uplift (~1-2 %)
+global,M2.2 design A (50 t),+ fuel and CO2 of induced trips,0.04,= highmach aggressive net / 0.552
+highmach,M2.2 design A (50 t),published aggressive net / 0.552 (STATUS 'x1.8'),0.04,ratio-scaled integrated cost
+canonical,M2.2 design A (50 t),integrated cost re-run on this shield,0.039,1.56 -> 1.62 $M/km/yr
+global,M2.0 adaptive (49 t),published (ranking.csv),0.395,global routing; integrated = aggressive x 0.552; captured trips' fuel only
+global,M2.0 adaptive (49 t),"highmach routing/demand, same cost and fuel rule",0.387,residual = global's re-implemented routing and uplift (~1-2 %)
+global,M2.0 adaptive (49 t),+ fuel and CO2 of induced trips,0.283,= highmach aggressive net / 0.552
+highmach,M2.0 adaptive (49 t),published aggressive net / 0.552 (STATUS 'x1.8'),0.283,ratio-scaled integrated cost
+canonical,M2.0 adaptive (49 t),integrated cost re-run on this shield,0.275,1.50 -> 1.54 $M/km/yr
+growth,M2.0 Concorde-class shield (147 t; legacy),"published life-cycle, 2035 opening (roi_headline.csv)",0.196,"central energy path, growth, IDC, ramp-up"
+growth,M2.0 Concorde-class shield (147 t; legacy),"same, re-computed here (re-run integrated cost)",0.196,
+growth,M2.0 Concorde-class shield (147 t; legacy),life-cycle 2035 at flat canonical prices,0.24,"$0.80/kg, $190/t, no SAF or efficiency path"
+growth,M2.0 Concorde-class shield (147 t; legacy),"single year 2025, canonical prices",0.123,"= integration row net; shield for 147 t, fuel of 49 t"
+canonical,M2.0 adaptive (49 t),"one 49 t aircraft for shield, ramps and fuel",0.275,"single year 2025, canonical prices"
