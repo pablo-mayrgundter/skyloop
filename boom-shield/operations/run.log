@@ -1,0 +1,148 @@
+30m_x_1km    rim1.0 bare               F 2.40 kN/m D 2.98 H 8.69 T 16.9 MN d 16.6 cm fib 13.8 kg/m tot 331 t (fair 0) lift 0.549 dragshare 0.17 Dwin 0.37
+30m_x_1km    rim1.0 ribbon             F 2.40 kN/m D 1.93 H 8.17 T 16.0 MN d 16.1 cm fib 13.0 kg/m tot 321 t (fair 10) lift 0.519 dragshare 0.12 Dwin 0.24
+30m_x_1km    rim1.0 hair               F 2.40 kN/m D 2.45 H 8.43 T 16.5 MN d 16.4 cm fib 13.4 kg/m tot 329 t (fair 7) lift 0.535 dragshare 0.15 Dwin 0.30
+30m_x_1km    rim1.0 rigid_faired       F 2.40 kN/m D 0.42 H 7.41 T 14.7 MN d 15.5 cm fib 11.9 kg/m tot 341 t (fair 55) lift 0.487 dragshare 0.03 Dwin 0.05
+30m_x_1km    rim1.0 rigid_faired_cd0.3 F 2.40 kN/m D 0.84 H 7.63 T 15.1 MN d 15.7 cm fib 12.3 kg/m tot 350 t (fair 55) lift 0.501 dragshare 0.06 Dwin 0.11
+30m_x_1km    rim1.0 rigid_jet_only     F 2.40 kN/m D 1.11 H 7.76 T 15.2 MN d 15.8 cm fib 12.4 kg/m tot 325 t (fair 28) lift 0.500 dragshare 0.07 Dwin 0.13
+30m_x_1km    rim0.3 bare               F 0.91 kN/m D 1.94 H 3.69 T 7.2 MN d 10.8 cm fib 5.8 kg/m tot 141 t (fair 0) lift 0.233 dragshare 0.26 Dwin 0.24
+30m_x_1km    rim0.3 ribbon             F 0.91 kN/m D 1.24 H 3.34 T 6.5 MN d 10.3 cm fib 5.3 kg/m tot 138 t (fair 10) lift 0.214 dragshare 0.19 Dwin 0.15
+30m_x_1km    rim0.3 hair               F 0.91 kN/m D 1.58 H 3.51 T 6.9 MN d 10.6 cm fib 5.6 kg/m tot 142 t (fair 7) lift 0.225 dragshare 0.23 Dwin 0.20
+30m_x_1km    rim0.3 rigid_faired       F 0.91 kN/m D 0.26 H 2.85 T 5.7 MN d 9.7 cm fib 4.6 kg/m tot 150 t (fair 39) lift 0.194 dragshare 0.05 Dwin 0.03
+30m_x_1km    rim0.3 rigid_faired_cd0.3 F 0.91 kN/m D 0.53 H 2.99 T 6.0 MN d 9.9 cm fib 4.9 kg/m tot 156 t (fair 39) lift 0.202 dragshare 0.09 Dwin 0.07
+30m_x_1km    rim0.3 rigid_jet_only     F 0.91 kN/m D 0.70 H 3.07 T 6.1 MN d 10.0 cm fib 4.9 kg/m tot 138 t (fair 20) lift 0.201 dragshare 0.11 Dwin 0.08
+54m_x_1.5km  rim1.0 bare               F 4.22 kN/m D 3.86 H 14.59 T 28.4 MN d 21.5 cm fib 23.1 kg/m tot 555 t (fair 0) lift 0.615 dragshare 0.13 Dwin 0.48
+54m_x_1.5km  rim1.0 ribbon             F 4.22 kN/m D 2.52 H 13.92 T 27.2 MN d 21.1 cm fib 22.1 kg/m tot 540 t (fair 10) lift 0.589 dragshare 0.09 Dwin 0.31
+54m_x_1.5km  rim1.0 hair               F 4.22 kN/m D 3.18 H 14.25 T 27.8 MN d 21.3 cm fib 22.6 kg/m tot 550 t (fair 7) lift 0.602 dragshare 0.11 Dwin 0.40
+54m_x_1.5km  rim1.0 rigid_faired       F 4.22 kN/m D 0.55 H 12.94 T 25.5 MN d 20.4 cm fib 20.7 kg/m tot 566 t (fair 68) lift 0.561 dragshare 0.02 Dwin 0.07
+54m_x_1.5km  rim1.0 rigid_faired_cd0.3 F 4.22 kN/m D 1.11 H 13.22 T 26.0 MN d 20.6 cm fib 21.2 kg/m tot 577 t (fair 69) lift 0.573 dragshare 0.04 Dwin 0.14
+54m_x_1.5km  rim1.0 rigid_jet_only     F 4.22 kN/m D 1.46 H 13.39 T 26.2 MN d 20.7 cm fib 21.3 kg/m tot 547 t (fair 34) lift 0.572 dragshare 0.05 Dwin 0.17
+54m_x_1.5km  rim0.3 bare               F 1.53 kN/m D 2.44 H 5.82 T 11.3 MN d 13.6 cm fib 9.2 kg/m tot 221 t (fair 0) lift 0.245 dragshare 0.21 Dwin 0.30
+54m_x_1.5km  rim0.3 ribbon             F 1.53 kN/m D 1.57 H 5.38 T 10.5 MN d 13.1 cm fib 8.6 kg/m tot 215 t (fair 10) lift 0.229 dragshare 0.15 Dwin 0.20
+54m_x_1.5km  rim0.3 hair               F 1.53 kN/m D 2.00 H 5.59 T 10.9 MN d 13.4 cm fib 8.9 kg/m tot 221 t (fair 7) lift 0.237 dragshare 0.18 Dwin 0.25
+54m_x_1.5km  rim0.3 rigid_faired       F 1.53 kN/m D 0.33 H 4.76 T 9.5 MN d 12.4 cm fib 7.7 kg/m tot 231 t (fair 46) lift 0.211 dragshare 0.04 Dwin 0.04
+54m_x_1.5km  rim0.3 rigid_faired_cd0.3 F 1.53 kN/m D 0.68 H 4.94 T 9.8 MN d 12.7 cm fib 8.0 kg/m tot 239 t (fair 47) lift 0.219 dragshare 0.07 Dwin 0.09
+54m_x_1.5km  rim0.3 rigid_jet_only     F 1.53 kN/m D 0.90 H 5.04 T 9.9 MN d 12.7 cm fib 8.1 kg/m tot 217 t (fair 24) lift 0.218 dragshare 0.09 Dwin 0.10
+77m_x_2km    rim1.0 bare               F 5.96 kN/m D 4.54 H 20.17 T 39.3 MN d 25.3 cm fib 31.9 kg/m tot 767 t (fair 0) lift 0.637 dragshare 0.11 Dwin 0.56
+77m_x_2km    rim1.0 ribbon             F 5.96 kN/m D 2.97 H 19.38 T 37.8 MN d 24.8 cm fib 30.7 kg/m tot 748 t (fair 10) lift 0.614 dragshare 0.08 Dwin 0.37
+77m_x_2km    rim1.0 hair               F 5.96 kN/m D 3.75 H 19.77 T 38.6 MN d 25.1 cm fib 31.3 kg/m tot 760 t (fair 7) lift 0.626 dragshare 0.09 Dwin 0.47
+77m_x_2km    rim1.0 rigid_faired       F 5.96 kN/m D 0.65 H 18.22 T 35.8 MN d 24.2 cm fib 29.1 kg/m tot 778 t (fair 79) lift 0.589 dragshare 0.02 Dwin 0.08
+77m_x_2km    rim1.0 rigid_faired_cd0.3 F 5.96 kN/m D 1.31 H 18.55 T 36.5 MN d 24.4 cm fib 29.6 kg/m tot 792 t (fair 79) lift 0.600 dragshare 0.04 Dwin 0.17
+77m_x_2km    rim1.0 rigid_jet_only     F 5.96 kN/m D 1.72 H 18.76 T 36.7 MN d 24.5 cm fib 29.8 kg/m tot 757 t (fair 40) lift 0.599 dragshare 0.05 Dwin 0.20
+77m_x_2km    rim0.3 bare               F 2.13 kN/m D 2.83 H 7.81 T 15.2 MN d 15.8 cm fib 12.4 kg/m tot 297 t (fair 0) lift 0.247 dragshare 0.18 Dwin 0.35
+77m_x_2km    rim0.3 ribbon             F 2.13 kN/m D 1.83 H 7.31 T 14.3 MN d 15.3 cm fib 11.6 kg/m tot 288 t (fair 10) lift 0.232 dragshare 0.12 Dwin 0.23
+77m_x_2km    rim0.3 hair               F 2.13 kN/m D 2.32 H 7.55 T 14.7 MN d 15.5 cm fib 12.0 kg/m tot 295 t (fair 7) lift 0.240 dragshare 0.15 Dwin 0.29
+77m_x_2km    rim0.3 rigid_faired       F 2.13 kN/m D 0.39 H 6.59 T 13.1 MN d 14.6 cm fib 10.6 kg/m tot 307 t (fair 52) lift 0.217 dragshare 0.03 Dwin 0.05
+77m_x_2km    rim0.3 rigid_faired_cd0.3 F 2.13 kN/m D 0.80 H 6.79 T 13.5 MN d 14.8 cm fib 10.9 kg/m tot 316 t (fair 53) lift 0.224 dragshare 0.06 Dwin 0.10
+77m_x_2km    rim0.3 rigid_jet_only     F 2.13 kN/m D 1.05 H 6.92 T 13.6 MN d 14.9 cm fib 11.0 kg/m tot 292 t (fair 27) lift 0.223 dragshare 0.08 Dwin 0.12
+
+{'t_over_c': 0.12, 'z_km': 0.0, 'net_lift_kg_m3': np.float64(1.14), 'chord_m': np.float64(18.676), 'thickness_m': np.float64(2.241), 'section_m2': np.float64(28.671), 'drag_aligned_N_per_m': np.float64(54.907), 'drag_bare_N_per_m': np.float64(58.8), 'gust_side_N_per_m': np.float64(2874.942), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.12, 'z_km': 2.0, 'net_lift_kg_m3': np.float64(0.936), 'chord_m': np.float64(20.971), 'thickness_m': np.float64(2.516), 'section_m2': np.float64(36.149), 'drag_aligned_N_per_m': np.float64(113.983), 'drag_bare_N_per_m': np.float64(108.708), 'gust_side_N_per_m': np.float64(5968.146), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.12, 'z_km': 5.0, 'net_lift_kg_m3': np.float64(0.685), 'chord_m': np.float64(25.309), 'thickness_m': np.float64(3.037), 'section_m2': np.float64(52.653), 'drag_aligned_N_per_m': np.float64(279.575), 'drag_bare_N_per_m': np.float64(220.929), 'gust_side_N_per_m': np.float64(14638.53), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.12, 'z_km': 8.0, 'net_lift_kg_m3': np.float64(0.489), 'chord_m': np.float64(31.176), 'thickness_m': np.float64(3.741), 'section_m2': np.float64(79.894), 'drag_aligned_N_per_m': np.float64(553.228), 'drag_bare_N_per_m': np.float64(354.906), 'gust_side_N_per_m': np.float64(28966.942), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.12, 'z_km': 10.5, 'net_lift_kg_m3': np.float64(0.362), 'chord_m': np.float64(37.81), 'thickness_m': np.float64(4.537), 'section_m2': np.float64(117.511), 'drag_aligned_N_per_m': np.float64(714.018), 'drag_bare_N_per_m': np.float64(377.69), 'gust_side_N_per_m': np.float64(37385.879), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.12, 'z_km': 14.0, 'net_lift_kg_m3': np.float64(0.212), 'chord_m': np.float64(53.975), 'thickness_m': np.float64(6.477), 'section_m2': np.float64(239.475), 'drag_aligned_N_per_m': np.float64(311.769), 'drag_bare_N_per_m': np.float64(115.523), 'gust_side_N_per_m': np.float64(8162.088), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.12, 'z_km': 18.0, 'net_lift_kg_m3': np.float64(0.113), 'chord_m': np.float64(84.484), 'thickness_m': np.float64(10.138), 'section_m2': np.float64(586.709), 'drag_aligned_N_per_m': np.float64(108.774), 'drag_bare_N_per_m': np.float64(25.75), 'gust_side_N_per_m': np.float64(2847.707), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.2, 'z_km': 0.0, 'net_lift_kg_m3': np.float64(1.14), 'chord_m': np.float64(13.916), 'thickness_m': np.float64(2.783), 'section_m2': np.float64(26.53), 'drag_aligned_N_per_m': np.float64(40.913), 'drag_bare_N_per_m': np.float64(58.8), 'gust_side_N_per_m': np.float64(2142.182), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.2, 'z_km': 2.0, 'net_lift_kg_m3': np.float64(0.936), 'chord_m': np.float64(15.565), 'thickness_m': np.float64(3.113), 'section_m2': np.float64(33.19), 'drag_aligned_N_per_m': np.float64(84.601), 'drag_bare_N_per_m': np.float64(108.708), 'gust_side_N_per_m': np.float64(4429.708), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.2, 'z_km': 5.0, 'net_lift_kg_m3': np.float64(0.685), 'chord_m': np.float64(18.655), 'thickness_m': np.float64(3.731), 'section_m2': np.float64(47.676), 'drag_aligned_N_per_m': np.float64(206.068), 'drag_bare_N_per_m': np.float64(220.929), 'gust_side_N_per_m': np.float64(10789.712), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.2, 'z_km': 8.0, 'net_lift_kg_m3': np.float64(0.489), 'chord_m': np.float64(22.781), 'thickness_m': np.float64(4.556), 'section_m2': np.float64(71.099), 'drag_aligned_N_per_m': np.float64(404.254), 'drag_bare_N_per_m': np.float64(354.906), 'gust_side_N_per_m': np.float64(21166.664), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.2, 'z_km': 10.5, 'net_lift_kg_m3': np.float64(0.362), 'chord_m': np.float64(27.384), 'thickness_m': np.float64(5.477), 'section_m2': np.float64(102.731), 'drag_aligned_N_per_m': np.float64(517.125), 'drag_bare_N_per_m': np.float64(377.69), 'gust_side_N_per_m': np.float64(27076.617), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.2, 'z_km': 14.0, 'net_lift_kg_m3': np.float64(0.212), 'chord_m': np.float64(38.376), 'thickness_m': np.float64(7.675), 'section_m2': np.float64(201.765), 'drag_aligned_N_per_m': np.float64(221.667), 'drag_bare_N_per_m': np.float64(115.523), 'gust_side_N_per_m': np.float64(5803.225), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.2, 'z_km': 18.0, 'net_lift_kg_m3': np.float64(0.113), 'chord_m': np.float64(58.517), 'thickness_m': np.float64(11.703), 'section_m2': np.float64(469.126), 'drag_aligned_N_per_m': np.float64(75.342), 'drag_bare_N_per_m': np.float64(25.75), 'gust_side_N_per_m': np.float64(1972.443), 'lift_kg_per_m': nan, 'share_of_line_weight': nan}
+{'t_over_c': 0.22, 'z_km': 0.0, 'net_lift_kg_m3': np.float64(1.14), 'chord_m': 1.09, 'thickness_m': 0.24, 'section_m2': 0.148, 'drag_aligned_N_per_m': nan, 'drag_bare_N_per_m': nan, 'gust_side_N_per_m': nan, 'lift_kg_per_m': np.float64(0.168), 'share_of_line_weight': np.float64(0.007)}
+{'t_over_c': 0.22, 'z_km': 5.0, 'net_lift_kg_m3': np.float64(0.685), 'chord_m': 1.09, 'thickness_m': 0.24, 'section_m2': 0.148, 'drag_aligned_N_per_m': nan, 'drag_bare_N_per_m': nan, 'gust_side_N_per_m': nan, 'lift_kg_per_m': np.float64(0.101), 'share_of_line_weight': np.float64(0.004)}
+{'t_over_c': 0.22, 'z_km': 10.5, 'net_lift_kg_m3': np.float64(0.362), 'chord_m': 1.09, 'thickness_m': 0.24, 'section_m2': 0.148, 'drag_aligned_N_per_m': nan, 'drag_bare_N_per_m': nan, 'gust_side_N_per_m': nan, 'lift_kg_per_m': np.float64(0.053), 'share_of_line_weight': np.float64(0.002)}
+{'t_over_c': 0.22, 'z_km': 18.0, 'net_lift_kg_m3': np.float64(0.113), 'chord_m': 1.09, 'thickness_m': 0.24, 'section_m2': 0.148, 'drag_aligned_N_per_m': nan, 'drag_bare_N_per_m': nan, 'gust_side_N_per_m': nan, 'lift_kg_per_m': np.float64(0.017), 'share_of_line_weight': np.float64(0.001)}
+
+bare rope, broadside                       winter_mean  v0 37.8 v10 65.1 t 5.2 min drift 8.9 km KE 16.5 kJ/m
+bare rope, broadside                       design       v0 37.8 v10 65.1 t 5.2 min drift 17.1 km KE 16.5 kJ/m
+faired, fairing aligned with fall          winter_mean  v0 103.8 v10 178.6 t 1.9 min drift 3.3 km KE 140 kJ/m
+faired, fairing aligned with fall          design       v0 103.8 v10 178.6 t 1.9 min drift 6.2 km KE 140 kJ/m
+faired, flat/tumbling                      winter_mean  v0 18.8 v10 32.4 t 10.5 min drift 17.9 km KE 4.63 kJ/m
+faired, flat/tumbling                      design       v0 18.8 v10 32.4 t 10.5 min drift 34.4 km KE 4.63 kJ/m
+partly buoyant (net 2 kg/m, bluff 1 m)     winter_mean  v0 5.7 v10 9.7 t 35.0 min drift 59.8 km KE 0.032 kJ/m
+partly buoyant (net 2 kg/m, bluff 1 m)     design       v0 5.7 v10 9.7 t 35.0 min drift 114.5 km KE 0.032 kJ/m
+deflated lid membrane 3.9 kg/m2            winter_mean  v0 7.2 v10 12.4 t 27.5 min drift 46.9 km KE 0.101 kJ/m
+deflated lid membrane 3.9 kg/m2            design       v0 7.2 v10 12.4 t 27.5 min drift 89.8 km KE 0.101 kJ/m
+
+{'inventory_Mt': 2.0, 'width_m': 1500.0, 'leak_pct_yr': 5.0, 'makeup_t_per_km_yr': 25.0, 'makeup_Mt_yr': 0.1, 'makeup_kg_per_m2_yr': 0.0167, 'electrolysis_kWh_per_m2_yr': 0.875, 'PV_area_share_pct': 0.2431, 'air_m3_s_per_km': np.float64(25612.0656), 'contactor_m2_per_km_at_2ms': np.float64(12806.0328), 'corridor_kg_s': 3.1686, 'per_supply_tether_g_s_every10th': 23.8238, 'tanker_flights_per_day_6t': 44.1891}
+{'inventory_Mt': 2.0, 'width_m': 1500.0, 'leak_pct_yr': 10.0, 'makeup_t_per_km_yr': 50.0, 'makeup_Mt_yr': 0.2, 'makeup_kg_per_m2_yr': 0.0333, 'electrolysis_kWh_per_m2_yr': 1.75, 'PV_area_share_pct': 0.4861, 'air_m3_s_per_km': np.float64(51224.1312), 'contactor_m2_per_km_at_2ms': np.float64(25612.0656), 'corridor_kg_s': 6.3371, 'per_supply_tether_g_s_every10th': 47.6476, 'tanker_flights_per_day_6t': 88.3783}
+{'inventory_Mt': 2.0, 'width_m': 1500.0, 'leak_pct_yr': 20.0, 'makeup_t_per_km_yr': 100.0, 'makeup_Mt_yr': 0.4, 'makeup_kg_per_m2_yr': 0.0667, 'electrolysis_kWh_per_m2_yr': 3.5, 'PV_area_share_pct': 0.9722, 'air_m3_s_per_km': np.float64(102448.2624), 'contactor_m2_per_km_at_2ms': np.float64(51224.1312), 'corridor_kg_s': 12.6743, 'per_supply_tether_g_s_every10th': 95.2953, 'tanker_flights_per_day_6t': 176.7565}
+{'inventory_Mt': 4.0, 'width_m': 2000.0, 'leak_pct_yr': 5.0, 'makeup_t_per_km_yr': 50.0, 'makeup_Mt_yr': 0.2, 'makeup_kg_per_m2_yr': 0.025, 'electrolysis_kWh_per_m2_yr': 1.3125, 'PV_area_share_pct': 0.3646, 'air_m3_s_per_km': np.float64(51224.1312), 'contactor_m2_per_km_at_2ms': np.float64(25612.0656), 'corridor_kg_s': 6.3371, 'per_supply_tether_g_s_every10th': 47.6476, 'tanker_flights_per_day_6t': 88.3783}
+{'inventory_Mt': 4.0, 'width_m': 2000.0, 'leak_pct_yr': 10.0, 'makeup_t_per_km_yr': 100.0, 'makeup_Mt_yr': 0.4, 'makeup_kg_per_m2_yr': 0.05, 'electrolysis_kWh_per_m2_yr': 2.625, 'PV_area_share_pct': 0.7292, 'air_m3_s_per_km': np.float64(102448.2624), 'contactor_m2_per_km_at_2ms': np.float64(51224.1312), 'corridor_kg_s': 12.6743, 'per_supply_tether_g_s_every10th': 95.2953, 'tanker_flights_per_day_6t': 176.7565}
+{'inventory_Mt': 4.0, 'width_m': 2000.0, 'leak_pct_yr': 20.0, 'makeup_t_per_km_yr': 200.0, 'makeup_Mt_yr': 0.8, 'makeup_kg_per_m2_yr': 0.1, 'electrolysis_kWh_per_m2_yr': 5.25, 'PV_area_share_pct': 1.4583, 'air_m3_s_per_km': np.float64(204896.5248), 'contactor_m2_per_km_at_2ms': np.float64(102448.2624), 'corridor_kg_s': 25.3485, 'per_supply_tether_g_s_every10th': 190.5905, 'tanker_flights_per_day_6t': 353.513}
+{'inventory_Mt': 'water_kg_per_m3_air', 'width_m': np.float64(0.0)}
+{'inventory_Mt': 'air_m3_per_kgH2', 'width_m': np.float64(32332671.6098)}
+{'inventory_Mt': 'coldtrap_kWh_e_per_kgH2_no_recup', 'width_m': np.float64(64201.5236)}
+{'inventory_Mt': 'coldtrap_kWh_e_per_kgH2_90pc_recup', 'width_m': np.float64(6420.1524)}
+{'inventory_Mt': 'sorbent_fan_kWh_per_kgH2', 'width_m': np.float64(449.0649)}
+{'inventory_Mt': 'sorbent_regen_kWh_per_kgH2', 'width_m': 11.4233}
+{'inventory_Mt': 'electrolysis_kWh_per_kgH2', 'width_m': 52.5}
+{'inventory_Mt': 'water_hose_head_MPa', 'width_m': 235.3596}
+{'inventory_Mt': 'water_lift_kWh_per_kgH2', 'width_m': 0.5845}
+{'inventory_Mt': 'exhaust_water_t_km_yr_20fl', 'width_m': 84.548}
+{'inventory_Mt': 'exhaust_H2_equiv_t_km_yr_20fl', 'width_m': 9.4573}
+{'inventory_Mt': 'exhaust_water_t_km_yr_50fl', 'width_m': 211.3701}
+{'inventory_Mt': 'exhaust_H2_equiv_t_km_yr_50fl', 'width_m': 23.6432}
+{'inventory_Mt': 'exhaust_water_t_km_yr_100fl', 'width_m': 422.7401}
+{'inventory_Mt': 'exhaust_H2_equiv_t_km_yr_100fl', 'width_m': 47.2864}
+{'inventory_Mt': 'hose_ID50mm_24gs_20bar_in_p_top_bar', 'width_m': 13.473}
+{'inventory_Mt': 'hose_ID60mm_48gs_20bar_in_p_top_bar', 'width_m': 11.2023}
+{'inventory_Mt': 'hose_ID60mm_95gs_40bar_in_p_top_bar', 'width_m': 22.6771}
+{'inventory_Mt': 'hose_ID80mm_190gs_40bar_in_p_top_bar', 'width_m': 23.3181}
+
+strain_pct                               1.034
+release_wave_s                           2.204
+recoil_v_m_s                             112.8
+stored_energy_GJ                         3.536
+stored_energy_t_TNT                      0.845
+neighbour_load_factor_DAF1.0             1.5
+neighbour_load_factor_DAF1.5             1.75
+neighbour_load_factor_DAF2.0             2
+two_adjacent_lost_neighbour_factor       2
+uplift_Pa                                5.394
+bay_uplift_MN                            24.27
+rise_250m_s_inertial                     100.6
+rise_terminal_m_s                        10.06
+tendon_T_3km_MN                          31.66
+tendon_T_6km_MN                          63.31
+bow_6km_m                                300
+compartment_H2_t                         127.6
+compartment_TNT_kt                       3.661
+compartment_structure_t                  1485
+ground_gas_fraction_pct                  7.258
+ground_mattress_m                        3.474
+ascent_w_ground_m_s                      2.299
+ascent_h                                 1.437
+ascent_jet_min                           20.21
+module_T_at_10km_m                       10.95
+module_force_narrow_end_MN_U25           0.5147
+module_force_broadside_MN_U25            2.177
+module_force_narrow_end_MN_U35           1.009
+module_force_broadside_MN_U35            4.267
+module_force_narrow_end_MN_U90           6.67
+module_force_broadside_MN_U90            28.22
+tug_kW_5ms                               141.2
+compartments_absorbed_per_bay            1.467
+anchor_V_MN                              21.89
+anchor_H_MN                              16.53
+gravity_block_t                          7288
+gravity_block_m3                         3037
+site_ha_r100                             4.642
+ha_per_km_one_row_r100                   1.547
+ha_per_km_two_rows_r100                  3.094
+site_ha_r150                             8.569
+ha_per_km_one_row_r150                   2.856
+ha_per_km_two_rows_r150                  5.712
+site_ha_r300                             29.77
+ha_per_km_one_row_r300                   9.925
+ha_per_km_two_rows_r300                  19.85
+tether_ground_offset_km                  13.33
+build_film_km2                           1.38e+04
+build_structure_Mt                       23.76
+bays_per_window_day_10y_100d             1.333
+km2_lid_per_window_day_10y_100d          6
+bays_per_window_day_10y_200d             0.6667
+km2_lid_per_window_day_10y_200d          3
+bays_per_window_day_20y_100d             0.6667
+km2_lid_per_window_day_20y_100d          3

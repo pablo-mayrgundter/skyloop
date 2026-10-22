@@ -94,3 +94,7 @@ Once recent-year O&D data is available, add:
 - `north_america_top_pairs_by_volume.csv`
 - `north_america_shared_trunks.csv`
 - richer map layers for western, central, and eastern trunk candidates
+
+## Update (22 Oct 2026): traffic and time model
+
+`north_america_top_pairs_template.csv` now has `annual_passengers` filled (OAG 2025 seats × LF 0.8, or labelled placeholders), written by `../routes/build_routes.py --fill-template`. The route ranking, the Overture subsonic / Boomless / Mach 1.7 block-time model, and the pax-hours per km on this trunk hypothesis are in [`../routes/routes.md`](../routes/routes.md).
