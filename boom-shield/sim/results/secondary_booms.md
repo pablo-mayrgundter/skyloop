@@ -1,53 +1,37 @@
 # Secondary sonic booms with BoomShield
 
-Model `boomsim/secondary.py`; driver `run_secondary.py` (one process, ~1.5 h, restart-safe cache); tests `tests/test_secondary.py` (26 pass). Data in `secondary_booms.csv`: `record=bin` rows hold binned ground levels, `record=ray` rows hold per-ray diagnostics. Figure: `secondary_booms.png`.
+Code: `boomsim/secondary.py` and `run_secondary.py`. Tests: `tests/test_secondary.py`. Data: `secondary_booms.csv`, with record = bin or ray.
 
 ## Bottom line
 
-1. **The shield does not make secondary booms worse.**
-   - Without a shield, the downward boom reflects off the ground and climbs anyway. The NPRM calls what comes back an *indirect* secondary boom.
-   - The shield moves that reflection from 0 to 20 km, onto rays with the same horizontal slowness and the same turning heights.
-   - In the seven cases run, the shielded worst bin is **0.54–1.02×** the unshielded one.
-   - The exceedance zone shrinks to the inner carpet edge (150–230 km), where direct booms already land.
-2. **The limit is broken without any shield.**
-   - An unshaped Concorde- or SR-71-class aircraft at 20 km exceeds 0.11 psf whenever middle-atmosphere winds form a stratospheric duct. The four ducted cases give **0.14–0.37 psf**.
-   - In calm air or a headwind, only thermospheric returns reach the ground, at ≤ 0.02 psf.
-   - So compliance is an aircraft and routing problem, not a shield problem.
+1. **The shield does not make secondary booms worse.** Unshielded, the downward boom reflects off the ground and climbs anyway, returning as an NPRM *indirect* secondary boom. The shield moves that reflection to 20 km, onto rays with the same slowness. In seven cases, the shielded worst bin is **0.54–1.02×** the unshielded one, and exceedances shrink to the inner carpet edge (150–230 km), where direct booms already land.
+2. **The limit is broken without any shield.** Unshaped Concorde- or SR-71-class aircraft at 20 km exceed 0.11 psf whenever winds form a stratospheric duct: **0.14–0.37 psf** in four cases. In calm air or a headwind, only thermospheric returns land, at ≤ 0.02 psf. This is an aircraft and routing problem.
 
 ## NPRM definitions
 
-FAA, "Enabling Supersonic Overland Flight", 91 FR 40470 (2 July 2026), docket FAA-2026-6935. Proposed § 91.817(a)(2)(i) requires surface overpressure ≤ 0.11 psf for primary booms and for **direct and indirect secondary** booms. New § 1.1 definitions, paraphrased from Holland & Knight (9 Jul 2026) and DLA Piper summaries because the FR text could not be fetched here:
+Source: FAA, "Enabling Supersonic Overland Flight", 91 FR 40470 (2 July 2026), docket FAA-2026-6935. Proposed § 91.817(a)(2)(i): surface overpressure ≤ 0.11 psf for primary booms and for **direct and indirect secondary** booms. The § 1.1 definitions below are paraphrased from Holland & Knight (9 Jul 2026) and DLA Piper, because the FR text was unreachable here.
 
-- **Primary:** travels directly from the aircraft to the surface.
-- **Secondary:** refracted or reflected so that it travels farther and may reach the surface.
-- **Direct secondary:** "over the top": refracted back to the surface by the upper atmosphere.
-- **Indirect secondary:** reflected first by the surface, then refracted back by the upper atmosphere.
+- **Primary boom:** goes straight from the aircraft to the surface.
+- **Secondary boom:** refracted or reflected so that it travels farther.
+- **Direct secondary:** "over the top", refracted back to the surface by the upper atmosphere.
+- **Indirect secondary:** reflected by the surface first, then refracted back.
 
-How this study applies them:
-- A *shield-reflected* boom fits neither definition literally, because the reflector is a structure at 20 km, not the surface. It is scored here as a secondary boom subject to 0.11 psf.
-- Both definitions require upper-atmosphere refraction. Rays beyond the lateral cut-off turn in the lower atmosphere and then climb; they are counted as direct.
+Applied here:
+- A shield-reflected boom fits neither definition literally. It is scored as a secondary boom.
+- Cut-off rays are counted as direct.
 - Terrain reflections are not modelled.
 
 ## Method
 
-- **Atmosphere.**
-  - USSA76 below 86 km.
-  - From 86 to 200 km: USSA76 kinetic-temperature formulas, tabulated mean molar mass and hydrostatic pressure.
-  - γ and c include atomic O: c = 405 m/s at 120 km and 567 m/s at 150 km.
-- **Winds.** Representative 40°N CIRA-86 profiles (Fleming et al. 1990): a winter westerly of 64 m/s at 60 km and a summer easterly of −60 m/s at 65 km. Tides are set to zero.
-- **Rays.** 3-D Hamiltonian rays in a moving stratified medium, integrated in time so turning points are regular.
-  - Launched on the Mach cone from 20.25 km, φ = 0–180° in 0.1° steps.
-  - The ground and the shield top act as mirrors.
-- **Amplitude.** Blokhintzev invariant with tube flux area Q = (e_x × ∂r/∂φ)·v_ray, taken from neighbouring rays.
-  - A sign change of Q is a caustic and is applied as a Hilbert transform.
-- **Waveform.** Augmented Burgers (`propagate.burgers_step`) from the Whitham near field at each φ. The upward lobe uses A_v − A_L.
-  - Absorption: classical plus rotational in the Sutherland & Bass (2004) form, which scales as 1/p (0.43 dB/km at 1 Hz at 100 km). ISO O₂/N₂ relaxation is added.
-  - Shield: R(f) or T(f) from `shield.transfer` at the ray's trace speed, for H₂ 30 m with 1.24 kg/m² faces. Every ray with |φ| < 63.4° hits the 1 km strip.
-  - Ground reflection ×0.9.
-  - Δp/p_ambient peaks at 0.05–0.17, marginal for weak-shock theory.
-  - Propagation is linear below (apex − 15 km).
-- **Ground levels.** Energy is binned in 3 km lateral bins per branch: p² ∝ (ρc²Ω/|v_z|) Σ E_h Δφ/ΔY. This stays finite at the fold caustic on every carpet edge.
-  - Ground factor ×1.9; peak taken as max|p| (conservative).
+- **Atmosphere.** USSA76 to 86 km. From 86 to 200 km: USSA76 temperature formulas, tabulated molar mass, hydrostatic pressure, and γ and c with atomic O included (c = 405 m/s at 120 km, 567 m/s at 150 km).
+- **Winds.** 40°N CIRA-86-like profiles (Fleming et al. 1990): winter westerly 64 m/s at 60 km, summer easterly −60 m/s at 65 km. No tides.
+- **Rays.** 3-D Hamiltonian rays in time, in a moving stratified medium, launched on the Mach cone (φ = 0–180°, 0.1° steps). The ground and the shield top act as mirrors.
+- **Amplitude.** Blokhintzev invariant with tube area Q = (e_x × ∂r/∂φ)·v_ray, which stays finite at turning points. A caustic is applied as a Hilbert transform.
+- **Waveform.** Augmented Burgers (`propagate.burgers_step`) from the Whitham near field at each φ; the upward lobe uses A_v − A_L.
+  - Absorption: Sutherland & Bass (2004) classical plus rotational, ∝ 1/p (0.43 dB/km at 1 Hz at 100 km), plus ISO relaxation.
+  - Shield: `shield.transfer` R(f) or T(f) at the ray's trace speed, for H₂ 30 m with 1.24 kg/m² faces. All rays with |φ| < 63.4° hit the strip.
+  - Ground reflection ×0.9; linear below apex − 15 km. Δp/p peaks at 0.05–0.17.
+- **Ground levels.** Energy per 3 km lateral bin and branch, p² ∝ (ρc²Ω/|v_z|) Σ E_h Δφ/ΔY, which stays finite at caustics. Ground factor ×1.9; peak = max|p|.
 
 ## Validation
 
@@ -63,7 +47,7 @@ How this study applies them:
 
 \*Abstract only, unverified.
 
-Stratospheric returns sit at or slightly above the observed range. Likely reasons: favourable jets, a steady 2-D carpet, and no turbulence or multipath smearing (real booms last 5–10 s). Treat the levels as good to about ×2.
+Stratospheric levels sit at the top of the observed range. The model has no turbulence or multipath smearing, so treat it as good to about ×2.
 
 ## Results (worst 3 km bin, psf)
 
@@ -93,7 +77,7 @@ U = unshielded, S = shielded. "–" means no Mark VII band above threshold (sub-
 
 ## Uncertainty
 
-- **Winds dominate.** A duct versus no duct changes levels 15–40×. Tides, gravity waves and stratospheric warmings can open ducts in any season. The profiles are representative, not a climatology.
+- **Winds dominate:** a duct changes levels 15–40×. Tides and gravity waves can open ducts in any season. The profiles are representative only.
 - **Caustics and binning.** Bins of 1.5 or 6 km move peaks by +10–45 % or −5–30 %. Adding branches coherently gives up to +75 %.
 - **Not modelled:**
   - scattering into the gap between the primary and secondary carpets;
@@ -104,15 +88,9 @@ U = unshielded, S = shielded. "–" means no Mark VII band above threshold (sub-
 
 ## Mitigations
 
-- **Aircraft and route.**
-  - Route and schedule on wind climatology, avoiding ducting azimuths (eastbound in winter, westbound in summer).
-  - Shape the upward boom as well as the downward one.
-  - Cruise higher or slower.
-- **Shield edges.**
-  - Only rays reflected at |y| ≈ 310–400 m (φ ≈ 51–58°) feed the stratospheric duct.
-  - Raising the outer 150–200 m of each side by 5–10° (a shallow dish) would steepen those reflections by 10–20°. Their trace speed would reach ≥ 370 m/s, above the roughly 355 m/s the modelled ducts accept, so they would fall into the thermospheric family at ≤ 0.02 psf.
-  - Check this in the BEM against the edge leak.
-- **Absorptive top layer.** It would act mainly above a few hertz, while the ducted peak comes from 0.3–3 Hz content. Low value per kilogram.
-- **Avoid a cleaner low-frequency mirror** (heavier or stiffer stacks). It raises the reflected secondary toward, but not above, the unshielded indirect level.
+- **Aircraft and route.** Route on wind climatology, avoiding ducting azimuths (eastbound in winter, westbound in summer). Shape the upward boom too. Cruise higher or slower.
+- **Shield edges.** Only reflections at |y| ≈ 310–400 m (φ ≈ 51–58°) feed the stratospheric duct. A 5–10° upturn of the outer 150–200 m would steepen them by 10–20°, to trace speeds of at least 370 m/s. The modelled ducts accept only up to about 355 m/s, so those rays would become thermospheric returns at ≤ 0.02 psf. This needs a BEM check of the edge leak.
+- **Absorptive top layer.** It acts mainly above a few hertz, while the ducted peak comes from 0.3–3 Hz content: low value.
+- **Avoid a cleaner low-frequency mirror** (heavier or stiffer stacks). That would raise the reflected secondary toward the unshielded indirect level.
 
 ![secondary booms](secondary_booms.png)
