@@ -250,6 +250,10 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   </div>
   <div class="ac-list" id="ac-list"></div>
   <div class="callout">
+    <b data-k="psfLimit.title"></b>
+    <p class="small muted" data-k="psfLimit.text"></p>
+  </div>
+  <div class="callout">
     <b>Overture's alternative: Boomless Cruise</b>
     <p class="small muted" data-k="boomless.text"></p>
   </div>
@@ -296,7 +300,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   <div class="sec-head">
     <div class="eyebrow">Status, <span data-k="meta.statusDate"></span></div>
     <h2 id="st-h">Where it stands</h2>
-    <p class="lede">The acoustics look strong on paper at 1 km width. The open questions are structural and operational: lift swing, tethers, hydrogen, and whether the soft parts survive a million boom loads.</p>
+    <p class="lede">In loudness terms the acoustics look strong at 1 km width. The FAA's proposed 0.11 psf peak limit asks for more: a thicker (~55–80 m of H₂) and wider (~1.5–2 km) layer at 19–22 km. The open questions are structural and operational: lift swing, tethers, hydrogen, and whether the soft parts survive a million boom loads.</p>
   </div>
   <div class="status">
     <div><h3>Key findings</h3><ol id="findings"></ol></div>
@@ -310,15 +314,15 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 </section>
 
 <footer>
-  <span>Sources in the repo: sim/results/3d_summary.md, 3d_carpet_summary.csv, 3d_results.csv, gate0_summary.md, wind_turbulence.md, alongtrack_summary.md, line_ties_check.md; structure/structure-concept.md; vacuum/vacuum-balloon-review.md; handoff/2026-10-20-review-addendum.md.</span>
+  <span>Sources in the repo: sim/results/psf_sweep.md, psf_sweep.csv, secondary_booms.md; altitude/altitude-trade.md; sim/results/3d_summary.md, 3d_carpet_summary.csv, 3d_results.csv, gate0_summary.md, wind_turbulence.md, alongtrack_summary.md, line_ties_check.md; structure/structure-concept.md; vacuum/vacuum-balloon-review.md; handoff/2026-10-20-review-addendum.md.</span>
   <span>PLdB: Stevens Mark VII perceived level, the standard loudness metric for sonic booms. "Proxy" values apply a 1 ms rise-time smoothing and are the conservative headline used throughout the study.</span>
 </footer>
 </div>
 
 <script>
-/* ===== Every number on the page lives here (final values from data.json, 21 Oct 2026). ===== */
+/* ===== Every number on the page lives here (values from data.json, 21 Oct 2026; psf values from sim/results/psf_sweep.md/.csv and 3d_carpet_summary.csv, 22 Oct 2026). ===== */
 const DATA = {
-  meta:{status:"screening study, October 2026", statusDate:"21 October 2026",
+  meta:{status:"screening study, October 2026", statusDate:"22 October 2026",
     repoText:"github.com/pablo-mayrgundter/skyloop, folder boom-shield/",
     repoUrl:"https://github.com/pablo-mayrgundter/skyloop/tree/claude/blissful-dirac-jaad7q/boom-shield"},
   geometry:{shieldAlt_km:20, clearance_m:250, width_km:1, thickness_m:30, carpetHalf_km:40,
@@ -348,23 +352,29 @@ const DATA = {
      un:{ut:{v:97.7,tag:"sim"}, max:{v:97.7,tag:"sim"}},
      sh:{ut:{v:64.0,tag:"sim"}, max:{v:72.7,tag:"sim"}},
      delta:{ut:-33.7, max:-25.0}, strip:{half:39.3, carpet:47.7, tag:"sim"},
+     psf:"Ground peak vs the proposed 0.11 psf limit: <b>1.77 psf</b> unshielded → <b>0.24 psf</b> with this 30 m shield, a fail. Passes under the track with ≥ 54 m of H₂; the whole carpet also needs ~1.5–2 km of width.",
      note:"Raw model level unshielded: 108.4 PLdB. Measured Concorde booms were about 105 PLdB†; at a cruise-like 16.8 km the model gives 109.7 raw and 98.9 proxy, so the measurement sits between the two."},
     {id:"sr71", name:"SR-71", mach:3.2, machTag:"sim", kind:"Reconnaissance aircraft",
      un:{ut:{v:93.1,tag:"sim"}, max:{v:93.1,tag:"sim"}},
      sh:{ut:{v:57.6,tag:"sim"}, max:{v:72.2,tag:"sim"}},
      delta:{ut:-35.4, max:-20.8}, strip:{half:42.3, carpet:54.5, tag:"sim"},
+     psf:"Ground peak: <b>1.08 psf</b> unshielded → <b>0.29 psf</b> with this shield, a fail. Needs ≥ 71 m of H₂ at 20 km (1-D, under the track).",
      note:"Highest Mach and widest carpet, so the far-edge shielding (about −21 dB) is weakest. Helium is too slow at Mach 3.2; hydrogen is needed."},
     {id:"x59", name:"NASA X-59", mach:1.4, machTag:"pub", machUv:true, kind:"Low-boom research aircraft",
      un:{ut:{v:75,tag:"pub",uv:true}, max:{v:75,tag:"pub",uv:true}},
      sh:{ut:{v:42,tag:"ext",approx:true}, max:{v:46,tag:"ext",approx:true}},
      delta:{ut:-33.4, max:-28.8}, strip:{half:24.5, carpet:33.1, tag:"ext"},
+     psf:"Ground peak in psf not modelled: the source model cannot represent a shaped boom.",
      note:"Unshielded: NASA's 75 PLdB design target at 16.8 km. Shielded: 75 plus the simulated Concorde Mach 1.4 reductions. The model cannot represent a shaped boom, so these are rough. Already quiet by shaping; a shield adds little."},
     {id:"overture", name:"Boom Overture", mach:1.7, machTag:"pub", machUv:true, kind:"Airliner in development",
      un:{ut:{v:92.8,tag:"sim",est:true}, max:{v:92.8,tag:"sim",est:true}},
      sh:{ut:{v:56.4,tag:"sim",est:true}, max:{v:65.7,tag:"sim",est:true}},
      delta:{ut:-36.4, max:-27.1}, strip:{half:35.3, carpet:42.9, tag:"sim"},
+     psf:"Ground peak: <b>1.12 psf</b> unshielded → <b>0.065 psf</b> with this shield, a pass (1-D, under the track); ~20 m of H₂ would do.",
      note:"Simulated with an estimated preset: 62 t mid-cruise from a pre-2022 77 t MTOW†, and a generic body shape. Absolute levels are uncertain by a few dB; the reductions depend less on weight."}
   ],
+  psfLimit:{title:"Proposed FAA limit: 0.11 psf (5.3 Pa) peak",
+    text:"The FAA's proposed overland rule (NPRM, docket FAA-2026-6935) caps the ground peak overpressure of primary and secondary booms, not loudness. The 30 m shield fails it at Mach 2 (0.24 psf): what gets through is an inaudible slow swell, but it still counts. About 54 m of H₂ passes under the track at Mach 2 (Overture Mach 1.7 ~20 m, Mach 2.5 ~77 m), and the full carpet needs the shield ~1.5–2 km wide. Simulated for a shield at 20 km."},
   boomless:{text:"Boom Supersonic plans to fly Overture over land using Mach cutoff: typically at Mach 1.1–1.2, up to 1.3, the boom bends back up before it reaches the ground (XB-1 demonstrated it at Mach 1.12 in February 2025)†. It works only in that narrow speed band. At its Mach 1.7 cruise over water Overture does boom, and that faster flight is the shield's niche."},
   noise:{
     min:30, max:130,
@@ -408,7 +418,7 @@ const DATA = {
     stationLoad_MN:"2.2–5.6", tetherMass_t:"90–220", spacing_km:"2–5", tetherCount:"800–2,000", corridor_km:"4,000",
     liftSwing_pct:10, breathing_pct:"5–10", dp_Pa:"255 / 510 / 995", superheat_K:"10 / 20 / 39",
     boomLoad_Pa:"200–600", cycles:"2×10⁵–10⁶",
-    h2_Mt:0.74, h2_share_pct:0.8, helium_years:45, h2_tnt_kt_per_km:5, compartment_m:250, replenish_pct:"5–20",
+    h2_Mt:"2–4", h2_share_pct:"2–4", helium_years:"over 200", h2_tnt_kt_per_km:"14–27", compartment_m:250, replenish_pct:"5–20",
     propulsion_kW_per_m:67, propulsion_GW:270, sideForce:"0.50 / 1.12 / 1.99", sideWind:"20 / 30 / 40",
     cutoffRange_km:"35–115", crosswindShift_km:2.4},
   winds:{
@@ -422,28 +432,29 @@ const DATA = {
     ]},
   findings:[
     "A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and 25 dB at the loudest point of the carpet: from ~98 PLdB (conservative proxy; ~108 raw) to ~64 under the track and at most ~73 anywhere in the computed carpet.",
-    "Width sets the result, not gas or thickness: 250 m wide gives only −8 to −9 dB and 500 m about −21 dB under the track, because sound diffracts around the edges.",
-    "It holds from Mach 1.4 to 3.2: about −33 to −36 dB under the track and −21 to −29 dB at the loudest point for Concorde, Overture and the SR-71.",
-    "These are conservative. With realistic turbulence the reduction is about 5–8 dB larger. Wind changes it by ≤ 0.4 dB under the track, but moves where the carpet lands.",
-    "Only a soft structure works. Struts, drop-stitch, vacuum frames, a stiff load-bearing skin or open gaps leak the boom through. Ties are fine if soft: smeared-equivalent K ≤ ~150 Pa/m for H₂ at Mach 2. The earlier result that 25 m line ties make the shield transparent was a mesh bug; with realistic face tension they act like smeared ties. Baseline: the floating-lid pillow.",
-    "The hard problems are not acoustic: mooring a 1 km layer at 20 km against the jet stream (350–630 kN of drag per tether, 800–2,000 tethers), a ~10 % daily lift swing, and 0.74 Mt of hydrogen next to air traffic.",
-    "Shaping (X-59, ~75 PLdB) and Mach-cutoff Boomless Cruise (Mach 1.1–1.3) work only at low Mach. The shield's niche is faster flight: Overture's Mach 1.7 and especially Mach 2 and above."
+    "The FAA's proposed 0.11 psf (5.3 Pa) peak limit binds harder than loudness. The 30 m shield leaves an inaudible 0.24 psf swell at Mach 2. Passing needs ~54 m of H₂ at Mach 2 (~20 m for Overture, 71–77 m at Mach 2.5–3.2) and a shield ~1.5–2 km wide for the whole carpet.",
+    "The ground peak rises with aircraft weight and falls with thickness (roughly as d^−1.2 to d^−1.5): about 66 t of aircraft per 30 m of H₂ at Mach 2. The thicker layer lifts more than the structure weighs, and the spare covers tether hold-down.",
+    "For loudness, width sets the result, not gas or thickness: 250 m wide gives only −8 to −9 dB and 500 m about −21 dB under the track. From Mach 1.4 to 3.2 a 1 km shield gives about −33 to −36 dB under the track.",
+    "The shield does not make secondary booms worse. Unshaped Mach 2–3 aircraft at 20 km exceed 0.11 psf in secondary booms when stratospheric winds form a duct, shield or not (0.14–0.37 psf modelled, about ×2 high vs Concorde observations).",
+    "19–22 km stays the best altitude, 20 km for Mach 2. Flying lower needs slightly less gas thickness, but more hydrogen in total and worse weather, tethers and airspace.",
+    "Only a soft structure works. Struts, drop-stitch, vacuum frames, a stiff skin or open gaps leak the boom through; soft ties are fine. Baseline: the floating-lid pillow.",
+    "The hard problems are not acoustic: tethers through the jet stream, a ~10 % daily lift swing, and now 2–4 Mt of hydrogen next to air traffic."
   ],
   caveats:[
     "Concept-level 2-D/3-D models, linear at the shield and nonlinear in propagation. No hardware, no flight test.",
-    "Loudness uses the conservative rise-time proxy. Near-track values at R_m 8 km are still about 1.5 dB optimistic (2–7 dB at 3 km).",
-    "3-D runs used a lift-closed H₂ slab standing in for the floating lid; 2-D BEM shows the two match (−33.4 vs −32.0 dB under the track).",
-    "Module joints must be sealed: a 1 m open gap every 250 m costs about 9 dB under the track.",
-    "The residual low-frequency pulse on buildings is not assessed. The hydrogen fire hazard is unresolved.",
+    "The psf thicknesses come from a 1-D under-track screen; the 3-D width check covers only Concorde at Mach 2 and 20 km.",
+    "The NPRM's Federal Register text was not fetched; the rule's details come from law-firm summaries.",
+    "Secondary-boom levels hinge on winds (15–40× between cases) and read about ×2 high against Concorde observations.",
+    "Loudness uses the conservative rise-time proxy; near-track values are still about 1.5 dB optimistic. The hydrogen fire hazard is unresolved.",
     "Published figures marked † were checked only at search-summary level. Overture's weight and shape are estimates."
   ],
   next:[
-    "Full 3-D ground carpet for the floating lid with discrete soft ties (K 3–30 Pa/m), bellows partitions every 100 m and lid mass 1.2–2.4 kg/m².",
-    "Re-run the 3-D tie cases with tensioned faces; the current solver treats the faces as limp, which flatters discrete ties.",
-    "Slack-lid response to the 200–600 Pa load of each pass, and fatigue over 10⁵–10⁶ cycles.",
-    "Pick a diurnal lift scheme: tethers, a solar gas shuttle or low-superheat coatings.",
-    "Tether field design through the jet stream, and wind climatology for corridor siting.",
-    "Hydrogen hazard analysis before any hardware."
+    "3-D width runs at the psf thickness for each aircraft, not just Concorde at Mach 2.",
+    "Floating-lid 3-D carpet at ~55 m × 1.5 km with soft ties; the tie limits were set for 30 m.",
+    "A docket comment: a peak rule penalises an inaudible swell; building rattle is the real issue.",
+    "Graded and upturned edges: the first for loudness, the second to keep reflected booms out of the stratospheric duct.",
+    "Slack-lid fatigue over 10⁵–10⁶ boom cycles, and a diurnal lift scheme that keeps the volume soft.",
+    "Hydrogen hazard analysis before any hardware, now for 2–4 Mt."
   ]
 };
 
@@ -727,6 +738,7 @@ $('#ac-list').innerHTML=DATA.aircraft.map(a=>`<div class="ac">
       <tr><th>under track</th><td><span class="mono num">${val(a.un.ut)}</span>${chip(a.un.ut)}</td><td><span class="mono num">${val(a.sh.ut)}</span>${chip(a.sh.ut)}</td></tr>
       <tr><th>carpet max</th><td><span class="mono num">${val(a.un.max)}</span>${chip(a.un.max)}</td><td><span class="mono num">${val(a.sh.max)}</span>${chip(a.sh.max)}</td></tr>
     </tbody></table>
+    ${a.psf?`<span class="strip">${a.psf}</span>`:''}
     <span class="strip">≥ 10 dB quieter from the track out to <b>≥ ${a.strip.half} km</b> (whole computed width; carpet half-width ${a.strip.carpet} km)${a.strip.tag==='ext'?', from the Concorde Mach 1.4 run':''}.</span>
     <p class="note">${a.note}</p></div>
   <div class="chart">${dumbbell(a)}</div></div>`).join('');

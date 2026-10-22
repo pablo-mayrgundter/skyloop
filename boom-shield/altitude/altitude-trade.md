@@ -1,16 +1,18 @@
-# BoomShield — operating-altitude trade (non-acoustic)
+# BoomShield — operating-altitude trade
 
-**Skyloop · 22 October 2026 · screening study.** Baseline: floating-lid H₂ pillow, 1 km wide, 30 m thick, 2.46 kg/m² system mass on the lid, aircraft 250 m above ([structure-concept](../structure/structure-concept.md)). H_s = 12–25 km; US Std 1976 via `boomsim.atmosphere`. Winds are **assumed** mid-latitude (30–45° N) profiles built from the cited summaries, not ERA5 statistics. Files: `altitude_trade.py` → `altitude_metrics.csv`, `lid_thickness.csv`, `wind_profiles.csv`, `altitude_trade.png`.
+**Skyloop · 22 October 2026 · screening study.** Baseline: floating-lid H₂ pillow, 1 km wide, 30 m thick, 2.46 kg/m² system mass on the lid, aircraft 250 m above ([structure-concept](../structure/structure-concept.md)). H_s = 12–25 km; US Std 1976 via `boomsim.atmosphere`. Winds are **assumed** mid-latitude (30–45° N) profiles built from the cited summaries, not ERA5 statistics. Files: `altitude_trade.py` → `altitude_metrics.csv`, `lid_thickness.csv`, `wind_profiles.csv`, `altitude_trade.png`. **Acoustics (§7) were added the same day** from [psf_sweep.md](../sim/results/psf_sweep.md), against the proposed FAA 0.11 psf peak limit; §1–6 still describe the 30 m × 1 km layer unless they say otherwise.
 
 ## Verdict
 
-**Keep the shield top at 19–22 km; 20 km remains the best single value**, now for quantified reasons:
+**Keep the shield top at 19–22 km; 20 km remains the best single value for Mach 2.** The proposed 0.11 psf limit (§7) changes the reasons, not the band:
 
-- **Lift and acoustics close together at 20 km.** The evanescent decay κ = ω√(1/V² − 1/c_g²) does not depend on density, so the ~30 m acoustic minimum holds at every altitude. At 20 km, 30 m lifts exactly 2.46 kg/m². Lower, surplus lift inflates the H₂ inventory (1.0–2.6 Mt vs 0.74); higher, thickness grows as 1/ρ.
-- **Station-keeping is cheapest at 20–22 km:** 17 MN per tether, against 44 MN at 16 km and 97 MN at 14 km.
+- **The acoustic layer is now thicker than the lift needs.** Under a peak-psf rule the minimum H₂ thickness is set by aircraft weight × Mach and grows slowly with altitude (Concorde M2: 49 / 54 / 60 m at 18 / 20 / 22 km). At 20 km, 54 m lifts ~4.5 kg/m², about 2 kg/m² more than the 2.46 kg/m² system. That spare covers the 0.55 kg/m² tether hold-down shortfall (§6) and leaves ~1.5 kg/m² as lid mass, which the acoustics want.
+- **Lower does not win.** Each 2 km lower saves only ~5 m of H₂ at Mach 2 (~10 %), while H₂ mass per km of corridor rises ~25 % and weather, tethers, airspace and lid pulse all worsen. **18–19 km does not now look better than 20 km.**
+- **Higher is not free either.** At 22 km the Mach 2 layer (60 m) just closes lift plus hold-down and has the lowest inventory; above ~23 km lift, not acoustics, sets thickness (89 m at 25 km).
+- **Station-keeping is cheapest at 20–22 km:** 17 MN per tether for the 30 m layer, against 44 MN at 16 km and 97 MN at 14 km. The thicker, wider psf layer raises this to roughly 26 MN at 20 km (scaled, not rerun), and the ordering holds.
 - **Weather and airspace:** only record storms reach 20 km, and it lies above FL600, in upper Class E.
-- **Cost on the aircraft:** at Mach 2, a Concorde-class aircraft needs ~1.9× Concorde's wing area. Pair altitude with Mach: ~19 km for Mach 1.7, ~20 km for Mach 2, ~22 km for Mach 2.5–3.
-- **Below 18 km, everything worsens together.**
+- **Cost on the aircraft:** at Mach 2, a Concorde-class aircraft needs ~1.9× Concorde's wing area. Pair altitude with Mach: ~19–20 km for Mach 1.7, ~20 km for Mach 2, ~22 km for Mach 2.5–3.
+- **Below 18 km, everything except the psf thickness worsens together.**
 
 ![Altitude trade](altitude_trade.png)
 
@@ -27,7 +29,7 @@
 | 25 | 0.040 | 0.037 (0.035) | 66 | 66 | 0 | 184 (0.74) | 28 | 12.4 | 8.2 |
 
 - **Lids 1.2–4.8 kg/m²** (+0.38 floor/structure, `lid_thickness.csv`): 19–63 m of H₂ at 20 km, 10–33 m at 16 km. Helium needs ~8 % more; inventory, not lift, rules it out.
-- **H₂ per kg of lift is altitude-independent:** M_H₂/(M_air − M_H₂) = 0.075 kg/kg. Inventory grows below 20 km only because of the 30 m acoustic floor. The surplus lift could buy heavier faces or tether pretension, but it also adds stored energy (already ~5 kt TNT per km).
+- **H₂ per kg of lift is altitude-independent:** M_H₂/(M_air − M_H₂) = 0.075 kg/kg. Inventory grows below 20 km only because of the 30 m acoustic floor. Under the psf limit that floor becomes the §7 thickness (49–60 m at Mach 2, 18–22 km), which raises inventory 2–3× and still makes it grow below ~23 km. The surplus lift could buy heavier faces or tether pretension, but it also adds stored energy (already ~5 kt TNT per km).
 - ***Superheat (toy model):** convection ∝ ρ^(2/3) in parallel with low-ε radiation (0.3 W/m²K), calibrated to 20 K at 20 km. Superheat grows with altitude because convection weakens [8]; 39 K was measured on a superpressure balloon (abstract) [9]. Zero-pressure balloons vent by day and drop ballast at sunset [10]. The breathing stroke triples from 20 to 25 km. At the tropical cold point (~190 K, 16–17 km), films embrittle [11].
 
 ## 2. Weather
@@ -120,33 +122,62 @@ Assumed: UHMWPE at 1.2 GPa working stress on fibre area, ρ 975 kg/m³, fill 0.6
 - **Every tether crosses the jet:** ~46 % of drag comes from 8–13 km at every H_s. Raising the shield only adds length; at low altitude, tension is driven by the shield's own side load.
 - **Cross-check:** winter-mean drag at 20 km (0.37 MN) reproduces the addendum's 0.35–0.63 MN.
 - **Minimum at 20–22 km:** 17–18 MN, 330–390 t, ~1,300 tethers. That exceeds the structure study's 2.2–5.6 MN, which used 30 m/s and no pretension.
-- **New closure item:** at 20 km the 30 m layer has no lift spare for pretension (+0.55 kg/m², +22 %, i.e. ~37 m of H₂ or a lighter lid).
+- **New closure item:** at 20 km the 30 m layer has no lift spare for pretension (+0.55 kg/m², +22 %, i.e. ~37 m of H₂ or a lighter lid). **Closed by §7:** the ≥ 54 m layer the psf limit needs at Mach 2 lifts ~2 kg/m² spare at 20 km. Per m² the hold-down stays ~0.55 kg/m², because side load and area grow together for a 54 m × 1.5 km layer (scaled, not rerun).
 - **Failure:** a cut tether lets the shield drift with the upper wind; a burst layer falls (§4), and at 12–14 km lands directly in traffic.
 
-## 7. Synthesis
+## 7. Acoustics under the proposed 0.11 psf limit
 
-Scores 1 (bad) to 5 (good); equal weights; aircraft scored for Mach 2.
+Source: [psf_sweep.md](../sim/results/psf_sweep.md). It is a 1-D undertrack screen over H_s = 14–25 km (floating lid, lid mass = lift − 0.1 kg/m², 0.1 kg/m² floor), with 3-D width checks for Concorde M2 at 20 km only. The proposed limit is a ground peak ≤ 0.11 psf = 5.27 Pa (NPRM, docket FAA-2026-6935).
 
-| H_s km | buoyancy / H₂ | weather | wind (shield) | tethers | airspace / traffic | aircraft (M2) | lid pulse + primary boom | acoustic | total (7 non-acoustic) |
+**What changes.** PLdB scoring gave a ~30 m floor at every altitude, because κ does not depend on density. A peak limit does not. What passes is an inaudible 1–5 Pa infrasonic swell that carries the aircraft's lift, and its ground peak scales as W·d^−(1.2…1.5)·R(H). The ray gain R(H) is 0.62 at 14 km, 0.84 at 20 km and 1.13 at 25 km, so at fixed d the peak rises 2.0–2.25× from 14 to 25 km. The layer's time constant τ does not depend on altitude in the isothermal band (face mass and gas density both scale with ρ), so R(H) is the whole altitude effect.
+
+**Minimum H₂ for ≤ 0.11 psf and what it implies** (Concorde shape unless noted; Mach 2 layer at 1.5 km width over 4,000 km; side load from §3 at design wind; hold-down from §6):
+
+| H_s km | min H₂ m: Overture M1.7 / Concorde M2 / M2.5 / SR-71 M3.2 | M2 layer lift kg/m² | need: 2.46 + hold-down | spare after hold-down | M2 layer H₂ Mt (30 m × 1 km: 0.74 at 20 km) | M2 layer side load, design kN/m |
+|---|---|---|---|---|---|---|
+| 14 | 16 / 41ᵠ / 58ᵠ / 58ᵠ | 8.7 | 5.5 | 3.2 | 3.9 | 23 |
+| 16 | 16 / 44 / 63ᵠ / 60ᵠ | 6.8 | 3.9 | 3.0 | 3.1 | 10 |
+| 18 | 18 / 49 / 70 / 64ᵠ | 5.5 | 3.2 | 2.3 | 2.5 | 5.9 |
+| **20** | 20 / **54** / 77 / 71ᵠ | 4.5 | 3.0 | **1.5** | 2.0 | 4.3 |
+| 22 | 23 / 60 / 86 / 79 | 3.6 | 3.05 | 0.55 | 1.6 | 3.8 |
+| 25 | 27ᶜ / 71ᶜ / 103 / 94 | 2.6 | 3.3 | short 0.65 → 89 m set by lift | 1.5 | 4.7 |
+
+ᶜ C_L > 0.5, ᵠ q > 35 kPa (flags from psf_sweep). Concorde M1.4 needs 25–32 m at 18–22 km but is C_L-flagged at ≥ 20 km. Inventory, side load and hold-down for the thicker layer are scaled from §1, §3 and §6, not rerun.
+
+**Readings**
+
+1. **Thickness grows slowly with altitude; lift per metre falls fast.** d_min rises 1.7× from 14 to 25 km while lift per metre falls 5.7×. psf_sweep therefore recommends 16–18 km. Per kilogram of hydrogen the opposite holds: at the psf thickness, H₂ per km of corridor *falls* with altitude up to ~23 km (3.9 Mt at 14 km, 2.0 at 20, 1.6 at 22). Below 20 km the extra lift has to go into lid mass or tethers, both of which cost.
+2. **At 20 km the thicker layer closes the hold-down gap.** 54 m lifts ~2 kg/m² beyond the 2.46 kg/m² system: 0.55 goes to tether pretension and ~1.5 stays on the lid. The sweep put all spare lift on the lid (4.4 kg/m²). Holding back 0.55 for pretension lowers τ ~3 % and raises the peak ~4 %, about +2 m of H₂. Taking the whole surplus through tethers instead (lid 2.4 kg/m²) would cost ~16 % in peak (~+6 m) and ~4× the hold-down. These are estimates from psf_sweep's τ formula, not runs. **Keep spare lift on the lid.**
+3. **Mach 1.7 is lift-set.** Overture-class needs only 18–23 m for psf at 18–22 km, less than the ~29–51 m that lift plus hold-down need there. For such operators the 30 m-class layer at ~19–20 km already passes undertrack (1-D).
+4. **Width does not come from altitude.** At 20 km, 60 m of H₂ at 1 km width fails off-track (11.7 Pa at 39 km, edge diffraction of the ~1 Hz swell); 1.5 and 2 km pass everywhere (≤ 4.2 Pa). Only that case was run; assume 1.5–2 km throughout the band.
+5. **Costs of the thicker layer at 20 km:** H₂ 2.0 Mt at Mach 2 (1.5 km) to ~3.8 Mt at Mach 2.5 (77 m, 2 km), against 0.74 Mt; stored energy ~14–27 kt TNT per km; design side load ~1.8×; breathing stroke ∝ thickness, ~5 m/day at 54 m.
+6. **Secondary booms do not move the choice.** [secondary_booms.md](../sim/results/secondary_booms.md) (20 km only) finds the shield-reflected boom ≤ the unshielded indirect boom. Unshaped Mach 2–3 aircraft exceed 0.11 psf in stratospheric-duct winds with or without a shield (0.14–0.37 psf; the model reads ~×2 high against Concorde observations). The fixes are aircraft- and route-side.
+
+**Altitude conclusion.** The psf limit favours lower altitude, but weakly (~10 % thickness per 2 km), while inventory, lift disposal, weather, tethers and airspace favour 19–22 km. A lower shield (18–19 km) does not now look better. At 20 km the thicker layer is the closure item's fix: its spare lift covers tether hold-down.
+
+## 8. Synthesis
+
+Scores 1 (bad) to 5 (good); equal weights; aircraft and acoustics scored for Mach 2. **Acoustic:** minimum H₂ for 0.11 psf undertrack (§7): ≤ 45 m → 5, 46–55 m → 4, 56–65 m → 3, > 65 m → 2; 12 km is extrapolated. **Buoyancy / H₂ is re-scored** for the psf layer (inventory at 1.5 km width and lift left after hold-down); it was 2 / 2 / 3 / 4 / 5 / 4 / 2 for the 30 m layer.
+
+| H_s km | buoyancy / H₂ | weather | wind (shield) | tethers | airspace / traffic | aircraft (M2) | lid pulse + primary boom | acoustic (psf) | total (8) |
 |---|---|---|---|---|---|---|---|---|---|
-| 12 | 2 | 1 | 1 | 1 | 1 | 2 | 1 | pending | 9 |
-| 14 | 2 | 1 | 1 | 1 | 1 | 3 | 2 | pending | 11 |
-| 16 | 3 | 2 | 2 | 2 | 2 | 5 | 3 | pending | 19 |
-| 18 | 4 | 4 | 4 | 4 | 3 | 4 | 4 | pending | 27 |
-| **20** | 5 | 5 | 5 | 5 | 4 | 3 | 4 | pending | **31** |
-| 22 | 4 | 5 | 5 | 5 | 4 | 2 | 5 | pending | 30 |
-| 25 | 2 | 5 | 4 | 4 | 4 | 1 | 5 | pending | 25 |
+| 12 | 1 | 1 | 1 | 1 | 1 | 2 | 1 | 5 | 13 |
+| 14 | 1 | 1 | 1 | 1 | 1 | 3 | 2 | 5 | 15 |
+| 16 | 2 | 2 | 2 | 2 | 2 | 5 | 3 | 5 | 23 |
+| 18 | 3 | 4 | 4 | 4 | 3 | 4 | 4 | 4 | 30 |
+| **20** | 4 | 5 | 5 | 5 | 4 | 3 | 4 | 4 | **34** |
+| 22 | 5 | 5 | 5 | 5 | 4 | 2 | 5 | 3 | **34** |
+| 25 | 3 | 5 | 4 | 4 | 4 | 1 | 5 | 2 | 28 |
 
-**Recommendation: shield top at 19–22 km.**
-- **Lower bound (~19 km):** FL600 + 250 m + ~0.5 km buffer, rare overshoots, and the wind/tether minimum.
-- **Upper bound (~22 km):** thickness and breathing stroke, and wing size for Mach 2.
-- **Within the band, pick by Mach:** ~19 km for Mach 1.7, ~20 km for Mach 2, ~22 km for Mach 2.5–3.
+20 and 22 km now tie, within the resolution of equal-weight scoring. 20 km keeps the thinner layer, the smaller wing and the wind/tether minimum; 22 km has the least hydrogen and exact lift closure at Mach 2.
+
+**Recommendation: shield top at 19–22 km, 20 km for Mach 2.**
+- **Lower bound (~19 km):** FL600 + 250 m + ~0.5 km buffer, rare overshoots, and the wind/tether minimum. The psf gain from going lower is small and is outweighed by inventory and everything else.
+- **Upper bound (~22 km):** above it lift, not acoustics, sets thickness; breathing stroke and wing size for Mach 2 grow.
+- **Within the band, pick by Mach:** ~19–20 km for Mach 1.7 (layer set by lift and hold-down, ~30–36 m), ~20 km for Mach 2 (~55 m), ~22 km for Mach 2.5–3 (~80–86 m; SR-71-class at ≤ 20 km also exceeds q 35 kPa).
+- **Width:** ~1.5–2 km at any altitude in the band, pending 3-D runs beyond Concorde M2 at 20 km.
 - **Siting:** prefer 20–40° latitude away from monsoon convection; use ≥ 21 km in the tropics.
-- **Not solved by altitude:** the tether picket fence through Class A, the dominant airspace problem at every H_s.
-
-## Acoustic results
-
-Acoustic results: see [psf_sweep.md](../sim/results/psf_sweep.md). It did not exist when this was written, so the acoustic column is pending.
+- **Not solved by altitude:** the tether picket fence through Class A, the dominant airspace problem at every H_s; and secondary booms from unshaped aircraft in ducting winds.
 
 ## Sources
 
