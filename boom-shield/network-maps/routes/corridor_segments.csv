@@ -1,0 +1,13 @@
+segment_order,segment_type,from_iata,to_iata,distance_km,pax_h_vs_subsonic,pax_h_vs_boomless,pax_h_per_km_vs_sub,pax_h_per_km_vs_bl
+1,trunk,LAX,DEN,1385,489253,214805,353.0,155.0
+2,trunk,DEN,ORD,1426,1010199,451916,708.0,317.0
+3,trunk,ORD,JFK,1188,422088,180528,355.0,152.0
+4,spur,SFO,LAX,544,0,0,0.0,0.0
+5,spur,SEA,LAX,1537,89577,35190,58.0,23.0
+6,spur,DFW,DEN,1031,219521,99062,213.0,96.0
+7,spur,IAH,DFW,362,22923,8470,63.0,23.0
+8,spur,ATL,ORD,976,202904,89504,208.0,92.0
+9,spur,MIA,ATL,959,0,0,0.0,0.0
+10,spur,YYZ,ORD,701,87082,39764,124.0,57.0
+11,spur,YVR,SEA,205,0,0,0.0,0.0
+12,spur,MEX,DFW,1511,18818,6953,12.0,5.0

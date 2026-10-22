@@ -1,0 +1,433 @@
+load_case,life,design,lid_material,case,cap_passes_day,limiting_detail,cap_boom_only
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,LLDPE balloon film,low,0,Slack partition hem/crease (50 um),0.326
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,LLDPE balloon film,base,0,Slack partition hem/crease (50 um),1.86
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,LLDPE balloon film,high,29.8,"Joint flap, light (0.5 kg/m2, 1 m)",29.8
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,PE/PET laminate,low,0,Slack partition hem/crease (50 um),0.0707
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,PE/PET laminate,base,0,Slack partition hem/crease (50 um),0.773
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,PE/PET laminate,high,19.4,"Joint flap, light (0.5 kg/m2, 1 m)",19.4
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.55
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),9.97
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),high,137,"Joint flap, light (0.5 kg/m2, 1 m)",137
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Vectran scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Vectran scrim,base,0,Slack partition hem/crease (50 um),12.5
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Vectran scrim,high,91.2,"Joint flap, light (0.5 kg/m2, 1 m)",91.2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Aramid scrim,low,0,Slack partition hem/crease (50 um),0.17
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Aramid scrim,base,0,Slack partition hem/crease (50 um),1.67
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Aramid scrim,high,49.8,"Joint flap, light (0.5 kg/m2, 1 m)",49.8
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),0.326
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),1.29
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),high,12.1,"Joint flap, light (0.5 kg/m2, 1 m)",12.1
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),112
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,low,1.15e+05,Heat-sealed lap seam,1.15e+05
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),low,119,Heat-sealed lap seam,119
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,LLDPE balloon film,low,0,Slack partition hem/crease (50 um),0.217
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,LLDPE balloon film,base,0,Slack partition hem/crease (50 um),1.24
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,LLDPE balloon film,high,19.9,"Joint flap, light (0.5 kg/m2, 1 m)",19.9
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,PE/PET laminate,low,0,Slack partition hem/crease (50 um),0.0471
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,PE/PET laminate,base,0,Slack partition hem/crease (50 um),0.515
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,PE/PET laminate,high,12.9,"Joint flap, light (0.5 kg/m2, 1 m)",12.9
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.03
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),6.64
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),high,91.3,"Joint flap, light (0.5 kg/m2, 1 m)",91.3
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Vectran scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Vectran scrim,base,0,Slack partition hem/crease (50 um),8.37
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Vectran scrim,high,60.8,"Joint flap, light (0.5 kg/m2, 1 m)",60.8
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Aramid scrim,low,0,Slack partition hem/crease (50 um),0.114
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Aramid scrim,base,0,Slack partition hem/crease (50 um),1.11
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Aramid scrim,high,33.2,"Joint flap, light (0.5 kg/m2, 1 m)",33.2
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),0.217
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),0.861
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),high,8.09,"Joint flap, light (0.5 kg/m2, 1 m)",8.09
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),74.8
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,low,7.67e+04,Heat-sealed lap seam,7.67e+04
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),low,79.6,Heat-sealed lap seam,79.6
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 30 m, lid 2.38 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,LLDPE balloon film,low,0,Slack partition hem/crease (50 um),0.326
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,LLDPE balloon film,base,0,Slack partition hem/crease (50 um),1.86
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,LLDPE balloon film,high,29.8,"Joint flap, light (0.5 kg/m2, 1 m)",29.8
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,PE/PET laminate,low,0,Slack partition hem/crease (50 um),0.0707
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,PE/PET laminate,base,0,Slack partition hem/crease (50 um),0.773
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,PE/PET laminate,high,19.4,"Joint flap, light (0.5 kg/m2, 1 m)",19.4
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.55
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),9.97
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),high,137,"Joint flap, light (0.5 kg/m2, 1 m)",137
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Vectran scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Vectran scrim,base,0,Slack partition hem/crease (50 um),12.5
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Vectran scrim,high,91.2,"Joint flap, light (0.5 kg/m2, 1 m)",91.2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Aramid scrim,low,0,Slack partition hem/crease (50 um),0.17
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Aramid scrim,base,0,Slack partition hem/crease (50 um),1.67
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Aramid scrim,high,49.8,"Joint flap, light (0.5 kg/m2, 1 m)",49.8
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),0.326
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),1.29
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),high,12.1,"Joint flap, light (0.5 kg/m2, 1 m)",12.1
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),90.8
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),high,6.79e+05,"Tie fitting, 50 mm grommet",8.46e+05
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,low,4.27e+04,Heat-sealed lap seam,4.27e+04
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),low,106,Heat-sealed lap seam,106
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,LLDPE balloon film,low,0,Slack partition hem/crease (50 um),0.217
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,LLDPE balloon film,base,0,Slack partition hem/crease (50 um),1.24
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,LLDPE balloon film,high,19.9,"Joint flap, light (0.5 kg/m2, 1 m)",19.9
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,PE/PET laminate,low,0,Slack partition hem/crease (50 um),0.0471
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,PE/PET laminate,base,0,Slack partition hem/crease (50 um),0.515
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,PE/PET laminate,high,12.9,"Joint flap, light (0.5 kg/m2, 1 m)",12.9
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.03
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),6.64
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),high,91.3,"Joint flap, light (0.5 kg/m2, 1 m)",91.3
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Vectran scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Vectran scrim,base,0,Slack partition hem/crease (50 um),8.37
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Vectran scrim,high,60.8,"Joint flap, light (0.5 kg/m2, 1 m)",60.8
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Aramid scrim,low,0,Slack partition hem/crease (50 um),0.114
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Aramid scrim,base,0,Slack partition hem/crease (50 um),1.11
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Aramid scrim,high,33.2,"Joint flap, light (0.5 kg/m2, 1 m)",33.2
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),0.217
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),0.861
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),high,8.09,"Joint flap, light (0.5 kg/m2, 1 m)",8.09
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),60.5
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),high,3.97e+05,"Tie fitting, 50 mm grommet",5.64e+05
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,low,2.84e+04,Heat-sealed lap seam,2.84e+04
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),low,70.3,Heat-sealed lap seam,70.3
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 2.3 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,LLDPE balloon film,low,0,Slack partition hem/crease (50 um),0.326
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,LLDPE balloon film,base,0,Slack partition hem/crease (50 um),1.86
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,LLDPE balloon film,high,29.8,"Joint flap, light (0.5 kg/m2, 1 m)",29.8
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,PE/PET laminate,low,0,Slack partition hem/crease (50 um),0.0707
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,PE/PET laminate,base,0,Slack partition hem/crease (50 um),0.773
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,PE/PET laminate,high,19.4,"Joint flap, light (0.5 kg/m2, 1 m)",19.4
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.55
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),9.97
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),high,137,"Joint flap, light (0.5 kg/m2, 1 m)",137
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Vectran scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Vectran scrim,base,0,Slack partition hem/crease (50 um),12.5
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Vectran scrim,high,91.2,"Joint flap, light (0.5 kg/m2, 1 m)",91.2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Aramid scrim,low,0,Slack partition hem/crease (50 um),0.17
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Aramid scrim,base,0,Slack partition hem/crease (50 um),1.67
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Aramid scrim,high,49.8,"Joint flap, light (0.5 kg/m2, 1 m)",49.8
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),0.326
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),1.29
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),high,12.1,"Joint flap, light (0.5 kg/m2, 1 m)",12.1
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),2.58
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),127
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),low,2.35e+05,Heat-sealed lap seam,2.35e+05
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,LLDPE balloon film,low,0,Slack partition hem/crease (50 um),0.217
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,LLDPE balloon film,base,0,Slack partition hem/crease (50 um),1.24
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,LLDPE balloon film,high,19.9,"Joint flap, light (0.5 kg/m2, 1 m)",19.9
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,PE/PET laminate,low,0,Slack partition hem/crease (50 um),0.0471
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,PE/PET laminate,base,0,Slack partition hem/crease (50 um),0.515
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,PE/PET laminate,high,12.9,"Joint flap, light (0.5 kg/m2, 1 m)",12.9
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.03
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),6.64
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),high,91.3,"Joint flap, light (0.5 kg/m2, 1 m)",91.3
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Vectran scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Vectran scrim,base,0,Slack partition hem/crease (50 um),8.37
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Vectran scrim,high,60.8,"Joint flap, light (0.5 kg/m2, 1 m)",60.8
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Aramid scrim,low,0,Slack partition hem/crease (50 um),0.114
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Aramid scrim,base,0,Slack partition hem/crease (50 um),1.11
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Aramid scrim,high,33.2,"Joint flap, light (0.5 kg/m2, 1 m)",33.2
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),0.217
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),0.861
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),high,8.09,"Joint flap, light (0.5 kg/m2, 1 m)",8.09
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),1.72
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),84.7
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,low,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),low,1.57e+05,Heat-sealed lap seam,1.57e+05
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),base,1e+06,none (>=1e6),1e+06
+"Concorde M2, H2 55 m, lid 4.45 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,LLDPE balloon film,low,0,Slack partition hem/crease (50 um),0.326
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,LLDPE balloon film,base,0,Slack partition hem/crease (50 um),1.86
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,LLDPE balloon film,high,29.8,"Joint flap, light (0.5 kg/m2, 1 m)",29.8
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,PE/PET laminate,low,0,Slack partition hem/crease (50 um),0.0707
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,PE/PET laminate,base,0,Slack partition hem/crease (50 um),0.773
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,PE/PET laminate,high,19.4,"Joint flap, light (0.5 kg/m2, 1 m)",19.4
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.55
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),9.97
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,UHMWPE scrim (Dyneema),high,137,"Joint flap, light (0.5 kg/m2, 1 m)",137
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Vectran scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Vectran scrim,base,0,Slack partition hem/crease (50 um),12.5
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Vectran scrim,high,91.2,"Joint flap, light (0.5 kg/m2, 1 m)",91.2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Aramid scrim,low,0,Slack partition hem/crease (50 um),0.17
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Aramid scrim,base,0,Slack partition hem/crease (50 um),1.67
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Aramid scrim,high,49.8,"Joint flap, light (0.5 kg/m2, 1 m)",49.8
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),0.326
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),1.29
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,A. as sketched,Coated fabric (PU/PVF on polyester),high,12.1,"Joint flap, light (0.5 kg/m2, 1 m)",12.1
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,low,0,Slack partition hem/crease (50 um),2.58
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,base,0,Slack partition hem/crease (50 um),127
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,low,0,Slack partition hem/crease (50 um),2.58
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,base,0,Slack partition hem/crease (50 um),127
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),2.58
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),127
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,base,0,Slack partition hem/crease (50 um),127
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,low,0,Slack partition hem/crease (50 um),2.58
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,base,0,Slack partition hem/crease (50 um),127
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),2.58
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),127
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",20 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,LLDPE balloon film,low,0,Slack partition hem/crease (50 um),0.217
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,LLDPE balloon film,base,0,Slack partition hem/crease (50 um),1.24
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,LLDPE balloon film,high,19.9,"Joint flap, light (0.5 kg/m2, 1 m)",19.9
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,PE/PET laminate,low,0,Slack partition hem/crease (50 um),0.0471
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,PE/PET laminate,base,0,Slack partition hem/crease (50 um),0.515
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,PE/PET laminate,high,12.9,"Joint flap, light (0.5 kg/m2, 1 m)",12.9
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.03
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),6.64
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,UHMWPE scrim (Dyneema),high,91.3,"Joint flap, light (0.5 kg/m2, 1 m)",91.3
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Vectran scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Vectran scrim,base,0,Slack partition hem/crease (50 um),8.37
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Vectran scrim,high,60.8,"Joint flap, light (0.5 kg/m2, 1 m)",60.8
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Aramid scrim,low,0,Slack partition hem/crease (50 um),0.114
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Aramid scrim,base,0,Slack partition hem/crease (50 um),1.11
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Aramid scrim,high,33.2,"Joint flap, light (0.5 kg/m2, 1 m)",33.2
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),0.217
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),0.861
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,A. as sketched,Coated fabric (PU/PVF on polyester),high,8.09,"Joint flap, light (0.5 kg/m2, 1 m)",8.09
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,low,0,Slack partition hem/crease (50 um),1.72
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,base,0,Slack partition hem/crease (50 um),84.7
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,low,0,Slack partition hem/crease (50 um),1.72
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,base,0,Slack partition hem/crease (50 um),84.7
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),low,0,Slack partition hem/crease (50 um),1.72
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),base,0,Slack partition hem/crease (50 um),84.7
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,base,0,Slack partition hem/crease (50 um),84.7
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,low,0,Slack partition hem/crease (50 um),1.72
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,base,0,Slack partition hem/crease (50 um),84.7
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),low,0,Slack partition hem/crease (50 um),1.72
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),base,0,Slack partition hem/crease (50 um),84.7
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,"B. matched flaps, grommet ties, slack partitions",Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,LLDPE balloon film,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,PE/PET laminate,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,UHMWPE scrim (Dyneema),high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Vectran scrim,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Aramid scrim,high,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),low,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),base,1e+06,none (>=1e6),1e+06
+"Overture M1.7, H2 36 m, lid 2.88 kg/m2",30 yr,C. fatigue-aware,Coated fabric (PU/PVF on polyester),high,1e+06,none (>=1e6),1e+06

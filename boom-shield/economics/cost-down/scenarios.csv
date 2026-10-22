@@ -1,0 +1,7 @@
+design,scenario,T_m,lid_kg_m2,capex_usd_m2,capex_musd_km,opex_musd_km_yr,annual_musd_km_yr,dual_use_musd_km_yr,net_musd_km_yr,net_usd_m2_yr,factor_vs_base,bcr_bl_10,bcr_bl_100,bcr_sub_10,bcr_sub_100,benefit_bl_100_musd_km_yr,benefit_sub_100_musd_km_yr
+"M2.0 (Concorde-class, psf baseline)",base,55.0,3.9,89.7,157.0,9.87,23.34,0.0,23.34,13.34,1.0,0.0044,0.044,0.0159,0.159,1.03,3.72
+"M2.0 (Concorde-class, psf baseline)",plausible,55.0,3.83,35.7,62.5,2.85,8.22,0.026,8.19,4.68,2.85,0.0126,0.126,0.0454,0.454,1.03,3.72
+"M2.0 (Concorde-class, psf baseline)",aggressive,54.6,4.17,19.8,34.6,1.25,4.21,0.867,3.35,1.91,6.97,0.0308,0.308,0.111,1.11,1.03,3.72
+"M1.7 (Overture-class, lift-set)",base,36.0,2.33,77.5,116.2,7.29,17.27,0.0,17.27,11.51,1.0,0.0041,0.041,0.0195,0.195,0.71,3.37
+"M1.7 (Overture-class, lift-set)",plausible,21.0,1.02,28.9,43.3,2.04,5.75,0.026,5.73,3.82,3.02,0.0124,0.124,0.0589,0.589,0.71,3.37
+"M1.7 (Overture-class, lift-set)",aggressive,20.4,1.34,15.8,23.8,0.91,2.95,0.752,2.2,1.47,7.85,0.0324,0.324,0.1533,1.533,0.71,3.37

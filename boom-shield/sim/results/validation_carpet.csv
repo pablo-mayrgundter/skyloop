@@ -1,0 +1,66 @@
+section,case,phi_deg,R_m,y_g_m,delay_s,peak_pa,pldb,pldb_proxy,rise_ms,duration_ms,csel,dpldb,dpldb_proxy,peak_ratio,note
+carpet,Concorde 16.8 km M2,0.000,,0.0,46.186,94.431,109.703,98.855,0.537,244.50,108.251,,,,
+carpet,Concorde 16.8 km M2,10.000,,3185.4,47.005,92.491,109.423,98.639,0.556,243.83,108.065,,,,
+carpet,Concorde 16.8 km M2,20.000,,6633.1,49.637,86.773,108.614,97.895,0.614,241.81,107.493,,,,
+carpet,Concorde 16.8 km M2,30.000,,10718.7,54.734,77.577,107.128,96.856,0.719,238.48,106.485,,,,
+carpet,Concorde 16.8 km M2,40.000,,16205.9,64.031,65.321,104.706,94.936,0.895,234.03,104.928,,,,
+carpet,Concorde 16.8 km M2,45.000,,20069.9,71.708,58.129,103.012,93.605,1.027,231.66,103.864,,,,
+carpet,Concorde 16.8 km M2,50.000,,25724.7,83.980,50.042,100.672,92.028,1.209,229.85,102.487,,,,
+carpet,Concorde 16.8 km M2,52.000,,29160.8,91.823,46.322,99.424,91.190,1.306,229.73,101.773,,,,
+carpet,Concorde 16.8 km M2,53.500,,32946.6,100.674,43.034,98.209,90.405,1.393,230.37,101.093,,,,
+carpet,Concorde 16.8 km M2,54.500,,37341.9,111.118,40.052,96.966,89.664,1.462,231.95,100.434,,,,
+carpet,Concorde 16.8 km M2,54.850,,41040.6,119.979,38.071,96.128,89.213,1.490,233.84,99.976,,,,
+carpet,Concorde 16.8 km M2,56.000,,nan,nan,nan,nan,nan,nan,,nan,,,,cut off
+carpet_summary,Concorde 16.8 km M2,54.887,,42788.8,,94.431,109.703,98.855,,,,,,,max PLdB 109.70 / proxy 98.85; y_g = half-width
+cutoff,52 000 ft (FS-016 cond.),54.887,,41437.1,,,,,,,,,,,1 mi per 1000 ft rule half-width 41.8 km
+cutoff,CONCORDE preset 16.8 km,54.887,,42788.8,,,,,,,,,,,1 mi per 1000 ft rule half-width 44.4 km
+cutoff,18 km (Maglieri 2015 ex.),54.887,,44495.4,,,,,,,,,,,1 mi per 1000 ft rule half-width 47.5 km
+cutoff,60 000 ft,54.887,,44905.0,,,,,,,,,,,1 mi per 1000 ft rule half-width 48.3 km
+linear_zone,unshielded direct,0,,,,85.113,108.434,97.755,0.667,327.50,107.334,+0.000,+0.000,1.0000,Concorde M2 20.25 km
+linear_zone,unshielded circle_linear,0,1000,,,99.072,110.207,99.381,0.533,282.17,108.653,+1.774,+1.626,1.1640,Concorde M2 20.25 km; start factor 1.0819
+linear_zone,unshielded circle_aged,0,1000,,,85.452,108.493,97.807,0.666,328.74,107.371,+0.060,+0.052,1.0040,Concorde M2 20.25 km; start factor 1.0819
+linear_zone,unshielded circle_linear,0,2000,,,110.028,111.453,100.450,0.445,253.24,109.558,+3.019,+2.695,1.2927,Concorde M2 20.25 km; start factor 1.1702
+linear_zone,unshielded circle_aged,0,2000,,,85.452,108.493,97.807,0.666,328.74,107.371,+0.060,+0.052,1.0040,Concorde M2 20.25 km; start factor 1.1702
+linear_zone,unshielded circle_linear,0,4000,,,130.891,113.429,102.199,0.304,211.72,111.049,+4.995,+4.444,1.5378,Concorde M2 20.25 km; start factor 1.3689
+linear_zone,unshielded circle_aged,0,4000,,,85.452,108.493,97.807,0.666,328.74,107.371,+0.060,+0.052,1.0040,Concorde M2 20.25 km; start factor 1.3689
+linear_zone,unshielded direct,20,,,,78.467,107.367,96.929,0.749,323.44,106.591,+0.000,+0.000,1.0000,Concorde M2 20.25 km
+linear_zone,unshielded circle_linear,20,1000,,,90.780,109.106,98.464,0.613,280.31,107.863,+1.739,+1.535,1.1569,Concorde M2 20.25 km; start factor 1.0769
+linear_zone,unshielded circle_aged,20,1000,,,78.761,107.400,96.961,0.746,324.59,106.626,+0.033,+0.032,1.0038,Concorde M2 20.25 km; start factor 1.0769
+linear_zone,unshielded circle_linear,20,2000,,,100.343,110.291,99.486,0.523,252.82,108.732,+2.924,+2.557,1.2788,Concorde M2 20.25 km; start factor 1.1592
+linear_zone,unshielded circle_aged,20,2000,,,78.761,107.400,96.961,0.746,324.59,106.626,+0.033,+0.032,1.0038,Concorde M2 20.25 km; start factor 1.1592
+linear_zone,unshielded circle_linear,20,4000,,,118.313,112.241,101.100,0.381,213.35,110.154,+4.874,+4.171,1.5078,Concorde M2 20.25 km; start factor 1.3433
+linear_zone,unshielded circle_aged,20,4000,,,78.761,107.400,96.961,0.746,324.59,106.626,+0.033,+0.032,1.0038,Concorde M2 20.25 km; start factor 1.3433
+linear_zone,unshielded direct,40,,,,60.021,103.551,94.000,1.049,311.06,104.117,+0.000,+0.000,1.0000,Concorde M2 20.25 km
+linear_zone,unshielded circle_linear,40,1000,,,68.154,105.182,95.341,0.899,274.52,105.248,+1.631,+1.341,1.1355,Concorde M2 20.25 km; start factor 1.0626
+linear_zone,unshielded circle_aged,40,1000,,,60.208,103.608,94.012,1.047,311.97,104.146,+0.057,+0.012,1.0031,Concorde M2 20.25 km; start factor 1.0626
+linear_zone,unshielded circle_linear,40,2000,,,74.263,106.294,96.316,0.803,251.34,106.008,+2.743,+2.316,1.2373,Concorde M2 20.25 km; start factor 1.1284
+linear_zone,unshielded circle_aged,40,2000,,,60.208,103.608,94.012,1.047,311.97,104.146,+0.057,+0.012,1.0031,Concorde M2 20.25 km; start factor 1.1284
+linear_zone,unshielded circle_linear,40,4000,,,85.298,108.047,97.631,0.658,218.04,107.229,+4.496,+3.631,1.4211,Concorde M2 20.25 km; start factor 1.2725
+linear_zone,unshielded circle_aged,40,4000,,,60.208,103.608,94.012,1.047,311.97,104.146,+0.057,+0.012,1.0031,Concorde M2 20.25 km; start factor 1.2725
+linear_zone,unshielded direct,50,,,,47.291,99.713,91.395,1.370,302.82,101.875,+0.000,+0.000,1.0000,Concorde M2 20.25 km
+linear_zone,unshielded circle_linear,50,1000,,,52.887,101.304,92.572,1.199,271.30,102.896,+1.590,+1.177,1.1183,Concorde M2 20.25 km; start factor 1.0527
+linear_zone,unshielded circle_aged,50,1000,,,47.416,99.752,91.457,1.367,303.56,101.900,+0.039,+0.062,1.0027,Concorde M2 20.25 km; start factor 1.0527
+linear_zone,unshielded circle_linear,50,2000,,,56.971,102.368,93.472,1.091,251.40,103.571,+2.654,+2.076,1.2047,Concorde M2 20.25 km; start factor 1.1072
+linear_zone,unshielded circle_aged,50,2000,,,47.416,99.752,91.457,1.367,303.56,101.900,+0.039,+0.062,1.0027,Concorde M2 20.25 km; start factor 1.1072
+linear_zone,unshielded circle_linear,50,4000,,,64.107,104.006,94.686,0.933,222.87,104.637,+4.292,+3.291,1.3556,Concorde M2 20.25 km; start factor 1.2247
+linear_zone,unshielded circle_aged,50,4000,,,47.416,99.752,91.457,1.367,303.56,101.900,+0.039,+0.062,1.0027,Concorde M2 20.25 km; start factor 1.2247
+linear_zone,shield-standin direct,0,,,,35.985,97.316,88.738,1.204,179.49,99.449,+0.000,+0.000,1.0000,Concorde M2 20.25 km
+linear_zone,shield-standin circle_linear,0,1000,,,44.410,98.141,89.147,7.693,138.94,100.314,+0.825,+0.409,1.2341,Concorde M2 20.25 km; start factor 1.0819
+linear_zone,shield-standin circle_aged,0,1000,,,40.863,98.913,89.886,1.080,156.32,100.569,+1.597,+1.149,1.1355,Concorde M2 20.25 km; start factor 1.0819
+linear_zone,shield-standin circle_preaged,0,1000,,,35.985,97.316,88.738,1.204,179.49,99.449,+0.000,+0.000,1.0000,Concorde M2 20.25 km; start factor 1.0819
+linear_zone,shield-standin circle_linear,0,2000,,,47.927,99.628,91.001,14.138,124.33,100.973,+2.312,+2.263,1.3318,Concorde M2 20.25 km; start factor 1.1702
+linear_zone,shield-standin circle_aged,0,2000,,,40.863,98.913,89.886,1.080,156.32,100.569,+1.597,+1.149,1.1355,Concorde M2 20.25 km; start factor 1.1702
+linear_zone,shield-standin circle_preaged,0,2000,,,35.985,97.316,88.738,1.204,179.49,99.449,+0.000,+0.000,1.0000,Concorde M2 20.25 km; start factor 1.1702
+linear_zone,shield-standin circle_linear,0,4000,,,54.556,101.926,92.347,22.695,104.52,102.651,+4.611,+3.609,1.5161,Concorde M2 20.25 km; start factor 1.3689
+linear_zone,shield-standin circle_aged,0,4000,,,40.863,98.913,89.886,1.080,156.32,100.569,+1.597,+1.149,1.1355,Concorde M2 20.25 km; start factor 1.3689
+linear_zone,shield-standin circle_preaged,0,4000,,,35.985,97.316,88.738,1.204,179.49,99.449,+0.000,+0.000,1.0000,Concorde M2 20.25 km; start factor 1.3689
+linear_zone,shield-standin direct,40,,,,24.732,91.403,84.418,1.849,173.61,95.913,+0.000,+0.000,1.0000,Concorde M2 20.25 km
+linear_zone,shield-standin circle_linear,40,1000,,,29.537,91.790,85.178,13.297,134.41,96.217,+0.386,+0.760,1.1942,Concorde M2 20.25 km; start factor 1.0626
+linear_zone,shield-standin circle_aged,40,1000,,,28.000,90.345,83.458,8.155,146.61,95.886,-1.058,-0.961,1.1321,Concorde M2 20.25 km; start factor 1.0626
+linear_zone,shield-standin circle_preaged,40,1000,,,24.732,91.403,84.418,1.849,173.61,95.913,-0.000,-0.000,1.0000,Concorde M2 20.25 km; start factor 1.0626
+linear_zone,shield-standin circle_linear,40,2000,,,31.335,93.233,85.803,18.128,122.72,97.017,+1.830,+1.385,1.2670,Concorde M2 20.25 km; start factor 1.1284
+linear_zone,shield-standin circle_aged,40,2000,,,28.000,90.345,83.458,8.155,146.61,95.886,-1.058,-0.961,1.1321,Concorde M2 20.25 km; start factor 1.1284
+linear_zone,shield-standin circle_preaged,40,2000,,,24.732,91.403,84.418,1.849,173.61,95.913,-0.000,-0.000,1.0000,Concorde M2 20.25 km; start factor 1.1284
+linear_zone,shield-standin circle_linear,40,4000,,,34.589,95.337,87.696,24.570,106.74,98.476,+3.933,+3.278,1.3985,Concorde M2 20.25 km; start factor 1.2725
+linear_zone,shield-standin circle_aged,40,4000,,,28.000,90.345,83.458,8.155,146.61,95.886,-1.058,-0.961,1.1321,Concorde M2 20.25 km; start factor 1.2725
+linear_zone,shield-standin circle_preaged,40,4000,,,24.732,91.403,84.418,1.849,173.61,95.913,-0.000,-0.000,1.0000,Concorde M2 20.25 km; start factor 1.2725

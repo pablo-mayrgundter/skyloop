@@ -1,0 +1,29 @@
+id,topic,claim,source,status
+S1,UHMWPE fibre,China domestic UHMWPE fibre capacity ~80 kt/yr (Dec 2025 review),texleader.com.cn topicdetail-7532; info.ccia.xin,search summary unverified
+S2,UHMWPE fibre,DSM/Avient Dyneema; Honeywell (now Solstice) Spectra; Toyobo hold high-end core tech; Solstice >$220 M Virginia Spectra expansion,indexbox.io Solstice blog; chemengonline Honeywell Spectra; info.ccia.xin,search summary unverified
+S3,UHMWPE fibre,Baotou COSCO approved 10 kt/yr UHMWPE fibre plant (Oct 2024); Tongyizhong bought X-FIPER for RMB 2.43 B (Jan 2025),researchandmarkets 5731254,search summary unverified
+S4,UHMWPE resin,Global UHMWPE resin capacity 400-500 kt/yr 2025; ~750 kt/yr more planned in China 2025-30,researchandmarkets / portfolio-pplus,search summary unverified
+S5,Cracker,Shell Monaca: FID $6 B (2016); est. $6-10 B incl. pipelines; 1.6 Mt/yr PE,manufacturing.net; reutersevents.com,search summary unverified
+S6,Cracker,Golden Triangle Polymers (CPChem/QatarEnergy) $8.5 B; 2.08 Mt/yr ethylene; 2 Mt/yr HDPE; startup ~2026,icis.com 2023; argusmedia.com Oct 2026,search summary unverified
+S7,Film lines,Bandera agri blown-film lines: 2,100 kg/h at 18.5 m open width; >2,000 kg/h up to 24 m wide; Chinese-market line >1,300 kg/h 8-12 m,macplas.it node 12898; extrusion-info.com news 1023,search summary unverified
+S8,UHMWPE fibre plant capex,Tongyizhong Dec 2025: RMB 198 M for 2,400 t/yr UHMWPE fibre (Xintai Shandong; ~10 months build) = RMB 82.5 k per t/yr,news.pedaily.cn 202512/558183; cls.cn 2224390,search summary unverified
+S9,UHMWPE fibre plant capex,Zhejiang Youfu 2023: 1,600 t/yr UHMWPE fibre project RMB 150 M total (RMB 120 M fixed) = RMB 94 k per t/yr,szse.cn disclosure 2023-04-25,search summary unverified
+S10,UHMWPE fibre plants,Nanshan Zhishang fibre 600 + 3,000 t/yr (2023); Chinese fibre projects are kt-scale; 10 kt-scale projects are mostly resin,cninfo 2025-04-28; szse.cn 2022-12-30,search summary unverified
+S11,UHMWPE fibre,Shandong Leiwei Laiwu full-process line RMB 1.2 B (2023) capacity not stated,info.ccia.xin id 14,search summary unverified
+S12,Learning rates,Aircraft ~20 % per doubling (Wright 1936); NASA-cited progress ratios aerospace 85 %; shipbuilding 80-85 %,en.wikipedia.org Experience_curve_effect; goff.substack.com,search summary unverified
+S13,Learning rates,Solar PV learning 10-53 % across 24 studies (1959-2001); onshore wind -3 to 32 % across 35 studies,iiasa WP-95-126; eea.epri.com 2013_08 (review via search),search summary unverified
+S14,Learning rates,Wind installed cost 14.4 %/doubling (Wiser & Bolinger 1982-2004); IRENA investment ~7 %, LCOE ~12 % (1983-2014); NBER: manufacturing 14-29 %/doubling,escholarship qt64g3z5r7; irena.org 2017; conference.nber.org f161578,search summary unverified
+S15,Learning rates,Liberty ships: labour hours per ship fell from >=1.2 M to < half across yards,aspistrategist.org.au graph-of-the-week,search summary unverified
+S16,UHMWPE fibre price/margin,Tongyizhong 2023: UHMWPE fibre revenue RMB 328 M at 37.5 % gross margin; 2025 fibre revenue RMB 658 M (tonnage not found),pdf.dfcfw.com H3_AP202403301629182965; lanjinger.com,search summary unverified
+S17,Ethylene,Argus Mar 2025: US ethane cracking margin 10.5 c/lb; 2024 average 14-15 c/lb; ethane 31.2 c/USG; ethylene spot 24.75 c/lb (Mont Belvieu); rate cuts below ~5 c/lb,argusmedia.com 2669783,search summary unverified
+S18,Geomembrane install,60 mil HDPE liner installed $1.80-7.60/ft2; seaming/welding ~$0.20-1.00/ft2 (low-authority pages),kurlon.com cost guides,search summary unverified (low authority)
+S19,Film line capex,Buyer budget EUR 80-150 k for a used 3-5 layer 250-450 kg/h blown line; no new-line price for >=2 t/h found,plastemart.com UM 18493,search summary unverified
+S20,CaCO3 filler,CaCO3 ~ $120/t FOB US Gulf Q4 2025 (USGS via secondary); IMARC Dec 2025 Europe $0.34/kg NE Asia $0.39/kg Africa $0.22/kg (all grades),pmarketresearch.com p=2602732; imarcgroup.com calcium-carbonate-pricing-report,search summary unverified
+S21,Electrolysers,Western installed cost (TIC) $2,300/kW alkaline; $2,550/kW PEM (Electric Hydrogen Dec 2024 whitepaper),eh2.com Final_PEM_vs_Alkaline_December_2024_Whitepaper,search summary unverified
+S22,H2 prices,Grey $1.11-2.35/kg; green $3.74-11.70/kg (BNEF Dec 2024) as in economics.md [3],economics.md source 3,search summary unverified
+S23,Blade factories (fab analogue),Vestas Windsor CO 2007 ~$60 M for ~1,200 blades/yr and ~400 staff; expansion $180 M for 1,800 blades/yr and 650 jobs; Siemens Fort Madison >EUR 20 M ~600 blades/yr 220 staff; LM Bergama $50-80 M 800+ staff,windpoweringamerica.gov vestas_manufacturing_facilities.pdf; eepower.com; ge.com press release,search summary unverified
+S24,UHMWPE rope,Lankhorst 12-strand UHMWPE mooring rope 44-176 mm (SK78/SK99) no price; retail SK78 rope priced per metre only,wireco.com lankoforce; marine-deals.co.nz,search summary unverified
+S25,UV skin,PVF resin ~$9.9-11.4/kg (Jun 2026 businessanalytiq); old ETFE 1 mil list ~$4.7/m2; Tedlar 12.5-50 um range,businessanalytiq.com p=97803; builditsolar.com DuPontFilms,search summary unverified
+S26,UHMWPE export control,China MOFCOM et al. notice No. 21 (2024): UHMWPE fibre items under export licensing from 1 July 2024,kpmg.com china-tax-alert-05 2024/06; thomsonreuters.com 2024 july-3rd; iea.org policies 20245,search summary unverified
+S27,UHMWPE fibre,Dyneema self-described world's largest UHMWPE fibre maker with backward integration into polymer (2018); Avient/Honeywell(Solstice)/Toyobo dominant in high-end; no capacity shares found; China military-use fibre output 13.3 kt (2023),textileworld.com 2018/05; info.ccia.xin id 103,search summary unverified
+K1,Background,Rest-of-world (non-China) UHMWPE fibre capacity assumed 20-40 kt/yr -> world ~100-120 kt/yr,[K][U] background estimate,not sourced

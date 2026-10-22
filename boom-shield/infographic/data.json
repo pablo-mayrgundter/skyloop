@@ -1,0 +1,1462 @@
+{
+ "meta": {
+  "title": "BoomShield infographic data",
+  "generated_by": "boom-shield/infographic/make_data.py",
+  "conventions": {
+   "pldb": "Absolute PLdB values are the rise-time 'proxy' (conservative headline); raw values are given alongside. Deltas are the less favourable of raw and proxy.",
+   "altitude": "Simulated aircraft fly at 20.25 km (shield top 20 km + h 250 m).",
+   "R_m": "Undertrack shielded values from R_m 8 km re-runs; carpet maxima and strips from R_m 3 km (all azimuths).",
+   "tags": "simulated = this repo's model; published = cited source; extrapolated = derived by us from published + simulated numbers"
+  },
+  "sources": {
+   "r3d_sum": {
+    "ref": "boom-shield/sim/results/3d_summary.md",
+    "status": "repo"
+   },
+   "r3d_csv": {
+    "ref": "boom-shield/sim/results/3d_carpet_summary.csv",
+    "status": "repo"
+   },
+   "r3d_res": {
+    "ref": "boom-shield/sim/results/3d_results.csv",
+    "status": "repo"
+   },
+   "r3d_py": {
+    "ref": "boom-shield/sim/run_3d.py",
+    "status": "repo"
+   },
+   "src_py": {
+    "ref": "boom-shield/sim/boomsim/source.py",
+    "status": "repo"
+   },
+   "wt": {
+    "ref": "boom-shield/sim/results/wind_turbulence.md",
+    "status": "repo"
+   },
+   "at": {
+    "ref": "boom-shield/sim/results/alongtrack_summary.md",
+    "status": "repo"
+   },
+   "valc": {
+    "ref": "boom-shield/sim/results/validation_carpet.csv",
+    "status": "repo"
+   },
+   "valp": {
+    "ref": "boom-shield/sim/results/validation_propagation.csv",
+    "status": "repo"
+   },
+   "struct": {
+    "ref": "boom-shield/structure/structure-concept.md",
+    "status": "repo"
+   },
+   "vac": {
+    "ref": "boom-shield/vacuum/vacuum-balloon-review.md",
+    "status": "repo"
+   },
+   "handoff": {
+    "ref": "boom-shield/handoff/2026-10-20-boomshield-handoff.md",
+    "status": "repo"
+   },
+   "addendum": {
+    "ref": "boom-shield/handoff/2026-10-20-review-addendum.md",
+    "status": "repo"
+   },
+   "ovr_run": {
+    "ref": "boom-shield/infographic/make_data.py --run (this study; run_3d.py pipeline)",
+    "status": "repo"
+   },
+   "ovr_preset": {
+    "ref": "boom-shield/infographic/make_data.py (OVERTURE preset; estimates)",
+    "status": "repo"
+   },
+   "boom_specs": {
+    "ref": "https://boomsupersonic.com/press-release/refined-overture-northrop-grumman",
+    "status": "official, unverified (search-result level)",
+    "note": "Overture: length 201 ft, span 106 ft, cruise M1.7 over water, 4,250 nm, 64-80 pax"
+   },
+   "fi_overture": {
+    "ref": "https://flightplan.forecastinternational.com/2025/08/25/boom-supersonic-overture-airliner-program-outlook/",
+    "status": "secondary, unverified",
+    "note": "cruise M1.7, altitudes up to 60,000 ft"
+   },
+   "mtow77": {
+    "ref": "https://aerocorner.com/aircraft/boom-overture/ ; https://knaviation.net/boom-overture/",
+    "status": "secondary, unverified",
+    "note": "MTOW ~77 t (170,000 lb); figure dates from the pre-2022 design, Boom publishes none for the refined design"
+   },
+   "boomless_pr": {
+    "ref": "https://boomsupersonic.com/press-release/boomless-cruise-announcement",
+    "status": "official, unverified (search-result level)",
+    "note": "Feb 2025: XB-1 M1.12 with no boom reaching ground microphones; Overture up to M1.3 overland without audible boom"
+   },
+   "boomless_faq": {
+    "ref": "https://boomsupersonic.com/boomless-cruise",
+    "status": "official, unverified (search-result level)",
+    "note": "typical Boomless Cruise M1.1-1.2, up to 1.3; at M1.7 over water Overture makes a boom"
+   },
+   "x59_target_ntrs": {
+    "ref": "https://ntrs.nasa.gov/citations/20205002229",
+    "status": "official, unverified (search-result level)",
+    "note": "Doebler & Rathsam, 'How loud is X-59's shaped sonic boom?', POMA 36, 040005 (2019): design target 75 dB Stevens PL; 'acoustic thermometer' of familiar impulsive sounds"
+   },
+   "x59_carpet": {
+    "ref": "https://www.nasa.gov/centers-and-facilities/armstrong/nasa-instruments-will-listen-for-supersonic-x-59s-quiet-thump/",
+    "status": "official, unverified (search-result level)",
+    "note": "X-59 thump ~75 PLdB; Concorde 'over 100' PLdB (L. Cliatt)"
+   },
+   "x59_cruise": {
+    "ref": "https://www.nasa.gov/blogs/quesst/2026/06/12/x-59-blog-061226/",
+    "status": "official, unverified (search-result level)",
+    "note": "target cruise M1.4 (~925 mph) at 55,000 ft reached 12 Jun 2026"
+   },
+   "x59_len": {
+    "ref": "https://ntrs.nasa.gov/api/citations/20220009074/downloads/QuesstMissOvuaX59Pres_050822r.pdf",
+    "status": "official, unverified (search-result level)",
+    "note": "length 99 ft, span 29.5 ft"
+   },
+   "rathsam25": {
+    "ref": "https://ntrs.nasa.gov/api/citations/20250001048/downloads/Rathsam_RAeS_Loughborough_Branch_STRIVES.pdf",
+    "status": "official, unverified (search-result level)",
+    "note": "X-59 thump ~ distant thunder or car door slam from across the street; Concorde 105 dB PL ~ nearby thunder or car door slam from inside the car"
+   },
+   "nasa_podcast": {
+    "ref": "https://www.nasa.gov/podcasts/houston-we-have-a-podcast/the-quesst-for-low-sonic-booms/",
+    "status": "official, unverified (search-result level)",
+    "note": "L. Ozoroski: 'more like a car door closing, you know, across the street at your neighbor's house'"
+   },
+   "phys_today": {
+    "ref": "https://physicstoday.aip.org/news/nasa-unveils-a-supersonic-plane-with-a-quiet-boom",
+    "status": "secondary, unverified",
+    "note": "X-59 boom perceived about as loud as a car door slamming 6 m away"
+   },
+   "nasa_fs016": {
+    "ref": "https://www.nasa.gov/centers/dryden/pdf/120274main_FS-016-DFRC.pdf",
+    "status": "official, unverified (table values via secondary copies)",
+    "note": "Concorde 1.94 psf at M2, 52,000 ft; SR-71 0.9 psf at M3, 80,000 ft"
+   },
+   "niosh_meter": {
+    "ref": "https://stacks.cdc.gov/view/cdc/78630/cdc_78630_DS1.pdf",
+    "status": "official (CDC/NIOSH), unverified (search-result level)",
+    "note": "whisper 30 dB, normal conversation 60 dB, hand drill 98, chain saw 110; REL 85 dBA"
+   },
+   "nidcd": {
+    "ref": "https://www.nidcd.nih.gov/health/noise-induced-hearing-loss",
+    "status": "official (NIH/NIDCD), unverified (search-result level; values via NIDCD-derived copies)",
+    "note": "conversation 60-70 dBA; lawn mowers 80-100 dBA; motorcycles ~95; sirens 110-129 dBA; concerts/sports 94-110"
+   },
+   "cdc_listen": {
+    "ref": "https://www.cdc.gov/nceh/hearing_loss/infographic/",
+    "status": "official (CDC), unverified (search-result level)",
+    "note": "leaf blower 90 dB; siren 120 dB; motorcycle 95 dB"
+   },
+   "caltrans_tens": {
+    "ref": "https://dot.ca.gov/-/media/dot-media/programs/environmental-analysis/documents/env/tens-sep2013-a11y.pdf",
+    "status": "state agency; values read from local reproductions (e.g. https://weblink.cityofpleasantonca.gov/WebLink/0/doc/261418/Page23.aspx), unverified",
+    "note": "jet fly-over at 300 m (1,000 ft) 110 dBA; gas lawn mower at 1 m 100 dBA; diesel truck at 15 m (50 mph) 90 dBA"
+   },
+   "ne_dot": {
+    "ref": "https://dot.nebraska.gov/media/eyablfmc/noise-study-7-2013.pdf",
+    "status": "state agency, unverified (search-result level)",
+    "note": "jet flyover at 985 ft 105 dBA; diesel truck at 50 ft 85 dBA"
+   },
+   "wsdot": {
+    "ref": "https://appstest.wsdot.wa.gov/sites/default/files/2021-11/I5-JBLM-Vicinity-FINALMay2017EA-Section45Noise.pdf",
+    "status": "state agency, unverified (search-result level)",
+    "note": "highway traffic typically 70 dBA at 50 ft"
+   },
+   "spokane": {
+    "ref": "https://www.spokanecounty.gov/DocumentCenter/View/7680",
+    "status": "local agency, unverified (search-result level)",
+    "note": "light auto traffic at 50 ft 60 dBA; freeway traffic at 50 ft 70 dBA"
+   },
+   "cpuc_eir": {
+    "ref": "https://ia.cpuc.ca.gov/environment/info/aspen/westofdevers/deir/d13_noise.pdf",
+    "status": "state agency EIR, unverified (search-result level)",
+    "note": "jet takeoff at 200 ft 120 dBA; rock music concert at 50 ft 110 dBA"
+   },
+   "dog_uk": {
+    "ref": "https://moderngov.stockton.gov.uk/Data/Planning%20Committee/201907031330/Agenda/$att36456.doc.pdf ; https://cdn.centralcoast.nsw.gov.au/sites/default/files/2023-07/addendum_to_noise_report_-_renl417-03f02_technical_memo_r0_1.pdf",
+    "status": "local-authority acoustic reports, unverified (search-result level)",
+    "note": "dog barking at ~1 m: LA5 75 dBA (one dog) to LAeq 95.9 dB (two dogs)"
+   },
+   "faa_basics": {
+    "ref": "https://www.faa.gov/sites/faa.gov/files/air_traffic/environmental_issues/ared_documentation/Appendix_E_Basics_of_Noise_1.pdf",
+    "status": "official (FAA), unverified (search-result level)",
+    "note": "+10 dB heard as ~twice as loud; 5 dB change noticeable; everyday sounds 30-100 dB"
+   }
+  }
+ },
+ "shield_case": {
+  "description": "Reference BoomShield: a 1 km-wide, 30 m-thick hydrogen layer ('floating-lid' pillow) floating with its top at 20 km; aircraft fly 250 m above it (20.25 km).",
+  "width_m": {
+   "value": 1000,
+   "src": [
+    "r3d_sum",
+    "struct"
+   ],
+   "tag": "simulated"
+  },
+  "gas": {
+   "value": "H2, 30 m thick",
+   "src": [
+    "struct"
+   ],
+   "tag": "simulated"
+  },
+  "h_m": {
+   "value": 250,
+   "src": [
+    "r3d_sum"
+   ],
+   "tag": "simulated"
+  },
+  "shield_top_km": {
+   "value": 20,
+   "src": [
+    "r3d_sum"
+   ],
+   "tag": "simulated"
+  },
+  "architecture": {
+   "value": "floating lid: system mass on the top face (~2.4 kg/m2 lid), 0.1 kg/m2 floor film, soft ties K ~10 Pa/m, slack partitions",
+   "src": [
+    "struct"
+   ],
+   "tag": "simulated"
+  },
+  "acoustic_model_note": "Acoustics simulated as a lift-closed H2 30 m slab (3-D carpets); the floating-lid detail was checked in 2-D BEM (-28.4 dB circle, -33.4 undertrack, re unshielded) and matches the slab.",
+  "caveats": [
+   {
+    "value": "PLdB values use the conservative rise-time proxy; paired turbulence runs say the true reduction is ~5-8 dB larger at W 1 km.",
+    "src": [
+     "wt"
+    ],
+    "tag": "simulated"
+   },
+   {
+    "value": "Near-track values use R_m 8 km and are still ~1.5 dB optimistic; R_m 3 km values are 2-7 dB optimistic.",
+    "src": [
+     "r3d_sum"
+    ],
+    "tag": "simulated"
+   },
+   {
+    "value": "Along-track joints must be sealed: a 1 m open gap every 250 m costs ~9 dB undertrack (-24.5 vs -33.7).",
+    "src": [
+     "at"
+    ],
+    "tag": "simulated"
+   },
+   {
+    "value": "Stiff ties or a stiff (load-bearing) skin can make the layer nearly transparent; faces must stay soft.",
+    "src": [
+     "struct",
+     "r3d_sum"
+    ],
+    "tag": "simulated"
+   },
+   {
+    "value": "Wind shifts and stretches the carpet by km to tens of km (deltas barely change); siting needs wind climatology.",
+    "src": [
+     "wt"
+    ],
+    "tag": "simulated"
+   },
+   {
+    "value": "Concept-level 2-D/3-D linear+nonlinear model; no hardware, no flight test; H2 fire hazard is unresolved.",
+    "src": [
+     "struct",
+     "r3d_sum"
+    ],
+    "tag": "simulated"
+   }
+  ]
+ },
+ "aircraft": [
+  {
+   "name": "Concorde",
+   "mach": {
+    "value": 2.0,
+    "src": [
+     "r3d_sum"
+    ],
+    "tag": "simulated"
+   },
+   "length_m": {
+    "value": 61.66,
+    "src": [
+     "src_py"
+    ],
+    "tag": "published"
+   },
+   "altitude_used_km": {
+    "value": 20.25,
+    "src": [
+     "r3d_sum"
+    ],
+    "tag": "simulated",
+    "note": "20.25 km = shield top 20 km + h 250 m (repo convention), not the type's normal cruise altitude"
+   },
+   "shield_case": "W 1 km, H2 30 m slab, h 250 m",
+   "unshielded": {
+    "undertrack_pldb": {
+     "value": 97.7,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 108.4
+    },
+    "carpet_max_pldb": {
+     "value": 97.7,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 108.4,
+     "note": "unshielded carpet maximum is undertrack"
+    }
+   },
+   "shielded": {
+    "undertrack_pldb": {
+     "value": 64.0,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 67.5,
+     "R_m": "8 km near-track re-run"
+    },
+    "undertrack_pldb_R3": {
+     "value": 59.2,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy",
+     "raw_pldb": 61.9,
+     "R_m": "3 km (2-7 dB optimistic near track)"
+    },
+    "carpet_max_pldb": {
+     "value": 72.7,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 76.0,
+     "R_m": "3 km (all azimuths)",
+     "at_y_km": 39.3,
+     "note": "at the outermost computed azimuth; the carpet edge beyond it was not computed"
+    }
+   },
+   "delta_headline_db": {
+    "undertrack": {
+     "value": -33.7,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "R_m": "8 km",
+     "note": "less favourable of raw and proxy",
+     "raw": -40.9
+    },
+    "carpet_max": {
+     "value": -25.0,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "R_m": "3 km",
+     "raw": -32.5
+    },
+    "turbulence_paired_note": {
+     "value": "headline deltas conservative by ~5.6-8.3 dB at W 1 km (Concorde M2); paired turbulent delta ~ raw delta",
+     "src": [
+      "wt"
+     ],
+     "tag": "simulated"
+    }
+   },
+   "shielded_strip": {
+    "value": {
+     "half_width_km_ge10dB": 39.3,
+     "computed_to_km": 39.3,
+     "carpet_half_width_km": 47.7
+    },
+    "src": [
+     "r3d_csv",
+     "r3d_sum"
+    ],
+    "tag": "simulated",
+    "note": "contiguous half-width from the track with headline delta <= -10 dB; '>=' when it reaches the last computed azimuth"
+   },
+   "cruise_reference": {
+    "measured_pldb": {
+     "value": 105,
+     "src": [
+      "rathsam25",
+      "x59_carpet"
+     ],
+     "tag": "published",
+     "note": "NASA: Concorde ~105 PL ('over 100 PLdB')"
+    },
+    "published_overpressure_psf": {
+     "value": 1.94,
+     "src": [
+      "nasa_fs016",
+      "valp"
+     ],
+     "tag": "published",
+     "note": "M2 at 52,000 ft (15.8 km)"
+    },
+    "simulated_at_16_8_km": {
+     "value": {
+      "pldb_raw": 109.7,
+      "pldb_proxy": 98.9,
+      "peak_psf": 1.97
+     },
+     "src": [
+      "valc",
+      "valp"
+     ],
+     "tag": "simulated",
+     "note": "unshielded undertrack at 16.8 km, M2; measured ~105 PL lies between raw and proxy"
+    }
+   },
+   "note": "Simulated with the repo's Concorde preset (150 t mid-cruise); measured Concorde booms were ~105 PLdB."
+  },
+  {
+   "name": "SR-71",
+   "mach": {
+    "value": 3.2,
+    "src": [
+     "r3d_sum"
+    ],
+    "tag": "simulated"
+   },
+   "length_m": {
+    "value": 32.74,
+    "src": [
+     "src_py"
+    ],
+    "tag": "published"
+   },
+   "altitude_used_km": {
+    "value": 20.25,
+    "src": [
+     "r3d_sum"
+    ],
+    "tag": "simulated",
+    "note": "20.25 km = shield top 20 km + h 250 m (repo convention), not the type's normal cruise altitude"
+   },
+   "shield_case": "W 1 km, H2 30 m slab, h 250 m",
+   "unshielded": {
+    "undertrack_pldb": {
+     "value": 93.1,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 103.0
+    },
+    "carpet_max_pldb": {
+     "value": 93.1,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 103.0,
+     "note": "unshielded carpet maximum is undertrack"
+    }
+   },
+   "shielded": {
+    "undertrack_pldb": {
+     "value": 57.6,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 60.1,
+     "R_m": "8 km near-track re-run"
+    },
+    "undertrack_pldb_R3": {
+     "value": 52.4,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy",
+     "raw_pldb": 54.4,
+     "R_m": "3 km (2-7 dB optimistic near track)"
+    },
+    "carpet_max_pldb": {
+     "value": 72.2,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 75.5,
+     "R_m": "3 km (all azimuths)",
+     "at_y_km": 42.3,
+     "note": "at the outermost computed azimuth; the carpet edge beyond it was not computed"
+    }
+   },
+   "delta_headline_db": {
+    "undertrack": {
+     "value": -35.4,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "R_m": "8 km",
+     "note": "less favourable of raw and proxy",
+     "raw": -42.9
+    },
+    "carpet_max": {
+     "value": -20.8,
+     "src": [
+      "r3d_csv",
+      "r3d_sum"
+     ],
+     "tag": "simulated",
+     "R_m": "3 km",
+     "raw": -27.5
+    },
+    "turbulence_paired_note": {
+     "value": "headline deltas conservative by ~5.6-8.3 dB at W 1 km (Concorde M2); paired turbulent delta ~ raw delta",
+     "src": [
+      "wt"
+     ],
+     "tag": "simulated"
+    }
+   },
+   "shielded_strip": {
+    "value": {
+     "half_width_km_ge10dB": 42.3,
+     "computed_to_km": 42.3,
+     "carpet_half_width_km": 54.5
+    },
+    "src": [
+     "r3d_csv",
+     "r3d_sum"
+    ],
+    "tag": "simulated",
+    "note": "contiguous half-width from the track with headline delta <= -10 dB; '>=' when it reaches the last computed azimuth"
+   },
+   "cruise_reference": {
+    "published_overpressure_psf": {
+     "value": 0.9,
+     "src": [
+      "nasa_fs016",
+      "valp"
+     ],
+     "tag": "published",
+     "note": "M3 at 80,000 ft (24.4 km); repo model gives 0.99 psf"
+    },
+    "measured_pldb": {
+     "value": null,
+     "src": [],
+     "tag": "published",
+     "note": "no published PLdB found"
+    },
+    "simulated_at_24_4_km": {
+     "value": {
+      "altitude_m": 24400.0,
+      "mach": 3.0,
+      "pldb_raw": 101.9,
+      "pldb_proxy": 92.3,
+      "peak_pa": 47.4,
+      "peak_psf": 1.0
+     },
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "note": "unshielded undertrack, M3.0 at 80,000 ft (repo SR-71 validation preset), direct near-field path"
+    }
+   },
+   "note": "Highest Mach simulated; widest carpet, so the far-edge shielding (about -21 dB) is weakest."
+  },
+  {
+   "name": "NASA X-59",
+   "mach": {
+    "value": 1.4,
+    "src": [
+     "x59_cruise"
+    ],
+    "tag": "published"
+   },
+   "length_m": {
+    "value": 30.2,
+    "src": [
+     "x59_len"
+    ],
+    "tag": "published",
+    "note": "99 ft"
+   },
+   "altitude_used_km": {
+    "value": 16.8,
+    "src": [
+     "x59_cruise"
+    ],
+    "tag": "published",
+    "note": "55,000 ft design cruise; the published 75 PLdB applies there"
+   },
+   "unshielded": {
+    "undertrack_pldb": {
+     "value": 75,
+     "src": [
+      "x59_target_ntrs",
+      "x59_carpet"
+     ],
+     "tag": "published",
+     "note": "design target (shaped 'thump'); flight measurements pending as of Sep 2026"
+    },
+    "carpet_max_pldb": {
+     "value": 75,
+     "src": [
+      "x59_target_ntrs"
+     ],
+     "tag": "published",
+     "note": "design target; taken as the carpet maximum"
+    }
+   },
+   "shielded": {
+    "undertrack_pldb": {
+     "value": 42,
+     "src": [
+      "x59_target_ntrs",
+      "r3d_csv"
+     ],
+     "tag": "extrapolated",
+     "note": "75 + simulated Concorde M1.4 delta -33.4 dB (R_m 8 km, He 30 m, W 1 km)"
+    },
+    "carpet_max_pldb": {
+     "value": 46,
+     "src": [
+      "x59_target_ntrs",
+      "r3d_csv"
+     ],
+     "tag": "extrapolated",
+     "note": "75 + Concorde M1.4 carpet-max delta -28.8 dB"
+    }
+   },
+   "delta_headline_db": {
+    "undertrack": {
+     "value": -33.4,
+     "src": [
+      "r3d_csv"
+     ],
+     "tag": "extrapolated",
+     "raw": -40.3
+    },
+    "carpet_max": {
+     "value": -28.8,
+     "src": [
+      "r3d_csv"
+     ],
+     "tag": "extrapolated"
+    }
+   },
+   "shielded_strip": {
+    "value": {
+     "half_width_km_ge10dB": 24.5,
+     "computed_to_km": 24.5,
+     "carpet_half_width_km": 33.1
+    },
+    "src": [
+     "r3d_csv"
+    ],
+    "tag": "extrapolated",
+    "note": "Concorde M1.4 carpet"
+   },
+   "caveat": "Our Whitham source model cannot represent a shaped low-boom signature. The shield's dB reduction for a shaped thump may differ (its leak is the >5 Hz edge-diffracted part); He vs H2 differ by <~2 dB; the X-59 at 20.25 km would already be somewhat quieter than at 16.8 km.",
+   "note": "Already quiet by shaping; a shield would take it toward inaudible, but with low marginal value."
+  },
+  {
+   "name": "Boom Overture",
+   "mach": {
+    "value": 1.7,
+    "src": [
+     "boom_specs"
+    ],
+    "tag": "published",
+    "note": "supersonic cruise over water"
+   },
+   "length_m": {
+    "value": 61.3,
+    "src": [
+     "boom_specs"
+    ],
+    "tag": "published",
+    "note": "201 ft"
+   },
+   "mtow_t": {
+    "value": 77,
+    "src": [
+     "mtow77"
+    ],
+    "tag": "published",
+    "note": "pre-2022 design figure; refined design unpublished -> estimate"
+   },
+   "preset": {
+    "value": {
+     "weight_N": 608220.0,
+     "mid_cruise_mass_t": 62,
+     "volume_m3": 300.0,
+     "lift_start": 0.4,
+     "lift_end": 0.9
+    },
+    "src": [
+     "ovr_preset"
+    ],
+    "tag": "extrapolated",
+    "note": "estimates: mass 0.81 x MTOW (Concorde preset ratio), volume scaled from Concorde; boom level scales with weight, so treat absolute PLdB as +/- several dB"
+   },
+   "altitude_used_km": {
+    "value": 20.25,
+    "src": [
+     "ovr_run"
+    ],
+    "tag": "simulated",
+    "note": "20.25 km = shield top 20 km + h 250 m (repo convention), not the type's normal cruise altitude"
+   },
+   "normal_cruise_altitude_km": {
+    "value": 18.3,
+    "src": [
+     "fi_overture"
+    ],
+    "tag": "published",
+    "note": "up to 60,000 ft"
+   },
+   "shield_case": "W 1 km, H2 30 m slab, h 250 m",
+   "unshielded": {
+    "undertrack_pldb": {
+     "value": 92.8,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 102.4
+    },
+    "carpet_max_pldb": {
+     "value": 92.8,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 102.4,
+     "note": "unshielded carpet maximum is undertrack"
+    }
+   },
+   "shielded": {
+    "undertrack_pldb": {
+     "value": 56.4,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 58.8,
+     "R_m": "8 km near-track re-run"
+    },
+    "undertrack_pldb_R3": {
+     "value": 51.3,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy",
+     "raw_pldb": 53.2,
+     "R_m": "3 km (2-7 dB optimistic near track)"
+    },
+    "carpet_max_pldb": {
+     "value": 65.7,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "metric": "proxy (headline)",
+     "raw_pldb": 68.7,
+     "R_m": "3 km (all azimuths)",
+     "at_y_km": 24.5,
+     "note": null
+    }
+   },
+   "delta_headline_db": {
+    "undertrack": {
+     "value": -36.4,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "R_m": "8 km",
+     "note": "less favourable of raw and proxy",
+     "raw": -43.6
+    },
+    "carpet_max": {
+     "value": -27.1,
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "R_m": "3 km",
+     "raw": -33.7
+    },
+    "turbulence_paired_note": {
+     "value": "headline deltas conservative by ~5.6-8.3 dB at W 1 km (Concorde M2); paired turbulent delta ~ raw delta",
+     "src": [
+      "wt"
+     ],
+     "tag": "simulated"
+    }
+   },
+   "shielded_strip": {
+    "value": {
+     "half_width_km_ge10dB": 35.3,
+     "computed_to_km": 35.3,
+     "carpet_half_width_km": 42.9
+    },
+    "src": [
+     "ovr_run"
+    ],
+    "tag": "simulated",
+    "note": "contiguous half-width from the track with headline delta <= -10 dB; '>=' when it reaches the last computed azimuth"
+   },
+   "boomless_cruise": {
+    "value": {
+     "mach_typical": "1.1-1.2",
+     "mach_max": 1.3,
+     "xb1_demo_mach": 1.12
+    },
+    "src": [
+     "boomless_pr",
+     "boomless_faq"
+    ],
+    "tag": "published",
+    "note": "Mach cut-off: the boom refracts upward and does not reach the ground; at M1.7 over water Overture does boom"
+   },
+   "note": "Same pipeline and numerics as Concorde/SR-71 (R_m 3 km all azimuths, 8 km near track); Overture's real shape is not modelled (Sears-Haack + lift).",
+   "cruise_reference": {
+    "simulated_at_18_3_km": {
+     "value": {
+      "altitude_m": 18288.0,
+      "mach": 1.7,
+      "pldb_raw": 100.3,
+      "pldb_proxy": 91.6,
+      "peak_pa": 53.9,
+      "peak_psf": 1.1
+     },
+     "src": [
+      "ovr_run"
+     ],
+     "tag": "simulated",
+     "note": "unshielded undertrack at 60,000 ft, direct near-field path; the modelled front is not yet fully steepened there (~13 ms rise vs ~1 ms at 20.25 km), so it comes out ~2 dB quieter than at 20.25 km; indicative only"
+    },
+    "published_pldb": {
+     "value": null,
+     "src": [],
+     "tag": "published",
+     "note": "Boom publishes no Mach 1.7 boom level"
+    }
+   }
+  }
+ ],
+ "boom_refs": [
+  {
+   "label": "Concorde boom (measured)",
+   "pldb": {
+    "value": 105,
+    "src": [
+     "rathsam25",
+     "x59_carpet"
+    ],
+    "tag": "published"
+   },
+   "nasa_analogy": {
+    "value": "comparable to nearby thunder or a car door slam heard from inside the car",
+    "src": [
+     "rathsam25"
+    ],
+    "tag": "published"
+   }
+  },
+  {
+   "label": "X-59 design target ('sonic thump')",
+   "pldb": {
+    "value": 75,
+    "src": [
+     "x59_target_ntrs",
+     "x59_carpet"
+    ],
+    "tag": "published"
+   },
+   "nasa_analogy": {
+    "value": "comparable to distant thunder, or a car door slam from across the street; 'more like a car door closing ... across the street at your neighbor's house'",
+    "src": [
+     "rathsam25",
+     "nasa_podcast"
+    ],
+    "tag": "published"
+   },
+   "secondary_analogy": {
+    "value": "about as loud as a car door slamming 6 m away",
+    "src": [
+     "phys_today"
+    ],
+    "tag": "published"
+   }
+  },
+  {
+   "label": "F/A-18 dive manoeuvre simulating a quiet boom (NASA CarpetDIEM ground test)",
+   "pldb": {
+    "value": 67,
+    "src": [
+     "x59_carpet"
+    ],
+    "tag": "published",
+    "note": "not an X-59 measurement"
+   }
+  }
+ ],
+ "everyday_refs": {
+  "items": [
+   {
+    "label": "Whisper / quiet room",
+    "dba": {
+     "value": 30,
+     "src": [
+      "niosh_meter"
+     ],
+     "tag": "published"
+    },
+    "distance": "~1 m"
+   },
+   {
+    "label": "Normal conversation",
+    "dba": {
+     "value": "60 (60-70)",
+     "src": [
+      "niosh_meter",
+      "nidcd"
+     ],
+     "tag": "published"
+    },
+    "distance": "~1 m"
+   },
+   {
+    "label": "Light car traffic",
+    "dba": {
+     "value": 60,
+     "src": [
+      "spokane"
+     ],
+     "tag": "published"
+    },
+    "distance": "15 m (50 ft)"
+   },
+   {
+    "label": "Freeway / highway traffic",
+    "dba": {
+     "value": 70,
+     "src": [
+      "wsdot",
+      "spokane"
+     ],
+     "tag": "published"
+    },
+    "distance": "15 m (50 ft)"
+   },
+   {
+    "label": "Diesel truck passing (~80 km/h)",
+    "dba": {
+     "value": "85-90",
+     "src": [
+      "ne_dot",
+      "caltrans_tens"
+     ],
+     "tag": "published"
+    },
+    "distance": "15 m (50 ft)"
+   },
+   {
+    "label": "Dog barking",
+    "dba": {
+     "value": "75-96",
+     "src": [
+      "dog_uk"
+     ],
+     "tag": "published"
+    },
+    "distance": "~1 m"
+   },
+   {
+    "label": "Gas lawn mower / leaf blower",
+    "dba": {
+     "value": "80-100 (mower); 90 (leaf blower)",
+     "src": [
+      "nidcd",
+      "cdc_listen",
+      "caltrans_tens"
+     ],
+     "tag": "published"
+    },
+    "distance": "at the operator (~1 m)"
+   },
+   {
+    "label": "Motorcycle",
+    "dba": {
+     "value": 95,
+     "src": [
+      "cdc_listen",
+      "nidcd"
+     ],
+     "tag": "published"
+    },
+    "distance": "rider / nearby"
+   },
+   {
+    "label": "Jet airliner fly-over",
+    "dba": {
+     "value": "105-110",
+     "src": [
+      "ne_dot",
+      "caltrans_tens"
+     ],
+     "tag": "published"
+    },
+    "distance": "300 m (985-1,000 ft)"
+   },
+   {
+    "label": "Rock concert",
+    "dba": {
+     "value": 110,
+     "src": [
+      "cpuc_eir",
+      "nidcd"
+     ],
+     "tag": "published"
+    },
+    "distance": "15 m (50 ft) / front rows"
+   },
+   {
+    "label": "Emergency siren",
+    "dba": {
+     "value": "110-129 (120 typical)",
+     "src": [
+      "nidcd",
+      "cdc_listen"
+     ],
+     "tag": "published"
+    },
+    "distance": "standing nearby (distance not stated)"
+   },
+   {
+    "label": "Jet takeoff",
+    "dba": {
+     "value": 120,
+     "src": [
+      "cpuc_eir"
+     ],
+     "tag": "published"
+    },
+    "distance": "60 m (200 ft)"
+   }
+  ],
+  "caveat": "PLdB (Stevens perceived level of a short impulsive boom) and dBA (A-weighted level of a steady or slowly varying sound) are different scales; placing booms among dBA sounds is indicative only.",
+  "recommended_method": {
+   "value": "Put booms on the PL scale and use NASA's impulsive-sound analogies as the bridge (Doebler & Rathsam's 'acoustic thermometer' of familiar impulsive sounds rated in PL): ~105 PL = nearby thunder / car door slam from inside the car; ~75 PL = distant thunder / car door slam across the street. Show dBA everyday sounds on a separate, parallel axis, not as equal numbers. No published general PLdB<->dBA conversion for booms was found (published work correlates PL and A-weighted SEL but gives no fixed offset).",
+   "src": [
+    "x59_target_ntrs",
+    "rathsam25"
+   ],
+   "tag": "published"
+  },
+  "db_rule": {
+   "value": "+10 dB is heard as roughly twice as loud; a 5 dB change is noticeable",
+   "src": [
+    "faa_basics"
+   ],
+   "tag": "published"
+  }
+ },
+ "cross_sections": [
+  {
+   "name": "Floating-lid pillow (H2 30 m)",
+   "verdict": "baseline",
+   "reason": "Best modelled acoustics with no static load on soft elements; mass on the lid makes the floor a stable H2-over-air interface.",
+   "numbers": {
+    "value": {
+     "circle_dB": -28.4,
+     "undertrack_dB": -33.4,
+     "near_line_dB": -38.2,
+     "lift_kg_m2": 2.46,
+     "face_load_kN_m": 0.2,
+     "tie_K_Pa_m": 10
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "name": "Touching compliant-hoop tube raft (D ~60 m)",
+   "verdict": "alternate",
+   "reason": "Matches the 60 m slab with no ties, but the hoop must be both strong (3-9 kN/m) and soft (E*t <~1e5 N/m, 3-9 % strain): not standard balloon construction.",
+   "numbers": {
+    "value": {
+     "circle_dB": "-27.1/-27.9",
+     "undertrack_dB": "-36.3/-37.8",
+     "dp_Pa": "100-300",
+     "lift_kg_m2": 3.9,
+     "net_kg_m2": 2.58
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "name": "Lens with cross-width struts",
+   "verdict": "rejected",
+   "reason": "Zero-pressure face tension ~200 kN/m needs 1 km CFRP compression struts: 9-130 kg/m2 of structure for 2-4 kg/m2 of lift.",
+   "numbers": {
+    "value": {
+     "structure_kg_m2": "9.1 (zero-pressure) / 70-130 (superpressure)",
+     "lift_kg_m2": "1.95-3.9"
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "name": "Drop-stitch pillow (superpressure)",
+   "verdict": "rejected",
+   "reason": "The internal ties that hold it flat couple the faces 12-80x too stiffly (~1,200-2,400 Pa/m), short-circuiting the gas layer.",
+   "numbers": {
+    "value": {
+     "face_coupling_Pa_m": "1,210-2,420",
+     "smeared_K300_circle_dB": -18.3,
+     "vs_slab_dB": -26.0
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "name": "Vacuum / inverted balloon",
+   "verdict": "rejected",
+   "reason": "Nothing floats (structure 1.23-1.44x lift) and the rings/struts needed to hold the vacuum open are acoustic studs.",
+   "numbers": {
+    "value": {
+     "structure_to_lift": "1.23-1.44",
+     "raft_D30_dPLdB": "-0.3 to -1.9 (M1.4-2.5)",
+     "lens_dPLdB": "-2.6 to -6.7"
+    },
+    "src": [
+     "vac"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "name": "Raft with air gaps",
+   "verdict": "rejected",
+   "reason": "Air slits leak directly: a 2 m slit costs ~15 dB at the 3 km circle.",
+   "numbers": {
+    "value": {
+     "gap_m": [
+      2,
+      5,
+      15
+     ],
+     "circle_dB": [
+      -12.3,
+      -8.4,
+      -4.2
+     ],
+     "touching_circle_dB": -27.0
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "name": "Narrow modules, 200-300 m wide",
+   "verdict": "acoustically insufficient",
+   "reason": "Edge diffraction dominates: W 250 m gives only -8 to -9 dB undertrack and -3 dB at the carpet maximum, and is 0-2 dB louder than no shield beyond ~18 km.",
+   "numbers": {
+    "value": {
+     "W250_undertrack_dB": "-8.3/-9.4",
+     "W250_max_dB": "-3.1/-3.3",
+     "W500_undertrack_dB": -21,
+     "W500_max_dB": -8.4,
+     "W1000_undertrack_dB": -33.7
+    },
+    "src": [
+     "r3d_sum",
+     "handoff"
+    ],
+    "tag": "simulated"
+   }
+  }
+ ],
+ "mooring": [
+  {
+   "topic": "Tether drag through the jet stream",
+   "text": "A 5 cm tether crossing ~8 km of 60-80 m/s jet-stream wind carries ~350-630 kN of drag, more than the whole envelope side load; tether drag likely sets station-keeping.",
+   "numbers": {
+    "value": {
+     "drag_kN": "350-630",
+     "tether_cm": 5,
+     "jet_m_s": "60-80"
+    },
+    "src": [
+     "addendum"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Tether drag, sized tethers",
+   "text": "Sized UHMWPE tethers (6-10 cm) see ~0.6-1.0 MN of jet-stream drag each.",
+   "numbers": {
+    "value": {
+     "drag_MN": "0.6-1.0",
+     "diameter_cm": "6-10"
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Module side load",
+   "text": "Illustrative 250 m module (15 m thick, 30 m/s): ~600 N/m, ~150 kN per module.",
+   "numbers": {
+    "value": {
+     "N_per_m": 600,
+     "kN_per_module": 150,
+     "U_m_s": 30
+    },
+    "src": [
+     "handoff"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Shield side force (1 km, 30 m)",
+   "text": "0.50 / 1.12 / 1.99 kN per metre of corridor at 20 / 30 / 40 m/s; winds at 20 km average 10-20 m/s, winter 20-30, peaks ~50.",
+   "numbers": {
+    "value": {
+     "U_m_s": [
+      20,
+      30,
+      40
+     ],
+     "kN_per_m": [
+      0.5,
+      1.12,
+      1.99
+     ]
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Tether loads and field",
+   "text": "Tethers every 2-5 km carry 2.2-5.6 MN each at 30 m/s (90-220 t each); a 4,000 km corridor needs ~800-2,000 tethers through the jet stream.",
+   "numbers": {
+    "value": {
+     "spacing_km": "2-5",
+     "load_MN": "2.2-5.6",
+     "mass_t": "90-220",
+     "count": "800-2,000"
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Propulsion instead of tethers",
+   "text": "Excluded: ~67 kW per metre of corridor, ~270 GW for 4,000 km.",
+   "numbers": {
+    "value": {
+     "kW_per_m": 67,
+     "GW_4000km": 270
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Daily lift swing (superheat)",
+   "text": "Solar superheat of ~20 K raises lift ~10 % every day; constant-volume pressure swing 255 / 510 / 995 Pa for 10 / 20 / 39 K, so the layer must breathe 5-10 % daily (tethers, gas shuttle or coatings).",
+   "numbers": {
+    "value": {
+     "lift_swing_pct": 10,
+     "dp_Pa": [
+      255,
+      510,
+      995
+     ],
+     "superheat_K": [
+      10,
+      20,
+      39
+     ],
+     "tether_vertical_kN_m": "0-2.4"
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Boom loading on the shield",
+   "text": "Each pass hits the top face with 200-600 Pa (10-25x the lid's weight); 2e5-1e6 cycles over 30 years; flex-crack pinholes are the main leak driver.",
+   "numbers": {
+    "value": {
+     "pulse_Pa": "200-600",
+     "cycles": "2e5-1e6"
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Hydrogen safety and supply",
+   "text": "4,000 km x 1 km x 30 m holds 0.74 Mt H2 (0.8 % of a year's world supply; as helium, 45 years of output) and ~5 kt TNT-equivalent per km; at 55 mbar the layer is marginal for spark ignition; needs compartments every <=250 m and leak detection.",
+   "numbers": {
+    "value": {
+     "H2_Mt": 0.74,
+     "world_supply_pct": 0.8,
+     "helium_years": 45,
+     "kt_TNT_per_km": 5,
+     "compartment_m": 250,
+     "replenish_pct_yr": "5-20"
+    },
+    "src": [
+     "struct"
+    ],
+    "tag": "simulated"
+   }
+  },
+  {
+   "topic": "Wind moves the carpet",
+   "text": "Jet-stream wind shifts or stretches the boom carpet by km to tens of km (cut-off 35-115 km) and a crosswind moves the shadow ~2.4 km downwind; the shield's dB reduction changes by <=0.4 dB undertrack.",
+   "numbers": {
+    "value": {
+     "undertrack_delta_change_dB": 0.4,
+     "crosswind_shift_km": 2.4,
+     "cutoff_km": "34.9-114.7"
+    },
+    "src": [
+     "wt"
+    ],
+    "tag": "simulated"
+   }
+  }
+ ],
+ "headline_findings": [
+  {
+   "value": "A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and about 25 dB at the loudest point of the carpet (conservative), taking it from ~98 PLdB (conservative proxy scale; ~108 raw) to ~64 PLdB under the track and at most ~73 PLdB anywhere in the computed carpet.",
+   "src": [
+    "r3d_sum",
+    "r3d_csv"
+   ],
+   "tag": "simulated"
+  },
+  {
+   "value": "Width, not gas or thickness, sets the result: 250 m wide gives only -8 to -9 dB and 500 m about -21 dB undertrack, because sound diffracts around the edges.",
+   "src": [
+    "r3d_sum"
+   ],
+   "tag": "simulated"
+  },
+  {
+   "value": "The result holds from Mach 1.4 to 3.2: about -33 to -36 dB under the track and -21 to -29 dB at the loudest point for Concorde, Overture and the SR-71 (Boom Overture, M1.7, simulated with an estimated preset: -36.4 dB undertrack, -27.1 dB at the carpet maximum).",
+   "src": [
+    "r3d_csv",
+    "ovr_run"
+   ],
+   "tag": "simulated"
+  },
+  {
+   "value": "These are conservative: with realistic turbulence the reduction is about 5-8 dB larger, and wind barely changes it (<=0.4 dB undertrack) though it moves where the carpet lands.",
+   "src": [
+    "wt"
+   ],
+   "tag": "simulated"
+  },
+  {
+   "value": "Only a soft structure works: anything stiff that holds the faces apart (struts, stiff ties, drop-stitch, vacuum frames) or any open gap leaks the boom through; the floating-lid pillow is the baseline.",
+   "src": [
+    "struct",
+    "vac",
+    "at"
+   ],
+   "tag": "simulated"
+  },
+  {
+   "value": "The hard problems are not acoustic: mooring a 1 km layer at 20 km against the jet stream (350-630 kN drag per tether, 800-2,000 tethers), a ~10 % daily lift swing, and 0.74 Mt of hydrogen next to air traffic.",
+   "src": [
+    "addendum",
+    "struct"
+   ],
+   "tag": "simulated"
+  },
+  {
+   "value": "Shaping (X-59, ~75 PLdB) and Boom's Mach-cutoff 'Boomless Cruise' (M1.1-1.3) work only at low Mach; a shield's niche is faster flight (Overture's Mach 1.7 and especially Mach 2+), where neither applies.",
+   "src": [
+    "x59_target_ntrs",
+    "boomless_faq",
+    "addendum"
+   ],
+   "tag": "simulated"
+  }
+ ]
+}

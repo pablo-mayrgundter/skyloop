@@ -1,0 +1,13 @@
+case,bl_gross,bl_net,sub_gross,sub_net
+"central (2045, integrated, 100 %, 7 %)",0.908,0.357,3.217,-3.563
+discount 3 %,1.734,0.707,6.14,-6.49
+low world (traffic + VOT),0.595,0.174,2.108,-3.07
+high world,1.149,0.546,4.07,-3.358
+benign energy,0.908,0.659,3.217,0.151
+stringent energy,0.908,0.109,3.217,-6.619
+no exogenous cost learning,0.822,0.323,2.909,-3.222
+"fatigue cap 1,000/day",0.113,0.043,0.4,-0.461
+30 % capture,0.278,0.11,0.985,-1.085
+"30 % capture, premium-led drift",0.442,0.177,1.567,-1.695
+integrated-plausible cost ($17.6/m2),0.536,0.211,1.899,-2.104
+high induced demand,1.426,0.331,4.193,-2.509

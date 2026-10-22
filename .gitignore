@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+# 3-D corridor study cache (run_3d.py; ~30 MB of pickles, rebuildable)
+boom-shield/sim/results/3d_cache/
+# along-track study cache (rebuildable)
+boom-shield/sim/results/alongtrack_cache/
+boom-shield/infographic/__pycache__/
+# psf sweep cache (rebuildable)
+boom-shield/sim/results/psf_cache/
+# focus study cache (rebuildable)
+boom-shield/sim/results/focus_cache/

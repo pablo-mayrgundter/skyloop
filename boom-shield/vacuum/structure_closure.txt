@@ -1,0 +1,19 @@
+20 km: p = 5529 Pa, rho = 0.0889, T = 216.65 K
+strength floor (cylinder, no SF/buckling) M/lift = 0.32 at 20 km, 0.43 at sea level; with SF 0.48; sphere bound 0.16
+monocoque CFRP sphere M/lift: 20 km 32.7, sea level 10.2
+case                           s/a   lift   film   tend   ring   strg   strV   strH   total  ratio     F       Kring   Kstrut   c_m  cm_sk
+tube D=10 m (20 km)           1.00   0.70  0.178  0.045   0.59   0.19   0.00   0.00    1.00   1.44  2.28   1552-4233      nan   147    312 floor 0.97 [lattice/tube, n_s=3]
+tube D=15 m (20 km)           1.50   1.05  0.178  0.067   0.88   0.29   0.00   0.00    1.41   1.35  2.41   1143-3117      nan   152    365 floor 0.88 [lattice/tube, n_s=3]
+tube D=20 m (20 km)           2.00   1.40  0.178  0.090   1.17   0.39   0.00   0.00    1.83   1.31  2.28    781-2131      nan   154    403 floor 0.84 [lattice/tube, n_s=3]
+tube D=30 m (20 km)           3.00   2.09  0.178  0.134   1.76   0.58   0.00   0.00    2.65   1.27  2.42    575-1569      nan   157    457 floor 0.80 [lattice/tube, n_s=3]
+tube D=45 m (20 km)           4.00   3.14  0.178  0.179   2.74   0.84   0.00   0.00    3.93   1.25  2.23     334-910      nan   149    493 floor 0.75 [lattice/tube, n_s=3]
+tube D=60 m (20 km)           6.00   4.19  0.178  0.269   3.52   1.16   0.00   0.00    5.13   1.23  2.43     290-790      nan   159    540 floor 0.75 [lattice/tube, n_s=3]
+tube D=100 m (20 km)         12.00   6.98  0.178  0.538   5.60   2.28   0.00   0.00    8.60   1.23  2.37     166-454      nan   174    603 floor 0.77 [lattice/tube, n_s=3]
+tube D=250 m (20 km)         12.00  17.44  0.178  0.538  17.84   4.00   0.00   0.00   22.56   1.29  2.30      63-173      nan   107    603 floor 0.64 [lattice/tube, n_s=3]
+lens T=10 m (20 km)           2.00   0.89  0.113  0.057   0.00   0.00   0.45   0.66    1.27   1.43   nan           - 2.31e+05   147    403 floor 0.93 [/lattice/lattice, n_s=0]
+lens T=15 m (20 km)           3.00   1.33  0.113  0.086   0.00   0.00   0.67   0.98    1.85   1.39   nan           - 1.53e+05   150    457 floor 0.89 [/lattice/lattice, n_s=0]
+lens T=30 m (20 km)           6.00   2.66  0.113  0.171   0.00   0.00   1.33   1.97    3.59   1.35   nan           - 7.66e+04   152    540 floor 0.85 [/lattice/lattice, n_s=0]
+lens T=60 m (20 km)          12.00   5.33  0.113  0.342   0.00   0.00   2.66   3.94    7.06   1.32   nan           - 3.83e+04   153    603 floor 0.83 [/lattice/lattice, n_s=0]
+lens T=100 m (20 km)         16.00   8.88  0.113  0.457   0.00   0.00   5.03   6.12   11.72   1.32   nan           - 2.61e+04   137    623 floor 0.77 [/lattice/lattice, n_s=0]
+tube D=30 m (sea level)       1.00  28.83  3.259  0.821  20.65   8.27   0.00   0.00   33.01   1.14  3.10 15641-42658      nan   110    312 floor 0.92 [lattice/tube, n_s=3]
+tube D=100 m (sea level)      4.00  96.11  3.259  3.286  68.53  28.37   0.00   0.00  103.45   1.08  3.76  6161-16804      nan   124    493 floor 0.86 [lattice/tube, n_s=3]

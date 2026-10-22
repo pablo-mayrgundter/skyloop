@@ -1,0 +1,8 @@
+parameter,bcr_favourable,bcr_unfavourable,bcr_base
+All-in cost per m² (×0.25 / ×4),5.009e-03,3.942e-04,1.499e-03
+Width (1.25 / 2.0 km),1.720e-03,1.192e-03,1.499e-03
+Film life (20 / 5 yr),1.710e-03,1.202e-03,1.499e-03
+Discount rate (5 / 8 %),1.666e-03,1.424e-03,1.499e-03
+Asset life (30 / 20 yr),1.554e-03,1.417e-03,1.499e-03
+Capture fraction (30 / 5 %),4.497e-03,7.495e-04,1.499e-03
+Value of time (\$200 / \$49 per h),3.488e-03,8.562e-04,1.499e-03

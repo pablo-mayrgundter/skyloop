@@ -13,3 +13,6 @@ Skyloop is a vision for a buoyant, near vacuum sky transport system connecting
 - [docs/06-r-and-d.md](docs/06-r-and-d.md): initial R&D, focusing on a tabletop-scale prototype to study near‑vacuum transport physics.  
 - [docs/07-sections.md](docs/07-sections.md): details modular tube sections, structural features, installation, maintenance, and scale progression.  
 - [docs/08-tethers.md](docs/08-tethers.md): describes tether systems connecting the Skyloop to ground anchors, with configuration, materials, deployment and scalability.
+
+## Boom Shield  
+A side study of a tethered stratospheric hydrogen layer that blocks sonic booms under supersonic flight corridors. See [boom-shield/README.md](boom-shield/README.md) for the studies and [boom-shield/STATUS.md](boom-shield/STATUS.md) for the current status and verdict.  

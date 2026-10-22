@@ -1,0 +1,57 @@
+design,network,km,cost_case,demand,net_musd_km_yr,bcr_bl_10,bcr_bl_100,bcr_sub_10,bcr_sub_100
+"M2.0 (Concorde-class, psf baseline)",spine,3614,base + 2nd tether row,fixed,27.3,0.0038,0.038,0.0136,0.136
+"M2.0 (Concorde-class, psf baseline)",spine,3614,base + 2nd tether row,base,27.3,0.004,0.04,0.0142,0.142
+"M2.0 (Concorde-class, psf baseline)",spine,3614,cost-down plausible + 2nd row,fixed,9.58,0.0107,0.107,0.0388,0.388
+"M2.0 (Concorde-class, psf baseline)",spine,3614,cost-down plausible + 2nd row,base,9.58,0.0115,0.115,0.0406,0.406
+"M2.0 (Concorde-class, psf baseline)",spine,3614,cost-down aggressive + 2nd row,fixed,4.02,0.0256,0.256,0.0923,0.923
+"M2.0 (Concorde-class, psf baseline)",spine,3614,cost-down aggressive + 2nd row,base,4.02,0.0273,0.273,0.0966,0.966
+"M2.0 (Concorde-class, psf baseline)",spine,3614,"cost-down aggressive (1 row, as published)",fixed,3.35,0.0308,0.308,0.111,1.11
+"M2.0 (Concorde-class, psf baseline)",spine,3614,"cost-down aggressive (1 row, as published)",base,3.35,0.0328,0.328,0.1162,1.162
+"M2.0 (Concorde-class, psf baseline)",spine,3614,"integrated, plausible levers (central)",fixed,4.14,0.0249,0.249,0.0898,0.898
+"M2.0 (Concorde-class, psf baseline)",spine,3614,"integrated, plausible levers (central)",base,4.14,0.0265,0.265,0.0939,0.939
+"M2.0 (Concorde-class, psf baseline)",spine,3614,"integrated, aggressive levers (central)",fixed,2.22,0.0464,0.464,0.1677,1.677
+"M2.0 (Concorde-class, psf baseline)",spine,3614,"integrated, aggressive levers (central)",base,2.22,0.0495,0.495,0.1754,1.754
+"M2.0 (Concorde-class, psf baseline)",spine,3614,"integrated, aggressive levers (low cost)",fixed,1.48,0.0697,0.697,0.2515,2.515
+"M2.0 (Concorde-class, psf baseline)",spine,3614,"integrated, aggressive levers (low cost)",base,1.48,0.0743,0.743,0.2631,2.631
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,base + 2nd tether row,fixed,27.3,0.0031,0.031,0.0107,0.107
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,base + 2nd tether row,base,27.3,0.0033,0.033,0.0112,0.112
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,cost-down plausible + 2nd row,fixed,9.58,0.0089,0.089,0.0304,0.304
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,cost-down plausible + 2nd row,base,9.58,0.0094,0.094,0.0319,0.319
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,cost-down aggressive + 2nd row,fixed,4.02,0.0211,0.211,0.0723,0.723
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,cost-down aggressive + 2nd row,base,4.02,0.0225,0.225,0.0759,0.759
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,"cost-down aggressive (1 row, as published)",fixed,3.35,0.0254,0.254,0.0869,0.869
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,"cost-down aggressive (1 row, as published)",base,3.35,0.027,0.27,0.0913,0.913
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,"integrated, plausible levers (central)",fixed,4.04,0.021,0.21,0.0719,0.719
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,"integrated, plausible levers (central)",base,4.04,0.0224,0.224,0.0756,0.756
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,"integrated, aggressive levers (central)",fixed,2.14,0.0397,0.397,0.1358,1.358
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,"integrated, aggressive levers (central)",base,2.14,0.0422,0.422,0.1427,1.427
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,"integrated, aggressive levers (low cost)",fixed,1.43,0.0593,0.593,0.2028,2.028
+"M2.0 (Concorde-class, psf baseline)","knee 5,421 km",5421,"integrated, aggressive levers (low cost)",base,1.43,0.0631,0.631,0.213,2.13
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,base + 2nd tether row,fixed,27.3,0.0028,0.028,0.0088,0.088
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,base + 2nd tether row,base,27.3,0.003,0.03,0.0093,0.093
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,cost-down plausible + 2nd row,fixed,9.58,0.0079,0.079,0.0251,0.251
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,cost-down plausible + 2nd row,base,9.58,0.0084,0.084,0.0264,0.264
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,cost-down aggressive + 2nd row,fixed,4.02,0.0188,0.188,0.0597,0.597
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,cost-down aggressive + 2nd row,base,4.02,0.02,0.2,0.0628,0.628
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,"cost-down aggressive (1 row, as published)",fixed,3.35,0.0226,0.226,0.0718,0.718
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,"cost-down aggressive (1 row, as published)",base,3.35,0.0241,0.241,0.0755,0.755
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,"integrated, plausible levers (central)",fixed,4.0,0.0189,0.189,0.0601,0.601
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,"integrated, plausible levers (central)",base,4.0,0.0202,0.202,0.0631,0.631
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,"integrated, aggressive levers (central)",fixed,2.11,0.0359,0.359,0.114,1.14
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,"integrated, aggressive levers (central)",base,2.11,0.0382,0.382,0.1198,1.198
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,"integrated, aggressive levers (low cost)",fixed,1.42,0.0534,0.534,0.1698,1.698
+"M2.0 (Concorde-class, psf baseline)","shoulder 6,989 km",6989,"integrated, aggressive levers (low cost)",base,1.42,0.0569,0.569,0.1785,1.785
+"M1.7 (Overture-class, lift-set)",spine,3614,base + 2nd tether row,fixed,20.88,0.0034,0.034,0.0162,0.162
+"M1.7 (Overture-class, lift-set)",spine,3614,base + 2nd tether row,base,20.88,0.0036,0.036,0.0169,0.169
+"M1.7 (Overture-class, lift-set)",spine,3614,cost-down plausible + 2nd row,fixed,6.9,0.0103,0.103,0.0489,0.489
+"M1.7 (Overture-class, lift-set)",spine,3614,cost-down plausible + 2nd row,base,6.9,0.0109,0.109,0.0511,0.511
+"M1.7 (Overture-class, lift-set)",spine,3614,cost-down aggressive + 2nd row,fixed,2.8,0.0255,0.255,0.1207,1.207
+"M1.7 (Overture-class, lift-set)",spine,3614,cost-down aggressive + 2nd row,base,2.8,0.027,0.27,0.1263,1.263
+"M1.7 (Overture-class, lift-set)",spine,3614,"cost-down aggressive (1 row, as published)",fixed,2.2,0.0324,0.324,0.1534,1.534
+"M1.7 (Overture-class, lift-set)",spine,3614,"cost-down aggressive (1 row, as published)",base,2.2,0.0343,0.343,0.1605,1.605
+"M1.7 (Overture-class, lift-set)",spine,3614,"integrated, plausible levers (central)",fixed,3.02,0.0236,0.236,0.1117,1.117
+"M1.7 (Overture-class, lift-set)",spine,3614,"integrated, plausible levers (central)",base,3.02,0.025,0.25,0.1169,1.169
+"M1.7 (Overture-class, lift-set)",spine,3614,"integrated, aggressive levers (central)",fixed,1.47,0.0484,0.484,0.2292,2.292
+"M1.7 (Overture-class, lift-set)",spine,3614,"integrated, aggressive levers (central)",base,1.47,0.0512,0.512,0.2398,2.398
+"M1.7 (Overture-class, lift-set)",spine,3614,"integrated, aggressive levers (low cost)",fixed,0.96,0.0744,0.744,0.352,3.52
+"M1.7 (Overture-class, lift-set)",spine,3614,"integrated, aggressive levers (low cost)",base,0.96,0.0787,0.787,0.3683,3.683

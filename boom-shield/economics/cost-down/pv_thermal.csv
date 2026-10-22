@@ -1,0 +1,5 @@
+lid,noon_T_K,noon_T_C,excess_over_air_K
+"white UV skin (alpha 0.15), no PV",241.0,-32.2,24.3
+"clear/metallised lid (alpha 0.25, low-e under)",252.6,-20.5,36.0
+"thin-film PV lid, high-e underside",305.4,32.2,88.7
+"thin-film PV lid, low-e underside (decoupled from gas)",322.5,49.3,105.8

@@ -1,0 +1,6 @@
+M,engine,h_cruise_km,LD,eta0,tsfc_lb_lbf_h,RF_km,f_accel,f_cruise,f_fuel,f_empty,f_payload,W0_t,W_mid_t,t_per_seat,kT,concept,structure,note,closes,a_acc,a_dec,fuel_kg_seat_km_nyclax,fuel_vs_subsonic_seat,q_kPa_at_20km
+1.7,fixed,20.25,9.4,0.4,1.025,1.656e+04,0.0313,0.3665,0.4578,0.2468,0.2955,77,62,1.185,1.22,Overture M1.7 (ref),aluminium/composite,repo reference; Symphony-class (E7),True,0.23,0.46,0.06835,3,11.19
+2.2,adaptive,20.25,8.036,0.4381,1.211,1.551e+04,0.03605,0.2657,0.3617,0.2618,0.3765,60.43,50.22,0.9297,1.4,"A: M2.2 Al-limit, adaptive","aluminium (130 C skin, E11)",Concorde-like structure limit,True,0.4326,0.8652,0.05722,2.511,18.73
+3,adaptive,22.13,6.8,0.4536,1.596,1.358e+04,0.05179,0.292,0.4038,0.3078,0.2884,78.88,63.28,1.214,1.4,"B: M3.0 Ti, adaptive","titanium (~290 C avg, E11)","XA10x-class turbine to M3, dry/min AB",True,0.5176,0.9,0.08584,3.767,34.83
+3.5,tbcc,24.12,6.314,0.46,1.836,1.279e+04,0.06458,0.3027,0.4272,0.3828,0.19,119.8,93.9,1.842,1.6,C: M3.5 TBCC,titanium + insulation,"turbine to ~M2.8, ramjet above (E12)",True,0.8311,0.9,0.14,6.146,47.41
+4,tbcc,25.87,5.95,0.475,2.032,1.245e+04,0.0772,0.3053,0.4425,0.3928,0.1647,138.1,106.4,2.125,1.6,D: M4.0 TBCC,titanium/Inconel hot structure,beyond ambient-H2 evanescent ceiling,True,0.8853,0.9,0.1691,7.422,61.92

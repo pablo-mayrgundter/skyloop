@@ -1,0 +1,9 @@
+design,best_network,km,bcr,spine_bcr,peak_seg_pax_M,peak_flights_day
+"repo M2.0 (55 m, 1.75 km)",spine,3614,0.04021,0.04021,80.07,4500
+M1.7 Overture,spine,3614,0.04331,0.04331,66.51,3738
+M2.0 adaptive,spine,3614,0.06993,0.06993,84.13,4728
+A: M2.2 Al-limit,spine,3614,0.07701,0.07701,88.28,4961
+M2.5 Ti adaptive,spine,3614,0.07997,0.07997,93.64,5262
+B: M3.0 Ti adaptive,spine,3614,0.08539,0.08539,99.95,5617
+C: M3.5 TBCC,spine,3614,0.08239,0.08239,107.4,6035
+D: M4.0 TBCC (+40 K gas),spine,3614,0.08682,0.08682,110.3,6197

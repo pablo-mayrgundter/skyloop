@@ -1,0 +1,4 @@
+case,bs_hard_acres_km,bs_excl_acres_km,bs_cost_usd_km,hsr_row_acres_km,hsr_row_cost_usd_km,hsr_parcels_per_km,bs_sites_per_km
+low,1.721,12.25,1.201e+04,3.756,7.834e+06,11.99,0.2
+base,3.824,60.87,1.823e+05,7.537,7.834e+06,11.99,0.3333
+high,11.47,376.7,4.009e+06,9.044,7.834e+06,11.99,0.5

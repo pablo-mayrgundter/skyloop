@@ -1,0 +1,31 @@
+system,market,trips_M,gt1500_M,gt2500_M,gt3500_M,paxkm_bn
+OW,CN domestic,470,132.2,19.14,1.641,583.3
+OW,DE domestic,14.17,0,0,0,6.273
+OW,ES domestic,34.77,0,0,0,16.82
+OW,GB domestic,16.19,0,0,0,7.486
+OW,ID domestic,48.04,0,0,0,35.56
+OW,IN domestic,98.46,16.13,0.04142,0,91.15
+OW,IR domestic,20.24,0,0,0,15.79
+OW,IT domestic,27.05,0,0,0,13.84
+OW,JP domestic,49.62,0,0,0,40.14
+OW,KZ domestic,8.095,0,0,0,7.694
+OW,MY domestic,19.32,0,0,0,6.276
+OW,NG domestic,12.14,0,0,0,6.201
+OW,PK domestic,9.714,0,0,0,9.188
+OW,RU domestic,57.12,20.04,11.08,5.4,96.35
+OW,SA domestic,26.47,0,0,0,20.59
+OW,TH domestic,27.05,0,0,0,18.26
+OW,TR domestic,70.22,0,0,0,29.99
+OW,VN domestic,25.43,0,0,0,22.77
+OW,ZA domestic,11.8,0,0,0,11.6
+OW,international (in system),750.3,428.5,293.2,218,2207
+CA,CA domestic,26.82,13.27,10.09,2.642,47.85
+LA,AR domestic,9.609,0,0,0,7.075
+LA,BR domestic,49.85,13.55,2.622,0,56.18
+LA,CO domestic,20.7,0,0,0,8.61
+LA,MX domestic,44.35,13.01,1.815,0,54.42
+LA,PE domestic,10.05,0,0,0,5.882
+LA,international (in system),24.77,21.72,15.32,11.63,94.54
+AU,AU domestic,43.64,14.89,8.043,1.811,64.43
+AU,international (in system),7.108,7.108,3.098,0.9877,19.58
+US,US domestic,506.6,270.4,108.8,44.1,889.2

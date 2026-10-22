@@ -1,0 +1,37 @@
+design,line,low_usd_m2,base_usd_m2,high_usd_m2,low_musd_km,base_musd_km,high_musd_km
+"M2.0 (Concorde-class, psf baseline)",Lid mass (PE sheet/laminate),7.50,14.99,36.98,11.25,26.24,73.97
+"M2.0 (Concorde-class, psf baseline)",Lid UV/weathering skin,1.00,2.00,5.00,1.50,3.50,10.00
+"M2.0 (Concorde-class, psf baseline)",Load tapes / scrim (UHMWPE),1.50,3.00,9.00,2.25,5.25,18.00
+"M2.0 (Concorde-class, psf baseline)",Floor film,0.80,1.50,3.00,1.20,2.62,6.00
+"M2.0 (Concorde-class, psf baseline)",Partitions and bellows,0.58,1.16,2.31,0.87,2.02,4.62
+"M2.0 (Concorde-class, psf baseline)",Soft ties,0.20,0.50,1.50,0.30,0.88,3.00
+"M2.0 (Concorde-class, psf baseline)",Seams and fabrication,3.00,6.00,15.00,4.50,10.50,30.00
+"M2.0 (Concorde-class, psf baseline)",Diurnal gas shuttle,0.50,1.00,3.00,0.75,1.75,6.00
+"M2.0 (Concorde-class, psf baseline)",H2 first fill,0.71,2.06,4.49,1.07,3.60,8.99
+"M2.0 (Concorde-class, psf baseline)",Tethers,1.85,3.17,5.55,2.78,5.55,11.11
+"M2.0 (Concorde-class, psf baseline)",Anchors,0.76,1.25,2.35,1.14,2.19,4.70
+"M2.0 (Concorde-class, psf baseline)",Winch/tension stations,1.33,4.76,15.00,2.00,8.33,30.00
+"M2.0 (Concorde-class, psf baseline)","Controls, sensors, transponders",0.80,2.40,6.40,1.20,4.20,12.80
+"M2.0 (Concorde-class, psf baseline)",Launch / installation,2.00,6.00,20.00,3.00,10.50,40.00
+"M2.0 (Concorde-class, psf baseline)",Engineering / PM,2.25,9.96,38.88,3.38,17.43,77.76
+"M2.0 (Concorde-class, psf baseline)",Contingency,4.96,29.88,168.47,7.44,52.28,336.94
+"M2.0 (Concorde-class, psf baseline)",Land and easements,0.01,0.10,2.00,0.01,0.18,4.01
+"M2.0 (Concorde-class, psf baseline)",TOTAL,29.76,89.73,338.95,44.63,157.03,677.90
+"M1.7 (Overture-class, lift-set)",Lid mass (PE sheet/laminate),4.35,8.71,21.27,6.53,13.06,42.54
+"M1.7 (Overture-class, lift-set)",Lid UV/weathering skin,1.00,2.00,5.00,1.50,3.00,10.00
+"M1.7 (Overture-class, lift-set)",Load tapes / scrim (UHMWPE),1.50,3.00,9.00,2.25,4.50,18.00
+"M1.7 (Overture-class, lift-set)",Floor film,0.80,1.50,3.00,1.20,2.25,6.00
+"M1.7 (Overture-class, lift-set)",Partitions and bellows,0.38,0.76,1.51,0.57,1.13,3.02
+"M1.7 (Overture-class, lift-set)",Soft ties,0.20,0.50,1.50,0.30,0.75,3.00
+"M1.7 (Overture-class, lift-set)",Seams and fabrication,3.00,6.00,15.00,4.50,9.00,30.00
+"M1.7 (Overture-class, lift-set)",Diurnal gas shuttle,0.50,1.00,3.00,0.75,1.50,6.00
+"M1.7 (Overture-class, lift-set)",H2 first fill,0.47,1.35,2.94,0.70,2.02,5.88
+"M1.7 (Overture-class, lift-set)",Tethers,1.38,2.76,4.14,2.07,4.14,8.27
+"M1.7 (Overture-class, lift-set)",Anchors,0.76,1.46,2.35,1.14,2.19,4.70
+"M1.7 (Overture-class, lift-set)",Winch/tension stations,1.33,5.56,15.00,2.00,8.33,30.00
+"M1.7 (Overture-class, lift-set)","Controls, sensors, transponders",0.80,2.40,6.40,1.20,3.60,12.80
+"M1.7 (Overture-class, lift-set)",Launch / installation,2.00,6.00,20.00,3.00,9.00,40.00
+"M1.7 (Overture-class, lift-set)",Engineering / PM,1.85,8.60,33.03,2.77,12.89,66.07
+"M1.7 (Overture-class, lift-set)",Contingency,4.06,25.79,143.15,6.10,38.68,286.29
+"M1.7 (Overture-class, lift-set)",Land and easements,0.01,0.12,2.00,0.01,0.18,4.01
+"M1.7 (Overture-class, lift-set)",TOTAL,24.39,77.49,288.30,36.59,116.23,576.59

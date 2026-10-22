@@ -1,0 +1,75 @@
+kind,country,pair,km,anchor_pax,model_pax,ratio,source,beta
+domestic total,CH,(all listed metros),,8.5e+05,8.5e+05,1,[K],0.5
+domestic,CN,PEK-SHA,1087,5.86e+06,8.273e+06,1.412,OAG24 via routes.csv,0.9
+domestic,CN,CAN-SHA,1193,5.328e+06,4.957e+06,0.9305,OAG24,0.9
+domestic,CN,SHA-SZX,1224,5.214e+06,4.819e+06,0.9244,OAG24,0.9
+domestic,CN,PEK-SZX,1957,4.256e+06,3.223e+06,0.7572,OAG24,0.9
+domestic,CN,CAN-HGH,1038,3.526e+06,2.621e+06,0.7432,OAG24,0.9
+domestic,CN,CTU-PEK,1555,3.496e+06,5.243e+06,1.5,OAG24,0.9
+domestic,CN,CAN-PEK,1881,3.245e+06,3.382e+06,1.042,OAG24,0.9
+domestic total,CN,(all listed metros),,4.857e+08,4.7e+08,0.9676,G1,0.9
+domestic total,DE,(all listed metros),,1.417e+07,1.417e+07,1,[K],0.5
+domestic total,ES,(all listed metros),,3.477e+07,3.477e+07,1,[K],0.5
+domestic total,GB,(all listed metros),,1.619e+07,1.619e+07,1,[K],0.5
+domestic total,ID,(all listed metros),,4.804e+07,4.804e+07,1,[K],0.5
+domestic,IN,BOM-DEL,1137,5.731e+06,6.325e+06,1.104,OAG24,1.15
+domestic,IN,BLR-DEL,1709,4.541e+06,3.585e+06,0.7894,FY24 pax,1.15
+domestic,IN,BLR-BOM,834,4.208e+06,5.608e+06,1.333,FY24 pax,1.15
+domestic,IN,DEL-HYD,1266,2.774e+06,3.639e+06,1.312,FY24 pax,1.15
+domestic,IN,CCU-DEL,1313,2.679e+06,2.709e+06,1.011,FY24 pax,1.15
+domestic total,IN,(all listed metros),,1.222e+08,9.846e+07,0.8058,G2,1.15
+domestic total,IR,(all listed metros),,2.024e+07,2.024e+07,1,[K],0.5
+domestic total,IT,(all listed metros),,2.705e+07,2.705e+07,1,[K],0.5
+domestic,JP,CTS-TYO,821,9.544e+06,1.544e+07,1.617,OAG24,0.5
+domestic,JP,FUK-TYO,881,9.072e+06,1.36e+07,1.499,OAG24,0.5
+domestic total,JP,(all listed metros),,7.727e+07,4.962e+07,0.6422,[K],0.5
+domestic total,KE,(all listed metros),,3.864e+06,3.864e+06,1,[K],0.5
+domestic total,KZ,(all listed metros),,8.095e+06,8.095e+06,1,[K],0.5
+domestic total,MY,(all listed metros),,1.932e+07,1.932e+07,1,[K],0.5
+domestic total,NG,(all listed metros),,1.214e+07,1.214e+07,1,[K],0.5
+domestic total,PK,(all listed metros),,9.714e+06,9.714e+06,1,[K],0.5
+domestic total,RU,(all listed metros),,5.712e+07,5.712e+07,1,G3,0.5
+domestic,SA,JED-RUH,852,6.264e+06,1.335e+07,2.131,OAG24,0.5
+domestic total,SA,(all listed metros),,3.864e+07,2.647e+07,0.6851,[K],0.5
+domestic total,TH,(all listed metros),,2.705e+07,2.705e+07,1,[K],0.5
+domestic total,TR,(all listed metros),,7.022e+07,7.022e+07,1,[K],0.5
+domestic,VN,HAN-SGN,1160,8.079e+06,1.31e+07,1.621,OAG24,0.5
+domestic total,VN,(all listed metros),,3.238e+07,2.543e+07,0.7854,[K],0.5
+domestic,ZA,CPT-JNB,1272,3.3e+06,5.029e+06,1.524,G7,0.5
+domestic total,ZA,(all listed metros),,1.457e+07,1.18e+07,0.81,G7+[K],0.5
+international,EUR-GCC,LON-DXB,5497,1.296e+06,1.03e+06,0.7947,G9,1.1
+international,GCC-GCC,DXB-RUH,872,2.408e+06,9.394e+05,0.3901,G8,1.1
+international,LEV-GCC,CAI-JED,1216,3.96e+06,1.738e+06,0.4389,G8,1.1
+international,SEA-HKT,BKK-HKG,1688,2.856e+06,1.703e+06,0.5964,G8,1.1
+international,SEA-SEA,BKK-SIN,1417,2.579e+06,4.26e+06,1.652,G8,1.1
+international,SEA-SEA,CGK-SIN,884,2.605e+06,2.53e+06,0.9711,G8,1.1
+international,HKT-HKT,HKG-TPE,806,4.624e+06,6.134e+06,1.326,G8,1.1
+international,NEA-NEA,SEL-TYO,1210,5e+06,4.243e+06,0.8487,G8 + [U],1.1
+international,NEA-NEA,OSA-SEL,860,3.386e+06,2.824e+06,0.834,G8,1.1
+international,GCC-SAS,DXB-BOM,1927,1.2e+06,1.771e+06,1.476,[U],1.1
+international,TR-EUR,IST-LON,2488,2e+06,3.058e+06,1.529,[U],1.1
+international,SAS-EUR,DEL-LON,6731,9e+05,4.201e+05,0.4668,[U],1.1
+international total,system,sum,,7.503e+08,7.503e+08,1,IPF,1.1
+domestic,CA,YVR-YYZ,3345,2.38e+06,1.693e+06,0.7115,G6,0.5
+domestic,CA,YVR-YYC,687,1.894e+06,2.663e+06,1.406,G6,0.5
+domestic total,CA,(all listed metros),,,2.682e+07,,G6,0.5
+international total,system,sum,,2.399e+07,0,0,IPF,1
+domestic total,AR,(all listed metros),,9.609e+06,9.609e+06,1,[K],0.5
+domestic total,BO,(all listed metros),,2.429e+06,2.429e+06,1,[K],0.5
+domestic,BR,BSB-SAO,854,2.465e+06,2.954e+06,1.198,G5,0.55
+domestic,BR,CNF-SAO,495,2.07e+06,3.581e+06,1.73,G5,0.55
+domestic,BR,RIO-SAO,336,7e+06,5.025e+06,0.7178,G5 [U],0.55
+domestic total,BR,(all listed metros),,6.081e+07,4.985e+07,0.8198,G4,0.55
+domestic total,CO,(all listed metros),,2.07e+07,2.07e+07,1,[K],0.5
+domestic total,EC,(all listed metros),,2.429e+06,2.429e+06,1,[K],0.5
+domestic total,MX,(all listed metros),,4.435e+07,4.435e+07,1,[K],0.5
+domestic total,PE,(all listed metros),,1.005e+07,1.005e+07,1,[K],0.5
+international total,system,sum,,2.477e+07,2.477e+07,1,IPF,1
+domestic,AU,MEL-SYD,705,7.007e+06,6.593e+06,0.9409,OAG24,0.35
+domestic,AU,BNE-SYD,754,4.37e+06,4.678e+06,1.07,[K] BITRE pre-COVID,0.35
+domestic,AU,BNE-MEL,1381,3.42e+06,4.213e+06,1.232,[K],0.35
+domestic,AU,MEL-PER,2700,1.995e+06,2.046e+06,1.026,[K],0.35
+domestic,AU,PER-SYD,3277,1.805e+06,1.768e+06,0.9796,[K],0.35
+domestic,AU,ADL-MEL,641,2.28e+06,2.277e+06,0.9985,[K],0.35
+domestic total,AU,(all listed metros),,4.868e+07,4.364e+07,0.8964,G10,0.35
+international total,system,sum,,7.863e+06,7.108e+06,0.9039,IPF,1

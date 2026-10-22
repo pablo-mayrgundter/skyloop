@@ -1,16 +1,16 @@
 rank,origin,dest,origin_city,dest_city,annual_passengers,reference_year,distance_km,mach_regime_class,nominal_mach,notes
-1,LAX,JFK,Los Angeles,New York JFK,,2024,3974,trunk,3.0,Fill annual_passengers from recent O&D dataset
-2,SFO,JFK,San Francisco,New York JFK,,2024,4152,trunk,3.0,Fill annual_passengers from recent O&D dataset
-3,LAX,ORD,Los Angeles,Chicago O'Hare,,2024,2802,corridor,2.0,Fill annual_passengers from recent O&D dataset
-4,LAX,ATL,Los Angeles,Atlanta,,2024,3126,trunk,3.0,Fill annual_passengers from recent O&D dataset
-5,SFO,ORD,San Francisco,Chicago O'Hare,,2024,2964,corridor,2.0,Fill annual_passengers from recent O&D dataset
-6,SEA,JFK,Seattle,New York JFK,,2024,3887,trunk,3.0,Fill annual_passengers from recent O&D dataset
-7,LAX,MIA,Los Angeles,Miami,,2024,3763,trunk,3.0,Fill annual_passengers from recent O&D dataset
-8,LAX,DFW,Los Angeles,Dallas/Fort Worth,,2024,1983,corridor,2.0,Fill annual_passengers from recent O&D dataset
-9,DEN,JFK,Denver,New York JFK,,2024,2610,corridor,2.0,Fill annual_passengers from recent O&D dataset
-10,DFW,JFK,Dallas/Fort Worth,New York JFK,,2024,2235,corridor,2.0,Fill annual_passengers from recent O&D dataset
-11,IAH,JFK,Houston Intercontinental,New York JFK,,2024,2277,corridor,2.0,Fill annual_passengers from recent O&D dataset
-12,MIA,JFK,Miami,New York JFK,,2024,1757,corridor,2.0,Fill annual_passengers from recent O&D dataset
-13,LAX,DEN,Los Angeles,Denver,,2024,1385,connector,1.5,Fill annual_passengers from recent O&D dataset
-14,DEN,ORD,Denver,Chicago O'Hare,,2024,1426,connector,1.5,Fill annual_passengers from recent O&D dataset
-15,ORD,JFK,Chicago O'Hare,New York JFK,,2024,1188,connector,1.5,Fill annual_passengers from recent O&D dataset
+1,LAX,JFK,Los Angeles,New York JFK,2745000,2025,3974,trunk,3.0,"OAG seats 3.43M x LF 0.8 (source OAG25US, see ../routes/routes.csv); replace with DB1B O&D"
+2,SFO,JFK,San Francisco,New York JFK,1760000,2025,4152,trunk,3.0,"PLACEHOLDER estimate 2.20M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+3,LAX,ORD,Los Angeles,Chicago O'Hare,2240000,2025,2802,corridor,2.0,"OAG seats 2.80M x LF 0.8 (source OAG25US, see ../routes/routes.csv); replace with DB1B O&D"
+4,LAX,ATL,Los Angeles,Atlanta,1600000,2025,3126,trunk,3.0,"PLACEHOLDER estimate 2.00M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+5,SFO,ORD,San Francisco,Chicago O'Hare,1520000,2025,2964,corridor,2.0,"PLACEHOLDER estimate 1.90M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+6,SEA,JFK,Seattle,New York JFK,800000,2025,3887,trunk,3.0,"PLACEHOLDER estimate 1.00M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+7,LAX,MIA,Los Angeles,Miami,880000,2025,3763,trunk,3.0,"PLACEHOLDER estimate 1.10M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+8,LAX,DFW,Los Angeles,Dallas/Fort Worth,1920000,2025,1983,corridor,2.0,"PLACEHOLDER estimate 2.40M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+9,DEN,JFK,Denver,New York JFK,720000,2025,2610,corridor,2.0,"PLACEHOLDER estimate 0.90M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+10,DFW,JFK,Dallas/Fort Worth,New York JFK,720000,2025,2235,corridor,2.0,"PLACEHOLDER estimate 0.90M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+11,IAH,JFK,Houston Intercontinental,New York JFK,320000,2025,2277,corridor,2.0,"PLACEHOLDER estimate 0.40M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+12,MIA,JFK,Miami,New York JFK,1280000,2025,1757,corridor,2.0,"PLACEHOLDER estimate 1.60M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+13,LAX,DEN,Los Angeles,Denver,1760000,2025,1385,connector,1.5,"PLACEHOLDER estimate 2.20M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+14,DEN,ORD,Denver,Chicago O'Hare,1680000,2025,1426,connector,1.5,"PLACEHOLDER estimate 2.10M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"
+15,ORD,JFK,Chicago O'Hare,New York JFK,560000,2025,1188,connector,1.5,"PLACEHOLDER estimate 0.70M x LF 0.8 (source EST, see ../routes/routes.csv); replace with DB1B O&D"

@@ -1,0 +1,46 @@
+design,overhead_min,cost,bcr,day_return_pax_M,bcr_net_fuel_carbon
+M1.7 Overture,130,base,0.04331,0,0.03536
+M1.7 Overture,130,plausible,0.1144,0,0.09343
+M1.7 Overture,130,aggressive,0.2767,0,0.2259
+M1.7 Overture,100,base,0.04363,1.104,0.03539
+M1.7 Overture,100,plausible,0.1153,1.104,0.09351
+M1.7 Overture,100,aggressive,0.2788,1.104,0.2261
+M1.7 Overture,70,base,0.05473,12.53,0.04393
+M1.7 Overture,70,plausible,0.1446,12.53,0.1161
+M1.7 Overture,70,aggressive,0.3497,12.53,0.2807
+M2.0 adaptive,130,base,0.06993,1.437,0.02437
+M2.0 adaptive,130,plausible,0.1874,1.437,0.06531
+M2.0 adaptive,130,aggressive,0.4479,1.437,0.1561
+M2.0 adaptive,100,base,0.07467,7.814,0.02786
+M2.0 adaptive,100,plausible,0.2001,7.814,0.07464
+M2.0 adaptive,100,aggressive,0.4782,7.814,0.1784
+M2.0 adaptive,70,base,0.09252,25.2,0.04133
+M2.0 adaptive,70,plausible,0.2479,25.2,0.1107
+M2.0 adaptive,70,aggressive,0.5925,25.2,0.2647
+A: M2.2 Al-limit,130,base,0.07701,1.757,0.003423
+A: M2.2 Al-limit,130,plausible,0.2096,1.757,0.009315
+A: M2.2 Al-limit,130,aggressive,0.4976,1.757,0.02212
+A: M2.2 Al-limit,100,base,0.08343,10.75,0.008217
+A: M2.2 Al-limit,100,plausible,0.2271,10.75,0.02236
+A: M2.2 Al-limit,100,aggressive,0.5391,10.75,0.0531
+A: M2.2 Al-limit,70,base,0.1013,29.37,0.02159
+A: M2.2 Al-limit,70,plausible,0.2757,29.37,0.05875
+A: M2.2 Al-limit,70,aggressive,0.6546,29.37,0.1395
+B: M3.0 Ti adaptive,130,base,0.08539,2.545,-0.2063
+B: M3.0 Ti adaptive,130,plausible,0.2423,2.545,-0.5855
+B: M3.0 Ti adaptive,130,aggressive,0.5676,2.545,-1.371
+B: M3.0 Ti adaptive,100,base,0.09862,23.91,-0.1931
+B: M3.0 Ti adaptive,100,plausible,0.2799,23.91,-0.5479
+B: M3.0 Ti adaptive,100,aggressive,0.6556,23.91,-1.283
+B: M3.0 Ti adaptive,70,base,0.1218,53.47,-0.1699
+B: M3.0 Ti adaptive,70,plausible,0.3455,53.47,-0.4823
+B: M3.0 Ti adaptive,70,aggressive,0.8094,53.47,-1.13
+C: M3.5 TBCC,130,base,0.08239,5.159,-0.5658
+C: M3.5 TBCC,130,plausible,0.2408,5.159,-1.654
+C: M3.5 TBCC,130,aggressive,0.5599,5.159,-3.845
+C: M3.5 TBCC,100,base,0.09904,35.57,-0.5492
+C: M3.5 TBCC,100,plausible,0.2895,35.57,-1.605
+C: M3.5 TBCC,100,aggressive,0.673,35.57,-3.732
+C: M3.5 TBCC,70,base,0.1173,63.51,-0.5309
+C: M3.5 TBCC,70,plausible,0.3429,63.51,-1.552
+C: M3.5 TBCC,70,aggressive,0.7973,63.51,-3.608
