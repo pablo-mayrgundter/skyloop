@@ -1,0 +1,16 @@
+aircraft,case,tau_req_s,H2_thickness_m,lid_kg_m2,lift_kg_m2,holddown_kg_m2,excess_lift_to_tethers_kg_m2,H2_kg_m2
+M1.7 (Overture),"psf_sweep reference (lid = lift - floor, no hold-down)",0.192,20.0,1.55,1.65,0.0,0.0,0.124
+M1.7 (Overture),"lift-closed, hold-down 0.62 (bare tethers, rim C_D 1)",0.192,21.0,1.02,1.74,0.62,0.0,0.13
+M1.7 (Overture),"lift-closed, hold-down 0.25 (rounded rim, C_D 0.3)",0.192,20.4,1.34,1.69,0.25,0.0,0.126
+M1.7 (Overture),"light lid 0.40 kg/m2, excess lift on tethers",0.192,22.1,0.4,1.83,1.33,0.71,0.137
+M1.7 (Overture),"light lid 1.0 kg/m2, excess lift on tethers",0.192,21.0,1.0,1.74,0.64,0.02,0.13
+M1.7 (Overture),"same d=20 m, lid 0.4 kg/m2: peak x1.16",0.192,20.0,0.4,1.65,,,0.124
+M1.7 (Overture),"same d=20 m, lid 1.0 kg/m2: peak x1.07",0.192,20.0,1.0,1.65,,,0.124
+M2.0 (Concorde),"psf_sweep reference (lid = lift - floor, no hold-down)",0.352,54.0,4.37,4.47,0.0,0.0,0.334
+M2.0 (Concorde),"lift-closed, hold-down 0.62 (bare tethers, rim C_D 1)",0.352,55.6,3.88,4.6,0.62,0.0,0.344
+M2.0 (Concorde),"lift-closed, hold-down 0.25 (rounded rim, C_D 0.3)",0.352,54.6,4.17,4.52,0.25,0.0,0.338
+M2.0 (Concorde),"light lid 0.40 kg/m2, excess lift on tethers",0.352,66.6,0.4,5.51,5.01,4.39,0.412
+M2.0 (Concorde),"light lid 1.0 kg/m2, excess lift on tethers",0.352,64.7,1.0,5.35,4.25,3.63,0.401
+M2.0 (Concorde),"same d=54 m, lid 0.4 kg/m2: peak x1.36",0.352,54.0,0.4,4.47,,,0.334
+M2.0 (Concorde),"same d=54 m, lid 1.0 kg/m2: peak x1.29",0.352,54.0,1.0,4.47,,,0.334
+M2.0 (Concorde),"same d=54 m, lid 2.3 kg/m2: peak x1.17",0.352,54.0,2.3,4.47,,,0.334

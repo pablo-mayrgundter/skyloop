@@ -1,0 +1,8 @@
+item,low_kg_m2,base_kg_m2,high_kg_m2,basis
+"Face film (LLDPE, 0.2 kN/m face + boom 0.3 kN/m transient, 5-10 MPa allowable at 217 K)",0.03,0.05,0.09,t = N/sigma = 25-90 um; structure-concept face ~0.2 kN/m
+"Bonded second ply (fatigue: bonded multi-ply, no free flaps)",0.02,0.04,0.06,lid-fatigue design C
+"UV/ozone top skin (PVF/PVDF or metallised, 12-25 um)",0.02,0.035,0.05,lid-fatigue S4; economics UV line
+Load-spreading tapes / scrim (UHMWPE),0.08,0.1,0.15,structure-concept section 2; cost_model tape_kg_m2
+"Seams, tie pads, rolling-lobe hinges (+15-25 %)",0.02,0.04,0.08,structure-concept +15 %; lid-fatigue pads
+"Controls, sensors, transponders",0.03,0.05,0.08,structure-concept 0.05
+TOTAL lid structure,0.2,0.315,0.51,

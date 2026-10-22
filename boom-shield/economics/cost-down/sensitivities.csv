@@ -1,0 +1,11 @@
+design,scenario,variant,capex_usd_m2,net_musd_km_yr,bcr_bl_100,bcr_sub_100
+"M2.0 (Concorde-class, psf baseline)",base,two tether rows (both crosswind directions),106.3,27.3,0.038,0.136
+"M2.0 (Concorde-class, psf baseline)",plausible,two tether rows (both crosswind directions),42.3,9.58,0.107,0.388
+"M2.0 (Concorde-class, psf baseline)",aggressive,two tether rows (both crosswind directions),23.2,4.02,0.256,0.923
+"M2.0 (Concorde-class, psf baseline)",aggressive,no dual use,19.9,4.24,0.243,0.877
+"M2.0 (Concorde-class, psf baseline)",aggressive,PV as price-taker at $40/MWh (no ground-PV cap),19.8,2.1,0.49,1.769
+"M1.7 (Overture-class, lift-set)",base,two tether rows (both crosswind directions),95.1,20.88,0.034,0.162
+"M1.7 (Overture-class, lift-set)",plausible,two tether rows (both crosswind directions),35.5,6.9,0.103,0.488
+"M1.7 (Overture-class, lift-set)",aggressive,two tether rows (both crosswind directions),19.4,2.8,0.255,1.207
+"M1.7 (Overture-class, lift-set)",aggressive,no dual use,16.0,2.97,0.24,1.134
+"M1.7 (Overture-class, lift-set)",aggressive,PV as price-taker at $40/MWh (no ground-PV cap),15.8,1.13,0.63,2.981

@@ -1,0 +1,8 @@
+design,level,Wp_m2,kWh_m2_yr,revenue,capex_usd_w,capex_usd_m2,annualised_pv,lcoe_usd_mwh,thermal_penalty,ballast_credit,margin_price_taker,surplus,pv_frac
+"M2.0 (Concorde-class, psf baseline)",plausible,150.0,321.6,11.256,0.7,105.0,11.111,34.55,0.066,0.086,0.165,0.165,0.05
+"M2.0 (Concorde-class, psf baseline)",aggressive,180.0,395.568,15.823,0.45,81.0,8.031,20.302,0.022,0.069,7.838,3.092,0.15
+"M1.7 (Overture-class, lift-set)",plausible,150.0,321.6,11.256,0.7,105.0,11.111,34.55,0.042,0.086,0.189,0.189,0.05
+"M1.7 (Overture-class, lift-set)",aggressive,180.0,395.568,15.823,0.45,81.0,8.031,20.302,0.014,0.069,7.847,3.1,0.15
+per m2 of PV (any design),plausible,150.0,321.6,11.256,0.7,105.0,11.111,34.55,0.15,0.086,0.081,0.081,1.0
+per m2 of PV (any design),aggressive,180.0,395.568,15.823,0.45,81.0,8.031,20.302,0.112,0.069,7.748,3.002,1.0
+per m2 of PV (any design),low price $25,150.0,321.6,8.04,0.7,105.0,11.111,34.55,0.15,0.086,-3.135,-3.135,1.0

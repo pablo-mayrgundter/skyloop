@@ -1,0 +1,13 @@
+design,lever,plausible_usd_m2,plausible_net_musd_km_yr,plausible_factor,aggressive_usd_m2,aggressive_net_musd_km_yr,aggressive_factor
+"M2.0 (Concorde-class, psf baseline)",1. Mass: cheap ballast ply; M1.7 re-sized to psf (21 m),72.5,18.76,1.24,70.2,18.16,1.29
+"M2.0 (Concorde-class, psf baseline)",2. Materials & roll-to-roll manufacturing,59.2,15.49,1.51,42.4,11.17,2.09
+"M2.0 (Concorde-class, psf baseline)",3. Nth-of-a-kind engineering & contingency,72.6,20.47,1.14,64.6,19.13,1.22
+"M2.0 (Concorde-class, psf baseline)","4. Life: replaceable UV skin, robots",89.7,20.41,1.14,89.7,19.15,1.22
+"M2.0 (Concorde-class, psf baseline)","5. Operations: unstaffed stations, insurance, rim rounding",82.3,20.44,1.14,79.1,19.32,1.21
+"M2.0 (Concorde-class, psf baseline)",6. Dual-use: PV (market-capped) + hosting,89.7,23.32,1.0,89.7,22.5,1.04
+"M1.7 (Overture-class, lift-set)",1. Mass: cheap ballast ply; M1.7 re-sized to psf (21 m),62.5,13.92,1.24,62.2,13.85,1.25
+"M1.7 (Overture-class, lift-set)",2. Materials & roll-to-roll manufacturing,52.1,11.69,1.48,37.9,8.58,2.01
+"M1.7 (Overture-class, lift-set)",3. Nth-of-a-kind engineering & contingency,62.7,15.14,1.14,55.8,14.15,1.22
+"M1.7 (Overture-class, lift-set)","4. Life: replaceable UV skin, robots",77.5,15.31,1.13,77.5,14.43,1.2
+"M1.7 (Overture-class, lift-set)","5. Operations: unstaffed stations, insurance, rim rounding",69.4,14.69,1.18,66.1,13.74,1.26
+"M1.7 (Overture-class, lift-set)",6. Dual-use: PV (market-capped) + hosting,77.5,17.25,1.0,77.5,16.53,1.04

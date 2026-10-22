@@ -1,0 +1,25 @@
+design,scenario,category,usd_m2
+"M2.0 (Concorde-class, psf baseline)",base,Lid & envelope,29.15
+"M2.0 (Concorde-class, psf baseline)",base,"Tethers, anchors, stations",9.18
+"M2.0 (Concorde-class, psf baseline)",base,"H2, controls, shuttle, install",11.46
+"M2.0 (Concorde-class, psf baseline)",base,"Engineering, contingency, land",39.94
+"M2.0 (Concorde-class, psf baseline)",plausible,Lid & envelope,12.95
+"M2.0 (Concorde-class, psf baseline)",plausible,"Tethers, anchors, stations",4.54
+"M2.0 (Concorde-class, psf baseline)",plausible,"H2, controls, shuttle, install",7.0
+"M2.0 (Concorde-class, psf baseline)",plausible,"Engineering, contingency, land",11.24
+"M2.0 (Concorde-class, psf baseline)",aggressive,Lid & envelope,8.37
+"M2.0 (Concorde-class, psf baseline)",aggressive,"Tethers, anchors, stations",2.65
+"M2.0 (Concorde-class, psf baseline)",aggressive,"H2, controls, shuttle, install",4.17
+"M2.0 (Concorde-class, psf baseline)",aggressive,"Engineering, contingency, land",4.56
+"M1.7 (Overture-class, lift-set)",base,Lid & envelope,22.46
+"M1.7 (Overture-class, lift-set)",base,"Tethers, anchors, stations",9.77
+"M1.7 (Overture-class, lift-set)",base,"H2, controls, shuttle, install",10.75
+"M1.7 (Overture-class, lift-set)",base,"Engineering, contingency, land",34.51
+"M1.7 (Overture-class, lift-set)",plausible,Lid & envelope,9.15
+"M1.7 (Overture-class, lift-set)",plausible,"Tethers, anchors, stations",4.55
+"M1.7 (Overture-class, lift-set)",plausible,"H2, controls, shuttle, install",6.07
+"M1.7 (Overture-class, lift-set)",plausible,"Engineering, contingency, land",9.11
+"M1.7 (Overture-class, lift-set)",aggressive,Lid & envelope,5.83
+"M1.7 (Overture-class, lift-set)",aggressive,"Tethers, anchors, stations",2.75
+"M1.7 (Overture-class, lift-set)",aggressive,"H2, controls, shuttle, install",3.59
+"M1.7 (Overture-class, lift-set)",aggressive,"Engineering, contingency, land",3.67
