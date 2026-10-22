@@ -1,0 +1,15 @@
+item,low,base,high
+"core tubes (2 bores ~4 m, CFRP sandwich + joints/stiffening, 120-300 kg/m at $30-80/kg)",3,8,25
+"guideway, levitation track, alignment actuators",3,6,12
+"vacuum: pumps, sector gate valves, seals and joints",1,2,5
+"buoyancy: H2 envelope R 43/82/88 m (physics), film 0.32-0.66 M m2/km at $8/15/30 + gas",2.6,9.8,20.5
+"tethers, anchors, winches (physics: 45 MN every 3 km ~ 70 % of BoomShield t/km)",3,11,22
+power and control along the line,1,2,4
+"safety: sector refuges, rescue vehicles, egress",1,2,4
+"subtotal, stratospheric run",14.6,40.8,92.5
+x soft costs x contingency = run $M/km,19.3,66.3,187
+"troposphere ramp incl. LSM, $M/km",39.5,157,623
+"urban approach, $M/km",60,150,300
+"station, $B each",1,2.5,5
+"pod, $M per seat",0.08,0.15,0.3
+"O&M, share of capex per yr",0.015,0.025,0.04

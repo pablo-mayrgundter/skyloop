@@ -1,0 +1,4 @@
+Mach,V_m_s,R_horiz_km_0.1g,R_horiz_km_0.2g,R_horiz_km_0.5g,R_vert_km_0.05g,R_vert_km_0.1g,earth_curv_unload_g,aero_lift_wing_m2_at_10Pa_CL0.3,stop_km_0.5g,stop_s_0.5g,brickwall_headway_s_0.5g,brickwall_pods_per_h_0.5g,brickwall_pax_per_h_0.5g,stop_km_1.0g,stop_s_1.0g,brickwall_headway_s_1.0g,brickwall_pods_per_h_1.0g,brickwall_pax_per_h_1.0g
+2,590.1,355.1,177.6,71.03,710.3,355.1,0.005574,4041,35.51,120.4,60.18,59.82,179.5,17.76,60.18,30.09,119.6,358.9
+4,1180,1421,710.3,284.1,2841,1421,0.0223,1010,142.1,240.7,120.4,29.91,89.73,71.03,120.4,60.18,59.82,179.5
+6,1770,3196,1598,639.2,6392,3196,0.05017,449.1,319.6,361.1,180.5,19.94,59.82,159.8,180.5,90.27,39.88,119.6

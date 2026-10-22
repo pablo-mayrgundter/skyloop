@@ -1,0 +1,2305 @@
+network,M,vs,opening,capture,kind,scale_vs_base,breakeven_run_usd_m_km,breakeven_avg_tube_usd_m_km,base_avg_tube_usd_m_km
+spine all-stop,2,sub,2045,0.3,gross,-0.02951,-1.956,-2.827,95.82
+spine all-stop,2,sub,2045,0.3,net,0.02036,1.35,1.951,95.82
+spine all-stop,2,sub,2045,1,gross,0.1792,11.88,17.17,95.82
+spine all-stop,2,sub,2045,1,net,0.3454,22.9,33.09,95.82
+spine all-stop,2,sub,2050,0.3,gross,-0.0162,-1.074,-1.553,95.82
+spine all-stop,2,sub,2050,0.3,net,0.03731,2.473,3.575,95.82
+spine all-stop,2,sub,2050,1,gross,0.2235,14.82,21.42,95.82
+spine all-stop,2,sub,2050,1,net,0.4019,26.64,38.51,95.82
+spine all-stop,2,sub,2055,0.3,gross,-0.001943,-0.1288,-0.1862,95.82
+spine all-stop,2,sub,2055,0.3,net,0.055,3.647,5.27,95.82
+spine all-stop,2,sub,2055,1,gross,0.2694,17.86,25.82,95.82
+spine all-stop,2,sub,2055,1,net,0.4586,30.4,43.94,95.82
+spine all-stop,2,sub,2060,0.3,gross,0.01328,0.8806,1.273,95.82
+spine all-stop,2,sub,2060,0.3,net,0.07343,4.869,7.036,95.82
+spine all-stop,2,sub,2060,1,gross,0.3145,20.85,30.13,95.82
+spine all-stop,2,sub,2060,1,net,0.5121,33.95,49.07,95.82
+spine all-stop,2,bl,2045,0.3,gross,-0.0629,-4.17,-6.027,95.82
+spine all-stop,2,bl,2045,0.3,net,0.002031,0.1347,0.1946,95.82
+spine all-stop,2,bl,2045,1,gross,0.0361,2.394,3.459,95.82
+spine all-stop,2,bl,2045,1,net,0.2526,16.74,24.2,95.82
+spine all-stop,2,bl,2050,0.3,gross,-0.05659,-3.752,-5.423,95.82
+spine all-stop,2,bl,2050,0.3,net,0.01307,0.8663,1.252,95.82
+spine all-stop,2,bl,2050,1,gross,0.05714,3.788,5.475,95.82
+spine all-stop,2,bl,2050,1,net,0.2893,19.18,27.72,95.82
+spine all-stop,2,bl,2055,0.3,gross,-0.04983,-3.303,-4.774,95.82
+spine all-stop,2,bl,2055,0.3,net,0.0243,1.611,2.329,95.82
+spine all-stop,2,bl,2055,1,gross,0.07969,5.284,7.636,95.82
+spine all-stop,2,bl,2055,1,net,0.3268,21.67,31.31,95.82
+spine all-stop,2,bl,2060,0.3,gross,-0.0426,-2.825,-4.082,95.82
+spine all-stop,2,bl,2060,0.3,net,0.03577,2.371,3.427,95.82
+spine all-stop,2,bl,2060,1,gross,0.1038,6.88,9.944,95.82
+spine all-stop,2,bl,2060,1,net,0.365,24.2,34.97,95.82
+spine all-stop,2,m22,2045,0.3,gross,-0.07051,-4.675,-6.757,95.82
+spine all-stop,2,m22,2045,0.3,net,-0.03789,-2.512,-3.631,95.82
+spine all-stop,2,m22,2045,1,gross,-0.003356,-0.2225,-0.3216,95.82
+spine all-stop,2,m22,2045,1,net,0.1054,6.987,10.1,95.82
+spine all-stop,2,m22,2050,0.3,gross,-0.06623,-4.391,-6.347,95.82
+spine all-stop,2,m22,2050,0.3,net,-0.03124,-2.071,-2.993,95.82
+spine all-stop,2,m22,2050,1,gross,0.01091,0.7236,1.046,95.82
+spine all-stop,2,m22,2050,1,net,0.1276,8.458,12.22,95.82
+spine all-stop,2,m22,2055,0.3,gross,-0.06164,-4.087,-5.907,95.82
+spine all-stop,2,m22,2055,0.3,net,-0.0244,-1.618,-2.338,95.82
+spine all-stop,2,m22,2055,1,gross,0.02621,1.738,2.512,95.82
+spine all-stop,2,m22,2055,1,net,0.1504,9.969,14.41,95.82
+spine all-stop,2,m22,2060,0.3,gross,-0.05674,-3.762,-5.437,95.82
+spine all-stop,2,m22,2060,0.3,net,-0.01737,-1.152,-1.664,95.82
+spine all-stop,2,m22,2060,1,gross,0.04255,2.821,4.077,95.82
+spine all-stop,2,m22,2060,1,net,0.1738,11.52,16.65,95.82
+spine all-stop,3,sub,2045,0.3,gross,0.0002886,0.01913,0.02859,99.06
+spine all-stop,3,sub,2045,0.3,net,0.052,3.448,5.151,99.06
+spine all-stop,3,sub,2045,1,gross,0.2625,17.4,26,99.06
+spine all-stop,3,sub,2045,1,net,0.4336,28.75,42.96,99.06
+spine all-stop,3,sub,2050,0.3,gross,0.0172,1.14,1.703,99.06
+spine all-stop,3,sub,2050,0.3,net,0.07273,4.822,7.205,99.06
+spine all-stop,3,sub,2050,1,gross,0.3105,20.59,30.76,99.06
+spine all-stop,3,sub,2050,1,net,0.4914,32.58,48.68,99.06
+spine all-stop,3,sub,2055,0.3,gross,0.03532,2.342,3.499,99.06
+spine all-stop,3,sub,2055,0.3,net,0.09441,6.26,9.352,99.06
+spine all-stop,3,sub,2055,1,gross,0.355,23.53,35.16,99.06
+spine all-stop,3,sub,2055,1,net,0.5422,35.95,53.71,99.06
+spine all-stop,3,sub,2060,0.3,gross,0.05467,3.625,5.416,99.06
+spine all-stop,3,sub,2060,0.3,net,0.117,7.757,11.59,99.06
+spine all-stop,3,sub,2060,1,gross,0.3926,26.03,38.89,99.06
+spine all-stop,3,sub,2060,1,net,0.5816,38.56,57.62,99.06
+spine all-stop,3,bl,2045,0.3,gross,-0.04638,-3.075,-4.594,99.06
+spine all-stop,3,bl,2045,0.3,net,0.06152,4.079,6.094,99.06
+spine all-stop,3,bl,2045,1,gross,0.09131,6.054,9.045,99.06
+spine all-stop,3,bl,2045,1,net,0.451,29.9,44.67,99.06
+spine all-stop,3,bl,2050,0.3,gross,-0.0376,-2.493,-3.725,99.06
+spine all-stop,3,bl,2050,0.3,net,0.07817,5.183,7.743,99.06
+spine all-stop,3,bl,2050,1,gross,0.1206,7.993,11.94,99.06
+spine all-stop,3,bl,2050,1,net,0.5065,33.58,50.17,99.06
+spine all-stop,3,bl,2055,0.3,gross,-0.02819,-1.869,-2.792,99.06
+spine all-stop,3,bl,2055,0.3,net,0.09501,6.299,9.411,99.06
+spine all-stop,3,bl,2055,1,gross,0.1519,10.07,15.05,99.06
+spine all-stop,3,bl,2055,1,net,0.5626,37.3,55.73,99.06
+spine all-stop,3,bl,2060,0.3,gross,-0.01814,-1.203,-1.797,99.06
+spine all-stop,3,bl,2060,0.3,net,0.112,7.429,11.1,99.06
+spine all-stop,3,bl,2060,1,gross,0.1854,12.29,18.37,99.06
+spine all-stop,3,bl,2060,1,net,0.6194,41.06,61.35,99.06
+spine all-stop,3,m22,2045,0.3,gross,-0.06232,-4.132,-6.173,99.06
+spine all-stop,3,m22,2045,0.3,net,-0.02935,-1.946,-2.907,99.06
+spine all-stop,3,m22,2045,1,gross,0.01466,0.9718,1.452,99.06
+spine all-stop,3,m22,2045,1,net,0.1246,8.258,12.34,99.06
+spine all-stop,3,m22,2050,0.3,gross,-0.05741,-3.806,-5.687,99.06
+spine all-stop,3,m22,2050,0.3,net,-0.02204,-1.461,-2.183,99.06
+spine all-stop,3,m22,2050,1,gross,0.03101,2.056,3.072,99.06
+spine all-stop,3,m22,2050,1,net,0.1489,9.874,14.75,99.06
+spine all-stop,3,m22,2055,0.3,gross,-0.05215,-3.458,-5.166,99.06
+spine all-stop,3,m22,2055,0.3,net,-0.01451,-0.9619,-1.437,99.06
+spine all-stop,3,m22,2055,1,gross,0.04855,3.219,4.809,99.06
+spine all-stop,3,m22,2055,1,net,0.174,11.54,17.24,99.06
+spine all-stop,3,m22,2060,0.3,gross,-0.04653,-3.085,-4.61,99.06
+spine all-stop,3,m22,2060,0.3,net,-0.006756,-0.4479,-0.6692,99.06
+spine all-stop,3,m22,2060,1,gross,0.06727,4.46,6.664,99.06
+spine all-stop,3,m22,2060,1,net,0.1999,13.25,19.8,99.06
+spine all-stop,4,sub,2045,0.3,gross,0.01116,0.7399,1.39,124.5
+spine all-stop,4,sub,2045,0.3,net,0.05022,3.329,6.254,124.5
+spine all-stop,4,sub,2045,1,gross,0.235,15.58,29.27,124.5
+spine all-stop,4,sub,2045,1,net,0.3618,23.99,45.06,124.5
+spine all-stop,4,sub,2050,0.3,gross,0.02607,1.729,3.247,124.5
+spine all-stop,4,sub,2050,0.3,net,0.06806,4.513,8.476,124.5
+spine all-stop,4,sub,2050,1,gross,0.2706,17.94,33.7,124.5
+spine all-stop,4,sub,2050,1,net,0.4027,26.7,50.15,124.5
+spine all-stop,4,sub,2055,0.3,gross,0.04206,2.788,5.238,124.5
+spine all-stop,4,sub,2055,0.3,net,0.08673,5.75,10.8,124.5
+spine all-stop,4,sub,2055,1,gross,0.3005,19.92,37.42,124.5
+spine all-stop,4,sub,2055,1,net,0.4344,28.8,54.09,124.5
+spine all-stop,4,sub,2060,0.3,gross,0.05912,3.92,7.363,124.5
+spine all-stop,4,sub,2060,0.3,net,0.1061,7.036,13.22,124.5
+spine all-stop,4,sub,2060,1,gross,0.3295,21.85,41.04,124.5
+spine all-stop,4,sub,2060,1,net,0.4637,30.74,57.75,124.5
+spine all-stop,4,bl,2045,0.3,gross,-0.03065,-2.032,-3.817,124.5
+spine all-stop,4,bl,2045,0.3,net,0.05732,3.801,7.139,124.5
+spine all-stop,4,bl,2045,1,gross,0.09122,6.048,11.36,124.5
+spine all-stop,4,bl,2045,1,net,0.3845,25.49,47.88,124.5
+spine all-stop,4,bl,2050,0.3,gross,-0.02288,-1.517,-2.849,124.5
+spine all-stop,4,bl,2050,0.3,net,0.07154,4.743,8.909,124.5
+spine all-stop,4,bl,2050,1,gross,0.1171,7.765,14.59,124.5
+spine all-stop,4,bl,2050,1,net,0.4318,28.63,53.78,124.5
+spine all-stop,4,bl,2055,0.3,gross,-0.01455,-0.9646,-1.812,124.5
+spine all-stop,4,bl,2055,0.3,net,0.08592,5.697,10.7,124.5
+spine all-stop,4,bl,2055,1,gross,0.1449,9.606,18.04,124.5
+spine all-stop,4,bl,2055,1,net,0.4798,31.81,59.75,124.5
+spine all-stop,4,bl,2060,0.3,gross,-0.005657,-0.375,-0.7044,124.5
+spine all-stop,4,bl,2060,0.3,net,0.1004,6.66,12.51,124.5
+spine all-stop,4,bl,2060,1,gross,0.1745,11.57,21.73,124.5
+spine all-stop,4,bl,2060,1,net,0.5282,35.02,65.78,124.5
+spine all-stop,4,m22,2045,0.3,gross,-0.0477,-3.163,-5.941,124.5
+spine all-stop,4,m22,2045,0.3,net,-0.02242,-1.487,-2.793,124.5
+spine all-stop,4,m22,2045,1,gross,0.01692,1.122,2.107,124.5
+spine all-stop,4,m22,2045,1,net,0.1012,6.708,12.6,124.5
+spine all-stop,4,m22,2050,0.3,gross,-0.04358,-2.89,-5.428,124.5
+spine all-stop,4,m22,2050,0.3,net,-0.01645,-1.091,-2.049,124.5
+spine all-stop,4,m22,2050,1,gross,0.03065,2.032,3.817,124.5
+spine all-stop,4,m22,2050,1,net,0.1211,8.028,15.08,124.5
+spine all-stop,4,m22,2055,0.3,gross,-0.03917,-2.597,-4.878,124.5
+spine all-stop,4,m22,2055,0.3,net,-0.0103,-0.6827,-1.282,124.5
+spine all-stop,4,m22,2055,1,gross,0.04537,3.008,5.65,124.5
+spine all-stop,4,m22,2055,1,net,0.1416,9.389,17.64,124.5
+spine all-stop,4,m22,2060,0.3,gross,-0.03445,-2.284,-4.291,124.5
+spine all-stop,4,m22,2060,0.3,net,-0.003963,-0.2627,-0.4935,124.5
+spine all-stop,4,m22,2060,1,gross,0.06109,4.05,7.608,124.5
+spine all-stop,4,m22,2060,1,net,0.1627,10.79,20.26,124.5
+spine all-stop,6,sub,2045,0.3,gross,0.01234,0.8182,1.937,157
+spine all-stop,6,sub,2045,0.3,net,0.03237,2.146,5.081,157
+spine all-stop,6,sub,2045,1,gross,0.1922,12.74,30.16,157
+spine all-stop,6,sub,2045,1,net,0.2566,17.01,40.27,157
+spine all-stop,6,sub,2050,0.3,gross,0.02449,1.624,3.844,157
+spine all-stop,6,sub,2050,0.3,net,0.04615,3.06,7.244,157
+spine all-stop,6,sub,2050,1,gross,0.2192,14.54,34.42,157
+spine all-stop,6,sub,2050,1,net,0.2864,18.99,44.96,157
+spine all-stop,6,sub,2055,0.3,gross,0.03751,2.487,5.888,157
+spine all-stop,6,sub,2055,0.3,net,0.06053,4.013,9.502,157
+spine all-stop,6,sub,2055,1,gross,0.242,16.04,37.98,157
+spine all-stop,6,sub,2055,1,net,0.3098,20.54,48.63,157
+spine all-stop,6,sub,2060,0.3,gross,0.05141,3.409,8.07,157
+spine all-stop,6,sub,2060,0.3,net,0.07534,4.995,11.83,157
+spine all-stop,6,sub,2060,1,gross,0.2649,17.56,41.59,157
+spine all-stop,6,sub,2060,1,net,0.3321,22.02,52.13,157
+spine all-stop,6,bl,2045,0.3,gross,-0.02202,-1.46,-3.456,157
+spine all-stop,6,bl,2045,0.3,net,0.04166,2.762,6.54,157
+spine all-stop,6,bl,2045,1,gross,0.07766,5.149,12.19,157
+spine all-stop,6,bl,2045,1,net,0.2899,19.22,45.51,157
+spine all-stop,6,bl,2050,0.3,gross,-0.01566,-1.038,-2.459,157
+spine all-stop,6,bl,2050,0.3,net,0.05275,3.498,8.281,157
+spine all-stop,6,bl,2050,1,gross,0.09884,6.553,15.52,157
+spine all-stop,6,bl,2050,1,net,0.3269,21.67,51.32,157
+spine all-stop,6,bl,2055,0.3,gross,-0.008851,-0.5868,-1.389,157
+spine all-stop,6,bl,2055,0.3,net,0.06394,4.239,10.04,157
+spine all-stop,6,bl,2055,1,gross,0.1216,8.059,19.08,157
+spine all-stop,6,bl,2055,1,net,0.3642,24.15,57.17,157
+spine all-stop,6,bl,2060,0.3,gross,-0.001578,-0.1046,-0.2477,157
+spine all-stop,6,bl,2060,0.3,net,0.07514,4.982,11.79,157
+spine all-stop,6,bl,2060,1,gross,0.1458,9.666,22.89,157
+spine all-stop,6,bl,2060,1,net,0.4015,26.62,63.03,157
+spine all-stop,6,m22,2045,0.3,gross,-0.03726,-2.471,-5.849,157
+spine all-stop,6,m22,2045,0.3,net,-0.01943,-1.288,-3.05,157
+spine all-stop,6,m22,2045,1,gross,0.01471,0.9753,2.309,157
+spine all-stop,6,m22,2045,1,net,0.07415,4.916,11.64,157
+spine all-stop,6,m22,2050,0.3,gross,-0.03395,-2.251,-5.329,157
+spine all-stop,6,m22,2050,0.3,net,-0.01479,-0.9807,-2.322,157
+spine all-stop,6,m22,2050,1,gross,0.02575,1.707,4.043,157
+spine all-stop,6,m22,2050,1,net,0.08962,5.942,14.07,157
+spine all-stop,6,m22,2055,0.3,gross,-0.0304,-2.015,-4.772,157
+spine all-stop,6,m22,2055,0.3,net,-0.01001,-0.664,-1.572,157
+spine all-stop,6,m22,2055,1,gross,0.03759,2.492,5.901,157
+spine all-stop,6,m22,2055,1,net,0.1055,6.997,16.57,157
+spine all-stop,6,m22,2060,0.3,gross,-0.02661,-1.764,-4.177,157
+spine all-stop,6,m22,2060,0.3,net,-0.005124,-0.3397,-0.8044,157
+spine all-stop,6,m22,2060,1,gross,0.05023,3.331,7.886,157
+spine all-stop,6,m22,2060,1,net,0.1218,8.078,19.13,157
+spine express,2,sub,2045,0.3,gross,-0.01567,-1.039,-1.406,89.72
+spine express,2,sub,2045,0.3,net,0.03398,2.253,3.049,89.72
+spine express,2,sub,2045,1,gross,0.2121,14.06,19.03,89.72
+spine express,2,sub,2045,1,net,0.3769,24.99,33.82,89.72
+spine express,2,sub,2050,0.3,gross,-0.001038,-0.06879,-0.09309,89.72
+spine express,2,sub,2050,0.3,net,0.05224,3.463,4.687,89.72
+spine express,2,sub,2050,1,gross,0.2549,16.9,22.87,89.72
+spine express,2,sub,2050,1,net,0.4293,28.46,38.51,89.72
+spine express,2,sub,2055,0.3,gross,0.01465,0.9714,1.315,89.72
+spine express,2,sub,2055,0.3,net,0.07134,4.73,6.401,89.72
+spine express,2,sub,2055,1,gross,0.295,19.56,26.47,89.72
+spine express,2,sub,2055,1,net,0.4761,31.57,42.72,89.72
+spine express,2,sub,2060,0.3,gross,0.0314,2.082,2.817,89.72
+spine express,2,sub,2060,0.3,net,0.09132,6.055,8.194,89.72
+spine express,2,sub,2060,1,gross,0.3296,21.85,29.57,89.72
+spine express,2,sub,2060,1,net,0.5136,34.05,46.08,89.72
+spine express,2,bl,2045,0.3,gross,-0.05434,-3.602,-4.875,89.72
+spine express,2,bl,2045,0.3,net,0.04443,2.946,3.987,89.72
+spine express,2,bl,2045,1,gross,0.06632,4.397,5.95,89.72
+spine express,2,bl,2045,1,net,0.3955,26.22,35.49,89.72
+spine express,2,bl,2050,0.3,gross,-0.04664,-3.093,-4.185,89.72
+spine express,2,bl,2050,0.3,net,0.0593,3.931,5.32,89.72
+spine express,2,bl,2050,1,gross,0.09195,6.097,8.25,89.72
+spine express,2,bl,2050,1,net,0.4451,29.51,39.93,89.72
+spine express,2,bl,2055,0.3,gross,-0.0384,-2.546,-3.445,89.72
+spine express,2,bl,2055,0.3,net,0.07435,4.929,6.67,89.72
+spine express,2,bl,2055,1,gross,0.1194,7.919,10.72,89.72
+spine express,2,bl,2055,1,net,0.4953,32.84,44.43,89.72
+spine express,2,bl,2060,0.3,gross,-0.0296,-1.962,-2.655,89.72
+spine express,2,bl,2060,0.3,net,0.08962,5.942,8.041,89.72
+spine express,2,bl,2060,1,gross,0.1488,9.864,13.35,89.72
+spine express,2,bl,2060,1,net,0.5462,36.21,49,89.72
+spine express,2,m22,2045,0.3,gross,-0.06566,-4.353,-5.891,89.72
+spine express,2,m22,2045,0.3,net,-0.03637,-2.411,-3.263,89.72
+spine express,2,m22,2045,1,gross,0.0007371,0.04887,0.06613,89.72
+spine express,2,m22,2045,1,net,0.09837,6.522,8.826,89.72
+spine express,2,m22,2050,0.3,gross,-0.06143,-4.073,-5.511,89.72
+spine express,2,m22,2050,0.3,net,-0.03001,-1.99,-2.692,89.72
+spine express,2,m22,2050,1,gross,0.01485,0.9843,1.332,89.72
+spine express,2,m22,2050,1,net,0.1196,7.928,10.73,89.72
+spine express,2,m22,2055,0.3,gross,-0.05689,-3.772,-5.104,89.72
+spine express,2,m22,2055,0.3,net,-0.02345,-1.555,-2.104,89.72
+spine express,2,m22,2055,1,gross,0.02997,1.987,2.689,89.72
+spine express,2,m22,2055,1,net,0.1414,9.376,12.69,89.72
+spine express,2,m22,2060,0.3,gross,-0.05205,-3.451,-4.67,89.72
+spine express,2,m22,2060,0.3,net,-0.01669,-1.107,-1.498,89.72
+spine express,2,m22,2060,1,gross,0.04612,3.058,4.138,89.72
+spine express,2,m22,2060,1,net,0.164,10.87,14.71,89.72
+spine express,3,sub,2045,0.3,gross,0.02203,1.461,2.021,91.71
+spine express,3,sub,2045,0.3,net,0.08358,5.542,7.666,91.71
+spine express,3,sub,2045,1,gross,0.2729,18.09,25.03,91.71
+spine express,3,sub,2045,1,net,0.4525,30,41.5,91.71
+spine express,3,sub,2050,0.3,gross,0.04181,2.772,3.834,91.71
+spine express,3,sub,2050,0.3,net,0.1079,7.151,9.892,91.71
+spine express,3,sub,2050,1,gross,0.3031,20.1,27.8,91.71
+spine express,3,sub,2050,1,net,0.4844,32.12,44.43,91.71
+spine express,3,sub,2055,0.3,gross,0.06301,4.177,5.779,91.71
+spine express,3,sub,2055,0.3,net,0.1333,8.837,12.22,91.71
+spine express,3,sub,2055,1,gross,0.3332,22.09,30.56,91.71
+spine express,3,sub,2055,1,net,0.5151,34.15,47.24,91.71
+spine express,3,sub,2060,0.3,gross,0.08564,5.678,7.854,91.71
+spine express,3,sub,2060,0.3,net,0.1599,10.6,14.66,91.71
+spine express,3,sub,2060,1,gross,0.3634,24.09,33.33,91.71
+spine express,3,sub,2060,1,net,0.5452,36.15,50,91.71
+spine express,3,bl,2045,0.3,gross,-0.02787,-1.848,-2.556,91.71
+spine express,3,bl,2045,0.3,net,0.08558,5.674,7.849,91.71
+spine express,3,bl,2045,1,gross,0.1424,9.443,13.06,91.71
+spine express,3,bl,2045,1,net,0.5206,34.52,47.75,91.71
+spine express,3,bl,2050,0.3,gross,-0.01701,-1.128,-1.56,91.71
+spine express,3,bl,2050,0.3,net,0.1047,6.941,9.601,91.71
+spine express,3,bl,2050,1,gross,0.1786,11.84,16.38,91.71
+spine express,3,bl,2050,1,net,0.5843,38.74,53.59,91.71
+spine express,3,bl,2055,0.3,gross,-0.005375,-0.3564,-0.493,91.71
+spine express,3,bl,2055,0.3,net,0.1241,8.23,11.39,91.71
+spine express,3,bl,2055,1,gross,0.2166,14.36,19.87,91.71
+spine express,3,bl,2055,1,net,0.6475,42.93,59.38,91.71
+spine express,3,bl,2060,0.3,gross,0.007051,0.4675,0.6466,91.71
+spine express,3,bl,2060,0.3,net,0.144,9.546,13.2,91.71
+spine express,3,bl,2060,1,gross,0.2542,16.85,23.31,91.71
+spine express,3,bl,2060,1,net,0.7055,46.78,64.71,91.71
+spine express,3,m22,2045,0.3,gross,-0.05691,-3.773,-5.22,91.71
+spine express,3,m22,2045,0.3,net,0.009726,0.6448,0.892,91.71
+spine express,3,m22,2045,1,gross,0.0276,1.83,2.531,91.71
+spine express,3,m22,2045,1,net,0.2497,16.56,22.9,91.71
+spine express,3,m22,2050,0.3,gross,-0.05153,-3.416,-4.726,91.71
+spine express,3,m22,2050,0.3,net,0.01996,1.323,1.83,91.71
+spine express,3,m22,2050,1,gross,0.04556,3.021,4.178,91.71
+spine express,3,m22,2050,1,net,0.2838,18.82,26.03,91.71
+spine express,3,m22,2055,0.3,gross,-0.04575,-3.033,-4.196,91.71
+spine express,3,m22,2055,0.3,net,0.03032,2.01,2.781,91.71
+spine express,3,m22,2055,1,gross,0.06481,4.297,5.944,91.71
+spine express,3,m22,2055,1,net,0.3184,21.11,29.2,91.71
+spine express,3,m22,2060,0.3,gross,-0.03958,-2.624,-3.63,91.71
+spine express,3,m22,2060,0.3,net,0.04085,2.708,3.746,91.71
+spine express,3,m22,2060,1,gross,0.08537,5.66,7.829,91.71
+spine express,3,m22,2060,1,net,0.3535,23.43,32.42,91.71
+spine express,4,sub,2045,0.3,gross,0.03417,2.265,3.58,104.8
+spine express,4,sub,2045,0.3,net,0.08225,5.453,8.617,104.8
+spine express,4,sub,2045,1,gross,0.2277,15.1,23.86,104.8
+spine express,4,sub,2045,1,net,0.3579,23.73,37.5,104.8
+spine express,4,sub,2050,0.3,gross,0.0514,3.408,5.385,104.8
+spine express,4,sub,2050,0.3,net,0.103,6.829,10.79,104.8
+spine express,4,sub,2050,1,gross,0.2509,16.63,26.28,104.8
+spine express,4,sub,2050,1,net,0.3818,25.31,40,104.8
+spine express,4,sub,2055,0.3,gross,0.06987,4.633,7.321,104.8
+spine express,4,sub,2055,0.3,net,0.1248,8.274,13.07,104.8
+spine express,4,sub,2055,1,gross,0.2739,18.16,28.69,104.8
+spine express,4,sub,2055,1,net,0.4048,26.84,42.41,104.8
+spine express,4,sub,2060,0.3,gross,0.08959,5.94,9.387,104.8
+spine express,4,sub,2060,0.3,net,0.1476,9.785,15.46,104.8
+spine express,4,sub,2060,1,gross,0.2976,19.73,31.18,104.8
+spine express,4,sub,2060,1,net,0.4281,28.39,44.86,104.8
+spine express,4,bl,2045,0.3,gross,-0.009209,-0.6105,-0.9648,104.8
+spine express,4,bl,2045,0.3,net,0.08263,5.478,8.657,104.8
+spine express,4,bl,2045,1,gross,0.1435,9.514,15.03,104.8
+spine express,4,bl,2045,1,net,0.4494,29.8,47.09,104.8
+spine express,4,bl,2050,0.3,gross,0.0005371,0.03561,0.05627,104.8
+spine express,4,bl,2050,0.3,net,0.09906,6.568,10.38,104.8
+spine express,4,bl,2050,1,gross,0.1739,11.53,18.22,104.8
+spine express,4,bl,2050,1,net,0.4997,33.13,52.35,104.8
+spine express,4,bl,2055,0.3,gross,0.01099,0.7283,1.151,104.8
+spine express,4,bl,2055,0.3,net,0.1158,7.68,12.14,104.8
+spine express,4,bl,2055,1,gross,0.2033,13.48,21.3,104.8
+spine express,4,bl,2055,1,net,0.5446,36.1,57.05,104.8
+spine express,4,bl,2060,0.3,gross,0.02214,1.468,2.32,104.8
+spine express,4,bl,2060,0.3,net,0.133,8.816,13.93,104.8
+spine express,4,bl,2060,1,gross,0.2302,15.26,24.12,104.8
+spine express,4,bl,2060,1,net,0.5811,38.53,60.88,104.8
+spine express,4,m22,2045,0.3,gross,-0.0353,-2.34,-3.698,104.8
+spine express,4,m22,2045,0.3,net,0.04711,3.123,4.936,104.8
+spine express,4,m22,2045,1,gross,0.04978,3.3,5.215,104.8
+spine express,4,m22,2045,1,net,0.3245,21.51,33.99,104.8
+spine express,4,m22,2050,0.3,gross,-0.02987,-1.981,-3.13,104.8
+spine express,4,m22,2050,0.3,net,0.05853,3.88,6.132,104.8
+spine express,4,m22,2050,1,gross,0.06786,4.499,7.109,104.8
+spine express,4,m22,2050,1,net,0.3625,24.04,37.98,104.8
+spine express,4,m22,2055,0.3,gross,-0.02406,-1.595,-2.521,104.8
+spine express,4,m22,2055,0.3,net,0.07002,4.642,7.336,104.8
+spine express,4,m22,2055,1,gross,0.08724,5.784,9.14,104.8
+spine express,4,m22,2055,1,net,0.4008,26.58,41.99,104.8
+spine express,4,m22,2060,0.3,gross,-0.01785,-1.184,-1.87,104.8
+spine express,4,m22,2060,0.3,net,0.0816,5.41,8.55,104.8
+spine express,4,m22,2060,1,gross,0.1079,7.156,11.31,104.8
+spine express,4,m22,2060,1,net,0.4394,29.14,46.04,104.8
+spine express,6,sub,2045,0.3,gross,0.02949,1.955,3.748,127.1
+spine express,6,sub,2045,0.3,net,0.05588,3.705,7.101,127.1
+spine express,6,sub,2045,1,gross,0.1403,9.299,17.82,127.1
+spine express,6,sub,2045,1,net,0.206,13.66,26.18,127.1
+spine express,6,sub,2050,0.3,gross,0.04083,2.707,5.189,127.1
+spine express,6,sub,2050,0.3,net,0.06918,4.587,8.791,127.1
+spine express,6,sub,2050,1,gross,0.1534,10.17,19.5,127.1
+spine express,6,sub,2050,1,net,0.2194,14.54,27.87,127.1
+spine express,6,sub,2055,0.3,gross,0.05299,3.513,6.733,127.1
+spine express,6,sub,2055,0.3,net,0.08315,5.513,10.57,127.1
+spine express,6,sub,2055,1,gross,0.1669,11.06,21.2,127.1
+spine express,6,sub,2055,1,net,0.2327,15.43,29.57,127.1
+spine express,6,sub,2060,0.3,gross,0.06596,4.373,8.382,127.1
+spine express,6,sub,2060,0.3,net,0.09775,6.481,12.42,127.1
+spine express,6,sub,2060,1,gross,0.1802,11.95,22.9,127.1
+spine express,6,sub,2060,1,net,0.2454,16.27,31.19,127.1
+spine express,6,bl,2045,0.3,gross,0.000887,0.05881,0.1127,127.1
+spine express,6,bl,2045,0.3,net,0.05667,3.757,7.202,127.1
+spine express,6,bl,2045,1,gross,0.1013,6.717,12.87,127.1
+spine express,6,bl,2045,1,net,0.2853,18.92,36.26,127.1
+spine express,6,bl,2050,0.3,gross,0.007403,0.4908,0.9407,127.1
+spine express,6,bl,2050,0.3,net,0.06727,4.46,8.548,127.1
+spine express,6,bl,2050,1,gross,0.1192,7.901,15.14,127.1
+spine express,6,bl,2050,1,net,0.3128,20.74,39.75,127.1
+spine express,6,bl,2055,0.3,gross,0.01439,0.9539,1.828,127.1
+spine express,6,bl,2055,0.3,net,0.07809,5.177,9.923,127.1
+spine express,6,bl,2055,1,gross,0.1353,8.973,17.2,127.1
+spine express,6,bl,2055,1,net,0.3348,22.2,42.54,127.1
+spine express,6,bl,2060,0.3,gross,0.02184,1.448,2.776,127.1
+spine express,6,bl,2060,0.3,net,0.08915,5.91,11.33,127.1
+spine express,6,bl,2060,1,gross,0.149,9.877,18.93,127.1
+spine express,6,bl,2060,1,net,0.35,23.21,44.48,127.1
+spine express,6,m22,2045,0.3,gross,-0.01568,-1.039,-1.992,127.1
+spine express,6,m22,2045,0.3,net,0.04162,2.76,5.289,127.1
+spine express,6,m22,2045,1,gross,0.04558,3.022,5.792,127.1
+spine express,6,m22,2045,1,net,0.2366,15.69,30.06,127.1
+spine express,6,m22,2050,0.3,gross,-0.01177,-0.7805,-1.496,127.1
+spine express,6,m22,2050,0.3,net,0.04971,3.296,6.317,127.1
+spine express,6,m22,2050,1,gross,0.0586,3.885,7.446,127.1
+spine express,6,m22,2050,1,net,0.2635,17.47,33.49,127.1
+spine express,6,m22,2055,0.3,gross,-0.007586,-0.503,-0.964,127.1
+spine express,6,m22,2055,0.3,net,0.05784,3.835,7.35,127.1
+spine express,6,m22,2055,1,gross,0.07229,4.793,9.186,127.1
+spine express,6,m22,2055,1,net,0.2899,19.22,36.84,127.1
+spine express,6,m22,2060,0.3,gross,-0.003116,-0.2066,-0.396,127.1
+spine express,6,m22,2060,0.3,net,0.06602,4.377,8.389,127.1
+spine express,6,m22,2060,1,gross,0.08582,5.69,10.91,127.1
+spine express,6,m22,2060,1,net,0.3138,20.8,39.87,127.1
+spine+LAX all-stop,2,sub,2045,0.3,gross,-0.006329,-0.4196,-0.6225,98.35
+spine+LAX all-stop,2,sub,2045,0.3,net,0.0532,3.527,5.232,98.35
+spine+LAX all-stop,2,sub,2045,1,gross,0.2587,17.15,25.44,98.35
+spine+LAX all-stop,2,sub,2045,1,net,0.4497,29.82,44.23,98.35
+spine+LAX all-stop,2,sub,2050,0.3,gross,0.01165,0.7721,1.145,98.35
+spine+LAX all-stop,2,sub,2050,0.3,net,0.07553,5.008,7.429,98.35
+spine+LAX all-stop,2,sub,2050,1,gross,0.2979,19.75,29.3,98.35
+spine+LAX all-stop,2,sub,2050,1,net,0.4951,32.83,48.7,98.35
+spine+LAX all-stop,2,sub,2055,0.3,gross,0.03092,2.05,3.041,98.35
+spine+LAX all-stop,2,sub,2055,0.3,net,0.0989,6.557,9.727,98.35
+spine+LAX all-stop,2,sub,2055,1,gross,0.3311,21.95,32.56,98.35
+spine+LAX all-stop,2,sub,2055,1,net,0.53,35.14,52.13,98.35
+spine+LAX all-stop,2,sub,2060,0.3,gross,0.05149,3.414,5.064,98.35
+spine+LAX all-stop,2,sub,2060,0.3,net,0.1233,8.174,12.13,98.35
+spine+LAX all-stop,2,sub,2060,1,gross,0.3647,24.18,35.87,98.35
+spine+LAX all-stop,2,sub,2060,1,net,0.5645,37.43,55.52,98.35
+spine+LAX all-stop,2,bl,2045,0.3,gross,-0.04579,-3.036,-4.504,98.35
+spine+LAX all-stop,2,bl,2045,0.3,net,0.03653,2.422,3.592,98.35
+spine+LAX all-stop,2,bl,2045,1,gross,0.1091,7.232,10.73,98.35
+spine+LAX all-stop,2,bl,2045,1,net,0.3835,25.42,37.72,98.35
+spine+LAX all-stop,2,bl,2050,0.3,gross,-0.03592,-2.381,-3.533,98.35
+spine+LAX all-stop,2,bl,2050,0.3,net,0.05239,3.473,5.152,98.35
+spine+LAX all-stop,2,bl,2050,1,gross,0.142,9.414,13.96,98.35
+spine+LAX all-stop,2,bl,2050,1,net,0.4363,28.93,42.92,98.35
+spine+LAX all-stop,2,bl,2055,0.3,gross,-0.02533,-1.68,-2.492,98.35
+spine+LAX all-stop,2,bl,2055,0.3,net,0.06864,4.551,6.751,98.35
+spine+LAX all-stop,2,bl,2055,1,gross,0.1773,11.75,17.43,98.35
+spine+LAX all-stop,2,bl,2055,1,net,0.4905,32.52,48.24,98.35
+spine+LAX all-stop,2,bl,2060,0.3,gross,-0.01403,-0.9305,-1.38,98.35
+spine+LAX all-stop,2,bl,2060,0.3,net,0.08531,5.656,8.39,98.35
+spine+LAX all-stop,2,bl,2060,1,gross,0.2149,14.25,21.14,98.35
+spine+LAX all-stop,2,bl,2060,1,net,0.5461,36.2,53.71,98.35
+spine+LAX all-stop,2,m22,2045,0.3,gross,-0.06155,-4.081,-6.054,98.35
+spine+LAX all-stop,2,m22,2045,0.3,net,-0.002294,-0.1521,-0.2256,98.35
+spine+LAX all-stop,2,m22,2045,1,gross,0.04351,2.885,4.279,98.35
+spine+LAX all-stop,2,m22,2045,1,net,0.241,15.98,23.71,98.35
+spine+LAX all-stop,2,m22,2050,0.3,gross,-0.05486,-3.637,-5.395,98.35
+spine+LAX all-stop,2,m22,2050,0.3,net,0.008713,0.5777,0.857,98.35
+spine+LAX all-stop,2,m22,2050,1,gross,0.06583,4.365,6.475,98.35
+spine+LAX all-stop,2,m22,2050,1,net,0.2777,18.41,27.32,98.35
+spine+LAX all-stop,2,m22,2055,0.3,gross,-0.04768,-3.161,-4.689,98.35
+spine+LAX all-stop,2,m22,2055,0.3,net,0.01998,1.324,1.965,98.35
+spine+LAX all-stop,2,m22,2055,1,gross,0.08977,5.952,8.829,98.35
+spine+LAX all-stop,2,m22,2055,1,net,0.3153,20.9,31.01,98.35
+spine+LAX all-stop,2,m22,2060,0.3,gross,-0.04001,-2.653,-3.935,98.35
+spine+LAX all-stop,2,m22,2060,0.3,net,0.03151,2.089,3.099,98.35
+spine+LAX all-stop,2,m22,2060,1,gross,0.1153,7.646,11.34,98.35
+spine+LAX all-stop,2,m22,2060,1,net,0.3537,23.45,34.79,98.35
+spine+LAX all-stop,3,sub,2045,0.3,gross,0.03539,2.346,3.605,101.9
+spine+LAX all-stop,3,sub,2045,0.3,net,0.09432,6.253,9.608,101.9
+spine+LAX all-stop,3,sub,2045,1,gross,0.3311,21.95,33.72,101.9
+spine+LAX all-stop,3,sub,2045,1,net,0.5038,33.4,51.32,101.9
+spine+LAX all-stop,3,sub,2050,0.3,gross,0.05851,3.879,5.961,101.9
+spine+LAX all-stop,3,sub,2050,0.3,net,0.1218,8.075,12.41,101.9
+spine+LAX all-stop,3,sub,2050,1,gross,0.3667,24.31,37.35,101.9
+spine+LAX all-stop,3,sub,2050,1,net,0.5413,35.89,55.14,101.9
+spine+LAX all-stop,3,sub,2055,0.3,gross,0.0833,5.523,8.486,101.9
+spine+LAX all-stop,3,sub,2055,0.3,net,0.1506,9.987,15.35,101.9
+spine+LAX all-stop,3,sub,2055,1,gross,0.402,26.65,40.95,101.9
+spine+LAX all-stop,3,sub,2055,1,net,0.5772,38.27,58.8,101.9
+spine+LAX all-stop,3,sub,2060,0.3,gross,0.1098,7.278,11.18,101.9
+spine+LAX all-stop,3,sub,2060,0.3,net,0.1808,11.99,18.42,101.9
+spine+LAX all-stop,3,sub,2060,1,gross,0.4377,29.02,44.59,101.9
+spine+LAX all-stop,3,sub,2060,1,net,0.6126,40.62,62.41,101.9
+spine+LAX all-stop,3,bl,2045,0.3,gross,-0.02029,-1.345,-2.067,101.9
+spine+LAX all-stop,3,bl,2045,0.3,net,0.1037,6.875,10.56,101.9
+spine+LAX all-stop,3,bl,2045,1,gross,0.192,12.73,19.56,101.9
+spine+LAX all-stop,3,bl,2045,1,net,0.6053,40.13,61.66,101.9
+spine+LAX all-stop,3,bl,2050,0.3,gross,-0.006758,-0.448,-0.6884,101.9
+spine+LAX all-stop,3,bl,2050,0.3,net,0.1263,8.372,12.86,101.9
+spine+LAX all-stop,3,bl,2050,1,gross,0.2371,15.72,24.16,101.9
+spine+LAX all-stop,3,bl,2050,1,net,0.6806,45.12,69.33,101.9
+spine+LAX all-stop,3,bl,2055,0.3,gross,0.007753,0.514,0.7898,101.9
+spine+LAX all-stop,3,bl,2055,0.3,net,0.1493,9.9,15.21,101.9
+spine+LAX all-stop,3,bl,2055,1,gross,0.2841,18.83,28.94,101.9
+spine+LAX all-stop,3,bl,2055,1,net,0.7545,50.02,76.86,101.9
+spine+LAX all-stop,3,bl,2060,0.3,gross,0.02324,1.541,2.368,101.9
+spine+LAX all-stop,3,bl,2060,0.3,net,0.1728,11.46,17.61,101.9
+spine+LAX all-stop,3,bl,2060,1,gross,0.3301,21.89,33.63,101.9
+spine+LAX all-stop,3,bl,2060,1,net,0.8219,54.49,83.73,101.9
+spine+LAX all-stop,3,m22,2045,0.3,gross,-0.04422,-2.932,-4.504,101.9
+spine+LAX all-stop,3,m22,2045,0.3,net,0.01429,0.9471,1.455,101.9
+spine+LAX all-stop,3,m22,2045,1,gross,0.0895,5.934,9.117,101.9
+spine+LAX all-stop,3,m22,2045,1,net,0.2845,18.86,28.98,101.9
+spine+LAX all-stop,3,m22,2050,0.3,gross,-0.03569,-2.366,-3.636,101.9
+spine+LAX all-stop,3,m22,2050,0.3,net,0.02708,1.795,2.758,101.9
+spine+LAX all-stop,3,m22,2050,1,gross,0.1179,7.817,12.01,101.9
+spine+LAX all-stop,3,m22,2050,1,net,0.3271,21.69,33.32,101.9
+spine+LAX all-stop,3,m22,2055,0.3,gross,-0.02655,-1.761,-2.705,101.9
+spine+LAX all-stop,3,m22,2055,0.3,net,0.04024,2.668,4.1,101.9
+spine+LAX all-stop,3,m22,2055,1,gross,0.1484,9.837,15.11,101.9
+spine+LAX all-stop,3,m22,2055,1,net,0.371,24.6,37.8,101.9
+spine+LAX all-stop,3,m22,2060,0.3,gross,-0.0168,-1.114,-1.711,101.9
+spine+LAX all-stop,3,m22,2060,0.3,net,0.05379,3.566,5.479,101.9
+spine+LAX all-stop,3,m22,2060,1,gross,0.1809,11.99,18.43,101.9
+spine+LAX all-stop,3,m22,2060,1,net,0.4162,27.59,42.39,101.9
+spine+LAX all-stop,4,sub,2045,0.3,gross,0.03995,2.649,5.099,127.6
+spine+LAX all-stop,4,sub,2045,0.3,net,0.08299,5.502,10.59,127.6
+spine+LAX all-stop,4,sub,2045,1,gross,0.2736,18.14,34.92,127.6
+spine+LAX all-stop,4,sub,2045,1,net,0.3931,26.06,50.17,127.6
+spine+LAX all-stop,4,sub,2050,0.3,gross,0.05989,3.971,7.644,127.6
+spine+LAX all-stop,4,sub,2050,0.3,net,0.1062,7.04,13.55,127.6
+spine+LAX all-stop,4,sub,2050,1,gross,0.3013,19.98,38.46,127.6
+spine+LAX all-stop,4,sub,2050,1,net,0.4219,27.97,53.84,127.6
+spine+LAX all-stop,4,sub,2055,0.3,gross,0.08128,5.389,10.37,127.6
+spine+LAX all-stop,4,sub,2055,0.3,net,0.1305,8.653,16.66,127.6
+spine+LAX all-stop,4,sub,2055,1,gross,0.3294,21.84,42.04,127.6
+spine+LAX all-stop,4,sub,2055,1,net,0.4502,29.85,57.46,127.6
+spine+LAX all-stop,4,sub,2060,0.3,gross,0.1041,6.902,13.29,127.6
+spine+LAX all-stop,4,sub,2060,0.3,net,0.1559,10.34,19.9,127.6
+spine+LAX all-stop,4,sub,2060,1,gross,0.3578,23.72,45.66,127.6
+spine+LAX all-stop,4,sub,2060,1,net,0.4779,31.69,60.99,127.6
+spine+LAX all-stop,4,bl,2045,0.3,gross,-0.008381,-0.5557,-1.07,127.6
+spine+LAX all-stop,4,bl,2045,0.3,net,0.09313,6.175,11.89,127.6
+spine+LAX all-stop,4,bl,2045,1,gross,0.1764,11.69,22.51,127.6
+spine+LAX all-stop,4,bl,2045,1,net,0.5145,34.11,65.66,127.6
+spine+LAX all-stop,4,bl,2050,0.3,gross,0.003409,0.226,0.4351,127.6
+spine+LAX all-stop,4,bl,2050,0.3,net,0.1124,7.45,14.34,127.6
+spine+LAX all-stop,4,bl,2050,1,gross,0.2131,14.13,27.2,127.6
+spine+LAX all-stop,4,bl,2050,1,net,0.5735,38.02,73.19,127.6
+spine+LAX all-stop,4,bl,2055,0.3,gross,0.01605,1.064,2.048,127.6
+spine+LAX all-stop,4,bl,2055,0.3,net,0.132,8.751,16.85,127.6
+spine+LAX all-stop,4,bl,2055,1,gross,0.2487,16.49,31.74,127.6
+spine+LAX all-stop,4,bl,2055,1,net,0.6261,41.51,79.9,127.6
+spine+LAX all-stop,4,bl,2060,0.3,gross,0.02954,1.959,3.77,127.6
+spine+LAX all-stop,4,bl,2060,0.3,net,0.152,10.08,19.39,127.6
+spine+LAX all-stop,4,bl,2060,1,gross,0.2813,18.65,35.9,127.6
+spine+LAX all-stop,4,bl,2060,1,net,0.6688,44.34,85.36,127.6
+spine+LAX all-stop,4,m22,2045,0.3,gross,-0.03182,-2.109,-4.061,127.6
+spine+LAX all-stop,4,m22,2045,0.3,net,0.01323,0.8775,1.689,127.6
+spine+LAX all-stop,4,m22,2045,1,gross,0.08117,5.382,10.36,127.6
+spine+LAX all-stop,4,m22,2045,1,net,0.2313,15.34,29.53,127.6
+spine+LAX all-stop,4,m22,2050,0.3,gross,-0.02461,-1.632,-3.141,127.6
+spine+LAX all-stop,4,m22,2050,0.3,net,0.02374,1.574,3.03,127.6
+spine+LAX all-stop,4,m22,2050,1,gross,0.1052,6.974,13.42,127.6
+spine+LAX all-stop,4,m22,2050,1,net,0.2664,17.66,34,127.6
+spine+LAX all-stop,4,m22,2055,0.3,gross,-0.01689,-1.12,-2.156,127.6
+spine+LAX all-stop,4,m22,2055,0.3,net,0.03456,2.292,4.411,127.6
+spine+LAX all-stop,4,m22,2055,1,gross,0.1309,8.68,16.71,127.6
+spine+LAX all-stop,4,m22,2055,1,net,0.3024,20.05,38.6,127.6
+spine+LAX all-stop,4,m22,2060,0.3,gross,-0.008648,-0.5733,-1.104,127.6
+spine+LAX all-stop,4,m22,2060,0.3,net,0.04569,3.029,5.831,127.6
+spine+LAX all-stop,4,m22,2060,1,gross,0.1584,10.5,20.22,127.6
+spine+LAX all-stop,4,m22,2060,1,net,0.3395,22.51,43.33,127.6
+spine+LAX all-stop,6,sub,2045,0.3,gross,0.03688,2.445,5.79,157
+spine+LAX all-stop,6,sub,2045,0.3,net,0.05771,3.826,9.059,157
+spine+LAX all-stop,6,sub,2045,1,gross,0.2268,15.03,35.6,157
+spine+LAX all-stop,6,sub,2045,1,net,0.2836,18.8,44.51,157
+spine+LAX all-stop,6,sub,2050,0.3,gross,0.05349,3.546,8.396,157
+spine+LAX all-stop,6,sub,2050,0.3,net,0.07606,5.042,11.94,157
+spine+LAX all-stop,6,sub,2050,1,gross,0.2492,16.52,39.12,157
+spine+LAX all-stop,6,sub,2050,1,net,0.307,20.36,48.19,157
+spine+LAX all-stop,6,sub,2055,0.3,gross,0.07129,4.726,11.19,157
+spine+LAX all-stop,6,sub,2055,0.3,net,0.09526,6.316,14.95,157
+spine+LAX all-stop,6,sub,2055,1,gross,0.2719,18.02,42.68,157
+spine+LAX all-stop,6,sub,2055,1,net,0.3299,21.87,51.78,157
+spine+LAX all-stop,6,sub,2060,0.3,gross,0.09029,5.986,14.17,157
+spine+LAX all-stop,6,sub,2060,0.3,net,0.1151,7.633,18.07,157
+spine+LAX all-stop,6,sub,2060,1,gross,0.2952,19.57,46.34,157
+spine+LAX all-stop,6,sub,2060,1,net,0.3522,23.35,55.28,157
+spine+LAX all-stop,6,bl,2045,0.3,gross,-0.003817,-0.253,-0.5991,157
+spine+LAX all-stop,6,bl,2045,0.3,net,0.06987,4.632,10.97,157
+spine+LAX all-stop,6,bl,2045,1,gross,0.1497,9.924,23.5,157
+spine+LAX all-stop,6,bl,2045,1,net,0.3947,26.17,61.96,157
+spine+LAX all-stop,6,bl,2050,0.3,gross,0.006011,0.3986,0.9437,157
+spine+LAX all-stop,6,bl,2050,0.3,net,0.0852,5.649,13.37,157
+spine+LAX all-stop,6,bl,2050,1,gross,0.1792,11.88,28.13,157
+spine+LAX all-stop,6,bl,2050,1,net,0.4397,29.15,69.02,157
+spine+LAX all-stop,6,bl,2055,0.3,gross,0.01655,1.097,2.598,157
+spine+LAX all-stop,6,bl,2055,0.3,net,0.1008,6.683,15.82,157
+spine+LAX all-stop,6,bl,2055,1,gross,0.2073,13.75,32.55,157
+spine+LAX all-stop,6,bl,2055,1,net,0.4788,31.74,75.16,157
+spine+LAX all-stop,6,bl,2060,0.3,gross,0.0278,1.843,4.363,157
+spine+LAX all-stop,6,bl,2060,0.3,net,0.1165,7.727,18.29,157
+spine+LAX all-stop,6,bl,2060,1,gross,0.2322,15.4,36.45,157
+spine+LAX all-stop,6,bl,2060,1,net,0.5085,33.72,79.83,157
+spine+LAX all-stop,6,m22,2045,0.3,gross,-0.02464,-1.634,-3.868,157
+spine+LAX all-stop,6,m22,2045,0.3,net,0.007565,0.5015,1.187,157
+spine+LAX all-stop,6,m22,2045,1,gross,0.06872,4.556,10.79,157
+spine+LAX all-stop,6,m22,2045,1,net,0.1761,11.67,27.64,157
+spine+LAX all-stop,6,m22,2050,0.3,gross,-0.01869,-1.239,-2.934,157
+spine+LAX all-stop,6,m22,2050,0.3,net,0.01592,1.055,2.499,157
+spine+LAX all-stop,6,m22,2050,1,gross,0.08855,5.871,13.9,157
+spine+LAX all-stop,6,m22,2050,1,net,0.2039,13.52,32.01,157
+spine+LAX all-stop,6,m22,2055,0.3,gross,-0.01231,-0.8161,-1.932,157
+spine+LAX all-stop,6,m22,2055,0.3,net,0.02451,1.625,3.847,157
+spine+LAX all-stop,6,m22,2055,1,gross,0.1098,7.281,17.24,157
+spine+LAX all-stop,6,m22,2055,1,net,0.2325,15.42,36.5,157
+spine+LAX all-stop,6,m22,2060,0.3,gross,-0.005497,-0.3645,-0.863,157
+spine+LAX all-stop,6,m22,2060,0.3,net,0.03329,2.207,5.226,157
+spine+LAX all-stop,6,m22,2060,1,gross,0.1325,8.787,20.8,157
+spine+LAX all-stop,6,m22,2060,1,net,0.2618,17.36,41.1,157
+NYC-LAX direct,2,sub,2045,0.3,gross,0.01328,0.8805,0.9519,71.68
+NYC-LAX direct,2,sub,2045,0.3,net,0.0556,3.687,3.986,71.68
+NYC-LAX direct,2,sub,2045,1,gross,0.1825,12.1,13.08,71.68
+NYC-LAX direct,2,sub,2045,1,net,0.3235,21.45,23.19,71.68
+NYC-LAX direct,2,sub,2050,0.3,gross,0.02407,1.596,1.725,71.68
+NYC-LAX direct,2,sub,2050,0.3,net,0.06947,4.606,4.98,71.68
+NYC-LAX direct,2,sub,2050,1,gross,0.2184,14.48,15.66,71.68
+NYC-LAX direct,2,sub,2050,1,net,0.3698,24.52,26.51,71.68
+NYC-LAX direct,2,sub,2055,0.3,gross,0.03563,2.362,2.554,71.68
+NYC-LAX direct,2,sub,2055,0.3,net,0.08395,5.566,6.017,71.68
+NYC-LAX direct,2,sub,2055,1,gross,0.257,17.04,18.42,71.68
+NYC-LAX direct,2,sub,2055,1,net,0.418,27.72,29.96,71.68
+NYC-LAX direct,2,sub,2060,0.3,gross,0.04797,3.181,3.439,71.68
+NYC-LAX direct,2,sub,2060,0.3,net,0.09905,6.567,7.1,71.68
+NYC-LAX direct,2,sub,2060,1,gross,0.2981,19.76,21.37,71.68
+NYC-LAX direct,2,sub,2060,1,net,0.4684,31.05,33.57,71.68
+NYC-LAX direct,2,bl,2045,0.3,gross,-0.01386,-0.9188,-0.9934,71.68
+NYC-LAX direct,2,bl,2045,0.3,net,0.06351,4.211,4.552,71.68
+NYC-LAX direct,2,bl,2045,1,gross,0.07547,5.004,5.41,71.68
+NYC-LAX direct,2,bl,2045,1,net,0.3334,22.1,23.9,71.68
+NYC-LAX direct,2,bl,2050,0.3,gross,-0.008164,-0.5413,-0.5852,71.68
+NYC-LAX direct,2,bl,2050,0.3,net,0.07482,4.961,5.363,71.68
+NYC-LAX direct,2,bl,2050,1,gross,0.09445,6.262,6.77,71.68
+NYC-LAX direct,2,bl,2050,1,net,0.3711,24.6,26.6,71.68
+NYC-LAX direct,2,bl,2055,0.3,gross,-0.002059,-0.1365,-0.1476,71.68
+NYC-LAX direct,2,bl,2055,0.3,net,0.08626,5.719,6.183,71.68
+NYC-LAX direct,2,bl,2055,1,gross,0.1148,7.611,8.229,71.68
+NYC-LAX direct,2,bl,2055,1,net,0.4092,27.13,29.33,71.68
+NYC-LAX direct,2,bl,2060,0.3,gross,0.004458,0.2956,0.3196,71.68
+NYC-LAX direct,2,bl,2060,0.3,net,0.09784,6.487,7.013,71.68
+NYC-LAX direct,2,bl,2060,1,gross,0.1365,9.052,9.786,71.68
+NYC-LAX direct,2,bl,2060,1,net,0.4478,29.69,32.1,71.68
+NYC-LAX direct,2,m22,2045,0.3,gross,-0.02543,-1.686,-1.823,71.68
+NYC-LAX direct,2,m22,2045,0.3,net,0.001614,0.107,0.1157,71.68
+NYC-LAX direct,2,m22,2045,1,gross,0.01418,0.94,1.016,71.68
+NYC-LAX direct,2,m22,2045,1,net,0.1043,6.916,7.477,71.68
+NYC-LAX direct,2,m22,2050,0.3,gross,-0.0229,-1.518,-1.642,71.68
+NYC-LAX direct,2,m22,2050,0.3,net,0.006102,0.4046,0.4374,71.68
+NYC-LAX direct,2,m22,2050,1,gross,0.02259,1.498,1.62,71.68
+NYC-LAX direct,2,m22,2050,1,net,0.1193,7.908,8.55,71.68
+NYC-LAX direct,2,m22,2055,0.3,gross,-0.0202,-1.339,-1.448,71.68
+NYC-LAX direct,2,m22,2055,0.3,net,0.01067,0.7075,0.7649,71.68
+NYC-LAX direct,2,m22,2055,1,gross,0.03162,2.096,2.266,71.68
+NYC-LAX direct,2,m22,2055,1,net,0.1345,8.918,9.642,71.68
+NYC-LAX direct,2,m22,2060,0.3,gross,-0.01731,-1.147,-1.241,71.68
+NYC-LAX direct,2,m22,2060,0.3,net,0.01533,1.017,1.099,71.68
+NYC-LAX direct,2,m22,2060,1,gross,0.04125,2.735,2.957,71.68
+NYC-LAX direct,2,m22,2060,1,net,0.15,9.948,10.76,71.68
+NYC-LAX direct,3,sub,2045,0.3,gross,0.04569,3.029,3.302,72.27
+NYC-LAX direct,3,sub,2045,0.3,net,0.1013,6.715,7.32,72.27
+NYC-LAX direct,3,sub,2045,1,gross,0.2939,19.49,21.24,72.27
+NYC-LAX direct,3,sub,2045,1,net,0.4792,31.77,34.63,72.27
+NYC-LAX direct,3,sub,2050,0.3,gross,0.06152,4.079,4.446,72.27
+NYC-LAX direct,3,sub,2050,0.3,net,0.1212,8.033,8.756,72.27
+NYC-LAX direct,3,sub,2050,1,gross,0.3467,22.98,25.05,72.27
+NYC-LAX direct,3,sub,2050,1,net,0.5455,36.17,39.42,72.27
+NYC-LAX direct,3,sub,2055,0.3,gross,0.07848,5.203,5.672,72.27
+NYC-LAX direct,3,sub,2055,0.3,net,0.142,9.412,10.26,72.27
+NYC-LAX direct,3,sub,2055,1,gross,0.4032,26.73,29.14,72.27
+NYC-LAX direct,3,sub,2055,1,net,0.6148,40.76,44.43,72.27
+NYC-LAX direct,3,sub,2060,0.3,gross,0.09659,6.404,6.981,72.27
+NYC-LAX direct,3,sub,2060,0.3,net,0.1637,10.85,11.83,72.27
+NYC-LAX direct,3,sub,2060,1,gross,0.4636,30.74,33.5,72.27
+NYC-LAX direct,3,sub,2060,1,net,0.6872,45.56,49.66,72.27
+NYC-LAX direct,3,bl,2045,0.3,gross,0.007295,0.4837,0.5272,72.27
+NYC-LAX direct,3,bl,2045,0.3,net,0.09586,6.356,6.928,72.27
+NYC-LAX direct,3,bl,2045,1,gross,0.142,9.413,10.26,72.27
+NYC-LAX direct,3,bl,2045,1,net,0.4372,28.99,31.6,72.27
+NYC-LAX direct,3,bl,2050,0.3,gross,0.01588,1.053,1.148,72.27
+NYC-LAX direct,3,bl,2050,0.3,net,0.1109,7.352,8.014,72.27
+NYC-LAX direct,3,bl,2050,1,gross,0.1706,11.31,12.33,72.27
+NYC-LAX direct,3,bl,2050,1,net,0.4873,32.31,35.22,72.27
+NYC-LAX direct,3,bl,2055,0.3,gross,0.02509,1.663,1.813,72.27
+NYC-LAX direct,3,bl,2055,0.3,net,0.1262,8.366,9.12,72.27
+NYC-LAX direct,3,bl,2055,1,gross,0.2013,13.34,14.55,72.27
+NYC-LAX direct,3,bl,2055,1,net,0.5383,35.69,38.9,72.27
+NYC-LAX direct,3,bl,2060,0.3,gross,0.03491,2.315,2.523,72.27
+NYC-LAX direct,3,bl,2060,0.3,net,0.1418,9.402,10.25,72.27
+NYC-LAX direct,3,bl,2060,1,gross,0.234,15.52,16.91,72.27
+NYC-LAX direct,3,bl,2060,1,net,0.5904,39.14,42.67,72.27
+NYC-LAX direct,3,m22,2045,0.3,gross,-0.01832,-1.215,-1.324,72.27
+NYC-LAX direct,3,m22,2045,0.3,net,0.03049,2.022,2.204,72.27
+NYC-LAX direct,3,m22,2045,1,gross,0.04019,2.665,2.905,72.27
+NYC-LAX direct,3,m22,2045,1,net,0.2029,13.45,14.66,72.27
+NYC-LAX direct,3,m22,2050,0.3,gross,-0.01459,-0.9676,-1.055,72.27
+NYC-LAX direct,3,m22,2050,0.3,net,0.03777,2.504,2.73,72.27
+NYC-LAX direct,3,m22,2050,1,gross,0.05262,3.489,3.803,72.27
+NYC-LAX direct,3,m22,2050,1,net,0.2272,15.06,16.42,72.27
+NYC-LAX direct,3,m22,2055,0.3,gross,-0.0106,-0.7025,-0.7657,72.27
+NYC-LAX direct,3,m22,2055,0.3,net,0.04513,2.992,3.262,72.27
+NYC-LAX direct,3,m22,2055,1,gross,0.06595,4.373,4.767,72.27
+NYC-LAX direct,3,m22,2055,1,net,0.2517,16.69,18.19,72.27
+NYC-LAX direct,3,m22,2060,0.3,gross,-0.006326,-0.4194,-0.4572,72.27
+NYC-LAX direct,3,m22,2060,0.3,net,0.0526,3.487,3.801,72.27
+NYC-LAX direct,3,m22,2060,1,gross,0.08019,5.316,5.795,72.27
+NYC-LAX direct,3,m22,2060,1,net,0.2766,18.34,19.99,72.27
+NYC-LAX direct,4,sub,2045,0.3,gross,0.06437,4.268,4.951,76.91
+NYC-LAX direct,4,sub,2045,0.3,net,0.1214,8.05,9.338,76.91
+NYC-LAX direct,4,sub,2045,1,gross,0.3469,23,26.68,76.91
+NYC-LAX direct,4,sub,2045,1,net,0.537,35.61,41.31,76.91
+NYC-LAX direct,4,sub,2050,0.3,gross,0.08238,5.462,6.336,76.91
+NYC-LAX direct,4,sub,2050,0.3,net,0.1436,9.521,11.04,76.91
+NYC-LAX direct,4,sub,2050,1,gross,0.4069,26.98,31.3,76.91
+NYC-LAX direct,4,sub,2050,1,net,0.611,40.51,46.99,76.91
+NYC-LAX direct,4,sub,2055,0.3,gross,0.1017,6.742,7.822,76.91
+NYC-LAX direct,4,sub,2055,0.3,net,0.1668,11.06,12.83,76.91
+NYC-LAX direct,4,sub,2055,1,gross,0.4688,31.08,36.06,76.91
+NYC-LAX direct,4,sub,2055,1,net,0.6851,45.42,52.7,76.91
+NYC-LAX direct,4,sub,2060,0.3,gross,0.1223,8.109,9.407,76.91
+NYC-LAX direct,4,sub,2060,0.3,net,0.1911,12.67,14.7,76.91
+NYC-LAX direct,4,sub,2060,1,gross,0.5294,35.1,40.72,76.91
+NYC-LAX direct,4,sub,2060,1,net,0.7552,50.07,58.08,76.91
+NYC-LAX direct,4,bl,2045,0.3,gross,0.01878,1.245,1.445,76.91
+NYC-LAX direct,4,bl,2045,0.3,net,0.1144,7.588,8.802,76.91
+NYC-LAX direct,4,bl,2045,1,gross,0.1728,11.46,13.29,76.91
+NYC-LAX direct,4,bl,2045,1,net,0.4917,32.6,37.82,76.91
+NYC-LAX direct,4,bl,2050,0.3,gross,0.0286,1.896,2.2,76.91
+NYC-LAX direct,4,bl,2050,0.3,net,0.1312,8.7,10.09,76.91
+NYC-LAX direct,4,bl,2050,1,gross,0.2055,13.63,15.81,76.91
+NYC-LAX direct,4,bl,2050,1,net,0.5476,36.31,42.12,76.91
+NYC-LAX direct,4,bl,2055,0.3,gross,0.03913,2.594,3.009,76.91
+NYC-LAX direct,4,bl,2055,0.3,net,0.1483,9.835,11.41,76.91
+NYC-LAX direct,4,bl,2055,1,gross,0.2406,15.95,18.51,76.91
+NYC-LAX direct,4,bl,2055,1,net,0.6046,40.09,46.51,76.91
+NYC-LAX direct,4,bl,2060,0.3,gross,0.05036,3.339,3.874,76.91
+NYC-LAX direct,4,bl,2060,0.3,net,0.1658,10.99,12.75,76.91
+NYC-LAX direct,4,bl,2060,1,gross,0.2781,18.44,21.39,76.91
+NYC-LAX direct,4,bl,2060,1,net,0.6629,43.95,50.99,76.91
+NYC-LAX direct,4,m22,2045,0.3,gross,-0.01132,-0.7506,-0.8708,76.91
+NYC-LAX direct,4,m22,2045,0.3,net,0.0632,4.19,4.861,76.91
+NYC-LAX direct,4,m22,2045,1,gross,0.06165,4.088,4.742,76.91
+NYC-LAX direct,4,m22,2045,1,net,0.3101,20.56,23.85,76.91
+NYC-LAX direct,4,m22,2050,0.3,gross,-0.00667,-0.4422,-0.513,76.91
+NYC-LAX direct,4,m22,2050,0.3,net,0.07327,4.858,5.636,76.91
+NYC-LAX direct,4,m22,2050,1,gross,0.07716,5.116,5.935,76.91
+NYC-LAX direct,4,m22,2050,1,net,0.3436,22.78,26.43,76.91
+NYC-LAX direct,4,m22,2055,0.3,gross,-0.001682,-0.1115,-0.1294,76.91
+NYC-LAX direct,4,m22,2055,0.3,net,0.08339,5.529,6.414,76.91
+NYC-LAX direct,4,m22,2055,1,gross,0.09379,6.218,7.213,76.91
+NYC-LAX direct,4,m22,2055,1,net,0.3774,25.02,29.03,76.91
+NYC-LAX direct,4,m22,2060,0.3,gross,0.003642,0.2415,0.2801,76.91
+NYC-LAX direct,4,m22,2060,0.3,net,0.09359,6.205,7.198,76.91
+NYC-LAX direct,4,m22,2060,1,gross,0.1115,7.395,8.579,76.91
+NYC-LAX direct,4,m22,2060,1,net,0.4114,27.27,31.64,76.91
+NYC-LAX direct,6,sub,2045,0.3,gross,0.07441,4.934,6.711,90.18
+NYC-LAX direct,6,sub,2045,0.3,net,0.1218,8.075,10.98,90.18
+NYC-LAX direct,6,sub,2045,1,gross,0.3558,23.59,32.08,90.18
+NYC-LAX direct,6,sub,2045,1,net,0.5136,34.05,46.32,90.18
+NYC-LAX direct,6,sub,2050,0.3,gross,0.09237,6.124,8.33,90.18
+NYC-LAX direct,6,sub,2050,0.3,net,0.1433,9.498,12.92,90.18
+NYC-LAX direct,6,sub,2050,1,gross,0.4117,27.29,37.13,90.18
+NYC-LAX direct,6,sub,2050,1,net,0.58,38.45,52.3,90.18
+NYC-LAX direct,6,sub,2055,0.3,gross,0.1116,7.4,10.07,90.18
+NYC-LAX direct,6,sub,2055,0.3,net,0.1658,10.99,14.95,90.18
+NYC-LAX direct,6,sub,2055,1,gross,0.4659,30.89,42.02,90.18
+NYC-LAX direct,6,sub,2055,1,net,0.6421,42.57,57.91,90.18
+NYC-LAX direct,6,sub,2060,0.3,gross,0.1322,8.763,11.92,90.18
+NYC-LAX direct,6,sub,2060,0.3,net,0.1893,12.55,17.07,90.18
+NYC-LAX direct,6,sub,2060,1,gross,0.5154,34.17,46.48,90.18
+NYC-LAX direct,6,sub,2060,1,net,0.6962,46.16,62.78,90.18
+NYC-LAX direct,6,bl,2045,0.3,gross,0.02709,1.796,2.443,90.18
+NYC-LAX direct,6,bl,2045,0.3,net,0.1145,7.593,10.33,90.18
+NYC-LAX direct,6,bl,2045,1,gross,0.1823,12.09,16.44,90.18
+NYC-LAX direct,6,bl,2045,1,net,0.4737,31.41,42.72,90.18
+NYC-LAX direct,6,bl,2050,0.3,gross,0.03699,2.452,3.335,90.18
+NYC-LAX direct,6,bl,2050,0.3,net,0.1308,8.672,11.8,90.18
+NYC-LAX direct,6,bl,2050,1,gross,0.2153,14.27,19.41,90.18
+NYC-LAX direct,6,bl,2050,1,net,0.528,35,47.61,90.18
+NYC-LAX direct,6,bl,2055,0.3,gross,0.04759,3.155,4.292,90.18
+NYC-LAX direct,6,bl,2055,0.3,net,0.1474,9.774,13.3,90.18
+NYC-LAX direct,6,bl,2055,1,gross,0.2506,16.62,22.6,90.18
+NYC-LAX direct,6,bl,2055,1,net,0.5834,38.68,52.61,90.18
+NYC-LAX direct,6,bl,2060,0.3,gross,0.05891,3.906,5.313,90.18
+NYC-LAX direct,6,bl,2060,0.3,net,0.1644,10.9,14.83,90.18
+NYC-LAX direct,6,bl,2060,1,gross,0.2884,19.12,26,90.18
+NYC-LAX direct,6,bl,2060,1,net,0.64,42.43,57.72,90.18
+NYC-LAX direct,6,m22,2045,0.3,gross,-0.002749,-0.1822,-0.2479,90.18
+NYC-LAX direct,6,m22,2045,0.3,net,0.07717,5.116,6.959,90.18
+NYC-LAX direct,6,m22,2045,1,gross,0.07664,5.081,6.911,90.18
+NYC-LAX direct,6,m22,2045,1,net,0.343,22.74,30.93,90.18
+NYC-LAX direct,6,m22,2050,0.3,gross,0.002312,0.1533,0.2085,90.18
+NYC-LAX direct,6,m22,2050,0.3,net,0.08805,5.838,7.94,90.18
+NYC-LAX direct,6,m22,2050,1,gross,0.09351,6.2,8.433,90.18
+NYC-LAX direct,6,m22,2050,1,net,0.3793,25.15,34.21,90.18
+NYC-LAX direct,6,m22,2055,0.3,gross,0.007738,0.513,0.6978,90.18
+NYC-LAX direct,6,m22,2055,0.3,net,0.09898,6.562,8.926,90.18
+NYC-LAX direct,6,m22,2055,1,gross,0.1116,7.399,10.06,90.18
+NYC-LAX direct,6,m22,2055,1,net,0.4157,27.56,37.49,90.18
+NYC-LAX direct,6,m22,2060,0.3,gross,0.01353,0.897,1.22,90.18
+NYC-LAX direct,6,m22,2060,0.3,net,0.11,7.29,9.916,90.18
+NYC-LAX direct,6,m22,2060,1,gross,0.1309,8.679,11.8,90.18
+NYC-LAX direct,6,m22,2060,1,net,0.4523,29.99,40.79,90.18
+NYC-CHI direct,2,sub,2045,0.3,gross,-0.05176,-3.432,-4.37,84.43
+NYC-CHI direct,2,sub,2045,0.3,net,-0.009125,-0.605,-0.7704,84.43
+NYC-CHI direct,2,sub,2045,1,gross,0.1351,8.954,11.4,84.43
+NYC-CHI direct,2,sub,2045,1,net,0.2772,18.38,23.4,84.43
+NYC-CHI direct,2,sub,2050,0.3,gross,-0.03985,-2.642,-3.365,84.43
+NYC-CHI direct,2,sub,2050,0.3,net,0.005894,0.3908,0.4976,84.43
+NYC-CHI direct,2,sub,2050,1,gross,0.1747,11.59,14.75,84.43
+NYC-CHI direct,2,sub,2050,1,net,0.3272,21.7,27.63,84.43
+NYC-CHI direct,2,sub,2055,0.3,gross,-0.02709,-1.796,-2.287,84.43
+NYC-CHI direct,2,sub,2055,0.3,net,0.0216,1.432,1.823,84.43
+NYC-CHI direct,2,sub,2055,1,gross,0.2173,14.41,18.35,84.43
+NYC-CHI direct,2,sub,2055,1,net,0.3796,25.17,32.05,84.43
+NYC-CHI direct,2,sub,2060,0.3,gross,-0.01346,-0.8921,-1.136,84.43
+NYC-CHI direct,2,sub,2060,0.3,net,0.03799,2.519,3.207,84.43
+NYC-CHI direct,2,sub,2060,1,gross,0.2627,17.42,22.18,84.43
+NYC-CHI direct,2,sub,2060,1,net,0.4342,28.79,36.66,84.43
+NYC-CHI direct,2,bl,2045,0.3,gross,-0.08027,-5.322,-6.777,84.43
+NYC-CHI direct,2,bl,2045,0.3,net,-0.05341,-3.541,-4.509,84.43
+NYC-CHI direct,2,bl,2045,1,gross,-0.00296,-0.1962,-0.2499,84.43
+NYC-CHI direct,2,bl,2045,1,net,0.08658,5.74,7.31,84.43
+NYC-CHI direct,2,bl,2050,0.3,gross,-0.07534,-4.995,-6.361,84.43
+NYC-CHI direct,2,bl,2050,0.3,net,-0.04653,-3.085,-3.928,84.43
+NYC-CHI direct,2,bl,2050,1,gross,0.01347,0.893,1.137,84.43
+NYC-CHI direct,2,bl,2050,1,net,0.1095,7.261,9.246,84.43
+NYC-CHI direct,2,bl,2055,0.3,gross,-0.07006,-4.645,-5.915,84.43
+NYC-CHI direct,2,bl,2055,0.3,net,-0.03939,-2.612,-3.326,84.43
+NYC-CHI direct,2,bl,2055,1,gross,0.03108,2.061,2.624,84.43
+NYC-CHI direct,2,bl,2055,1,net,0.1333,8.838,11.25,84.43
+NYC-CHI direct,2,bl,2060,0.3,gross,-0.06442,-4.271,-5.439,84.43
+NYC-CHI direct,2,bl,2060,0.3,net,-0.032,-2.121,-2.701,84.43
+NYC-CHI direct,2,bl,2060,1,gross,0.04988,3.307,4.211,84.43
+NYC-CHI direct,2,bl,2060,1,net,0.158,10.47,13.34,84.43
+NYC-CHI direct,2,m22,2045,0.3,gross,-0.08027,-5.322,-6.777,84.43
+NYC-CHI direct,2,m22,2045,0.3,net,-0.05341,-3.541,-4.509,84.43
+NYC-CHI direct,2,m22,2045,1,gross,-0.00296,-0.1962,-0.2499,84.43
+NYC-CHI direct,2,m22,2045,1,net,0.08658,5.74,7.31,84.43
+NYC-CHI direct,2,m22,2050,0.3,gross,-0.07534,-4.995,-6.361,84.43
+NYC-CHI direct,2,m22,2050,0.3,net,-0.04653,-3.085,-3.928,84.43
+NYC-CHI direct,2,m22,2050,1,gross,0.01347,0.893,1.137,84.43
+NYC-CHI direct,2,m22,2050,1,net,0.1095,7.261,9.246,84.43
+NYC-CHI direct,2,m22,2055,0.3,gross,-0.07006,-4.645,-5.915,84.43
+NYC-CHI direct,2,m22,2055,0.3,net,-0.03939,-2.612,-3.326,84.43
+NYC-CHI direct,2,m22,2055,1,gross,0.03108,2.061,2.624,84.43
+NYC-CHI direct,2,m22,2055,1,net,0.1333,8.838,11.25,84.43
+NYC-CHI direct,2,m22,2060,0.3,gross,-0.06442,-4.271,-5.439,84.43
+NYC-CHI direct,2,m22,2060,0.3,net,-0.032,-2.121,-2.701,84.43
+NYC-CHI direct,2,m22,2060,1,gross,0.04988,3.307,4.211,84.43
+NYC-CHI direct,2,m22,2060,1,net,0.158,10.47,13.34,84.43
+NYC-CHI direct,3,sub,2045,0.3,gross,-0.01976,-1.31,-1.708,86.41
+NYC-CHI direct,3,sub,2045,0.3,net,0.02734,1.812,2.362,86.41
+NYC-CHI direct,3,sub,2045,1,gross,0.236,15.64,20.39,86.41
+NYC-CHI direct,3,sub,2045,1,net,0.393,26.05,33.96,86.41
+NYC-CHI direct,3,sub,2050,0.3,gross,-0.003461,-0.2294,-0.299,86.41
+NYC-CHI direct,3,sub,2050,0.3,net,0.04709,3.122,4.069,86.41
+NYC-CHI direct,3,sub,2050,1,gross,0.2903,19.25,25.09,86.41
+NYC-CHI direct,3,sub,2050,1,net,0.4588,30.42,39.65,86.41
+NYC-CHI direct,3,sub,2055,0.3,gross,0.01402,0.9293,1.211,86.41
+NYC-CHI direct,3,sub,2055,0.3,net,0.06781,4.496,5.86,86.41
+NYC-CHI direct,3,sub,2055,1,gross,0.3486,23.11,30.12,86.41
+NYC-CHI direct,3,sub,2055,1,net,0.5279,35,45.61,86.41
+NYC-CHI direct,3,sub,2060,0.3,gross,0.03267,2.166,2.823,86.41
+NYC-CHI direct,3,sub,2060,0.3,net,0.08948,5.932,7.732,86.41
+NYC-CHI direct,3,sub,2060,1,gross,0.4107,27.23,35.49,86.41
+NYC-CHI direct,3,sub,2060,1,net,0.6001,39.79,51.86,86.41
+NYC-CHI direct,3,bl,2045,0.3,gross,-0.07231,-4.794,-6.249,86.41
+NYC-CHI direct,3,bl,2045,0.3,net,-0.04242,-2.812,-3.665,86.41
+NYC-CHI direct,3,bl,2045,1,gross,0.01704,1.129,1.472,86.41
+NYC-CHI direct,3,bl,2045,1,net,0.1167,7.736,10.08,86.41
+NYC-CHI direct,3,bl,2050,0.3,gross,-0.06662,-4.417,-5.757,86.41
+NYC-CHI direct,3,bl,2050,0.3,net,-0.03455,-2.29,-2.985,86.41
+NYC-CHI direct,3,bl,2050,1,gross,0.03602,2.388,3.113,86.41
+NYC-CHI direct,3,bl,2050,1,net,0.1429,9.476,12.35,86.41
+NYC-CHI direct,3,bl,2055,0.3,gross,-0.06051,-4.012,-5.229,86.41
+NYC-CHI direct,3,bl,2055,0.3,net,-0.02638,-1.749,-2.28,86.41
+NYC-CHI direct,3,bl,2055,1,gross,0.05638,3.738,4.871,86.41
+NYC-CHI direct,3,bl,2055,1,net,0.1701,11.28,14.7,86.41
+NYC-CHI direct,3,bl,2060,0.3,gross,-0.05399,-3.58,-4.666,86.41
+NYC-CHI direct,3,bl,2060,0.3,net,-0.01791,-1.188,-1.548,86.41
+NYC-CHI direct,3,bl,2060,1,gross,0.0781,5.178,6.749,86.41
+NYC-CHI direct,3,bl,2060,1,net,0.1984,13.15,17.14,86.41
+NYC-CHI direct,3,m22,2045,0.3,gross,-0.07231,-4.794,-6.248,86.41
+NYC-CHI direct,3,m22,2045,0.3,net,-0.04296,-2.848,-3.712,86.41
+NYC-CHI direct,3,m22,2045,1,gross,0.0169,1.121,1.46,86.41
+NYC-CHI direct,3,m22,2045,1,net,0.1147,7.607,9.914,86.41
+NYC-CHI direct,3,m22,2050,0.3,gross,-0.06662,-4.417,-5.757,86.41
+NYC-CHI direct,3,m22,2050,0.3,net,-0.03514,-2.33,-3.036,86.41
+NYC-CHI direct,3,m22,2050,1,gross,0.03586,2.377,3.099,86.41
+NYC-CHI direct,3,m22,2050,1,net,0.1408,9.336,12.17,86.41
+NYC-CHI direct,3,m22,2055,0.3,gross,-0.06053,-4.013,-5.23,86.41
+NYC-CHI direct,3,m22,2055,0.3,net,-0.02702,-1.791,-2.335,86.41
+NYC-CHI direct,3,m22,2055,1,gross,0.05618,3.725,4.855,86.41
+NYC-CHI direct,3,m22,2055,1,net,0.1679,11.13,14.51,86.41
+NYC-CHI direct,3,m22,2060,0.3,gross,-0.05402,-3.581,-4.668,86.41
+NYC-CHI direct,3,m22,2060,0.3,net,-0.0186,-1.233,-1.607,86.41
+NYC-CHI direct,3,m22,2060,1,gross,0.07788,5.163,6.73,86.41
+NYC-CHI direct,3,m22,2060,1,net,0.1959,12.99,16.93,86.41
+NYC-CHI direct,4,sub,2045,0.3,gross,-0.006467,-0.4288,-0.66,102.1
+NYC-CHI direct,4,sub,2045,0.3,net,0.03296,2.186,3.364,102.1
+NYC-CHI direct,4,sub,2045,1,gross,0.2337,15.49,23.85,102.1
+NYC-CHI direct,4,sub,2045,1,net,0.3651,24.21,37.26,102.1
+NYC-CHI direct,4,sub,2050,0.3,gross,0.008841,0.5861,0.9022,102.1
+NYC-CHI direct,4,sub,2050,0.3,net,0.05119,3.394,5.224,102.1
+NYC-CHI direct,4,sub,2050,1,gross,0.2847,18.87,29.05,102.1
+NYC-CHI direct,4,sub,2050,1,net,0.4258,28.23,43.46,102.1
+NYC-CHI direct,4,sub,2055,0.3,gross,0.02525,1.674,2.577,102.1
+NYC-CHI direct,4,sub,2055,0.3,net,0.07031,4.662,7.176,102.1
+NYC-CHI direct,4,sub,2055,1,gross,0.3394,22.5,34.64,102.1
+NYC-CHI direct,4,sub,2055,1,net,0.4896,32.46,49.96,102.1
+NYC-CHI direct,4,sub,2060,0.3,gross,0.04277,2.836,4.365,102.1
+NYC-CHI direct,4,sub,2060,0.3,net,0.09029,5.986,9.215,102.1
+NYC-CHI direct,4,sub,2060,1,gross,0.3978,26.37,40.6,102.1
+NYC-CHI direct,4,sub,2060,1,net,0.5562,36.88,56.76,102.1
+NYC-CHI direct,4,bl,2045,0.3,gross,-0.05446,-3.611,-5.558,102.1
+NYC-CHI direct,4,bl,2045,0.3,net,-0.02075,-1.376,-2.117,102.1
+NYC-CHI direct,4,bl,2045,1,gross,0.0389,2.579,3.97,102.1
+NYC-CHI direct,4,bl,2045,1,net,0.1513,10.03,15.44,102.1
+NYC-CHI direct,4,bl,2050,0.3,gross,-0.04851,-3.216,-4.951,102.1
+NYC-CHI direct,4,bl,2050,0.3,net,-0.01234,-0.8179,-1.259,102.1
+NYC-CHI direct,4,bl,2050,1,gross,0.05874,3.895,5.995,102.1
+NYC-CHI direct,4,bl,2050,1,net,0.1793,11.89,18.3,102.1
+NYC-CHI direct,4,bl,2055,0.3,gross,-0.04213,-2.793,-4.3,102.1
+NYC-CHI direct,4,bl,2055,0.3,net,-0.003635,-0.241,-0.371,102.1
+NYC-CHI direct,4,bl,2055,1,gross,0.08001,5.305,8.166,102.1
+NYC-CHI direct,4,bl,2055,1,net,0.2083,13.81,21.26,102.1
+NYC-CHI direct,4,bl,2060,0.3,gross,-0.03532,-2.342,-3.604,102.1
+NYC-CHI direct,4,bl,2060,0.3,net,0.005363,0.3556,0.5474,102.1
+NYC-CHI direct,4,bl,2060,1,gross,0.1027,6.81,10.48,102.1
+NYC-CHI direct,4,bl,2060,1,net,0.2383,15.8,24.32,102.1
+NYC-CHI direct,4,m22,2045,0.3,gross,-0.0547,-3.627,-5.583,102.1
+NYC-CHI direct,4,m22,2045,0.3,net,-0.02144,-1.421,-2.188,102.1
+NYC-CHI direct,4,m22,2045,1,gross,0.03797,2.518,3.875,102.1
+NYC-CHI direct,4,m22,2045,1,net,0.1489,9.869,15.19,102.1
+NYC-CHI direct,4,m22,2050,0.3,gross,-0.0488,-3.235,-4.98,102.1
+NYC-CHI direct,4,m22,2050,0.3,net,-0.01311,-0.8689,-1.338,102.1
+NYC-CHI direct,4,m22,2050,1,gross,0.05766,3.823,5.885,102.1
+NYC-CHI direct,4,m22,2050,1,net,0.1766,11.71,18.03,102.1
+NYC-CHI direct,4,m22,2055,0.3,gross,-0.04246,-2.815,-4.334,102.1
+NYC-CHI direct,4,m22,2055,0.3,net,-0.004482,-0.2972,-0.4574,102.1
+NYC-CHI direct,4,m22,2055,1,gross,0.07878,5.223,8.04,102.1
+NYC-CHI direct,4,m22,2055,1,net,0.2054,13.62,20.96,102.1
+NYC-CHI direct,4,m22,2060,0.3,gross,-0.0357,-2.367,-3.643,102.1
+NYC-CHI direct,4,m22,2060,0.3,net,0.004437,0.2941,0.4528,102.1
+NYC-CHI direct,4,m22,2060,1,gross,0.1013,6.717,10.34,102.1
+NYC-CHI direct,4,m22,2060,1,net,0.2351,15.59,23.99,102.1
+NYC-CHI direct,6,sub,2045,0.3,gross,-0.0002268,-0.01503,-0.03328,146.7
+NYC-CHI direct,6,sub,2045,0.3,net,0.0215,1.425,3.155,146.7
+NYC-CHI direct,6,sub,2045,1,gross,0.1752,11.61,25.71,146.7
+NYC-CHI direct,6,sub,2045,1,net,0.2476,16.42,36.34,146.7
+NYC-CHI direct,6,sub,2050,0.3,gross,0.01096,0.7263,1.608,146.7
+NYC-CHI direct,6,sub,2050,0.3,net,0.03434,2.277,5.04,146.7
+NYC-CHI direct,6,sub,2050,1,gross,0.2125,14.09,31.18,146.7
+NYC-CHI direct,6,sub,2050,1,net,0.2904,19.25,42.62,146.7
+NYC-CHI direct,6,sub,2055,0.3,gross,0.02294,1.521,3.367,146.7
+NYC-CHI direct,6,sub,2055,0.3,net,0.04782,3.17,7.017,146.7
+NYC-CHI direct,6,sub,2055,1,gross,0.2524,16.74,37.04,146.7
+NYC-CHI direct,6,sub,2055,1,net,0.3353,22.23,49.21,146.7
+NYC-CHI direct,6,sub,2060,0.3,gross,0.03574,2.37,5.245,146.7
+NYC-CHI direct,6,sub,2060,0.3,net,0.06185,4.101,9.077,146.7
+NYC-CHI direct,6,sub,2060,1,gross,0.2951,19.56,43.3,146.7
+NYC-CHI direct,6,sub,2060,1,net,0.3821,25.33,56.07,146.7
+NYC-CHI direct,6,bl,2045,0.3,gross,-0.0367,-2.433,-5.386,146.7
+NYC-CHI direct,6,bl,2045,0.3,net,-0.01132,-0.7508,-1.662,146.7
+NYC-CHI direct,6,bl,2045,1,gross,0.03154,2.091,4.628,146.7
+NYC-CHI direct,6,bl,2045,1,net,0.1161,7.699,17.04,146.7
+NYC-CHI direct,6,bl,2050,0.3,gross,-0.03235,-2.145,-4.747,146.7
+NYC-CHI direct,6,bl,2050,0.3,net,-0.005111,-0.3388,-0.75,146.7
+NYC-CHI direct,6,bl,2050,1,gross,0.04604,3.052,6.756,146.7
+NYC-CHI direct,6,bl,2050,1,net,0.1368,9.072,20.08,146.7
+NYC-CHI direct,6,bl,2055,0.3,gross,-0.02769,-1.836,-4.063,146.7
+NYC-CHI direct,6,bl,2055,0.3,net,0.001299,0.0861,0.1906,146.7
+NYC-CHI direct,6,bl,2055,1,gross,0.06158,4.083,9.038,146.7
+NYC-CHI direct,6,bl,2055,1,net,0.1582,10.49,23.22,146.7
+NYC-CHI direct,6,bl,2060,0.3,gross,-0.02271,-1.506,-3.332,146.7
+NYC-CHI direct,6,bl,2060,0.3,net,0.007895,0.5234,1.159,146.7
+NYC-CHI direct,6,bl,2060,1,gross,0.07818,5.183,11.47,146.7
+NYC-CHI direct,6,bl,2060,1,net,0.1802,11.95,26.44,146.7
+NYC-CHI direct,6,m22,2045,0.3,gross,-0.03688,-2.445,-5.412,146.7
+NYC-CHI direct,6,m22,2045,0.3,net,-0.0118,-0.7824,-1.732,146.7
+NYC-CHI direct,6,m22,2045,1,gross,0.03086,2.046,4.528,146.7
+NYC-CHI direct,6,m22,2045,1,net,0.1145,7.588,16.8,146.7
+NYC-CHI direct,6,m22,2050,0.3,gross,-0.03256,-2.159,-4.778,146.7
+NYC-CHI direct,6,m22,2050,0.3,net,-0.005642,-0.3741,-0.828,146.7
+NYC-CHI direct,6,m22,2050,1,gross,0.04525,3,6.641,146.7
+NYC-CHI direct,6,m22,2050,1,net,0.135,8.95,19.81,146.7
+NYC-CHI direct,6,m22,2055,0.3,gross,-0.02793,-1.852,-4.099,146.7
+NYC-CHI direct,6,m22,2055,0.3,net,0.0007125,0.04724,0.1046,146.7
+NYC-CHI direct,6,m22,2055,1,gross,0.06068,4.023,8.905,146.7
+NYC-CHI direct,6,m22,2055,1,net,0.1562,10.35,22.92,146.7
+NYC-CHI direct,6,m22,2060,0.3,gross,-0.02299,-1.524,-3.374,146.7
+NYC-CHI direct,6,m22,2060,0.3,net,0.007253,0.4809,1.064,146.7
+NYC-CHI direct,6,m22,2060,1,gross,0.07716,5.116,11.32,146.7
+NYC-CHI direct,6,m22,2060,1,net,0.178,11.8,26.12,146.7
+DEN-CHI direct,2,sub,2045,0.3,gross,-0.06755,-4.478,-5.489,81.26
+DEN-CHI direct,2,sub,2045,0.3,net,-0.03344,-2.217,-2.718,81.26
+DEN-CHI direct,2,sub,2045,1,gross,0.03143,2.084,2.554,81.26
+DEN-CHI direct,2,sub,2045,1,net,0.1451,9.621,11.79,81.26
+DEN-CHI direct,2,sub,2050,0.3,gross,-0.06124,-4.06,-4.976,81.26
+DEN-CHI direct,2,sub,2050,0.3,net,-0.02465,-1.634,-2.003,81.26
+DEN-CHI direct,2,sub,2050,1,gross,0.05246,3.478,4.263,81.26
+DEN-CHI direct,2,sub,2050,1,net,0.1744,11.56,14.17,81.26
+DEN-CHI direct,2,sub,2055,0.3,gross,-0.05447,-3.612,-4.427,81.26
+DEN-CHI direct,2,sub,2055,0.3,net,-0.01554,-1.03,-1.262,81.26
+DEN-CHI direct,2,sub,2055,1,gross,0.07501,4.973,6.095,81.26
+DEN-CHI direct,2,sub,2055,1,net,0.2048,13.58,16.64,81.26
+DEN-CHI direct,2,sub,2060,0.3,gross,-0.04725,-3.133,-3.84,81.26
+DEN-CHI direct,2,sub,2060,0.3,net,-0.006099,-0.4044,-0.4956,81.26
+DEN-CHI direct,2,sub,2060,1,gross,0.09908,6.569,8.051,81.26
+DEN-CHI direct,2,sub,2060,1,net,0.2363,15.66,19.2,81.26
+DEN-CHI direct,2,bl,2045,0.3,gross,-0.07721,-5.119,-6.274,81.26
+DEN-CHI direct,2,bl,2045,0.3,net,-0.06691,-4.436,-5.437,81.26
+DEN-CHI direct,2,bl,2045,1,gross,-0.03529,-2.34,-2.868,81.26
+DEN-CHI direct,2,bl,2045,1,net,-0.0009415,-0.06242,-0.0765,81.26
+DEN-CHI direct,2,bl,2050,0.3,gross,-0.07454,-4.942,-6.057,81.26
+DEN-CHI direct,2,bl,2050,0.3,net,-0.06348,-4.209,-5.159,81.26
+DEN-CHI direct,2,bl,2050,1,gross,-0.02638,-1.749,-2.144,81.26
+DEN-CHI direct,2,bl,2050,1,net,0.01046,0.6936,0.8502,81.26
+DEN-CHI direct,2,bl,2055,0.3,gross,-0.07167,-4.752,-5.824,81.26
+DEN-CHI direct,2,bl,2055,0.3,net,-0.05991,-3.972,-4.868,81.26
+DEN-CHI direct,2,bl,2055,1,gross,-0.01683,-1.116,-1.368,81.26
+DEN-CHI direct,2,bl,2055,1,net,0.02238,1.484,1.818,81.26
+DEN-CHI direct,2,bl,2060,0.3,gross,-0.06861,-4.549,-5.576,81.26
+DEN-CHI direct,2,bl,2060,0.3,net,-0.05618,-3.725,-4.565,81.26
+DEN-CHI direct,2,bl,2060,1,gross,-0.006637,-0.44,-0.5393,81.26
+DEN-CHI direct,2,bl,2060,1,net,0.03482,2.309,2.83,81.26
+DEN-CHI direct,2,m22,2045,0.3,gross,-0.08552,-5.67,-6.95,81.26
+DEN-CHI direct,2,m22,2045,0.3,net,-0.07401,-4.907,-6.014,81.26
+DEN-CHI direct,2,m22,2045,1,gross,-0.06394,-4.24,-5.196,81.26
+DEN-CHI direct,2,m22,2045,1,net,-0.02557,-1.695,-2.077,81.26
+DEN-CHI direct,2,m22,2050,0.3,gross,-0.08415,-5.579,-6.838,81.26
+DEN-CHI direct,2,m22,2050,0.3,net,-0.0718,-4.76,-5.834,81.26
+DEN-CHI direct,2,m22,2050,1,gross,-0.05936,-3.936,-4.824,81.26
+DEN-CHI direct,2,m22,2050,1,net,-0.01819,-1.206,-1.478,81.26
+DEN-CHI direct,2,m22,2055,0.3,gross,-0.08267,-5.481,-6.718,81.26
+DEN-CHI direct,2,m22,2055,0.3,net,-0.06953,-4.61,-5.65,81.26
+DEN-CHI direct,2,m22,2055,1,gross,-0.05444,-3.61,-4.424,81.26
+DEN-CHI direct,2,m22,2055,1,net,-0.01063,-0.705,-0.8641,81.26
+DEN-CHI direct,2,m22,2060,0.3,gross,-0.0811,-5.377,-6.59,81.26
+DEN-CHI direct,2,m22,2060,0.3,net,-0.0672,-4.455,-5.461,81.26
+DEN-CHI direct,2,m22,2060,1,gross,-0.0492,-3.262,-3.998,81.26
+DEN-CHI direct,2,m22,2060,1,net,-0.00287,-0.1903,-0.2333,81.26
+DEN-CHI direct,3,sub,2045,0.3,gross,-0.04444,-2.947,-3.685,82.9
+DEN-CHI direct,3,sub,2045,0.3,net,-0.009025,-0.5983,-0.7482,82.9
+DEN-CHI direct,3,sub,2045,1,gross,0.1014,6.723,8.406,82.9
+DEN-CHI direct,3,sub,2045,1,net,0.2195,14.55,18.19,82.9
+DEN-CHI direct,3,sub,2050,0.3,gross,-0.03515,-2.33,-2.914,82.9
+DEN-CHI direct,3,sub,2050,0.3,net,0.002866,0.19,0.2376,82.9
+DEN-CHI direct,3,sub,2050,1,gross,0.1324,8.777,10.98,82.9
+DEN-CHI direct,3,sub,2050,1,net,0.2591,17.18,21.48,82.9
+DEN-CHI direct,3,sub,2055,0.3,gross,-0.02518,-1.669,-2.087,82.9
+DEN-CHI direct,3,sub,2055,0.3,net,0.01527,1.012,1.266,82.9
+DEN-CHI direct,3,sub,2055,1,gross,0.1656,10.98,13.73,82.9
+DEN-CHI direct,3,sub,2055,1,net,0.3004,19.92,24.91,82.9
+DEN-CHI direct,3,sub,2060,0.3,gross,-0.01454,-0.964,-1.205,82.9
+DEN-CHI direct,3,sub,2060,0.3,net,0.02818,1.869,2.337,82.9
+DEN-CHI direct,3,sub,2060,1,gross,0.2011,13.33,16.67,82.9
+DEN-CHI direct,3,sub,2060,1,net,0.3435,22.77,28.48,82.9
+DEN-CHI direct,3,bl,2045,0.3,gross,-0.07138,-4.733,-5.918,82.9
+DEN-CHI direct,3,bl,2045,0.3,net,-0.053,-3.514,-4.393,82.9
+DEN-CHI direct,3,bl,2045,1,gross,-0.01864,-1.236,-1.546,82.9
+DEN-CHI direct,3,bl,2045,1,net,0.04265,2.828,3.536,82.9
+DEN-CHI direct,3,bl,2050,0.3,gross,-0.06802,-4.51,-5.639,82.9
+DEN-CHI direct,3,bl,2050,0.3,net,-0.0483,-3.202,-4.004,82.9
+DEN-CHI direct,3,bl,2050,1,gross,-0.007437,-0.4931,-0.6166,82.9
+DEN-CHI direct,3,bl,2050,1,net,0.05831,3.866,4.834,82.9
+DEN-CHI direct,3,bl,2055,0.3,gross,-0.06442,-4.271,-5.34,82.9
+DEN-CHI direct,3,bl,2055,0.3,net,-0.04342,-2.879,-3.6,82.9
+DEN-CHI direct,3,bl,2055,1,gross,0.004577,0.3035,0.3795,82.9
+DEN-CHI direct,3,bl,2055,1,net,0.07455,4.943,6.18,82.9
+DEN-CHI direct,3,bl,2060,0.3,gross,-0.06057,-4.016,-5.021,82.9
+DEN-CHI direct,3,bl,2060,0.3,net,-0.03838,-2.544,-3.182,82.9
+DEN-CHI direct,3,bl,2060,1,gross,0.0174,1.154,1.443,82.9
+DEN-CHI direct,3,bl,2060,1,net,0.09137,6.058,7.575,82.9
+DEN-CHI direct,3,m22,2045,0.3,gross,-0.0815,-5.403,-6.756,82.9
+DEN-CHI direct,3,m22,2045,0.3,net,-0.06733,-4.464,-5.582,82.9
+DEN-CHI direct,3,m22,2045,1,gross,-0.05465,-3.623,-4.531,82.9
+DEN-CHI direct,3,m22,2045,1,net,-0.007421,-0.492,-0.6152,82.9
+DEN-CHI direct,3,m22,2050,0.3,gross,-0.07979,-5.29,-6.615,82.9
+DEN-CHI direct,3,m22,2050,0.3,net,-0.06459,-4.282,-5.355,82.9
+DEN-CHI direct,3,m22,2050,1,gross,-0.04895,-3.245,-4.058,82.9
+DEN-CHI direct,3,m22,2050,1,net,0.001718,0.1139,0.1424,82.9
+DEN-CHI direct,3,m22,2055,0.3,gross,-0.07795,-5.168,-6.462,82.9
+DEN-CHI direct,3,m22,2055,0.3,net,-0.06178,-4.096,-5.122,82.9
+DEN-CHI direct,3,m22,2055,1,gross,-0.04283,-2.84,-3.551,82.9
+DEN-CHI direct,3,m22,2055,1,net,0.01109,0.7351,0.9191,82.9
+DEN-CHI direct,3,m22,2060,0.3,gross,-0.07599,-5.038,-6.3,82.9
+DEN-CHI direct,3,m22,2060,0.3,net,-0.05889,-3.905,-4.882,82.9
+DEN-CHI direct,3,m22,2060,1,gross,-0.0363,-2.407,-3.009,82.9
+DEN-CHI direct,3,m22,2060,1,net,0.0207,1.373,1.716,82.9
+DEN-CHI direct,4,sub,2045,0.3,gross,-0.02952,-1.957,-2.829,95.81
+DEN-CHI direct,4,sub,2045,0.3,net,-0.0007408,-0.04912,-0.07098,95.81
+DEN-CHI direct,4,sub,2045,1,gross,0.1148,7.61,11,95.81
+DEN-CHI direct,4,sub,2045,1,net,0.2107,13.97,20.19,95.81
+DEN-CHI direct,4,sub,2050,0.3,gross,-0.02032,-1.348,-1.947,95.81
+DEN-CHI direct,4,sub,2050,0.3,net,0.01058,0.7015,1.014,95.81
+DEN-CHI direct,4,sub,2050,1,gross,0.1454,9.643,13.94,95.81
+DEN-CHI direct,4,sub,2050,1,net,0.2485,16.47,23.81,95.81
+DEN-CHI direct,4,sub,2055,0.3,gross,-0.01046,-0.6937,-1.002,95.81
+DEN-CHI direct,4,sub,2055,0.3,net,0.02242,1.487,2.148,95.81
+DEN-CHI direct,4,sub,2055,1,gross,0.1783,11.82,17.08,95.81
+DEN-CHI direct,4,sub,2055,1,net,0.2879,19.09,27.59,95.81
+DEN-CHI direct,4,sub,2060,0.3,gross,6.545e-05,0.004339,0.006271,95.81
+DEN-CHI direct,4,sub,2060,0.3,net,0.03476,2.305,3.331,95.81
+DEN-CHI direct,4,sub,2060,1,gross,0.2134,14.15,20.45,95.81
+DEN-CHI direct,4,sub,2060,1,net,0.3291,21.82,31.53,95.81
+DEN-CHI direct,4,bl,2045,0.3,gross,-0.05907,-3.916,-5.66,95.81
+DEN-CHI direct,4,bl,2045,0.3,net,-0.03486,-2.311,-3.34,95.81
+DEN-CHI direct,4,bl,2045,1,gross,-0.005582,-0.3701,-0.5348,95.81
+DEN-CHI direct,4,bl,2045,1,net,0.0751,4.979,7.196,95.81
+DEN-CHI direct,4,bl,2050,0.3,gross,-0.05566,-3.69,-5.333,95.81
+DEN-CHI direct,4,bl,2050,0.3,net,-0.02969,-1.968,-2.845,95.81
+DEN-CHI direct,4,bl,2050,1,gross,0.005784,0.3835,0.5542,95.81
+DEN-CHI direct,4,bl,2050,1,net,0.09235,6.123,8.848,95.81
+DEN-CHI direct,4,bl,2055,0.3,gross,-0.052,-3.448,-4.983,95.81
+DEN-CHI direct,4,bl,2055,0.3,net,-0.02437,-1.616,-2.335,95.81
+DEN-CHI direct,4,bl,2055,1,gross,0.01797,1.191,1.722,95.81
+DEN-CHI direct,4,bl,2055,1,net,0.1101,7.299,10.55,95.81
+DEN-CHI direct,4,bl,2060,0.3,gross,-0.0481,-3.189,-4.609,95.81
+DEN-CHI direct,4,bl,2060,0.3,net,-0.01889,-1.253,-1.81,95.81
+DEN-CHI direct,4,bl,2060,1,gross,0.03098,2.054,2.968,95.81
+DEN-CHI direct,4,bl,2060,1,net,0.1283,8.509,12.3,95.81
+DEN-CHI direct,4,m22,2045,0.3,gross,-0.06799,-4.508,-6.514,95.81
+DEN-CHI direct,4,m22,2045,0.3,net,-0.05268,-3.492,-5.047,95.81
+DEN-CHI direct,4,m22,2045,1,gross,-0.03836,-2.543,-3.675,95.81
+DEN-CHI direct,4,m22,2045,1,net,0.01269,0.8414,1.216,95.81
+DEN-CHI direct,4,m22,2050,0.3,gross,-0.0661,-4.383,-6.334,95.81
+DEN-CHI direct,4,m22,2050,0.3,net,-0.04967,-3.293,-4.759,95.81
+DEN-CHI direct,4,m22,2050,1,gross,-0.03206,-2.126,-3.072,95.81
+DEN-CHI direct,4,m22,2050,1,net,0.02271,1.505,2.176,95.81
+DEN-CHI direct,4,m22,2055,0.3,gross,-0.06408,-4.248,-6.139,95.81
+DEN-CHI direct,4,m22,2055,0.3,net,-0.04659,-3.089,-4.464,95.81
+DEN-CHI direct,4,m22,2055,1,gross,-0.02531,-1.678,-2.425,95.81
+DEN-CHI direct,4,m22,2055,1,net,0.03297,2.186,3.159,95.81
+DEN-CHI direct,4,m22,2060,0.3,gross,-0.06192,-4.105,-5.932,95.81
+DEN-CHI direct,4,m22,2060,0.3,net,-0.04343,-2.88,-4.162,95.81
+DEN-CHI direct,4,m22,2060,1,gross,-0.01811,-1.2,-1.735,95.81
+DEN-CHI direct,4,m22,2060,1,net,0.0435,2.884,4.168,95.81
+DEN-CHI direct,6,sub,2045,0.3,gross,-0.01683,-1.116,-2.233,132.7
+DEN-CHI direct,6,sub,2045,0.3,net,0.001158,0.0768,0.1537,132.7
+DEN-CHI direct,6,sub,2045,1,gross,0.09763,6.473,12.96,132.7
+DEN-CHI direct,6,sub,2045,1,net,0.1576,10.45,20.91,132.7
+DEN-CHI direct,6,sub,2050,0.3,gross,-0.009533,-0.632,-1.265,132.7
+DEN-CHI direct,6,sub,2050,0.3,net,0.009815,0.6507,1.303,132.7
+DEN-CHI direct,6,sub,2050,1,gross,0.1219,8.085,16.18,132.7
+DEN-CHI direct,6,sub,2050,1,net,0.1864,12.36,24.74,132.7
+DEN-CHI direct,6,sub,2055,0.3,gross,-0.001711,-0.1134,-0.227,132.7
+DEN-CHI direct,6,sub,2055,0.3,net,0.01887,1.251,2.504,132.7
+DEN-CHI direct,6,sub,2055,1,gross,0.148,9.814,19.64,132.7
+DEN-CHI direct,6,sub,2055,1,net,0.2166,14.36,28.75,132.7
+DEN-CHI direct,6,sub,2060,0.3,gross,0.00664,0.4402,0.8812,132.7
+DEN-CHI direct,6,sub,2060,0.3,net,0.02828,1.875,3.753,132.7
+DEN-CHI direct,6,sub,2060,1,gross,0.1759,11.66,23.34,132.7
+DEN-CHI direct,6,sub,2060,1,net,0.248,16.44,32.91,132.7
+DEN-CHI direct,6,bl,2045,0.3,gross,-0.04158,-2.757,-5.518,132.7
+DEN-CHI direct,6,bl,2045,0.3,net,-0.02426,-1.608,-3.219,132.7
+DEN-CHI direct,6,bl,2045,1,gross,-0.0006578,-0.04361,-0.0873,132.7
+DEN-CHI direct,6,bl,2045,1,net,0.05708,3.785,7.575,132.7
+DEN-CHI direct,6,bl,2050,0.3,gross,-0.03897,-2.584,-5.172,132.7
+DEN-CHI direct,6,bl,2050,0.3,net,-0.02038,-1.351,-2.705,132.7
+DEN-CHI direct,6,bl,2050,1,gross,0.008038,0.5329,1.067,132.7
+DEN-CHI direct,6,bl,2050,1,net,0.07001,4.642,9.29,132.7
+DEN-CHI direct,6,bl,2055,0.3,gross,-0.03617,-2.398,-4.801,132.7
+DEN-CHI direct,6,bl,2055,0.3,net,-0.01639,-1.087,-2.175,132.7
+DEN-CHI direct,6,bl,2055,1,gross,0.01736,1.151,2.304,132.7
+DEN-CHI direct,6,bl,2055,1,net,0.0833,5.523,11.05,132.7
+DEN-CHI direct,6,bl,2060,0.3,gross,-0.03319,-2.2,-4.404,132.7
+DEN-CHI direct,6,bl,2060,0.3,net,-0.0123,-0.8153,-1.632,132.7
+DEN-CHI direct,6,bl,2060,1,gross,0.02731,1.811,3.625,132.7
+DEN-CHI direct,6,bl,2060,1,net,0.09695,6.428,12.87,132.7
+DEN-CHI direct,6,m22,2045,0.3,gross,-0.04836,-3.206,-6.417,132.7
+DEN-CHI direct,6,m22,2045,0.3,net,-0.03733,-2.475,-4.954,132.7
+DEN-CHI direct,6,m22,2045,1,gross,-0.02534,-1.68,-3.363,132.7
+DEN-CHI direct,6,m22,2045,1,net,0.01142,0.7569,1.515,132.7
+DEN-CHI direct,6,m22,2050,0.3,gross,-0.04689,-3.109,-6.223,132.7
+DEN-CHI direct,6,m22,2050,0.3,net,-0.03506,-2.324,-4.652,132.7
+DEN-CHI direct,6,m22,2050,1,gross,-0.02045,-1.356,-2.714,132.7
+DEN-CHI direct,6,m22,2050,1,net,0.019,1.26,2.521,132.7
+DEN-CHI direct,6,m22,2055,0.3,gross,-0.04532,-3.005,-6.014,132.7
+DEN-CHI direct,6,m22,2055,0.3,net,-0.03272,-2.17,-4.343,132.7
+DEN-CHI direct,6,m22,2055,1,gross,-0.01521,-1.008,-2.018,132.7
+DEN-CHI direct,6,m22,2055,1,net,0.02677,1.775,3.553,132.7
+DEN-CHI direct,6,m22,2060,0.3,gross,-0.04364,-2.893,-5.791,132.7
+DEN-CHI direct,6,m22,2060,0.3,net,-0.03034,-2.011,-4.026,132.7
+DEN-CHI direct,6,m22,2060,1,gross,-0.009612,-0.6373,-1.276,132.7
+DEN-CHI direct,6,m22,2060,1,net,0.03473,2.302,4.609,132.7
+LAX-SFO direct,2,sub,2045,0.3,gross,-0.1199,-7.951,-12.66,105.6
+LAX-SFO direct,2,sub,2045,0.3,net,-0.1108,-7.346,-11.7,105.6
+LAX-SFO direct,2,sub,2045,1,gross,0.05893,3.907,6.22,105.6
+LAX-SFO direct,2,sub,2045,1,net,0.08932,5.922,9.428,105.6
+LAX-SFO direct,2,sub,2050,0.3,gross,-0.1085,-7.195,-11.45,105.6
+LAX-SFO direct,2,sub,2050,0.3,net,-0.09873,-6.546,-10.42,105.6
+LAX-SFO direct,2,sub,2050,1,gross,0.09694,6.427,10.23,105.6
+LAX-SFO direct,2,sub,2050,1,net,0.1296,8.59,13.67,105.6
+LAX-SFO direct,2,sub,2055,0.3,gross,-0.09629,-6.384,-10.16,105.6
+LAX-SFO direct,2,sub,2055,0.3,net,-0.08588,-5.694,-9.065,105.6
+LAX-SFO direct,2,sub,2055,1,gross,0.1377,9.128,14.53,105.6
+LAX-SFO direct,2,sub,2055,1,net,0.1724,11.43,18.2,105.6
+LAX-SFO direct,2,sub,2060,0.3,gross,-0.08324,-5.519,-8.786,105.6
+LAX-SFO direct,2,sub,2060,0.3,net,-0.07225,-4.79,-7.626,105.6
+LAX-SFO direct,2,sub,2060,1,gross,0.1812,12.01,19.12,105.6
+LAX-SFO direct,2,sub,2060,1,net,0.2178,14.44,22.99,105.6
+LAX-SFO direct,2,bl,2045,0.3,gross,-0.1204,-7.984,-12.71,105.6
+LAX-SFO direct,2,bl,2045,0.3,net,-0.11,-7.291,-11.61,105.6
+LAX-SFO direct,2,bl,2045,1,gross,0.05721,3.793,6.038,105.6
+LAX-SFO direct,2,bl,2045,1,net,0.09207,6.104,9.718,105.6
+LAX-SFO direct,2,bl,2050,0.3,gross,-0.1091,-7.234,-11.52,105.6
+LAX-SFO direct,2,bl,2050,0.3,net,-0.09788,-6.489,-10.33,105.6
+LAX-SFO direct,2,bl,2050,1,gross,0.09495,6.296,10.02,105.6
+LAX-SFO direct,2,bl,2050,1,net,0.1324,8.776,13.97,105.6
+LAX-SFO direct,2,bl,2055,0.3,gross,-0.09696,-6.429,-10.23,105.6
+LAX-SFO direct,2,bl,2055,0.3,net,-0.08502,-5.637,-8.974,105.6
+LAX-SFO direct,2,bl,2055,1,gross,0.1354,8.978,14.29,105.6
+LAX-SFO direct,2,bl,2055,1,net,0.1752,11.62,18.5,105.6
+LAX-SFO direct,2,bl,2060,0.3,gross,-0.084,-5.569,-8.866,105.6
+LAX-SFO direct,2,bl,2060,0.3,net,-0.07139,-4.733,-7.535,105.6
+LAX-SFO direct,2,bl,2060,1,gross,0.1786,11.84,18.85,105.6
+LAX-SFO direct,2,bl,2060,1,net,0.2207,14.63,23.29,105.6
+LAX-SFO direct,2,m22,2045,0.3,gross,-0.1204,-7.984,-12.71,105.6
+LAX-SFO direct,2,m22,2045,0.3,net,-0.11,-7.291,-11.61,105.6
+LAX-SFO direct,2,m22,2045,1,gross,0.05721,3.793,6.038,105.6
+LAX-SFO direct,2,m22,2045,1,net,0.09207,6.104,9.718,105.6
+LAX-SFO direct,2,m22,2050,0.3,gross,-0.1091,-7.234,-11.52,105.6
+LAX-SFO direct,2,m22,2050,0.3,net,-0.09788,-6.489,-10.33,105.6
+LAX-SFO direct,2,m22,2050,1,gross,0.09495,6.296,10.02,105.6
+LAX-SFO direct,2,m22,2050,1,net,0.1324,8.776,13.97,105.6
+LAX-SFO direct,2,m22,2055,0.3,gross,-0.09696,-6.429,-10.23,105.6
+LAX-SFO direct,2,m22,2055,0.3,net,-0.08502,-5.637,-8.974,105.6
+LAX-SFO direct,2,m22,2055,1,gross,0.1354,8.978,14.29,105.6
+LAX-SFO direct,2,m22,2055,1,net,0.1752,11.62,18.5,105.6
+LAX-SFO direct,2,m22,2060,0.3,gross,-0.084,-5.569,-8.866,105.6
+LAX-SFO direct,2,m22,2060,0.3,net,-0.07139,-4.733,-7.535,105.6
+LAX-SFO direct,2,m22,2060,1,gross,0.1786,11.84,18.85,105.6
+LAX-SFO direct,2,m22,2060,1,net,0.2207,14.63,23.29,105.6
+LAX-SFO direct,3,sub,2045,0.3,gross,-0.1104,-7.322,-12.13,109.9
+LAX-SFO direct,3,sub,2045,0.3,net,-0.1026,-6.804,-11.27,109.9
+LAX-SFO direct,3,sub,2045,1,gross,0.07104,4.71,7.804,109.9
+LAX-SFO direct,3,sub,2045,1,net,0.09709,6.437,10.67,109.9
+LAX-SFO direct,3,sub,2050,0.3,gross,-0.09887,-6.555,-10.86,109.9
+LAX-SFO direct,3,sub,2050,0.3,net,-0.09047,-5.998,-9.939,109.9
+LAX-SFO direct,3,sub,2050,1,gross,0.1096,7.267,12.04,109.9
+LAX-SFO direct,3,sub,2050,1,net,0.1376,9.122,15.11,109.9
+LAX-SFO direct,3,sub,2055,0.3,gross,-0.08647,-5.733,-9.499,109.9
+LAX-SFO direct,3,sub,2055,0.3,net,-0.07753,-5.141,-8.517,109.9
+LAX-SFO direct,3,sub,2055,1,gross,0.1509,10.01,16.58,109.9
+LAX-SFO direct,3,sub,2055,1,net,0.1807,11.98,19.85,109.9
+LAX-SFO direct,3,sub,2060,0.3,gross,-0.07322,-4.855,-8.044,109.9
+LAX-SFO direct,3,sub,2060,0.3,net,-0.06381,-4.231,-7.01,109.9
+LAX-SFO direct,3,sub,2060,1,gross,0.1951,12.93,21.43,109.9
+LAX-SFO direct,3,sub,2060,1,net,0.2265,15.01,24.88,109.9
+LAX-SFO direct,3,bl,2045,0.3,gross,-0.1109,-7.355,-12.19,109.9
+LAX-SFO direct,3,bl,2045,0.3,net,-0.1018,-6.752,-11.19,109.9
+LAX-SFO direct,3,bl,2045,1,gross,0.06935,4.598,7.618,109.9
+LAX-SFO direct,3,bl,2045,1,net,0.09969,6.61,10.95,109.9
+LAX-SFO direct,3,bl,2050,0.3,gross,-0.09945,-6.593,-10.92,109.9
+LAX-SFO direct,3,bl,2050,0.3,net,-0.08967,-5.945,-9.85,109.9
+LAX-SFO direct,3,bl,2050,1,gross,0.1077,7.138,11.83,109.9
+LAX-SFO direct,3,bl,2050,1,net,0.1403,9.299,15.41,109.9
+LAX-SFO direct,3,bl,2055,0.3,gross,-0.08712,-5.776,-9.571,109.9
+LAX-SFO direct,3,bl,2055,0.3,net,-0.07672,-5.087,-8.428,109.9
+LAX-SFO direct,3,bl,2055,1,gross,0.1487,9.861,16.34,109.9
+LAX-SFO direct,3,bl,2055,1,net,0.1834,12.16,20.15,109.9
+LAX-SFO direct,3,bl,2060,0.3,gross,-0.07397,-4.904,-8.126,109.9
+LAX-SFO direct,3,bl,2060,0.3,net,-0.063,-4.177,-6.921,109.9
+LAX-SFO direct,3,bl,2060,1,gross,0.1926,12.77,21.16,109.9
+LAX-SFO direct,3,bl,2060,1,net,0.2291,15.19,25.17,109.9
+LAX-SFO direct,3,m22,2045,0.3,gross,-0.1109,-7.355,-12.19,109.9
+LAX-SFO direct,3,m22,2045,0.3,net,-0.1018,-6.752,-11.19,109.9
+LAX-SFO direct,3,m22,2045,1,gross,0.06935,4.598,7.618,109.9
+LAX-SFO direct,3,m22,2045,1,net,0.09969,6.61,10.95,109.9
+LAX-SFO direct,3,m22,2050,0.3,gross,-0.09945,-6.593,-10.92,109.9
+LAX-SFO direct,3,m22,2050,0.3,net,-0.08967,-5.945,-9.85,109.9
+LAX-SFO direct,3,m22,2050,1,gross,0.1077,7.138,11.83,109.9
+LAX-SFO direct,3,m22,2050,1,net,0.1403,9.299,15.41,109.9
+LAX-SFO direct,3,m22,2055,0.3,gross,-0.08712,-5.776,-9.571,109.9
+LAX-SFO direct,3,m22,2055,0.3,net,-0.07672,-5.087,-8.428,109.9
+LAX-SFO direct,3,m22,2055,1,gross,0.1487,9.861,16.34,109.9
+LAX-SFO direct,3,m22,2055,1,net,0.1834,12.16,20.15,109.9
+LAX-SFO direct,3,m22,2060,0.3,gross,-0.07397,-4.904,-8.126,109.9
+LAX-SFO direct,3,m22,2060,0.3,net,-0.063,-4.177,-6.921,109.9
+LAX-SFO direct,3,m22,2060,1,gross,0.1926,12.77,21.16,109.9
+LAX-SFO direct,3,m22,2060,1,net,0.2291,15.19,25.17,109.9
+LAX-SFO direct,4,sub,2045,0.3,gross,-0.08343,-5.531,-11.99,143.7
+LAX-SFO direct,4,sub,2045,0.3,net,-0.07846,-5.202,-11.28,143.7
+LAX-SFO direct,4,sub,2045,1,gross,0.05726,3.797,8.23,143.7
+LAX-SFO direct,4,sub,2045,1,net,0.0738,4.893,10.61,143.7
+LAX-SFO direct,4,sub,2050,0.3,gross,-0.07446,-4.937,-10.7,143.7
+LAX-SFO direct,4,sub,2050,0.3,net,-0.06912,-4.582,-9.934,143.7
+LAX-SFO direct,4,sub,2050,1,gross,0.08716,5.779,12.53,143.7
+LAX-SFO direct,4,sub,2050,1,net,0.105,6.959,15.09,143.7
+LAX-SFO direct,4,sub,2055,0.3,gross,-0.06484,-4.299,-9.32,143.7
+LAX-SFO direct,4,sub,2055,0.3,net,-0.05916,-3.922,-8.503,143.7
+LAX-SFO direct,4,sub,2055,1,gross,0.1192,7.904,17.13,143.7
+LAX-SFO direct,4,sub,2055,1,net,0.1381,9.159,19.86,143.7
+LAX-SFO direct,4,sub,2060,0.3,gross,-0.05458,-3.619,-7.844,143.7
+LAX-SFO direct,4,sub,2060,0.3,net,-0.04861,-3.223,-6.987,143.7
+LAX-SFO direct,4,sub,2060,1,gross,0.1534,10.17,22.05,143.7
+LAX-SFO direct,4,sub,2060,1,net,0.1733,11.49,24.91,143.7
+LAX-SFO direct,4,bl,2045,0.3,gross,-0.08381,-5.557,-12.05,143.7
+LAX-SFO direct,4,bl,2045,0.3,net,-0.07786,-5.162,-11.19,143.7
+LAX-SFO direct,4,bl,2045,1,gross,0.05596,3.71,8.043,143.7
+LAX-SFO direct,4,bl,2045,1,net,0.07579,5.025,10.89,143.7
+LAX-SFO direct,4,bl,2050,0.3,gross,-0.0749,-4.966,-10.77,143.7
+LAX-SFO direct,4,bl,2050,0.3,net,-0.0685,-4.542,-9.845,143.7
+LAX-SFO direct,4,bl,2050,1,gross,0.08566,5.68,12.31,143.7
+LAX-SFO direct,4,bl,2050,1,net,0.107,7.094,15.38,143.7
+LAX-SFO direct,4,bl,2055,0.3,gross,-0.06535,-4.333,-9.392,143.7
+LAX-SFO direct,4,bl,2055,0.3,net,-0.05854,-3.881,-8.414,143.7
+LAX-SFO direct,4,bl,2055,1,gross,0.1175,7.791,16.89,143.7
+LAX-SFO direct,4,bl,2055,1,net,0.1402,9.295,20.15,143.7
+LAX-SFO direct,4,bl,2060,0.3,gross,-0.05515,-3.656,-7.927,143.7
+LAX-SFO direct,4,bl,2060,0.3,net,-0.04799,-3.182,-6.898,143.7
+LAX-SFO direct,4,bl,2060,1,gross,0.1515,10.04,21.77,143.7
+LAX-SFO direct,4,bl,2060,1,net,0.1753,11.63,25.2,143.7
+LAX-SFO direct,4,m22,2045,0.3,gross,-0.08381,-5.557,-12.05,143.7
+LAX-SFO direct,4,m22,2045,0.3,net,-0.07786,-5.162,-11.19,143.7
+LAX-SFO direct,4,m22,2045,1,gross,0.05596,3.71,8.043,143.7
+LAX-SFO direct,4,m22,2045,1,net,0.07579,5.025,10.89,143.7
+LAX-SFO direct,4,m22,2050,0.3,gross,-0.0749,-4.966,-10.77,143.7
+LAX-SFO direct,4,m22,2050,0.3,net,-0.0685,-4.542,-9.845,143.7
+LAX-SFO direct,4,m22,2050,1,gross,0.08566,5.68,12.31,143.7
+LAX-SFO direct,4,m22,2050,1,net,0.107,7.094,15.38,143.7
+LAX-SFO direct,4,m22,2055,0.3,gross,-0.06535,-4.333,-9.392,143.7
+LAX-SFO direct,4,m22,2055,0.3,net,-0.05854,-3.881,-8.414,143.7
+LAX-SFO direct,4,m22,2055,1,gross,0.1175,7.791,16.89,143.7
+LAX-SFO direct,4,m22,2055,1,net,0.1402,9.295,20.15,143.7
+LAX-SFO direct,4,m22,2060,0.3,gross,-0.05515,-3.656,-7.927,143.7
+LAX-SFO direct,4,m22,2060,0.3,net,-0.04799,-3.182,-6.898,143.7
+LAX-SFO direct,4,m22,2060,1,gross,0.1515,10.04,21.77,143.7
+LAX-SFO direct,4,m22,2060,1,net,0.1753,11.63,25.2,143.7
+LAX-SFO direct,6,sub,2045,0.3,gross,-0.07634,-5.062,-11.98,157
+LAX-SFO direct,6,sub,2045,0.3,net,-0.07443,-4.935,-11.68,157
+LAX-SFO direct,6,sub,2045,1,gross,0.05256,3.485,8.251,157
+LAX-SFO direct,6,sub,2045,1,net,0.05894,3.908,9.253,157
+LAX-SFO direct,6,sub,2050,0.3,gross,-0.06813,-4.517,-10.69,157
+LAX-SFO direct,6,sub,2050,0.3,net,-0.06603,-4.378,-10.37,157
+LAX-SFO direct,6,sub,2050,1,gross,0.07995,5.301,12.55,157
+LAX-SFO direct,6,sub,2050,1,net,0.08693,5.763,13.65,157
+LAX-SFO direct,6,sub,2055,0.3,gross,-0.05932,-3.933,-9.311,157
+LAX-SFO direct,6,sub,2055,0.3,net,-0.0571,-3.785,-8.963,157
+LAX-SFO direct,6,sub,2055,1,gross,0.1093,7.248,17.16,157
+LAX-SFO direct,6,sub,2055,1,net,0.1167,7.738,18.32,157
+LAX-SFO direct,6,sub,2060,0.3,gross,-0.04991,-3.309,-7.835,157
+LAX-SFO direct,6,sub,2060,0.3,net,-0.04765,-3.159,-7.48,157
+LAX-SFO direct,6,sub,2060,1,gross,0.1407,9.326,22.08,157
+LAX-SFO direct,6,sub,2060,1,net,0.1482,9.825,23.26,157
+LAX-SFO direct,6,bl,2045,0.3,gross,-0.07669,-5.085,-12.04,157
+LAX-SFO direct,6,bl,2045,0.3,net,-0.07387,-4.898,-11.6,157
+LAX-SFO direct,6,bl,2045,1,gross,0.05137,3.406,8.064,157
+LAX-SFO direct,6,bl,2045,1,net,0.06078,4.029,9.54,157
+LAX-SFO direct,6,bl,2050,0.3,gross,-0.06853,-4.544,-10.76,157
+LAX-SFO direct,6,bl,2050,0.3,net,-0.06547,-4.34,-10.28,157
+LAX-SFO direct,6,bl,2050,1,gross,0.07858,5.21,12.34,157
+LAX-SFO direct,6,bl,2050,1,net,0.0888,5.888,13.94,157
+LAX-SFO direct,6,bl,2055,0.3,gross,-0.05978,-3.963,-9.384,157
+LAX-SFO direct,6,bl,2055,0.3,net,-0.05652,-3.748,-8.873,157
+LAX-SFO direct,6,bl,2055,1,gross,0.1078,7.144,16.92,157
+LAX-SFO direct,6,bl,2055,1,net,0.1186,7.864,18.62,157
+LAX-SFO direct,6,bl,2060,0.3,gross,-0.05043,-3.344,-7.917,157
+LAX-SFO direct,6,bl,2060,0.3,net,-0.04708,-3.122,-7.391,157
+LAX-SFO direct,6,bl,2060,1,gross,0.1389,9.209,21.8,157
+LAX-SFO direct,6,bl,2060,1,net,0.1501,9.95,23.56,157
+LAX-SFO direct,6,m22,2045,0.3,gross,-0.07669,-5.085,-12.04,157
+LAX-SFO direct,6,m22,2045,0.3,net,-0.07387,-4.898,-11.6,157
+LAX-SFO direct,6,m22,2045,1,gross,0.05137,3.406,8.064,157
+LAX-SFO direct,6,m22,2045,1,net,0.06078,4.029,9.54,157
+LAX-SFO direct,6,m22,2050,0.3,gross,-0.06853,-4.544,-10.76,157
+LAX-SFO direct,6,m22,2050,0.3,net,-0.06547,-4.34,-10.28,157
+LAX-SFO direct,6,m22,2050,1,gross,0.07858,5.21,12.34,157
+LAX-SFO direct,6,m22,2050,1,net,0.0888,5.888,13.94,157
+LAX-SFO direct,6,m22,2055,0.3,gross,-0.05978,-3.963,-9.384,157
+LAX-SFO direct,6,m22,2055,0.3,net,-0.05652,-3.748,-8.873,157
+LAX-SFO direct,6,m22,2055,1,gross,0.1078,7.144,16.92,157
+LAX-SFO direct,6,m22,2055,1,net,0.1186,7.864,18.62,157
+LAX-SFO direct,6,m22,2060,0.3,gross,-0.05043,-3.344,-7.917,157
+LAX-SFO direct,6,m22,2060,0.3,net,-0.04708,-3.122,-7.391,157
+LAX-SFO direct,6,m22,2060,1,gross,0.1389,9.209,21.8,157
+LAX-SFO direct,6,m22,2060,1,net,0.1501,9.95,23.56,157
+SFO-LAX-LAS all-stop,2,sub,2045,0.3,gross,-0.09416,-6.243,-10.59,112.5
+SFO-LAX-LAS all-stop,2,sub,2045,0.3,net,-0.08588,-5.694,-9.661,112.5
+SFO-LAX-LAS all-stop,2,sub,2045,1,gross,0.06884,4.564,7.743,112.5
+SFO-LAX-LAS all-stop,2,sub,2045,1,net,0.09643,6.394,10.85,112.5
+SFO-LAX-LAS all-stop,2,sub,2050,0.3,gross,-0.08377,-5.554,-9.423,112.5
+SFO-LAX-LAS all-stop,2,sub,2050,0.3,net,-0.07488,-4.965,-8.424,112.5
+SFO-LAX-LAS all-stop,2,sub,2050,1,gross,0.1035,6.86,11.64,112.5
+SFO-LAX-LAS all-stop,2,sub,2050,1,net,0.1331,8.825,14.97,112.5
+SFO-LAX-LAS all-stop,2,sub,2055,0.3,gross,-0.07263,-4.815,-8.17,112.5
+SFO-LAX-LAS all-stop,2,sub,2055,0.3,net,-0.06317,-4.188,-7.106,112.5
+SFO-LAX-LAS all-stop,2,sub,2055,1,gross,0.1406,9.322,15.82,112.5
+SFO-LAX-LAS all-stop,2,sub,2055,1,net,0.1721,11.41,19.36,112.5
+SFO-LAX-LAS all-stop,2,sub,2060,0.3,gross,-0.06074,-4.027,-6.833,112.5
+SFO-LAX-LAS all-stop,2,sub,2060,0.3,net,-0.05076,-3.365,-5.71,112.5
+SFO-LAX-LAS all-stop,2,sub,2060,1,gross,0.1802,11.95,20.28,112.5
+SFO-LAX-LAS all-stop,2,sub,2060,1,net,0.2135,14.16,24.02,112.5
+SFO-LAX-LAS all-stop,2,bl,2045,0.3,gross,-0.09468,-6.277,-10.65,112.5
+SFO-LAX-LAS all-stop,2,bl,2045,0.3,net,-0.07882,-5.226,-8.867,112.5
+SFO-LAX-LAS all-stop,2,bl,2045,1,gross,0.06707,4.447,7.545,112.5
+SFO-LAX-LAS all-stop,2,bl,2045,1,net,0.1199,7.952,13.49,112.5
+SFO-LAX-LAS all-stop,2,bl,2050,0.3,gross,-0.08437,-5.594,-9.491,112.5
+SFO-LAX-LAS all-stop,2,bl,2050,0.3,net,-0.06735,-4.465,-7.576,112.5
+SFO-LAX-LAS all-stop,2,bl,2050,1,gross,0.1014,6.726,11.41,112.5
+SFO-LAX-LAS all-stop,2,bl,2050,1,net,0.1582,10.49,17.79,112.5
+SFO-LAX-LAS all-stop,2,bl,2055,0.3,gross,-0.07332,-4.861,-8.247,112.5
+SFO-LAX-LAS all-stop,2,bl,2055,0.3,net,-0.0552,-3.66,-6.21,112.5
+SFO-LAX-LAS all-stop,2,bl,2055,1,gross,0.1383,9.169,15.56,112.5
+SFO-LAX-LAS all-stop,2,bl,2055,1,net,0.1987,13.17,22.35,112.5
+SFO-LAX-LAS all-stop,2,bl,2060,0.3,gross,-0.06151,-4.078,-6.92,112.5
+SFO-LAX-LAS all-stop,2,bl,2060,0.3,net,-0.04238,-2.81,-4.767,112.5
+SFO-LAX-LAS all-stop,2,bl,2060,1,gross,0.1776,11.78,19.98,112.5
+SFO-LAX-LAS all-stop,2,bl,2060,1,net,0.2414,16.01,27.16,112.5
+SFO-LAX-LAS all-stop,2,m22,2045,0.3,gross,-0.09468,-6.277,-10.65,112.5
+SFO-LAX-LAS all-stop,2,m22,2045,0.3,net,-0.07882,-5.226,-8.867,112.5
+SFO-LAX-LAS all-stop,2,m22,2045,1,gross,0.06707,4.447,7.545,112.5
+SFO-LAX-LAS all-stop,2,m22,2045,1,net,0.1199,7.952,13.49,112.5
+SFO-LAX-LAS all-stop,2,m22,2050,0.3,gross,-0.08437,-5.594,-9.491,112.5
+SFO-LAX-LAS all-stop,2,m22,2050,0.3,net,-0.06735,-4.465,-7.576,112.5
+SFO-LAX-LAS all-stop,2,m22,2050,1,gross,0.1014,6.726,11.41,112.5
+SFO-LAX-LAS all-stop,2,m22,2050,1,net,0.1582,10.49,17.79,112.5
+SFO-LAX-LAS all-stop,2,m22,2055,0.3,gross,-0.07332,-4.861,-8.247,112.5
+SFO-LAX-LAS all-stop,2,m22,2055,0.3,net,-0.0552,-3.66,-6.21,112.5
+SFO-LAX-LAS all-stop,2,m22,2055,1,gross,0.1383,9.169,15.56,112.5
+SFO-LAX-LAS all-stop,2,m22,2055,1,net,0.1987,13.17,22.35,112.5
+SFO-LAX-LAS all-stop,2,m22,2060,0.3,gross,-0.06151,-4.078,-6.92,112.5
+SFO-LAX-LAS all-stop,2,m22,2060,0.3,net,-0.04238,-2.81,-4.767,112.5
+SFO-LAX-LAS all-stop,2,m22,2060,1,gross,0.1776,11.78,19.98,112.5
+SFO-LAX-LAS all-stop,2,m22,2060,1,net,0.2414,16.01,27.16,112.5
+SFO-LAX-LAS all-stop,3,sub,2045,0.3,gross,-0.08555,-5.672,-10.06,117.6
+SFO-LAX-LAS all-stop,3,sub,2045,0.3,net,-0.07869,-5.217,-9.25,117.6
+SFO-LAX-LAS all-stop,3,sub,2045,1,gross,0.07949,5.27,9.344,117.6
+SFO-LAX-LAS all-stop,3,sub,2045,1,net,0.1024,6.786,12.03,117.6
+SFO-LAX-LAS all-stop,3,sub,2050,0.3,gross,-0.07503,-4.974,-8.82,117.6
+SFO-LAX-LAS all-stop,3,sub,2050,0.3,net,-0.06765,-4.485,-7.953,117.6
+SFO-LAX-LAS all-stop,3,sub,2050,1,gross,0.1146,7.595,13.47,117.6
+SFO-LAX-LAS all-stop,3,sub,2050,1,net,0.1391,9.225,16.36,117.6
+SFO-LAX-LAS all-stop,3,sub,2055,0.3,gross,-0.06375,-4.226,-7.494,117.6
+SFO-LAX-LAS all-stop,3,sub,2055,0.3,net,-0.0559,-3.706,-6.572,117.6
+SFO-LAX-LAS all-stop,3,sub,2055,1,gross,0.1521,10.09,17.89,117.6
+SFO-LAX-LAS all-stop,3,sub,2055,1,net,0.1783,11.82,20.96,117.6
+SFO-LAX-LAS all-stop,3,sub,2060,0.3,gross,-0.05171,-3.428,-6.078,117.6
+SFO-LAX-LAS all-stop,3,sub,2060,0.3,net,-0.04345,-2.881,-5.107,117.6
+SFO-LAX-LAS all-stop,3,sub,2060,1,gross,0.1923,12.75,22.6,117.6
+SFO-LAX-LAS all-stop,3,sub,2060,1,net,0.2198,14.57,25.84,117.6
+SFO-LAX-LAS all-stop,3,bl,2045,0.3,gross,-0.08606,-5.706,-10.12,117.6
+SFO-LAX-LAS all-stop,3,bl,2045,0.3,net,-0.07194,-4.77,-8.457,117.6
+SFO-LAX-LAS all-stop,3,bl,2045,1,gross,0.07775,5.155,9.14,117.6
+SFO-LAX-LAS all-stop,3,bl,2045,1,net,0.1248,8.275,14.67,117.6
+SFO-LAX-LAS all-stop,3,bl,2050,0.3,gross,-0.07562,-5.013,-8.889,117.6
+SFO-LAX-LAS all-stop,3,bl,2050,0.3,net,-0.06046,-4.008,-7.107,117.6
+SFO-LAX-LAS all-stop,3,bl,2050,1,gross,0.1126,7.463,13.23,117.6
+SFO-LAX-LAS all-stop,3,bl,2050,1,net,0.1631,10.81,19.17,117.6
+SFO-LAX-LAS all-stop,3,bl,2055,0.3,gross,-0.06442,-4.271,-7.573,117.6
+SFO-LAX-LAS all-stop,3,bl,2055,0.3,net,-0.04829,-3.202,-5.677,117.6
+SFO-LAX-LAS all-stop,3,bl,2055,1,gross,0.1499,9.937,17.62,117.6
+SFO-LAX-LAS all-stop,3,bl,2055,1,net,0.2036,13.5,23.94,117.6
+SFO-LAX-LAS all-stop,3,bl,2060,0.3,gross,-0.05247,-3.479,-6.168,117.6
+SFO-LAX-LAS all-stop,3,bl,2060,0.3,net,-0.03545,-2.35,-4.167,117.6
+SFO-LAX-LAS all-stop,3,bl,2060,1,gross,0.1897,12.58,22.3,117.6
+SFO-LAX-LAS all-stop,3,bl,2060,1,net,0.2464,16.34,28.97,117.6
+SFO-LAX-LAS all-stop,3,m22,2045,0.3,gross,-0.08606,-5.706,-10.12,117.6
+SFO-LAX-LAS all-stop,3,m22,2045,0.3,net,-0.07194,-4.77,-8.457,117.6
+SFO-LAX-LAS all-stop,3,m22,2045,1,gross,0.07775,5.155,9.14,117.6
+SFO-LAX-LAS all-stop,3,m22,2045,1,net,0.1248,8.275,14.67,117.6
+SFO-LAX-LAS all-stop,3,m22,2050,0.3,gross,-0.07562,-5.013,-8.889,117.6
+SFO-LAX-LAS all-stop,3,m22,2050,0.3,net,-0.06046,-4.008,-7.107,117.6
+SFO-LAX-LAS all-stop,3,m22,2050,1,gross,0.1126,7.463,13.23,117.6
+SFO-LAX-LAS all-stop,3,m22,2050,1,net,0.1631,10.81,19.17,117.6
+SFO-LAX-LAS all-stop,3,m22,2055,0.3,gross,-0.06442,-4.271,-7.573,117.6
+SFO-LAX-LAS all-stop,3,m22,2055,0.3,net,-0.04829,-3.202,-5.677,117.6
+SFO-LAX-LAS all-stop,3,m22,2055,1,gross,0.1499,9.937,17.62,117.6
+SFO-LAX-LAS all-stop,3,m22,2055,1,net,0.2036,13.5,23.94,117.6
+SFO-LAX-LAS all-stop,3,m22,2060,0.3,gross,-0.05247,-3.479,-6.168,117.6
+SFO-LAX-LAS all-stop,3,m22,2060,0.3,net,-0.03545,-2.35,-4.167,117.6
+SFO-LAX-LAS all-stop,3,m22,2060,1,gross,0.1897,12.58,22.3,117.6
+SFO-LAX-LAS all-stop,3,m22,2060,1,net,0.2464,16.34,28.97,117.6
+SFO-LAX-LAS all-stop,4,sub,2045,0.3,gross,-0.06654,-4.412,-9.926,149.2
+SFO-LAX-LAS all-stop,4,sub,2045,0.3,net,-0.0623,-4.13,-9.294,149.2
+SFO-LAX-LAS all-stop,4,sub,2045,1,gross,0.06517,4.321,9.722,149.2
+SFO-LAX-LAS all-stop,4,sub,2045,1,net,0.0793,5.258,11.83,149.2
+SFO-LAX-LAS all-stop,4,sub,2050,0.3,gross,-0.05814,-3.855,-8.674,149.2
+SFO-LAX-LAS all-stop,4,sub,2050,0.3,net,-0.05357,-3.552,-7.992,149.2
+SFO-LAX-LAS all-stop,4,sub,2050,1,gross,0.09315,6.176,13.9,149.2
+SFO-LAX-LAS all-stop,4,sub,2050,1,net,0.1084,7.186,16.17,149.2
+SFO-LAX-LAS all-stop,4,sub,2055,0.3,gross,-0.04914,-3.258,-7.331,149.2
+SFO-LAX-LAS all-stop,4,sub,2055,0.3,net,-0.04428,-2.936,-6.606,149.2
+SFO-LAX-LAS all-stop,4,sub,2055,1,gross,0.1232,8.165,18.37,149.2
+SFO-LAX-LAS all-stop,4,sub,2055,1,net,0.1394,9.239,20.79,149.2
+SFO-LAX-LAS all-stop,4,sub,2060,0.3,gross,-0.03953,-2.621,-5.898,149.2
+SFO-LAX-LAS all-stop,4,sub,2060,0.3,net,-0.03445,-2.284,-5.139,149.2
+SFO-LAX-LAS all-stop,4,sub,2060,1,gross,0.1552,10.29,23.15,149.2
+SFO-LAX-LAS all-stop,4,sub,2060,1,net,0.1721,11.41,25.68,149.2
+SFO-LAX-LAS all-stop,4,bl,2045,0.3,gross,-0.06695,-4.439,-9.987,149.2
+SFO-LAX-LAS all-stop,4,bl,2045,0.3,net,-0.05698,-3.778,-8.501,149.2
+SFO-LAX-LAS all-stop,4,bl,2045,1,gross,0.06379,4.229,9.517,149.2
+SFO-LAX-LAS all-stop,4,bl,2045,1,net,0.097,6.431,14.47,149.2
+SFO-LAX-LAS all-stop,4,bl,2050,0.3,gross,-0.05861,-3.886,-8.744,149.2
+SFO-LAX-LAS all-stop,4,bl,2050,0.3,net,-0.04791,-3.176,-7.147,149.2
+SFO-LAX-LAS all-stop,4,bl,2050,1,gross,0.09157,6.071,13.66,149.2
+SFO-LAX-LAS all-stop,4,bl,2050,1,net,0.1273,8.437,18.98,149.2
+SFO-LAX-LAS all-stop,4,bl,2055,0.3,gross,-0.04968,-3.294,-7.411,149.2
+SFO-LAX-LAS all-stop,4,bl,2055,0.3,net,-0.03829,-2.538,-5.712,149.2
+SFO-LAX-LAS all-stop,4,bl,2055,1,gross,0.1214,8.046,18.1,149.2
+SFO-LAX-LAS all-stop,4,bl,2055,1,net,0.1593,10.56,23.77,149.2
+SFO-LAX-LAS all-stop,4,bl,2060,0.3,gross,-0.04014,-2.661,-5.988,149.2
+SFO-LAX-LAS all-stop,4,bl,2060,0.3,net,-0.02814,-1.866,-4.199,149.2
+SFO-LAX-LAS all-stop,4,bl,2060,1,gross,0.1532,10.15,22.85,149.2
+SFO-LAX-LAS all-stop,4,bl,2060,1,net,0.1931,12.8,28.81,149.2
+SFO-LAX-LAS all-stop,4,m22,2045,0.3,gross,-0.06695,-4.439,-9.987,149.2
+SFO-LAX-LAS all-stop,4,m22,2045,0.3,net,-0.05698,-3.778,-8.501,149.2
+SFO-LAX-LAS all-stop,4,m22,2045,1,gross,0.06379,4.229,9.517,149.2
+SFO-LAX-LAS all-stop,4,m22,2045,1,net,0.097,6.431,14.47,149.2
+SFO-LAX-LAS all-stop,4,m22,2050,0.3,gross,-0.05861,-3.886,-8.744,149.2
+SFO-LAX-LAS all-stop,4,m22,2050,0.3,net,-0.04791,-3.176,-7.147,149.2
+SFO-LAX-LAS all-stop,4,m22,2050,1,gross,0.09157,6.071,13.66,149.2
+SFO-LAX-LAS all-stop,4,m22,2050,1,net,0.1273,8.437,18.98,149.2
+SFO-LAX-LAS all-stop,4,m22,2055,0.3,gross,-0.04968,-3.294,-7.411,149.2
+SFO-LAX-LAS all-stop,4,m22,2055,0.3,net,-0.03829,-2.538,-5.712,149.2
+SFO-LAX-LAS all-stop,4,m22,2055,1,gross,0.1214,8.046,18.1,149.2
+SFO-LAX-LAS all-stop,4,m22,2055,1,net,0.1593,10.56,23.77,149.2
+SFO-LAX-LAS all-stop,4,m22,2060,0.3,gross,-0.04014,-2.661,-5.988,149.2
+SFO-LAX-LAS all-stop,4,m22,2060,0.3,net,-0.02814,-1.866,-4.199,149.2
+SFO-LAX-LAS all-stop,4,m22,2060,1,gross,0.1532,10.15,22.85,149.2
+SFO-LAX-LAS all-stop,4,m22,2060,1,net,0.1931,12.8,28.81,149.2
+SFO-LAX-LAS all-stop,6,sub,2045,0.3,gross,-0.06319,-4.19,-9.92,157
+SFO-LAX-LAS all-stop,6,sub,2045,0.3,net,-0.06232,-4.132,-9.782,157
+SFO-LAX-LAS all-stop,6,sub,2045,1,gross,0.06204,4.113,9.739,157
+SFO-LAX-LAS all-stop,6,sub,2045,1,net,0.06496,4.307,10.2,157
+SFO-LAX-LAS all-stop,6,sub,2050,0.3,gross,-0.05521,-3.66,-8.667,157
+SFO-LAX-LAS all-stop,6,sub,2050,0.3,net,-0.05422,-3.595,-8.512,157
+SFO-LAX-LAS all-stop,6,sub,2050,1,gross,0.08865,5.878,13.92,157
+SFO-LAX-LAS all-stop,6,sub,2050,1,net,0.09194,6.096,14.43,157
+SFO-LAX-LAS all-stop,6,sub,2055,0.3,gross,-0.04665,-3.093,-7.323,157
+SFO-LAX-LAS all-stop,6,sub,2055,0.3,net,-0.04561,-3.024,-7.159,157
+SFO-LAX-LAS all-stop,6,sub,2055,1,gross,0.1172,7.769,18.39,157
+SFO-LAX-LAS all-stop,6,sub,2055,1,net,0.1207,7.999,18.94,157
+SFO-LAX-LAS all-stop,6,sub,2060,0.3,gross,-0.03751,-2.487,-5.889,157
+SFO-LAX-LAS all-stop,6,sub,2060,0.3,net,-0.03652,-2.421,-5.733,157
+SFO-LAX-LAS all-stop,6,sub,2060,1,gross,0.1476,9.788,23.18,157
+SFO-LAX-LAS all-stop,6,sub,2060,1,net,0.151,10.01,23.7,157
+SFO-LAX-LAS all-stop,6,bl,2045,0.3,gross,-0.06358,-4.215,-9.98,157
+SFO-LAX-LAS all-stop,6,bl,2045,0.3,net,-0.05726,-3.796,-8.988,157
+SFO-LAX-LAS all-stop,6,bl,2045,1,gross,0.06073,4.027,9.534,157
+SFO-LAX-LAS all-stop,6,bl,2045,1,net,0.0818,5.423,12.84,157
+SFO-LAX-LAS all-stop,6,bl,2050,0.3,gross,-0.05565,-3.69,-8.736,157
+SFO-LAX-LAS all-stop,6,bl,2050,0.3,net,-0.04883,-3.237,-7.665,157
+SFO-LAX-LAS all-stop,6,bl,2050,1,gross,0.08715,5.778,13.68,157
+SFO-LAX-LAS all-stop,6,bl,2050,1,net,0.1099,7.286,17.25,157
+SFO-LAX-LAS all-stop,6,bl,2055,0.3,gross,-0.04716,-3.127,-7.403,157
+SFO-LAX-LAS all-stop,6,bl,2055,0.3,net,-0.03991,-2.646,-6.264,157
+SFO-LAX-LAS all-stop,6,bl,2055,1,gross,0.1155,7.656,18.13,157
+SFO-LAX-LAS all-stop,6,bl,2055,1,net,0.1396,9.259,21.92,157
+SFO-LAX-LAS all-stop,6,bl,2060,0.3,gross,-0.03809,-2.525,-5.979,157
+SFO-LAX-LAS all-stop,6,bl,2060,0.3,net,-0.03052,-2.024,-4.792,157
+SFO-LAX-LAS all-stop,6,bl,2060,1,gross,0.1457,9.66,22.87,157
+SFO-LAX-LAS all-stop,6,bl,2060,1,net,0.1709,11.33,26.83,157
+SFO-LAX-LAS all-stop,6,m22,2045,0.3,gross,-0.06358,-4.215,-9.98,157
+SFO-LAX-LAS all-stop,6,m22,2045,0.3,net,-0.05726,-3.796,-8.988,157
+SFO-LAX-LAS all-stop,6,m22,2045,1,gross,0.06073,4.027,9.534,157
+SFO-LAX-LAS all-stop,6,m22,2045,1,net,0.0818,5.423,12.84,157
+SFO-LAX-LAS all-stop,6,m22,2050,0.3,gross,-0.05565,-3.69,-8.736,157
+SFO-LAX-LAS all-stop,6,m22,2050,0.3,net,-0.04883,-3.237,-7.665,157
+SFO-LAX-LAS all-stop,6,m22,2050,1,gross,0.08715,5.778,13.68,157
+SFO-LAX-LAS all-stop,6,m22,2050,1,net,0.1099,7.286,17.25,157
+SFO-LAX-LAS all-stop,6,m22,2055,0.3,gross,-0.04716,-3.127,-7.403,157
+SFO-LAX-LAS all-stop,6,m22,2055,0.3,net,-0.03991,-2.646,-6.264,157
+SFO-LAX-LAS all-stop,6,m22,2055,1,gross,0.1155,7.656,18.13,157
+SFO-LAX-LAS all-stop,6,m22,2055,1,net,0.1396,9.259,21.92,157
+SFO-LAX-LAS all-stop,6,m22,2060,0.3,gross,-0.03809,-2.525,-5.979,157
+SFO-LAX-LAS all-stop,6,m22,2060,0.3,net,-0.03052,-2.024,-4.792,157
+SFO-LAX-LAS all-stop,6,m22,2060,1,gross,0.1457,9.66,22.87,157
+SFO-LAX-LAS all-stop,6,m22,2060,1,net,0.1709,11.33,26.83,157
+NYC-SFO direct,2,sub,2045,0.3,gross,-0.0007363,-0.04881,-0.05261,71.45
+NYC-SFO direct,2,sub,2045,0.3,net,0.03583,2.376,2.56,71.45
+NYC-SFO direct,2,sub,2045,1,gross,0.127,8.422,9.077,71.45
+NYC-SFO direct,2,sub,2045,1,net,0.2489,16.5,17.79,71.45
+NYC-SFO direct,2,sub,2050,0.3,gross,0.007409,0.4912,0.5294,71.45
+NYC-SFO direct,2,sub,2050,0.3,net,0.04664,3.092,3.333,71.45
+NYC-SFO direct,2,sub,2050,1,gross,0.1542,10.22,11.02,71.45
+NYC-SFO direct,2,sub,2050,1,net,0.285,18.89,20.36,71.45
+NYC-SFO direct,2,sub,2055,0.3,gross,0.01614,1.07,1.153,71.45
+NYC-SFO direct,2,sub,2055,0.3,net,0.05789,3.838,4.136,71.45
+NYC-SFO direct,2,sub,2055,1,gross,0.1833,12.15,13.1,71.45
+NYC-SFO direct,2,sub,2055,1,net,0.3225,21.38,23.04,71.45
+NYC-SFO direct,2,sub,2060,0.3,gross,0.02546,1.688,1.819,71.45
+NYC-SFO direct,2,sub,2060,0.3,net,0.06959,4.614,4.973,71.45
+NYC-SFO direct,2,sub,2060,1,gross,0.2144,14.21,15.32,71.45
+NYC-SFO direct,2,sub,2060,1,net,0.3615,23.97,25.83,71.45
+NYC-SFO direct,2,bl,2045,0.3,gross,-0.0213,-1.412,-1.522,71.45
+NYC-SFO direct,2,bl,2045,0.3,net,0.03481,2.308,2.487,71.45
+NYC-SFO direct,2,bl,2045,1,gross,0.03816,2.53,2.727,71.45
+NYC-SFO direct,2,bl,2045,1,net,0.2252,14.93,16.09,71.45
+NYC-SFO direct,2,bl,2050,0.3,gross,-0.01751,-1.161,-1.251,71.45
+NYC-SFO direct,2,bl,2050,0.3,net,0.04267,2.829,3.049,71.45
+NYC-SFO direct,2,bl,2050,1,gross,0.0508,3.368,3.629,71.45
+NYC-SFO direct,2,bl,2050,1,net,0.2514,16.67,17.96,71.45
+NYC-SFO direct,2,bl,2055,0.3,gross,-0.01345,-0.8915,-0.9608,71.45
+NYC-SFO direct,2,bl,2055,0.3,net,0.0506,3.355,3.616,71.45
+NYC-SFO direct,2,bl,2055,1,gross,0.06434,4.266,4.597,71.45
+NYC-SFO direct,2,bl,2055,1,net,0.2778,18.42,19.85,71.45
+NYC-SFO direct,2,bl,2060,0.3,gross,-0.009108,-0.6038,-0.6508,71.45
+NYC-SFO direct,2,bl,2060,0.3,net,0.05862,3.886,4.188,71.45
+NYC-SFO direct,2,bl,2060,1,gross,0.0788,5.225,5.631,71.45
+NYC-SFO direct,2,bl,2060,1,net,0.3046,20.19,21.76,71.45
+NYC-SFO direct,2,m22,2045,0.3,gross,-0.02745,-1.82,-1.961,71.45
+NYC-SFO direct,2,m22,2045,0.3,net,-0.008783,-0.5823,-0.6276,71.45
+NYC-SFO direct,2,m22,2045,1,gross,0.0007439,0.04932,0.05315,71.45
+NYC-SFO direct,2,m22,2045,1,net,0.06297,4.175,4.499,71.45
+NYC-SFO direct,2,m22,2050,0.3,gross,-0.02565,-1.701,-1.833,71.45
+NYC-SFO direct,2,m22,2050,0.3,net,-0.005631,-0.3733,-0.4023,71.45
+NYC-SFO direct,2,m22,2050,1,gross,0.006735,0.4465,0.4812,71.45
+NYC-SFO direct,2,m22,2050,1,net,0.07348,4.871,5.25,71.45
+NYC-SFO direct,2,m22,2055,0.3,gross,-0.02373,-1.573,-1.695,71.45
+NYC-SFO direct,2,m22,2055,0.3,net,-0.002418,-0.1603,-0.1728,71.45
+NYC-SFO direct,2,m22,2055,1,gross,0.01316,0.8724,0.9402,71.45
+NYC-SFO direct,2,m22,2055,1,net,0.08418,5.581,6.015,71.45
+NYC-SFO direct,2,m22,2060,0.3,gross,-0.02167,-1.437,-1.548,71.45
+NYC-SFO direct,2,m22,2060,0.3,net,0.0008628,0.05721,0.06165,71.45
+NYC-SFO direct,2,m22,2060,1,gross,0.02001,1.327,1.43,71.45
+NYC-SFO direct,2,m22,2060,1,net,0.09512,6.307,6.797,71.45
+NYC-SFO direct,3,sub,2045,0.3,gross,0.0279,1.85,2.009,72.02
+NYC-SFO direct,3,sub,2045,0.3,net,0.07244,4.803,5.217,72.02
+NYC-SFO direct,3,sub,2045,1,gross,0.2208,14.64,15.9,72.02
+NYC-SFO direct,3,sub,2045,1,net,0.3693,24.48,26.59,72.02
+NYC-SFO direct,3,sub,2050,0.3,gross,0.0402,2.665,2.895,72.02
+NYC-SFO direct,3,sub,2050,0.3,net,0.08798,5.833,6.336,72.02
+NYC-SFO direct,3,sub,2050,1,gross,0.2618,17.36,18.85,72.02
+NYC-SFO direct,3,sub,2050,1,net,0.4211,27.92,30.32,72.02
+NYC-SFO direct,3,sub,2055,0.3,gross,0.05338,3.539,3.844,72.02
+NYC-SFO direct,3,sub,2055,0.3,net,0.1042,6.911,7.507,72.02
+NYC-SFO direct,3,sub,2055,1,gross,0.3057,20.27,22.02,72.02
+NYC-SFO direct,3,sub,2055,1,net,0.4752,31.51,34.23,72.02
+NYC-SFO direct,3,sub,2060,0.3,gross,0.06746,4.472,4.858,72.02
+NYC-SFO direct,3,sub,2060,0.3,net,0.1212,8.035,8.728,72.02
+NYC-SFO direct,3,sub,2060,1,gross,0.3526,23.38,25.4,72.02
+NYC-SFO direct,3,sub,2060,1,net,0.5318,35.26,38.3,72.02
+NYC-SFO direct,3,bl,2045,0.3,gross,-0.005369,-0.3559,-0.3866,72.02
+NYC-SFO direct,3,bl,2045,0.3,net,0.07468,4.951,5.378,72.02
+NYC-SFO direct,3,bl,2045,1,gross,0.09333,6.188,6.722,72.02
+NYC-SFO direct,3,bl,2045,1,net,0.3602,23.88,25.94,72.02
+NYC-SFO direct,3,bl,2050,0.3,gross,0.0009235,0.06123,0.0665,72.02
+NYC-SFO direct,3,bl,2050,0.3,net,0.08679,5.754,6.25,72.02
+NYC-SFO direct,3,bl,2050,1,gross,0.1143,7.578,8.232,72.02
+NYC-SFO direct,3,bl,2050,1,net,0.4005,26.55,28.84,72.02
+NYC-SFO direct,3,bl,2055,0.3,gross,0.007669,0.5085,0.5523,72.02
+NYC-SFO direct,3,bl,2055,0.3,net,0.09905,6.567,7.133,72.02
+NYC-SFO direct,3,bl,2055,1,gross,0.1368,9.069,9.851,72.02
+NYC-SFO direct,3,bl,2055,1,net,0.4414,29.26,31.79,72.02
+NYC-SFO direct,3,bl,2060,0.3,gross,0.01487,0.9859,1.071,72.02
+NYC-SFO direct,3,bl,2060,0.3,net,0.1115,7.391,8.029,72.02
+NYC-SFO direct,3,bl,2060,1,gross,0.1608,10.66,11.58,72.02
+NYC-SFO direct,3,bl,2060,1,net,0.4828,32.01,34.77,72.02
+NYC-SFO direct,3,m22,2045,0.3,gross,-0.02217,-1.47,-1.596,72.02
+NYC-SFO direct,3,m22,2045,0.3,net,0.01821,1.207,1.311,72.02
+NYC-SFO direct,3,m22,2045,1,gross,0.02154,1.428,1.551,72.02
+NYC-SFO direct,3,m22,2045,1,net,0.1561,10.35,11.24,72.02
+NYC-SFO direct,3,m22,2050,0.3,gross,-0.01938,-1.285,-1.396,72.02
+NYC-SFO direct,3,m22,2050,0.3,net,0.02393,1.586,1.723,72.02
+NYC-SFO direct,3,m22,2050,1,gross,0.03082,2.044,2.22,72.02
+NYC-SFO direct,3,m22,2050,1,net,0.1752,11.61,12.62,72.02
+NYC-SFO direct,3,m22,2055,0.3,gross,-0.01639,-1.087,-1.181,72.02
+NYC-SFO direct,3,m22,2055,0.3,net,0.02969,1.969,2.138,72.02
+NYC-SFO direct,3,m22,2055,1,gross,0.04078,2.704,2.937,72.02
+NYC-SFO direct,3,m22,2055,1,net,0.1944,12.89,14,72.02
+NYC-SFO direct,3,m22,2060,0.3,gross,-0.01321,-0.8756,-0.9511,72.02
+NYC-SFO direct,3,m22,2060,0.3,net,0.03553,2.355,2.559,72.02
+NYC-SFO direct,3,m22,2060,1,gross,0.05141,3.408,3.702,72.02
+NYC-SFO direct,3,m22,2060,1,net,0.2139,14.18,15.4,72.02
+NYC-SFO direct,4,sub,2045,0.3,gross,0.0437,2.897,3.341,76.46
+NYC-SFO direct,4,sub,2045,0.3,net,0.08874,5.883,6.785,76.46
+NYC-SFO direct,4,sub,2045,1,gross,0.2641,17.51,20.19,76.46
+NYC-SFO direct,4,sub,2045,1,net,0.4142,27.46,31.67,76.46
+NYC-SFO direct,4,sub,2050,0.3,gross,0.05775,3.829,4.415,76.46
+NYC-SFO direct,4,sub,2050,0.3,net,0.1061,7.033,8.111,76.46
+NYC-SFO direct,4,sub,2050,1,gross,0.3109,20.61,23.77,76.46
+NYC-SFO direct,4,sub,2050,1,net,0.472,31.3,36.09,76.46
+NYC-SFO direct,4,sub,2055,0.3,gross,0.07281,4.827,5.567,76.46
+NYC-SFO direct,4,sub,2055,0.3,net,0.1242,8.237,9.5,76.46
+NYC-SFO direct,4,sub,2055,1,gross,0.3611,23.94,27.61,76.46
+NYC-SFO direct,4,sub,2055,1,net,0.5326,35.31,40.72,76.46
+NYC-SFO direct,4,sub,2060,0.3,gross,0.08889,5.893,6.797,76.46
+NYC-SFO direct,4,sub,2060,0.3,net,0.1432,9.495,10.95,76.46
+NYC-SFO direct,4,sub,2060,1,gross,0.4147,27.49,31.71,76.46
+NYC-SFO direct,4,sub,2060,1,net,0.5958,39.5,45.56,76.46
+NYC-SFO direct,4,bl,2045,0.3,gross,0.005397,0.3578,0.4127,76.46
+NYC-SFO direct,4,bl,2045,0.3,net,0.08857,5.872,6.772,76.46
+NYC-SFO direct,4,bl,2045,1,gross,0.1215,8.053,9.288,76.46
+NYC-SFO direct,4,bl,2045,1,net,0.3987,26.43,30.49,76.46
+NYC-SFO direct,4,bl,2050,0.3,gross,0.0128,0.8484,0.9784,76.46
+NYC-SFO direct,4,bl,2050,0.3,net,0.102,6.764,7.801,76.46
+NYC-SFO direct,4,bl,2050,1,gross,0.1461,9.689,11.17,76.46
+NYC-SFO direct,4,bl,2050,1,net,0.4435,29.41,33.91,76.46
+NYC-SFO direct,4,bl,2055,0.3,gross,0.02073,1.374,1.585,76.46
+NYC-SFO direct,4,bl,2055,0.3,net,0.1157,7.669,8.845,76.46
+NYC-SFO direct,4,bl,2055,1,gross,0.1726,11.44,13.2,76.46
+NYC-SFO direct,4,bl,2055,1,net,0.4891,32.43,37.4,76.46
+NYC-SFO direct,4,bl,2060,0.3,gross,0.0292,1.936,2.233,76.46
+NYC-SFO direct,4,bl,2060,0.3,net,0.1296,8.591,9.908,76.46
+NYC-SFO direct,4,bl,2060,1,gross,0.2008,13.31,15.35,76.46
+NYC-SFO direct,4,bl,2060,1,net,0.5354,35.5,40.94,76.46
+NYC-SFO direct,4,m22,2045,0.3,gross,-0.01645,-1.091,-1.258,76.46
+NYC-SFO direct,4,m22,2045,0.3,net,0.02765,1.833,2.114,76.46
+NYC-SFO direct,4,m22,2045,1,gross,0.03494,2.317,2.672,76.46
+NYC-SFO direct,4,m22,2045,1,net,0.182,12.06,13.91,76.46
+NYC-SFO direct,4,m22,2050,0.3,gross,-0.01318,-0.8735,-1.007,76.46
+NYC-SFO direct,4,m22,2050,0.3,net,0.03413,2.263,2.61,76.46
+NYC-SFO direct,4,m22,2050,1,gross,0.04587,3.041,3.507,76.46
+NYC-SFO direct,4,m22,2050,1,net,0.2036,13.5,15.57,76.46
+NYC-SFO direct,4,m22,2055,0.3,gross,-0.009663,-0.6406,-0.7389,76.46
+NYC-SFO direct,4,m22,2055,0.3,net,0.04068,2.697,3.111,76.46
+NYC-SFO direct,4,m22,2055,1,gross,0.05758,3.817,4.402,76.46
+NYC-SFO direct,4,m22,2055,1,net,0.2254,14.94,17.23,76.46
+NYC-SFO direct,4,m22,2060,0.3,gross,-0.005913,-0.392,-0.4521,76.46
+NYC-SFO direct,4,m22,2060,0.3,net,0.04732,3.137,3.618,76.46
+NYC-SFO direct,4,m22,2060,1,gross,0.07008,4.646,5.358,76.46
+NYC-SFO direct,4,m22,2060,1,net,0.2475,16.41,18.93,76.46
+NYC-SFO direct,6,sub,2045,0.3,gross,0.05334,3.537,4.756,89.17
+NYC-SFO direct,6,sub,2045,0.3,net,0.09285,6.156,8.279,89.17
+NYC-SFO direct,6,sub,2045,1,gross,0.2768,18.35,24.69,89.17
+NYC-SFO direct,6,sub,2045,1,net,0.4085,27.09,36.43,89.17
+NYC-SFO direct,6,sub,2050,0.3,gross,0.06759,4.481,6.027,89.17
+NYC-SFO direct,6,sub,2050,0.3,net,0.11,7.294,9.81,89.17
+NYC-SFO direct,6,sub,2050,1,gross,0.3243,21.5,28.92,89.17
+NYC-SFO direct,6,sub,2050,1,net,0.4658,30.88,41.53,89.17
+NYC-SFO direct,6,sub,2055,0.3,gross,0.08286,5.494,7.389,89.17
+NYC-SFO direct,6,sub,2055,0.3,net,0.128,8.487,11.41,89.17
+NYC-SFO direct,6,sub,2055,1,gross,0.3753,24.88,33.46,89.17
+NYC-SFO direct,6,sub,2055,1,net,0.5257,34.86,46.88,89.17
+NYC-SFO direct,6,sub,2060,0.3,gross,0.09917,6.575,8.843,89.17
+NYC-SFO direct,6,sub,2060,0.3,net,0.1468,9.732,13.09,89.17
+NYC-SFO direct,6,sub,2060,1,gross,0.4294,28.47,38.29,89.17
+NYC-SFO direct,6,sub,2060,1,net,0.588,38.99,52.43,89.17
+NYC-SFO direct,6,bl,2045,0.3,gross,0.01425,0.9448,1.271,89.17
+NYC-SFO direct,6,bl,2045,0.3,net,0.09423,6.247,8.402,89.17
+NYC-SFO direct,6,bl,2045,1,gross,0.1354,8.975,12.07,89.17
+NYC-SFO direct,6,bl,2045,1,net,0.402,26.65,35.84,89.17
+NYC-SFO direct,6,bl,2050,0.3,gross,0.02197,1.457,1.959,89.17
+NYC-SFO direct,6,bl,2050,0.3,net,0.1078,7.146,9.611,89.17
+NYC-SFO direct,6,bl,2050,1,gross,0.1611,10.68,14.37,89.17
+NYC-SFO direct,6,bl,2050,1,net,0.4472,29.65,39.87,89.17
+NYC-SFO direct,6,bl,2055,0.3,gross,0.03025,2.005,2.697,89.17
+NYC-SFO direct,6,bl,2055,0.3,net,0.1216,8.06,10.84,89.17
+NYC-SFO direct,6,bl,2055,1,gross,0.1887,12.51,16.83,89.17
+NYC-SFO direct,6,bl,2055,1,net,0.4931,32.69,43.97,89.17
+NYC-SFO direct,6,bl,2060,0.3,gross,0.03909,2.591,3.485,89.17
+NYC-SFO direct,6,bl,2060,0.3,net,0.1356,8.989,12.09,89.17
+NYC-SFO direct,6,bl,2060,1,gross,0.2182,14.46,19.45,89.17
+NYC-SFO direct,6,bl,2060,1,net,0.5398,35.79,48.13,89.17
+NYC-SFO direct,6,m22,2045,0.3,gross,-0.009343,-0.6194,-0.8331,89.17
+NYC-SFO direct,6,m22,2045,0.3,net,0.06167,4.089,5.499,89.17
+NYC-SFO direct,6,m22,2045,1,gross,0.05079,3.367,4.529,89.17
+NYC-SFO direct,6,m22,2045,1,net,0.2875,19.06,25.64,89.17
+NYC-SFO direct,6,m22,2050,0.3,gross,-0.00551,-0.3653,-0.4913,89.17
+NYC-SFO direct,6,m22,2050,0.3,net,0.07068,4.686,6.302,89.17
+NYC-SFO direct,6,m22,2050,1,gross,0.06356,4.214,5.668,89.17
+NYC-SFO direct,6,m22,2050,1,net,0.3175,21.05,28.31,89.17
+NYC-SFO direct,6,m22,2055,0.3,gross,-0.0014,-0.09284,-0.1249,89.17
+NYC-SFO direct,6,m22,2055,0.3,net,0.07968,5.283,7.104,89.17
+NYC-SFO direct,6,m22,2055,1,gross,0.07726,5.122,6.889,89.17
+NYC-SFO direct,6,m22,2055,1,net,0.3475,23.04,30.99,89.17
+NYC-SFO direct,6,m22,2060,0.3,gross,0.002987,0.198,0.2663,89.17
+NYC-SFO direct,6,m22,2060,0.3,net,0.08868,5.879,7.907,89.17
+NYC-SFO direct,6,m22,2060,1,gross,0.09189,6.092,8.193,89.17
+NYC-SFO direct,6,m22,2060,1,net,0.3775,25.03,33.66,89.17
+NYC-MIA direct,2,sub,2045,0.3,gross,0.01647,1.092,1.291,78.37
+NYC-MIA direct,2,sub,2045,0.3,net,0.04703,3.118,3.685,78.37
+NYC-MIA direct,2,sub,2045,1,gross,0.2763,18.32,21.66,78.37
+NYC-MIA direct,2,sub,2045,1,net,0.3782,25.07,29.64,78.37
+NYC-MIA direct,2,sub,2050,0.3,gross,0.03303,2.19,2.589,78.37
+NYC-MIA direct,2,sub,2050,0.3,net,0.06582,4.364,5.158,78.37
+NYC-MIA direct,2,sub,2050,1,gross,0.3315,21.98,25.98,78.37
+NYC-MIA direct,2,sub,2050,1,net,0.4408,29.23,34.55,78.37
+NYC-MIA direct,2,sub,2055,0.3,gross,0.05079,3.368,3.981,78.37
+NYC-MIA direct,2,sub,2055,0.3,net,0.08568,5.681,6.715,78.37
+NYC-MIA direct,2,sub,2055,1,gross,0.3907,25.91,30.62,78.37
+NYC-MIA direct,2,sub,2055,1,net,0.507,33.62,39.74,78.37
+NYC-MIA direct,2,sub,2060,0.3,gross,0.06975,4.625,5.466,78.37
+NYC-MIA direct,2,sub,2060,0.3,net,0.1066,7.069,8.356,78.37
+NYC-MIA direct,2,sub,2060,1,gross,0.4539,30.1,35.57,78.37
+NYC-MIA direct,2,sub,2060,1,net,0.5769,38.25,45.21,78.37
+NYC-MIA direct,2,bl,2045,0.3,gross,-0.01335,-0.8851,-1.046,78.37
+NYC-MIA direct,2,bl,2045,0.3,net,0.04205,2.788,3.295,78.37
+NYC-MIA direct,2,bl,2045,1,gross,0.1626,10.78,12.74,78.37
+NYC-MIA direct,2,bl,2045,1,net,0.3472,23.02,27.21,78.37
+NYC-MIA direct,2,bl,2050,0.3,gross,-0.002136,-0.1416,-0.1674,78.37
+NYC-MIA direct,2,bl,2050,0.3,net,0.05729,3.798,4.49,78.37
+NYC-MIA direct,2,bl,2050,1,gross,0.2,13.26,15.67,78.37
+NYC-MIA direct,2,bl,2050,1,net,0.398,26.39,31.19,78.37
+NYC-MIA direct,2,bl,2055,0.3,gross,0.009887,0.6555,0.7748,78.37
+NYC-MIA direct,2,bl,2055,0.3,net,0.07313,4.848,5.731,78.37
+NYC-MIA direct,2,bl,2055,1,gross,0.24,15.91,18.81,78.37
+NYC-MIA direct,2,bl,2055,1,net,0.4508,29.89,35.33,78.37
+NYC-MIA direct,2,bl,2060,0.3,gross,0.02272,1.506,1.781,78.37
+NYC-MIA direct,2,bl,2060,0.3,net,0.08959,5.94,7.021,78.37
+NYC-MIA direct,2,bl,2060,1,gross,0.2828,18.75,22.16,78.37
+NYC-MIA direct,2,bl,2060,1,net,0.5057,33.53,39.63,78.37
+NYC-MIA direct,2,m22,2045,0.3,gross,-0.01335,-0.8851,-1.046,78.37
+NYC-MIA direct,2,m22,2045,0.3,net,0.04205,2.788,3.295,78.37
+NYC-MIA direct,2,m22,2045,1,gross,0.1626,10.78,12.74,78.37
+NYC-MIA direct,2,m22,2045,1,net,0.3472,23.02,27.21,78.37
+NYC-MIA direct,2,m22,2050,0.3,gross,-0.002136,-0.1416,-0.1674,78.37
+NYC-MIA direct,2,m22,2050,0.3,net,0.05729,3.798,4.49,78.37
+NYC-MIA direct,2,m22,2050,1,gross,0.2,13.26,15.67,78.37
+NYC-MIA direct,2,m22,2050,1,net,0.398,26.39,31.19,78.37
+NYC-MIA direct,2,m22,2055,0.3,gross,0.009887,0.6555,0.7748,78.37
+NYC-MIA direct,2,m22,2055,0.3,net,0.07313,4.848,5.731,78.37
+NYC-MIA direct,2,m22,2055,1,gross,0.24,15.91,18.81,78.37
+NYC-MIA direct,2,m22,2055,1,net,0.4508,29.89,35.33,78.37
+NYC-MIA direct,2,m22,2060,0.3,gross,0.02272,1.506,1.781,78.37
+NYC-MIA direct,2,m22,2060,0.3,net,0.08959,5.94,7.021,78.37
+NYC-MIA direct,2,m22,2060,1,gross,0.2828,18.75,22.16,78.37
+NYC-MIA direct,2,m22,2060,1,net,0.5057,33.53,39.63,78.37
+NYC-MIA direct,3,sub,2045,0.3,gross,0.04931,3.27,3.93,79.69
+NYC-MIA direct,3,sub,2045,0.3,net,0.09007,5.971,7.178,79.69
+NYC-MIA direct,3,sub,2045,1,gross,0.3905,25.89,31.12,79.69
+NYC-MIA direct,3,sub,2045,1,net,0.5264,34.9,41.95,79.69
+NYC-MIA direct,3,sub,2050,0.3,gross,0.07106,4.712,5.663,79.69
+NYC-MIA direct,3,sub,2050,0.3,net,0.1148,7.611,9.149,79.69
+NYC-MIA direct,3,sub,2050,1,gross,0.463,30.7,36.9,79.69
+NYC-MIA direct,3,sub,2050,1,net,0.6088,40.36,48.52,79.69
+NYC-MIA direct,3,sub,2055,0.3,gross,0.09438,6.258,7.521,79.69
+NYC-MIA direct,3,sub,2055,0.3,net,0.1409,9.343,11.23,79.69
+NYC-MIA direct,3,sub,2055,1,gross,0.5407,35.85,43.09,79.69
+NYC-MIA direct,3,sub,2055,1,net,0.6959,46.14,55.46,79.69
+NYC-MIA direct,3,sub,2060,0.3,gross,0.1193,7.908,9.505,79.69
+NYC-MIA direct,3,sub,2060,0.3,net,0.1684,11.17,13.42,79.69
+NYC-MIA direct,3,sub,2060,1,gross,0.6237,41.35,49.71,79.69
+NYC-MIA direct,3,sub,2060,1,net,0.7876,52.22,62.76,79.69
+NYC-MIA direct,3,bl,2045,0.3,gross,0.00902,0.598,0.7188,79.69
+NYC-MIA direct,3,bl,2045,0.3,net,0.09235,6.123,7.359,79.69
+NYC-MIA direct,3,bl,2045,1,gross,0.2381,15.78,18.97,79.69
+NYC-MIA direct,3,bl,2045,1,net,0.5158,34.2,41.11,79.69
+NYC-MIA direct,3,bl,2050,0.3,gross,0.02362,1.566,1.882,79.69
+NYC-MIA direct,3,bl,2050,0.3,net,0.113,7.492,9.006,79.69
+NYC-MIA direct,3,bl,2050,1,gross,0.2867,19.01,22.85,79.69
+NYC-MIA direct,3,bl,2050,1,net,0.5847,38.77,46.6,79.69
+NYC-MIA direct,3,bl,2055,0.3,gross,0.03928,2.604,3.13,79.69
+NYC-MIA direct,3,bl,2055,0.3,net,0.1344,8.911,10.71,79.69
+NYC-MIA direct,3,bl,2055,1,gross,0.3389,22.47,27.01,79.69
+NYC-MIA direct,3,bl,2055,1,net,0.656,43.49,52.28,79.69
+NYC-MIA direct,3,bl,2060,0.3,gross,0.05599,3.712,4.462,79.69
+NYC-MIA direct,3,bl,2060,0.3,net,0.1566,10.38,12.48,79.69
+NYC-MIA direct,3,bl,2060,1,gross,0.3946,26.16,31.45,79.69
+NYC-MIA direct,3,bl,2060,1,net,0.7298,48.39,58.16,79.69
+NYC-MIA direct,3,m22,2045,0.3,gross,0.00902,0.598,0.7188,79.69
+NYC-MIA direct,3,m22,2045,0.3,net,0.09235,6.123,7.359,79.69
+NYC-MIA direct,3,m22,2045,1,gross,0.2381,15.78,18.97,79.69
+NYC-MIA direct,3,m22,2045,1,net,0.5158,34.2,41.11,79.69
+NYC-MIA direct,3,m22,2050,0.3,gross,0.02362,1.566,1.882,79.69
+NYC-MIA direct,3,m22,2050,0.3,net,0.113,7.492,9.006,79.69
+NYC-MIA direct,3,m22,2050,1,gross,0.2867,19.01,22.85,79.69
+NYC-MIA direct,3,m22,2050,1,net,0.5847,38.77,46.6,79.69
+NYC-MIA direct,3,m22,2055,0.3,gross,0.03928,2.604,3.13,79.69
+NYC-MIA direct,3,m22,2055,0.3,net,0.1344,8.911,10.71,79.69
+NYC-MIA direct,3,m22,2055,1,gross,0.3389,22.47,27.01,79.69
+NYC-MIA direct,3,m22,2055,1,net,0.656,43.49,52.28,79.69
+NYC-MIA direct,3,m22,2060,0.3,gross,0.05599,3.712,4.462,79.69
+NYC-MIA direct,3,m22,2060,0.3,net,0.1566,10.38,12.48,79.69
+NYC-MIA direct,3,m22,2060,1,gross,0.3946,26.16,31.45,79.69
+NYC-MIA direct,3,m22,2060,1,net,0.7298,48.39,58.16,79.69
+NYC-MIA direct,4,sub,2045,0.3,gross,0.05867,3.89,5.287,90.11
+NYC-MIA direct,4,sub,2045,0.3,net,0.09346,6.197,8.422,90.11
+NYC-MIA direct,4,sub,2045,1,gross,0.3926,26.03,35.38,90.11
+NYC-MIA direct,4,sub,2045,1,net,0.5086,33.72,45.83,90.11
+NYC-MIA direct,4,sub,2050,0.3,gross,0.07996,5.302,7.205,90.11
+NYC-MIA direct,4,sub,2050,0.3,net,0.1173,7.778,10.57,90.11
+NYC-MIA direct,4,sub,2050,1,gross,0.4636,30.74,41.77,90.11
+NYC-MIA direct,4,sub,2050,1,net,0.5881,38.99,52.99,90.11
+NYC-MIA direct,4,sub,2055,0.3,gross,0.1028,6.815,9.262,90.11
+NYC-MIA direct,4,sub,2055,0.3,net,0.1425,9.45,12.84,90.11
+NYC-MIA direct,4,sub,2055,1,gross,0.5397,35.78,48.63,90.11
+NYC-MIA direct,4,sub,2055,1,net,0.6722,44.56,60.57,90.11
+NYC-MIA direct,4,sub,2060,0.3,gross,0.1272,8.43,11.46,90.11
+NYC-MIA direct,4,sub,2060,0.3,net,0.1691,11.21,15.24,90.11
+NYC-MIA direct,4,sub,2060,1,gross,0.6209,41.16,55.95,90.11
+NYC-MIA direct,4,sub,2060,1,net,0.7607,50.43,68.54,90.11
+NYC-MIA direct,4,bl,2045,0.3,gross,0.01784,1.183,1.607,90.11
+NYC-MIA direct,4,bl,2045,0.3,net,0.09263,6.142,8.347,90.11
+NYC-MIA direct,4,bl,2045,1,gross,0.2416,16.02,21.77,90.11
+NYC-MIA direct,4,bl,2045,1,net,0.4909,32.55,44.24,90.11
+NYC-MIA direct,4,bl,2050,0.3,gross,0.0321,2.128,2.892,90.11
+NYC-MIA direct,4,bl,2050,0.3,net,0.1123,7.449,10.12,90.11
+NYC-MIA direct,4,bl,2050,1,gross,0.2892,19.17,26.05,90.11
+NYC-MIA direct,4,bl,2050,1,net,0.5566,36.91,50.16,90.11
+NYC-MIA direct,4,bl,2055,0.3,gross,0.04739,3.142,4.27,90.11
+NYC-MIA direct,4,bl,2055,0.3,net,0.1328,8.804,11.97,90.11
+NYC-MIA direct,4,bl,2055,1,gross,0.3401,22.55,30.65,90.11
+NYC-MIA direct,4,bl,2055,1,net,0.6248,41.42,56.3,90.11
+NYC-MIA direct,4,bl,2060,0.3,gross,0.06372,4.225,5.742,90.11
+NYC-MIA direct,4,bl,2060,0.3,net,0.154,10.21,13.87,90.11
+NYC-MIA direct,4,bl,2060,1,gross,0.3945,26.16,35.55,90.11
+NYC-MIA direct,4,bl,2060,1,net,0.6954,46.11,62.66,90.11
+NYC-MIA direct,4,m22,2045,0.3,gross,0.01784,1.183,1.607,90.11
+NYC-MIA direct,4,m22,2045,0.3,net,0.09263,6.142,8.347,90.11
+NYC-MIA direct,4,m22,2045,1,gross,0.2416,16.02,21.77,90.11
+NYC-MIA direct,4,m22,2045,1,net,0.4909,32.55,44.24,90.11
+NYC-MIA direct,4,m22,2050,0.3,gross,0.0321,2.128,2.892,90.11
+NYC-MIA direct,4,m22,2050,0.3,net,0.1123,7.449,10.12,90.11
+NYC-MIA direct,4,m22,2050,1,gross,0.2892,19.17,26.05,90.11
+NYC-MIA direct,4,m22,2050,1,net,0.5566,36.91,50.16,90.11
+NYC-MIA direct,4,m22,2055,0.3,gross,0.04739,3.142,4.27,90.11
+NYC-MIA direct,4,m22,2055,0.3,net,0.1328,8.804,11.97,90.11
+NYC-MIA direct,4,m22,2055,1,gross,0.3401,22.55,30.65,90.11
+NYC-MIA direct,4,m22,2055,1,net,0.6248,41.42,56.3,90.11
+NYC-MIA direct,4,m22,2060,0.3,gross,0.06372,4.225,5.742,90.11
+NYC-MIA direct,4,m22,2060,0.3,net,0.154,10.21,13.87,90.11
+NYC-MIA direct,4,m22,2060,1,gross,0.3945,26.16,35.55,90.11
+NYC-MIA direct,4,m22,2060,1,net,0.6954,46.11,62.66,90.11
+NYC-MIA direct,6,sub,2045,0.3,gross,0.06425,4.26,7.702,119.9
+NYC-MIA direct,6,sub,2045,0.3,net,0.08612,5.71,10.32,119.9
+NYC-MIA direct,6,sub,2045,1,gross,0.3614,23.96,43.31,119.9
+NYC-MIA direct,6,sub,2045,1,net,0.4343,28.79,52.05,119.9
+NYC-MIA direct,6,sub,2050,0.3,gross,0.08319,5.516,9.972,119.9
+NYC-MIA direct,6,sub,2050,0.3,net,0.1067,7.076,12.79,119.9
+NYC-MIA direct,6,sub,2050,1,gross,0.4245,28.14,50.88,119.9
+NYC-MIA direct,6,sub,2050,1,net,0.5029,33.34,60.28,119.9
+NYC-MIA direct,6,sub,2055,0.3,gross,0.1035,6.862,12.41,119.9
+NYC-MIA direct,6,sub,2055,0.3,net,0.1285,8.521,15.41,119.9
+NYC-MIA direct,6,sub,2055,1,gross,0.4922,32.63,59,119.9
+NYC-MIA direct,6,sub,2055,1,net,0.5756,38.16,69,119.9
+NYC-MIA direct,6,sub,2060,0.3,gross,0.1252,8.299,15,119.9
+NYC-MIA direct,6,sub,2060,0.3,net,0.1515,10.04,18.16,119.9
+NYC-MIA direct,6,sub,2060,1,gross,0.5644,37.42,67.66,119.9
+NYC-MIA direct,6,sub,2060,1,net,0.6521,43.24,78.17,119.9
+NYC-MIA direct,6,bl,2045,0.3,gross,0.02222,1.473,2.663,119.9
+NYC-MIA direct,6,bl,2045,0.3,net,0.07705,5.108,9.235,119.9
+NYC-MIA direct,6,bl,2045,1,gross,0.2101,13.93,25.18,119.9
+NYC-MIA direct,6,bl,2045,1,net,0.3928,26.04,47.08,119.9
+NYC-MIA direct,6,bl,2050,0.3,gross,0.03419,2.267,4.099,119.9
+NYC-MIA direct,6,bl,2050,0.3,net,0.09304,6.169,11.15,119.9
+NYC-MIA direct,6,bl,2050,1,gross,0.25,16.57,29.96,119.9
+NYC-MIA direct,6,bl,2050,1,net,0.4461,29.58,53.47,119.9
+NYC-MIA direct,6,bl,2055,0.3,gross,0.04703,3.118,5.637,119.9
+NYC-MIA direct,6,bl,2055,0.3,net,0.1097,7.27,13.14,119.9
+NYC-MIA direct,6,bl,2055,1,gross,0.2928,19.41,35.09,119.9
+NYC-MIA direct,6,bl,2055,1,net,0.5015,33.25,60.11,119.9
+NYC-MIA direct,6,bl,2060,0.3,gross,0.06074,4.027,7.28,119.9
+NYC-MIA direct,6,bl,2060,0.3,net,0.1269,8.411,15.21,119.9
+NYC-MIA direct,6,bl,2060,1,gross,0.3384,22.44,40.57,119.9
+NYC-MIA direct,6,bl,2060,1,net,0.5589,37.05,66.99,119.9
+NYC-MIA direct,6,m22,2045,0.3,gross,0.02222,1.473,2.663,119.9
+NYC-MIA direct,6,m22,2045,0.3,net,0.07705,5.108,9.235,119.9
+NYC-MIA direct,6,m22,2045,1,gross,0.2101,13.93,25.18,119.9
+NYC-MIA direct,6,m22,2045,1,net,0.3928,26.04,47.08,119.9
+NYC-MIA direct,6,m22,2050,0.3,gross,0.03419,2.267,4.099,119.9
+NYC-MIA direct,6,m22,2050,0.3,net,0.09304,6.169,11.15,119.9
+NYC-MIA direct,6,m22,2050,1,gross,0.25,16.57,29.96,119.9
+NYC-MIA direct,6,m22,2050,1,net,0.4461,29.58,53.47,119.9
+NYC-MIA direct,6,m22,2055,0.3,gross,0.04703,3.118,5.637,119.9
+NYC-MIA direct,6,m22,2055,0.3,net,0.1097,7.27,13.14,119.9
+NYC-MIA direct,6,m22,2055,1,gross,0.2928,19.41,35.09,119.9
+NYC-MIA direct,6,m22,2055,1,net,0.5015,33.25,60.11,119.9
+NYC-MIA direct,6,m22,2060,0.3,gross,0.06074,4.027,7.28,119.9
+NYC-MIA direct,6,m22,2060,0.3,net,0.1269,8.411,15.21,119.9
+NYC-MIA direct,6,m22,2060,1,gross,0.3384,22.44,40.57,119.9
+NYC-MIA direct,6,m22,2060,1,net,0.5589,37.05,66.99,119.9
+transcon pair NYC-LAX + NYC-SFO,2,sub,2045,0.3,gross,0.01017,0.6739,0.7275,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2045,0.3,net,0.03785,2.509,2.708,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2045,1,gross,0.1319,8.743,9.437,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2045,1,net,0.2241,14.86,16.04,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2050,0.3,gross,0.01792,1.188,1.283,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2050,0.3,net,0.04762,3.157,3.408,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2050,1,gross,0.1577,10.46,11.29,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2050,1,net,0.2567,17.02,18.37,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2055,0.3,gross,0.02624,1.74,1.878,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2055,0.3,net,0.05784,3.835,4.14,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2055,1,gross,0.1855,12.3,13.27,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2055,1,net,0.2908,19.28,20.81,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2060,0.3,gross,0.03512,2.328,2.513,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2060,0.3,net,0.06853,4.543,4.904,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2060,1,gross,0.2151,14.26,15.39,71.56
+transcon pair NYC-LAX + NYC-SFO,2,sub,2060,1,net,0.3264,21.64,23.36,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2045,0.3,gross,-0.007514,-0.4982,-0.5377,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2045,0.3,net,0.03992,2.647,2.857,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2045,1,gross,0.06091,4.038,4.359,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2045,1,net,0.219,14.52,15.67,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2050,0.3,gross,-0.003152,-0.209,-0.2256,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2050,0.3,net,0.04773,3.165,3.416,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2050,1,gross,0.07545,5.002,5.399,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2050,1,net,0.2451,16.25,17.54,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2055,0.3,gross,0.001524,0.1011,0.1091,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2055,0.3,net,0.05567,3.691,3.984,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2055,1,gross,0.09103,6.036,6.515,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2055,1,net,0.2715,18,19.43,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2060,0.3,gross,0.006516,0.432,0.4663,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2060,0.3,net,0.06378,4.228,4.564,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2060,1,gross,0.1077,7.139,7.706,71.56
+transcon pair NYC-LAX + NYC-SFO,2,bl,2060,1,net,0.2985,19.79,21.36,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2045,0.3,gross,-0.01716,-1.138,-1.228,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2045,0.3,net,0.005606,0.3716,0.4012,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2045,1,gross,0.01662,1.102,1.189,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2045,1,net,0.09252,6.134,6.621,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2050,0.3,gross,-0.01501,-0.9952,-1.074,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2050,0.3,net,0.009412,0.624,0.6736,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2050,1,gross,0.0238,1.578,1.703,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2050,1,net,0.1052,6.975,7.529,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2055,0.3,gross,-0.0127,-0.8421,-0.909,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2055,0.3,net,0.01329,0.8811,0.9511,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2055,1,gross,0.0315,2.088,2.254,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2055,1,net,0.1181,7.832,8.454,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2060,0.3,gross,-0.01024,-0.6787,-0.7326,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2060,0.3,net,0.01725,1.144,1.234,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2060,1,gross,0.03971,2.633,2.842,71.56
+transcon pair NYC-LAX + NYC-SFO,2,m22,2060,1,net,0.1313,8.707,9.398,71.56
+transcon pair NYC-LAX + NYC-SFO,3,sub,2045,0.3,gross,0.03188,2.114,2.3,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2045,0.3,net,0.06516,4.32,4.7,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2045,1,gross,0.204,13.53,14.72,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2045,1,net,0.3149,20.88,22.72,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2050,0.3,gross,0.04286,2.841,3.092,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2050,0.3,net,0.07856,5.208,5.667,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2050,1,gross,0.2406,15.95,17.36,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2050,1,net,0.3596,23.84,25.94,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2055,0.3,gross,0.05462,3.621,3.94,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2055,0.3,net,0.09261,6.14,6.681,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2055,1,gross,0.2798,18.55,20.18,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2055,1,net,0.4064,26.95,29.32,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2060,0.3,gross,0.06718,4.454,4.846,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2060,0.3,net,0.1073,7.115,7.742,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2060,1,gross,0.3217,21.33,23.2,72.14
+transcon pair NYC-LAX + NYC-SFO,3,sub,2060,1,net,0.4555,30.2,32.86,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2045,0.3,gross,0.006118,0.4056,0.4414,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2045,0.3,net,0.06526,4.327,4.708,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2045,1,gross,0.1053,6.983,7.598,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2045,1,net,0.3025,20.05,21.82,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2050,0.3,gross,0.01244,0.8249,0.8976,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2050,0.3,net,0.07588,5.031,5.474,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2050,1,gross,0.1264,8.38,9.119,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2050,1,net,0.3379,22.4,24.37,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2055,0.3,gross,0.01922,1.274,1.387,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2055,0.3,net,0.08674,5.751,6.257,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2055,1,gross,0.149,9.879,10.75,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2055,1,net,0.3741,24.8,26.98,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2060,0.3,gross,0.02646,1.754,1.909,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2060,0.3,net,0.09784,6.487,7.059,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2060,1,gross,0.1731,11.48,12.49,72.14
+transcon pair NYC-LAX + NYC-SFO,3,bl,2060,1,net,0.4111,27.25,29.66,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2045,0.3,gross,-0.01105,-0.7328,-0.7974,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2045,0.3,net,0.03324,2.204,2.398,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2045,1,gross,0.03988,2.644,2.877,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2045,1,net,0.1875,12.43,13.53,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2050,0.3,gross,-0.007806,-0.5175,-0.5631,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2050,0.3,net,0.0397,2.632,2.864,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2050,1,gross,0.05071,3.362,3.658,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2050,1,net,0.2091,13.86,15.08,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2055,0.3,gross,-0.004325,-0.2867,-0.312,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2055,0.3,net,0.04624,3.065,3.336,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2055,1,gross,0.06231,4.131,4.495,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2055,1,net,0.2308,15.31,16.65,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2060,0.3,gross,-0.0006084,-0.04033,-0.04389,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2060,0.3,net,0.05285,3.504,3.813,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2060,1,gross,0.0747,4.952,5.389,72.14
+transcon pair NYC-LAX + NYC-SFO,3,m22,2060,1,net,0.2529,16.77,18.24,72.14
+transcon pair NYC-LAX + NYC-SFO,4,sub,2045,0.3,gross,0.04371,2.898,3.352,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2045,0.3,net,0.07711,5.112,5.913,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2045,1,gross,0.2367,15.69,18.15,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2045,1,net,0.348,23.07,26.69,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2050,0.3,gross,0.05601,3.713,4.295,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2050,0.3,net,0.09186,6.09,7.044,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2050,1,gross,0.2777,18.41,21.3,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2050,1,net,0.3972,26.33,30.46,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2055,0.3,gross,0.0692,4.588,5.306,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2055,0.3,net,0.1073,7.117,8.232,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2055,1,gross,0.3217,21.33,24.67,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2055,1,net,0.4488,29.76,34.42,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2060,0.3,gross,0.08328,5.521,6.386,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2060,0.3,net,0.1236,8.193,9.476,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2060,1,gross,0.3686,24.44,28.27,76.68
+transcon pair NYC-LAX + NYC-SFO,4,sub,2060,1,net,0.5029,33.34,38.57,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2045,0.3,gross,0.01412,0.9358,1.082,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2045,0.3,net,0.07661,5.079,5.875,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2045,1,gross,0.1263,8.371,9.682,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2045,1,net,0.3346,22.18,25.66,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2050,0.3,gross,0.02126,1.41,1.631,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2050,0.3,net,0.08831,5.855,6.772,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2050,1,gross,0.1501,9.951,11.51,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2050,1,net,0.3736,24.77,28.65,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2055,0.3,gross,0.02893,1.918,2.218,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2055,0.3,net,0.1003,6.648,7.689,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2055,1,gross,0.1756,11.64,13.47,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2055,1,net,0.4135,27.41,31.71,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2060,0.3,gross,0.03711,2.46,2.846,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2060,0.3,net,0.1125,7.461,8.629,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2060,1,gross,0.2029,13.45,15.56,76.68
+transcon pair NYC-LAX + NYC-SFO,4,bl,2060,1,net,0.4543,30.12,34.84,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2045,0.3,gross,-0.005392,-0.3575,-0.4135,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2045,0.3,net,0.04417,2.929,3.387,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2045,1,gross,0.05437,3.604,4.169,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2045,1,net,0.2196,14.56,16.84,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2050,0.3,gross,-0.001583,-0.1049,-0.1214,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2050,0.3,net,0.05159,3.42,3.956,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2050,1,gross,0.06706,4.446,5.143,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2050,1,net,0.2443,16.2,18.73,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2055,0.3,gross,0.002501,0.1658,0.1918,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2055,0.3,net,0.05909,3.917,4.531,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2055,1,gross,0.08068,5.349,6.187,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2055,1,net,0.2693,17.85,20.65,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2060,0.3,gross,0.006861,0.4549,0.5261,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2060,0.3,net,0.06668,4.421,5.114,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2060,1,gross,0.09521,6.313,7.301,76.68
+transcon pair NYC-LAX + NYC-SFO,4,m22,2060,1,net,0.2946,19.53,22.59,76.68
+transcon pair NYC-LAX + NYC-SFO,6,sub,2045,0.3,gross,0.04969,3.294,4.455,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2045,0.3,net,0.07733,5.127,6.934,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2045,1,gross,0.2405,15.94,21.56,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2045,1,net,0.3326,22.05,29.82,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2050,0.3,gross,0.06185,4.1,5.545,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2050,0.3,net,0.09154,6.069,8.208,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2050,1,gross,0.281,18.63,25.19,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2050,1,net,0.38,25.19,34.07,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2055,0.3,gross,0.07488,4.965,6.714,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2055,0.3,net,0.1065,7.059,9.547,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2055,1,gross,0.3244,21.51,29.09,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2055,1,net,0.4298,28.49,38.53,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2060,0.3,gross,0.0888,5.888,7.962,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2060,0.3,net,0.1221,8.097,10.95,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2060,1,gross,0.3708,24.59,33.25,89.66
+transcon pair NYC-LAX + NYC-SFO,6,sub,2060,1,net,0.4819,31.95,43.21,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2045,0.3,gross,0.0196,1.299,1.757,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2045,0.3,net,0.07731,5.126,6.932,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2045,1,gross,0.1318,8.741,11.82,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2045,1,net,0.3242,21.5,29.07,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2050,0.3,gross,0.02675,1.774,2.399,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2050,0.3,net,0.08868,5.88,7.951,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2050,1,gross,0.1557,10.32,13.96,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2050,1,net,0.3621,24.01,32.47,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2055,0.3,gross,0.03442,2.282,3.087,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2055,0.3,net,0.1003,6.652,8.996,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2055,1,gross,0.1813,12.02,16.25,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2055,1,net,0.4009,26.58,35.95,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2060,0.3,gross,0.04261,2.825,3.821,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2060,0.3,net,0.1123,7.442,10.06,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2060,1,gross,0.2086,13.83,18.7,89.66
+transcon pair NYC-LAX + NYC-SFO,6,bl,2060,1,net,0.4407,29.22,39.51,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2045,0.3,gross,0.0002897,0.01921,0.02597,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2045,0.3,net,0.05606,3.717,5.026,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2045,1,gross,0.06405,4.246,5.743,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2045,1,net,0.2499,16.57,22.41,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2050,0.3,gross,0.004354,0.2887,0.3904,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2050,0.3,net,0.06419,4.256,5.755,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2050,1,gross,0.0776,5.145,6.958,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2050,1,net,0.277,18.37,24.84,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2055,0.3,gross,0.008712,0.5776,0.7811,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2055,0.3,net,0.07238,4.799,6.49,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2055,1,gross,0.09212,6.108,8.26,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2055,1,net,0.3044,20.18,27.29,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2060,0.3,gross,0.01336,0.886,1.198,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2060,0.3,net,0.08066,5.348,7.232,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2060,1,gross,0.1076,7.136,9.65,89.66
+transcon pair NYC-LAX + NYC-SFO,6,m22,2060,1,net,0.3319,22.01,29.76,89.66
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2045,0.3,gross,0.0134,0.8884,0.9831,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2045,0.3,net,0.03891,2.58,2.854,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2045,1,gross,0.1331,8.823,9.763,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2045,1,net,0.2181,14.46,16,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2050,0.3,gross,0.02103,1.394,1.543,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2050,0.3,net,0.0484,3.209,3.55,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2050,1,gross,0.1585,10.51,11.63,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2050,1,net,0.2497,16.56,18.32,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2055,0.3,gross,0.02921,1.937,2.143,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2055,0.3,net,0.05833,3.867,4.279,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2055,1,gross,0.1858,12.32,13.63,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2055,1,net,0.2829,18.75,20.75,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2060,0.3,gross,0.03794,2.515,2.783,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2060,0.3,net,0.06872,4.556,5.042,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2060,1,gross,0.2149,14.25,15.76,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,sub,2060,1,net,0.3175,21.05,23.29,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2045,0.3,gross,-0.004428,-0.2936,-0.3248,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2045,0.3,net,0.03842,2.547,2.819,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2045,1,gross,0.0612,4.057,4.489,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2045,1,net,0.204,13.53,14.97,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2050,0.3,gross,-0.0002444,-0.0162,-0.01793,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2050,0.3,net,0.04572,3.031,3.354,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2050,1,gross,0.07514,4.982,5.512,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2050,1,net,0.2284,15.14,16.75,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2055,0.3,gross,0.004241,0.2811,0.3111,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2055,0.3,net,0.05316,3.524,3.9,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2055,1,gross,0.09009,5.973,6.609,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2055,1,net,0.2531,16.78,18.57,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2060,0.3,gross,0.009028,0.5986,0.6623,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2060,0.3,net,0.06075,4.028,4.457,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2060,1,gross,0.106,7.031,7.78,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,bl,2060,1,net,0.2785,18.46,20.43,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2045,0.3,gross,-0.01262,-0.8367,-0.9258,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2045,0.3,net,0.01047,0.6943,0.7682,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2045,1,gross,0.02415,1.601,1.771,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2045,1,net,0.1011,6.704,7.418,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2050,0.3,gross,-0.01028,-0.6813,-0.7539,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2050,0.3,net,0.01449,0.9609,1.063,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2050,1,gross,0.03196,2.119,2.345,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2050,1,net,0.1145,7.593,8.401,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2055,0.3,gross,-0.007763,-0.5147,-0.5695,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2055,0.3,net,0.0186,1.233,1.364,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2055,1,gross,0.04034,2.674,2.959,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2055,1,net,0.1282,8.5,9.405,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2060,0.3,gross,-0.005081,-0.3369,-0.3727,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2060,0.3,net,0.02279,1.511,1.672,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2060,1,gross,0.04928,3.267,3.615,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",2,m22,2060,1,net,0.1422,9.427,10.43,73.36
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2045,0.3,gross,0.03484,2.31,2.583,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2045,0.3,net,0.06327,4.195,4.69,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2045,1,gross,0.2017,13.37,14.95,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2045,1,net,0.2964,19.65,21.98,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2050,0.3,gross,0.04547,3.015,3.371,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2050,0.3,net,0.07598,5.037,5.633,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2050,1,gross,0.2371,15.72,17.58,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2050,1,net,0.3388,22.46,25.12,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2055,0.3,gross,0.05687,3.771,4.216,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2055,0.3,net,0.08934,5.923,6.623,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2055,1,gross,0.2751,18.24,20.4,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2055,1,net,0.3833,25.41,28.42,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2060,0.3,gross,0.06904,4.578,5.119,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2060,0.3,net,0.1033,6.852,7.661,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2060,1,gross,0.3157,20.93,23.4,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,sub,2060,1,net,0.43,28.51,31.88,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2045,0.3,gross,0.008484,0.5625,0.629,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2045,0.3,net,0.06317,4.188,4.683,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2045,1,gross,0.1036,6.871,7.684,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2045,1,net,0.2859,18.96,21.2,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2050,0.3,gross,0.01455,0.9647,1.079,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2050,0.3,net,0.07321,4.854,5.427,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2050,1,gross,0.1239,8.212,9.183,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2050,1,net,0.3194,21.18,23.68,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2055,0.3,gross,0.02105,1.396,1.561,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2055,0.3,net,0.08348,5.535,6.189,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2055,1,gross,0.1455,9.649,10.79,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2055,1,net,0.3536,23.45,26.22,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2060,0.3,gross,0.028,1.856,2.076,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2060,0.3,net,0.094,6.232,6.968,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2060,1,gross,0.1687,11.18,12.51,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,bl,2060,1,net,0.3887,25.77,28.82,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2045,0.3,gross,-0.005895,-0.3909,-0.437,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2045,0.3,net,0.03368,2.233,2.497,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2045,1,gross,0.04823,3.198,3.575,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2045,1,net,0.1801,11.94,13.35,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2050,0.3,gross,-0.002445,-0.1621,-0.1813,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2050,0.3,net,0.04,2.652,2.966,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2050,1,gross,0.05973,3.96,4.428,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2050,1,net,0.2012,13.34,14.92,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2055,0.3,gross,0.001254,0.08314,0.09297,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2055,0.3,net,0.04643,3.078,3.442,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2055,1,gross,0.07206,4.777,5.342,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2055,1,net,0.2226,14.76,16.51,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2060,0.3,gross,0.005203,0.345,0.3857,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2060,0.3,net,0.05297,3.512,3.927,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2060,1,gross,0.08522,5.65,6.318,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",3,m22,2060,1,net,0.2444,16.21,18.12,74.14
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2045,0.3,gross,0.04329,2.87,3.473,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2045,0.3,net,0.07014,4.65,5.627,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2045,1,gross,0.2212,14.67,17.75,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2045,1,net,0.3107,20.6,24.93,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2050,0.3,gross,0.05463,3.622,4.383,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2050,0.3,net,0.08345,5.533,6.695,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2050,1,gross,0.259,17.17,20.78,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2050,1,net,0.3551,23.54,28.49,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2055,0.3,gross,0.06679,4.428,5.359,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2055,0.3,net,0.09746,6.461,7.819,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2055,1,gross,0.2996,19.86,24.03,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2055,1,net,0.4018,26.64,32.23,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2060,0.3,gross,0.07977,5.289,6.4,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2060,0.3,net,0.1122,7.436,8.998,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2060,1,gross,0.3428,22.73,27.5,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,sub,2060,1,net,0.4508,29.89,36.16,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2045,0.3,gross,0.01561,1.035,1.252,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2045,0.3,net,0.07115,4.717,5.709,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2045,1,gross,0.1209,8.013,9.697,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2045,1,net,0.306,20.29,24.55,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2050,0.3,gross,0.02232,1.48,1.79,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2050,0.3,net,0.08191,5.43,6.571,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2050,1,gross,0.1432,9.496,11.49,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2050,1,net,0.3419,22.67,27.43,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2055,0.3,gross,0.02951,1.956,2.367,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2055,0.3,net,0.09292,6.161,7.455,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2055,1,gross,0.1672,11.09,13.41,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2055,1,net,0.3786,25.1,30.37,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2060,0.3,gross,0.03719,2.466,2.984,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2060,0.3,net,0.1042,6.91,8.362,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2060,1,gross,0.1928,12.78,15.47,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,bl,2060,1,net,0.4163,27.6,33.4,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2045,0.3,gross,-0.0005794,-0.03841,-0.04648,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2045,0.3,net,0.04513,2.992,3.62,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2045,1,gross,0.06148,4.076,4.932,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2045,1,net,0.2138,14.18,17.16,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2050,0.3,gross,0.003377,0.2239,0.2709,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2050,0.3,net,0.05241,3.474,4.204,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2050,1,gross,0.07466,4.95,5.99,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2050,1,net,0.2381,15.79,19.1,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2055,0.3,gross,0.007618,0.505,0.6112,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2055,0.3,net,0.05979,3.964,4.797,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2055,1,gross,0.0888,5.887,7.124,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2055,1,net,0.2627,17.42,21.08,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2060,0.3,gross,0.01215,0.8052,0.9744,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2060,0.3,net,0.06731,4.462,5.4,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2060,1,gross,0.1039,6.888,8.335,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",4,m22,2060,1,net,0.2878,19.08,23.09,80.23
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2045,0.3,gross,0.0446,2.957,4.355,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2045,0.3,net,0.06562,4.351,6.407,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2045,1,gross,0.21,13.92,20.51,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2045,1,net,0.2801,18.57,27.35,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2050,0.3,gross,0.05515,3.656,5.385,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2050,0.3,net,0.07773,5.153,7.59,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2050,1,gross,0.2452,16.26,23.94,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2050,1,net,0.3204,21.25,31.29,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2055,0.3,gross,0.06645,4.406,6.489,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2055,0.3,net,0.09048,5.999,8.834,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2055,1,gross,0.2829,18.75,27.62,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2055,1,net,0.3629,24.06,35.44,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2060,0.3,gross,0.07852,5.206,7.667,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2060,0.3,net,0.1038,6.885,10.14,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2060,1,gross,0.3231,21.42,31.55,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,sub,2060,1,net,0.4075,27.02,39.79,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2045,0.3,gross,0.01918,1.272,1.873,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2045,0.3,net,0.06783,4.497,6.623,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2045,1,gross,0.1196,7.928,11.68,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2045,1,net,0.2817,18.68,27.51,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2050,0.3,gross,0.02558,1.696,2.498,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2050,0.3,net,0.07778,5.157,7.595,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2050,1,gross,0.1409,9.343,13.76,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2050,1,net,0.3149,20.88,30.75,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2055,0.3,gross,0.03244,2.151,3.168,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2055,0.3,net,0.08799,5.834,8.592,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2055,1,gross,0.1638,10.86,15.99,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2055,1,net,0.349,23.14,34.07,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2060,0.3,gross,0.03977,2.637,3.883,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2060,0.3,net,0.09846,6.528,9.614,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2060,1,gross,0.1882,12.48,18.38,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,bl,2060,1,net,0.3838,25.45,37.48,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2045,0.3,gross,0.003916,0.2596,0.3824,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2045,0.3,net,0.052,3.447,5.077,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2045,1,gross,0.0661,4.382,6.454,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2045,1,net,0.2264,15.01,22.1,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2050,0.3,gross,0.00788,0.5225,0.7694,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2050,0.3,net,0.05947,3.943,5.806,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2050,1,gross,0.07931,5.258,7.744,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2050,1,net,0.2513,16.66,24.53,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2055,0.3,gross,0.01213,0.8042,1.184,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2055,0.3,net,0.06703,4.444,6.545,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2055,1,gross,0.09348,6.198,9.127,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2055,1,net,0.2765,18.33,26.99,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2060,0.3,gross,0.01667,1.105,1.627,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2060,0.3,net,0.07468,4.951,7.292,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2060,1,gross,0.1086,7.2,10.6,97.64
+"transcon star NYC-LAX, NYC-SFO, CHI-LAX, NYC-CHI",6,m22,2060,1,net,0.302,20.02,29.49,97.64

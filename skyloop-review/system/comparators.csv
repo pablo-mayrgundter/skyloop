@@ -1,0 +1,14 @@
+system,usd_m_km_low,usd_m_km_high,src,usd_m_km_mid
+Hyperloop Alpha LA-SF (2013 claim),11,13,S2,12
+"Virgin Hyperloop Missouri (2018, spokeswoman)",19,25,S3,21.8
+Great Lakes Hyperloop (TEMS 2019),31,37,S4,33.9
+Hyperloop One Bay Area (own 2016 estimate),52,75,S1,62.4
+HSR China / Europe (World Bank),17,39,S7,25.7
+HSR California Merced-Bakersfield,130,175,S7,151
+Shanghai Transrapid maglev (2004),40,45,K1,42.4
+"Chuo Shinkansen maglev, 86 % tunnel",165,260,S5,207
+"LIGO beam tube, 1.2 m, 1e-9 torr (tube only)",6.3,8,S6,7.1
+BoomShield spine integrated / base (capex per km),25,186,integration,68.2
+Skyloop doc 03 claim (tube + lift),5,10,docs/03,7.07
+Skyloop this study: stratospheric run,19.3,187,cost_perkm.csv,66.3
+Skyloop this study: troposphere ramp,39.5,623,cost_perkm.csv,157

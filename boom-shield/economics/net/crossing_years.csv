@@ -1,0 +1,29 @@
+design,vs,capture,cost,world,energy,first_open_gross_ge1,first_open_net_ge1,max_net_to_2100
+M1.7 Overture (62 t),bl,0.3,integrated,base,central,,,0.8521
+M1.7 Overture (62 t),bl,1,integrated,base,central,2055,2060,1.942
+M1.7 Overture (62 t),sub,0.3,integrated,base,central,2040,,-0.04845
+M1.7 Overture (62 t),sub,1,integrated,base,central,2030,,-0.2362
+M2.0 adaptive (49 t),bl,0.3,integrated,base,central,2085,2100,1.099
+M2.0 adaptive (49 t),bl,1,integrated,base,central,2040,2065,2.022
+M2.0 adaptive (49 t),sub,0.3,integrated,base,central,2035,,-0.06488
+M2.0 adaptive (49 t),sub,1,integrated,base,central,2030,,-0.2636
+M2.2 design A (50 t),bl,0.3,integrated,base,central,2075,2100,1.067
+M2.2 design A (50 t),bl,1,integrated,base,central,2035,2075,1.868
+M2.2 design A (50 t),sub,0.3,integrated,base,central,2035,,-0.3674
+M2.2 design A (50 t),sub,1,integrated,base,central,2030,,-0.8079
+M2.5 Ti (57 t),bl,0.3,integrated,base,central,2070,,0.3828
+M2.5 Ti (57 t),bl,1,integrated,base,central,2035,,0.5964
+M2.5 Ti (57 t),sub,0.3,integrated,base,central,2040,,-1.774
+M2.5 Ti (57 t),sub,1,integrated,base,central,2030,,-3.377
+M3.0 design B (63 t),bl,0.3,integrated,base,central,2065,,-0.7129
+M3.0 design B (63 t),bl,1,integrated,base,central,2030,,-1.512
+M3.0 design B (63 t),sub,0.3,integrated,base,central,2040,,-2.472
+M3.0 design B (63 t),sub,1,integrated,base,central,2030,,-7.03
+M3.5 TBCC (94 t),bl,0.3,integrated,base,central,2065,,-2.034
+M3.5 TBCC (94 t),bl,1,integrated,base,central,2030,,-6.621
+M3.5 TBCC (94 t),sub,0.3,integrated,base,central,2040,,-4.43
+M3.5 TBCC (94 t),sub,1,integrated,base,central,2030,,-14.42
+M2.0 Concorde-class shield (147 t; legacy),bl,0.3,integrated,base,central,2090,,0.9384
+M2.0 Concorde-class shield (147 t; legacy),bl,1,integrated,base,central,2050,2075,1.806
+M2.0 Concorde-class shield (147 t; legacy),sub,0.3,integrated,base,central,2050,,-0.2686
+M2.0 Concorde-class shield (147 t; legacy),sub,1,integrated,base,central,2030,,-0.6655

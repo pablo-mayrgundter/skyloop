@@ -1,5 +1,7 @@
 # BoomShield at higher Mach: does speed close the gap?
 
+> **Canonical net values:** net-of-fuel/CO₂ (and integrated-cost) B/C here are superseded by [net-reconciliation](../../economics/net/net-reconciliation.md).
+
 **Skyloop · 22 October 2026 · screening model.** Scripts: `hm_aircraft.py`, `hm_shield.py`, `hm_time.py`, `hm_network.py`, `hm_cost.py`, `summarise.py`, `walkon_check.py`, `make_figures.py`. Reuses (read-only) [trunk](../trunk/trunk.md), [coverage](../coverage/coverage.md), [demand](../demand/demand.md), [cost-down](../../economics/cost-down/cost-down.md) and psf_sweep's τ-formula. **Every cost includes the second tether row.** Web sources are unverified search summaries (`evidence.csv`, E1–E16); [U] = estimate.
 
 ## Bottom line

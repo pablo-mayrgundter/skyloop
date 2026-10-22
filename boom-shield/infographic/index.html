@@ -364,7 +364,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   <div class="sec-head">
     <div class="eyebrow">Status, <span data-k="meta.statusDate"></span></div>
     <h2 id="st-h">Where it stands</h2>
-    <p class="lede">End of phase 1. The acoustics pass a screen: about 55 m of H₂, 1.5–2 km wide at 20 km, meets the proposed 0.11 psf limit at Mach 2, superbooms included. Buildability is open: tethers, hydrogen and failure modes. The economics do not close: owning the plants brings gross benefit/cost to 0.49 against Boomless Cruise (0.90 with a light M2.2 jet) and 1.75 against subsonic, but net of the extra fuel and CO₂ it stays well below 1 against Boomless and negative against subsonic.</p>
+    <p class="lede">End of phase 1. The acoustics pass a screen: about 55 m of H₂, 1.5–2 km wide at 20 km, meets the proposed 0.11 psf limit at Mach 2, superbooms included. Buildability is open: tethers, hydrogen and failure modes. The economics do not close: owning the plants brings gross benefit/cost to 0.49 against Boomless Cruise (0.87 with a light M2.2 jet) and 1.75 against subsonic, but net of the extra fuel and CO₂ it stays well below 1 against Boomless and negative against subsonic.</p>
   </div>
   <div class="status">
     <div><h3>Key findings</h3><ol id="findings"></ol></div>
@@ -498,12 +498,12 @@ const DATA = {
       {label:"Jet-stream crosswind", lo:-28.4, hi:114.7}
     ]},
   /* network-maps/coverage/coverage.md (M2.0, 100 % capture); trunk/trunk.md (spine, ramps); B/C bars: economics/integration/bcr.csv (spine M2.0, two tether rows, base demand, 100 % capture, gross);
-     mach: network-maps/highmach/summary_by_mach.csv (aggressive cost, base demand, 100 % capture; net = minus extra fuel at $0.80/kg and CO2 at $190/t); global: network-maps/global/global.md; timing: economics/growth/growth.md */
+     mach and all net values: economics/net/canonical.csv (net_bc.py: integrated cost re-run per shield, base demand, 100 % capture; net = minus whole-trip extra fuel at $0.80/kg and CO2 at $190/t); global: economics/net/corridors.csv; timing: economics/growth/growth.md */
   network:{
     trips_M:650, addressable_M:217, spine_M:81, spineShare_pct:37, spine_km:"3,614", busiest_M:80,
     lede:"Overture needs ~1,100 km just to climb, accelerate and descend, so a shield only helps long flights, and only where they pile up. A network search finds one spine, and it is the best corridor in the world. Owning the plants cuts the shield to ~$14/m², but once the extra fuel and CO₂ of supersonic flight are counted it still falls short of Boomless Cruise.",
     mapCaption:"The 3,614 km Mach 2 spine (teal) with Boomless feeder legs at Mach 1.15 (dashed), flown by the same aircraft. Las Vegas takes 32 % of joins, New York 14 %. The southern flows (Florida–West, Texas–Northeast) are not captured. Schematic projection.",
-    bcrCaption:"Gross B/C: time value over shield cost, before the extra fuel and CO₂. Spine at Mach 2 (Concorde-class, 55 m of H₂), two tether rows, base demand, 100 % capture; at 10 % capture every value is 10× lower. Net of fuel and CO₂ the integrated case falls to ~0.1–0.2 against Boomless and below zero against subsonic. Full capture against subsonic implies fares near parity.",
+    bcrCaption:"Gross B/C: time value over shield cost, before the extra fuel and CO₂. Spine at Mach 2 (Concorde-class, 55 m of H₂), two tether rows, base demand, 100 % capture; at 10 % capture every value is 10× lower. Net of fuel and CO₂ the integrated case falls to 0.12 against Boomless (0.28 with a light 49 t M2.0 jet) and below zero against subsonic. Full capture against subsonic implies fares near parity.",
     /* lat, lon */
     metros:{LAS:[36.08,-115.15],DEN:[39.86,-104.67],OMA:[41.30,-95.89],CHI:[41.97,-87.91],CLE:[41.41,-81.85],NYC:[40.78,-73.87],
       LAX:[33.94,-118.41],SFO:[37.62,-122.38],PHX:[33.43,-112.01],SEA:[47.45,-122.31],BOS:[42.37,-71.01],PHL:[39.87,-75.24],WAS:[38.85,-77.04],YYZ:[43.68,-79.63],wPA:[41.15,-79.3]},
@@ -518,13 +518,13 @@ const DATA = {
     ],
     machTitle:"Mach sweet spot: M2.0–2.2",
     mach:[
-      {m:"M1.7", ac:"Overture, 62 t", gbl:0.28, nbl:0.23, gsub:1.30, nsub:-1.94},
-      {m:"M2.0", ac:"light, 49 t", gbl:0.45, nbl:0.16, gsub:1.51, nsub:-2.28},
-      {m:"M2.2", ac:"aluminium, 50 t", gbl:0.50, nbl:0.02, gsub:1.54, nsub:-2.53},
-      {m:"M3.0", ac:"titanium, 63 t", gbl:0.57, nbl:-1.37, gsub:1.49, nsub:-4.73}
+      {m:"M1.7", ac:"Overture, 62 t", gbl:0.50, nbl:0.41, gsub:2.35, nsub:-3.52},
+      {m:"M2.0", ac:"light, 49 t", gbl:0.79, nbl:0.28, gsub:2.67, nsub:-4.01},
+      {m:"M2.2", ac:"aluminium, 50 t", gbl:0.87, nbl:0.04, gsub:2.69, nsub:-4.41},
+      {m:"M3.0", ac:"titanium, 63 t", gbl:0.98, nbl:-2.37, gsub:2.57, nsub:-8.16}
     ],
-    machCaption:"Spine B/C at aggressive cost ($23/m²), base demand, 100 % capture; masses are mid-cruise. Gross = time value only; net also subtracts the extra fuel ($0.80/kg) and CO₂ ($190/t). Ground time fixes ~3.6 h of a 5.2 h coast-to-coast trip, so speed buys little, and above ~M2.3 the extra fuel costs more than the time saved. At integrated cost ($14/m²) gross vs Boomless rises to 0.50 / 0.81 / 0.90 / 1.03.",
-    globalLine:"Worldwide, no corridor beats this spine (gross B/C 0.90 vs Boomless at M2.2, integrated cost; net 0.12); Europe–Gulf is next at gross 0.48–0.57, and LON–IST–DXB–BOM–HKG scores gross 0.375. Traffic growth lifts B/C, gross or net, only ~3.5 % a year: re-run in 2029–31 once the FAA rule and Overture's real economics are known; the earliest defensible opening is ~2055."},
+    machCaption:"Spine B/C at integrated cost ($13–16/m², own plants), base demand, 100 % capture; masses are mid-cruise. Gross = time value only; net also subtracts the extra fuel ($0.80/kg) and CO₂ ($190/t) of whole trips. Ground time fixes ~3.6 h of a 5.2 h coast-to-coast trip, so speed buys little, and above ~M2.3 the extra fuel costs more than the time saved. At aggressive bought cost ($23/m²) every value is ~0.55–0.6× these.",
+    globalLine:"Worldwide, no corridor beats this spine (gross B/C 0.87 vs Boomless at M2.2, integrated cost; net 0.04, or 0.28 at M2.0); Europe–Gulf is next at gross 0.46–0.55, and LON–IST–DXB–BOM–HKG scores gross 0.36. Traffic growth lifts B/C, gross or net, only ~3.5 % a year: re-run in 2029–31 once the FAA rule and Overture's real economics are known; the earliest defensible opening is ~2055."},
   findings:[
     "A 1 km-wide, 30 m hydrogen shield cuts a Concorde boom by about 34 dB under the track and 25 dB at the loudest point of the carpet: from ~98 PLdB (conservative proxy; ~108 raw) to ~64 under the track and at most ~73 anywhere in the computed carpet.",
     "The FAA's proposed 0.11 psf (5.3 Pa) peak limit binds harder than loudness. Passing needs ~54 m of H₂ at Mach 2 (~20 m for Overture, 71–77 m at Mach 2.5–3.2) and a shield ~1.5–2 km wide for the whole carpet.",
@@ -535,7 +535,7 @@ const DATA = {
     "Tethers and failure are the hard engineering: two anchor rows (~2,700 tethers at 28.4 MN each), a hydrogen hose on every ~10th tether, and a worst case of a bay rising into the flight level ~100 s after losing its hold-down.",
     "Of ~650 M US domestic trips a year, ~217 M are addressable at Mach 2. The best network is a single 3,614 km spine carrying ~81 M passengers a year, ~37 % of the time a shield could save.",
     "Owning the film, sheet, fibre and module plants ($7 B) cuts the shield from $106/m² bought to ~$14/m² ($91 B for the spine). Gross B/C, before fuel and CO₂: 0.49 against Boomless Cruise and 1.75 against subsonic, at 100 % capture.",
-    "Net of the extra fuel and CO₂ it does not pay: about 0.1–0.2 against Boomless, and below zero against subsonic at every Mach and in every corridor. Gross B/C against Boomless reaches ~1 only with every lever pulled: integrated cost, a light M2.2–3 aircraft and full capture.",
+    "Net of the extra fuel and CO₂ it does not pay: 0.28 against Boomless with a light M2.0 jet (0.04 at M2.2), at most 0.75 over a life cycle for openings to 2050, and below zero against subsonic at every Mach and in every corridor. Gross B/C against Boomless reaches ~1 only with every lever pulled: integrated cost, a light fast aircraft, full capture and a ~2050 opening.",
     "Mach is the weakest lever. Ground time dominates the trip, and above ~M2.3 fuel costs more than the time saved. The sweet spot is a light (≤ 50 t) M2.0–2.2 aircraft needing 29–35 m of H₂; the shield itself stops working at M3.4–3.8.",
     "The US spine is the best corridor in the world (Europe–Gulf is ~55–65 % of it), and the US, with a draft numeric boom limit, is the natural first mover. Timing should follow events, not traffic: re-run ~2029–31, pilot gate ~2038, earliest opening ~2055."
   ],
@@ -544,7 +544,7 @@ const DATA = {
     "The psf thicknesses come from a 1-D under-track screen; the 3-D width check covers only Concorde at Mach 2. On-ramp widths are scaled, not run.",
     "The NPRM's Federal Register text was not fetched; the rule's details come from law-firm summaries. Boomless Cruise's legal status overland is unresolved.",
     "Traffic comes from mirrored DOT Table 1 data plus a gravity fill; costs are engineering estimates without supplier quotes; capture is assumed, not modelled from fares.",
-    "Net B/C counts fuel and CO₂ only; non-CO₂ effects at 20–26 km and H₂ leakage would lower it further. The net conventions of the higher-Mach, growth and global studies are not yet reconciled.",
+    "Net B/C counts fuel and CO₂ only; non-CO₂ effects at 20–26 km and H₂ leakage would lower it further. All net values follow one reconciled convention (economics/net/net-reconciliation.md).",
     "Higher-Mach aircraft are parametric, calibrated only to Overture; integrated costs assume seven first-of-a-kind plants; demand outside the US is a gravity model (±2×).",
     "Published figures marked † were checked only at search-summary level. Overture's weight and shape are estimates."
   ],
@@ -552,7 +552,7 @@ const DATA = {
     "Settle the regulatory baseline: is Boomless Cruise allowed and reliable overland? It sets what the shield competes against. File a docket comment on peak vs building-response metrics.",
     "Model capture as a function of fare and airport capacity; full capture against subsonic needs fares near parity.",
     "Supplier quotes for filled sheet, film and UHMWPE rope; cold (−56 °C) coupon tests to 10⁸ cycles, to test the ~$14/m² integrated cost.",
-    "Reconcile the net-of-fuel/CO₂ conventions and add non-CO₂ effects and H₂ leakage.",
+    "Add non-CO₂ effects and H₂ leakage to the (now reconciled) net B/C.",
     "Hydrogen hazard analysis: bay uplift, compartment fire, aircraft–tether strikes.",
     "3-D runs for a 50 t M2.2 aircraft (35 m × 1.25 km) and a rounded rim; a sizing check of that aircraft.",
     "Full re-run in 2029–31, when the FAA final rule and Overture's service data exist."
