@@ -63,8 +63,10 @@ ATMOS = {
     "winter cross": lambda: S.upper_wind("winter", 90.0),
     "summer tail": lambda: S.upper_wind("summer", 180.0),
 }
-RUNS = [("Concorde M2.0", a) for a in ATMOS] + [("SR-71 M3.2", a) for a in
-                                                 ("calm", "winter tail", "winter cross")]
+# Order = priority (restart-safe; later cases may be trimmed).  SR-71 winter cross dropped.
+RUNS = [("Concorde M2.0", a) for a in ("calm", "winter tail", "winter head", "winter cross",
+                                        "summer tail")] + \
+    [("SR-71 M3.2", a) for a in ("calm", "winter tail")]
 FAMILY_LABEL = {"direct": "direct", "indirect": "indirect (ground-reflected primary)",
                 "shield": "shield-reflected", "transmit": "shield-transmitted (indirect)"}
 
@@ -130,6 +132,8 @@ def run_case(acn, atmn, cache, quick=False):
     for key in ("U:direct", "U:indirect", "S:shield", "S:transmit"):
         fam, rows = fams[key]
         mlist = march_phis(rows)
+        if fam == "transmit" and len(mlist) > 24:
+            mlist = mlist[::2]           # trimmed: the transmitted family is ~10x weaker
         if quick:
             mlist = mlist[::3]
         res_f = {}
@@ -272,7 +276,8 @@ def plot(all_out, all_summ, path):
             P = np.array([byY[y] for y in Ys]) / S.PSF
             a.semilogy(Ys / 1e3, P, color=c, ls=ls, marker=".", ms=3, lw=1, label=lab)
         a.axhline(LIMIT_PSF, color="k", lw=1)
-        a.text(5, LIMIT_PSF * 1.15, "NPRM limit 0.11 psf", fontsize=8)
+        a.text(0.02, LIMIT_PSF * 1.15, "NPRM limit 0.11 psf", fontsize=8,
+               transform=a.get_yaxis_transform())
         a.set_xlabel("lateral range Y [km]")
         a.set_ylabel("secondary-boom peak at ground [psf]")
         a.set_title(f"({'b' if col_i == 0 else 'c'}) Concorde M2, {atmn}: binned ground peak")
@@ -291,7 +296,7 @@ def plot(all_out, all_summ, path):
         t = b["t"] - b["t"][np.argmax(np.abs(b["p"]))]
         a.plot(t, b["p"], color=c, lw=1,
                label=f"{key} Y={b['Y'] / 1e3:.0f} km, apex {b['apex'] / 1e3:.0f} km")
-    a.set_xlim(-8, 8)
+    a.set_xlim(-3, 3)
     a.set_xlabel("time re peak [s]")
     a.set_ylabel("p at ground [Pa] (x1.9 incl.)")
     a.set_title("(d) worst-bin waveforms, Concorde M2, winter tail")
@@ -301,51 +306,76 @@ def plot(all_out, all_summ, path):
     fig.savefig(path, dpi=130)
 
 
+def write_outputs(done, all_summ, csv_rows):
+    keys = sorted({k for r in csv_rows for k in r}, key=lambda k: (k != "record", k))
+    order = ["record", "aircraft", "atmosphere", "config", "family", "Y_km", "phi_deg",
+             "peak_pa", "peak_abs_pa", "peak_psf", "coherent_peak_psf", "pldb", "csel",
+             "asel", "energy_pa2s", "n_branches", "apex_km", "z_ref_km", "delay_min",
+             "E_h", "max_dp_over_p", "n_caustic_up", "n_caustic_down"]
+    keys = order + [k for k in keys if k not in order]
+    with open(os.path.join(RES, "secondary_booms.csv"), "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=keys)
+        w.writeheader()
+        for r in csv_rows:
+            w.writerow(r)
+    if all(k in done for k in (("Concorde M2.0", "calm"), ("Concorde M2.0", "winter tail"))):
+        plot(done, all_summ, os.path.join(RES, "secondary_booms.png"))
+
+
+def report(acn, atmn, s):
+    print(f"== {acn} / {atmn}", flush=True)
+    for key in ("U:direct", "U:indirect", "S:direct", "S:shield", "S:transmit"):
+        v = s.get((key, DY))
+        b = s.get((key, "best"))
+        if v is None or b is None:
+            print(f"   {key:11s}: no returns")
+            continue
+        sens = [s.get((key, dy), [np.nan])[0] / S.PSF for dy in (1500.0, 6000.0)]
+        print(f"   {key:11s}: max peak {v[0] / S.PSF:.4f} psf ({v[0]:.3f} Pa) "
+              f"coherent {v[1] / S.PSF:.4f} psf, PLdB {v[2]:.1f}, CSEL {v[3]:.1f}; "
+              f"at Y {b[4] / 1e3:.0f} km apex {b[5] / 1e3:.0f} km delay {b[6] / 60:.1f} min; "
+              f"dY 1.5/6 km: {sens[0]:.4f}/{sens[1]:.4f} psf", flush=True)
+
+
 def main():
+    """Restart-safe: each finished case is pickled (bins, summary, CSV rows) in the cache;
+    the CSV and figure are rewritten after every case from all finished cases."""
     ap = argparse.ArgumentParser()
     ap.add_argument("--quick", action="store_true")
     ap.add_argument("--cache", default=os.path.join(tempfile.gettempdir(), "boomsim_secondary"))
     ap.add_argument("--only", default=None, help="aircraft|atmosphere to run (debug)")
+    ap.add_argument("--report", action="store_true", help="only re-report finished cases")
     args = ap.parse_args()
     os.makedirs(args.cache, exist_ok=True)
     runs = RUNS
     if args.only:
         runs = [r for r in RUNS if "|".join(r) == args.only]
-    all_out, all_summ, csv_rows = {}, {}, []
+    done, all_summ, csv_rows = {}, {}, []
     for acn, atmn in runs:
-        print(f"== {acn} / {atmn}", flush=True)
-        out = run_case(acn, atmn, args.cache, quick=args.quick)
-        all_out[(acn, atmn)] = out
-        all_summ[(acn, atmn)] = summarise(acn, atmn, out, csv_rows)
-        csv_rows.extend(out["ray_rows"])
-        s = all_summ[(acn, atmn)]
-        for key in ("U:direct", "U:indirect", "S:direct", "S:shield", "S:transmit"):
-            v = s.get((key, DY))
-            b = s.get((key, "best"))
-            if v is None:
-                print(f"   {key:11s}: no returns")
-                continue
-            sens = [s.get((key, dy), [np.nan])[0] / S.PSF for dy in (1500.0, 6000.0)]
-            print(f"   {key:11s}: max peak {v[0] / S.PSF:.4f} psf ({v[0]:.3f} Pa) "
-                  f"coherent {v[1] / S.PSF:.4f} psf, PLdB {v[2]:.1f}, CSEL {v[3]:.1f}; "
-                  f"at Y {b[4] / 1e3:.0f} km apex {b[5] / 1e3:.0f} km delay {b[6] / 60:.1f} min; "
-                  f"dY 1.5/6 km: {sens[0]:.4f}/{sens[1]:.4f} psf", flush=True)
-    if args.only is None and not args.quick:
-        keys = sorted({k for r in csv_rows for k in r}, key=lambda k: (k != "record", k))
-        order = ["record", "aircraft", "atmosphere", "config", "family", "Y_km", "phi_deg",
-                 "peak_pa", "peak_abs_pa", "peak_psf", "coherent_peak_psf", "pldb", "csel",
-                 "asel", "energy_pa2s", "n_branches", "apex_km", "z_ref_km", "delay_min",
-                 "E_h", "max_dp_over_p", "n_caustic_up", "n_caustic_down"]
-        keys = order + [k for k in keys if k not in order]
-        with open(os.path.join(RES, "secondary_booms.csv"), "w", newline="") as fh:
-            w = csv.DictWriter(fh, fieldnames=keys)
-            w.writeheader()
-            for r in csv_rows:
-                w.writerow(r)
-        plot(all_out, all_summ, os.path.join(RES, "secondary_booms.png"))
-    with open(os.path.join(args.cache, "summary.pkl"), "wb") as fh:
-        pickle.dump({k: {kk: (vv[:-1] if kk[1] == "best" and vv is not None else vv)
-                         for kk, vv in v.items()} for k, v in all_summ.items()}, fh)
+        ck = os.path.join(args.cache, f"case|{acn}|{atmn}{'|quick' if args.quick else ''}.pkl"
+                          .replace(" ", "_"))
+        if os.path.exists(ck):
+            with open(ck, "rb") as fh:
+                rec = pickle.load(fh)
+        elif args.report:
+            continue
+        else:
+            print(f"== {acn} / {atmn} (computing)", flush=True)
+            out = run_case(acn, atmn, args.cache, quick=args.quick)
+            rows = []
+            summ = summarise(acn, atmn, out, rows)
+            rec = dict(bins={k: {DY: v[DY]} for k, v in out["bins"].items()}, summ=summ,
+                       rows=rows + out["ray_rows"], phi_c=out["phi_c"])
+            with open(ck + ".tmp", "wb") as fh:
+                pickle.dump(rec, fh)
+            os.replace(ck + ".tmp", ck)
+        rec["med"] = S.Medium(ATMOS[atmn]())
+        done[(acn, atmn)] = rec
+        all_summ[(acn, atmn)] = rec["summ"]
+        csv_rows.extend(rec["rows"])
+        report(acn, atmn, rec["summ"])
+        if args.only is None and not args.quick:
+            write_outputs(done, all_summ, csv_rows)
 
 
 if __name__ == "__main__":

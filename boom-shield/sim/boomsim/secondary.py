@@ -1037,22 +1037,39 @@ def bin_ground(rows, marched, medium, dphi_fine, dY=3000.0, Y_edges=None, ua=Non
             else:
                 continue
         logE = np.log(np.array([max(marched[q].E_h, 1e-300) for q in inb]))
-        Ei = np.exp(np.interp(pb, inb, logE))
-        w = G[m] * Ei * dphi_fine          # energy * width contribution [Pa^2 s m]
-        ib = np.digitize(Y[m], Y_edges) - 1
+        # upsample the branch (smooth within a branch) so that consecutive landings are
+        # < dY/8 apart: avoids empty/double-counted bins when dY/dphi is large
+        o = np.argsort(pb)
+        pbs = pb[o]
+        Yb, Gb = Y[m][o], G[m][o]
+        apb = ap[m][o]
+        dlb = (tt[m] - XX[m] * sx[m])[o]
+        if pbs.size > 1:
+            n_up = int(min(400, max(1, math.ceil(np.max(np.abs(np.diff(Yb))) / (dY / 8.0)))))
+        else:
+            n_up = 1
+        dq = dphi_fine / n_up
+        pu = pbs[0] - 0.5 * dphi_fine + (np.arange(pbs.size * n_up) + 0.5) * dq
+        Yu = np.interp(pu, pbs, Yb)
+        Gu = np.interp(pu, pbs, Gb)
+        apu = np.interp(pu, pbs, apb)
+        dlu = np.interp(pu, pbs, dlb)
+        Ei = np.exp(np.interp(pu, inb, logE))
+        w = Gu * Ei * dq                     # energy * width contribution [Pa^2 s m]
+        ib = np.digitize(Yu, Y_edges) - 1
         for j in np.unique(ib):
             if j < 0 or j >= Y_edges.size - 1:
                 continue
             mm = ib == j
             eps = float(np.sum(w[mm])) / dY                    # Pa^2 s per unit (incident)
             # representative waveform: nearest marched ray
-            pc = float(np.mean(pb[mm]))
+            pc = float(np.mean(pu[mm]))
             q = inb[int(np.argmin(np.abs(inb - pc)))]
             r = marched[q]
             scale = math.sqrt(eps / r.E_h) if r.E_h > 0 else 0.0
-            delay = float(np.mean(tt[m][mm] - XX[m][mm] / (1.0 / sx[m][mm])))
             out.append(dict(Y=0.5 * (Y_edges[j] + Y_edges[j + 1]), branch=int(b),
                             phi_deg=math.degrees(pc), energy=eps * GROUND_FACTOR ** 2,
-                            t=r.t, p=GROUND_FACTOR * scale * r.h, apex=float(np.mean(ap[m][mm])),
-                            delay_s=delay, n_rays=int(mm.sum()), phi_marched=q))
+                            t=r.t, p=GROUND_FACTOR * scale * r.h, apex=float(np.mean(apu[mm])),
+                            delay_s=float(np.mean(dlu[mm])), n_rays=int(mm.sum()),
+                            phi_marched=q))
     return out
