@@ -8,3 +8,5 @@ boom-shield/sim/results/alongtrack_cache/
 boom-shield/infographic/__pycache__/
 # psf sweep cache (rebuildable)
 boom-shield/sim/results/psf_cache/
+# focus study cache (rebuildable)
+boom-shield/sim/results/focus_cache/
