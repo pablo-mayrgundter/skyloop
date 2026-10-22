@@ -49,6 +49,7 @@ BoomShield is a concept for a long, flat, tethered layer of hydrogen floating at
 - [economics/cost-down/cost-down.md](economics/cost-down/cost-down.md): unit-cost reduction levers and dual-use revenue; scenario B/C (its own joint-demand section is superseded).
 - [economics/integration/integration.md](economics/integration/integration.md): vertical integration of the main cost drivers (make vs buy, plants, learning curves) and two-tether-row B/C.
 - [economics/growth/growth.md](economics/growth/growth.md): traffic-growth projections, ROI by opening year (gross and net of fuel/CO2), decision triggers and a staged pilot plan.
+- [economics/net/net-reconciliation.md](economics/net/net-reconciliation.md): one canonical convention and calculator for net-of-fuel/CO2 benefit/cost; supersedes earlier net values.
 
 ### Origin and handoff (historical)
 

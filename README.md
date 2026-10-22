@@ -16,3 +16,6 @@ Skyloop is a vision for a buoyant, near vacuum sky transport system connecting
 
 ## Boom Shield  
 A side study of a tethered stratospheric hydrogen layer that blocks sonic booms under supersonic flight corridors. See [boom-shield/README.md](boom-shield/README.md) for the studies and [boom-shield/STATUS.md](boom-shield/STATUS.md) for the current status and verdict.  
+
+## Skyloop re-review (October 2026)  
+A second look at the stratospheric near-vacuum tube using the BoomShield models. Verdict: the floating tube cannot be held straight enough for Mach 2-6, and safe headway caps capacity; a ground vactrain scores better. See [skyloop-review/README.md](skyloop-review/README.md).
