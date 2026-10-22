@@ -1,0 +1,7 @@
+reason,pax_M,lost_pax_h_M
+detour (feeders + trunk > 1.15x great circle),106.5,47.84
+geometry: off-axis feeders eat the gain,5.714,3.011
+geometry: trunk run too short for ramps,24.9,8.597
+ocean baseline (Boomless + M1.7 offshore already close),22.9,0
+partially captured,79.83,17.22
+ramp overhead (too short even on own shield),17.67,0

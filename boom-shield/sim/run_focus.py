@@ -728,11 +728,199 @@ def extras():
     return out
 
 
+# ----------------------------------------------------------------------------- on-ramps
+TRUNK = os.path.join(HERE, "..", "network-maps", "trunk")
+A_TRUNK = 0.23             # m/s^2, trunk acceleration (network-maps/trunk/build_trunk.py)
+A_TRUNK_DEC = 0.46
+EDGE_MARGIN_M2 = 450.0     # m inside the edge that passed in 3-D at Mach 2 (psf_sweep: 1.5 km)
+
+
+def cutoff_with_wind():
+    """Effective undertrack cut-off Mach at 20.25 km (ground-frame trace speed must
+    exceed c + u everywhere below) for the repo's representative wind profiles."""
+    z = np.linspace(0.0, Z_AC, 4000)
+    c = np.asarray(std_atm(z).c)
+    out = {}
+    for name, w in (("calm", None), ("winter jet, tailwind", PR.jet_stream_winter(0.0)),
+                    ("winter jet, headwind", PR.jet_stream_winter(180.0)),
+                    ("QBO easterly, headwind", PR.qbo_easterly(180.0)),
+                    ("QBO easterly, tailwind", PR.qbo_easterly(0.0))):
+        u = np.zeros_like(z) if w is None else w(z)[0]
+        out[name] = float((np.max(c + u) - u[-1]) / c[-1])
+    return out
+
+
+def lateral_reach(M, z_a=Z_AC):
+    """Max |y| at the shield top (20 km) of steady level rays that reach the ground."""
+    col = F.default_column()
+    tr = F.Trajectory.level_accel(z_a, M, M + 1e-9, 1e-6, pad_s=5.0)
+    phis = np.radians(np.arange(0.0, 89.0, 0.05))
+    r = F.rays(tr, np.zeros_like(phis), phis, 0.0)
+    ok = r["ok"]
+    if not ok.any():
+        return 0.0, 0.0
+    ph = phis[ok].max()
+    rs = F.rays(tr, 0.0, ph, H_S)
+    return float(abs(rs["P"][1])), float(math.degrees(ph))
+
+
+def accel_km(m0, m1, a=A_TRUNK):
+    c = 295.1
+    return ((m1 * c) ** 2 - (m0 * c) ** 2) / (2 * a) / 1e3
+
+
+def onramp():
+    out = load("onramp") or {}
+    # 1. minimum H2 thickness vs Mach (undertrack, floating lid, 1-D), Overture and Concorde
+    d_list = [5.0, 10.0, 20.0, 30.0, 45.0, 60.0, 80.0]
+    for d in d_list:
+        STACKS[f"H2_{d:g}"] = ("hydrogen", d)
+    if "thick" not in out:
+        rows = []
+        for acn, Ms in (("Overture", (1.16, 1.2, 1.3, 1.5, 1.7, 2.0)),
+                        ("Concorde", (1.16, 1.2, 1.3, 1.5, 2.0))):
+            for M in Ms:
+                pk = {}
+                for d in d_list:
+                    inc = incident(acn, M, Z_AC, 0.0, 0.0, f"H2_{d:g}")
+                    pk[d] = inc["peak_pa"]
+                    if inc["peak_pa"] < 0.3 * LIMIT_PA:
+                        break
+                ds = np.array(sorted(pk))
+                ps = np.array([pk[d] for d in ds])
+                def dmin(lim):
+                    if ps[0] <= lim:
+                        return float(ds[0])
+                    i = np.flatnonzero(ps <= lim)
+                    if i.size == 0:
+                        return float("nan")
+                    i = int(i[0])
+                    x0, x1 = math.log(ps[i - 1]), math.log(ps[i])
+                    return float(ds[i - 1] + (ds[i] - ds[i - 1]) * (math.log(lim) - x0) / (x1 - x0))
+                inc55 = incident(acn, M, Z_AC, 0.0, 0.0, "H2_60") if 60.0 in pk else None
+                row = dict(ac=acn, M=M, d_min=dmin(LIMIT_PA), d_min_focus=dmin(LIMIT_PA / 1.3),
+                           peaks={float(k): float(v) for k, v in pk.items()})
+                ys, phc = lateral_reach(M)
+                row.update(ys_max=ys, phi_c=phc)
+                # swell duration through the min-thickness layer (cross-plane wavelength scale)
+                dd = min(pk, key=lambda d: abs(d - (row["d_min"] if np.isfinite(row["d_min"]) else 30)))
+                incd = incident(acn, M, Z_AC, 0.0, 0.0, f"H2_{dd:g}")
+                row["swell_ms"] = float(incd["dur_ms"])
+                rows.append(row)
+                print(acn, M, {k: (round(v, 1) if isinstance(v, float) else v) for k, v in row.items()
+                               if k != "peaks"}, flush=True)
+        out["thick"] = rows
+        save("onramp", out)
+    if "wind" not in out:
+        out["wind"] = cutoff_with_wind()
+        save("onramp", out)
+    print("cut-off Mach with winds:", {k: round(v, 3) for k, v in out["wind"].items()})
+    # 2. width scaling: rays cross within |ys|; edge margin scaled with the cross-plane
+    #    wavelength of the swell, lambda_perp = V T_swell / beta (anchored at M2.0: 450 m)
+    th = [r for r in out["thick"] if r["ac"] == "Overture"]
+    def lam(r):
+        V = r["M"] * 295.1
+        return V * r["swell_ms"] / 1e3 / math.sqrt(r["M"] ** 2 - 1)
+    ref = [r for r in th if abs(r["M"] - 2.0) < 1e-9][0]
+    for r in out["thick"]:
+        r["lambda_perp_m"] = lam(r)
+        r["edge_margin_m"] = EDGE_MARGIN_M2 * lam(r) / lam(ref)
+        r["W_req_m"] = 2 * (r["ys_max"] + r["edge_margin_m"])
+    # 3. ramps of the M2.0 spine and shield km
+    import csv as _csv
+    with open(os.path.join(TRUNK, "ramps.csv")) as fh:
+        ramps = [r for r in _csv.DictReader(fh) if r["tree"] == "greedy_M2.0"]
+    mc = F.default_column().cutoff_mach(Z_AC)
+    km = dict(
+        accel_cut_to_M2=accel_km(mc, 2.0), accel_115_to_M2=accel_km(1.15, 2.0),
+        onset_115_130=accel_km(1.15, 1.30), decel_M2_to_cut=accel_km(mc, 2.0, A_TRUNK_DEC),
+        accel_cut_to_Mf=accel_km(mc, 1.165), accel_cut_to_M13=accel_km(mc, 1.3),
+        wind_cut_range=(min(out["wind"].values()), max(out["wind"].values())),
+        accel_low_to_high_cut=accel_km(min(out["wind"].values()), max(out["wind"].values())))
+    out["km"] = km
+    out["ramps"] = ramps
+    print("km:", {k: (round(v, 1) if isinstance(v, float) else v) for k, v in km.items()})
+    save("onramp", out)
+    write_onramp_csv(out)
+    plot_onramp(out)
+    return out
+
+
+def write_onramp_csv(out):
+    rows = []
+    for r in out["thick"]:
+        rows.append(dict(table="thickness_width", aircraft=r["ac"], mach=r["M"],
+                         h2_min_m_0p11psf=r["d_min"], h2_min_m_with_focus_x1p3=r["d_min_focus"],
+                         rays_max_y_at_shield_m=r["ys_max"], lateral_cutoff_phi_deg=r["phi_c"],
+                         swell_duration_ms=r["swell_ms"], lambda_perp_m=r["lambda_perp_m"],
+                         edge_margin_m=r["edge_margin_m"], width_required_m=r["W_req_m"]))
+    for k, v in out["wind"].items():
+        rows.append(dict(table="cutoff_wind", case=k, cutoff_mach=v))
+    for k, v in out["km"].items():
+        rows.append(dict(table="distances_km", case=k, value=v if not isinstance(v, tuple) else "-".join(f"{x:.3f}" for x in v)))
+    for r in out["ramps"]:
+        rows.append(dict(table="ramps_M2_spine", case=r["nearest_metro"], km_from_metro=r["km_from_metro"],
+                         lat=r["lat"], lon=r["lon"], joining_pax_M=r["joining_pax_M"],
+                         share_of_joins=r["share_of_joins"]))
+    write_csv(rows, os.path.join(RESULTS, "onramp_shield.csv"))
+
+
+def plot_onramp(out):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    fig, ax = plt.subplots(1, 3, figsize=(15, 4.6))
+    a = ax[0]
+    for acn, col in (("Overture", "#2471a3"), ("Concorde", "#c0392b")):
+        rr = [r for r in out["thick"] if r["ac"] == acn]
+        a.plot([r["M"] for r in rr], [r["d_min"] for r in rr], "o-", color=col, label=f"{acn}: 0.11 psf")
+        a.plot([r["M"] for r in rr], [r["d_min_focus"] for r in rr], "s--", color=col, ms=3,
+               label=f"{acn}: 0.11 psf / 1.3 (focus margin)")
+    a.set_xlabel("Mach (level, 20.25 km)")
+    a.set_ylabel("minimum H2 layer [m] (1-D undertrack)")
+    a.set_title("(a) Layer needed along the ramp")
+    a.grid(alpha=0.3)
+    a.legend(fontsize=7)
+    b = ax[1]
+    rr = [r for r in out["thick"] if r["ac"] == "Overture"]
+    b.plot([r["M"] for r in rr], [r["ys_max"] for r in rr], "o-", label="rays' max |y| at the shield")
+    b.plot([r["M"] for r in rr], [r["edge_margin_m"] for r in rr], "s--", label="edge margin (scaled from 450 m at M2)")
+    b.plot([r["M"] for r in rr], [r["W_req_m"] / 2 for r in rr], "k-", lw=2, label="required half-width")
+    b.set_xlabel("Mach")
+    b.set_ylabel("m")
+    b.set_title("(b) Ramp half-width (scaling estimate)")
+    b.grid(alpha=0.3)
+    b.legend(fontsize=7)
+    c = ax[2]
+    # merge schematic: trunk along x, feeders at 0/30/60 deg merging at x = 0 (M <= cut-off),
+    # acceleration then on the trunk axis
+    km = out["km"]
+    W = 1.5
+    c.fill_between([-20, 120], -W / 2, W / 2, color="#aed6f1", label="trunk shield (1.5 km)")
+    c.fill_between([-8, 0], -W / 2, W / 2, color="#2471a3", alpha=0.6, label="apron upstream of accel start")
+    for th_ in (0, 30, 60):
+        t = math.radians(th_)
+        c.plot([-60 * math.cos(t), 0], [-60 * math.sin(t), 0], color="0.4", lw=1)
+    c.annotate("feeders at M <= day's cut-off\n(no ground boom, no shield)", (-55, -40), fontsize=7)
+    c.axvspan(0, km["accel_cut_to_Mf"], color="#d68910", alpha=0.5, label="focus emission zone (M_cut-M_f)")
+    c.annotate(f"accelerate on axis: M2 after {km['accel_cut_to_M2']:.0f} km", (5, 4), fontsize=7)
+    c.set_xlim(-65, 120)
+    c.set_ylim(-60, 15)
+    c.set_aspect("equal")
+    c.set_xlabel("km along trunk")
+    c.set_title("(c) Merge first, then accelerate (schematic)")
+    c.legend(fontsize=6, loc="lower right")
+    fig.tight_layout()
+    path = os.path.join(RESULTS, "onramp_shield.png")
+    fig.savefig(path, dpi=130)
+    print("wrote", path)
+
+
 # ----------------------------------------------------------------------------- driver
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--phase", required=True,
-                    choices=["validate", "scenarios", "points", "extras", "report", "all"])
+                    choices=["validate", "scenarios", "points", "extras", "onramp", "report", "all"])
     ap.add_argument("--procs", type=int, default=2)
     ap.add_argument("--only", default="")
     args = ap.parse_args()
@@ -758,6 +946,8 @@ def main():
         validate()
     if args.phase in ("extras", "all"):
         extras()
+    if args.phase == "onramp":
+        onramp()
     if args.phase in ("report", "all"):
         report()
     print(f"done in {time.time() - t0:.0f} s")
