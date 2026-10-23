@@ -2,6 +2,7 @@
 
 **Skyloop review · 23 October 2026 · screening level.** A low-pressure tube on pylons near the ground (at-grade and buried for comparison), carrying SC-EDS maglev pods with a compliant, actively controlled gap. As with BoomShield, this maps the rough feasible region, taking faster as better.
 
+- **Infographic:** <https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB>; three-concept comparison in [SUMMARY.md](../SUMMARY.md).
 - **Code:** `hyperloop.py` reuses the review's checks read-only (regime.evaluate, hybrid.allow_amp, heating, sky_model demand and lifecycle), so results are comparable. Terrain comes from the AWS Terrarium DEM every 500 m along each spine leg at five lateral offsets. `hl_terrain.csv` and `hl_grid.csv` are gitignored and rebuildable.
 - **Conventions:** V = M × 295 m/s. *(A)* marks an assumption; web items are **unverified** search summaries.
 
