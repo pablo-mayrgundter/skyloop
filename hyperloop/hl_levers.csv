@@ -1,0 +1,28 @@
+kind,lever,Mach_pass,binding_above,Mach_marginal,binding_above_marginal,Mach,pairs,avg_tube_usd_m_km,nyc_lax_d2d_h,bcn_base,bcn_low,bcg_base,bcn_base_vs_boomless
+feasibility,base,3,safety,6,safety,,,,,,,,
+feasibility,breach: fast valves + early braking (air met at 1/10 density),4,route,11,power,,,,,,,,
+feasibility,stations 5 GW per direction,3,safety,6,safety,,,,,,,,
+feasibility,regeneration 0.95 each way,3,safety,6,safety,,,,,,,,
+feasibility,"vertical curves at 0.10 g (seated, belted)",3,safety,6,safety,,,,,,,,
+feasibility,rolling pod 0.62 g in curves,3,safety,6,safety,,,,,,,,
+feasibility,rail-like 0.24 g in curves,2.75,route,6,safety,,,,,,,,
+feasibility,brick-wall headway (no moving-block certification),nan,capacity,2.5,capacity,,,,,,,,
+feasibility,all positive levers,4.25,route,11.5,trip,,,,,,,,
+B/C spine net vs subsonic 2050 100 %,base,,,,,2,1,147.4,4.231,0.3815,0.9397,0.2588,0.3451
+B/C spine net vs subsonic 2050 100 %,base,,,,,4,1,120.4,3.616,0.4986,1.267,0.3704,0.6366
+B/C spine net vs subsonic 2050 100 %,base,,,,,6,1,131.5,3.571,0.4349,1.102,0.3469,0.5699
+B/C spine net vs subsonic 2050 100 %,TBM cost-down: twin bores $30 M/km civil,,,,,2,1,120.3,4.231,0.4571,1.063,0.3101,0.4135
+B/C spine net vs subsonic 2050 100 %,TBM cost-down: twin bores $30 M/km civil,,,,,4,1,103.6,3.616,0.5682,1.389,0.422,0.7254
+B/C spine net vs subsonic 2050 100 %,TBM cost-down: twin bores $30 M/km civil,,,,,6,1,112.7,3.571,0.4974,1.211,0.3967,0.6518
+B/C spine net vs subsonic 2050 100 %,all tube-line items at the low level,,,,,2,1,147.4,4.231,0.7726,0.9397,0.524,0.6988
+B/C spine net vs subsonic 2050 100 %,all tube-line items at the low level,,,,,4,1,120.4,3.616,1.013,1.267,0.7528,1.294
+B/C spine net vs subsonic 2050 100 %,all tube-line items at the low level,,,,,6,1,131.5,3.571,0.8854,1.102,0.7062,1.16
+B/C spine net vs subsonic 2050 100 %,vertical curves at 0.10 g,,,,,2,1,140.5,4.237,0.3965,0.9691,0.2687,0.3569
+B/C spine net vs subsonic 2050 100 %,vertical curves at 0.10 g,,,,,4,1,117.8,3.617,0.5074,1.286,0.377,0.6481
+B/C spine net vs subsonic 2050 100 %,vertical curves at 0.10 g,,,,,6,1,128.8,3.573,0.442,1.118,0.3525,0.5791
+B/C spine net vs subsonic 2050 100 %,70 min walk-on stations,,,,,2,1,147.4,4.231,0.4481,1.103,0.3257,0.5266
+B/C spine net vs subsonic 2050 100 %,70 min walk-on stations,,,,,4,1,120.4,3.616,0.578,1.467,0.452,0.7608
+B/C spine net vs subsonic 2050 100 %,70 min walk-on stations,,,,,6,1,131.5,3.571,0.5056,1.28,0.4215,0.6734
+B/C spine net vs subsonic 2050 100 %,brick-wall headway,,,,,2,5,147.4,4.231,0.06403,0.1576,0.04332,0.07362
+B/C spine net vs subsonic 2050 100 %,brick-wall headway,,,,,4,6,120.4,3.616,0.04318,0.11,0.03201,0.06477
+B/C spine net vs subsonic 2050 100 %,brick-wall headway,,,,,6,6,131.5,3.571,0.02523,0.06428,0.02009,0.0384

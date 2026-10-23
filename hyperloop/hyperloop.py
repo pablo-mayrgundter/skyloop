@@ -5,18 +5,21 @@ Screening-level feasibility map across disciplines (as with BoomShield): Mach 1-
 pylons / at-grade / buried) x suspension (rigid EMS, passive SC-EDS gap, active large gap) x long-wave trim.
 
 Run:   python3 -I hyperloop/hyperloop.py            all stages (terrain tiles cached in hyperloop/.cache)
+       python3 -I hyperloop/hyperloop.py econ       reuse map, rerun economics, levers, figures
        python3 -I hyperloop/hyperloop.py figs       figures only, from the CSVs
 Out:   hl_terrain.csv        sampled ground profile along every spine leg and lateral offset (AWS Terrarium DEM)
        hl_alignment.csv      guideway error spectrum per setting vs allowable amplitude per suspension
        hl_align_limits.csv   highest Mach per setting x suspension x trim (fixed-guideway ride, 0.05 g)
-       hl_route.csv          vertical alignment per leg x setting x Mach: tunnel / viaduct / elevated km, cost
-       hl_speed.csv          terrain-following alternative: local speed caps and leg times
-       hl_grid.csv           Mach x setting x suspension x trim x pressure x blockage: margins per discipline
-                             (hl_maps_grid.csv is the > 2 MB variant, gitignored)
-       hl_map.csv            best point per Mach x setting x suspension x trim (status, binding)
+       hl_route.csv          vertical alignment per leg x offset x setting x Mach: tunnel / viaduct / elevated km
+       hl_route_av10.csv     the same with 0.10 g vertical curves (lever)
+       hl_grid.csv           every (p, beta) point, elevated / at-grade / buried, active gap + trim, 17 t pod
+                             (> 2 MB, gitignored)
+       hl_map.csv            best point per Mach x setting x suspension x trim (status, binding, margins)
+       hl_map_breach.csv     the same, elevated, with the breach lever
        hl_cost.csv           bottom-up $M/km per tube pair, low / base / high, per element and setting
-       hl_econ.csv           door to door, capacity, B/C (gross / net, 30 / 100 %, 2045-2060, vs sub / Boomless /
-                             BoomShield M2.2), break-even $M/km
+       hl_points.csv         per network x setting x strategy x Mach: door to door, capex, energy, pairs
+       hl_econ.csv           B/C (gross / net, 30 / 100 %, 2045-2060, vs sub / Boomless / BoomShield M2.2, low /
+                             base / high cost) and break-even $M/km
        hl_levers.csv         what moves the frontier
        hl_maps.png, hl_route.png, hl_econ.png
 
@@ -504,10 +507,8 @@ def physics_point(setting, M, p, m_pod, beta, F=None):
     dT_pass = drag / (rho * A_t * CV)
     pods_h = PAX_H_DIR / (pd_["n"] * sm.P["lf"])
     N_max = 3600 * 8 * math.pi * K_GAS * DT_GAS * F.get("f_mix", 1.0) / drag
-    m_pass = math.log10(H.BASE["dT_pass_ok"] / dT_pass)
-    m_thr = math.log10(N_max / pods_h)
-    mg["gas_heat"] = min(m_pass, m_thr)
-    tol["gas_heat"] = math.log10(H.BASE["dT_pass_marg"] / H.BASE["dT_pass_ok"]) if m_pass < m_thr else math.log10(3)
+    # per-pass rise is reported, not checked: a steel tube at ambient takes it back in ~1-10 s (tau = rho A cv / pi D h)
+    mg["gas_heat"], tol["gas_heat"] = math.log10(N_max / pods_h), math.log10(3)
     # station launch power, gross, one direction, at peak demand (pods depart every 3600/pods_h s)
     KE = 0.5 * m_pod * V * V
     P_stn = KE * min(pods_h, 3600 / sm.headway_s(M, F.get("rule", RULE))) / 3600 / ETA
@@ -522,29 +523,28 @@ def physics_point(setting, M, p, m_pod, beta, F=None):
                pump_kW_km=r["pump_kW_km"], reevac_h_10km=r["reevac_h_10km"], wall_kg_m=r["wall_kg_m"],
                a_plug_g=a_plug, KE_tTNT=r["KE_tTNT"], pods_within_stop=r["pods_within_stop"],
                cap_pair_Mpax=r["cap_pair_Mpax_yr"], pods_h_peak=pods_h, gas_dT_pass_K=dT_pass, gas_Nmax_h=N_max,
+               gas_tau_s=rho * A_t * CV / (8 * math.pi * K_GAS),
                P_station_GW=P_stn / 1e9, P_station_net_GW=P_stn / 1e9 * (1 - ETA * ETA * sm.P["eta_regen"]),
                L_acc_km=V * V / (2 * sm.P["a_acc"]) / 1e3)
     return out, mg, tol
 
 
 def route_margin(summ, setting, M, F=None):
+    """Worst of: horizontal ROW (reverse curve to dodge a 2 km obstacle within ~50 km), deepest tunnel overburden
+    (Gotthard ~2,300 m), and tunnel share (above 25 % an 'elevated' line is mostly a tunnel line)."""
     F = F or {}
     a_lat = F.get("a_lat", A_LAT_BASE)
-    m_h = math.log10(L_OBST / 1e3 / dodge_km(M, a_lat))
-    t_h = math.log10(3)
-    if setting == "buried":
-        dmax = route_at(summ, "buried", M, "max_depth")
-        m_v, t_v = math.log10(1200.0 / dmax), math.log10(2300.0 / 1200.0)      # Gotthard ~2,300 m overburden
-        info = dict(max_overburden_m=dmax, tunnel_share=1.0)
-    else:
-        sh = route_at(summ, setting, M, "tunnel_share")
-        m_v, t_v = math.log10(0.15 / max(sh, 1e-3)), math.log10(0.35 / 0.15)
-        info = dict(tunnel_share=sh, max_overburden_m=route_at(summ, setting, M, "max_depth"))
-    info["dodge_km"] = dodge_km(M, a_lat)
-    info["R_min_km"] = r_min_h(M, a_lat) / 1e3
-    if m_h / t_h < m_v / t_v:
-        return m_h, t_h, info
-    return m_v, t_v, info
+    parts = {}
+    parts["horizontal"] = (math.log10(L_OBST / 1e3 / dodge_km(M, a_lat)), math.log10(3))
+    dmax = route_at(summ, setting, M, "max_depth")
+    parts["overburden"] = (math.log10(1200.0 / max(dmax, 1.0)), math.log10(2300.0 / 1200.0))
+    sh = 1.0 if setting == "buried" else route_at(summ, setting, M, "tunnel_share")
+    if setting != "buried":
+        parts["tunnel share"] = (math.log10(0.25 / max(sh, 1e-3)), math.log10(0.5 / 0.25))
+    worst = min(parts, key=lambda k: parts[k][0] / parts[k][1])
+    info = dict(tunnel_share=sh, max_overburden_m=dmax, dodge_km=dodge_km(M, a_lat),
+                R_min_km=r_min_h(M, a_lat) / 1e3, route_binding=worst)
+    return parts[worst][0], parts[worst][1], info
 
 
 def combine(mg, tol, checks=CHECKS):
@@ -665,7 +665,7 @@ def class_cost(setting, D, lvl, trim=1):
         tall_unit=(PYLONS[i]) * k,                      # x (factor - 1) on top of std per km
         tunnel=(common + liner + tun + LAND["buried"][i]) * k,
         lsm=LSM_C[i] * k)
-    c["deep_extra"] = (DEX := (DEEP_X - 1) * tun * k)
+    c["deep_extra"] = (DEEP_X - 1) * tun * k
     return c
 
 
@@ -848,7 +848,6 @@ def net_eval(name, setting, strategy, M, summ, H0, terrain, D=5.0, F=None):
     cap_pair = sm.cap_pair_yr(M, F.get("rule", RULE), seats=POD_P["seats"])[0]
     pairs = int(min(6, max(1, math.ceil(evs["sub"]["peak"] * 1.3 / cap_pair))))
     # capex
-    legs_used = LEGS if True else []
     n_st = len(net.st)
     ends = 2 * len(LEGS) if name.endswith("all-stop") else 2
     V = M * C_REF
@@ -982,8 +981,8 @@ def stage_levers(summ, summ_av, H0, terrain, bore):
                         Mach_marginal=fm[k][0], binding_above_marginal=fm[k][1]))
         print(f"  lever {name}: pass M{fr[k][0]} ({fr[k][1]}), marginal M{fm[k][0]} ({fm[k][1]})", flush=True)
     # economics: spine+LAX all-stop, elevated full speed, net vs subsonic, 2050, 100 %, at M2 / M4 / M6
-    econ = [("base", {}, None), ("tunnels at $50 M/km base (TBM cost-down)", {}, "tun"),
-            ("elevated civil + tube at the low-cost level", {}, "low"),
+    econ = [("base", {}, None), ("TBM cost-down: twin bores $30 M/km civil", {}, "tun"),
+            ("all tube-line items at the low level", {}, "low"),
             ("vertical curves at 0.10 g", {}, "av"), ("70 min walk-on stations", {}, "walk"),
             ("brick-wall headway", {"rule": "brick-wall"}, None)]
     global TUNNEL5
@@ -993,7 +992,7 @@ def stage_levers(summ, summ_av, H0, terrain, bore):
             o_sky = sm.P["O_sky"]
             try:
                 if special == "tun":
-                    TUNNEL5 = (25.0, 50.0 / soft(1) * 1.0 * 1.0 if False else 50.0 / 1.625 * 1.0, 100.0)
+                    TUNNEL5 = (20.0, 30.0, 60.0)
                 if special == "walk":
                     sm.P["O_sky"] = (20, 30, 20)
                 o, evs, cx = net_eval("spine+LAX all-stop", "elevated", "full speed", M,
@@ -1015,3 +1014,221 @@ def stage_levers(summ, summ_av, H0, terrain, bore):
             print(f"  lever {name} M{M}: net B/C base {b['bcn_base']:.2f} low {b['bcn_low']:.2f}", flush=True)
     write_csv("hl_levers.csv", out)
     return out
+
+
+# ============================================================================= figures
+C_STAT = {"pass": "#0ca30c", "marginal": "#fab219", "fail": "#d03b3b"}
+SER = ["#2a78d6", "#eb6834", "#1baf7a", "#6250d6", "#e87ba4"]
+INK, INK2, GRID = "#0b0b0b", "#52514e", "#e4e3df"
+ABBR = {"alignment": "A", "route": "R", "drag_energy": "E", "heating": "H", "gas_heat": "G", "vacuum": "V",
+        "structure": "S", "safety": "B", "capacity": "C", "power": "P", "trip": "T"}
+
+
+def _style(ax, title=None):
+    ax.set_facecolor("#fcfcfb")
+    for sp_ in ("top", "right"):
+        ax.spines[sp_].set_visible(False)
+    for sp_ in ("left", "bottom"):
+        ax.spines[sp_].set_color(INK2)
+    ax.tick_params(colors=INK2, labelsize=8)
+    ax.grid(True, color=GRID, lw=0.6)
+    ax.set_axisbelow(True)
+    if title:
+        ax.set_title(title, fontsize=10, color=INK, loc="left")
+
+
+def fig_maps():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    from matplotlib.patches import Patch
+    rows = read_csv("hl_map.csv")
+    rows += [dict(r, setting="breach lever") for r in read_csv("hl_map_breach.csv")]
+    fig, axes = plt.subplots(4, 1, figsize=(11, 12.4), facecolor="#fcfcfb")
+    ylab = [f"{sh}{' + trim' if t else ''}" for sh in SUSP_SHORT for t in (0, 1)]
+    for ax, st in zip(axes, SETTINGS + ["breach lever"]):
+        ttl = (f"{st.capitalize()} tube: best point per Mach (17-93 seats, 1 Pa-1 kPa, bore <= 8 m)" if st != "breach lever"
+               else "Elevated tube with the breach lever (fast valves + early braking: air met at 1/10 density)")
+        _style(ax, ttl)
+        ax.grid(False)
+        for j, (sh, t) in enumerate([(sh, t) for sh in SUSP_SHORT for t in (0, 1)]):
+            rs = sorted([r for r in rows if r["setting"] == st and r["suspension"] == sh and r["trim"] == t],
+                        key=lambda r: r["Mach"])
+            for r in rs:
+                ax.add_patch(plt.Rectangle((r["Mach"] - 0.125, j - 0.45), 0.25, 0.9, color=C_STAT[r["status"]], lw=0))
+                if r["status"] != "pass" and (abs(r["Mach"] * 2 - round(r["Mach"] * 2)) < 1e-9):
+                    ax.text(r["Mach"], j, ABBR[r["binding"]], ha="center", va="center", fontsize=6.5,
+                            color="#ffffff" if r["status"] == "fail" else INK)
+        ax.set_xlim(0.85, 12.15)
+        ax.set_ylim(-0.6, len(ylab) - 0.4)
+        ax.set_yticks(range(len(ylab)))
+        ax.set_yticklabels(ylab, fontsize=7.5, color=INK2)
+        ax.set_xticks(range(1, 13))
+        ax.set_xlabel("Mach (V = M x 295 m/s)", fontsize=8, color=INK2)
+    leg = [Patch(color=C_STAT[k], label=k) for k in ("pass", "marginal", "fail")]
+    fig.legend(handles=leg, loc="lower left", ncol=3, fontsize=8, frameon=False, bbox_to_anchor=(0.01, 0.0))
+    items = [f"{v} {LABEL[k]}" for k, v in ABBR.items()]
+    fig.text(0.30, 0.004, "Letter = binding check: " + ", ".join(items[:6]) + ",\n" + ", ".join(items[6:]),
+             fontsize=7, color=INK2)
+    fig.tight_layout(rect=(0, 0.03, 1, 1))
+    fig.savefig(os.path.join(HERE, "hl_maps.png"), dpi=130, facecolor=fig.get_facecolor())
+    plt.close(fig)
+    print("wrote hl_maps.png", flush=True)
+
+
+def fig_route(terrain, H0):
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    fig = plt.figure(figsize=(11, 8.2), facecolor="#fcfcfb")
+    gs = fig.add_gridspec(2, 2, height_ratios=[1.0, 1.0])
+    ax = fig.add_subplot(gs[0, :])
+    _style(ax, "Spine ground profile (offset 0) and the elevated M4 alignment (vertical curves 0.05 g, grade <= 5 %)")
+    x0 = 0.0
+    for a, b in LEGS:
+        leg = f"{a}-{b}"
+        arr = terrain[(leg, 0.0)]
+        s, t = arr[:, 0], np.maximum(arr[:, 1], 0)
+        ax.fill_between(x0 + s, 0, t, color="#d9d7d0", lw=0)
+        h = H0.get(f"{leg}|elevated|4")
+        if h is not None:
+            keep = (s * 1e3 >= L_URB) & (s * 1e3 <= s[-1] * 1e3 - L_URB)
+            ss, tt = s[keep], t[keep]
+            z = tt + h
+            ax.plot(x0 + ss, z, color=SER[0], lw=1.2)
+            tun = h < TUNNEL_BELOW["elevated"]
+            ax.fill_between(x0 + ss, z, tt, where=tun, color=SER[1], alpha=0.55, lw=0)
+            tall = h > BAND["elevated"][1]
+            ax.fill_between(x0 + ss, tt, z, where=tall, color=SER[0], alpha=0.25, lw=0)
+        ax.text(x0 + s[-1] / 2, 4100, leg, ha="center", fontsize=7.5, color=INK2)
+        x0 += s[-1]
+        ax.axvline(x0, color=INK2, lw=0.5, ls=":")
+    ax.set_ylim(0, 4400)
+    ax.set_xlim(0, x0)
+    ax.set_xlabel("km along the spine", fontsize=8, color=INK2)
+    ax.set_ylabel("m above sea level", fontsize=8, color=INK2)
+    ax.plot([], [], color=SER[0], lw=1.2, label="guideway (M4)")
+    ax.fill_between([], [], [], color=SER[1], alpha=0.55, label="tunnel")
+    ax.fill_between([], [], [], color=SER[0], alpha=0.25, label="viaduct > 25 m")
+    ax.fill_between([], [], [], color="#d9d7d0", label="ground")
+    ax.legend(fontsize=7.5, frameon=False, loc="center left", bbox_to_anchor=(0.01, 0.62), ncol=2)
+    # alignment spectrum
+    ax2 = fig.add_subplot(gs[1, 0])
+    _style(ax2, "Elevated guideway error vs what each suspension allows, M6")
+    A = read_csv("hl_alignment.csv")
+    for t, ls in ((0, "-"), (1, "--")):
+        rs = [r for r in A if r["kind"] == "error spectrum" and r["setting"] == "elevated" and r["trim"] == t]
+        ax2.loglog([r["lambda_m"] for r in rs], [r["A_total_m"] * 1e3 for r in rs], color=INK, lw=1.6, ls=ls,
+                   label=f"elevated error{' (trimmed)' if t else ''}")
+    rs = [r for r in A if r["kind"] == "allowable" and r["Mach"] == 6.0]
+    for k, sh in enumerate(SUSP_SHORT):
+        ax2.loglog([r["lambda_m"] for r in rs], [r[sh] * 1e3 for r in rs], color=SER[k], lw=1.4, label=f"{sh} allows")
+    ax2.set_xlabel("wavelength, m", fontsize=8, color=INK2)
+    ax2.set_ylabel("amplitude, mm", fontsize=8, color=INK2)
+    ax2.set_ylim(0.1, 1e4)
+    ax2.legend(fontsize=6.5, frameon=False, loc="upper left")
+    # tunnel share and average cost
+    ax3 = fig.add_subplot(gs[1, 1])
+    _style(ax3, "Spine+LAX, full speed: average tube-line cost, base ($M/km of pair)")
+    P = read_csv("hl_points.csv")
+    for k, st in enumerate(SETTINGS):
+        rs = sorted([r for r in P if r["network"] == "spine+LAX all-stop" and r["setting"] == st
+                     and r["strategy"] == "full speed"], key=lambda r: r["Mach"])
+        ax3.plot([r["Mach"] for r in rs], [r["avg_tube_usd_m_km_base"] for r in rs], color=SER[k], lw=2, marker="o",
+                 ms=4, label=f"{st} (tunnel share {rs[0]['tunnel_share']:.0%}-{rs[-1]['tunnel_share']:.0%})")
+    ax3.set_xlabel("Mach", fontsize=8, color=INK2)
+    ax3.set_ylim(0, None)
+    ax3.legend(fontsize=7, frameon=False, loc="lower right")
+    ax3.annotate("M2: Kantrowitz limit\nforces a 6.5 m bore", (2, 148), (2.6, 60), fontsize=7, color=INK2,
+                 arrowprops=dict(arrowstyle="-", color=INK2, lw=0.6))
+    fig.tight_layout()
+    fig.savefig(os.path.join(HERE, "hl_route.png"), dpi=130, facecolor=fig.get_facecolor())
+    plt.close(fig)
+    print("wrote hl_route.png", flush=True)
+
+
+def fig_econ():
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    B = read_csv("hl_econ.csv")
+    P = read_csv("hl_points.csv")
+    fig, axs = plt.subplots(1, 3, figsize=(12, 4.2), facecolor="#fcfcfb")
+    ax = axs[0]
+    _style(ax, "NYC-LAX door to door, h")
+    for k, (net, st, strat) in enumerate([("NYC-LAX nonstop", "elevated", "full speed"),
+                                          ("spine+LAX all-stop", "elevated", "full speed"),
+                                          ("spine+LAX all-stop", "elevated", "terrain-following")]):
+        rs = sorted([r for r in P if r["network"] == net and r["setting"] == st and r["strategy"] == strat],
+                    key=lambda r: r["Mach"])
+        ax.plot([r["Mach"] for r in rs], [r["nyc_lax_d2d_h"] for r in rs], color=SER[k], lw=2, marker="o", ms=4,
+                label=f"{net}, {strat}")
+    for y, lab in ((7.29, "subsonic"), (6.27, "Boomless"), (5.08, "BoomShield M2.2")):
+        ax.axhline(y, color=INK2, lw=0.8, ls=":")
+        ax.text(1.0, y + 0.08, lab, ha="left", fontsize=7, color=INK2)
+    ax.set_ylim(0, 9)
+    ax.set_xlabel("Mach", fontsize=8, color=INK2)
+    ax.legend(fontsize=6.5, frameon=False, loc="lower right")
+    for ax, cmp, ttl in ((axs[1], "sub", "vs subsonic"), (axs[2], "bl", "vs Boomless")):
+        _style(ax, f"Net B/C {ttl}, spine+LAX, 2050, 100 % capture")
+        for k, st in enumerate(SETTINGS):
+            rs = sorted([r for r in B if r["network"] == "spine+LAX all-stop" and r["setting"] == st
+                         and r["strategy"] == "full speed" and r["vs"] == cmp and r["opening"] == 2050
+                         and r["capture"] == 1.0], key=lambda r: r["Mach"])
+            ax.plot([r["Mach"] for r in rs], [r["bcn_low"] for r in rs], color=SER[k], lw=2, marker="o", ms=4,
+                    label=f"{st}, low cost")
+            ax.plot([r["Mach"] for r in rs], [r["bcn_base"] for r in rs], color=SER[k], lw=1.2, ls="--",
+                    label=f"{st}, base cost")
+        ax.axhline(1, color=INK, lw=0.8)
+        ax.set_ylim(0, 2.0)
+        ax.set_xlabel("Mach", fontsize=8, color=INK2)
+        ax.legend(fontsize=6.5, frameon=False, loc="upper right", ncol=2)
+    fig.tight_layout()
+    fig.savefig(os.path.join(HERE, "hl_econ.png"), dpi=130, facecolor=fig.get_facecolor())
+    plt.close(fig)
+    print("wrote hl_econ.png", flush=True)
+
+
+# ============================================================================= main
+def stage_breach_map(summ):
+    rows = stage_grid(summ, {"breach_rho_div": 10.0}, write=False, settings=["elevated"], tag="breach ")
+    write_csv("hl_map_breach.csv", rows)
+
+
+def bore_fn():
+    """Smallest bore that reaches the best status available at this Mach (17 t pod, any pressure; hl_grid.csv)."""
+    rows = read_csv("hl_grid.csv")
+
+    def bore(st, M):
+        rs = [r for r in rows if r["setting"] == st and abs(r["Mach"] - M) < 0.13]
+        if not rs:
+            return 5.0
+        top = max(RANKS[r["status"]] for r in rs)
+        return float(min(r["D_tube"] for r in rs if RANKS[r["status"]] == top))
+    return bore
+
+
+def main():
+    mode = sys.argv[1] if len(sys.argv) > 1 else "all"
+    terrain = stage_terrain()
+    if mode != "figs":
+        if mode == "all":
+            stage_alignment()
+            stage_cost()
+        rows, H0 = stage_route(terrain)
+        rows_av, _ = stage_route(terrain, a_v=A_V_LEVER, tag="av10")
+        summ, summ_av = route_summary(rows), route_summary(rows_av)
+        if mode == "all":
+            stage_grid(summ)
+        stage_breach_map(summ)
+        bore = bore_fn()
+        stage_econ(summ, H0, terrain, bore)
+        stage_levers(summ, summ_av, H0, terrain, bore)
+    H0 = dict(np.load(os.path.join(CACHE, "route_h_base.npz")))
+    fig_maps()
+    fig_route(terrain, H0)
+    fig_econ()
+
+
+if __name__ == "__main__":
+    main()
