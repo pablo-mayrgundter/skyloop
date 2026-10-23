@@ -1,0 +1,9 @@
+option,power_MW_per_1000km,bandwidth_Hz,stroke_m,note,Mach,sig_v_m_s,sig_y_m,f_rms_N_m,reactive_GW
+envelope thrusters / rotors,791.3,0.001-0.05,n/a,ideal disc power / 0.6 figure of merit x 1.25 peak-to-rms; cancels gusts at the source,2,0.08555,27.14,168.7,
+tether winches (servo stiffness),443,0.001-0.05 (wave transit 2.2 s),81,holds tether tops only; between-tether band unchanged,2,0.08555,27.14,168.7,2.953
+internal guideway on actuators (moving guideway),2.633,"0.01-0.3 (tube motion), passive >1 Hz",bore-limited; tube sigma_y 27.1 m,needs the stroke; see bigbore,2,0.08555,27.14,168.7,
+"(no weight balance) same, actuators lift the guideway",41.96,same,same,20 % loss on reactive F*v,2,0.08555,27.14,168.7,
+envelope thrusters / rotors,791.3,0.001-0.05,n/a,ideal disc power / 0.6 figure of merit x 1.25 peak-to-rms; cancels gusts at the source,4,0.08555,27.14,168.7,
+tether winches (servo stiffness),443,0.001-0.05 (wave transit 2.2 s),81,holds tether tops only; between-tether band unchanged,4,0.08555,27.14,168.7,2.953
+internal guideway on actuators (moving guideway),2.633,"0.01-0.3 (tube motion), passive >1 Hz",bore-limited; tube sigma_y 27.1 m,needs the stroke; see bigbore,4,0.08555,27.14,168.7,
+"(no weight balance) same, actuators lift the guideway",41.96,same,same,20 % loss on reactive F*v,4,0.08555,27.14,168.7,
