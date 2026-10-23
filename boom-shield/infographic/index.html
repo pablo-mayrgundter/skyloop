@@ -53,6 +53,12 @@ a:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--quiet);outline-
 section{display:grid;gap:22px}
 .sec-head{display:grid;gap:8px;border-top:1px solid var(--rule);padding-top:18px}
 .lede{font-size:19px;color:var(--ink-2);max-width:60ch}
+/* family strip */
+.family{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font:500 13px/1.4 var(--f-mono);color:var(--ink-3);border-bottom:1px solid var(--rule);padding-bottom:10px}
+.family a{color:var(--ink-2);text-decoration:none;padding:2px 0;border-bottom:1.5px solid transparent}
+.family a:hover{color:var(--ink);border-color:var(--rule)}
+.family a[aria-current="page"]{color:var(--ink);font-weight:600;border-color:var(--quiet)}
+.family .lab{letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-right:6px}
 /* header */
 header.top{display:grid;gap:14px}
 .title-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px}
@@ -214,6 +220,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 <div class="wrap">
 
 <header class="top">
+  <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="#boomshield" aria-current="page">BoomShield</a><span aria-hidden="true">·</span><a href="#skyloop">Skyloop</a><span aria-hidden="true">·</span><a href="#hyperloop">Hyperloop (our version)</a></nav>
   <div class="eyebrow">Skyloop · concept study · <span data-k="meta.status"></span></div>
   <div class="title-row">
     <h1>BoomShield</h1>
