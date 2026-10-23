@@ -5,7 +5,7 @@ Skyloop is an ambitious vision for a global stratospheric transport network. The
 ## Concept  
 
 - **Buoyant tubes**: Ultra-thin composite cylinders with integrated hydrogen/helium lift cells float at 20–30 km altitude. The low outside pressure reduces structural stress and allows the tube interior to be partially evacuated, dramatically reducing drag.  
-- **Hypersonic pods**: Needle-shaped pods carrying 2–4 passengers are launched from each station via linear motor. Once at cruise speed they coast in near-vacuum with minimal energy usage. On arrival, regenerative braking recovers most of the energy.  
+- **Hypersonic pods**: Needle-shaped pods carrying 2–4 passengers are launched from each station via linear motor. Once at cruise speed they coast in the low-pressure tube (≈10⁻³ of ambient, ~5.5 Pa at 20 km) with minimal energy usage. On arrival, regenerative braking recovers most of the energy.  
 - **Stratospheric stations**: Modular platforms anchored by tethers serve as nodes every 20–50 km. Each station houses catapult launchers, catchers and passenger facilities and connects to the ground via fast vertical access.  
 
 ## Network Design  

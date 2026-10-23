@@ -10,7 +10,7 @@ This document describes the engineering and operations of the Skyloop system.
 
 ## Tube Structure  
 
-- **Materials**: Ultra‑thin composite shells designed to withstand a pressure differential of 5–50 kPa.  
+- **Materials**: Ultra‑thin composite shells designed to withstand a pressure differential of ~5.5 kPa at 20 km (the tube runs at ≈10⁻³ of ambient, ~5.5 Pa), rising to ~50 kPa on lower-altitude sections.  
 - **Buoyancy**: Integrated hydrogen or helium lift cells provide partial lift; tethers to ground anchors or lower-altitude drones stabilize the tube.  
 - **Segments**: Each tube section spans between stations; sections are connected with flexible joints to accommodate movement and thermal expansion.  
 

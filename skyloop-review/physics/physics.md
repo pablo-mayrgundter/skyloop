@@ -33,6 +33,8 @@
 | Core tube 150 kg/m, 10 Hz on 50 m spans (07 §3.1) | 150 kg/m CFRP gives f₁ ≈ 4.0 Hz pinned. 10 Hz needs 6.2× the EI | off ~2.5× |
 | Pressure transients negligible below 10⁻³ atm (101 Pa) | At 101 Pa drag costs 6–50 Wh/pax-km (§2) | **false** |
 
+*Correction (23 Oct 2026):* the intended tube pressure is **10⁻³ of local ambient (~5.5 Pa at 20 km)**, not 10⁻³ atm (101 Pa). At 5.5 Pa this row's drag concern largely goes away. The glide/levitation regime over 0.1 Pa–1 kPa is mapped in [../regime/regime.md](../regime/regime.md).
+
 **The three options.** (i) **Separate H₂ envelopes** carrying the tube work, at 0.5–1.8 t/m of lift and 37–131 t of H₂ per km. (ii) A **vacuum invballoon** fails: structure is 1.23–1.44 × lift at every size (BoomShield). (iii) An **H₂ jacket** has the same lift as (i). But it puts H₂ next to the vacuum, so any breach draws an H₂/air mix into the tube in front of hypersonic pods (§6). Prefer (i) with physical separation.
 
 ## 2. Vacuum level and aerodynamics
@@ -76,6 +78,7 @@
 | allowed deviation, 0.05 g, λ = 1 km | 3.6 cm | 0.9 cm | **0.4 cm** |
 
 - **"Gliders" cannot glide in vacuum.** Lift needs 450–4,000 m² of wing, so every metre needs a levitation guideway (§1). Earth's curvature unloads 0.05 g at M6, a ride bonus.
+  *Correction (23 Oct 2026):* the intended pressure is 10⁻³ of ambient (~5.5 Pa), not a hard vacuum. Even so, gliding needs ~25–1,400 Pa within a ≤ 8 m bore, and heating closes it above ~M3. See [../regime/regime.md](../regime/regime.md) for the glide/levitation regime.
 - **Alignment.** A sinusoidal tube deviation of amplitude A and wavelength λ gives a ride acceleration A(2πV/λ)². Under 1–5 m/s gusts on the 20 km envelope (ΔF = ρ·U·u′·C_D·2R = 160–790 N/m), the tether tops (k_h = 5.8×10⁴ N/m) move **8–41 m**. Mid-span cable deflection adds **18–440 m** at 2–10 MN axial tension (`floating_tube_motion.csv`). The diurnal 9 % lift swing moves tethers **~37 m** vertically. The result is **60–3,500× over** the M6 allowance and **6–380× over** at M2. It also exceeds the whole 0.93 m pod-to-wall clearance (Fig. c).
 - **Fixes fail.** Tethers 172× stiffer would mean ~150 kt of fibre each. Active rotors cancelling the gusts would need 0.37–1.9 GW per 1,000 km (ideal). Real-time trajectory following keeps the deviation and only lowers the ride limit. Docs/08's 30 km tether spacing makes it 100× worse (sag ∝ L²).
 

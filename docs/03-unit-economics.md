@@ -11,7 +11,7 @@ Commercial air travel today costs $0.10–0.15 per passenger-mile to operate and
 - **CapEx per km**: The buoyant tube and lift cells are expected to cost $5–10M per km. Station nodes range from $30M for minor nodes to $2–4B for major hubs. Pods cost $0.3–1.2M each but are reusable.
 
 - **Operating cost**:
-  - **Energy**: The near-vacuum environment results in extremely low drag; energy consumption is on the order of 0.5–2 Wh per passenger‑km, costing pennies per thousand miles.
+  - **Energy**: The low-pressure environment (≈10⁻³ of ambient, ~5.5 Pa at 20 km) results in extremely low drag; energy consumption is on the order of 0.5–2 Wh per passenger‑km, costing pennies per thousand miles.
   - **Maintenance**: Continuous drone-based inspection and replacement of lift cells, pods and station equipment yields an estimated $0.002–0.004 per passenger-mile.
   - **Operations**: Automated operations and minimal staff lead to $0.001–0.003 per passenger-mile.
   - **CapEx amortization**: Spreading infrastructure costs over decades and high usage results in $0.005–0.01 per passenger-mile.
