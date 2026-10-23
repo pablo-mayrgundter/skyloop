@@ -1,0 +1,25 @@
+layout,angle_deg,spacing_km,design_H_MN,fibre_kg_m,k_h_N_m2,k_v_N_m2,k_h_per_fibre,bound_45deg,strain_at_work_pct,gust_motion_m_1ms,note
+vertical (pendulum),0,3,25.44,243.8,0.75,72.5,0.003077,0.07436,1.034,228.9,spacing changes inter-tether bow only; k per km fixed by fibre mass
+vertical (pendulum),0,1,25.44,731.2,2.25,217.5,0.003077,0.07436,1.034,76.29,spacing changes inter-tether bow only; k per km fixed by fibre mass
+vertical (pendulum),0,0.3,25.44,2438,7.5,725,0.003077,0.07436,1.034,22.89,spacing changes inter-tether bow only; k per km fixed by fibre mass
+single inclined V/H 1.5,33.69,3,25.44,298.5,19.14,42.56,0.0641,0.07436,1.034,8.97,spacing changes inter-tether bow only; k per km fixed by fibre mass
+single inclined V/H 1.5,33.69,1,25.44,895.6,57.41,127.7,0.0641,0.07436,1.034,2.99,spacing changes inter-tether bow only; k per km fixed by fibre mass
+single inclined V/H 1.5,33.69,0.3,25.44,2985,191.4,425.6,0.0641,0.07436,1.034,0.897,spacing changes inter-tether bow only; k per km fixed by fibre mass
+V-pair V/H 1.5 (baseline),33.69,3,25.44,597.1,38.27,85.12,0.0641,0.07436,1.034,4.485,spacing changes inter-tether bow only; k per km fixed by fibre mass
+V-pair V/H 1.5 (baseline),33.69,1,25.44,1791,114.8,255.4,0.0641,0.07436,1.034,1.495,spacing changes inter-tether bow only; k per km fixed by fibre mass
+V-pair V/H 1.5 (baseline),33.69,0.3,25.44,5971,382.7,851.2,0.0641,0.07436,1.034,0.4485,spacing changes inter-tether bow only; k per km fixed by fibre mass
+V-pair 45 deg,45,3,25.44,551.2,41.2,40.98,0.07474,0.07436,1.034,4.167,spacing changes inter-tether bow only; k per km fixed by fibre mass
+V-pair 45 deg,45,1,25.44,1653,123.6,122.9,0.07474,0.07436,1.034,1.389,spacing changes inter-tether bow only; k per km fixed by fibre mass
+V-pair 45 deg,45,0.3,25.44,5512,412,409.8,0.07474,0.07436,1.034,0.4167,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, stress 0.6 GPa",45,3,25.44,1102,82.18,81.97,0.07455,0.07436,0.5172,2.089,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, stress 0.6 GPa",45,1,25.44,3307,246.5,245.9,0.07455,0.07436,0.5172,0.6962,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, stress 0.6 GPa",45,0.3,25.44,1.102e+04,821.8,819.7,0.07455,0.07436,0.5172,0.2089,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, stress 0.3 GPa",45,3,25.44,2205,164.1,163.9,0.07446,0.07436,0.2586,1.046,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, stress 0.3 GPa",45,1,25.44,6614,492.4,491.8,0.07446,0.07436,0.2586,0.3486,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, stress 0.3 GPa",45,0.3,25.44,2.205e+04,1641,1639,0.07446,0.07436,0.2586,0.1046,spacing changes inter-tether bow only; k per km fixed by fibre mass
+cross-braced truss (pairs + diagonals),45,3,25.44,771.6,41.2,40.98,0.05339,0.07436,1.034,4.167,spacing changes inter-tether bow only; k per km fixed by fibre mass
+cross-braced truss (pairs + diagonals),45,1,25.44,2315,123.6,122.9,0.05339,0.07436,1.034,1.389,spacing changes inter-tether bow only; k per km fixed by fibre mass
+cross-braced truss (pairs + diagonals),45,0.3,25.44,7716,412,409.8,0.05339,0.07436,1.034,0.4167,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, M55J carbon",45,3,25.44,863.8,152.8,152.6,0.1769,0.07436,0.2778,1.123,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, M55J carbon",45,1,25.44,2591,458.5,457.9,0.1769,0.07436,0.2778,0.3744,spacing changes inter-tether bow only; k per km fixed by fibre mass
+"V-pair 45 deg, M55J carbon",45,0.3,25.44,8638,1528,1526,0.1769,0.07436,0.2778,0.1123,spacing changes inter-tether bow only; k per km fixed by fibre mass

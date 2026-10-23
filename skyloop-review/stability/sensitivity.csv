@@ -1,0 +1,61 @@
+study,Mach,eps,level,T_GN,env_R_m,tension_kg_m,base,kind,D_min_m
+taut line T_req,1.5,0.03,quiet,0.07416,95.28,105.8,,,
+taut line T_req,1.5,0.03,typical,0.1103,97.22,157.4,,,
+taut line T_req,1.5,0.03,active,0.2272,103.1,324.2,,,
+taut line T_req,1.5,0.1,quiet,0.1719,100.4,245.3,,,
+taut line T_req,1.5,0.1,typical,0.214,102.5,305.5,,,
+taut line T_req,1.5,0.1,active,0.3469,108.6,495.1,,,
+taut line T_req,1.5,0.3,quiet,0.4978,115,710.5,,,
+taut line T_req,1.5,0.3,typical,0.5566,117.4,794.5,,,
+taut line T_req,1.5,0.3,active,0.7358,124.1,1050,,,
+taut line T_req,1.5,1,quiet,4.346,211.3,6204,,,
+taut line T_req,1.5,1,typical,4.594,215.8,6557,,,
+taut line T_req,1.5,1,active,5.384,229.2,7684,,,
+taut line T_req,2,0.03,quiet,0.1452,99.04,207.3,,,
+taut line T_req,2,0.03,typical,0.2235,102.9,319,,,
+taut line T_req,2,0.03,active,0.495,114.9,706.5,,,
+taut line T_req,2,0.1,quiet,0.3432,108.4,489.9,,,
+taut line T_req,2,0.1,typical,0.4404,112.6,628.6,,,
+taut line T_req,2,0.1,active,0.7639,125.1,1090,,,
+taut line T_req,2,0.3,quiet,1.069,135.5,1525,,,
+taut line T_req,2,0.3,typical,1.221,140.2,1742,,,
+taut line T_req,2,0.3,active,1.699,154,2425,,,
+taut line T_req,2,1,quiet,nan,475.4,nan,,,
+taut line T_req,2,1,typical,nan,475.4,nan,,,
+taut line T_req,2,1,active,nan,475.4,nan,,,
+taut line T_req,3,0.03,quiet,0.4071,111.2,581,,,
+taut line T_req,3,0.03,typical,0.6724,121.8,959.7,,,
+taut line T_req,3,0.03,active,1.723,154.6,2459,,,
+taut line T_req,3,0.1,quiet,1.03,134.2,1470,,,
+taut line T_req,3,0.1,typical,1.401,145.6,2000,,,
+taut line T_req,3,0.1,active,2.759,179.7,3938,,,
+taut line T_req,3,0.3,quiet,24.66,435.1,3.519e+04,,,
+taut line T_req,3,0.3,typical,nan,475.4,nan,,,
+taut line T_req,3,0.3,active,nan,475.4,nan,,,
+taut line T_req,3,1,quiet,nan,475.4,nan,,,
+taut line T_req,3,1,typical,nan,475.4,nan,,,
+taut line T_req,3,1,active,nan,475.4,nan,,,
+min bore,1.5,,,,104,,bare tethers,actuated guideway,42.23
+min bore,1.5,,,,110.9,,bare tethers,flying pod,61.29
+min bore,1.5,,,,99.86,,taut 0.1 GN,actuated guideway,14.74
+min bore,1.5,,,,102.3,,taut 0.1 GN,flying pod,21.97
+min bore,1.5,,,,107,,taut 0.3 GN,actuated guideway,7.009
+min bore,1.5,,,,107,,taut 0.3 GN,flying pod,7.009
+min bore,2,,,,104.6,,bare tethers,actuated guideway,44.04
+min bore,2,,,,112,,bare tethers,flying pod,64.36
+min bore,2,,,,101.4,,taut 0.1 GN,actuated guideway,19.41
+min bore,2,,,,104.7,,taut 0.1 GN,flying pod,29.52
+min bore,2,,,,107.9,,taut 0.3 GN,actuated guideway,10.1
+min bore,2,,,,108,,taut 0.3 GN,flying pod,10.2
+min bore,3,,,,105.7,,bare tethers,actuated guideway,47.29
+min bore,3,,,,113.8,,bare tethers,flying pod,69.97
+min bore,3,,,,103.9,,taut 0.1 GN,actuated guideway,27.4
+min bore,3,,,,110.1,,taut 0.1 GN,flying pod,45.9
+min bore,3,,,,109.6,,taut 0.3 GN,actuated guideway,16.09
+min bore,3,,,,111.5,,taut 0.3 GN,flying pod,22.46
+min bore,4,,,,107,,bare tethers,actuated guideway,51.16
+min bore,4,,,,115.5,,bare tethers,flying pod,75.07
+min bore,4,,,,105.8,,taut 0.1 GN,actuated guideway,33.5
+min bore,4,,,,112.6,,taut 0.1 GN,flying pod,53.62
+min bore,4,,,,111.5,,taut 0.3 GN,actuated guideway,22.6
+min bore,4,,,,115.4,,taut 0.3 GN,flying pod,35.91

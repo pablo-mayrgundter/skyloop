@@ -1,0 +1,131 @@
+lambda_km,amp_m,allow_m,case,Mach
+0.1414,0.0001972,0.004394,"bare tethers, T 10 MN",2
+0.2828,0.002447,0.006376,"bare tethers, T 10 MN",2
+0.5657,0.0214,0.006117,"bare tethers, T 10 MN",2
+1.131,0.132,0.03453,"bare tethers, T 10 MN",2
+2.263,0.7126,0.1705,"bare tethers, T 10 MN",2
+4.525,1.861,0.7183,"bare tethers, T 10 MN",2
+9.051,1.759,2.91,"bare tethers, T 10 MN",2
+18.1,2.071,11.68,"bare tethers, T 10 MN",2
+36.2,2.653,46.75,"bare tethers, T 10 MN",2
+72.41,3.453,187,"bare tethers, T 10 MN",2
+144.8,4.484,748.2,"bare tethers, T 10 MN",2
+289.6,6.564,2993,"bare tethers, T 10 MN",2
+579.3,10.4,1.197e+04,"bare tethers, T 10 MN",2
+0.1414,0.0001972,0.002405,"bare tethers, T 10 MN",4
+0.2828,0.002447,0.004394,"bare tethers, T 10 MN",4
+0.5657,0.0214,0.006376,"bare tethers, T 10 MN",4
+1.131,0.132,0.006117,"bare tethers, T 10 MN",4
+2.263,0.7126,0.03453,"bare tethers, T 10 MN",4
+4.525,1.861,0.1705,"bare tethers, T 10 MN",4
+9.051,1.759,0.7183,"bare tethers, T 10 MN",4
+18.1,2.071,2.91,"bare tethers, T 10 MN",4
+36.2,2.653,11.68,"bare tethers, T 10 MN",4
+72.41,3.453,46.75,"bare tethers, T 10 MN",4
+144.8,4.484,187,"bare tethers, T 10 MN",4
+289.6,6.564,748.2,"bare tethers, T 10 MN",4
+579.3,10.4,2993,"bare tethers, T 10 MN",4
+0.1414,7.654e-06,0.004394,taut line T 0.3 GN,2
+0.2828,7.487e-05,0.006376,taut line T 0.3 GN,2
+0.5657,0.0006455,0.006117,taut line T 0.3 GN,2
+1.131,0.004133,0.03453,taut line T 0.3 GN,2
+2.263,0.0249,0.1705,taut line T 0.3 GN,2
+4.525,0.1305,0.7183,taut line T 0.3 GN,2
+9.051,0.4715,2.91,taut line T 0.3 GN,2
+18.1,1.26,11.68,taut line T 0.3 GN,2
+36.2,2.286,46.75,taut line T 0.3 GN,2
+72.41,3.338,187,taut line T 0.3 GN,2
+144.8,4.47,748.2,taut line T 0.3 GN,2
+289.6,6.596,2993,taut line T 0.3 GN,2
+579.3,10.48,1.197e+04,taut line T 0.3 GN,2
+0.1414,7.654e-06,0.002405,taut line T 0.3 GN,4
+0.2828,7.487e-05,0.004394,taut line T 0.3 GN,4
+0.5657,0.0006455,0.006376,taut line T 0.3 GN,4
+1.131,0.004133,0.006117,taut line T 0.3 GN,4
+2.263,0.0249,0.03453,taut line T 0.3 GN,4
+4.525,0.1305,0.1705,taut line T 0.3 GN,4
+9.051,0.4715,0.7183,taut line T 0.3 GN,4
+18.1,1.26,2.91,taut line T 0.3 GN,4
+36.2,2.286,11.68,taut line T 0.3 GN,4
+72.41,3.338,46.75,taut line T 0.3 GN,4
+144.8,4.47,187,taut line T 0.3 GN,4
+289.6,6.596,748.2,taut line T 0.3 GN,4
+579.3,10.48,2993,taut line T 0.3 GN,4
+0.1414,2.3e-06,0.004394,taut line T 1 GN,2
+0.2828,2.309e-05,0.006376,taut line T 1 GN,2
+0.5657,0.000209,0.006117,taut line T 1 GN,2
+1.131,0.001421,0.03453,taut line T 1 GN,2
+2.263,0.008928,0.1705,taut line T 1 GN,2
+4.525,0.04914,0.7183,taut line T 1 GN,2
+9.051,0.2122,2.91,taut line T 1 GN,2
+18.1,0.7711,11.68,taut line T 1 GN,2
+36.2,1.858,46.75,taut line T 1 GN,2
+72.41,3.149,187,taut line T 1 GN,2
+144.8,4.432,748.2,taut line T 1 GN,2
+289.6,6.631,2993,taut line T 1 GN,2
+579.3,10.57,1.197e+04,taut line T 1 GN,2
+0.1414,2.3e-06,0.002405,taut line T 1 GN,4
+0.2828,2.309e-05,0.004394,taut line T 1 GN,4
+0.5657,0.000209,0.006376,taut line T 1 GN,4
+1.131,0.001421,0.006117,taut line T 1 GN,4
+2.263,0.008928,0.03453,taut line T 1 GN,4
+4.525,0.04914,0.1705,taut line T 1 GN,4
+9.051,0.2122,0.7183,taut line T 1 GN,4
+18.1,0.7711,2.91,taut line T 1 GN,4
+36.2,1.858,11.68,taut line T 1 GN,4
+72.41,3.149,46.75,taut line T 1 GN,4
+144.8,4.432,187,taut line T 1 GN,4
+289.6,6.631,748.2,taut line T 1 GN,4
+579.3,10.57,2993,taut line T 1 GN,4
+0.1414,1.755e-08,0.004394,keel EI 1e14 (h 150),2
+0.2828,6.971e-07,0.006376,keel EI 1e14 (h 150),2
+0.5657,2.412e-05,0.006117,keel EI 1e14 (h 150),2
+1.131,0.0005761,0.03453,keel EI 1e14 (h 150),2
+2.263,0.0138,0.1705,keel EI 1e14 (h 150),2
+4.525,0.259,0.7183,keel EI 1e14 (h 150),2
+9.051,1.189,2.91,keel EI 1e14 (h 150),2
+18.1,2.028,11.68,keel EI 1e14 (h 150),2
+36.2,2.672,46.75,keel EI 1e14 (h 150),2
+72.41,3.481,187,keel EI 1e14 (h 150),2
+144.8,4.518,748.2,keel EI 1e14 (h 150),2
+289.6,6.614,2993,keel EI 1e14 (h 150),2
+579.3,10.48,1.197e+04,keel EI 1e14 (h 150),2
+0.1414,1.755e-08,0.002405,keel EI 1e14 (h 150),4
+0.2828,6.971e-07,0.004394,keel EI 1e14 (h 150),4
+0.5657,2.412e-05,0.006376,keel EI 1e14 (h 150),4
+1.131,0.0005761,0.006117,keel EI 1e14 (h 150),4
+2.263,0.0138,0.03453,keel EI 1e14 (h 150),4
+4.525,0.259,0.1705,keel EI 1e14 (h 150),4
+9.051,1.189,0.7183,keel EI 1e14 (h 150),4
+18.1,2.028,2.91,keel EI 1e14 (h 150),4
+36.2,2.672,11.68,keel EI 1e14 (h 150),4
+72.41,3.481,46.75,keel EI 1e14 (h 150),4
+144.8,4.518,187,keel EI 1e14 (h 150),4
+289.6,6.614,748.2,keel EI 1e14 (h 150),4
+579.3,10.48,2993,keel EI 1e14 (h 150),4
+0.1414,0.000108,0.004394,"bare tethers, quiet spectrum",2
+0.2828,0.00134,0.006376,"bare tethers, quiet spectrum",2
+0.5657,0.01172,0.006117,"bare tethers, quiet spectrum",2
+1.131,0.0723,0.03453,"bare tethers, quiet spectrum",2
+2.263,0.3903,0.1705,"bare tethers, quiet spectrum",2
+4.525,1.019,0.7183,"bare tethers, quiet spectrum",2
+9.051,0.9632,2.91,"bare tethers, quiet spectrum",2
+18.1,1.134,11.68,"bare tethers, quiet spectrum",2
+36.2,1.453,46.75,"bare tethers, quiet spectrum",2
+72.41,1.891,187,"bare tethers, quiet spectrum",2
+144.8,2.456,748.2,"bare tethers, quiet spectrum",2
+289.6,3.595,2993,"bare tethers, quiet spectrum",2
+579.3,5.698,1.197e+04,"bare tethers, quiet spectrum",2
+0.1414,0.000441,0.004394,"bare tethers, active spectrum",2
+0.2828,0.005471,0.006376,"bare tethers, active spectrum",2
+0.5657,0.04786,0.006117,"bare tethers, active spectrum",2
+1.131,0.2952,0.03453,"bare tethers, active spectrum",2
+2.263,1.593,0.1705,"bare tethers, active spectrum",2
+4.525,4.161,0.7183,"bare tethers, active spectrum",2
+9.051,3.932,2.91,"bare tethers, active spectrum",2
+18.1,4.63,11.68,"bare tethers, active spectrum",2
+36.2,5.932,46.75,"bare tethers, active spectrum",2
+72.41,7.721,187,"bare tethers, active spectrum",2
+144.8,10.03,748.2,"bare tethers, active spectrum",2
+289.6,14.68,2993,"bare tethers, active spectrum",2
+579.3,23.26,1.197e+04,"bare tethers, active spectrum",2

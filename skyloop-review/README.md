@@ -28,6 +28,16 @@ The map spans tube pressure 0.1 Pa–1 kPa, Mach 1–8, pod size 2–30 t, bore,
 - **B/C ≥ 1 only for an elevated tube at ~$40 M/km with a certified moving block** (M1.4–4: 1.0–1.4 at low cost, ≤ 0.75 at base). Buried never pays (≤ 0.51).
 - **To open more:** active suspension or 5 mm/km alignment (M2 → 5–8), straighter right-of-way, moving-block certification and cheaper tubes. Nothing rescues the floating tube.
 
+## Floating-tube stability ([stability/stability.md](stability/stability.md))
+
+A spectral study of a tethered tube at 20 km, covering gusts, tethers, keel, taut line, active trim and big bores, at Mach 1–4.
+
+- **Steady loads on discrete tethers bind first, not gusts.** Wind changes add ~3 kN/m and the daily lift swing ~2 kN/m, 10–50× the km-scale gust loads. They need load-spreading bridles.
+- **Tethers are stiffness-capped.** Any fibre layout gives at most ~0.074 N/m per kg of fibre, and bracing does not help.
+- **Tension beats a keel.** With axial tension T, ride acceleration is V²f/T at every wavelength. 0.1–0.4 GN of CFRP rod (0.1–0.6 t/m) does what 0.3–4 t/m of keel does.
+- **A big bore helps only as stroke.** Its wall gives little EI, and it reaches 65 % self-lift only at 80 m. An actuated guideway needs a 40–50 m bore on bare tethers, or ~20 m with 0.1–0.3 GN of line tension. Flying pods cost 155–270 Wh/pax-km and lack propulsion.
+- **The best combination is only marginal.** Tension plus an actuated guideway in a 20 m bore reaches M1–4 at R ≈ 100–115 m and $105–170 M/km, but gives B/C 0.24–0.42 at base cost (0.9–1.45 at the low-cost end). Evacuation, breach, headway and line strain energy remain. The verdict is unchanged.
+
 ## System and economics ([system/system.md](system/system.md))
 
 - **The time advantage comes from boarding at ground level, not from Mach.** NYC–LAX door to door: 3.6 h at M2, 2.7 h at M4, 2.5 h at M6, against 5.1 h for BoomShield M2.2 and 7.3 h subsonic. Lifts to a 20 km station or docking aircraft at altitude are worse.
