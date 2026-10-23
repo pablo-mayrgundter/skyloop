@@ -4,7 +4,7 @@
 
 All three use BoomShield's demand and value-of-time model (US spine LAS–DEN–OMA–CHI–CLE–NYC, tubes adding LAX; $86/h; 7 %, 25 yr), so their B/C can be compared once the basis is labelled. **Gross** counts time saved; **net** also counts the fuel and CO₂ against the comparator (extra for aircraft, avoided for electric tubes).
 
-Infographics: [BoomShield](https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ) · [Skyloop](https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK) · [Hyperloop (our version)](https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB)
+Infographics: [Overview](https://claude.ai/artifact/E75ZQx2eW1CXWKeJgPk6gi) · [BoomShield](https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ) · [Skyloop](https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK) · [Hyperloop (our version)](https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB)
 
 ## Where each stands
 
