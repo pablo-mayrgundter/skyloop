@@ -38,6 +38,13 @@ A spectral study of a tethered tube at 20 km, covering gusts, tethers, keel, tau
 - **A big bore helps only as stroke.** Its wall gives little EI, and it reaches 65 % self-lift only at 80 m. An actuated guideway needs a 40–50 m bore on bare tethers, or ~20 m with 0.1–0.3 GN of line tension. Flying pods cost 155–270 Wh/pax-km and lack propulsion.
 - **The best combination is only marginal.** Tension plus an actuated guideway in a 20 m bore reaches M1–4 at R ≈ 100–115 m and $105–170 M/km, but gives B/C 0.24–0.42 at base cost (0.9–1.45 at the low-cost end). Evacuation, breach, headway and line strain energy remain. The verdict is unchanged.
 
+## Heating (wide bore, M3–8) ([heating/heating.md](heating/heating.md))
+
+- **The pod is not the problem.** A winged 3.5 t pod in free flight runs a 380–640 K skin and a 520–1,320 K nose and leading edge, radiating to the tube wall (best L/D, Mach 3–8). The heat sink is ~0.15 % of mass per NYC–LAX trip. Only cold Al/CFRP skins (6–50 % sink above M5) or sharp leading edges above ~0.2–0.7 kPa at M8 bind.
+- **Heat per trip is not speed-independent** (∝ V^0.3–1.3 at fixed q), but the sunk heat is.
+- **The tube gas binds.** Each pass heats it by ΔT/T = (γ−1)·D/(p·A_bore): ~1,300 K in a 20 m bore and ~80 K in an 80 m bore at 5.5 Pa. Gas-to-wall transfer caps traffic at 4–30 pods/h below 10 Pa, and pumping cannot cool it.
+- **Feasible band:** Mach 3–8 at ≥ ~15–160 Pa in a 40–80 m bore; best L/D (C_L ≈ 0.05–0.15) sits at ~25–500 Pa. 10⁻³ of ambient fails. Mach is nearly free on the heat side; pressure and bore are not.
+
 ## System and economics ([system/system.md](system/system.md))
 
 - **The time advantage comes from boarding at ground level, not from Mach.** NYC–LAX door to door: 3.6 h at M2, 2.7 h at M4, 2.5 h at M6, against 5.1 h for BoomShield M2.2 and 7.3 h subsonic. Lifts to a 20 km station or docking aircraft at altitude are worse.

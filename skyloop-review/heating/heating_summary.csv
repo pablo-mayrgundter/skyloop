@@ -1,0 +1,16 @@
+WS_Pa,D_bore,status_M_pass,status_M_marg,heat_status_M_pass,heat_status_M_marg,M3_p_pass,M3_floor,M3_ceiling,M3_p_marg,M3_heat_p_pass,M4_p_pass,M4_floor,M4_ceiling,M4_p_marg,M4_heat_p_pass,M6_p_pass,M6_floor,M6_ceiling,M6_p_marg,M6_heat_p_pass,M8_p_pass,M8_floor,M8_ceiling,M8_p_marg,M8_heat_p_pass
+50,20,none,none,3.0-4.3,3.0-8.0,none,span,,none,63.1-1e+03,none,span,,none,73.6-215,none,span,,none,none,none,span,,none,none
+50,40,none,none,3.0-7.9,3.0-8.0,none,span,,none,39.8-1e+03,none,span,,none,34.1-1e+03,none,span,,none,34.1-341,none,span,,none,none
+50,80,3.0-8.0,3.0-8.0,3.0-8.0,3.0-8.0,25.1-1e+03,throughput,(grid edge),10-1e+03,25.1-1e+03,21.5-1e+03,throughput,(grid edge),8.58-1e+03,21.5-1e+03,18.5-1e+03,throughput,(grid edge),6.31-1e+03,18.5-1e+03,15.8-736,throughput,le_T,4.64-1e+03,15.8-736
+100,20,none,none,3.0-6.1,3.0-8.0,none,span,,none,85.8-1e+03,none,span,,none,85.8-1e+03,none,span,,none,117-185,none,span,,none,none
+100,40,none,3.0-8.0,3.0-8.0,3.0-8.0,none,span,,25.1-1e+03,54.1-1e+03,none,span,,18.5-1e+03,54.1-1e+03,none,span,,13.6-1e+03,46.4-1e+03,none,span,,11.7-1e+03,39.8-631
+100,80,3.0-8.0,3.0-8.0,3.0-8.0,3.0-8.0,39.8-1e+03,throughput,(grid edge),15.8-1e+03,39.8-1e+03,34.1-1e+03,throughput,(grid edge),11.7-1e+03,34.1-1e+03,25.1-1e+03,throughput,(grid edge),8.58-1e+03,25.1-1e+03,21.5-736,throughput,le_T,6.31-1e+03,21.5-736
+150,20,none,none,3.0-7.4,3.0-8.0,none,span,,none,117-1e+03,none,span,,none,100-1e+03,none,span,,none,100-736,none,span,,none,none
+150,40,none,3.0-8.0,3.0-8.0,3.0-8.0,none,span,,29.3-1e+03,73.6-1e+03,none,span,,25.1-1e+03,63.1-1e+03,none,span,,18.5-1e+03,54.1-1e+03,none,span,,13.6-1e+03,46.4-736
+150,80,3.0-8.0,3.0-8.0,3.0-8.0,3.0-8.0,46.4-1e+03,throughput,(grid edge),18.5-1e+03,46.4-1e+03,39.8-1e+03,throughput,(grid edge),15.8-1e+03,39.8-1e+03,29.3-1e+03,throughput,(grid edge),10-1e+03,29.3-1e+03,25.1-736,throughput,le_T,7.36-1e+03,25.1-736
+300,20,none,3.0-8.0,3.0-8.0,3.0-8.0,none,span,,73.6-1e+03,185-1e+03,none,span,,54.1-1e+03,158-1e+03,none,span,,39.8-1e+03,136-1e+03,none,span,,34.1-1e+03,136-736
+300,40,3.0-8.0,3.0-8.0,3.0-8.0,3.0-8.0,117-1e+03,throughput,(grid edge),46.4-1e+03,117-1e+03,100-1e+03,throughput,(grid edge),34.1-1e+03,100-1e+03,73.6-1e+03,throughput,(grid edge),25.1-1e+03,73.6-1e+03,63.1-736,throughput,le_T,18.5-1e+03,63.1-736
+300,80,3.0-8.0,3.0-8.0,3.0-8.0,3.0-8.0,73.6-1e+03,throughput,(grid edge),39.8-1e+03,73.6-1e+03,54.1-1e+03,throughput,(grid edge),21.5-1e+03,54.1-1e+03,39.8-1e+03,throughput,(grid edge),13.6-1e+03,39.8-1e+03,34.1-736,throughput,le_T,10-1e+03,34.1-736
+500,20,none,3.0-8.0,3.0-8.0,3.0-8.0,none,span,,100-1e+03,251-1e+03,none,span,,73.6-1e+03,215-1e+03,none,span,,54.1-1e+03,185-1e+03,none,span,,39.8-1e+03,158-736
+500,40,3.0-8.0,3.0-8.0,3.0-8.0,3.0-8.0,158-1e+03,throughput,(grid edge),63.1-1e+03,158-1e+03,136-1e+03,throughput,(grid edge),46.4-1e+03,136-1e+03,100-1e+03,throughput,(grid edge),34.1-1e+03,100-1e+03,73.6-736,throughput,le_T,25.1-1e+03,73.6-736
+500,80,3.0-8.0,3.0-8.0,3.0-8.0,3.0-8.0,117-1e+03,lift,(grid edge),63.1-1e+03,100-1e+03,73.6-1e+03,lift,(grid edge),34.1-1e+03,73.6-1e+03,54.1-1e+03,throughput,(grid edge),18.5-1e+03,54.1-1e+03,39.8-736,throughput,le_T,13.6-1e+03,39.8-736
