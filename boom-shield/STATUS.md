@@ -11,7 +11,7 @@ Everything here is screening level: simulation only (no hardware, no flight test
 - **Buildability is open, not refuted.** Sealed 250 m modules can be launched and joined; two anchor rows (~2,700 tethers) hold them; the worst failure is a bay rising into the flight level ~100 s after losing its hold-down.
 - **Cost can reach ~$14/m² on paper, by owning the plants.** Vertical integration gives **$14.3/m²** ($10.7–21.4), a **$91 B** spine and **$7 B** of plants, against $106/m² bought at base prices.
 - **Gross, the shield can reach B/C ≈ 1 against Boomless Cruise, but only with every lever pulled.** Integrated cost alone gives **0.49 gross** (Concorde-class shield); add a light M2.0–2.2 aircraft, **0.79–0.87**; M3, 0.98; M2.2 with high induced demand, 1.47; a ~2050 opening, 1.06 (1.48 with the light M2.0 jet). All at 100 % capture.
-- **Net of fuel and CO₂ it does not pay.** In a 2025 year, net B/C against Boomless is **0.28** with the light M2.0 jet, 0.04 at M2.2 and 0.41 at M1.7 (integrated, 100 % capture). Life-cycle, it stays **≤ 0.75** for openings to 2050 (M2.0; 0.85 at M1.7) and reaches 1 only for a ~2060–65 opening (2075 at M2.2; base world). Against subsonic, gross B/C is 1.75–2.7, but **net is negative at every Mach, in every corridor and for every opening this century**.
+- **Net of fuel and CO₂ it does not pay.** In a 2025 year, net B/C against Boomless is **0.28** with the light M2.0 jet, 0.04 at M2.2 and 0.41 at M1.7 (integrated, 100 % capture). Life-cycle, it stays **≤ 0.75** for openings to 2050 (M2.0; 0.85 at M1.7) and reaches 1 only for a ~2060–65 opening (2075 at M2.2; base world). Against subsonic, gross B/C is 1.75–2.7, but **net is negative at every Mach, in every corridor and for every opening this century**. Cheap hydrogen does not change this: carbon-neutral e-SAF made from $1/kg H₂ costs ~$1.6/kg, and net vs subsonic turns positive only below **~$1.0/kg** (2050 opening) or ~$0.55 (2025 year) ([hydrogen](economics/hydrogen/hydrogen.md), scenario).
 - **Mach is the weakest lever; the sweet spot is M2.0–2.2** (M2.0 net of fuel). Ground time dominates the door-to-door trip, and above ~M2.3 the extra fuel costs more than the time it buys.
 - **The US spine is the best corridor in the world and the US the natural first mover.** Europe–Gulf reaches 55–65 % of it.
 - **Timing comes from events, not traffic.** Traffic growth lifts B/C ~3.5 % a year. Re-run the study ~2029–31 (FAA final rule, Boomless status, Overture's real economics); a pilot gate falls ~2038 and the earliest defensible spine opening is ~2055.
@@ -66,7 +66,7 @@ From [tethers-build-failure](operations/tethers-build-failure.md) unless noted.
 
 ([integration](economics/integration/integration.md)) Replaces bought materials with owned plants plus Wright's-law learning; every row carries the second tether row.
 
-**Make:** filled sheet and blown film, the module factory, UHMWPE fibre and rope (there is no market to buy 116 kt/yr from), launch bases, station kits. **Buy on long contracts:** PE resin (ethane-indexed offtake; an owned cracker has no edge), H₂ (< 4 % of capex), fluoropolymer, electronics, civil works, CaCO₃.
+**Make:** filled sheet and blown film, the module factory, UHMWPE fibre and rope (there is no market to buy 116 kt/yr from), launch bases, station kits. **Buy on long contracts:** PE resin (ethane-indexed offtake; an owned cracker has no edge), H₂ (~4 % of capex: 3.8–4.4 % integrated, [hydrogen](economics/hydrogen/hydrogen.md)), fluoropolymer, electronics, civil works, CaCO₃.
 
 | Spine M2.0 · cost case | $/m² | Net $M/km/yr | Spine $B | Gross B/C vs Boomless | Gross B/C vs subsonic |
 |---|---|---|---|---|---|
@@ -120,7 +120,7 @@ From [tethers-build-failure](operations/tethers-build-failure.md) unless noted.
 
 - Delay lifts B/C ~3.5 %/yr (the light jets exist only from the late 2030s). Net vs Boomless reaches 1 only for a **~2065 opening** (M2.0; 2075 at M2.2 or with the Concorde-class shield). At 30 % capture net reaches 1 only ~2100; base cost never passes.
 - **Capture is capped by airports:** at 100 % capture LAX would see ~2,000 supersonic movements a day by 2050, more than all its movements today. Realistic capture is nearer 30 % unless the aircraft grows.
-- **Triggers:** T1 FAA final rule and Boomless status (2027–28); T2 Overture's real fares and capture (2030–32); T3 a ≤ 50 t M2.0–2.2 airliner with a civil adaptive-cycle engine (2035–40); T4 film and fibre at scale, ≤ $20/m² (2028–31); T5 a km-scale structure held ≥ 1 yr at ≥ 18 km; T6 H₂ safety precedent; T7 SAF ≤ $1.5/kg or a stable carbon price (sets the sign of net B/C vs subsonic); T8 long-haul ≥ 1.3× 2025 (~2037).
+- **Triggers:** T1 FAA final rule and Boomless status (2027–28); T2 Overture's real fares and capture (2030–32); T3 a ≤ 50 t M2.0–2.2 airliner with a civil adaptive-cycle engine (2035–40); T4 film and fibre at scale, ≤ $20/m² (2028–31); T5 a km-scale structure held ≥ 1 yr at ≥ 18 km; T6 H₂ safety precedent (not price: green H₂ at $1–2/kg moves net shield cost only −1.5 to +1 %); T7 SAF ≤ $1.5/kg or a stable carbon price (sets the sign of net B/C vs subsonic; the hydrogen scenarios put the sign flip at carbon-neutral fuel **≤ ~$1.0/kg** for a 2050 opening, and a carbon price alone never flips it); T8 long-haul ≥ 1.3× 2025 (~2037).
 
 **Staged plan with gates** ([U] costs)
 
@@ -160,7 +160,7 @@ Net B/C now carries fuel and CO₂ (§§6–9). Extra CO₂ on the spine is 6 Mt
 3. **Cost per m².** $106 → $42 → $23 bought → **$14 integrated**. Only integration gets gross vs Boomless near 0.5 with a Concorde-class aircraft; supplier quotes and coupons must confirm it.
 4. **A light M2.0–2.2 aircraft.** ≤ 50 t with adaptive-cycle-class thrust nearly doubles gross B/C (0.49 → 0.79–0.87), more than doubles net at M2.0 (0.12 → 0.28) and thins the shield; it does not exist before the late 2030s.
 5. **Ground processing.** A 70 min walk-on overhead adds 30–40 % at every Mach, more than any Mach step, and enables day returns.
-6. **Fuel and CO₂ price.** It sets the gap between gross and net. With cheap fuel and no carbon price, net vs Boomless rises to 0.66 (2045 opening, Concorde-class shield); stringent prices drop it to 0.11, and keep net vs subsonic negative.
+6. **Fuel and CO₂ price.** It sets the gap between gross and net. With cheap fuel and no carbon price, net vs Boomless rises to 0.66 (2045 opening, Concorde-class shield); stringent prices drop it to 0.11, and keep net vs subsonic negative. **Cheap hydrogen** ([hydrogen](economics/hydrogen/hydrogen.md), scenarios beside the canonical values): e-SAF is **$2.76/kg at H₂ $2** and **$1.61/kg at H₂ $1** (DAC $250 / $100), so it beats the canonical $1.40/kg only at the low corner. At $1.61, net vs Boomless is 0.20 / 0.89 (M2.0, 2025 year / 2050 opening) and −0.09 / 0.69 (M2.2); net vs Boomless reaches 1 for a 2050 opening at **≤ $1.30/kg** (M2.0) or ≤ $1.10 (M2.2). The same cheap solar ($10–17/MWh) **erases the PV dual-use credit**, raising net shield cost **+30–36 %** (gross vs Boomless 0.87 → 0.65–0.67 at M2.2).
 
 ## 12. Next steps (ranked)
 
@@ -194,6 +194,7 @@ Net B/C now carries fuel and CO₂ (§§6–9). Extra CO₂ on the spine is 6 Mt
 | Make/buy, plants, learning, **two-row B/C** | [integration](economics/integration/integration.md) (`bcr.csv`, `results.csv`) |
 | Mach sweep, engines, ceiling | [highmach](network-maps/highmach/highmach.md) (`summary_by_mach.csv`) |
 | **Canonical gross and net B/C** (all Mach, cost cases, capture, life-cycle, corridors) | [net-reconciliation](economics/net/net-reconciliation.md) (`net_bc.py`, `canonical.csv`) |
+| Cheap H₂: shield H₂ cost, e-SAF, carbon-neutral net B/C, PV credit (scenarios) | [hydrogen](economics/hydrogen/hydrogen.md) (`hydrogen.py`, `breakeven.csv`) |
 | Traffic growth, opening year, triggers, staged plan | [growth](economics/growth/growth.md) (`roi_headline.csv`, `crossing_years.csv`) |
 | World corridor ranking; first mover | [global](network-maps/global/global.md) (`ranking.csv`) |
 
