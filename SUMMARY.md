@@ -39,10 +39,12 @@ Infographics: [BoomShield](https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ) ·
 | Energy, Wh/pax-km | ~1,400 (jet fuel) | 21–85 (electric) | 15 nonstop · 59 all-stop |
 | B/C vs subsonic, gross / net | 2025 yr: 2.69 / −4.41 · 2050 LC: 5.17 / −5.18 | base 0.36 / 0.47 · low 1.28 / 1.67 | base **0.37 / 0.50** · low 0.94 / 1.27 |
 | B/C vs Boomless, gross / net | 2025 yr: 0.87 / 0.04 · 2050 LC: 1.67 / 0.46 | base 0.28 / 0.61 · low 1.09 / 2.17 | base 0.29 / 0.64 · low 0.72 / 1.62 ² |
+| Net vs subsonic with carbon-neutral e-SAF at $1.61/kg (H₂ $1/kg) ³ | 2025 yr: −5.6 · 2050 LC: −3.2; > 0 only below ~$1.0/kg | base 0.44 · low 1.57 | base 0.47 · low 1.19 |
 | Pays below (net, 100 %) | does not pay net in any 2025-year cost case; net vs Boomless = 1 only for a ~2065 (M2.0) or ~2075 (M2.2) opening | **$40–55 M/km** all-in; ~$11–14 M at 30 % | **$52 M/km** vs subsonic ($34 M gross), $71 M vs Boomless; ~$10 M at 30 % |
 
 ¹ Integrated cost for the Concorde-class (55 m) shield, $14.3/m²; the thinner M2.2 shield costs less ($1.62 vs $2.22 M/km/yr, [net-reconciliation](boom-shield/economics/net/net-reconciliation.md)).
 ² Gross from `hyperloop/hl_econ.csv` (M4, 2050, 100 %); the README quotes net only.
+³ Scenario, not canonical: [hydrogen](boom-shield/economics/hydrogen/hydrogen.md). Avoided or extra fuel priced at e-SAF with no CO₂ charge; grid electricity unchanged.
 
 ## Cross-cutting lessons
 
@@ -50,6 +52,7 @@ Infographics: [BoomShield](https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ) ·
 - **Net of fuel flips sign between aircraft and electric tubes.** BoomShield loses most of its gross value to fuel and CO₂; vs subsonic, net is negative everywhere. The tubes avoid jet fuel, so net is **1.3–2.2× gross**. The fuel and carbon price sets the gap in both directions.
 - **Capture and moving-block certification dominate.** Every headline is 100 % capture; at 30 % divide by about three. For the tubes, brick-wall braking cuts B/C from ~0.5 to **0.04**. Only an uncertified **10 s moving block** carries the spine in one tube pair, and it puts 24 pods within stopping distance of a breach at M4.
 - **Cost per km is the gate.** BoomShield needs $106 → **$14/m²** by owning the plants. The tubes break even near **$40–55 M/km**, against $120 M/km priced with mountains. No vactrain has been built at that cost; Hyperloop One's own Bay Area estimate was $52–75 M/km.
+- **Cheap hydrogen does not change the ranking** ([hydrogen](boom-shield/economics/hydrogen/hydrogen.md)). Even at Terraform's $1/kg target, e-SAF costs **~$1.6/kg**, above the canonical fossil-plus-CO₂ **$1.40**. BoomShield needs carbon-neutral fuel at **≤ ~$1.0/kg** to beat subsonic net, and the same cheap solar erases its PV credit (+30–36 % net cost). Shield H₂ is only ~4 % of capex. The tubes' net > gross survives unless e-SAF falls below **$0.21–0.53/kg**, under the ~$0.45 floor; firmed solar power for 24 h service costs ~$56–66/MWh, a small gain.
 - **Physics moves the binding constraint, then cost takes over.** The compliant gap turns alignment from fatal into a non-issue on the ground; breach then caps Mach near M3–6. Nothing rescues the floating tube.
 
 ## What to watch, and gates
@@ -69,6 +72,6 @@ Infographics: [BoomShield](https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ) ·
 
 ## Links
 
-- BoomShield: [STATUS](boom-shield/STATUS.md), [README](boom-shield/README.md), [net reconciliation](boom-shield/economics/net/net-reconciliation.md)
+- BoomShield: [STATUS](boom-shield/STATUS.md), [README](boom-shield/README.md), [net reconciliation](boom-shield/economics/net/net-reconciliation.md), [cheap hydrogen](boom-shield/economics/hydrogen/hydrogen.md)
 - Skyloop re-review: [README](skyloop-review/README.md), [system](skyloop-review/system/system.md), [regime](skyloop-review/regime/regime.md), [hybrid](skyloop-review/hybrid/hybrid.md)
 - Hyperloop (our version): [README](hyperloop/README.md)

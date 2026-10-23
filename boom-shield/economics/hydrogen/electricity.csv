@@ -1,0 +1,10 @@
+scenario,case,daytime_solar_usd_mwh,overbuild,shift_share,storage_usd_per_mwh_shifted,firmed_24h_usd_mwh,grid_co2_charge_usd_mwh,all_in_usd_mwh
+H2 $2/kg (Terraform demo),low,17,1.2,0.5,39.96,41.32,,
+H2 $2/kg (Terraform demo),central,17,1.3,0.6,71.12,66.16,,
+H2 $2/kg (Terraform demo),high,17,1.6,0.7,114.8,109.7,,
+H2 $1/kg (Terraform/DOE target),low,10,1.2,0.5,39.96,32.54,,
+H2 $1/kg (Terraform/DOE target),central,10,1.3,0.6,71.12,56.49,,
+H2 $1/kg (Terraform/DOE target),high,10,1.6,0.7,114.8,97.62,,
+repo grid 2035 (sky_model),central,,,,,70,60.8,130.8
+repo grid 2050 (sky_model),central,,,,,70,39.01,109
+repo grid 2060 (sky_model),central,,,,,70,28.6,98.6

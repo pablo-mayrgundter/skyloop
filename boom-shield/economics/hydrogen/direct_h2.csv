@@ -1,0 +1,50 @@
+design,scenario,variant,h2_delivered_usd_kg,ground_pv_usd_mwh,h2_t_km,makeup_frac_yr,capex_musd_km,opex_musd_km_yr,dual_musd_km_yr,net_musd_km_yr,d_net_vs_baseline,h2_share_capex_baseline,h2_share_net_cost_baseline,gas_musd_km,gas_share_run_capex,makeup_10pct_musd_km_yr,om_musd_km_yr
+M1.7 Overture (62 t),Baseline (repo),H2 + PV (scenario),2.1,28,225.2,0.03,17.38,0.682,0.6714,1.502,0,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $2/kg (Terraform demo),H2 + PV (scenario),2.5,17,225.2,0.03,17.5,0.6849,0.1668,2.019,0.5175,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $2/kg (Terraform demo),H2 only,2.5,28,225.2,0.03,17.5,0.6849,0.6714,1.515,0.01288,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $2/kg (Terraform demo),"PV only, shield PV capex follows",2.1,17,225.2,0.03,17.38,0.682,0.1668,2.006,0.5046,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $2/kg (Terraform demo),"PV only, shield PV capex fixed",2.1,17,225.2,0.03,17.38,0.682,0.055,2.118,0.6164,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $2/kg (Terraform demo),"H2 only, delivery $0.3/kg",2.3,28,225.2,0.03,17.44,0.6835,0.6714,1.508,0.006441,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $2/kg (Terraform demo),"H2 only, delivery $1.5/kg",3.5,28,225.2,0.03,17.79,0.6921,0.6714,1.547,0.04509,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $1/kg (Terraform/DOE target),H2 + PV (scenario),1.5,10,225.2,0.03,17.2,0.6777,0.055,2.099,0.5971,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $1/kg (Terraform/DOE target),H2 only,1.5,28,225.2,0.03,17.2,0.6777,0.6714,1.483,-0.01932,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $1/kg (Terraform/DOE target),"PV only, shield PV capex follows",2.1,10,225.2,0.03,17.38,0.682,0.055,2.118,0.6164,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $1/kg (Terraform/DOE target),"PV only, shield PV capex fixed",2.1,10,225.2,0.03,17.38,0.682,0.055,2.118,0.6164,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $1/kg (Terraform/DOE target),"H2 only, delivery $0.3/kg",1.3,28,225.2,0.03,17.14,0.6763,0.6714,1.476,-0.02577,0.03527,0.04503,,,,
+M1.7 Overture (62 t),H2 $1/kg (Terraform/DOE target),"H2 only, delivery $1.5/kg",2.5,28,225.2,0.03,17.5,0.6849,0.6714,1.515,0.01288,0.03527,0.04503,,,,
+M2.0 adaptive (49 t),Baseline (repo),H2 + PV (scenario),2.1,28,244.2,0.03,17.33,0.6755,0.6252,1.537,0,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $2/kg (Terraform demo),H2 + PV (scenario),2.5,17,244.2,0.03,17.45,0.6786,0.1578,2.018,0.4813,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $2/kg (Terraform demo),H2 only,2.5,28,244.2,0.03,17.45,0.6786,0.6252,1.551,0.01397,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $2/kg (Terraform demo),"PV only, shield PV capex follows",2.1,17,244.2,0.03,17.33,0.6755,0.1578,2.004,0.4673,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $2/kg (Terraform demo),"PV only, shield PV capex fixed",2.1,17,244.2,0.03,17.33,0.6755,0.055,2.107,0.5702,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $2/kg (Terraform demo),"H2 only, delivery $0.3/kg",2.3,28,244.2,0.03,17.39,0.6771,0.6252,1.544,0.006984,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $2/kg (Terraform demo),"H2 only, delivery $1.5/kg",3.5,28,244.2,0.03,17.77,0.6864,0.6252,1.586,0.04889,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $1/kg (Terraform/DOE target),H2 + PV (scenario),1.5,10,244.2,0.03,17.14,0.6709,0.055,2.086,0.5492,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $1/kg (Terraform/DOE target),H2 only,1.5,28,244.2,0.03,17.14,0.6709,0.6252,1.516,-0.02095,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $1/kg (Terraform/DOE target),"PV only, shield PV capex follows",2.1,10,244.2,0.03,17.33,0.6755,0.055,2.107,0.5702,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $1/kg (Terraform/DOE target),"PV only, shield PV capex fixed",2.1,10,244.2,0.03,17.33,0.6755,0.055,2.107,0.5702,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $1/kg (Terraform/DOE target),"H2 only, delivery $0.3/kg",1.3,28,244.2,0.03,17.07,0.6693,0.6252,1.509,-0.02794,0.03835,0.04771,,,,
+M2.0 adaptive (49 t),H2 $1/kg (Terraform/DOE target),"H2 only, delivery $1.5/kg",2.5,28,244.2,0.03,17.45,0.6786,0.6252,1.551,0.01397,0.03835,0.04771,,,,
+M2.2 design A (50 t),Baseline (repo),H2 + PV (scenario),2.1,28,292.7,0.03,18.07,0.6971,0.6233,1.624,0,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $2/kg (Terraform demo),H2 + PV (scenario),2.5,17,292.7,0.03,18.22,0.7009,0.157,2.107,0.483,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $2/kg (Terraform demo),H2 only,2.5,28,292.7,0.03,18.22,0.7009,0.6233,1.641,0.01674,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $2/kg (Terraform demo),"PV only, shield PV capex follows",2.1,17,292.7,0.03,18.07,0.6971,0.157,2.09,0.4663,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $2/kg (Terraform demo),"PV only, shield PV capex fixed",2.1,17,292.7,0.03,18.07,0.6971,0.055,2.192,0.5683,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $2/kg (Terraform demo),"H2 only, delivery $0.3/kg",2.3,28,292.7,0.03,18.14,0.699,0.6233,1.632,0.008372,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $2/kg (Terraform demo),"H2 only, delivery $1.5/kg",3.5,28,292.7,0.03,18.6,0.7102,0.6233,1.683,0.0586,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $1/kg (Terraform/DOE target),H2 + PV (scenario),1.5,10,292.7,0.03,17.84,0.6916,0.055,2.167,0.5432,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $1/kg (Terraform/DOE target),H2 only,1.5,28,292.7,0.03,17.84,0.6916,0.6233,1.599,-0.02511,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $1/kg (Terraform/DOE target),"PV only, shield PV capex follows",2.1,10,292.7,0.03,18.07,0.6971,0.055,2.192,0.5683,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $1/kg (Terraform/DOE target),"PV only, shield PV capex fixed",2.1,10,292.7,0.03,18.07,0.6971,0.055,2.192,0.5683,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $1/kg (Terraform/DOE target),"H2 only, delivery $0.3/kg",1.3,28,292.7,0.03,17.76,0.6897,0.6233,1.591,-0.03349,0.04409,0.05412,,,,
+M2.2 design A (50 t),H2 $1/kg (Terraform/DOE target),"H2 only, delivery $1.5/kg",2.5,28,292.7,0.03,18.22,0.7009,0.6233,1.641,0.01674,0.04409,0.05412,,,,
+"M2.0 (Concorde-class, psf baseline)",cost_model base ($4 + $1.5 delivered),share check,5.5,,655.2,,157,,,,,0.04131,,,,,
+Skyloop envelope R 43 m (low),Baseline (repo) (cost_model base $5.5 delivered),gas fill,5.5,,39.54,,19.31,,,,,,,0.2876,0.0149,0.02175,0.2896
+Skyloop envelope R 43 m (low),H2 $2/kg (Terraform demo),gas fill,2.5,,39.54,,19.31,,,,,,,0.1307,0.006771,0.009885,0.2896
+Skyloop envelope R 43 m (low),H2 $1/kg (Terraform/DOE target),gas fill,1.5,,39.54,,19.31,,,,,,,0.07844,0.004062,0.005931,0.2896
+Skyloop envelope R 82 m (base),Baseline (repo) (cost_model base $5.5 delivered),gas fill,5.5,,143.8,,66.3,,,,,,,1.285,0.01938,0.07909,1.657
+Skyloop envelope R 82 m (base),H2 $2/kg (Terraform demo),gas fill,2.5,,143.8,,66.3,,,,,,,0.5842,0.008811,0.03595,1.657
+Skyloop envelope R 82 m (base),H2 $1/kg (Terraform/DOE target),gas fill,1.5,,143.8,,66.3,,,,,,,0.3505,0.005287,0.02157,1.657
+Skyloop envelope R 88 m (high),Baseline (repo) (cost_model base $5.5 delivered),gas fill,5.5,,165.6,,187.3,,,,,,,1.844,0.009847,0.09108,7.493
+Skyloop envelope R 88 m (high),H2 $2/kg (Terraform demo),gas fill,2.5,,165.6,,187.3,,,,,,,0.8384,0.004476,0.0414,7.493
+Skyloop envelope R 88 m (high),H2 $1/kg (Terraform/DOE target),gas fill,1.5,,165.6,,187.3,,,,,,,0.503,0.002686,0.02484,7.493

@@ -1,0 +1,433 @@
+concept,case,vs,capture,cost,opening,bc_gross,bc_net,pv_ben,pv_cost,pv_energy,scenario,fuel_convention,electricity,fuel_all_in_usd_kg
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.6494,143.3,287.1,43.08,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.1831,143.3,1018,43.08,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.672,367.9,287.1,112.1,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.4715,367.9,1018,112.1,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.6553,84.75,284.1,101.4,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.1839,84.75,1012,101.4,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,2.166,279.9,284.1,335.3,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.6078,279.9,1012,335.3,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.5086,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.2001,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.357,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.5341,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.4958,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.1951,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,1.653,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.6502,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.4981,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.1961,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.267,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.4986,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.4896,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.1927,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.617,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.6367,,,,Baseline (repo),canonical (growth central path),repo grid $70/MWh + CO2,
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.8225,143.3,287.1,92.78,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.2319,143.3,1018,92.78,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,2.127,367.9,287.1,242.7,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.5996,367.9,1018,242.7,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.989,84.75,284.1,196.2,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.2776,84.75,1012,196.2,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,3.27,279.9,284.1,649.2,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.9178,279.9,1012,649.2,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.6407,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.2521,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.716,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.6753,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.742,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.292,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,2.473,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.9732,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.6289,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.2476,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.606,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.6322,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.734,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.2889,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,2.426,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.955,,,,Baseline (repo),e-SAF low,repo grid $70/MWh + CO2,3.665
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,1.065,143.3,287.1,162.4,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.3002,143.3,1018,162.4,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,2.76,367.9,287.1,424.5,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.7783,367.9,1018,424.5,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,1.456,84.75,284.1,329,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.4087,84.75,1012,329,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,4.816,279.9,284.1,1088,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,1.352,279.9,1012,1088,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.8256,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.3248,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,2.216,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.872,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,1.087,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.4276,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,3.623,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,1.425,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.8121,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.3197,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,2.079,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.8184,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,1.076,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.4236,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,3.557,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,1.4,,,,Baseline (repo),e-SAF central,repo grid $70/MWh + CO2,6.015
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,1.528,143.3,287.1,295.2,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.4307,143.3,1018,295.2,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,3.97,367.9,287.1,771.9,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,1.119,367.9,1018,771.9,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,2.349,84.75,284.1,582.5,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.6592,84.75,1012,582.5,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,7.769,279.9,284.1,1927,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,2.18,279.9,1012,1927,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,1.179,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.4638,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,3.171,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,1.248,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,1.745,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.6867,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,5.817,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,2.289,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,1.162,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.4574,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,2.982,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,1.174,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,1.73,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.6809,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,5.718,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,2.251,,,,Baseline (repo),e-SAF high,repo grid $70/MWh + CO2,10.5
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.6042,143.3,287.1,30.11,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.1703,143.3,1018,30.11,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.556,367.9,287.1,78.85,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.4388,367.9,1018,78.85,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.5681,84.75,284.1,76.64,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.1594,84.75,1012,76.64,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,1.878,279.9,284.1,253.6,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.527,279.9,1012,253.6,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.4741,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.1865,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.266,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.498,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.4315,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.1698,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,1.438,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.5659,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.4639,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.1826,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.18,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.4645,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.4258,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.1676,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.407,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.5538,,,,H2 $2/kg (Terraform demo),e-SAF low,repo grid $70/MWh + CO2,1.549
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.729,143.3,287.1,65.94,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.2055,143.3,1018,65.94,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.883,367.9,287.1,172.5,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.5307,367.9,1018,172.5,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.8088,84.75,284.1,145,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.227,84.75,1012,145,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,2.674,279.9,284.1,479.8,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.7505,279.9,1012,479.8,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.5693,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.224,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.523,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.5994,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.6091,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.2396,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,2.03,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.7988,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.5582,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.2198,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.424,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.5604,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.602,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.237,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.989,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.7832,,,,H2 $2/kg (Terraform demo),e-SAF central,repo grid $70/MWh + CO2,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.9501,143.3,287.1,129.4,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.2679,143.3,1018,129.4,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,2.461,367.9,287.1,338.4,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.6937,367.9,1018,338.4,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,1.235,84.75,284.1,266.1,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.3466,84.75,1012,266.1,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,4.085,279.9,284.1,880.5,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,1.146,279.9,1012,880.5,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.738,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.2904,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.98,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.7789,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.9236,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.3634,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,3.079,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,1.211,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.7254,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.2856,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.855,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.7303,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.9142,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.3599,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,3.022,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,1.19,,,,H2 $2/kg (Terraform demo),e-SAF high,repo grid $70/MWh + CO2,4.903
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.7616,143.3,287.1,75.31,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.2147,143.3,1018,75.31,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.968,367.9,287.1,197,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.5548,367.9,1018,197,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.8315,84.75,284.1,151.5,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.2334,84.75,1012,151.5,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,2.749,279.9,284.1,501.1,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.7716,279.9,1012,501.1,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.5794,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.2279,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.55,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.61,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.6159,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.2423,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,2.053,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.8077,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.575,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.2264,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.467,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.5775,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.6134,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.2415,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,2.027,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.7979,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar low $41/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.7483,143.3,287.1,71.48,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.211,143.3,1018,71.48,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.933,367.9,287.1,187.1,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.545,367.9,1018,187.1,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.8222,84.75,284.1,148.8,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.2308,84.75,1012,148.8,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,2.719,279.9,284.1,492.4,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.7629,279.9,1012,492.4,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.5753,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.2263,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.539,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.6057,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.6131,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.2412,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,2.044,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.8041,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.5681,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.2237,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.449,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.5706,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.6087,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.2396,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,2.012,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.7919,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar central $66/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.7249,143.3,287.1,64.76,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.2044,143.3,1018,64.76,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.873,367.9,287.1,169.6,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.5279,367.9,1018,169.6,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.8059,84.75,284.1,144.2,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.2262,84.75,1012,144.2,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,2.665,279.9,284.1,477.1,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.7478,279.9,1012,477.1,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.5681,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.2235,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.52,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.5981,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.6082,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.2393,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,2.027,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.7976,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.5561,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.2189,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.419,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.5584,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.6006,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.2364,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.985,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.7813,,,,H2 $2/kg (Terraform demo),e-SAF central,firmed clean solar high $110/MWh,2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.7747,143.3,287.1,79.07,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.2184,143.3,1018,79.07,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,2.002,367.9,287.1,206.7,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.5644,367.9,1018,206.7,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.8406,84.75,284.1,154.1,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.2359,84.75,1012,154.1,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,2.779,279.9,284.1,509.7,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.78,279.9,1012,509.7,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.5834,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.2295,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.561,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.6143,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.6187,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.2434,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,2.062,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.8113,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.5817,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.229,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.484,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.5842,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.6179,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.2432,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,2.042,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.8039,,,,H2 $2/kg (Terraform demo),e-SAF central,"daytime solar $17/MWh (bound, not 24 h)",2.759
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.5324,143.3,287.1,9.499,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.1501,143.3,1018,9.499,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.369,367.9,287.1,24.97,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.3859,367.9,1018,24.97,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.4297,84.75,284.1,37.32,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.1206,84.75,1012,37.32,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,1.42,279.9,284.1,123.5,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.3985,279.9,1012,123.5,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.4193,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.165,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.118,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.4398,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.3294,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.1296,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,1.098,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.4319,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.4096,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.1612,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.04,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.4094,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.3244,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.1277,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.072,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.4218,,,,H2 $1/kg (Terraform/DOE target),e-SAF low,repo grid $70/MWh + CO2,0.8528
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.6105,143.3,287.1,31.93,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.1721,143.3,1018,31.93,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.573,367.9,287.1,83.59,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.4434,367.9,1018,83.59,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.5803,84.75,284.1,80.11,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.1629,84.75,1012,80.11,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,1.918,279.9,284.1,265.1,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.5383,279.9,1012,265.1,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.4789,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.1884,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.279,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.5032,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.4405,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.1733,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,1.468,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.5777,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.4687,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.1845,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.192,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.4694,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.4347,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.1711,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.436,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.5654,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,repo grid $70/MWh + CO2,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.7918,143.3,287.1,83.97,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.2232,143.3,1018,83.97,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,2.047,367.9,287.1,219.6,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.577,367.9,1018,219.6,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.9299,84.75,284.1,179.4,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.261,84.75,1012,179.4,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,3.075,279.9,284.1,593.6,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.8629,279.9,1012,593.6,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.6173,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.2429,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.653,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.6504,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.6984,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.2748,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,2.328,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.9159,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.6057,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.2384,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.546,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.6087,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.6907,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.2719,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,2.283,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.8986,,,,H2 $1/kg (Terraform/DOE target),e-SAF high,repo grid $70/MWh + CO2,3.368
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.6479,143.3,287.1,42.65,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.1827,143.3,1018,42.65,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.67,367.9,287.1,111.6,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.4709,367.9,1018,111.6,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.6063,84.75,284.1,87.5,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.1702,84.75,1012,87.5,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,2.004,279.9,284.1,289.5,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.5625,279.9,1012,289.5,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.4904,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.193,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.31,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.5154,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.4483,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.1764,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,1.494,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.588,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.4879,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.1921,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.242,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.4889,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.4477,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.1762,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.479,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.5823,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar low $33/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.635,143.3,287.1,38.95,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.179,143.3,1018,38.95,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.637,367.9,287.1,102,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.4615,367.9,1018,102,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.5974,84.75,284.1,84.95,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.1676,84.75,1012,84.95,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,1.975,279.9,284.1,281.1,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.5542,279.9,1012,281.1,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.4865,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.1914,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.299,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.5112,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.4456,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.1753,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,1.485,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.5844,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.4812,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.1894,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.225,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.4822,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.4432,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.1745,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.464,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.5765,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar central $56/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.6129,143.3,287.1,32.6,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.1728,143.3,1018,32.6,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.58,367.9,287.1,85.54,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.4453,367.9,1018,85.54,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.5819,84.75,284.1,80.57,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.1633,84.75,1012,80.57,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,1.924,279.9,284.1,266.6,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.5399,279.9,1012,266.6,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.4797,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.1887,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.281,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.504,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.441,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.1735,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,1.47,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.5783,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.4699,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.185,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.196,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.4708,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.4355,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.1715,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.439,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.5665,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,firmed clean solar high $98/MWh,1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,low,2050,0.4993,0.66,143.3,287.1,46.13,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,0.3,base,2050,0.1408,0.1861,143.3,1018,46.13,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,low,2050,1.282,1.702,367.9,287.1,120.6,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Skyloop floating tube,spine+LAX all-stop M4,sub,1,base,2050,0.3613,0.4798,367.9,1018,120.6,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,low,2050,0.2983,0.6148,84.75,284.1,89.9,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,0.3,base,2050,0.08372,0.1725,84.75,1012,89.9,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,low,2050,0.9852,2.032,279.9,284.1,297.4,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Skyloop floating tube,spine+LAX all-stop M4,bl,1,base,2050,0.2765,0.5703,279.9,1012,297.4,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,low,2050,0.3691,0.4941,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,0.3,base,2050,0.1452,0.1944,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,low,2050,0.9816,1.32,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M3,sub,1,base,2050,0.3862,0.5193,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,low,2050,0.2157,0.4509,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,0.3,base,2050,0.08489,0.1774,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,low,2050,0.7191,1.503,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M3,bl,1,base,2050,0.2829,0.5913,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,low,2050,0.3713,0.4941,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,0.3,base,2050,0.1462,0.1945,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,low,2050,0.9408,1.258,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M4,sub,1,base,2050,0.3704,0.4952,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,low,2050,0.2193,0.4519,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,0.3,base,2050,0.08634,0.1779,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,low,2050,0.724,1.493,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61
+Hyperloop elevated,spine+LAX all-stop M4,bl,1,base,2050,0.285,0.5878,,,,H2 $1/kg (Terraform/DOE target),e-SAF central,"daytime solar $10/MWh (bound, not 24 h)",1.61

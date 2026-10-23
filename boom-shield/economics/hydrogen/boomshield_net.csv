@@ -1,0 +1,961 @@
+design,vs,capture,scenario,cost_variant,fuel_convention,fuel_all_in_usd_kg,cost_musd_km_yr,basis,bc_gross,bc_net
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.502,2025 year,0.1506,0.123
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2035 opening,0.1874,0.1561
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2045 opening,0.2571,0.2191
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2050 opening,0.2953,0.2545
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,2025 year,0.1506,0.07826
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2035 opening,0.1874,0.1252
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2045 opening,0.2571,0.1856
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2050 opening,0.2953,0.2201
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,2025 year,0.1506,0.03188
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2035 opening,0.1874,0.08529
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2045 opening,0.2571,0.1398
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2050 opening,0.2953,0.172
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,2025 year,0.1506,-0.05669
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2035 opening,0.1874,0.00912
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2045 opening,0.2571,0.05224
+M1.7 Overture (62 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2050 opening,0.2953,0.07993
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.515,2025 year,0.1493,0.1219
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2035 opening,0.1859,0.1548
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2045 opening,0.2572,0.2192
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2050 opening,0.2955,0.2547
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,2025 year,0.1493,0.119
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2035 opening,0.1859,0.1598
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2045 opening,0.2572,0.227
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2050 opening,0.2955,0.2637
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,2025 year,0.1493,0.09534
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2035 opening,0.1859,0.1394
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2045 opening,0.2572,0.2034
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2050 opening,0.2955,0.2388
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,2025 year,0.1493,0.05338
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2035 opening,0.1859,0.1033
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2045 opening,0.2572,0.1615
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2050 opening,0.2955,0.1949
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.019,2025 year,0.112,0.09146
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2035 opening,0.1497,0.1247
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2045 opening,0.2238,0.1907
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2050 opening,0.2703,0.233
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,2025 year,0.112,0.08928
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2035 opening,0.1497,0.1287
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2045 opening,0.2238,0.1975
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2050 opening,0.2703,0.2412
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,2025 year,0.112,0.07151
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2035 opening,0.1497,0.1123
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2045 opening,0.2238,0.1769
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2050 opening,0.2703,0.2185
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,2025 year,0.112,0.04004
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2035 opening,0.1497,0.08322
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2045 opening,0.2238,0.1405
+M1.7 Overture (62 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2050 opening,0.2703,0.1783
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.483,2025 year,0.1526,0.1246
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2035 opening,0.1897,0.158
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2045 opening,0.2569,0.2189
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2050 opening,0.2951,0.2543
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,2025 year,0.1526,0.1355
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2035 opening,0.1897,0.175
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2045 opening,0.2569,0.2402
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2050 opening,0.2951,0.2776
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,2025 year,0.1526,0.1204
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2035 opening,0.1897,0.162
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2045 opening,0.2569,0.2255
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2050 opening,0.2951,0.2621
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,2025 year,0.1526,0.08523
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2035 opening,0.1897,0.1318
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2045 opening,0.2569,0.1912
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2050 opening,0.2951,0.2261
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.099,2025 year,0.1078,0.08799
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2035 opening,0.1458,0.1214
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2045 opening,0.2179,0.1857
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2050 opening,0.2632,0.2269
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,2025 year,0.1078,0.09572
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2035 opening,0.1458,0.1345
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2045 opening,0.2179,0.2038
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2050 opening,0.2632,0.2476
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,2025 year,0.1078,0.08503
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2035 opening,0.1458,0.1245
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2045 opening,0.2179,0.1913
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2050 opening,0.2632,0.2338
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,2025 year,0.1078,0.0602
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2035 opening,0.1458,0.1013
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2045 opening,0.2179,0.1622
+M1.7 Overture (62 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2050 opening,0.2632,0.2016
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.502,2025 year,0.502,0.4098
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2035 opening,0.6246,0.5203
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2045 opening,0.8569,0.7302
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2050 opening,0.9836,0.8479
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,2025 year,0.502,0.2608
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2035 opening,0.6246,0.4173
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2045 opening,0.8569,0.6186
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2050 opening,0.9836,0.7332
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,2025 year,0.502,0.1061
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2035 opening,0.6246,0.2843
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2045 opening,0.8569,0.4658
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2050 opening,0.9836,0.5727
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,2025 year,0.502,-0.1892
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2035 opening,0.6246,0.0304
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2045 opening,0.8569,0.1741
+M1.7 Overture (62 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2050 opening,0.9836,0.2661
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.515,2025 year,0.4977,0.4063
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2035 opening,0.6196,0.5161
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2045 opening,0.8573,0.7306
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2050 opening,0.9841,0.8483
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,2025 year,0.4977,0.3966
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2035 opening,0.6196,0.5327
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2045 opening,0.8573,0.7566
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2050 opening,0.9841,0.8782
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,2025 year,0.4977,0.3177
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2035 opening,0.6196,0.4648
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2045 opening,0.8573,0.6779
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2050 opening,0.9841,0.7955
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,2025 year,0.4977,0.1778
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2035 opening,0.6196,0.3445
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2045 opening,0.8573,0.5384
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2050 opening,0.9841,0.649
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.019,2025 year,0.3733,0.3048
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2035 opening,0.499,0.4157
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2045 opening,0.7459,0.6357
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2050 opening,0.9004,0.7761
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,2025 year,0.3733,0.2975
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2035 opening,0.499,0.429
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2045 opening,0.7459,0.6583
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2050 opening,0.9004,0.8035
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,2025 year,0.3733,0.2383
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2035 opening,0.499,0.3743
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2045 opening,0.7459,0.5898
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2050 opening,0.9004,0.7278
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,2025 year,0.3733,0.1334
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2035 opening,0.499,0.2774
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2045 opening,0.7459,0.4685
+M1.7 Overture (62 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2050 opening,0.9004,0.5938
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.483,2025 year,0.5085,0.4152
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2035 opening,0.6323,0.5267
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2045 opening,0.8562,0.7296
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2050 opening,0.9829,0.8472
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,2025 year,0.5085,0.4517
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2035 opening,0.6323,0.5835
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2045 opening,0.8562,0.8008
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2050 opening,0.9829,0.9246
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,2025 year,0.5085,0.4012
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2035 opening,0.6323,0.5401
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2045 opening,0.8562,0.7516
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2050 opening,0.9829,0.8729
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,2025 year,0.5085,0.284
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2035 opening,0.6323,0.4394
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2045 opening,0.8562,0.6374
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2050 opening,0.9829,0.7529
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.099,2025 year,0.3592,0.2932
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2035 opening,0.4859,0.4047
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2045 opening,0.7263,0.6189
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2050 opening,0.8767,0.7557
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,2025 year,0.3592,0.319
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2035 opening,0.4859,0.4484
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2045 opening,0.7263,0.6793
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2050 opening,0.8767,0.8248
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,2025 year,0.3592,0.2834
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2035 opening,0.4859,0.415
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2045 opening,0.7263,0.6376
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2050 opening,0.8767,0.7786
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,2025 year,0.3592,0.2006
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2035 opening,0.4859,0.3377
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2045 opening,0.7263,0.5407
+M1.7 Overture (62 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2050 opening,0.8767,0.6716
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.502,2025 year,0.7051,-1.057
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2035 opening,0.8771,-1.118
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2045 opening,1.203,-1.218
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2050 opening,1.382,-1.215
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,2025 year,0.7051,-3.907
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2035 opening,0.8771,-3.088
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2045 opening,1.203,-3.352
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2050 opening,1.382,-3.408
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,2025 year,0.7051,-6.864
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2035 opening,0.8771,-5.63
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2045 opening,1.203,-6.273
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2050 opening,1.382,-6.479
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,2025 year,0.7051,-12.51
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2035 opening,0.8771,-10.48
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2045 opening,1.203,-11.85
+M1.7 Overture (62 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2050 opening,1.382,-12.34
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.515,2025 year,0.6991,-1.048
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2035 opening,0.8701,-1.109
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2045 opening,1.204,-1.219
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2050 opening,1.383,-1.215
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,2025 year,0.6991,-1.233
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2035 opening,0.8701,-0.792
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2045 opening,1.204,-0.7222
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2050 opening,1.383,-0.6423
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,2025 year,0.6991,-2.743
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2035 opening,0.8701,-2.091
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2045 opening,1.204,-2.227
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2050 opening,1.383,-2.225
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,2025 year,0.6991,-5.418
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2035 opening,0.8701,-4.391
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2045 opening,1.204,-4.893
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2050 opening,1.383,-5.027
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.019,2025 year,0.5244,-0.7862
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2035 opening,0.7007,-0.8931
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2045 opening,1.047,-1.06
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2050 opening,1.265,-1.112
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,2025 year,0.5244,-0.9251
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2035 opening,0.7007,-0.6378
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2045 opening,1.047,-0.6283
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2050 opening,1.265,-0.5876
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,2025 year,0.5244,-2.058
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2035 opening,0.7007,-1.684
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2045 opening,1.047,-1.938
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2050 opening,1.265,-2.035
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,2025 year,0.5244,-4.064
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2035 opening,0.7007,-3.536
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2045 opening,1.047,-4.257
+M1.7 Overture (62 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2050 opening,1.265,-4.6
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.483,2025 year,0.7142,-1.071
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2035 opening,0.8879,-1.132
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2045 opening,1.202,-1.217
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2050 opening,1.381,-1.214
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,2025 year,0.7142,-0.3728
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2035 opening,0.8879,-0.04592
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2045 opening,1.202,0.1432
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2050 opening,1.381,0.2675
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,2025 year,0.7142,-1.338
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2035 opening,0.8879,-0.8753
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2045 opening,1.202,-0.7974
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2050 opening,1.381,-0.7215
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,2025 year,0.7142,-3.579
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2035 opening,0.8879,-2.8
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2045 opening,1.202,-2.98
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2050 opening,1.381,-3.017
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.099,2025 year,0.5045,-0.7563
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2035 opening,0.6823,-0.8696
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2045 opening,1.02,-1.032
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2050 opening,1.232,-1.083
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,2025 year,0.5045,-0.2633
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2035 opening,0.6823,-0.03529
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2045 opening,1.02,0.1215
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2050 opening,1.232,0.2386
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,2025 year,0.5045,-0.9452
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2035 opening,0.6823,-0.6726
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2045 opening,1.02,-0.6764
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2050 opening,1.232,-0.6436
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,2025 year,0.5045,-2.528
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2035 opening,0.6823,-2.152
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2045 opening,1.02,-2.528
+M1.7 Overture (62 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2050 opening,1.232,-2.691
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.502,2025 year,2.35,-3.523
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2035 opening,2.924,-3.726
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2045 opening,4.011,-4.06
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.502,life-cycle 2050 opening,4.604,-4.047
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,2025 year,2.35,-13.02
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2035 opening,2.924,-10.29
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2045 opening,4.011,-11.17
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.502,life-cycle 2050 opening,4.604,-11.35
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,2025 year,2.35,-22.88
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2035 opening,2.924,-18.77
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2045 opening,4.011,-20.91
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.502,life-cycle 2050 opening,4.604,-21.58
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,2025 year,2.35,-41.7
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2035 opening,2.924,-34.95
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2045 opening,4.011,-39.5
+M1.7 Overture (62 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.502,life-cycle 2050 opening,4.604,-41.12
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.515,2025 year,2.33,-3.493
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2035 opening,2.9,-3.697
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2045 opening,4.013,-4.062
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.515,life-cycle 2050 opening,4.606,-4.049
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,2025 year,2.33,-4.111
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2035 opening,2.9,-2.64
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2045 opening,4.013,-2.407
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.515,life-cycle 2050 opening,4.606,-2.14
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,2025 year,2.33,-9.143
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2035 opening,2.9,-6.969
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2045 opening,4.013,-7.423
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.515,life-cycle 2050 opening,4.606,-7.412
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,2025 year,2.33,-18.06
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2035 opening,2.9,-14.64
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2045 opening,4.013,-16.31
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.515,life-cycle 2050 opening,4.606,-16.75
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.019,2025 year,1.747,-2.621
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2035 opening,2.336,-2.977
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2045 opening,3.491,-3.534
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.019,life-cycle 2050 opening,4.214,-3.704
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,2025 year,1.747,-3.084
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2035 opening,2.336,-2.126
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2045 opening,3.491,-2.094
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.019,life-cycle 2050 opening,4.214,-1.958
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,2025 year,1.747,-6.858
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2035 opening,2.336,-5.612
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2045 opening,3.491,-6.459
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.019,life-cycle 2050 opening,4.214,-6.781
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,2025 year,1.747,-13.55
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2035 opening,2.336,-11.79
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2045 opening,3.491,-14.19
+M1.7 Overture (62 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.019,life-cycle 2050 opening,4.214,-15.32
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.483,2025 year,2.38,-3.569
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2035 opening,2.96,-3.772
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2045 opening,4.008,-4.057
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.483,life-cycle 2050 opening,4.6,-4.044
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,2025 year,2.38,-1.243
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2035 opening,2.96,-0.1531
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2045 opening,4.008,0.4775
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.483,life-cycle 2050 opening,4.6,0.8906
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,2025 year,2.38,-4.461
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2035 opening,2.96,-2.918
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2045 opening,4.008,-2.658
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.483,life-cycle 2050 opening,4.6,-2.404
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,2025 year,2.38,-11.93
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2035 opening,2.96,-9.333
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2045 opening,4.008,-9.934
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.483,life-cycle 2050 opening,4.6,-10.05
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.099,2025 year,1.681,-2.521
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2035 opening,2.274,-2.899
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2045 opening,3.4,-3.441
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.099,life-cycle 2050 opening,4.103,-3.607
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,2025 year,1.681,-0.8778
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2035 opening,2.274,-0.1176
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2045 opening,3.4,0.405
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.099,life-cycle 2050 opening,4.103,0.7944
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,2025 year,1.681,-3.151
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2035 opening,2.274,-2.242
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2045 opening,3.4,-2.255
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.099,life-cycle 2050 opening,4.103,-2.145
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,2025 year,1.681,-8.425
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2035 opening,2.274,-7.172
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2045 opening,3.4,-8.427
+M1.7 Overture (62 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.099,life-cycle 2050 opening,4.103,-8.965
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.537,2025 year,0.2369,0.0826
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2035 opening,0.2969,0.1209
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2045 opening,0.4168,0.1982
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2050 opening,0.4788,0.2444
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,2025 year,0.2369,-0.167
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2035 opening,0.2969,-0.05285
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2045 opening,0.4168,0.005577
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2050 opening,0.4788,0.0464
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,2025 year,0.2369,-0.426
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2035 opening,0.2969,-0.2771
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2045 opening,0.4168,-0.2581
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2050 opening,0.4788,-0.2308
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,2025 year,0.2369,-0.9205
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2035 opening,0.2969,-0.7053
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2045 opening,0.4168,-0.7616
+M2.0 adaptive (49 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2050 opening,0.4788,-0.7602
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.551,2025 year,0.2348,0.08186
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2035 opening,0.2944,0.1199
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2045 opening,0.417,0.1983
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2050 opening,0.4791,0.2445
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,2025 year,0.2348,0.06564
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2035 opening,0.2944,0.1478
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2045 opening,0.417,0.2432
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2050 opening,0.4791,0.2962
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,2025 year,0.2348,-0.06652
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2035 opening,0.2944,0.03334
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2045 opening,0.417,0.1073
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2050 opening,0.4791,0.1534
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,2025 year,0.2348,-0.3006
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2035 opening,0.2944,-0.1695
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2045 opening,0.417,-0.1333
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2050 opening,0.4791,-0.09964
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.018,2025 year,0.1804,0.06291
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2035 opening,0.2412,0.09824
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2045 opening,0.3606,0.1715
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2050 opening,0.4356,0.2223
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,2025 year,0.1804,0.05044
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2035 opening,0.2412,0.1212
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2045 opening,0.3606,0.2103
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2050 opening,0.4356,0.2694
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,2025 year,0.1804,-0.05112
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2035 opening,0.2412,0.02733
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2045 opening,0.3606,0.0928
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2050 opening,0.4356,0.1395
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,2025 year,0.1804,-0.231
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2035 opening,0.2412,-0.1389
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2045 opening,0.3606,-0.1153
+M2.0 adaptive (49 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2050 opening,0.4356,-0.0906
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.516,2025 year,0.2402,0.08374
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2035 opening,0.3008,0.1225
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2045 opening,0.4165,0.1981
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2050 opening,0.4785,0.2442
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,2025 year,0.2402,0.1449
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2035 opening,0.3008,0.2183
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2045 opening,0.4165,0.3209
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2050 opening,0.4785,0.3779
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,2025 year,0.2402,0.0603
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2035 opening,0.3008,0.1451
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2045 opening,0.4165,0.236
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2050 opening,0.4785,0.2887
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,2025 year,0.2402,-0.1361
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2035 opening,0.3008,-0.02479
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2045 opening,0.4165,0.03892
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2050 opening,0.4785,0.08143
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.086,2025 year,0.1746,0.06086
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2035 opening,0.236,0.09611
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2045 opening,0.3528,0.1678
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2050 opening,0.4261,0.2175
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,2025 year,0.1746,0.1053
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2035 opening,0.236,0.1713
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2045 opening,0.3528,0.2718
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2050 opening,0.4261,0.3366
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,2025 year,0.1746,0.04382
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2035 opening,0.236,0.1139
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2045 opening,0.3528,0.1999
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2050 opening,0.4261,0.2571
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,2025 year,0.1746,-0.09889
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2035 opening,0.236,-0.01945
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2045 opening,0.3528,0.03296
+M2.0 adaptive (49 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2050 opening,0.4261,0.07252
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.537,2025 year,0.7897,0.2753
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2035 opening,0.9884,0.4024
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2045 opening,1.339,0.6334
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2050 opening,1.48,0.7501
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,2025 year,0.7897,-0.5566
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2035 opening,0.9884,-0.1763
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2045 opening,1.339,0.01018
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2050 opening,1.48,0.1308
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,2025 year,0.7897,-1.42
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2035 opening,0.9884,-0.9229
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2045 opening,1.339,-0.8416
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2050 opening,1.48,-0.7341
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,2025 year,0.7897,-3.068
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2035 opening,0.9884,-2.349
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2045 opening,1.339,-2.468
+M2.0 adaptive (49 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2050 opening,1.48,-2.386
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.551,2025 year,0.7826,0.2728
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2035 opening,0.9799,0.3989
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2045 opening,1.339,0.6337
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2050 opening,1.481,0.7504
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,2025 year,0.7826,0.2188
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2035 opening,0.9799,0.492
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2045 opening,1.339,0.7777
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2050 opening,1.481,0.9103
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,2025 year,0.7826,-0.2217
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2035 opening,0.9799,0.1108
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2045 opening,1.339,0.3389
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2050 opening,1.481,0.4646
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,2025 year,0.7826,-1.002
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2035 opening,0.9799,-0.5646
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2045 opening,1.339,-0.4386
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2050 opening,1.481,-0.3248
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.018,2025 year,0.6014,0.2096
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2035 opening,0.8031,0.327
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2045 opening,1.158,0.548
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2050 opening,1.346,0.6823
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,2025 year,0.6014,0.1681
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2035 opening,0.8031,0.4032
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2045 opening,1.158,0.6725
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2050 opening,1.346,0.8277
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,2025 year,0.6014,-0.1704
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2035 opening,0.8031,0.09077
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2045 opening,1.158,0.293
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2050 opening,1.346,0.4225
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,2025 year,0.6014,-0.77
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2035 opening,0.8031,-0.4627
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2045 opening,1.158,-0.3792
+M2.0 adaptive (49 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2050 opening,1.346,-0.2954
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.516,2025 year,0.8006,0.2791
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2035 opening,1.001,0.4076
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2045 opening,1.338,0.633
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2050 opening,1.479,0.7495
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,2025 year,0.8006,0.483
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2035 opening,1.001,0.7268
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2045 opening,1.338,1.029
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2050 opening,1.479,1.165
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,2025 year,0.8006,0.201
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2035 opening,1.001,0.483
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2045 opening,1.338,0.7546
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2050 opening,1.479,0.8866
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,2025 year,0.8006,-0.4536
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2035 opening,1.001,-0.08283
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2045 opening,1.338,0.1179
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2050 opening,1.479,0.2401
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.086,2025 year,0.5818,0.2028
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2035 opening,0.7856,0.3198
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2045 opening,1.133,0.5361
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2050 opening,1.317,0.6675
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,2025 year,0.5818,0.351
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2035 opening,0.7856,0.5703
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2045 opening,1.133,0.8714
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2050 opening,1.317,1.038
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,2025 year,0.5818,0.146
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2035 opening,0.7856,0.379
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2045 opening,1.133,0.6391
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2050 opening,1.317,0.7896
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,2025 year,0.5818,-0.3296
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2035 opening,0.7856,-0.06499
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2045 opening,1.133,0.09985
+M2.0 adaptive (49 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2050 opening,1.317,0.2138
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.537,2025 year,0.8012,-1.204
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2035 opening,1.004,-1.283
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2045 opening,1.409,-1.431
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2050 opening,1.619,-1.428
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,2025 year,0.8012,-4.448
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2035 opening,1.004,-3.542
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2045 opening,1.409,-3.935
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2050 opening,1.619,-4.001
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,2025 year,0.8012,-7.814
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2035 opening,1.004,-6.456
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2045 opening,1.409,-7.362
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2050 opening,1.619,-7.604
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,2025 year,0.8012,-14.24
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2035 opening,1.004,-12.02
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2045 opening,1.409,-13.91
+M2.0 adaptive (49 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2050 opening,1.619,-14.48
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.551,2025 year,0.794,-1.194
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2035 opening,0.9953,-1.272
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2045 opening,1.41,-1.432
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2050 opening,1.62,-1.428
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,2025 year,0.794,-1.404
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2035 opening,0.9953,-0.9091
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2045 opening,1.41,-0.8496
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2050 opening,1.62,-0.7562
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,2025 year,0.794,-3.122
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2035 opening,0.9953,-2.397
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2045 opening,1.41,-2.615
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2050 opening,1.62,-2.613
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,2025 year,0.794,-6.165
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2035 opening,0.9953,-5.033
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2045 opening,1.41,-5.743
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2050 opening,1.62,-5.901
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.018,2025 year,0.6101,-0.9173
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2035 opening,0.8157,-1.043
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2045 opening,1.219,-1.238
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2050 opening,1.473,-1.299
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,2025 year,0.6101,-1.079
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2035 opening,0.8157,-0.745
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2045 opening,1.219,-0.7346
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2050 opening,1.473,-0.6876
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,2025 year,0.6101,-2.399
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2035 opening,0.8157,-1.964
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2045 opening,1.219,-2.261
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2050 opening,1.473,-2.375
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,2025 year,0.6101,-4.737
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2035 opening,0.8157,-4.125
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2045 opening,1.219,-4.966
+M2.0 adaptive (49 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2050 opening,1.473,-5.366
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.516,2025 year,0.8123,-1.221
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2035 opening,1.017,-1.3
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2045 opening,1.408,-1.43
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2050 opening,1.618,-1.427
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,2025 year,0.8123,-0.426
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2035 opening,1.017,-0.05436
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2045 opening,1.408,0.1658
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2050 opening,1.618,0.3113
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,2025 year,0.8123,-1.526
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2035 opening,1.017,-1.006
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2045 opening,1.408,-0.9379
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2050 opening,1.618,-0.8492
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,2025 year,0.8123,-4.078
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2035 opening,1.017,-3.214
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2045 opening,1.408,-3.499
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2050 opening,1.618,-3.542
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.086,2025 year,0.5903,-0.8874
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2035 opening,0.798,-1.02
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2045 opening,1.193,-1.211
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2050 opening,1.441,-1.271
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,2025 year,0.5903,-0.3096
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2035 opening,0.798,-0.04265
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2045 opening,1.193,0.1404
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2050 opening,1.441,0.2772
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,2025 year,0.5903,-1.109
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2035 opening,0.798,-0.7893
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2045 opening,1.193,-0.7943
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2050 opening,1.441,-0.7563
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,2025 year,0.5903,-2.963
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2035 opening,0.798,-2.522
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2045 opening,1.193,-2.963
+M2.0 adaptive (49 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2050 opening,1.441,-3.155
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.537,2025 year,2.67,-4.015
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2035 opening,3.342,-4.273
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2045 opening,4.527,-4.64
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.537,life-cycle 2050 opening,5.004,-4.482
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,2025 year,2.67,-14.83
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2035 opening,3.342,-11.79
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2045 opening,4.527,-12.74
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.537,life-cycle 2050 opening,5.004,-12.53
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,2025 year,2.67,-26.04
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2035 opening,3.342,-21.5
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2045 opening,4.527,-23.81
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.537,life-cycle 2050 opening,5.004,-23.77
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,2025 year,2.67,-47.46
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2035 opening,3.342,-40.03
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2045 opening,4.527,-44.95
+M2.0 adaptive (49 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.537,life-cycle 2050 opening,5.004,-45.24
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.551,2025 year,2.646,-3.979
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2035 opening,3.313,-4.237
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2045 opening,4.529,-4.642
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.551,life-cycle 2050 opening,5.006,-4.484
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,2025 year,2.646,-4.681
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2035 opening,3.313,-3.028
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2045 opening,4.529,-2.771
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.551,life-cycle 2050 opening,5.006,-2.406
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,2025 year,2.646,-10.41
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2035 opening,3.313,-7.983
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2045 opening,4.529,-8.474
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.551,life-cycle 2050 opening,5.006,-8.198
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,2025 year,2.646,-20.55
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2035 opening,3.313,-16.76
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2045 opening,4.529,-18.58
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.551,life-cycle 2050 opening,5.006,-18.46
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.018,2025 year,2.033,-3.058
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2035 opening,2.715,-3.472
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2045 opening,3.916,-4.014
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.018,life-cycle 2050 opening,4.552,-4.077
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,2025 year,2.033,-3.597
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2035 opening,2.715,-2.482
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2045 opening,3.916,-2.396
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.018,life-cycle 2050 opening,4.552,-2.188
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,2025 year,2.033,-7.996
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2035 opening,2.715,-6.542
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2045 opening,3.916,-7.328
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.018,life-cycle 2050 opening,4.552,-7.454
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,2025 year,2.033,-15.79
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2035 opening,2.715,-13.74
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2045 opening,3.916,-16.06
+M2.0 adaptive (49 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.018,life-cycle 2050 opening,4.552,-16.78
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.516,2025 year,2.707,-4.07
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2035 opening,3.386,-4.329
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2045 opening,4.523,-4.636
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.516,life-cycle 2050 opening,5,-4.478
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,2025 year,2.707,-1.42
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2035 opening,3.386,-0.1819
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2045 opening,4.523,0.509
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.516,life-cycle 2050 opening,5,0.924
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,2025 year,2.707,-5.086
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2035 opening,3.386,-3.351
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2045 opening,4.523,-3.056
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.516,life-cycle 2050 opening,5,-2.697
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,2025 year,2.707,-13.59
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2035 opening,3.386,-10.7
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2045 opening,4.523,-11.33
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.516,life-cycle 2050 opening,5,-11.1
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.086,2025 year,1.967,-2.958
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2035 opening,2.656,-3.397
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2045 opening,3.831,-3.926
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.086,life-cycle 2050 opening,4.453,-3.988
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,2025 year,1.967,-1.032
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2035 opening,2.656,-0.1428
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2045 opening,3.831,0.4311
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.086,life-cycle 2050 opening,4.453,0.8229
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,2025 year,1.967,-3.696
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2035 opening,2.656,-2.629
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2045 opening,3.831,-2.589
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.086,life-cycle 2050 opening,4.453,-2.402
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,2025 year,1.967,-9.878
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2035 opening,2.656,-8.399
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2045 opening,3.831,-9.596
+M2.0 adaptive (49 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.086,life-cycle 2050 opening,4.453,-9.884
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.624,2025 year,0.2603,0.01159
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2035 opening,0.3275,0.04279
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2045 opening,0.4858,0.1122
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2050 opening,0.558,0.1573
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,2025 year,0.2603,-0.3907
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2035 opening,0.3275,-0.2384
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2045 opening,0.4858,-0.2172
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2050 opening,0.558,-0.1812
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,2025 year,0.2603,-0.8081
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2035 opening,0.3275,-0.6011
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2045 opening,0.4858,-0.6679
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2050 opening,0.558,-0.6551
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,2025 year,0.2603,-1.605
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2035 opening,0.3275,-1.294
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2045 opening,0.4858,-1.529
+M2.2 design A (50 t),bl,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2050 opening,0.558,-1.56
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.641,2025 year,0.2577,0.01147
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2035 opening,0.3243,0.04238
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2045 opening,0.4847,0.1119
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2050 opening,0.5583,0.1574
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,2025 year,0.2577,-0.01464
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2035 opening,0.3243,0.08751
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2045 opening,0.4847,0.1883
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2050 opening,0.5583,0.2458
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,2025 year,0.2577,-0.2274
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2035 opening,0.3243,-0.09749
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2045 opening,0.4847,-0.0433
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2050 opening,0.5583,0.00162
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,2025 year,0.2577,-0.6043
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2035 opening,0.3243,-0.4252
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2045 opening,0.4847,-0.4536
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2050 opening,0.5583,-0.4309
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.107,2025 year,0.2007,0.00893
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2035 opening,0.2684,0.03507
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2045 opening,0.4011,0.09262
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2050 opening,0.4846,0.1366
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,2025 year,0.2007,-0.0114
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2035 opening,0.2684,0.07242
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2045 opening,0.4011,0.1558
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2050 opening,0.4846,0.2133
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,2025 year,0.2007,-0.1771
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2035 opening,0.2684,-0.08068
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2045 opening,0.4011,-0.03583
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2050 opening,0.4846,0.001406
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,2025 year,0.2007,-0.4706
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2035 opening,0.2684,-0.3519
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2045 opening,0.4011,-0.3754
+M2.2 design A (50 t),bl,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2050 opening,0.4846,-0.374
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.599,2025 year,0.2644,0.01177
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2035 opening,0.3324,0.04343
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2045 opening,0.4854,0.1121
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2050 opening,0.5576,0.1572
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,2025 year,0.2644,0.1106
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2035 opening,0.3324,0.1987
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2045 opening,0.4854,0.322
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2050 opening,0.5576,0.3858
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,2025 year,0.2644,-0.02608
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2035 opening,0.3324,0.08008
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2045 opening,0.4854,0.1768
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2050 opening,0.5576,0.2331
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,2025 year,0.2644,-0.3432
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2035 opening,0.3324,-0.1953
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2045 opening,0.4854,-0.1601
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2050 opening,0.5576,-0.1211
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.167,2025 year,0.1951,0.008682
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2035 opening,0.2637,0.03446
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2045 opening,0.3942,0.09101
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2050 opening,0.4762,0.1342
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,2025 year,0.1951,0.08158
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2035 opening,0.2637,0.1577
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2045 opening,0.3942,0.2615
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2050 opening,0.4762,0.3294
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,2025 year,0.1951,-0.01924
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2035 opening,0.2637,0.06354
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2045 opening,0.3942,0.1436
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2050 opening,0.4762,0.1991
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,2025 year,0.1951,-0.2532
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2035 opening,0.2637,-0.155
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2045 opening,0.3942,-0.13
+M2.2 design A (50 t),bl,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2050 opening,0.4762,-0.1034
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.624,2025 year,0.8679,0.03868
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2035 opening,1.085,0.1409
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2045 opening,1.527,0.345
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2050 opening,1.669,0.46
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,2025 year,0.8679,-1.302
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2035 opening,1.085,-0.7919
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2045 opening,1.527,-0.7012
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2050 opening,1.669,-0.5671
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,2025 year,0.8679,-2.694
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2035 opening,1.085,-1.995
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2045 opening,1.527,-2.13
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2050 opening,1.669,-2.001
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,2025 year,0.8679,-5.351
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2035 opening,1.085,-4.293
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2045 opening,1.527,-4.858
+M2.2 design A (50 t),bl,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2050 opening,1.669,-4.738
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.641,2025 year,0.859,0.03828
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2035 opening,1.074,0.1395
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2045 opening,1.524,0.3443
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2050 opening,1.67,0.4602
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,2025 year,0.859,-0.04875
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2035 opening,1.074,0.2889
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2045 opening,1.524,0.5844
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2050 opening,1.67,0.7245
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,2025 year,0.859,-0.758
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2035 opening,1.074,-0.3247
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2045 opening,1.524,-0.1498
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2050 opening,1.67,-0.0142
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,2025 year,0.859,-2.014
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2035 opening,1.074,-1.412
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2045 opening,1.524,-1.45
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2050 opening,1.67,-1.323
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.107,2025 year,0.6689,0.02981
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2035 opening,0.889,0.1155
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2045 opening,1.261,0.2849
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2050 opening,1.449,0.3994
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,2025 year,0.6689,-0.03796
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2035 opening,0.889,0.2391
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2045 opening,1.261,0.4836
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2050 opening,1.449,0.6288
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,2025 year,0.6689,-0.5903
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2035 opening,0.889,-0.2687
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2045 opening,1.261,-0.124
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2050 opening,1.449,-0.01232
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,2025 year,0.6689,-1.569
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2035 opening,0.889,-1.168
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2045 opening,1.261,-1.2
+M2.2 design A (50 t),bl,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2050 opening,1.449,-1.148
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.599,2025 year,0.8815,0.03928
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2035 opening,1.101,0.143
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2045 opening,1.526,0.3448
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2050 opening,1.668,0.4596
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,2025 year,0.8815,0.3686
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2035 opening,1.101,0.6578
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2045 opening,1.526,1.008
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2050 opening,1.668,1.148
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,2025 year,0.8815,-0.0869
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2035 opening,1.101,0.2642
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2045 opening,1.526,0.5479
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2050 opening,1.668,0.6862
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,2025 year,0.8815,-1.144
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2035 opening,1.101,-0.6492
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2045 opening,1.526,-0.5199
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2050 opening,1.668,-0.3854
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.167,2025 year,0.6504,0.02898
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2035 opening,0.8736,0.1135
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2045 opening,1.239,0.28
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2050 opening,1.424,0.3925
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,2025 year,0.6504,0.272
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2035 opening,0.8736,0.522
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2045 opening,1.239,0.8186
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2050 opening,1.424,0.9802
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,2025 year,0.6504,-0.06411
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2035 opening,0.8736,0.2097
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2045 opening,1.239,0.445
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2050 opening,1.424,0.5859
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,2025 year,0.6504,-0.8441
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2035 opening,0.8736,-0.5151
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2045 opening,1.239,-0.4222
+M2.2 design A (50 t),bl,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2050 opening,1.424,-0.3291
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.624,2025 year,0.8066,-1.323
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2035 opening,1.014,-1.422
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2045 opening,1.505,-1.693
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2050 opening,1.729,-1.701
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,2025 year,0.8066,-4.768
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2035 opening,1.014,-3.829
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2045 opening,1.505,-4.513
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2050 opening,1.729,-4.599
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,2025 year,0.8066,-8.341
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2035 opening,1.014,-6.934
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2045 opening,1.505,-8.37
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2050 opening,1.729,-8.655
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,2025 year,0.8066,-15.17
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2035 opening,1.014,-12.86
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2045 opening,1.505,-15.74
+M2.2 design A (50 t),sub,0.3,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2050 opening,1.729,-16.4
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.641,2025 year,0.7983,-1.31
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2035 opening,1.005,-1.409
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2045 opening,1.502,-1.69
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2050 opening,1.73,-1.702
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,2025 year,0.7983,-1.533
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2035 opening,1.005,-1.022
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2045 opening,1.502,-1.036
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2050 opening,1.73,-0.9456
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,2025 year,0.7983,-3.355
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2035 opening,1.005,-2.606
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2045 opening,1.502,-3.018
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2050 opening,1.73,-3.036
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,2025 year,0.7983,-6.582
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2035 opening,1.005,-5.411
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2045 opening,1.502,-6.53
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2050 opening,1.73,-6.738
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.107,2025 year,0.6217,-1.02
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2035 opening,0.8313,-1.166
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2045 opening,1.243,-1.398
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2050 opening,1.501,-1.477
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,2025 year,0.6217,-1.194
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2035 opening,0.8313,-0.8459
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2045 opening,1.243,-0.8571
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2050 opening,1.501,-0.8207
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,2025 year,0.6217,-2.612
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2035 opening,0.8313,-2.156
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2045 opening,1.243,-2.498
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2050 opening,1.501,-2.635
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,2025 year,0.6217,-5.125
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2035 opening,0.8313,-4.478
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2045 opening,1.243,-5.404
+M2.2 design A (50 t),sub,0.3,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2050 opening,1.501,-5.848
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.599,2025 year,0.8192,-1.344
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2035 opening,1.03,-1.444
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2045 opening,1.504,-1.692
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2050 opening,1.727,-1.7
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,2025 year,0.8192,-0.498
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2035 opening,1.03,-0.1141
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2045 opening,1.504,0.1047
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2050 opening,1.727,0.2564
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,2025 year,0.8192,-1.668
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2035 opening,1.03,-1.13
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2045 opening,1.504,-1.138
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2050 opening,1.727,-1.05
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,2025 year,0.8192,-4.383
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2035 opening,1.03,-3.487
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2045 opening,1.504,-4.021
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2050 opening,1.727,-4.082
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.167,2025 year,0.6044,-0.9915
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2035 opening,0.8169,-1.146
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2045 opening,1.221,-1.374
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2050 opening,1.475,-1.452
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,2025 year,0.6044,-0.3674
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2035 opening,0.8169,-0.09053
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2045 opening,1.221,0.08506
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2050 opening,1.475,0.2189
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,2025 year,0.6044,-1.231
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2035 opening,0.8169,-0.8965
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2045 opening,1.221,-0.9239
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2050 opening,1.475,-0.8967
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,2025 year,0.6044,-3.234
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2035 opening,0.8169,-2.767
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2045 opening,1.221,-3.266
+M2.2 design A (50 t),sub,0.3,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2050 opening,1.475,-3.486
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.624,2025 year,2.689,-4.409
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2035 opening,3.36,-4.719
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2045 opening,4.731,-5.39
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),canonical (growth central path),,1.624,life-cycle 2050 opening,5.171,-5.18
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,2025 year,2.689,-15.89
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2035 opening,3.36,-12.7
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2045 opening,4.731,-14.34
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF low,3.665,1.624,life-cycle 2050 opening,5.171,-13.97
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,2025 year,2.689,-27.8
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2035 opening,3.36,-23
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2045 opening,4.731,-26.57
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF central,6.015,1.624,life-cycle 2050 opening,5.171,-26.24
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,2025 year,2.689,-50.54
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2035 opening,3.36,-42.67
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2045 opening,4.731,-49.93
+M2.2 design A (50 t),sub,1,Baseline (repo),H2 only (PV credit kept),e-SAF high,10.5,1.624,life-cycle 2050 opening,5.171,-49.68
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.641,2025 year,2.661,-4.364
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2035 opening,3.328,-4.674
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2045 opening,4.721,-5.378
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),canonical (growth central path),,1.641,life-cycle 2050 opening,5.173,-5.182
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,2025 year,2.661,-5.109
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2035 opening,3.328,-3.395
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2045 opening,4.721,-3.322
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF low,1.549,1.641,life-cycle 2050 opening,5.173,-2.92
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,2025 year,2.661,-11.18
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2035 opening,3.328,-8.647
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2045 opening,4.721,-9.607
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF central,2.759,1.641,life-cycle 2050 opening,5.173,-9.243
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,2025 year,2.661,-21.94
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2035 opening,3.328,-17.95
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2045 opening,4.721,-20.74
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 only (PV credit kept),e-SAF high,4.903,1.641,life-cycle 2050 opening,5.173,-20.44
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.107,2025 year,2.072,-3.399
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2035 opening,2.754,-3.868
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2045 opening,3.907,-4.451
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,canonical (growth central path),,2.107,life-cycle 2050 opening,4.49,-4.498
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,2025 year,2.072,-3.979
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2035 opening,2.754,-2.809
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2045 opening,3.907,-2.749
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF low,1.549,2.107,life-cycle 2050 opening,4.49,-2.534
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,2025 year,2.072,-8.706
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2035 opening,2.754,-7.155
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2045 opening,3.907,-7.95
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF central,2.759,2.107,life-cycle 2050 opening,4.49,-8.022
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,2025 year,2.072,-17.08
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2035 opening,2.754,-14.86
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2045 opening,3.907,-17.16
+M2.2 design A (50 t),sub,1,H2 $2/kg (Terraform demo),H2 + cheap-solar PV erosion,e-SAF high,4.903,2.107,life-cycle 2050 opening,4.49,-17.74
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical fossil $0.80 + $190/t,1.4,1.599,2025 year,2.731,-4.479
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2035 opening,3.411,-4.79
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2045 opening,4.728,-5.385
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),canonical (growth central path),,1.599,life-cycle 2050 opening,5.166,-5.176
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,2025 year,2.731,-1.659
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2035 opening,3.411,-0.3826
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2045 opening,4.728,0.2931
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF low,0.8528,1.599,life-cycle 2050 opening,5.166,0.7165
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,2025 year,2.731,-5.559
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2035 opening,3.411,-3.752
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2045 opening,4.728,-3.646
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF central,1.61,1.599,life-cycle 2050 opening,5.166,-3.236
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,2025 year,2.731,-14.61
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2035 opening,3.411,-11.57
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2045 opening,4.728,-12.79
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 only (PV credit kept),e-SAF high,3.368,1.599,life-cycle 2050 opening,5.166,-12.41
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical fossil $0.80 + $190/t,1.4,2.167,2025 year,2.015,-3.304
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2035 opening,2.706,-3.801
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2045 opening,3.839,-4.373
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,canonical (growth central path),,2.167,life-cycle 2050 opening,4.412,-4.42
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,2025 year,2.015,-1.224
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2035 opening,2.706,-0.3036
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2045 opening,3.839,0.238
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF low,0.8528,2.167,life-cycle 2050 opening,4.412,0.6118
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,2025 year,2.015,-4.101
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2035 opening,2.706,-2.977
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2045 opening,3.839,-2.961
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF central,1.61,2.167,life-cycle 2050 opening,4.412,-2.763
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,2025 year,2.015,-10.78
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2035 opening,2.706,-9.18
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2045 opening,3.839,-10.38
+M2.2 design A (50 t),sub,1,H2 $1/kg (Terraform/DOE target),H2 + cheap-solar PV erosion,e-SAF high,3.368,2.167,life-cycle 2050 opening,4.412,-10.6

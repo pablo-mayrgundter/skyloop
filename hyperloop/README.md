@@ -15,6 +15,7 @@
 - **NYC–LAX door to door: 2.73 h nonstop at M4**, 2.46 h at M6, 3.62 h all-stop.
 - **B/C peaks at M3–4.** Spine+LAX, 2050, 100 % capture, net vs subsonic: **0.50–0.53 base, 1.27–1.36 low cost**; vs Boomless 0.64–0.65 / 1.62–1.65; vs BoomShield M2.2 0.33–0.35 / 0.84–0.89. At 30 % capture, ≤ 0.63.
 - **It pays below ~$52 M/km all-in** (net, vs subsonic, 100 %): $71 M vs Boomless, $29 M vs BoomShield, ~$10 M at 30 % capture.
+- **Cheap hydrogen barely moves it** ([scenario](../boom-shield/economics/hydrogen/hydrogen.md)). Carbon-neutral e-SAF at $1.6/kg (H₂ $1/kg) gives net vs subsonic **0.47 base / 1.19 low** at M4 (0.50 / 1.28 at M3). Low-cost net stays ≥ 1 for e-SAF ≥ $0.65/kg (M4), so in every scenario. Firmed 24 h solar at ~$56–66/MWh adds only +0.01–0.03.
 - **Verdict:** the review's only tube without a physics veto up to ~M6, but a $50 M/km and moving-block-certification problem, not a Mach problem. **Design for M3–4, elevated, active gap, ~4 m bore at ~10 Pa.**
 
 ![Feasibility maps](hl_maps.png)

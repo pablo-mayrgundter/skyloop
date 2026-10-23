@@ -73,6 +73,7 @@ Pods ride a steered maglev guideway in a 10–80 m bore, and wings carry a fract
 - **Energy is the one clear advantage:** 21–85 Wh per passenger-km of electricity against ~340 Wh of jet fuel, so net of fuel and CO₂ the case improves (unlike BoomShield).
 - **B/C (2050 opening, 100 % capture), gross / net of fuel and CO₂:** base cost 0.36 / 0.47 vs subsonic and 0.28 / 0.61 vs Boomless; low cost 1.28 / 1.67 and 1.09 / 2.17. It pays only below ~$40–55 M/km all-in. A ground vactrain on the same network at ~$62 M/km scores higher (0.68 / 0.89 vs subsonic).
 - **Hybrids with BoomShield:** none of the three studied works. The lesson to carry back: ground processing beats Mach.
+- **Cheap hydrogen** ([scenario](../boom-shield/economics/hydrogen/hydrogen.md)): carbon-neutral e-SAF at $1.6/kg (H₂ $1/kg) trims net vs subsonic to **0.44 base / 1.57 low** (from 0.47 / 1.67); at $2.8 (H₂ $2) it rises to 0.53 / 1.88. Net stays above gross unless e-SAF falls below $0.53/kg. The envelope gas is ≤ 2 % of the run cost. The verdict is unchanged.
 
 ## Ground tube with compliant gap (Hyperloop, our version) ([../hyperloop/README.md](../hyperloop/README.md))
 
