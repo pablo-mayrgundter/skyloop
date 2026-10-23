@@ -54,6 +54,15 @@ Winged pods fly over a steered motor strip in a 20–80 m bore, mapped over Mach
 - **Flying costs 165–340 Wh/pax-km**, close to jet fuel (L/D 8 → 3). M5.5 → M11.5 saves only 11 min NYC–LAX (2.5 → 2.3 h door to door). One bore pair carries 47–206 M pax/yr.
 - **B/C ≤ 1.12 vs subsonic, ≤ 1.33 vs Boomless, ≤ 0.75 vs BoomShield.** It exceeds 1 only at low cost, net of fuel and CO₂, at 100 % capture, at M2–3.5 (Boomless: M2–9). The verdict is unchanged.
 
+## Maglev-plus-wings hybrid ([hybrid/hybrid.md](hybrid/hybrid.md))
+
+Pods ride a steered maglev guideway in a 10–80 m bore, and wings carry a fraction f = 0–1 of their weight. The map spans Mach 2–10, 5 Pa–1 kPa and 8–47 t pods.
+
+- **Wings only cost.** Magnets lift at L/D ~300, wings at 3–8. Every 10 % of weight on the wings adds ~25 Wh/pax-km, and wings also take bore width, heat the tube gas and overload in a breach. f = 0 is best on every axis; f = 1 reproduces flight.md.
+- **A compliant gap does not shrink the bore.** The guideway must still steer 7–25 m (M2–10) to follow the line's km-scale motion. The gap does lift short-wave tolerance from mm (EMS) to 8–140 mm, which would let an *elevated ground* tube reach M6–12.
+- **f = 0 in a 40 m bore** passes M4–4.75 at 35–56 Wh/pax-km, capped by station launch power. With 5 GW stations it passes M6, and with 0.3–1 GN of tension M7–9 (50–90 Wh). A 20 m bore needs 1 GN of tension for M5.5. Wings (f ≥ 0.5) cap 40 m bores at M4–5.5 for 120–340 Wh/pax-km.
+- **B/C ≤ 1.43 vs subsonic and ≤ 1.73 vs Boomless** (net, low cost, 100 % capture). It reaches 1.04 vs BoomShield only once (marginal) and is ≤ 0.45 at base cost, below system.md's maglev in every case. Onboard propulsion (scramjet, rocket, battery) fails: thrust must come through the track. The verdict is unchanged.
+
 ## System and economics ([system/system.md](system/system.md))
 
 - **The time advantage comes from boarding at ground level, not from Mach.** NYC–LAX door to door: 3.6 h at M2, 2.7 h at M4, 2.5 h at M6, against 5.1 h for BoomShield M2.2 and 7.3 h subsonic. Lifts to a 20 km station or docking aircraft at altitude are worse.

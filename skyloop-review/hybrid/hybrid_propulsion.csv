@@ -1,0 +1,11 @@
+case,f,Mach,p_Pa,drag_kN,cruise_s,impulse_MNs,q_tube_Pa,propellant_t,propellant_rocket_eq_t,propellant_over_pod,exhaust_kg_per_km_tube,tube_gas_kg_per_km_40m,pump_m3s_per_km_100pods_h,pump_MW_per_km,pump_vs_regime_installed_x,q_needed_kPa,q_shortfall_x,combustor_p_needed_kPa,combustor_p_available_kPa,captured_kg_s,exhaust_velocity_ms,prop_eff,power_MW,battery_t_at_0p3kWh_kg,inlet_T0_K,energy_MWh
+rocket LOX/LH2 (Isp 450 s),1,5,200,31.07,2711,84.23,3500,19.08,19.08,1.122,4.77,4042,76.43,0.7643,3.822,,,,,,,,,,,
+rocket kerosene/LOX (Isp 330 s),1,5,200,31.07,2711,84.23,3500,26.02,26.02,1.53,6.504,4042,104.2,1.042,5.211,,,,,,,,,,,
+scramjet / ramjet (needs q ~25-100 kPa),1,5,200,31.07,2711,84.23,3500,,,,,,,,,25-100,14.29,>=50,6,,,,,,,
+battery + fan or propeller,1,5,200,31.07,2711,84.23,3500,,,,,,,,,,,,,18.87,3122,0.6419,71.41,179.3,1300,
+battery + onboard LIM on a passive reaction rail,1,5,200,31.07,2711,84.23,3500,,,,,,,,,,,,,,,,,135.4,,40.61
+rocket LOX/LH2 (Isp 450 s),0,5,50,1.468,2711,3.981,875,0.9019,0.9262,0.05305,0.2255,1011,14.45,0.1445,0.7226,,,,,,,,,,,
+rocket kerosene/LOX (Isp 330 s),0,5,50,1.468,2711,3.981,875,1.23,1.275,0.07234,0.3075,1011,19.71,0.1971,0.9853,,,,,,,,,,,
+scramjet / ramjet (needs q ~25-100 kPa),0,5,50,1.468,2711,3.981,875,,,,,,,,,25-100,57.14,>=50,1.5,,,,,,,
+battery + fan or propeller,0,5,50,1.468,2711,3.981,875,,,,,,,,,,,,,4.717,1787,0.9046,2.395,6.012,1300,
+battery + onboard LIM on a passive reaction rail,0,5,50,1.468,2711,3.981,875,,,,,,,,,,,,,,,,,6.398,,1.92

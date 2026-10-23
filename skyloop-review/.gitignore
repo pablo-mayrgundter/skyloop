@@ -4,3 +4,4 @@ __pycache__/
 regime/regime_grid.csv
 heating/heating_grid.csv
 flight/flight_grid.csv
+hybrid/hybrid_grid.csv
