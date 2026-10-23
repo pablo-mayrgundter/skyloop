@@ -65,6 +65,19 @@ section{display:grid;gap:22px;min-width:0}
 .family a:hover{color:var(--ink);border-color:var(--rule)}
 .family a[aria-current="page"]{color:var(--ink);font-weight:600;border-color:var(--acc)}
 .family .lab{letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-right:6px}
+/* version tabs (same component on all three concept pages) */
+.vtabs,.vgo{--vt-acc:var(--acc)}
+.vtabs{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.vtab{appearance:none;-webkit-appearance:none;cursor:pointer;margin:0;font:500 12.5px/1.2 var(--f-mono);letter-spacing:.03em;color:var(--ink-2);background:transparent;border:1px solid var(--rule);border-radius:4px;padding:8px 12px;min-height:36px}
+.vtab b{font-weight:600;color:var(--ink)}
+.vtab:hover{border-color:var(--ink-3);color:var(--ink)}
+.vtab[aria-selected="true"]{border-color:var(--vt-acc);color:var(--ink);background:color-mix(in srgb,var(--vt-acc) 12%,transparent);box-shadow:inset 0 -2px 0 var(--vt-acc)}
+.vtab:focus-visible,.vgo:focus-visible{outline:2px solid var(--vt-acc);outline-offset:2px}
+.vt-note{font:500 12px/1.3 var(--f-mono);color:var(--ink-3)}
+.vpanel{display:grid;gap:56px;min-width:0}
+.vpanel[hidden]{display:none!important}
+.vgo{display:inline-block;font:500 13px/1.3 var(--f-mono);color:var(--ink);text-decoration:none;border:1px solid var(--vt-acc);border-radius:4px;padding:9px 13px}
+.vgo:hover{background:color-mix(in srgb,var(--vt-acc) 12%,transparent)}
 /* header */
 header.top{display:grid;gap:14px}
 .title-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px}
@@ -250,14 +263,17 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 <div class="wrap">
 
 <header class="top">
-  <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ" target="_blank" rel="noopener">BoomShield</a><span aria-hidden="true">·</span><a href="#skyloop" aria-current="page">Skyloop</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB" target="_blank" rel="noopener">Hyperloop (our version)</a></nav>
-  <div class="eyebrow">Skyloop · re-review · <span data-k="meta.status"></span></div>
+  <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="#overview" target="_blank" rel="noopener">Overview</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ" target="_blank" rel="noopener">BoomShield</a><span aria-hidden="true">·</span><a href="#skyloop" aria-current="page">Skyloop</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB" target="_blank" rel="noopener">Hyperloop (our version)</a></nav>
+  <div class="eyebrow">Skyloop · <span data-vk="id"></span> · <span data-vk="status"></span></div>
   <div class="title-row">
     <h1>Skyloop</h1>
     <span class="reg">skyloop-review/ · screening models, no hardware</span>
   </div>
-  <p class="lede" data-k="meta.lede"></p>
+  <div class="vtabs" id="vtabs" role="tablist" aria-label="Concept version"></div>
+  <p class="lede" data-vk="lede"></p>
 </header>
+
+<div class="vpanel" id="panel-v02" role="tabpanel" aria-labelledby="tab-v02">
 
 <section class="hero" aria-labelledby="hero-h">
   <div class="hero-head"><h3 id="hero-h">Cut-away view: city to city through the stratosphere</h3><span class="tag" data-k="hero.tag"></span></div>
@@ -269,18 +285,6 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
     <div><b><span data-k="hero.tether_MN"></span> MN</b><span>per tether, V-pairs every <span data-k="hero.tetherSpacing_km"></span> km</span></div>
   </div>
   <p class="scale-note"><span class="stamp">NOT TO SCALE.</span> <span data-k="hero.scaleNote"></span></p>
-</section>
-
-<section aria-labelledby="idea-h">
-  <div class="sec-head">
-    <div class="eyebrow">The idea vs the physics</div>
-    <h2 id="idea-h">What the original concept assumed, and what the numbers say</h2>
-    <p class="lede" data-k="idea.lede"></p>
-  </div>
-  <div>
-    <div class="ledger-head"><span>The idea (docs/, 2025)</span><span>What the physics says (skyloop-review/, Oct 2026)</span></div>
-    <div class="ledger" id="ledger"></div>
-  </div>
 </section>
 
 <section aria-labelledby="des-h">
@@ -342,7 +346,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
     </figure>
     <figure>
       <h3>Energy per passenger-km</h3>
-      <div class="legend"><span><i style="background:var(--acc)"></i>electric, maglev pods</span><span><i style="background:var(--acc-2)"></i>electric, winged or gliding pods</span><span><i style="background:var(--c-taxi)"></i>jet fuel</span><span><i style="border:1.5px dashed var(--ink-3)"></i>original claim</span></div>
+      <div class="legend"><span><i style="background:var(--acc)"></i>electric, maglev pods</span><span><i style="background:var(--acc-2)"></i>electric, winged or gliding pods</span><span><i style="background:var(--c-taxi)"></i>jet fuel</span><span><i style="border:1.5px dashed var(--ink-3)"></i>v0.1 claim</span></div>
       <div class="rc" id="energy"></div>
       <figcaption data-k="energy.caption"></figcaption>
     </figure>
@@ -364,7 +368,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   <div class="two">
     <figure>
       <h3>Cost per km of tube pair, corrected</h3>
-      <div class="legend"><span><i style="background:var(--acc)"></i>Skyloop, this review</span><span><i style="background:var(--ink-3)"></i>built or estimated elsewhere</span><span><i style="background:color-mix(in srgb,var(--quiet) 35%,transparent);border:1.5px solid var(--quiet)"></i>break-even</span><span><i style="border:1.5px dashed var(--ink-3)"></i>original claim</span></div>
+      <div class="legend"><span><i style="background:var(--acc)"></i>Skyloop, this review</span><span><i style="background:var(--ink-3)"></i>built or estimated elsewhere</span><span><i style="background:color-mix(in srgb,var(--quiet) 35%,transparent);border:1.5px solid var(--quiet)"></i>break-even</span><span><i style="border:1.5px dashed var(--ink-3)"></i>v0.1 claim</span></div>
       <div class="rc" id="cost"></div>
       <figcaption data-k="cost.caption"></figcaption>
     </figure>
@@ -397,6 +401,43 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   </div>
 </section>
 
+<section aria-labelledby="diff-h">
+  <div class="sec-head">
+    <div class="eyebrow">Version history</div>
+    <h2 id="diff-h">How v0.2 differs from v0.1</h2>
+  </div>
+  <div class="prose" id="diff-prose"></div>
+  <p><a href="#v0.1" class="vgo" data-k="diff.link"></a></p>
+</section>
+
+</div><!-- /panel-v02 -->
+
+<div class="vpanel" id="panel-v01" role="tabpanel" aria-labelledby="tab-v01" hidden>
+
+<section aria-labelledby="v01-h">
+  <div class="sec-head">
+    <div class="eyebrow" data-k="v01.eyebrow"></div>
+    <h2 id="v01-h" data-k="v01.title"></h2>
+  </div>
+  <div class="spec" id="v01-spec"></div>
+  <div class="prose" id="v01-intro"></div>
+</section>
+
+<section aria-labelledby="idea-h">
+  <div class="sec-head">
+    <div class="eyebrow">The idea vs the physics</div>
+    <h2 id="idea-h">What the original concept assumed, and what the numbers say</h2>
+    <p class="lede" data-k="idea.lede"></p>
+  </div>
+  <div>
+    <div class="ledger-head"><span>The idea (docs/, 2025)</span><span>What the physics says (skyloop-review/, Oct 2026)</span></div>
+    <div class="ledger" id="ledger"></div>
+  </div>
+  <p><a href="#v0.2" class="vgo" data-k="v01.back"></a></p>
+</section>
+
+</div><!-- /panel-v01 -->
+
 <footer id="foot"></footer>
 </div>
 
@@ -404,13 +445,33 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 /* ===== Every number on the page lives here. Sources: skyloop-review/ (README.md; physics/, regime/, stability/, heating/, flight/, hybrid/, system/ .md and .csv) and docs/ (original concept), 22–23 Oct 2026.
    "≈" marks a value scaled here from a study value (e.g. ∝ V²), not read directly. Mach means V = M × 295 m/s (20 km). ===== */
 const DATA = {
-  meta:{status:"screening desk study, October 2026", date:"23 October 2026",
-    lede:"The original idea: a near-vacuum tube floating 20 km up, held by hydrogen and tethers, with passenger pods gliding through it at Mach 2–6. This re-review ran the physics and the economics. The tube can float, but it cannot stay straight, gliders cannot glide in it, and the business case needs costs no vacuum train has reached.",
+  /* concept versions: first = latest = default tab; the header eyebrow and lede follow the selected tab */
+  versions:{list:[
+    {id:"v0.2", tab:"current", status:"screening desk study, October 2026",
+     lede:"Skyloop v0.2 is a low-pressure tube floating 20 km up in a hydrogen envelope, held straight by 0.1–1 GN of tension, with a steered maglev guideway carrying 50-seat wingless pods at Mach 4–4.75. It is the design that survived an October 2026 re-review of the 2025 original. It passes the screening physics on paper, but it pays only with a headway rule no regulator has certified, a tube near the cheap end of its cost range and nearly every air traveller on the corridor switching."},
+    {id:"v0.1", tab:"original concept", status:"original concept, docs/, 2025",
+     lede:"Skyloop as first written up in 2025: a near-vacuum tube floating 20 km up with small pods gliding through it at Mach 2–6. Below, the concept as designed, and each of its claims beside what the October 2026 re-review found."}
+  ]},
+  meta:{date:"23 October 2026",
     repoText:"github.com/pablo-mayrgundter/skyloop, folder skyloop-review/",
     repoUrl:"https://github.com/pablo-mayrgundter/skyloop/tree/main/skyloop-review"},
   hero:{tag:"surviving design, Mach 4", alt_km:20, bore_m:40, envR_m:108, ramp_km:237, rampMach:4, rampG:0.3,
     tetherSpacing_km:3, tether_MN:45, route_km:"3,974", jet_km:[10,12], pressure_Pa:"~80–190", podSeats:50, pod_t:17,
     scaleNote:"Altitude is to scale; distances are not. NYC–LAX is 3,974 km, so the 20 km height would be a sliver 0.5 % of the route's length, and each launch ramp is ~237 km long at Mach 4 and 0.3 g. A 40 m bore in a ~108 m-radius envelope would be invisible at this scale, so the lens magnifies it, and the pod and guideway inside the lens are drawn several times too large. Tube pressure in the best design points is ~80–190 Pa. Numbers are from the review's screening models (hybrid.md, stability.md, physics.md, system.md)."},
+  v01:{eyebrow:"v0.1 · the original concept, docs/01–08, 2025",
+    title:"A floating near-vacuum tube with gliding darts",
+    back:"← Back to v0.2 · current",
+    spec:[["20 km","tube altitude (20–30 km in docs/01), above the weather"],["~5.5 Pa","inside the tube, ≈ 10⁻³ of ambient"],["2–4 seats","per needle “dart” pod, at Mach 2, 4 or 6"],["$5–10 M","per km of tube and lift cells (docs/03)"]],
+    intro:[
+      "Skyloop v0.1 is the concept as written up in docs/ in 2025: a global stratospheric network starting with a Tokyo–Los Angeles–New York–London backbone. Ultra-thin composite tubes float at 20–30 km on integrated hydrogen or helium cells, or on vacuum “invballoon” lobes (envelope radius 30–50 m around a 3 m core bore of ~150 kg/m) working entirely in tension, and are steadied by tethers and winches.",
+      "Needle-shaped “dart” pods carrying 2–4 passengers are launched by linear motors at Mach 2, 4 or 6 and coast through air at ≈ 10⁻³ of ambient, light enough to use aerodynamic lift. Stations on tethered platforms every 20–50 km launch and catch them, reached from the ground by elevator or tilt-rotor.",
+      "The docs claimed $5–10 M per km of tube, 0.5–2 Wh per passenger-km, ~12,000 passengers an hour each way (300,000–500,000 a day per corridor) and an all-in cost of $0.008–0.015 per passenger-mile, about a tenth of air travel. The October 2026 re-review checked each claim; the ledger below sets them side by side."
+    ]},
+  diff:{link:"See v0.1 · the original concept and its ledger →",
+    prose:[
+      "v0.1, the 2025 concept in docs/, floated a few-metre bore at ~5.5 Pa on vacuum “invballoon” lobes and tethers, with 2–4-seat needle pods gliding at Mach 2–6 between stations at altitude every 20–50 km. The re-review found the low pressure fine and little else: gliders cannot glide at 5.5 Pa, the invballoon sinks, the energy, capacity and cost claims were far too optimistic, and tethers cannot hold the line straight enough at any Mach.",
+      "v0.2 keeps the altitude, the low pressure and the electric drive, and changes the rest: separate hydrogen envelopes for lift, a 0.1–1 GN tension line to keep the tube straight, a 20–40 m bore with a steered maglev guideway, 50-seat wingless pods, and ground portals with launch ramps instead of stations at 20 km. On paper it clears the alignment, breach and heating checks to about Mach 4–4.75; headway, launch power and cost are what stop it."
+    ]},
   idea:{
     lede:"The docs describe a tube at ~10⁻³ of ambient pressure (~5.5 Pa at 20 km), lifted by its own vacuum and hydrogen cells, carrying 2–4-seat needle pods that coast through it at Mach 2, 4 or 6. The pressure turns out fine. Almost everything else does not.",
     rows:[
@@ -501,10 +562,10 @@ const DATA = {
       {mode:"Skyloop M6", ground:100, taxi:0, accel:20.1, cruise:28.1, h:2.47, sky:true}
     ]},
   energy:{
-    caption:"Log scale. Electricity at the wall vs the fuel energy of aircraft, both per passenger-km. The surviving design's 35–56 Wh at Mach 4–4.75 is a sixth to a tenth of a jet's; on a 2045 grid that is 3–13 g CO₂ per passenger-km against ~90 for a subsonic jet. The original claim is 5–80× too low because braking losses were left out.",
+    caption:"Log scale. Electricity at the wall vs the fuel energy of aircraft, both per passenger-km. The surviving design's 35–56 Wh at Mach 4–4.75 is a sixth to a tenth of a jet's; on a 2045 grid that is 3–13 g CO₂ per passenger-km against ~90 for a subsonic jet. The v0.1 claim is 5–80× too low because braking losses were left out.",
     min:0.3, max:3000, ticks:[1,10,100,1000],
     rows:[
-      {label:"Original claim (docs/03)", lo:0.5, hi:2, cls:"claim", txt:"0.5–2"},
+      {label:"v0.1 claim (docs/03)", lo:0.5, hi:2, cls:"claim", txt:"0.5–2"},
       {label:"Surviving design, maglev pods, M2–9 (40 m bore)", lo:17, hi:90, cls:"elec", txt:"17–90", dot:[35,56], dotTxt:"35–56 at M4–4.75"},
       {label:"Thin-bore maglev, system study (M4)", lo:21, hi:85, cls:"elec", txt:"21–85"},
       {label:"Gliding pods, only window M1.8–3", lo:130, hi:260, cls:"wing", txt:"130–260"},
@@ -538,7 +599,7 @@ const DATA = {
     caption:"Log scale, $M per km of tube pair (low–high; tick = base). The break-even band is the all-in average cost at which the spine + LAX reaches net B/C 1 vs subsonic with full capture in 2050 ($11–14 M/km at 30 % capture). Hyperloop firms claimed that range and never built it. Comparator figures were checked only at search-summary level.",
     min:3, max:1000, ticks:[3,10,30,100,300,1000],
     rows:[
-      {label:"Original claim, tube + lift (docs/03)", lo:5, hi:10, cls:"claim", txt:"5–10"},
+      {label:"v0.1 claim, tube + lift (docs/03)", lo:5, hi:10, cls:"claim", txt:"5–10"},
       {label:"Break-even, net, 100 % capture", lo:40, hi:55, cls:"even", txt:"40–55"},
       {label:"Skyloop run at 20 km (system study)", lo:19, hi:187, base:66, cls:"sky", txt:"19–187, base 66"},
       {label:"Skyloop ramp through the lower atmosphere", lo:40, hi:623, base:157, cls:"sky", txt:"40–623, base 157"},
@@ -668,9 +729,14 @@ function hero(){
   host.innerHTML=s;
 }
 hero();
-let lastW=window.innerWidth; window.addEventListener('resize',()=>{if(Math.abs(window.innerWidth-lastW)<4) return; lastW=window.innerWidth; hero(); d2d();});
+/* width-dependent figures; skipped while their version panel is hidden, re-run when its tab is shown */
+function redraw(){ const p=$('#panel-v02'); if(p&&p.hidden) return; hero(); d2d(); }
+let lastW=window.innerWidth; window.addEventListener('resize',()=>{if(Math.abs(window.innerWidth-lastW)<4) return; lastW=window.innerWidth; redraw();});
 
-/* ===== IDEA LEDGER ===== */
+/* ===== v0.1: ORIGINAL CONCEPT + IDEA LEDGER; v0.2: HOW IT DIFFERS ===== */
+$('#v01-spec').innerHTML=DATA.v01.spec.map(([b,t])=>`<div><b>${esc(b)}</b><span>${esc(t)}</span></div>`).join('');
+$('#v01-intro').innerHTML=DATA.v01.intro.map(t=>`<p>${esc(t)}</p>`).join('');
+$('#diff-prose').innerHTML=DATA.diff.prose.map(t=>`<p>${esc(t)}</p>`).join('');
 $('#ledger').innerHTML=DATA.idea.rows.map(r=>`<div class="row"><div class="claim"><b>${esc(r.claim)}</b><span class="src">${esc(r.src)}</span></div>
   <div class="check"><span class="verdict ${r.cls}">${esc(r.v)}</span><span>${esc(r.check)}</span></div></div>`).join('');
 
@@ -741,7 +807,7 @@ function d2d(){
   const lw=stack?0:150, rowH=stack?50:44, top=8, maxMin=450, plotW=W-lw-58, x=m=>lw+m/maxMin*plotW, n=D.rows.length;
   $('#d2d-legend').innerHTML=D.segs.map(([,l,,c])=>`<span><i style="background:${c}"></i>${l}</span>`).join('');
   let s=`<svg viewBox="0 0 ${W} ${top+n*rowH+26}" role="img" aria-label="Stacked bars of door-to-door time, New York to Los Angeles">`;
-  [0,60,120,180,240,300,360,420].forEach(m=>{s+=`<line x1="${r1(x(m))}" x2="${r1(x(m))}" y1="${top}" y2="${top+n*rowH}" class="s-grid"/>`+T(x(m),top+n*rowH+16,m/60+' h','f-ink3 tm','middle',11.5);});
+  [0,60,120,180,240,300,360,420].forEach(m=>{s+=`<line x1="${r1(x(m))}" x2="${r1(x(m))}" y1="${top}" y2="${top+n*rowH}" class="s-grid"/>`+T(x(m),top+n*rowH+16,m/60+' h','f-ink3 tm',m===0&&x(m)<20?'start':'middle',11.5);});
   D.rows.forEach((r,i)=>{const y0=top+i*rowH, y=stack?y0+20:y0+10; let cur=0;
     s+=T(0,stack?y0+14:y+13,r.mode,r.sky?'f-ink':'f-ink2','start',13.5,r.sky?'font-weight="600"':'');
     D.segs.forEach(([k,l,cls])=>{const v=r[k]; if(!v) return; const x0=x(cur), w=Math.max(x(cur+v)-x0-2,1);
@@ -783,4 +849,34 @@ rangeChart('#cost',DATA.cost,'$M/km');
 $('#musts').innerHTML=DATA.musts.map(t=>`<li>${esc(t)}</li>`).join('');
 $('#caveats').innerHTML=DATA.caveats.map(t=>`<li>${esc(t)}</li>`).join('');
 $('#foot').innerHTML=DATA.sources.map(t=>`<span>${esc(t)}</span>`).join('');
+
+/* ===== VERSION TABS: same component on all three concept pages. #v0.1 / #v0.2 deep-link; default = latest (first in DATA.versions.list). ===== */
+(function(){
+  const V=DATA.versions.list, bar=$('#vtabs'), slug=id=>id.replace(/\W/g,''), known=id=>V.some(v=>v.id===id);
+  bar.innerHTML=V.map(v=>`<button type="button" class="vtab" role="tab" id="tab-${slug(v.id)}" aria-controls="panel-${slug(v.id)}" aria-selected="false" tabindex="-1" data-v="${esc(v.id)}"><b>${esc(v.id)}</b> · ${esc(v.tab)}</button>`).join('')+
+    (DATA.versions.note?`<span class="vt-note">${esc(DATA.versions.note)}</span>`:'');
+  const tabs=[...bar.querySelectorAll('[role="tab"]')];
+  let cur=null;
+  function show(id,o={}){
+    if(!known(id)) id=V[0].id;
+    const changed=id!==cur; cur=id;
+    tabs.forEach(t=>{const on=t.dataset.v===id; t.setAttribute('aria-selected',on?'true':'false'); t.tabIndex=on?0:-1;
+      const p=document.getElementById(t.getAttribute('aria-controls')); if(p) p.hidden=!on;});
+    const v=V.find(x=>x.id===id);
+    document.querySelectorAll('[data-vk]').forEach(el=>{const t=v[el.dataset.vk]; el.textContent=t==null?'':t;});
+    if(o.hash){ try{ history.replaceState(null,'','#'+id); }catch(e){} }
+    if(o.scroll) (bar.closest('header')||bar).scrollIntoView({block:'start'});
+    if(o.focus) document.getElementById('tab-'+slug(id)).focus({preventScroll:true});
+    if(changed&&o.user&&typeof redraw==='function') redraw();
+  }
+  bar.addEventListener('click',e=>{const t=e.target.closest('[role="tab"]'); if(t) show(t.dataset.v,{hash:true,user:true});});
+  bar.addEventListener('keydown',e=>{const i=tabs.indexOf(document.activeElement); if(i<0) return;
+    const j={ArrowRight:(i+1)%tabs.length,ArrowLeft:(i-1+tabs.length)%tabs.length,Home:0,End:tabs.length-1}[e.key];
+    if(j===undefined) return; e.preventDefault(); show(tabs[j].dataset.v,{hash:true,user:true,focus:true});});
+  document.addEventListener('click',e=>{const a=e.target.closest('a.vgo'); if(!a) return; const id=decodeURIComponent(a.getAttribute('href').slice(1));
+    if(!known(id)) return; e.preventDefault(); show(id,{hash:true,user:true,focus:true,scroll:true});});
+  const fromHash=()=>{let h=''; try{h=decodeURIComponent(location.hash.slice(1));}catch(e){} return known(h)?h:null;};
+  window.addEventListener('hashchange',()=>{const h=fromHash(); if(h) show(h,{user:true});});
+  show(fromHash()||V[0].id);
+})();
 </script>

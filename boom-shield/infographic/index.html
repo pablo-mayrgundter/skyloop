@@ -59,6 +59,19 @@ section{display:grid;gap:22px}
 .family a:hover{color:var(--ink);border-color:var(--rule)}
 .family a[aria-current="page"]{color:var(--ink);font-weight:600;border-color:var(--quiet)}
 .family .lab{letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-right:6px}
+/* version tabs (same component on all three concept pages) */
+.vtabs,.vgo{--vt-acc:var(--quiet)}
+.vtabs{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.vtab{appearance:none;-webkit-appearance:none;cursor:pointer;margin:0;font:500 12.5px/1.2 var(--f-mono);letter-spacing:.03em;color:var(--ink-2);background:transparent;border:1px solid var(--rule);border-radius:4px;padding:8px 12px;min-height:36px}
+.vtab b{font-weight:600;color:var(--ink)}
+.vtab:hover{border-color:var(--ink-3);color:var(--ink)}
+.vtab[aria-selected="true"]{border-color:var(--vt-acc);color:var(--ink);background:color-mix(in srgb,var(--vt-acc) 12%,transparent);box-shadow:inset 0 -2px 0 var(--vt-acc)}
+.vtab:focus-visible,.vgo:focus-visible{outline:2px solid var(--vt-acc);outline-offset:2px}
+.vt-note{font:500 12px/1.3 var(--f-mono);color:var(--ink-3)}
+.vpanel{display:grid;gap:56px;min-width:0}
+.vpanel[hidden]{display:none!important}
+.vgo{display:inline-block;font:500 13px/1.3 var(--f-mono);color:var(--ink);text-decoration:none;border:1px solid var(--vt-acc);border-radius:4px;padding:9px 13px}
+.vgo:hover{background:color-mix(in srgb,var(--vt-acc) 12%,transparent)}
 /* header */
 header.top{display:grid;gap:14px}
 .title-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px}
@@ -130,6 +143,17 @@ table.vals .chip{font-size:10px;padding:2px 4px}
 .verdict.alternate{border-color:var(--quiet);color:var(--quiet)}
 .verdict.rejected{border-color:var(--boom);color:var(--boom)}
 .verdict.narrow{border-color:var(--boom);color:var(--boom);border-style:dashed}
+.verdict.open{border-color:var(--film-edge);color:var(--film-edge);border-style:dashed}
+.verdict.fatal{background:var(--boom);border-color:var(--boom);color:var(--surface)}
+/* v0.1 idea ledger (same layout as the Skyloop page) */
+.ledger-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:24px;font:500 11px var(--f-mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-3);padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.ledger{display:grid}
+.ledger .row{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:6px 24px;padding:12px 0;border-bottom:1px solid var(--rule);align-items:start}
+.ledger .claim{display:grid;gap:6px;align-content:start}
+.ledger .claim b{font-weight:600;font-size:15px;line-height:1.35}
+.ledger .claim span.src{font:500 11px var(--f-mono);color:var(--ink-3)}
+.ledger .check{display:grid;gap:6px;align-content:start;font-size:14px;color:var(--ink-2)}
+.ledger .check .verdict{justify-self:start}
 /* mooring */
 .concerns{display:grid;gap:0;border-top:1px solid var(--rule)}
 .concerns div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 16px;padding:10px 0;border-bottom:1px solid var(--rule);align-items:baseline}
@@ -205,12 +229,15 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   .spec b{font-size:22px}
   .ac{grid-template-columns:minmax(0,1fr)}
   .ac .sil{max-width:150px}
+  .ledger-head{display:none}
+  .ledger .row{grid-template-columns:minmax(0,1fr)}
   .lede{font-size:17px}
   #cross-svg{min-width:640px}
   #ruler svg{min-width:560px}
   .swipe-hint{display:block}
-  .hero svg text{font-size:14px}
-  .hero svg text.td{font-size:16px}
+  .hero svg text{font-size:13px}
+  .hero svg text.td{font-size:15px}
+  .hero svg text.tm{font-size:12px}
 }
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -220,14 +247,17 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 <div class="wrap">
 
 <header class="top">
-  <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="#boomshield" aria-current="page">BoomShield</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK" target="_blank" rel="noopener">Skyloop</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB" target="_blank" rel="noopener">Hyperloop (our version)</a></nav>
-  <div class="eyebrow">Skyloop · concept study · <span data-k="meta.status"></span></div>
+  <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="#overview" target="_blank" rel="noopener">Overview</a><span aria-hidden="true">·</span><a href="#boomshield" aria-current="page">BoomShield</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK" target="_blank" rel="noopener">Skyloop</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB" target="_blank" rel="noopener">Hyperloop (our version)</a></nav>
+  <div class="eyebrow">BoomShield · <span data-vk="id"></span> · <span data-vk="status"></span></div>
   <div class="title-row">
     <h1>BoomShield</h1>
     <span class="reg">boom-shield/ · screening models, no hardware</span>
   </div>
-  <p class="lede">A long, flat bag of hydrogen floating at 20 km under a supersonic flight corridor. The aircraft flies just above it. The bag stops the sonic boom on its way down, so the ground underneath hears a faint thud instead of a crack.</p>
+  <div class="vtabs" id="vtabs" role="tablist" aria-label="Concept version"></div>
+  <p class="lede" data-vk="lede"></p>
 </header>
+
+<div class="vpanel" id="panel-v02" role="tabpanel" aria-labelledby="tab-v02">
 
 <section class="hero" aria-labelledby="hero-h">
   <h2 id="hero-h" class="eyebrow" style="font-family:var(--f-mono);font-size:12px;font-weight:500">Cut-away view, same aircraft and same atmosphere</h2>
@@ -384,7 +414,45 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   </div>
 </section>
 
+<section aria-labelledby="diff-h">
+  <div class="sec-head">
+    <div class="eyebrow">Version history</div>
+    <h2 id="diff-h">How v0.2 differs from v0.1</h2>
+  </div>
+  <div class="prose" id="diff-prose"></div>
+  <p><a href="#v0.1" class="vgo" data-k="diff.link"></a></p>
+</section>
+
+</div><!-- /panel-v02 -->
+
+<div class="vpanel" id="panel-v01" role="tabpanel" aria-labelledby="tab-v01" hidden>
+
+<section aria-labelledby="v01-h">
+  <div class="sec-head">
+    <div class="eyebrow" data-k="v01.eyebrow"></div>
+    <h2 id="v01-h" data-k="v01.title"></h2>
+  </div>
+  <div class="spec" id="v01-spec"></div>
+  <div class="prose" id="v01-intro"></div>
+</section>
+
+<section aria-labelledby="idea-h">
+  <div class="sec-head">
+    <div class="eyebrow">The idea vs the simulations</div>
+    <h2 id="idea-h">What the handoff assumed, and what phase 1 found</h2>
+    <p class="lede" data-k="v01.ledgerLede"></p>
+  </div>
+  <div>
+    <div class="ledger-head"><span data-k="v01.colIdea"></span><span data-k="v01.colFound"></span></div>
+    <div class="ledger" id="ledger"></div>
+  </div>
+  <p><a href="#v0.2" class="vgo" data-k="v01.back"></a></p>
+</section>
+
+</div><!-- /panel-v01 -->
+
 <footer>
+  <span>v0.1 (original concept): handoff/2026-10-20-boomshield-handoff.md, handoff/2026-10-20-review-addendum.md, boom-shield-summary.md, segment-analysis/boom-shield-segment-analysis-thread-notes.md; its ledger's findings come from STATUS.md and the studies below.</span>
   <span>Sources in the repo: STATUS.md; sim/results/psf_sweep.md, psf_sweep.csv, secondary_booms.md, focus_booms.md, onramp_shield.md; fatigue/lid-fatigue.md; operations/tethers-build-failure.md; network-maps/routes, trunk, coverage and demand; network-maps/highmach/highmach.md (summary_by_mach.csv); network-maps/global/global.md; economics/economics.md, economics/cost-down/cost-down.md, economics/integration/integration.md (bcr.csv), economics/growth/growth.md; altitude/altitude-trade.md; sim/results/3d_summary.md, 3d_carpet_summary.csv, 3d_results.csv, gate0_summary.md, wind_turbulence.md, alongtrack_summary.md, line_ties_check.md; structure/structure-concept.md; vacuum/vacuum-balloon-review.md; handoff/2026-10-20-review-addendum.md.</span>
   <span>Benefit/cost (B/C): <b>gross</b> = time saved at $86/h × 95 % availability over the annualised cost of the shield (two tether rows); <b>net</b> = the same after also subtracting the extra fuel ($0.80/kg) and CO₂ ($190/t) of supersonic flight. "Capture" is the share of each pair's traffic the shield's aircraft carries. Traffic and costs are screening estimates; web figures were checked only at search-summary level.</span>
   <span>PLdB: Stevens Mark VII perceived level, the standard loudness metric for sonic booms. "Proxy" values apply a 1 ms rise-time smoothing and are the conservative headline used throughout the study.</span>
@@ -394,7 +462,54 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 <script>
 /* ===== Every number on the page lives here (values from data.json, 21 Oct 2026; psf values from sim/results/psf_sweep.md/.csv and 3d_carpet_summary.csv; superboom, fatigue, operations, network, economics, integration, higher-Mach, growth and global values from the studies listed in the footer and STATUS.md, 22 Oct 2026). B/C labels say gross (time value vs shield cost) or net (also subtracting the extra fuel and CO2 of supersonic flight). ===== */
 const DATA = {
-  meta:{status:"screening study, end of phase 1, October 2026", statusDate:"22 October 2026",
+  /* concept versions: first = latest = default tab; the header eyebrow and lede follow the selected tab */
+  versions:{list:[
+    {id:"v0.2", tab:"current", status:"phase-1 simulation study, October 2026",
+     lede:"A long, flat bag of hydrogen floating at 20 km under a supersonic flight corridor. The aircraft flies just above it. The bag stops the sonic boom on its way down, so the ground underneath hears a faint thud instead of a crack."},
+    {id:"v0.1", tab:"original concept", status:"original handoff concept, 20 October 2026",
+     lede:"BoomShield as first handed off, before any simulation: a light, buoyant acoustic deck under a supersonic corridor. Below, the concept as handed off, and each of its assumptions beside what the phase-1 simulations found."}
+  ]},
+  /* v0.1 = handoff/2026-10-20-boomshield-handoff.md, boom-shield-summary.md and segment-analysis notes; "found" column = STATUS.md and the phase-1 studies it cites
+     (review-addendum checks where marked) */
+  v01:{eyebrow:"v0.1 · the handoff concept, 20 October 2026",
+    title:"A light acoustic deck floating under the corridor",
+    back:"← Back to v0.2 · current",
+    colIdea:"The idea (handoff and first acoustic thread)", colFound:"What phase 1 found (STATUS.md, 22 Oct 2026)",
+    spec:[["1 km","reference shield width, aircraft ~250 m above it"],["200–300 m","structural module width, 12–18 m thick, 250 m long"],["~4 kg/m²","system areal mass (2–8 studied; deck aim 0.2–0.5)"],["M1.6–2.5","initial flight study; Mach 3.2 and 6 as stretch cases"]],
+    intro:[
+      "BoomShield v0.1 is the concept as handed off on 20 October 2026, distilled from the March–April 2026 threads: a buoyant, segmented acoustic corridor at ~20 km under supersonic traffic. Thin membranes, tendons, sparse ribs and replaceable panels form a slightly curved deck that intercepts and reshapes the downward boom. Gas cells, evacuated structures or a hybrid (the favoured option) lift it, and local support stations hold each module rather than one continuous structure. The guiding phrase was “extreme areal parsimony”.",
+      "An acoustic surrogate anchored to NASA's X-59 (~75 PLdB at Mach 1.4) found a 1 km shield with aircraft 250 m above it plausible for SR-71-class flight at Mach 3.2, needing only ~8–14 dB of opacity, and for a Mach 6 SR-72-class case in the optimistic source case. Viability was framed as a window: the minimum operational clearance must sit below the largest acoustically useful one.",
+      "The handoff was explicit that these were study cases, not a design, and it already flagged that a 15 m helium envelope cannot float the ~4 kg/m² target. Phase 1 then simulated the whole chain, from aircraft to ground, and costed it."
+    ],
+    ledgerLede:"The core idea, a wide layer under the flight path, holds. Most of the numbers and mechanisms around it moved, and the economics, which the handoff left open, are where the concept now fails.",
+    rows:[
+      {claim:"A 1 km shield with aircraft ~250 m above it blocks the direct boom", src:"summary; handoff §4", v:"holds", cls:"baseline",
+       check:"In 3-D simulation a 1 km × 30 m hydrogen layer cuts a Concorde Mach 2 boom by ~34 dB under the track and ~25 dB at the loudest point of the carpet: ~98 → 64 PLdB, at most ~73 anywhere. The 1 km / 250 m geometry carries into v0.2."},
+      {claim:"Target: X-59-like ground loudness, ~75 PLdB", src:"summary; handoff §2", v:"wrong limit", cls:"rejected",
+       check:"Loudness is not what binds. The FAA's proposed 0.11 psf (5.3 Pa) peak limit is: the 30 m layer that passes on loudness still lets 0.24 psf through at Mach 2. Passing needs ~54 m of H₂ and a shield ~1.5–2 km wide."},
+      {claim:"SR-71 class needs only ~8–14 dB of opacity; Mach 6 (SR-72 class) is plausible at 250 m in the optimistic case", src:"summary §2–5", v:"false", cls:"rejected",
+       check:"An unshaped SR-71 makes an ordinary N-wave: simulated 93.1 PLdB and 1.08 psf unshielded, needing ≥ 71 m of H₂ for 0.11 psf. Mach 6 is out: the layer stops working once the aircraft outruns sound in the gas, at M3.80 for pure H₂ and M3.37 at 98 % purity."},
+      {claim:"Higher Mach narrows the shield: W ≈ 2h/√(M²−1)", src:"segment notes; handoff §3", v:"false", cls:"rejected",
+       check:"In still air a ray meets the shield plane at y = h·tan φ whatever the Mach (review addendum); in a real atmosphere the carpet widens with Mach. Width, not gas thickness, sets loudness, and the 0.11 psf limit needs ~1.5–2 km across the whole carpet."},
+      {claim:"Structural modules 200–300 m wide and 12–18 m thick", src:"handoff brief; segment notes S1–S3", v:"rejected", cls:"rejected",
+       check:"Edge diffraction dominates a narrow shield: 250 m wide gives only −8 to −9 dB under the track and −3 dB at the carpet maximum, and is 0–2 dB louder than no shield beyond ~18 km. v0.2 builds 250 m-long modules 1.5 km wide instead."},
+      {claim:"~4 kg/m² of system (2–8 studied), floated by a ~15 m helium envelope", src:"segment notes; handoff §6", v:"does not float", cls:"rejected",
+       check:"A 15 m helium envelope at 20 km lifts only ~0.9 kg/m², so a 250 m module would carry ~56 t against 250 t (the handoff's own check). v0.2 floats a hydrogen layer ~55 m thick under a ≈2.4 kg/m² lid on a 0.1 kg/m² floor; as helium, its gas would be over 200 years of world output."},
+      {claim:"A light deck that scatters or reshapes the wave (“wavefront mangler”), transmission floor A_mat ≈ 0.05; gas, vacuum or hybrid lift", src:"handoff §5, §7; summary §5", v:"other mechanism", cls:"alternate",
+       check:"By the mass law, a buoyant limp sheet passing only 5 % needs a > 100–200 m envelope (review addendum). What works is the gas itself: the boom sweeps the layer 1.3 to 2.1 times slower than sound in it, so it decays inside. Anything stiff or open leaks it through; vacuum frames do not float (structure 1.23–1.44× lift)."},
+      {claim:"Local tethers per module; ~600 N/m of crosswind, ~150 kN per 250 m module", src:"handoff §8", v:"far larger", cls:"open",
+       check:"Tether drag through the jet stream dominates (350–630 kN on a single 5 cm tether, review addendum). v0.2 needs 28.4 MN per bare tether (21.5 cm, 555 t), two anchor rows of ~2,700 tethers, and its worst failure is a bay rising into the flight level ~100 s after losing its hold-down. Open, not refuted."},
+      {claim:"Network: an LAX–DEN–ORD–JFK trunk with feeders; legs over 3,000 km are strong trunk candidates", src:"handoff §9; network-maps/america-north", v:"refined", cls:"alternate",
+       check:"Climb, acceleration and descent take ~1,100 km, so a shield buys nothing on shorter legs. A greedy search finds one 3,614 km spine, LAS–DEN–OMA–CHI–CLE–NYC, carrying ~81 M passengers a year (~37 % of the time a shield could save)."},
+      {claim:"Cost left open: every $10/m² adds $2.5 M/km at 250 m wide, $10 M/km at 1 km", src:"handoff §9", v:"does not pay", cls:"fatal",
+       check:"$106/m² bought, ~$14/m² ($91 B for the spine) only by owning the plants. Gross benefit/cost 0.49 against Boomless Cruise and 1.75 against subsonic; net of the extra fuel and CO₂, 0.28 against Boomless at best (light M2.0 jet) and below zero against subsonic."}
+    ]},
+  diff:{link:"See v0.1 · the handoff concept and its ledger →",
+    prose:[
+      "v0.1 was the October 2026 handoff: a light, segmented acoustic deck of 200–300 m modules at ~4 kg/m², lifted by helium, vacuum or hybrid cells, with a 1 km shield 250 m below the aircraft as the acoustic reference and SR-71 to SR-72 class aircraft (Mach 3.2–6) as stretch cases. Its numbers came from surrogate models, and its cost was left open.",
+      "v0.2 is phase 1, simulated from aircraft to ground and costed. It keeps the 20 km altitude and the ~250 m clearance, and replaces most of the rest: a hydrogen layer whose own sound speed blocks the boom, a soft floating-lid pillow ~55 m thick and 1.5–2 km wide to meet the proposed 0.11 psf limit, Mach 2.0–2.2 aircraft instead of Mach 3–6, one 3,614 km spine, and a benefit/cost model, which is where it now fails."
+    ]},
+  meta:{statusDate:"22 October 2026",
     repoText:"github.com/pablo-mayrgundter/skyloop, folder boom-shield/",
     repoUrl:"https://github.com/pablo-mayrgundter/skyloop/tree/main/boom-shield"},
   geometry:{shieldAlt_km:20, clearance_m:250, width_km:1, thickness_m:30, carpetHalf_km:40,
@@ -758,7 +873,7 @@ $('#hero-on').innerHTML=hero(true);
   s+=`<path d="M${X(-39.3)} ${yG+18} H${X(39.3)} M${X(-39.3)} ${yG+13} v10 M${X(39.3)} ${yG+13} v10" class="s-ink2" stroke-width="1" fill="none"/>`;
   s+=`<text x="${cx}" y="${yG+34}" font-size="11" text-anchor="middle" class="f-ink2 tm">computed carpet ±${g.carpetComputed_km} km</text>`;
   [-1,1].forEach(sg=>{s+=`<line x1="${X(sg*47.7)}" x2="${X(sg*47.7)}" y1="${yG-8}" y2="${yG+24}" class="s-ink3" stroke-dasharray="2 2" fill="none"/>`;});
-  s+=`<text x="${X(47.7)+4}" y="${yG+24}" font-size="10.5" class="f-ink3 tm">cutoff ±${g.cutoffHalf_km} km</text>`;
+  s+=`<text x="${X(47.7)+3}" y="${yG+24}" font-size="10" class="f-ink3 tm">cutoff ±${g.cutoffHalf_km} km</text>`;
   // shield and aircraft (tiny, true scale-ish)
   s+=`<rect x="${cx-4}" y="${top}" width="8" height="4" class="f-film"/><circle cx="${cx}" cy="${top-3}" r="1.6" class="f-ink"/>`;
   // labels in main
@@ -989,8 +1104,45 @@ $('#opts').innerHTML=DATA.options.map(o=>`<div class="opt"><svg viewBox="0 0 200
     N.mach.map(r=>`<tr${r.m==='M2.0'||r.m==='M2.2'?' class="sweet"':''}><td><b>${r.m}</b> <small>${r.ac}</small></td>${td(r.gbl)}${td(r.nbl)}${td(r.gsub)}${td(r.nsub)}</tr>`).join('')+`</tbody>`;
 })();
 
+/* ===== v0.1: ORIGINAL CONCEPT + IDEA LEDGER; v0.2: HOW IT DIFFERS ===== */
+$('#v01-spec').innerHTML=DATA.v01.spec.map(([b,t])=>`<div><b>${esc(b)}</b><span>${esc(t)}</span></div>`).join('');
+$('#v01-intro').innerHTML=DATA.v01.intro.map(t=>`<p>${esc(t)}</p>`).join('');
+$('#ledger').innerHTML=DATA.v01.rows.map(r=>`<div class="row"><div class="claim"><b>${esc(r.claim)}</b><span class="src">${esc(r.src)}</span></div>
+  <div class="check"><span class="verdict ${r.cls}">${esc(r.v)}</span><span>${esc(r.check)}</span></div></div>`).join('');
+$('#diff-prose').innerHTML=DATA.diff.prose.map(t=>`<p>${esc(t)}</p>`).join('');
+
 /* ===== STATUS ===== */
 $('#findings').innerHTML=DATA.findings.map(t=>`<li>${esc(t)}</li>`).join('');
 $('#caveats').innerHTML=DATA.caveats.map(t=>`<li>${esc(t)}</li>`).join('');
 $('#next').innerHTML=DATA.next.map(t=>`<li>${esc(t)}</li>`).join('');
+
+/* ===== VERSION TABS: same component on all three concept pages. #v0.1 / #v0.2 deep-link; default = latest (first in DATA.versions.list). ===== */
+(function(){
+  const V=DATA.versions.list, bar=$('#vtabs'), slug=id=>id.replace(/\W/g,''), known=id=>V.some(v=>v.id===id);
+  bar.innerHTML=V.map(v=>`<button type="button" class="vtab" role="tab" id="tab-${slug(v.id)}" aria-controls="panel-${slug(v.id)}" aria-selected="false" tabindex="-1" data-v="${esc(v.id)}"><b>${esc(v.id)}</b> · ${esc(v.tab)}</button>`).join('')+
+    (DATA.versions.note?`<span class="vt-note">${esc(DATA.versions.note)}</span>`:'');
+  const tabs=[...bar.querySelectorAll('[role="tab"]')];
+  let cur=null;
+  function show(id,o={}){
+    if(!known(id)) id=V[0].id;
+    const changed=id!==cur; cur=id;
+    tabs.forEach(t=>{const on=t.dataset.v===id; t.setAttribute('aria-selected',on?'true':'false'); t.tabIndex=on?0:-1;
+      const p=document.getElementById(t.getAttribute('aria-controls')); if(p) p.hidden=!on;});
+    const v=V.find(x=>x.id===id);
+    document.querySelectorAll('[data-vk]').forEach(el=>{const t=v[el.dataset.vk]; el.textContent=t==null?'':t;});
+    if(o.hash){ try{ history.replaceState(null,'','#'+id); }catch(e){} }
+    if(o.scroll) (bar.closest('header')||bar).scrollIntoView({block:'start'});
+    if(o.focus) document.getElementById('tab-'+slug(id)).focus({preventScroll:true});
+    if(changed&&o.user&&typeof redraw==='function') redraw();
+  }
+  bar.addEventListener('click',e=>{const t=e.target.closest('[role="tab"]'); if(t) show(t.dataset.v,{hash:true,user:true});});
+  bar.addEventListener('keydown',e=>{const i=tabs.indexOf(document.activeElement); if(i<0) return;
+    const j={ArrowRight:(i+1)%tabs.length,ArrowLeft:(i-1+tabs.length)%tabs.length,Home:0,End:tabs.length-1}[e.key];
+    if(j===undefined) return; e.preventDefault(); show(tabs[j].dataset.v,{hash:true,user:true,focus:true});});
+  document.addEventListener('click',e=>{const a=e.target.closest('a.vgo'); if(!a) return; const id=decodeURIComponent(a.getAttribute('href').slice(1));
+    if(!known(id)) return; e.preventDefault(); show(id,{hash:true,user:true,focus:true,scroll:true});});
+  const fromHash=()=>{let h=''; try{h=decodeURIComponent(location.hash.slice(1));}catch(e){} return known(h)?h:null;};
+  window.addEventListener('hashchange',()=>{const h=fromHash(); if(h) show(h,{user:true});});
+  show(fromHash()||V[0].id);
+})();
 </script>
