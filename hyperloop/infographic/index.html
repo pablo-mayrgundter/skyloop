@@ -71,6 +71,19 @@ section{display:grid;gap:22px;min-width:0}
 .family a:hover{color:var(--ink);border-color:var(--rule)}
 .family a[aria-current="page"]{color:var(--ink);font-weight:600;border-color:var(--acc)}
 .family .lab{letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-right:6px}
+/* version tabs (same component on all three concept pages) */
+.vtabs,.vgo{--vt-acc:var(--acc)}
+.vtabs{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px}
+.vtab{appearance:none;-webkit-appearance:none;cursor:pointer;margin:0;font:500 12.5px/1.2 var(--f-mono);letter-spacing:.03em;color:var(--ink-2);background:transparent;border:1px solid var(--rule);border-radius:4px;padding:8px 12px;min-height:36px}
+.vtab b{font-weight:600;color:var(--ink)}
+.vtab:hover{border-color:var(--ink-3);color:var(--ink)}
+.vtab[aria-selected="true"]{border-color:var(--vt-acc);color:var(--ink);background:color-mix(in srgb,var(--vt-acc) 12%,transparent);box-shadow:inset 0 -2px 0 var(--vt-acc)}
+.vtab:focus-visible,.vgo:focus-visible{outline:2px solid var(--vt-acc);outline-offset:2px}
+.vt-note{font:500 12px/1.3 var(--f-mono);color:var(--ink-3)}
+.vpanel{display:grid;gap:56px;min-width:0}
+.vpanel[hidden]{display:none!important}
+.vgo{display:inline-block;font:500 13px/1.3 var(--f-mono);color:var(--ink);text-decoration:none;border:1px solid var(--vt-acc);border-radius:4px;padding:9px 13px}
+.vgo:hover{background:color-mix(in srgb,var(--vt-acc) 12%,transparent)}
 /* header */
 header.top{display:grid;gap:14px}
 .title-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px}
@@ -307,14 +320,17 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 <div class="wrap">
 
 <header class="top">
-  <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ" target="_blank" rel="noopener">BoomShield</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK" target="_blank" rel="noopener">Skyloop</a><span aria-hidden="true">·</span><a href="#hyperloop" aria-current="page">Hyperloop (our version)</a></nav>
-  <div class="eyebrow" id="hyperloop">Hyperloop (our version) · Skyloop review · <span data-k="meta.status"></span></div>
+  <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="https://claude.ai/artifact/E75ZQx2eW1CXWKeJgPk6gi" target="_blank" rel="noopener">Overview</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ" target="_blank" rel="noopener">BoomShield</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK" target="_blank" rel="noopener">Skyloop</a><span aria-hidden="true">·</span><a href="#hyperloop" aria-current="page">Hyperloop (our version)</a></nav>
+  <div class="eyebrow" id="hyperloop">Hyperloop · <span data-vk="id"></span> · <span data-vk="status"></span></div>
   <div class="title-row">
     <h1>Hyperloop, our version</h1>
     <span class="reg">hyperloop/ · screening models, no hardware</span>
   </div>
-  <p class="lede" data-k="meta.lede"></p>
+  <div class="vtabs" id="vtabs" role="tablist" aria-label="Concept version"></div>
+  <p class="lede" data-vk="lede"></p>
 </header>
+
+<div class="vpanel" id="panel-v01" role="tabpanel" aria-labelledby="tab-v01">
 
 <section class="hero" aria-labelledby="hero-h">
   <div class="hero-head"><h3 id="hero-h">Cut-away view: New York to Los Angeles, on pylons and through the mountains</h3><span class="tag" data-k="hero.tag"></span></div>
@@ -482,6 +498,8 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   </div>
 </section>
 
+</div><!-- /panel-v01 -->
+
 <footer id="foot"></footer>
 </div>
 
@@ -491,8 +509,12 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
    aircraft and Skyloop rows: skyloop-review/system/d2d.csv. "≈" marks a value derived here, not read directly (see footer).
    Mach means V = M × 295 m/s. ===== */
 const DATA = {
-  meta:{status:"screening level, October 2026", date:"23 October 2026",
-    lede:"A low-pressure steel tube pair on pylons a few metres above the ground, carrying superconducting maglev pods whose levitation gap is soft and actively controlled. That one change removes the alignment problem that sank the floating Skyloop. What is left is breach safety above Mach 3, mountain tunnels and cost: at base cost it reaches half of break-even.",
+  /* concept versions: first = latest = default tab; this concept has only v0.1 so far */
+  versions:{note:"first version; no earlier one", list:[
+    {id:"v0.1", tab:"current", status:"screening level, October 2026",
+     lede:"A low-pressure steel tube pair on pylons a few metres above the ground, carrying superconducting maglev pods whose levitation gap is soft and actively controlled. That one change removes the alignment problem that sank the floating Skyloop. What is left is breach safety above Mach 3, mountain tunnels and cost: at base cost it reaches half of break-even."}
+  ]},
+  meta:{date:"23 October 2026",
     repoText:"github.com/pablo-mayrgundter/skyloop, folder hyperloop/",
     repoUrl:"https://github.com/pablo-mayrgundter/skyloop/tree/main/hyperloop"},
   hero:{tag:"design point, Mach 4", bore_m:4.1, beta:0.3, p_Pa:10, pMax_Pa:30, pod_t:17, seats:50, gap_m:0.3, gap_Hz:0.3,
@@ -978,4 +1000,34 @@ rangeChart('#cost',DATA.cost,'$M/km');
 $('#musts').innerHTML=DATA.musts.map(t=>`<li>${esc(t)}</li>`).join('');
 $('#caveats').innerHTML=DATA.caveats.map(t=>`<li>${esc(t)}</li>`).join('');
 $('#foot').innerHTML=DATA.sources.map(t=>`<span>${esc(t)}</span>`).join('');
+
+/* ===== VERSION TABS: same component on all three concept pages. #v0.1 / #v0.2 deep-link; default = latest (first in DATA.versions.list). ===== */
+(function(){
+  const V=DATA.versions.list, bar=$('#vtabs'), slug=id=>id.replace(/\W/g,''), known=id=>V.some(v=>v.id===id);
+  bar.innerHTML=V.map(v=>`<button type="button" class="vtab" role="tab" id="tab-${slug(v.id)}" aria-controls="panel-${slug(v.id)}" aria-selected="false" tabindex="-1" data-v="${esc(v.id)}"><b>${esc(v.id)}</b> · ${esc(v.tab)}</button>`).join('')+
+    (DATA.versions.note?`<span class="vt-note">${esc(DATA.versions.note)}</span>`:'');
+  const tabs=[...bar.querySelectorAll('[role="tab"]')];
+  let cur=null;
+  function show(id,o={}){
+    if(!known(id)) id=V[0].id;
+    const changed=id!==cur; cur=id;
+    tabs.forEach(t=>{const on=t.dataset.v===id; t.setAttribute('aria-selected',on?'true':'false'); t.tabIndex=on?0:-1;
+      const p=document.getElementById(t.getAttribute('aria-controls')); if(p) p.hidden=!on;});
+    const v=V.find(x=>x.id===id);
+    document.querySelectorAll('[data-vk]').forEach(el=>{const t=v[el.dataset.vk]; el.textContent=t==null?'':t;});
+    if(o.hash){ try{ history.replaceState(null,'','#'+id); }catch(e){} }
+    if(o.scroll) (bar.closest('header')||bar).scrollIntoView({block:'start'});
+    if(o.focus) document.getElementById('tab-'+slug(id)).focus({preventScroll:true});
+    if(changed&&o.user&&typeof redraw==='function') redraw();
+  }
+  bar.addEventListener('click',e=>{const t=e.target.closest('[role="tab"]'); if(t) show(t.dataset.v,{hash:true,user:true});});
+  bar.addEventListener('keydown',e=>{const i=tabs.indexOf(document.activeElement); if(i<0) return;
+    const j={ArrowRight:(i+1)%tabs.length,ArrowLeft:(i-1+tabs.length)%tabs.length,Home:0,End:tabs.length-1}[e.key];
+    if(j===undefined) return; e.preventDefault(); show(tabs[j].dataset.v,{hash:true,user:true,focus:true});});
+  document.addEventListener('click',e=>{const a=e.target.closest('a.vgo'); if(!a) return; const id=decodeURIComponent(a.getAttribute('href').slice(1));
+    if(!known(id)) return; e.preventDefault(); show(id,{hash:true,user:true,focus:true,scroll:true});});
+  const fromHash=()=>{let h=''; try{h=decodeURIComponent(location.hash.slice(1));}catch(e){} return known(h)?h:null;};
+  window.addEventListener('hashchange',()=>{const h=fromHash(); if(h) show(h,{user:true});});
+  show(fromHash()||V[0].id);
+})();
 </script>

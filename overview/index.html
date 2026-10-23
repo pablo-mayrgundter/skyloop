@@ -1,0 +1,560 @@
+<title>Megaproject Transport Studies</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: front door to the BoomShield, Skyloop and Hyperloop pages. Same report-on-graph-paper column, type, chips and table; slate-ink accent so the three concept accents (teal, indigo, rail green) carry the colour. */
+:root{
+  --bg:#eef0f2; --surface:#f8f9fa; --ink:#161b22; --ink-2:#48505b; --ink-3:#747c87;
+  --rule:#cdd2d9; --grid:#dfe3e8;
+  --sky-top:#bec8d2; --sky-mid:#dce2e8; --sky-low:#eef0ef;
+  --acc:#3a4552;
+  --bs:#136f7e; --sk:#4d48b5; --hl:#2f7339;
+  --boom:#c4421b; --quiet:#136f7e; --film:#d2ab3d; --film-edge:#9c7b1f;
+  --h2:#e3d9f3; --h2-edge:#9c8fc8; --lens:#dfeadc; --bore:#f6f7f9;
+  --ground:#c0c6a6; --ground-edge:#939b7c; --rock:#b7a891; --rock-edge:#8a7a62; --tunnel:#7d6d57;
+  --steel:#56646b; --house:#4f5d68; --jet:#8b96bd; --chip-bg:#e3e6ea;
+  --f-display:"Saira Condensed","Arial Narrow","Roboto Condensed",sans-serif;
+  --f-body:"Public Sans","Segoe UI",system-ui,-apple-system,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b0e12; --surface:#12161c; --ink:#e1e5ea; --ink-2:#a3abb5; --ink-3:#717a85;
+    --rule:#29303a; --grid:#1a2028;
+    --sky-top:#05070a; --sky-mid:#0c1117; --sky-low:#171c22;
+    --acc:#c5ccd5;
+    --bs:#4cc4d4; --sk:#9d98ff; --hl:#86cf7d;
+    --boom:#ff7a4e; --quiet:#4cc4d4; --film:#e0bf5c; --film-edge:#d4b04a;
+    --h2:#29234a; --h2-edge:#6c5fa6; --lens:#1b2a1d; --bore:#0e1116;
+    --ground:#2b3a2d; --ground-edge:#46593f; --rock:#4a4237; --rock-edge:#6d604f; --tunnel:#a08b6e;
+    --steel:#9fb0b6; --house:#a3b0b8; --jet:#4e6490; --chip-bg:#1a2028;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b0e12; --surface:#12161c; --ink:#e1e5ea; --ink-2:#a3abb5; --ink-3:#717a85;
+  --rule:#29303a; --grid:#1a2028;
+  --sky-top:#05070a; --sky-mid:#0c1117; --sky-low:#171c22;
+  --acc:#c5ccd5;
+  --bs:#4cc4d4; --sk:#9d98ff; --hl:#86cf7d;
+  --boom:#ff7a4e; --quiet:#4cc4d4; --film:#e0bf5c; --film-edge:#d4b04a;
+  --h2:#29234a; --h2-edge:#6c5fa6; --lens:#1b2a1d; --bore:#0e1116;
+  --ground:#2b3a2d; --ground-edge:#46593f; --rock:#4a4237; --rock-edge:#6d604f; --tunnel:#a08b6e;
+  --steel:#9fb0b6; --house:#a3b0b8; --jet:#4e6490; --chip-bg:#1a2028;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:16px/1.55 var(--f-body);margin:0;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:20px 56px;}
+.wrap{max-width:1180px;margin:0 auto;display:grid;gap:56px}
+h1,h2,h3{font-family:var(--f-display);font-weight:700;line-height:1.05;margin:0;text-wrap:balance;letter-spacing:.01em}
+h1{font-size:clamp(44px,7vw,84px);letter-spacing:.005em}
+h2{font-size:clamp(28px,3.6vw,40px)}
+h3{font-size:22px}
+p{margin:0;max-width:66ch}
+a{color:var(--acc);text-underline-offset:3px}
+a:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--acc);outline-offset:3px}
+.eyebrow{font:500 12px/1.3 var(--f-mono);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-3)}
+.muted{color:var(--ink-2)}
+.small{font-size:14px}
+section{display:grid;gap:22px;min-width:0}
+.sec-head{display:grid;gap:8px;border-top:1px solid var(--rule);padding-top:18px}
+.lede{font-size:19px;color:var(--ink-2);max-width:62ch}
+/* family strip */
+.family{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px;font:500 13px/1.4 var(--f-mono);color:var(--ink-3);border-bottom:1px solid var(--rule);padding-bottom:10px}
+.family a{color:var(--ink-2);text-decoration:none;padding:2px 0;border-bottom:1.5px solid transparent}
+.family a:hover{color:var(--ink);border-color:var(--rule)}
+.family a[aria-current="page"]{color:var(--ink);font-weight:600;border-color:var(--acc)}
+.family .lab{letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-right:6px}
+/* header */
+header.top{display:grid;gap:14px}
+.title-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px}
+.title-row .reg{font:500 13px/1.3 var(--f-mono);color:var(--ink-3)}
+.intro{display:grid;gap:12px;max-width:68ch}
+.intro p{font-size:17px;color:var(--ink-2);max-width:none}
+.intro p:first-child{font-size:19px;color:var(--ink)}
+.intro b{color:var(--ink);font-weight:600}
+.frame{font-size:14px;color:var(--ink-2);border:1px dashed var(--rule);padding:8px 12px;max-width:68ch}
+.frame .stamp{color:var(--ink)}
+/* hero */
+.hero{display:grid;gap:14px}
+.hero-head{display:flex;justify-content:space-between;align-items:baseline;gap:4px 10px;border-bottom:2px solid var(--acc);padding-bottom:4px}
+.hero-head h3{font-size:24px}
+.hero-head .tag{font:500 12px var(--f-mono);color:var(--ink-3);white-space:nowrap}
+svg{display:block;width:100%;height:auto;max-width:100%}
+.scale-note{font-size:14px;color:var(--ink-2);max-width:92ch}
+.stamp{font:600 11px var(--f-mono);letter-spacing:.14em}
+/* concept cards under the vignettes */
+.cards{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+.cards.aligned{grid-template-rows:repeat(5,auto);row-gap:0}
+.cards.aligned>.card{grid-row:1 / span 5;grid-template-rows:subgrid;row-gap:9px}
+.cards.aligned>:nth-child(1){grid-column:2} .cards.aligned>:nth-child(2){grid-column:4} .cards.aligned>:nth-child(3){grid-column:6}
+.card{display:grid;gap:9px;align-content:start;min-width:0;border-top:3px solid var(--c);padding-top:10px}
+.card .nm{display:grid;gap:2px}
+.card h3{color:var(--c)}
+.card .kind{font:500 12px/1.35 var(--f-mono);color:var(--ink-3)}
+.schip{display:inline-flex;align-items:baseline;gap:7px;justify-self:start;align-self:start;font:500 12.5px/1.35 var(--f-mono);color:var(--ink);background:var(--chip-bg);border:1px solid var(--rule);border-radius:3px;padding:4px 8px 4px 6px}
+.schip i{font-style:normal;font-weight:600;display:inline-grid;place-items:center;width:16px;height:16px;border-radius:3px;font-size:11px;flex:none;transform:translateY(2px)}
+.schip i.pass{color:var(--quiet);border:1px solid var(--quiet)}
+.schip i.marg{color:var(--film-edge);border:1px dashed var(--film-edge)}
+.schip i.fail{color:var(--surface);background:var(--boom)}
+.d2d{display:grid;gap:4px}
+.d2d .row{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.d2d b{font:600 26px/1.1 var(--f-mono);font-variant-numeric:tabular-nums}
+.d2d .row span{font-size:13px;color:var(--ink-2);text-align:right}
+.tbar{position:relative;height:10px}
+.tbar .ref{position:absolute;top:-4px;bottom:-4px;border-left:1.5px dashed var(--ink-3)}
+.tbar .b{position:absolute;left:0;top:0;bottom:0;border-radius:0 3px 3px 0;background:var(--c)}
+.tbar .b2{position:absolute;top:0;bottom:0;border-radius:0 3px 3px 0;background:color-mix(in srgb,var(--c) 35%,transparent)}
+.tbar .b.hatch{background:repeating-linear-gradient(135deg,var(--c) 0 4px,color-mix(in srgb,var(--c) 30%,transparent) 4px 7px)}
+.tbar-ax{position:relative;height:15px;border-top:1px solid var(--rule);font:500 10.5px var(--f-mono);color:var(--ink-3)}
+.tbar-ax span{position:absolute;top:2px;transform:translateX(-50%);white-space:nowrap}
+.tbar-ax span:first-child{transform:none}
+.tbar-ax span.end{transform:translateX(-100%)}
+.card .vd{font-size:14px;color:var(--ink-2)}
+.card .vd b{color:var(--ink);font-weight:600}
+.card a.go{font:600 14px var(--f-mono);color:var(--c);justify-self:start}
+/* comparison table (Hyperloop page component) */
+.basis{font-size:14px;color:var(--ink-2);max-width:92ch}
+.basis b{color:var(--ink);font-weight:600}
+table.cmp{width:100%;border-collapse:collapse;font-size:14px}
+table.cmp th,table.cmp td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
+table.cmp thead th{font:600 18px/1.2 var(--f-display);letter-spacing:.02em;border-bottom:2px solid var(--ink);vertical-align:bottom;border-top:3px solid var(--c,transparent)}
+table.cmp thead th small{display:block;font:500 11px var(--f-mono);color:var(--ink-3);letter-spacing:0}
+table.cmp thead th.base{color:var(--ink-2)}
+table.cmp tbody th{font:500 12px/1.35 var(--f-mono);color:var(--ink-3);width:17%;padding-left:0}
+table.cmp td{font-variant-numeric:tabular-nums}
+table.cmp td.base{color:var(--ink-2);background:color-mix(in srgb,var(--ink) 4%,transparent)}
+table.cmp td b{font-weight:600}
+table.cmp td .st{font:600 11px var(--f-mono);margin-right:5px}
+table.cmp td .st.pass{color:var(--quiet)} table.cmp td .st.marg{color:var(--film-edge)} table.cmp td .st.fail{color:var(--boom)}
+table.cmp tr.scen th,table.cmp tr.scen td{border-top:1px dashed var(--rule)}
+.notes{display:grid;gap:4px;font-size:13px;color:var(--ink-2);max-width:100ch}
+.notes sup{font:600 11px var(--f-mono);color:var(--ink)}
+/* lessons and gates */
+.two{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:40px;align-items:start}
+.lessons{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.lessons li{display:grid;gap:3px;padding-top:10px;border-top:1px solid var(--rule)}
+.lessons b{font:700 20px/1.15 var(--f-display);letter-spacing:.01em}
+.lessons span{font-size:15px;color:var(--ink-2)}
+.gates{display:grid;gap:18px}
+.gate{display:grid;gap:6px;border-left:3px solid var(--c);padding-left:14px}
+.gate h3{font-size:20px;color:var(--c)}
+.gate h3 small{font:500 12px var(--f-mono);color:var(--ink-3);margin-left:8px;letter-spacing:0}
+.gate ul{margin:0;padding-left:18px;display:grid;gap:6px;font-size:14.5px}
+.gate ul li::marker{color:var(--ink-3)}
+.gate p{font-size:14.5px;color:var(--ink-2)}
+.repo{display:grid;gap:4px;padding:14px 0;border-top:2px solid var(--ink);border-bottom:1px solid var(--rule)}
+.repo a{font:500 16px var(--f-mono);word-break:break-word}
+.links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px 24px}
+.links div{display:grid;gap:4px;align-content:start;font-size:14px;min-width:0}
+.links h4{margin:0;font:600 15px/1.25 var(--f-body);color:var(--c)}
+.links a{word-break:break-word}
+footer{font-size:12px;color:var(--ink-3);display:grid;gap:6px}
+/* svg classes */
+.f-surface{fill:var(--surface)} .f-bg{fill:var(--bg)} .f-bore{fill:var(--bore)}
+.f-ink{fill:var(--ink)} .f-ink2{fill:var(--ink-2)} .f-ink3{fill:var(--ink-3)}
+.f-bs{fill:var(--bs)} .f-sk{fill:var(--sk)} .f-hl{fill:var(--hl)}
+.f-boom{fill:var(--boom)} .f-quiet{fill:var(--quiet)} .f-film{fill:var(--film)} .f-film-edge{fill:var(--film-edge)}
+.f-h2{fill:var(--h2)} .f-lens{fill:var(--lens)} .f-ground{fill:var(--ground)} .f-rock{fill:var(--rock)} .f-steel{fill:var(--steel)} .f-house{fill:var(--house)} .f-jet{fill:var(--jet)}
+.s-ink{stroke:var(--ink)} .s-ink2{stroke:var(--ink-2)} .s-ink3{stroke:var(--ink-3)} .s-boom{stroke:var(--boom)} .s-quiet{stroke:var(--quiet)}
+.s-bs{stroke:var(--bs)} .s-sk{stroke:var(--sk)} .s-hl{stroke:var(--hl)}
+.s-h2{stroke:var(--h2-edge)} .s-film{stroke:var(--film-edge)} .s-ground{stroke:var(--ground-edge)} .s-rock{stroke:var(--rock-edge)} .s-tunnel{stroke:var(--tunnel)}
+.s-grid{stroke:var(--grid)} .s-rule{stroke:var(--rule)} .s-steel{stroke:var(--steel)} .s-bg{stroke:var(--bg)} .s-bore{stroke:var(--bore)} .s-jet{stroke:var(--jet)}
+.st-skytop{stop-color:var(--sky-top)} .st-skymid{stop-color:var(--sky-mid)} .st-skylow{stop-color:var(--sky-low)}
+svg text{font-family:var(--f-body)}
+svg text.halo{paint-order:stroke;stroke:var(--sky-mid);stroke-width:4px;stroke-linejoin:round}
+svg text.halo-g{paint-order:stroke;stroke:var(--ground);stroke-width:4px;stroke-linejoin:round}
+svg .tm{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
+/* responsive */
+@media (max-width:900px){
+  .two{grid-template-columns:minmax(0,1fr)}
+  .links{grid-template-columns:minmax(0,1fr)}
+}
+@media (max-width:640px){
+  body{font-size:15px}
+  .intro p,.intro p:first-child{font-size:16px}
+  .hero-head{flex-wrap:wrap}
+  .hero-head .tag{white-space:normal}
+  table.cmp thead{display:none}
+  table.cmp,table.cmp tbody,table.cmp tr,table.cmp th,table.cmp td{display:block;width:auto}
+  table.cmp tr{padding:8px 0;border-bottom:1px solid var(--rule)}
+  table.cmp tr.scen th,table.cmp tr.scen td{border-top:0}
+  table.cmp tbody th{padding:0 0 4px;border:0;width:auto}
+  table.cmp td{border:0;padding:2px 0 2px 104px;position:relative}
+  table.cmp td::before{content:attr(data-l);position:absolute;left:0;top:3px;width:96px;font:600 11px/1.3 var(--f-mono);color:var(--c,var(--ink-3))}
+  table.cmp td.base{background:none}
+}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:ital,wght@0,400;0,600;1,400&family=Saira+Condensed:wght@500;600;700&display=swap">
+
+<div class="wrap">
+
+<header class="top">
+  <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="#overview" aria-current="page">Overview</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ" target="_blank" rel="noopener">BoomShield</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK" target="_blank" rel="noopener">Skyloop</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB" target="_blank" rel="noopener">Hyperloop (our version)</a></nav>
+  <div class="eyebrow" id="overview">Overview · three concept studies · <span data-k="meta.status"></span></div>
+  <div class="title-row">
+    <h1>Megaproject transport studies</h1>
+    <span class="reg">SUMMARY.md · simulation only, no hardware</span>
+  </div>
+  <div class="intro" id="intro"></div>
+  <p class="frame"><span class="stamp">FRAMING.</span> <span data-k="meta.framing"></span></p>
+</header>
+
+<section class="hero" aria-labelledby="hero-h">
+  <div class="hero-head"><h3 id="hero-h">Three bets on one altitude axis</h3><span class="tag" data-k="hero.tag"></span></div>
+  <div id="hero"></div>
+  <div class="cards" id="cards"></div>
+  <p class="scale-note"><span class="stamp">NOT TO SCALE.</span> <span data-k="hero.scaleNote"></span></p>
+</section>
+
+<section aria-labelledby="cmp-h">
+  <div class="sec-head">
+    <div class="eyebrow">Shared figures of merit</div>
+    <h2 id="cmp-h">One corridor, three concepts and today's jet</h2>
+    <p class="lede" data-k="compare.lede"></p>
+  </div>
+  <p class="basis" id="basis"></p>
+  <table class="cmp" id="cmp"></table>
+  <div class="notes" id="notes"></div>
+</section>
+
+<section aria-labelledby="learn-h">
+  <div class="sec-head">
+    <div class="eyebrow">Across the three studies</div>
+    <h2 id="learn-h">What we learned, and what to watch</h2>
+  </div>
+  <div class="two">
+    <div style="display:grid;gap:12px;min-width:0">
+      <h3>What we learned</h3>
+      <ul class="lessons" id="lessons"></ul>
+    </div>
+    <div style="display:grid;gap:12px;min-width:0">
+      <h3>What to watch, and gates</h3>
+      <div class="gates" id="gates"></div>
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="src-h">
+  <div class="sec-head">
+    <div class="eyebrow">Sources, <span data-k="meta.date"></span></div>
+    <h2 id="src-h">Read further</h2>
+  </div>
+  <div class="repo">
+    <span class="eyebrow">Write-up, models and CSVs</span>
+    <a id="repo-link" href="#" target="_blank" rel="noopener"></a>
+  </div>
+  <div class="links" id="links"></div>
+</section>
+
+<footer id="foot"></footer>
+</div>
+
+<script>
+/* ===== Every number on the page lives here. Source of truth: SUMMARY.md (23 Oct 2026), its comparison table, footnotes and basis note.
+   Also boom-shield/STATUS.md, skyloop-review/README.md, hyperloop/README.md, boom-shield/economics/hydrogen/hydrogen.md, and for the
+   subsonic ~340 Wh/pax-km of jet fuel skyloop-review/system/system.md. Bases: tubes = life-cycle, 2050 opening, M4, spine+LAX,
+   100 % capture; BoomShield = M2.2, 50 t aircraft, integrated cost, STATUS 2025-year canonical value and 2050 life-cycle value.
+   Drawing positions in the graphic (aircraft clearance, pylon height, mountain heights) are exaggerated and are not data. ===== */
+const GH = "https://github.com/pablo-mayrgundter/skyloop/blob/main/";
+const DATA = {
+  meta:{status:"screening level, October 2026", date:"23 October 2026",
+    intro:[
+      "Crossing the United States has barely sped up since the 1970s. Jets still cruise near Mach 0.85, and New York to Los Angeles takes about **7.3 h door to door** (7.29 h in these models), much of it on the ground at airports.",
+      "Concorde showed that Mach 2 airliners work, but its sonic boom is why supersonic flight over US land is banned (14 CFR §91.817). The new Boomless Cruise mode at Mach 1.15 only trims the trip to 6.27 h. Going much faster overland probably takes infrastructure at megaproject scale: a corridor that stops the boom before it reaches the ground, or a tube network that skips the airport altogether.",
+      "These studies test three such bets on the same NYC–LAX corridor and the same demand model: **BoomShield**, a hydrogen layer at 20 km that absorbs the boom under a supersonic corridor; **Skyloop**, a near-vacuum tube floating at 20 km; and **Hyperloop (our version)**, a low-pressure tube on pylons near the ground. For each, the question is whether any operating regime is feasible at once across physics, safety, energy, cost and demand."
+    ],
+    framing:"Screening-level desk studies. Each maps the rough feasible operating regime; none validates a design point. Simulation only, no hardware. Web figures are unverified search summaries and unit costs are engineering estimates. Every benefit/cost ratio (B/C) assumes 100 % capture of the corridor's air travellers unless stated; realistic capture is nearer 30 %.",
+    repoText:"github.com/pablo-mayrgundter/skyloop · SUMMARY.md on main",
+    repoUrl:GH+"SUMMARY.md"},
+  hero:{
+    tag:"altitude 0–25 km · NYC–LAX door to door",
+    zMax:25, ticks:[0,5,10,15,20,25], jet_km:[10,12],
+    sub_h:7.29, boomless_h:6.27, axisMax_h:8, axisTicks:[0,2,4,6,8],
+    scaleNote:"Altitudes follow the shared 0–25 km axis; everything else is stretched. BoomShield's layer is 29–35 m thick (drawn far thicker) and the aircraft flies about 250 m above it. Skyloop's tube and launch ramps are compressed along the route. Hyperloop's 6–25 m pylons and 4.1 m bore would be invisible at true scale, so the lens magnifies one pylon; its mountains stand for the Appalachians, Rockies and Transverse Ranges.",
+    bs:{title:"BoomShield", sub:"H₂ layer under a supersonic corridor", layer_km:20, plane_km:21.8,
+      plane:"M2.2 jet, ≤ 50 t", layer:"H₂ layer at 20 km", layerSub:"29–35 m × ~1.25 km, tethered",
+      boom:"boom stopped", quiet:"quiet ground: meets 0.11 psf", jet:"jet stream 10–12 km"},
+    sk:{title:"Skyloop", sub:"near-vacuum tube floating at 20 km", tube_km:20,
+      tube:"tube at 20 km in an H₂ envelope", gust:"gusts move it 8–485 m", gustSub:"ride allows 0.14–1.3 m",
+      ramp:"launch ramps from ground portals", rampSub:"~237 km to Mach 4", portal:"portal"},
+    hl:{title:"Hyperloop (our version)", sub:"low-pressure tube pair on pylons",
+      pylons:"tube pair on pylons", pylonsSub:"6–25 m up, drawn taller", tunnel:"tunnels through ranges", tunnelSub:"690 km of tunnel at M4",
+      bore:"4.1 m bore", boreSub:"~10 Pa", pod:"SC-EDS pod", podSub:"active 0.3 m gap"}
+  },
+  concepts:[
+    {id:"bs", name:"BoomShield", kind:"tethered H₂ layer at 20 km that absorbs sonic booms",
+      st:"marg", status:"acoustics pass a screen · fuel sinks net B/C",
+      d2d:5.08, d2dNote:"NYC–LAX door to door, M2.2 aircraft",
+      verdict:"**Keep at desk level.** Re-run ~2029–31 when the FAA rule and Overture's economics are known.",
+      url:"https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ", go:"BoomShield page ↗"},
+    {id:"sk", name:"Skyloop", kind:"floating near-vacuum tube at 20 km",
+      st:"fail", status:"alignment veto · 8–485 m of gust motion",
+      d2d:2.73, hatch:true, d2dNote:"NYC–LAX at M4, if it could be built",
+      verdict:"**Do not pursue the stratospheric tube.** No feasible point at 20 km with a fixed guideway.",
+      url:"https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK", go:"Skyloop page ↗"},
+    {id:"hl", name:"Hyperloop", kind:"our version: elevated ground tube, compliant-gap maglev",
+      st:"pass", status:"no physics veto to ~M6 · cost-gated",
+      d2d:2.73, d2d2:3.62, d2dNote:"NYC–LAX nonstop at M4; 3.62 h all-stop",
+      verdict:"**Keep as the ground-vactrain watching brief at M3–4.** A cost and certification problem, not a Mach problem.",
+      url:"https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB", go:"Hyperloop page ↗"}
+  ],
+  compare:{
+    lede:"NYC–LAX on the US spine (LAS–DEN–OMA–CHI–CLE–NYC, tubes adding LAX), with BoomShield's demand and value-of-time model ($86/h; 7 %, 25 yr) in all three, so B/C compares once the basis is labelled. Gross counts time saved; net also counts the fuel and CO₂ against the comparator.",
+    basis:"**Basis.** Tube columns: life-cycle, **2050 opening**, M4, spine+LAX. BoomShield: M2.2, 50 t aircraft, integrated cost, with the STATUS **2025-year** canonical value and the **2050 life-cycle** value shown separately. The two BoomShield bases differ by ~2× gross; compare only the 2050 values with the tubes. “Low” is each study's own low-cost case (Skyloop run $19 M/km; Hyperloop $51 M/km; BoomShield's integrated cost is already its low-cost case). All columns 100 % capture.",
+    heads:[
+      {id:"base", name:"Subsonic jet", sub:"today's comparator, M0.85"},
+      {id:"bs", name:"BoomShield", sub:"M2.2 under a 20 km shield"},
+      {id:"sk", name:"Skyloop", sub:"floating 20 km tube, M4"},
+      {id:"hl", name:"Hyperloop", sub:"our version, elevated, M4"}
+    ],
+    rows:[
+      {l:"Door to door", c:["**7.29 h** (Boomless Cruise M1.15: 6.27 h)","5.08 h","2.73 h, if buildable","**2.73 h** nonstop, 3.62 h all-stop"]},
+      {l:"Physics status · binding", c:["in service","acoustics pass a screen · net of fuel, capture","**alignment veto** (8–485 m motion)","**passes to M3, marginal to M6** · breach, then right-of-way"], st:[null,"marg","fail","pass"]},
+      {l:"Infrastructure, $M/km", c:["—","25 integrated – 186 base ¹","66 run (19–187) + 157 ramp (40–623)","80 standard, **120 route average** (51–300)"]},
+      {l:"Corridor capex", c:["—","$91 B spine ¹ ($672 B at base)","$569 B spine+LAX ($172 B low)","**$552 B** spine+LAX ($233–1,344 B)"]},
+      {l:"Energy, Wh/pax-km", c:["~340 (jet fuel)","~1,400 (jet fuel)","21–85 (electric)","15 nonstop · 59 all-stop"]},
+      {l:"B/C vs subsonic, gross / net", c:["comparator","2025 yr: 2.69 / −4.41 · 2050 LC: 5.17 / −5.18","base 0.36 / 0.47 · low 1.28 / 1.67","base **0.37 / 0.50** · low 0.94 / 1.27"]},
+      {l:"B/C vs Boomless, gross / net", c:["—","2025 yr: 0.87 / 0.04 · 2050 LC: 1.67 / 0.46","base 0.28 / 0.61 · low 1.09 / 2.17","base 0.29 / 0.64 · low 0.72 / 1.62 ²"]},
+      {l:"Pays below (net, 100 %)", c:["—","does not pay net in any 2025-year cost case; net vs Boomless = 1 only for a ~2065 (M2.0) or ~2075 (M2.2) opening","**$40–55 M/km** all-in; ~$11–14 M at 30 %","**$52 M/km** vs subsonic ($34 M gross), $71 M vs Boomless; ~$10 M at 30 %"]},
+      {l:"Scenario: net vs subsonic with carbon-neutral e-SAF at $1.61/kg (H₂ $1/kg) ³", scen:true, c:["—","2025 yr: −5.6 · 2050 LC: −3.2; > 0 only below ~$1.0/kg","base 0.44 · low 1.57","base 0.47 · low 1.19"]}
+    ],
+    notes:[
+      ["¹","Integrated cost for the Concorde-class (55 m) shield, $14.3/m²; the thinner M2.2 shield costs less ($1.62 vs $2.22 M/km/yr).","net-reconciliation","boom-shield/economics/net/net-reconciliation.md"],
+      ["²","Gross from hyperloop/hl_econ.csv (M4, 2050, 100 %); the README quotes net only.","hl_econ.csv","hyperloop/hl_econ.csv"],
+      ["³","Scenario, not canonical. Avoided or extra fuel priced at e-SAF with no CO₂ charge; grid electricity unchanged.","hydrogen","boom-shield/economics/hydrogen/hydrogen.md"],
+      ["","Subsonic column: door to door from the shared time model; ~340 Wh/pax-km of jet fuel from the Skyloop system study. B/C rows do not apply to the comparator itself.","system","skyloop-review/system/system.md"]
+    ]},
+  lessons:[
+    ["Ground processing beats Mach.","At M2 only 1.3 h of BoomShield's 5.2 h NYC–LAX is cruise; a 70 min walk-on saves more than going from M2 to infinite speed. The tubes win by boarding at ground level: Skyloop M2 → M6 saves 70 min, and Hyperloop B/C peaks at M3–4, because energy grows as V² and all-stop legs never reach cruise."],
+    ["Net of fuel flips sign between aircraft and electric tubes.","BoomShield loses most of its gross value to fuel and CO₂; against subsonic its net is negative everywhere. The tubes avoid jet fuel, so their net is 1.3–2.2× gross. Cheap hydrogen does not change the ranking: e-SAF from $1/kg H₂ still costs ~$1.6/kg, above today's fossil-plus-CO₂ $1.40."],
+    ["Capture and moving-block certification dominate.","Every headline is 100 % capture; at 30 % divide by about three. Brick-wall braking cuts tube B/C from ~0.5 to 0.04. Only an uncertified 10 s moving block carries the spine in one tube pair."],
+    ["Cost per km is the gate.","BoomShield needs $106 → $14/m² by owning the plants. The tubes break even near $40–55 M/km, against $120 M/km priced with mountains. No vactrain has been built at that cost; Hyperloop One's own Bay Area estimate was $52–75 M/km."],
+    ["Physics moves the binding constraint, then cost takes over.","The compliant gap turns alignment from fatal into a non-issue on the ground; breach then caps Mach near M3–6. Nothing rescues the floating tube."]
+  ],
+  gates:[
+    {id:"bs", name:"BoomShield", note:"timing comes from events, not traffic", items:[
+      "FAA final rule (targeted mid-2027) and Boomless Cruise status, 2027–28 → gate G-A ~2029.",
+      "Full re-run 2029–31, once Overture's real fares and capture (2030–32) are known; film and fibre at ≤ $20/m², 2028–31.",
+      "Later gates: lab acoustics ~2032, subscale module ~2038, spine decision ~2045, earliest opening ~2055."]},
+    {id:"hl", name:"Hyperloop (our version)", note:"the study sets no dates", items:[
+      "A priced elevated km ≤ $50 M, mountains included.",
+      "A regulator's path to ~10 s headways (relative-braking operation).",
+      "A breach-mitigation demonstration: sector valves closing in ≤ 1 s with early braking (frontier M3 / 6 → M4 / 11).",
+      "External data point: CASIC T-Flight's 60 km results (~2030)."]},
+    {id:"sk", name:"Skyloop", note:"", text:"No gates. The stratospheric tube is stopped."}
+  ],
+  links:[
+    {id:"bs", name:"BoomShield", page:"https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ", docs:[["STATUS","boom-shield/STATUS.md"],["README","boom-shield/README.md"],["Net reconciliation","boom-shield/economics/net/net-reconciliation.md"],["Cheap hydrogen","boom-shield/economics/hydrogen/hydrogen.md"]]},
+    {id:"sk", name:"Skyloop re-review", page:"https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK", docs:[["README","skyloop-review/README.md"],["System","skyloop-review/system/system.md"],["Regime","skyloop-review/regime/regime.md"],["Hybrid","skyloop-review/hybrid/hybrid.md"]]},
+    {id:"hl", name:"Hyperloop (our version)", page:"https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB", docs:[["README","hyperloop/README.md"]]}
+  ],
+  sources:[
+    "Source of truth: SUMMARY.md (23 October 2026), with boom-shield/STATUS.md, skyloop-review/README.md, hyperloop/README.md and boom-shield/economics/hydrogen/hydrogen.md. Overland ban: 14 CFR §91.817, as cited in boom-shield/network-maps/routes/routes.md.",
+    "Door-to-door times use the shared NYC–LAX time model (airport or station time, taxi and climb, launch and braking, cruise). Skyloop's 2.73 h holds only if the floating tube could be built.",
+    "Screening level, simulation only. Web figures are unverified search summaries; unit costs are engineering estimates. Positions in the graphic are illustrative, not data."
+  ]
+};
+
+/* ===== helpers ===== */
+const $ = s => document.querySelector(s);
+const get = (o,p) => p.split('.').reduce((a,k)=>a==null?a:a[k], o);
+const r1 = n => Math.round(n*10)/10;
+function esc(s){ return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;'); }
+const md = s => esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+const ICON = {pass:'✓', marg:'~', fail:'✕'};
+document.querySelectorAll('[data-k]').forEach(el=>{ const v=get(DATA, el.dataset.k); if(v!=null) el.textContent=String(v); });
+$('#intro').innerHTML=DATA.meta.intro.map(p=>`<p>${md(p)}</p>`).join('');
+const repo=$('#repo-link'); repo.href=DATA.meta.repoUrl; repo.textContent=DATA.meta.repoText;
+const T=(x,y,t,cls='f-ink2',anchor='start',size=13,extra='')=>`<text x="${r1(x)}" y="${r1(y)}" font-size="${size}" text-anchor="${anchor}" class="${cls}" ${extra}>${esc(t)}</text>`;
+
+/* ===== HERO: three vignettes on one altitude axis ===== */
+function vBoomShield(p){
+  const {x0,x1,Y,gY,fs,narrow}=p, w=x1-x0, B=DATA.hero.bs, sub=fs-3;
+  const yL=Y(B.layer_km), th=narrow?6:7;
+  let s='';
+  // tethers (behind)
+  [0.12,0.42,0.72].forEach(f=>{const x=x0+f*w; s+=`<path d="M${r1(x)} ${r1(yL+th)} Q${r1(x+22)} ${r1((yL+gY)/2)} ${r1(x+14)} ${r1(gY)}" class="s-ink3" stroke-width=".9" fill="none" opacity=".75"/><rect x="${r1(x+11)}" y="${r1(gY-2)}" width="6" height="4" class="f-ink2"/>`;});
+  // quiet ground strip and houses
+  s+=`<rect x="${r1(x0+4)}" y="${r1(gY-9)}" width="${r1(w-8)}" height="9" class="f-quiet" opacity=".25"/>`;
+  for(let i=0;i<(narrow?9:7);i++){const hx=x0+w*(0.07+i*(narrow?0.105:0.135)); s+=`<path d="M${r1(hx-5)} ${r1(gY)} v-6 l5 -5 l5 5 v6 z" class="f-house"/>`;}
+  // Mach cone, clipped at the layer
+  const ax=x0+w*(narrow?0.84:0.86), ay=Y(B.plane_km), t=Math.tan(27*Math.PI/180), L=Math.min(narrow?150:126,(ay-Y(24.6))/t);
+  const dxHit=(yL-3-ay)/t;
+  s+=`<polygon points="${r1(ax)},${r1(ay)} ${r1(ax-L)},${r1(ay-L*t)} ${r1(ax-L)},${r1(yL-3)} ${r1(ax-dxHit)},${r1(yL-3)}" class="f-boom" fill-opacity=".1"/>`;
+  s+=`<path d="M${r1(ax)} ${r1(ay)} L${r1(ax-L)} ${r1(ay-L*t)} M${r1(ax)} ${r1(ay)} L${r1(ax-dxHit)} ${r1(yL-3)}" class="s-boom" stroke-width="1.3" fill="none"/>`;
+  [0.35,0.65].forEach(k=>{const sx=ax-L*k*0.55, sy=ay-L*k*0.55*t*0.4; const ex=sx-(yL-3-sy)/t; s+=`<path d="M${r1(sx)} ${r1(sy)} L${r1(ex)} ${r1(yL-3)}" class="s-boom" stroke-width="1" fill="none" opacity=".6"/>`;});
+  s+=`<line x1="${r1(ax-L)}" x2="${r1(ax-dxHit)}" y1="${r1(yL-1)}" y2="${r1(yL-1)}" class="s-boom" stroke-width="2.6"/>`;
+  // layer
+  s+=`<rect x="${r1(x0+6)}" y="${r1(yL)}" width="${r1(w-12)}" height="${th}" rx="2" class="f-film s-film" stroke-width="1"/>`;
+  // aircraft (nose right), from the BoomShield hero silhouette
+  s+=`<path transform="translate(${r1(ax)} ${r1(ay)})" d="M0 0 L-10 -1.6 L-52 -2.6 L-60 -1 L-62 -13 L-56 -13 L-46 -3 L-34 -3 L-46 2.6 L-14 1.6 Z" class="f-ink"/>`;
+  // labels
+  s+=T(x1-6,ay-(narrow?22:20),B.plane,'f-ink td halo','end',fs);
+  s+=T(x0+8,yL-10,B.boom,'f-boom td halo','start',fs);
+  s+=T(x0+8,yL+th+fs+6,B.layer,'f-ink td halo','start',fs)+T(x0+8,yL+th+2*fs+6,B.layerSub,'f-ink2 tm halo','start',sub);
+  s+=T(x0+8,gY-16,B.quiet,'f-quiet td halo','start',fs);
+  return s;
+}
+function vSkyloop(p){
+  const {x0,x1,Y,gY,fs,narrow}=p, w=x1-x0, K=DATA.hero.sk, sub=fs-3;
+  const tY=Y(K.tube_km), eH=narrow?18:20, xP0=x0+20, xP1=x1-20, xa=x0+w*0.3, xb=x1-w*0.3;
+  let s='';
+  // tethers
+  const n=narrow?5:4; for(let i=0;i<n;i++){const x=xa+20+i*(xb-xa-40)/(n-1);
+    s+=`<path d="M${r1(x)} ${r1(tY+eH/2-2)} L${r1(x-16)} ${r1(gY)} M${r1(x)} ${r1(tY+eH/2-2)} L${r1(x+16)} ${r1(gY)}" class="s-ink3" stroke-width=".9" fill="none" opacity=".75"/>`;}
+  // ramps
+  const ramp=(a,b,dir)=>`M${r1(a)} ${r1(gY-8)} C${r1(a+dir*w*0.17)} ${r1(gY-8)} ${r1(b-dir*w*0.17)} ${r1(tY)} ${r1(b)} ${r1(tY)}`;
+  [ramp(xP0+12,xa,1),ramp(xP1-12,xb,-1)].forEach(d=>{s+=`<path d="${d}" class="s-ink2" stroke-width="6" fill="none" stroke-linecap="round"/><path d="${d}" class="s-bore" stroke-width="2.4" fill="none"/>`;});
+  [xP0,xP1].forEach(x=>{s+=`<path d="M${r1(x-16)} ${r1(gY)} v-12 h32 v12 z" class="f-ink2"/><path d="M${r1(x-5)} ${r1(gY)} v-6 a5 5 0 0 1 10 0 v6 z" class="f-bore"/>`;});
+  // envelope, tube, pod
+  s+=`<rect x="${r1(xa-8)}" y="${r1(tY-eH/2)}" width="${r1(xb-xa+16)}" height="${eH}" rx="${eH/2}" class="f-h2 s-h2" stroke-width="1.2"/>`;
+  s+=`<line x1="${r1(xa-6)}" x2="${r1(xb+6)}" y1="${r1(tY)}" y2="${r1(tY)}" class="s-ink2" stroke-width="6" stroke-linecap="round"/><line x1="${r1(xa-6)}" x2="${r1(xb+6)}" y1="${r1(tY)}" y2="${r1(tY)}" class="s-bore" stroke-width="2.4"/>`;
+  s+=`<rect x="${r1(xa+(xb-xa)*0.3-8)}" y="${r1(tY-2.4)}" width="16" height="4.8" rx="2.4" class="f-sk"/>`;
+  // gust displacement: where the tube is pushed
+  const amp=narrow?9:10, pts=[]; for(let x=xa-4;x<=xb+4;x+=4) pts.push(`${r1(x)} ${r1(tY+amp*Math.sin((x-xa)/(xb-xa)*Math.PI*2.2))}`);
+  s+=`<path d="M${pts.join(' L')}" class="s-boom" stroke-width="1.8" stroke-dasharray="5 3" fill="none"/>`;
+  for(let i=0;i<3;i++){const y=tY-eH*0.9+i*eH*0.9, x=xa-28-(i%2)*6; s+=`<path d="M${r1(x-14)} ${r1(y)} h16 m-5 -4 l5 4 l-5 4" class="s-jet" stroke-width="1.5" fill="none"/>`;}
+  // labels
+  const cx=(x0+x1)/2;
+  s+=T(cx,tY-eH/2-12,K.tube,'f-ink td halo','middle',fs);
+  s+=T(cx,tY+eH/2+fs+12,K.gust,'f-boom td halo','middle',fs)+T(cx,tY+eH/2+2*fs+12,K.gustSub,'f-ink2 tm halo','middle',sub);
+  const ry=Y(narrow?6:6.4);
+  s+=T(cx,ry,K.ramp,'f-ink td halo','middle',fs)+T(cx,ry+fs,K.rampSub,'f-ink2 tm halo','middle',sub);
+  s+=T(xP0-14,gY+fs+4,K.portal,'f-ink2 halo-g','start',sub)+T(xP1+14,gY+fs+4,K.portal,'f-ink2 halo-g','end',sub);
+  return s;
+}
+function vHyperloop(p){
+  const {x0,x1,Y,gY,fs,narrow}=p, w=x1-x0, Hh=DATA.hero.hl, sub=fs-3;
+  const X=f=>x0+f*w, lerp=(a,b,t)=>a+(b-a)*t;
+  const base=f=>0.15+0.75*Math.min(1,Math.max(0,(f-0.25)/0.5));                   // km, rising west (illustrative)
+  const bumps=[[0.6,3.0,0.06],[0.73,2.2,0.05],[0.9,1.5,0.035]];
+  const terr=f=>base(f)+bumps.reduce((a,[c,h,s])=>a+h*Math.exp(-(((f-c)/s)**2)/2),0)+0.06*Math.sin(f*70);
+  const clear=narrow?7:9, yT=f=>Y(terr(f)), yU=f=>Y(base(f)+0.25)-clear;
+  const N=160, fs_=[...Array(N+1)].map((_,i)=>i/N);
+  let s='';
+  const pts=fs_.map(f=>`${r1(X(f))} ${r1(yT(f))}`);
+  s+=`<path d="M${r1(X(0))} ${r1(gY)} L${pts.join(' L')} L${r1(X(1))} ${r1(gY)} Z" class="f-ground"/>`;
+  const rock=fs_.filter(f=>yT(f)<yU(f)+2);
+  if(rock.length){ s+=`<path d="M${fs_.map(f=>`${r1(X(f))} ${r1(Math.min(yT(f),yU(f)+2))}`).join(' L')} ${fs_.slice().reverse().map(f=>`L${r1(X(f))} ${r1(yU(f)+2)}`).join(' ')} Z" class="f-rock"/>`; }
+  s+=`<path d="M${pts.join(' L')}" class="s-ground" stroke-width="1.2" fill="none"/>`;
+  // pylons where elevated
+  for(let x=x0+4;x<x1-3;x+=narrow?6:7){const f=(x-x0)/w; if(yT(f)<yU(f)+3) continue;
+    s+=`<line x1="${r1(x)}" x2="${r1(x)}" y1="${r1(yU(f)+2)}" y2="${r1(yT(f)+1)}" class="s-steel" stroke-width="1.2"/>`;}
+  // tube: solid on pylons, dashed in tunnel
+  let runs=[],cur=null; fs_.forEach(f=>{const t=yT(f)<yU(f)-1; if(!cur||cur.t!==t){cur={t,fs:[]};runs.push(cur);} cur.fs.push(f);});
+  runs.forEach((r,i)=>{ if(i>0) r.fs.unshift(runs[i-1].fs[runs[i-1].fs.length-1]);
+    const d='M'+r.fs.map(f=>`${r1(X(f))} ${r1(yU(f))}`).join(' L');
+    s+= r.t ? `<path d="${d}" class="s-tunnel" stroke-width="8" fill="none" opacity=".55"/><path d="${d}" class="s-ink2" stroke-width="2" stroke-dasharray="5 3" fill="none"/>`
+            : `<path d="${d}" class="s-steel" stroke-width="5" fill="none" stroke-linecap="round"/><path d="${d}" class="s-bore" stroke-width="2" fill="none"/>`;
+  });
+  s+=`<rect x="${r1(X(0.3)-7)}" y="${r1(yU(0.3)-2.2)}" width="14" height="4.4" rx="2.2" class="f-hl"/>`;
+  // lens on a pylon in the plains (from the Hyperloop hero)
+  const fL=0.16, lx=X(fL), ly=yU(fL), R=narrow?62:52, cx=X(0.5), cy=Y(narrow?15:15.2);
+  s+=`<path d="M${r1(cx-R*0.6)} ${r1(cy+R*0.8)} L${r1(lx-7)} ${r1(ly-5)} M${r1(cx+R*0.6)} ${r1(cy+R*0.8)} L${r1(lx+7)} ${r1(ly-5)}" class="s-ink3" stroke-width="1" stroke-dasharray="3 3" fill="none"/>`;
+  s+=`<circle cx="${r1(lx)}" cy="${r1(ly+4)}" r="10" class="s-ink" stroke-width="1.3" fill="none"/>`;
+  const cid='lensclip'+(narrow?'n':'w');
+  s+=`<defs><clipPath id="${cid}"><circle r="${R}"/></clipPath></defs><g transform="translate(${r1(cx)} ${r1(cy)})"><circle r="${R}" class="f-lens"/>`;
+  s+=`<path d="M${-R} ${r1(R*0.72)} H${R} V${R} H${-R} Z" class="f-ground" clip-path="url(#${cid})"/>`;
+  const br=R*0.3, tcy=-R*0.12, tdx=R*0.37, beamY=tcy+br+4;
+  s+=`<g clip-path="url(#${cid})"><rect x="${r1(-R*0.09)}" y="${r1(beamY)}" width="${r1(R*0.18)}" height="${r1(R)}" class="f-steel"/><rect x="${r1(-tdx-br*0.9)}" y="${r1(beamY-2)}" width="${r1(2*tdx+1.8*br)}" height="6" rx="2" class="f-steel"/></g>`;
+  [-1,1].forEach(sd=>{const tx=sd*tdx, pr=br*0.55, gyb=tcy+br*0.72, pcy=gyb-pr-6;
+    s+=`<circle cx="${r1(tx)}" cy="${r1(tcy)}" r="${r1(br)}" class="f-bore s-steel" stroke-width="3"/>`;
+    s+=`<path d="M${r1(tx-pr-4)} ${r1(gyb-pr*0.9)} V${r1(gyb)} H${r1(tx+pr+4)} V${r1(gyb-pr*0.9)}" class="s-ink2" stroke-width="2.2" fill="none"/>`;
+    s+=`<rect x="${r1(tx-pr)}" y="${r1(pcy-pr)}" width="${r1(2*pr)}" height="${r1(2*pr)}" rx="${r1(pr*0.8)}" class="f-hl"/>`;
+    if(sd>0){const ax=tx+pr*0.1; s+=`<path d="M${r1(ax)} ${r1(gyb-1)} V${r1(pcy+pr+1)}" class="s-boom" stroke-width="1.6"/>`;}
+  });
+  s+=`<circle r="${R}" class="s-ink" stroke-width="1.4" fill="none"/></g>`;
+  s+=T(cx-R-8,cy-R*0.3,Hh.bore,'f-ink td halo','end',fs)+T(cx-R-8,cy-R*0.3+fs,Hh.boreSub,'f-ink2 tm halo','end',sub);
+  s+=T(cx+R+8,cy-R*0.3,Hh.pod,'f-hl td halo','start',fs)+T(cx+R+8,cy-R*0.3+fs,Hh.podSub,'f-ink2 tm halo','start',sub);
+  // scene labels
+  const ty=Y(narrow?6.3:6.2);
+  s+=T(x0+8,ty,Hh.pylons,'f-ink td halo','start',fs)+T(x0+8,ty+fs,Hh.pylonsSub,'f-ink2 tm halo','start',sub);
+  s+=T(x1-6,ty,Hh.tunnel,'f-ink td halo','end',fs)+T(x1-6,ty+fs,Hh.tunnelSub,'f-ink2 tm halo','end',sub);
+  return s;
+}
+function hero(){
+  const host=$('#hero'), hw=host.clientWidth||1100, narrow=hw<820, H0=DATA.hero;
+  const zMax=H0.zMax, draw=[vBoomShield,vSkyloop,vHyperloop], keys=['bs','sk','hl'];
+  let W,H,panels=[],fs;
+  if(!narrow){
+    W=1180; H=548; fs=14;
+    const ax=54, gap=14, right=8, pw=(W-ax-right-2*gap)/3, top=84, gY=H-40;
+    panels=[0,1,2].map(i=>({x0:ax+i*(pw+gap), x1:ax+i*(pw+gap)+pw, top, gY, ty:30}));
+    const pc=v=>(v/W*100).toFixed(3)+'%';
+    const cards=$('#cards'); cards.classList.add('aligned');
+    cards.style.gridTemplateColumns=[pc(ax),pc(pw),pc(gap),pc(pw),pc(gap),pc(pw),pc(right)].join(' ');
+    cards.style.columnGap='0';
+  } else {
+    W=Math.max(520,Math.round(hw)); fs=W>600?15:17;
+    const PH=narrow&&W<=600?330:300, ax=W>600?50:46, gapY=18;
+    H=3*PH+2*gapY;
+    panels=[0,1,2].map(i=>{const py=i*(PH+gapY); return {x0:ax, x1:W-6, top:py+(fs+10)*2+12, gY:py+PH-34, ty:py+fs+12, py, PH};});
+    const cards=$('#cards'); cards.classList.remove('aligned'); cards.style.gridTemplateColumns=''; cards.style.columnGap='';
+  }
+  panels.forEach(p=>{p.kz=(p.gY-p.top)/zMax; p.Y=z=>p.gY-z*p.kz; p.fs=fs; p.narrow=narrow;});
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Three cut-away vignettes on a shared altitude axis from 0 to 25 km. BoomShield: a supersonic jet just above a thin hydrogen layer at 20 km; the boom stops in the layer and the ground below is quiet. Skyloop: a tube floating at 20 km in a hydrogen envelope on tethers, reached by launch ramps from ground portals; gusts move it hundreds of metres. Hyperloop: a tube pair on pylons near the ground that tunnels through mountains, with a lens showing the two bores and pods.">`;
+  s+=`<defs><linearGradient id="osky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" class="st-skytop"/><stop offset=".6" class="st-skymid"/><stop offset="1" class="st-skylow"/></linearGradient></defs>`;
+  const bands = narrow ? panels.map(p=>[p.py,p.PH]) : [[0,H]];
+  bands.forEach(([y,h])=>{s+=`<rect x="0" y="${y}" width="${W}" height="${h}" fill="url(#osky)"/>`;});
+  panels.forEach((p,i)=>{
+    if(narrow||i===0){
+      const xa=narrow?p.x0:0, xb=narrow?p.x1:W;
+      H0.ticks.forEach(k=>{if(k===0) return; const y=p.Y(k); s+=`<line x1="${narrow?p.x0-4:panels[0].x0-4}" x2="${narrow?p.x1:W}" y1="${r1(y)}" y2="${r1(y)}" class="s-grid" stroke-width="${k%10?0.7:1.2}" opacity=".9"/>`;});
+      const [j0,j1]=H0.jet_km; s+=`<rect x="${narrow?p.x0:panels[0].x0}" y="${r1(p.Y(j1))}" width="${narrow?p.x1-p.x0:W-panels[0].x0}" height="${r1((j1-j0)*p.kz)}" class="f-jet" opacity=".18"/>`;
+      // axis
+      const axX=p.x0-12;
+      s+=`<line x1="${axX}" x2="${axX}" y1="${r1(p.gY)}" y2="${r1(p.Y(zMax))}" class="s-ink3" stroke-width="1"/>`;
+      H0.ticks.forEach(k=>{const y=p.Y(k); s+=`<line x1="${axX-4}" x2="${axX}" y1="${r1(y)}" y2="${r1(y)}" class="s-ink3"/>`+T(axX-6,y+4,String(k),'f-ink3 tm','end',fs-3);});
+      s+=T(axX,p.Y(zMax)-10,'km','f-ink3 tm','middle',fs-3);
+      // ground band
+      s+=`<rect x="0" y="${r1(p.gY)}" width="${W}" height="${r1(narrow?p.py+p.PH-p.gY:H-p.gY)}" class="f-ground"/><line x1="0" x2="${W}" y1="${r1(p.gY)}" y2="${r1(p.gY)}" class="s-ground"/>`;
+    }
+    if(!narrow&&i>0) s+=`<line x1="${r1(p.x0-7)}" x2="${r1(p.x0-7)}" y1="${r1(p.top-34)}" y2="${r1(p.gY)}" class="s-rule" stroke-width="1"/>`;
+    s+=draw[i](p);
+    const V=H0[keys[i]];
+    s+=T(p.x0+(narrow?0:6),p.ty,V.title,`f-${keys[i]} td halo`,'start',fs+6,'font-weight="700"')+T(p.x0+(narrow?0:6),p.ty+fs+2,V.sub,'f-ink2 tm halo','start',fs-3);
+  });
+  s+=T(W-8,18,'NOT TO SCALE','f-ink3 tm','end',fs-4);
+  if(!narrow) s+=T(panels[0].x0+6,panels[0].Y(H0.jet_km[1])-6,H0.bs.jet,'f-ink3 tm halo','start',fs-4);
+  host.innerHTML=s+'</svg>';
+}
+
+/* ===== CARDS ===== */
+(function(){
+  const H0=DATA.hero, pct=v=>(v/H0.axisMax_h*100).toFixed(2)+'%';
+  $('#cards').innerHTML=DATA.concepts.map(c=>`<article class="card" style="--c:var(--${c.id})">
+    <div class="nm"><h3>${esc(c.name)}</h3><span class="kind">${esc(c.kind)}</span></div>
+    <span class="schip"><i class="${c.st}" aria-hidden="true">${ICON[c.st]}</i>${esc(c.status)}</span>
+    <div class="d2d"><div class="row"><b>${c.d2d.toFixed(2)} h</b><span>${esc(c.d2dNote)}</span></div>
+      <div class="tbar" title="${esc(c.name)}: ${c.d2d} h door to door; dashed line: subsonic jet ${H0.sub_h} h">
+        ${c.d2d2?`<i class="b2" style="left:0;width:${pct(c.d2d2)}"></i>`:''}<i class="b${c.hatch?' hatch':''}" style="width:${pct(c.d2d)}"></i><i class="ref" style="left:${pct(H0.sub_h)}"></i></div>
+      <div class="tbar-ax">${H0.axisTicks.map((t,i)=>`<span${i===H0.axisTicks.length-1?' class="end"':''} style="left:${pct(t)}">${t}${i===H0.axisTicks.length-1?' h':''}</span>`).join('')}</div>
+      <span class="small muted">dashed line: today's subsonic jet, ${H0.sub_h} h</span></div>
+    <p class="vd">${md(c.verdict)}</p>
+    <a class="go" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(c.go)}</a>
+  </article>`).join('');
+})();
+hero();
+let lastW=window.innerWidth; window.addEventListener('resize',()=>{if(Math.abs(window.innerWidth-lastW)<4) return; lastW=window.innerWidth; hero();});
+
+/* ===== COMPARISON ===== */
+(function(){
+  const C=DATA.compare;
+  $('#basis').innerHTML=md(C.basis);
+  let h=`<thead><tr><th></th>${C.heads.map(hd=>`<th class="${hd.id==='base'?'base':''}" style="--c:${hd.id==='base'?'var(--ink-3)':`var(--${hd.id})`}">${esc(hd.name)}<small>${esc(hd.sub)}</small></th>`).join('')}</tr></thead><tbody>`;
+  C.rows.forEach(r=>{h+=`<tr${r.scen?' class="scen"':''}><th scope="row">${esc(r.l)}</th>`+r.c.map((c,i)=>{const hd=C.heads[i], st=r.st&&r.st[i];
+    return `<td data-l="${esc(hd.name)}" class="${hd.id==='base'?'base':''}" style="--c:${hd.id==='base'?'var(--ink-3)':`var(--${hd.id})`}">${st?`<span class="st ${st}" aria-hidden="true">${ICON[st]}</span>`:''}${md(c)}</td>`;}).join('')+'</tr>';});
+  $('#cmp').innerHTML=h+'</tbody>';
+  $('#notes').innerHTML=C.notes.map(([n,t,lab,path])=>`<span>${n?`<sup>${n}</sup> `:''}${esc(t)} <a href="${GH+path}" target="_blank" rel="noopener">${esc(lab)}</a></span>`).join('');
+})();
+
+/* ===== LESSONS, GATES, LINKS, FOOTER ===== */
+$('#lessons').innerHTML=DATA.lessons.map(([a,b])=>`<li><b>${esc(a)}</b><span>${esc(b)}</span></li>`).join('');
+$('#gates').innerHTML=DATA.gates.map(g=>`<div class="gate" style="--c:var(--${g.id})"><h3>${esc(g.name)}${g.note?`<small>${esc(g.note)}</small>`:''}</h3>${g.items?`<ul>${g.items.map(t=>`<li>${esc(t)}</li>`).join('')}</ul>`:`<p>${esc(g.text)}</p>`}</div>`).join('');
+$('#links').innerHTML=DATA.links.map(l=>`<div style="--c:var(--${l.id})"><h4>${esc(l.name)}</h4><a href="${esc(l.page)}" target="_blank" rel="noopener">Infographic ↗</a>${l.docs.map(([t,p])=>`<a href="${GH+p}" target="_blank" rel="noopener">${esc(t)}</a>`).join('')}</div>`).join('');
+$('#foot').innerHTML=DATA.sources.map(t=>`<span>${esc(t)}</span>`).join('');
+</script>
