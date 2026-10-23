@@ -213,7 +213,7 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 <section aria-labelledby="cmp-h">
   <div class="sec-head">
     <div class="eyebrow">Shared figures of merit</div>
-    <h2 id="cmp-h">One corridor, three concepts and today's jet</h2>
+    <h2 id="cmp-h">USA Coast-to-Coast: three concepts and today's jet</h2>
     <p class="lede" data-k="compare.lede"></p>
   </div>
   <p class="basis" id="basis"></p>
@@ -263,15 +263,15 @@ const GH = "https://github.com/pablo-mayrgundter/skyloop/blob/main/";
 const DATA = {
   meta:{status:"screening level, October 2026", date:"23 October 2026",
     intro:[
-      "Crossing the United States has barely sped up since the 1970s. Jets still cruise near Mach 0.85, and New York to Los Angeles takes about **7.3 h door to door** (7.29 h in these models), much of it on the ground at airports.",
+      "Crossing a continent has barely sped up since the 1970s: jets still cruise near Mach 0.85. A coast-to-coast US trip takes about **7 h from airport curb to airport curb**, and more like **~9 h between city centres** (New York–Los Angeles: about an hour of ground transport at each end). The market is large: about **109 M US domestic trips a year are over 2,500 km**, with roughly 19 M more in China, 11 M in Russia, 10 M in Canada and 8 M in Australia (gravity-model estimates, ±2×).",
       "Concorde showed that Mach 2 airliners work, but its sonic boom is why supersonic flight over US land is banned (14 CFR §91.817). The new Boomless Cruise mode at Mach 1.15 only trims the trip to 6.27 h. Going much faster overland probably takes infrastructure at megaproject scale: a corridor that stops the boom before it reaches the ground, or a tube network that skips the airport altogether.",
-      "These studies test three such bets on the same NYC–LAX corridor and the same demand model: **BoomShield**, a hydrogen layer at 20 km that absorbs the boom under a supersonic corridor; **Skyloop**, a near-vacuum tube floating at 20 km; and **Hyperloop (our version)**, a low-pressure tube on pylons near the ground. For each, the question is whether any operating regime is feasible at once across physics, safety, energy, cost and demand."
+      "These studies test three such bets on the same USA Coast-to-Coast corridor (New York–Los Angeles is the reference trip) and the same demand model: **BoomShield**, a hydrogen layer at 20 km that absorbs the boom under a supersonic corridor; **Skyloop**, a near-vacuum tube floating at 20 km; and **Hyperloop (our version)**, a low-pressure tube on pylons near the ground. For each, the question is whether any operating regime is feasible at once across physics, safety, energy, cost and demand."
     ],
     framing:"Screening-level desk studies. Each maps the rough feasible operating regime; none validates a design point. Simulation only, no hardware. Web figures are unverified search summaries and unit costs are engineering estimates. Every benefit/cost ratio (B/C) assumes 100 % capture of the corridor's air travellers unless stated; realistic capture is nearer 30 %.",
     repoText:"github.com/pablo-mayrgundter/skyloop · SUMMARY.md on main",
     repoUrl:GH+"SUMMARY.md"},
   hero:{
-    tag:"altitude 0–25 km · NYC–LAX door to door",
+    tag:"altitude 0–25 km · USA Coast-to-Coast door to door (NYC–LAX)",
     zMax:25, ticks:[0,5,10,15,20,25], jet_km:[10,12],
     sub_h:7.29, boomless_h:6.27, axisMax_h:8, axisTicks:[0,2,4,6,8],
     scaleNote:"Altitudes follow the shared 0–25 km axis; everything else is stretched. BoomShield's layer is 29–35 m thick (drawn far thicker) and the aircraft flies about 250 m above it. Skyloop's tube and launch ramps are compressed along the route. Hyperloop's 6–25 m pylons and 4.1 m bore would be invisible at true scale, so the lens magnifies one pylon; its mountains stand for the Appalachians, Rockies and Transverse Ranges.",
@@ -303,7 +303,7 @@ const DATA = {
       url:"https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB", go:"Hyperloop page ↗"}
   ],
   compare:{
-    lede:"NYC–LAX on the US spine (LAS–DEN–OMA–CHI–CLE–NYC, tubes adding LAX), with BoomShield's demand and value-of-time model ($86/h; 7 %, 25 yr) in all three, so B/C compares once the basis is labelled. Gross counts time saved; net also counts the fuel and CO₂ against the comparator.",
+    lede:"USA Coast-to-Coast, with NYC–LAX as the reference trip, on the US spine (LAS–DEN–OMA–CHI–CLE–NYC, tubes adding LAX), with BoomShield's demand and value-of-time model ($86/h; 7 %, 25 yr) in all three, so B/C compares once the basis is labelled. Gross counts time saved; net also counts the fuel and CO₂ against the comparator.",
     basis:"**Basis.** Tube columns: life-cycle, **2050 opening**, M4, spine+LAX. BoomShield: M2.2, 50 t aircraft, integrated cost, with the STATUS **2025-year** canonical value and the **2050 life-cycle** value shown separately. The two BoomShield bases differ by ~2× gross; compare only the 2050 values with the tubes. “Low” is each study's own low-cost case (Skyloop run $19 M/km; Hyperloop $51 M/km; BoomShield's integrated cost is already its low-cost case). All columns 100 % capture.",
     heads:[
       {id:"base", name:"Subsonic jet", sub:"today's comparator, M0.85"},
@@ -354,7 +354,7 @@ const DATA = {
   ],
   sources:[
     "Source of truth: SUMMARY.md (23 October 2026), with boom-shield/STATUS.md, skyloop-review/README.md, hyperloop/README.md and boom-shield/economics/hydrogen/hydrogen.md. Overland ban: 14 CFR §91.817, as cited in boom-shield/network-maps/routes/routes.md.",
-    "Door-to-door times use the shared NYC–LAX time model (airport or station time, taxi and climb, launch and braking, cruise). Skyloop's 2.73 h holds only if the floating tube could be built.",
+    "Door-to-door times use the shared NYC–LAX time model (airport or station time, taxi and climb, launch and braking, cruise). It assumes 75 min of city access in total and a ~5.1 h gate-to-gate flight, so its 7.29 h subsonic trip is ~1.5–2 h shorter than a real city-centre-to-city-centre NYC–LAX trip. Longer access adds about the same time to every mode, and a longer real flight would make the subsonic baseline slower, so the time savings that drive B/C are, if anything, understated. Skyloop's 2.73 h holds only if the floating tube could be built. Long-haul trip counts: boom-shield/network-maps/global (demand_bands.csv).",
     "Screening level, simulation only. Web figures are unverified search summaries; unit costs are engineering estimates. Positions in the graphic are illustrative, not data."
   ]
 };
