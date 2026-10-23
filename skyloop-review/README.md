@@ -45,6 +45,15 @@ A spectral study of a tethered tube at 20 km, covering gusts, tethers, keel, tau
 - **The tube gas binds.** Each pass heats it by ΔT/T = (γ−1)·D/(p·A_bore): ~1,300 K in a 20 m bore and ~80 K in an 80 m bore at 5.5 Pa. Gas-to-wall transfer caps traffic at 4–30 pods/h below 10 Pa, and pumping cannot cool it.
 - **Feasible band:** Mach 3–8 at ≥ ~15–160 Pa in a 40–80 m bore; best L/D (C_L ≈ 0.05–0.15) sits at ~25–500 Pa. 10⁻³ of ambient fails. Mach is nearly free on the heat side; pressure and bore are not.
 
+## Internal-flight design map ([flight/flight.md](flight/flight.md))
+
+Winged pods fly over a steered motor strip in a 20–80 m bore, mapped over Mach 2–12, 5–1,000 Pa, 3.5–47 t pods and wing loading.
+
+- **The band is real only in an 80 m bore:** 8–17 t pods pass at M2–5.5 and ~80–1,000 Pa, and are marginal to M11.5 (the NYC–LAX trip cap at 0.3 g). A 40 m bore passes to M3.5; a 20 m bore fails everywhere.
+- **The Mach ceiling is not heat.** It is the guideway's steering stroke next to the wings (7–28 m), launch power (~0.15 GW per pod, ~1 GW per station), breach deceleration and trip length. Kantrowitz and piston effects are negligible in a wide bore.
+- **Flying costs 165–340 Wh/pax-km**, close to jet fuel (L/D 8 → 3). M5.5 → M11.5 saves only 11 min NYC–LAX (2.5 → 2.3 h door to door). One bore pair carries 47–206 M pax/yr.
+- **B/C ≤ 1.12 vs subsonic, ≤ 1.33 vs Boomless, ≤ 0.75 vs BoomShield.** It exceeds 1 only at low cost, net of fuel and CO₂, at 100 % capture, at M2–3.5 (Boomless: M2–9). The verdict is unchanged.
+
 ## System and economics ([system/system.md](system/system.md))
 
 - **The time advantage comes from boarding at ground level, not from Mach.** NYC–LAX door to door: 3.6 h at M2, 2.7 h at M4, 2.5 h at M6, against 5.1 h for BoomShield M2.2 and 7.3 h subsonic. Lifts to a 20 km station or docking aircraft at altitude are worse.
