@@ -16,7 +16,17 @@ Ranked problems:
 6. **Safety (hard).** A Mach 6 pod carries ~1.1 t TNT equivalent; breach, H₂ next to vacuum, evacuation from 20 km and lightning.
 7. **Vacuum (solvable).** 1–3 Pa is needed; leak pumping is modest.
 
-The original docs' claims that fail: the invballoon is not "entirely in tension" and its lift is wrong; the tube's first mode is ~4 Hz, not 10; 10⁻³ atm is far too high a pressure; "gliders" cannot glide in vacuum, so the whole route needs a levitation track.
+The original docs' claims that fail: the invballoon is not "entirely in tension" and its lift is wrong; the tube's first mode is ~4 Hz, not 10; the intended pressure is 10⁻³ of *ambient* (~5.5 Pa at 20 km), not 10⁻³ atm, and that is fine for drag. But "gliders" cannot glide at 5.5 Pa: lift needs ~25–1,400 Pa in a ≤ 8 m bore, and heating closes gliding above ~M3. So the route needs a levitation track ([regime](regime/regime.md)).
+
+## Feasible operating regime ([regime/regime.md](regime/regime.md))
+
+The map spans tube pressure 0.1 Pa–1 kPa, Mach 1–8, pod size 2–30 t, bore, setting and headway rule, for both maglev and glide.
+
+- **Floating at 20 km: no feasible point.** Alignment fails at every Mach (26 m motion vs 0.14–5 m allowed), with glide or maglev alike.
+- **Glide works almost nowhere.** At 10⁻³ of ambient the lift is 10–100× short. The only window is Mach ~1.8–3 at 200–1,000 Pa, at 130–260 Wh/pax-km, near jet-fuel parity.
+- **Technically open, ground maglev:** Mach 1–2 elevated or 1–2.8 buried, at ~6 Pa–1 kPa, with ≥ 33-seat pods on a 10 s moving block. It is marginal to M4 (alignment, curve radius) or M5.6 (breach deceleration). Leaks set the pressure floor and heating the ceiling, not drag.
+- **B/C ≥ 1 only for an elevated tube at ~$40 M/km with a certified moving block** (M1.4–4: 1.0–1.4 at low cost, ≤ 0.75 at base). Buried never pays (≤ 0.51).
+- **To open more:** active suspension or 5 mm/km alignment (M2 → 5–8), straighter right-of-way, moving-block certification and cheaper tubes. Nothing rescues the floating tube.
 
 ## System and economics ([system/system.md](system/system.md))
 

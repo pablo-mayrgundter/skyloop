@@ -1,6 +1,8 @@
 # Inverted Balloon (Invballoon) Architecture — Summary Overview
 
 This document summarizes the design reasoning, feasibility analysis, and materials roadmap for the proposed high‑altitude **invballoon-supported vacuum hyperloop / glider-launch system**. It distills the entire conceptual exploration into a cohesive reference.
+
+*Re-review (October 2026): see [skyloop-review/README.md](../skyloop-review/README.md) for updated physics, operating-regime and economics findings.*
 <img width="1144" height="172" alt="image" src="https://github.com/user-attachments/assets/281de715-abdb-448a-85cf-444825a959b1" />
 
 ---
@@ -27,7 +29,7 @@ This enables an order-of-magnitude reduction in mass compared to rigid vacuum tu
 * Ambient pressure: ~5.5 kPa
 * Air density: ~0.088 kg/m³
 * Low external pressure drastically reduces membrane load
-* Drag inside tube minimized once internal vacuum reaches <10⁻³ atm
+* Drag inside tube minimized once internal pressure reaches ≈10⁻³ of ambient (~5.5 Pa at 20 km; a low-pressure tube, not a hard vacuum, so pods can use aerodynamic lift)
 * Buoyancy feasible for very large envelope radii (≥30–50 m)
 
 ---
@@ -79,7 +81,7 @@ This enables an order-of-magnitude reduction in mass compared to rigid vacuum tu
 
 * Lateral shock: up to ~100 kN
 * Axial thrust loads: shared with filaments
-* Pressure transients negligible once tube vacuum is <10⁻³ atm
+* Pressure transients small once tube pressure is ≈10⁻³ of ambient (~5.5 Pa at 20 km; a low-pressure tube, not a hard vacuum, so pods can use aerodynamic lift)
 
 ### Impact on System
 
@@ -89,8 +91,8 @@ This enables an order-of-magnitude reduction in mass compared to rigid vacuum tu
 
 ### Pod Pumping Effect
 
-* Negligible pumping in deep vacuum
-* Only meaningful during early pumpdown (rough vacuum regime)
+* Small at ≈10⁻³ of ambient, but pods push gas downstream, so pressure-relief crossovers are needed every ~1–10 km
+* Larger during early pumpdown (rough vacuum regime)
 
 ---
 

@@ -1,0 +1,26 @@
+lever,setting,Mmax_alignment_pass,Mmax_alignment_marginal,Mmax_route_pass,Mmax_route_marginal,Mmax_safety_pass,Mmax_safety_marginal
+base,floating,nan,nan,8,8,nan,8
+base,elevated,2,4.8,2.8,4,2.8,5.6
+base,buried,7.6,8,8,8,2.8,5.6
+active suspension 0.5 Hz,floating,nan,nan,8,8,nan,8
+active suspension 0.5 Hz,elevated,5.2,8,2.8,4,2.8,5.6
+active suspension 0.5 Hz,buried,8,8,8,8,2.8,5.6
+survey/realignment 5 mm per km,elevated,6.2,8,2.8,4,2.8,5.6
+survey/realignment 5 mm per km,buried,7.6,8,8,8,2.8,5.6
+both of the above,elevated,8,8,2.8,4,2.8,5.6
+both of the above,buried,8,8,8,8,2.8,5.6
+straighter right-of-way R 500 km (elevated),elevated,2,4.8,5.2,7.4,2.8,5.6
+floating: 10x stiffer tethers (2.6 m),floating,1.4,1.8,8,8,nan,8
+floating: active hold to 0.3 m,floating,4,5.8,8,8,nan,8
+pod 5 t (safety only),elevated,,,,,2,4
+pod 5 t (safety only),buried,,,,,2,4
+pod 5 t (safety only),floating,,,,,nan,8
+pod 10 t (safety only),elevated,,,,,2.8,5.6
+pod 10 t (safety only),buried,,,,,2.8,5.6
+pod 10 t (safety only),floating,,,,,nan,8
+pod 17 t (safety only),elevated,,,,,2.8,5.6
+pod 17 t (safety only),buried,,,,,2.8,5.6
+pod 17 t (safety only),floating,,,,,nan,8
+pod 30 t (safety only),elevated,,,,,3,6
+pod 30 t (safety only),buried,,,,,2.8,5.8
+pod 30 t (safety only),floating,,,,,nan,8

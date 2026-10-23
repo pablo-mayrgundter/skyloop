@@ -1,0 +1,73 @@
+setting,support,rule,layer,level,n_points,binding_most_common,M_min,M_max,p_min,p_max,BC_base_max,BC_low_max,E_min
+floating,maglev,brick-wall,technical,pass,0,alignment:1439;vacuum:37,,,,,,,
+floating,maglev,brick-wall,technical,marginal,0,alignment:1439;vacuum:37,,,,,,,
+floating,maglev,brick-wall,ops,pass,0,alignment:1439;vacuum:37,,,,,,,
+floating,maglev,brick-wall,ops,marginal,0,alignment:1439;vacuum:37,,,,,,,
+floating,maglev,brick-wall,full,pass,0,alignment:1439;vacuum:37,,,,,,,
+floating,maglev,brick-wall,full,marginal,0,alignment:1439;vacuum:37,,,,,,,
+floating,maglev,moving block 10 s,technical,pass,0,alignment:1438;vacuum:26;drag_energy:12,,,,,,,
+floating,maglev,moving block 10 s,technical,marginal,0,alignment:1438;vacuum:26;drag_energy:12,,,,,,,
+floating,maglev,moving block 10 s,ops,pass,0,alignment:1438;vacuum:26;drag_energy:12,,,,,,,
+floating,maglev,moving block 10 s,ops,marginal,0,alignment:1438;vacuum:26;drag_energy:12,,,,,,,
+floating,maglev,moving block 10 s,full,pass,0,alignment:1431;vacuum:26;drag_energy:19,,,,,,,
+floating,maglev,moving block 10 s,full,marginal,0,alignment:1431;vacuum:26;drag_energy:19,,,,,,,
+floating,glide,brick-wall,technical,pass,0,alignment:1022;support:454,,,,,,,
+floating,glide,brick-wall,technical,marginal,0,alignment:1022;support:454,,,,,,,
+floating,glide,brick-wall,ops,pass,0,alignment:1022;support:454,,,,,,,
+floating,glide,brick-wall,ops,marginal,0,alignment:1022;support:454,,,,,,,
+floating,glide,brick-wall,full,pass,0,alignment:1014;support:462,,,,,,,
+floating,glide,brick-wall,full,marginal,0,alignment:1014;support:462,,,,,,,
+floating,glide,moving block 10 s,technical,pass,0,alignment:1019;support:450;drag_energy:7,,,,,,,
+floating,glide,moving block 10 s,technical,marginal,0,alignment:1019;support:450;drag_energy:7,,,,,,,
+floating,glide,moving block 10 s,ops,pass,0,alignment:1019;support:450;drag_energy:7,,,,,,,
+floating,glide,moving block 10 s,ops,marginal,0,alignment:1019;support:450;drag_energy:7,,,,,,,
+floating,glide,moving block 10 s,full,pass,0,alignment:997;support:472;drag_energy:7,,,,,,,
+floating,glide,moving block 10 s,full,marginal,0,alignment:997;support:472;drag_energy:7,,,,,,,
+elevated,maglev,brick-wall,technical,pass,123,,1,2,6.31,1000,0.1956,0.3581,7.251
+elevated,maglev,brick-wall,technical,marginal,453,,1,4,1.259,1000,0.1956,0.3581,6.704
+elevated,maglev,brick-wall,ops,pass,0,capacity:446;vacuum:395;safety:255,,,,,,,
+elevated,maglev,brick-wall,ops,marginal,60,,1,1.2,1.259,1000,0.1948,0.3561,6.704
+elevated,maglev,brick-wall,full,pass,0,capacity:393;vacuum:388;safety:255,,,,,,,
+elevated,maglev,brick-wall,full,marginal,0,capacity:393;vacuum:388;safety:255,,,,,,,
+elevated,maglev,moving block 10 s,technical,pass,118,,1,2,6.31,1000,0.7119,1.303,7.651
+elevated,maglev,moving block 10 s,technical,marginal,453,,1,4,1.259,1000,0.7479,1.383,6.997
+elevated,maglev,moving block 10 s,ops,pass,118,,1,2,6.31,1000,0.7119,1.303,7.651
+elevated,maglev,moving block 10 s,ops,marginal,453,,1,4,1.259,1000,0.7479,1.383,6.997
+elevated,maglev,moving block 10 s,full,pass,0,vacuum:430;safety:321;economics:276,,,,,,,
+elevated,maglev,moving block 10 s,full,marginal,368,,1.4,4,1.259,1000,0.7479,1.383,8.499
+elevated,glide,brick-wall,technical,pass,0,support:1000;heating:323;safety:121,,,,,,,
+elevated,glide,brick-wall,technical,marginal,32,,1.8,3,199.5,1000,0.09672,0.1795,129.5
+elevated,glide,brick-wall,ops,pass,0,support:991;heating:330;safety:118,,,,,,,
+elevated,glide,brick-wall,ops,marginal,0,support:991;heating:330;safety:118,,,,,,,
+elevated,glide,brick-wall,full,pass,0,support:1035;heating:331;safety:72,,,,,,,
+elevated,glide,brick-wall,full,marginal,0,support:1035;heating:331;safety:72,,,,,,,
+elevated,glide,moving block 10 s,technical,pass,0,support:980;heating:323;safety:123,,,,,,,
+elevated,glide,moving block 10 s,technical,marginal,32,,1.8,3,199.5,1000,0.6021,1.006,129.5
+elevated,glide,moving block 10 s,ops,pass,0,support:980;heating:323;safety:123,,,,,,,
+elevated,glide,moving block 10 s,ops,marginal,32,,1.8,3,199.5,1000,0.6021,1.006,129.5
+elevated,glide,moving block 10 s,full,pass,0,support:993;heating:307;safety:123,,,,,,,
+elevated,glide,moving block 10 s,full,marginal,0,support:993;heating:307;safety:123,,,,,,,
+buried,maglev,brick-wall,technical,pass,212,,1,2.8,6.31,1000,0.06011,0.1244,7.251
+buried,maglev,brick-wall,technical,marginal,613,,1,5.6,1.259,1000,0.06011,0.1244,6.704
+buried,maglev,brick-wall,ops,pass,0,capacity:606;vacuum:395;safety:255,,,,,,,
+buried,maglev,brick-wall,ops,marginal,60,,1,1.2,1.259,1000,0.05954,0.1232,6.704
+buried,maglev,brick-wall,full,pass,0,capacity:553;vacuum:388;safety:255,,,,,,,
+buried,maglev,brick-wall,full,marginal,0,capacity:553;vacuum:388;safety:255,,,,,,,
+buried,maglev,moving block 10 s,technical,pass,212,,1,2.8,6.31,1000,0.2438,0.5042,7.251
+buried,maglev,moving block 10 s,technical,marginal,613,,1,5.6,1.259,1000,0.2483,0.5135,6.997
+buried,maglev,moving block 10 s,ops,pass,212,,1,2.8,6.31,1000,0.2438,0.5042,7.251
+buried,maglev,moving block 10 s,ops,marginal,613,,1,5.6,1.259,1000,0.2483,0.5135,6.997
+buried,maglev,moving block 10 s,full,pass,0,economics:613;vacuum:384;safety:255,,,,,,,
+buried,maglev,moving block 10 s,full,marginal,0,economics:613;vacuum:384;safety:255,,,,,,,
+buried,glide,brick-wall,technical,pass,0,support:1004;heating:321;safety:124,,,,,,,
+buried,glide,brick-wall,technical,marginal,32,,1.8,3,199.5,1000,0.03394,0.07014,129.5
+buried,glide,brick-wall,ops,pass,0,support:995;heating:329;safety:120,,,,,,,
+buried,glide,brick-wall,ops,marginal,0,support:995;heating:329;safety:120,,,,,,,
+buried,glide,brick-wall,full,pass,0,support:1037;heating:332;safety:74,,,,,,,
+buried,glide,brick-wall,full,marginal,0,support:1037;heating:332;safety:74,,,,,,,
+buried,glide,moving block 10 s,technical,pass,0,support:984;heating:321;safety:126,,,,,,,
+buried,glide,moving block 10 s,technical,marginal,32,,1.8,3,199.5,1000,0.201,0.4057,129.5
+buried,glide,moving block 10 s,ops,pass,0,support:984;heating:321;safety:126,,,,,,,
+buried,glide,moving block 10 s,ops,marginal,32,,1.8,3,199.5,1000,0.201,0.4057,129.5
+buried,glide,moving block 10 s,full,pass,0,support:1009;heating:312;safety:103,,,,,,,
+buried,glide,moving block 10 s,full,marginal,0,support:1009;heating:312;safety:103,,,,,,,
