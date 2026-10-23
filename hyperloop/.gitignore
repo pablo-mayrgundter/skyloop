@@ -1,0 +1,5 @@
+*_grid.csv
+.cache/
+__pycache__/
+*.log
+hl_terrain.csv

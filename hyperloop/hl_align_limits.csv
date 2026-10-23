@@ -1,0 +1,25 @@
+setting,trim,suspension,Mach_pass,Mach_marginal,binding_lambda_m
+elevated,0,rigid EMS,0,0.8,nan
+elevated,0,passive EDS,2.9,6.2,631
+elevated,0,active 0.5 Hz,7.7,15.6,4642
+elevated,0,active 0.3 Hz,13,20,1.359e+04
+elevated,1,rigid EMS,0.5,1,25.12
+elevated,1,passive EDS,12.9,20,2929
+elevated,1,active 0.5 Hz,20,20,1.166e+04
+elevated,1,active 0.3 Hz,20,20,1.848e+04
+at-grade,0,rigid EMS,0,0.2,nan
+at-grade,0,passive EDS,0,4.6,nan
+at-grade,0,active 0.5 Hz,5.8,11.7,3415
+at-grade,0,active 0.3 Hz,9.7,19.5,1e+04
+at-grade,1,rigid EMS,0.2,0.6,10
+at-grade,1,passive EDS,8.7,17.5,2154
+at-grade,1,active 0.5 Hz,20,20,1.166e+04
+at-grade,1,active 0.3 Hz,20,20,1.848e+04
+buried,0,rigid EMS,0.6,1.4,18.48
+buried,0,passive EDS,8.7,17.5,2154
+buried,0,active 0.5 Hz,20,20,1.166e+04
+buried,0,active 0.3 Hz,20,20,1.848e+04
+buried,1,rigid EMS,0.7,15.3,10
+buried,1,passive EDS,16.6,20,3981
+buried,1,active 0.5 Hz,20,20,1.166e+04
+buried,1,active 0.3 Hz,20,20,1.848e+04
