@@ -2,3 +2,4 @@
 __pycache__/
 *.log
 regime/regime_grid.csv
+heating/heating_grid.csv
