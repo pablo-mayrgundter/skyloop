@@ -172,6 +172,24 @@ table.cmp tr.scen th,table.cmp tr.scen td{border-top:1px dashed var(--rule)}
 .links h4{margin:0;font:600 15px/1.25 var(--f-body);color:var(--c)}
 .links a{word-break:break-word}
 footer{font-size:12px;color:var(--ink-3);display:grid;gap:6px}
+/* corridor map (ported from the BoomShield page's "spine and its feeders") */
+.corridor{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:22px 40px;align-items:start}
+.corridor figure{margin:0;min-width:0;display:grid;gap:10px}
+.corridor figcaption{font-size:13px;color:var(--ink-2);max-width:92ch}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink-2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{display:inline-block;width:26px;flex:none}
+.legend .lg-spine{height:5px;border-radius:3px;background:var(--acc)}
+.legend .lg-feed{height:0;border-top:2px dashed var(--bs)}
+.legend .lg-ext{height:7px;border-top:2px solid var(--sk);border-bottom:2px solid var(--hl)}
+.cstats{display:grid;grid-template-columns:minmax(0,1fr);border-top:2px solid var(--acc)}
+.cstats div{display:grid;gap:2px;align-content:start;padding:10px 0;border-bottom:1px solid var(--rule);min-width:0}
+.cstats b{font:600 26px/1.1 var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cstats span{font-size:13px;color:var(--ink-2)}
+.cside{display:grid;gap:14px;min-width:0}
+.cworld{font-size:13.5px;color:var(--ink-2)}
+.cworld b{color:var(--ink);font-weight:600}
+svg text.halo-s{paint-order:stroke;stroke:var(--surface);stroke-linejoin:round}
 /* svg classes */
 .f-surface{fill:var(--surface)} .f-bg{fill:var(--bg)} .f-bore{fill:var(--bore)}
 .f-ink{fill:var(--ink)} .f-ink2{fill:var(--ink-2)} .f-ink3{fill:var(--ink-3)}
@@ -181,7 +199,7 @@ footer{font-size:12px;color:var(--ink-3);display:grid;gap:6px}
 .s-ink{stroke:var(--ink)} .s-ink2{stroke:var(--ink-2)} .s-ink3{stroke:var(--ink-3)} .s-boom{stroke:var(--boom)} .s-quiet{stroke:var(--quiet)}
 .s-bs{stroke:var(--bs)} .s-sk{stroke:var(--sk)} .s-hl{stroke:var(--hl)}
 .s-h2{stroke:var(--h2-edge)} .s-film{stroke:var(--film-edge)} .s-ground{stroke:var(--ground-edge)} .s-rock{stroke:var(--rock-edge)} .s-tunnel{stroke:var(--tunnel)}
-.s-grid{stroke:var(--grid)} .s-rule{stroke:var(--rule)} .s-steel{stroke:var(--steel)} .s-bg{stroke:var(--bg)} .s-bore{stroke:var(--bore)} .s-jet{stroke:var(--jet)}
+.s-acc{stroke:var(--acc)} .s-surface{stroke:var(--surface)} .s-grid{stroke:var(--grid)} .s-rule{stroke:var(--rule)} .s-steel{stroke:var(--steel)} .s-bg{stroke:var(--bg)} .s-bore{stroke:var(--bore)} .s-jet{stroke:var(--jet)}
 .st-skytop{stop-color:var(--sky-top)} .st-skymid{stop-color:var(--sky-mid)} .st-skylow{stop-color:var(--sky-low)}
 svg text{font-family:var(--f-body)}
 svg text.halo{paint-order:stroke;stroke:var(--sky-mid);stroke-width:4px;stroke-linejoin:round}
@@ -191,6 +209,9 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 /* responsive */
 @media (max-width:900px){
   .two{grid-template-columns:minmax(0,1fr)}
+  .corridor{grid-template-columns:minmax(0,1fr)}
+  .cstats{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
+  .cstats div:last-child:nth-child(odd){grid-column:1 / -1}
   .links{grid-template-columns:minmax(0,1fr)}
 }
 @media (max-width:640px){
@@ -229,6 +250,25 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
   <div class="intro" id="intro"></div>
   <p class="frame"><span class="stamp">FRAMING.</span> <span data-k="meta.framing"></span></p>
 </header>
+
+<section aria-labelledby="corr-h">
+  <div class="sec-head">
+    <div class="eyebrow" data-k="corridor.eyebrow"></div>
+    <h2 id="corr-h" data-k="corridor.title"></h2>
+    <p class="lede" data-k="corridor.lede"></p>
+  </div>
+  <div class="corridor">
+    <figure>
+      <div class="legend" id="corr-legend"></div>
+      <div id="spine-map"></div>
+      <figcaption data-k="corridor.mapCaption"></figcaption>
+    </figure>
+    <div class="cside">
+      <div class="cstats" id="corr-stats"></div>
+      <p class="cworld" id="corr-world"></p>
+    </div>
+  </div>
+</section>
 
 <section class="hero" aria-labelledby="hero-h">
   <div class="hero-head"><h3 id="hero-h">Three bets on one altitude axis</h3><span class="tag" data-k="hero.tag"></span></div>
@@ -295,13 +335,42 @@ const GH = "https://github.com/pablo-mayrgundter/skyloop/blob/main/";
 const DATA = {
   meta:{status:"screening level, October 2026", date:"23 October 2026",
     intro:[
-      "Crossing a continent has barely sped up since the 1970s: jets still cruise near Mach 0.85. A coast-to-coast US trip takes about **7 h from airport curb to airport curb**, and more like **~9 h between city centres** (New York–Los Angeles: about an hour of ground transport at each end). The market is large: about **109 M US domestic trips a year are over 2,500 km**, with roughly 19 M more in China, 11 M in Russia, 10 M in Canada and 8 M in Australia (gravity-model estimates, ±2×).",
+      "Crossing a continent has barely sped up since the 1970s: jets still cruise near Mach 0.85. A coast-to-coast US trip takes about **7 h from airport curb to airport curb**, and more like **~9 h between city centres** (New York–Los Angeles: about an hour of ground transport at each end). The market is large: **~110–140 M US domestic trips a year are over 2,500 km** (109 M in the modelled markets, ~140 M scaled to the national total), with roughly 19 M more in China, 11 M in Russia, 10 M in Canada and 8 M in Australia (gravity-model estimates, ±2×).",
       "Concorde showed that Mach 2 airliners work, but its sonic boom is why supersonic flight over US land is banned (14 CFR §91.817). The new Boomless Cruise mode at Mach 1.15 only trims the trip to 6.27 h. Going much faster overland probably takes infrastructure at megaproject scale: a corridor that stops the boom before it reaches the ground, or a tube network that skips the airport altogether.",
       "These studies test three such bets on the same USA Coast-to-Coast corridor (New York–Los Angeles is the reference trip) and the same demand model: **BoomShield**, a hydrogen layer at 20 km that absorbs the boom under a supersonic corridor; **Skyloop**, a near-vacuum tube floating at 20 km; and **Hyperloop (our version)**, a low-pressure tube on pylons near the ground. For each, the question is whether any operating regime is feasible at once across physics, safety, energy, cost and demand."
     ],
     framing:"Screening-level desk studies. Each maps the rough feasible operating regime; none validates a design point. Simulation only, no hardware. Web figures are unverified search summaries and unit costs are engineering estimates. Every benefit/cost ratio (B/C) assumes 100 % capture of the corridor's air travellers unless stated; realistic capture is nearer 30 %.",
     repoText:"github.com/pablo-mayrgundter/skyloop · SUMMARY.md on main",
     repoUrl:GH+"SUMMARY.md"},
+  /* Lead map, ported from the BoomShield page (DATA.network). Trips: boom-shield/network-maps/coverage/coverage.md (650 M national, 600–700;
+     217 M addressable at M2.0; spine 81 M pax/yr, 37 % of pax-h); > 2,500 km: global/demand_bands.csv (US 108.8 M on the 507 M modelled-market basis,
+     ~140 M scaled to 650 M in coverage Table 1; CN 19.14, RU 11.08, CA 10.09, AU 8.04); spine and feeders: trunk/trunk.md; ranking: global/global.md
+     (best non-US spine, Europe–Gulf, is 55–65 % of the US B/C); tubes add LAX: SUMMARY.md. Outline is a coarse schematic (lon, lat). */
+  corridor:{
+    eyebrow:"The corridor · one spine for a continent",
+    title:"The corridor: USA Coast-to-Coast",
+    lede:"The megaproject is one 3,614 km spine that gathers a continent's long-haul flows, not one city pair: all three studies are built on it, with NYC–LAX only as the reference trip.",
+    spine_km:"3,614", spine_M:81, spineShare_pct:37, trips_M:650, addressable_M:217, over2500_M:109, over2500_national_M:140,
+    legend:{spine:"spine (all three concepts)", feed:"Boomless feeders (BoomShield)", ext:"LAX extension (tubes)"},
+    mapCaption:"The 3,614 km spine LAS–DEN–OMA–CHI–CLE–NYC is common to all three studies. In BoomShield it is the Mach 2 shielded corridor; the same aircraft fly unshielded Boomless feeder legs at Mach 1.15 (dashed) from LAX, SFO, PHX and SEA into Las Vegas, and from BOS, PHL, WAS and YYZ onto the spine in western Pennsylvania (open circle). Las Vegas takes 32 % of joins, New York 14 %. Skyloop and Hyperloop serve the spine stations and add LAX at the west end. Southern flows (Florida–West, Texas–Northeast) are not captured. Schematic projection.",
+    stats:[
+      {v:"~650 M", l:"US domestic one-way trips a year (600–700 M)"},
+      {v:"~217 M", l:"addressable at Mach 2 (a shield saves ≥ 10 min)"},
+      {v:"~109 M", l:"US trips over 2,500 km a year (modelled markets; ~140 M scaled to the national total)"},
+      {v:"3,614 km", l:"spine length, LAS–DEN–OMA–CHI–CLE–NYC"},
+      {v:"~81 M", l:"passengers a year on the spine, ~37 % of the time a shield could save"}
+    ],
+    world:[["China",19],["Russia",11],["Canada",10],["Australia",8]],
+    worldNote:"gravity estimates, ±2×",
+    worldRank:"No corridor outside the US scores better: the best, Europe–Gulf (LON–IST–DXB), reaches 55–65 % of the US spine's B/C.",
+    /* lat, lon */
+    metros:{LAS:[36.08,-115.15],DEN:[39.86,-104.67],OMA:[41.30,-95.89],CHI:[41.97,-87.91],CLE:[41.41,-81.85],NYC:[40.78,-73.87],
+      LAX:[33.94,-118.41],SFO:[37.62,-122.38],PHX:[33.43,-112.01],SEA:[47.45,-122.31],BOS:[42.37,-71.01],PHL:[39.87,-75.24],WAS:[38.85,-77.04],YYZ:[43.68,-79.63],wPA:[41.15,-79.3]},
+    spine:["LAS","DEN","OMA","CHI","CLE","NYC"],
+    feeders:[["LAX","LAS"],["SFO","LAS"],["PHX","LAS"],["SEA","LAS"],["BOS","wPA"],["PHL","wPA"],["WAS","wPA"],["YYZ","wPA"]],
+    ext:[["LAX","LAS"]],
+    outline:[[-124.7,48.4],[-123,49],[-95.2,49],[-94.8,49.4],[-89.6,48],[-84.6,46.5],[-82.4,43],[-79,43.3],[-76.3,44.1],[-74.7,45],[-71.5,45],[-70,46.7],[-69.2,47.4],[-67.8,47.1],[-67,45],[-70.2,43.6],[-70.6,42.6],[-70,41.8],[-71.9,41.3],[-74,40.6],[-74.9,38.9],[-76,37],[-75.5,35.2],[-77.9,33.9],[-79.9,32.7],[-81.4,30.7],[-80.6,28.4],[-80.1,26],[-80.4,25.2],[-81.1,25.1],[-81.8,26.7],[-82.7,28],[-83,29.1],[-84.3,30],[-85.4,29.7],[-86.5,30.4],[-88,30.4],[-89.6,30.2],[-89.4,29],[-90.5,29.1],[-92,29.6],[-93.8,29.7],[-94.8,29.3],[-96.8,28],[-97.4,26],[-99.1,26.4],[-99.5,27.5],[-101.4,29.8],[-103.1,29],[-104.7,30],[-106.5,31.8],[-108.2,31.8],[-111.1,31.3],[-114.8,32.5],[-117.1,32.5],[-118.5,34],[-120.6,34.6],[-121.9,36.6],[-122.5,37.8],[-123.8,39.8],[-124.2,41.8],[-124.5,43],[-124,46.3]]
+  },
   hero:{
     tag:"altitude 0–25 km · USA Coast-to-Coast door to door (NYC–LAX)",
     zMax:25, ticks:[0,5,10,15,20,25], jet_km:[10,12],
@@ -640,8 +709,44 @@ function hero(){
   $('#comp').innerHTML=h+'</tbody>';
   $('#comp-notes').innerHTML=C.notes.map(([n,t,lab,path])=>`<span>${n?`<sup>${n}</sup> `:''}${esc(t)} <a href="${GH+path}" target="_blank" rel="noopener">${esc(lab)}</a></span>`).join('');
 })();
+/* ===== CORRIDOR MAP (lead graphic): BoomShield page's projection and style, neutral spine, tube extension to LAX ===== */
+(function(){
+  const N=DATA.corridor;
+  $('#corr-legend').innerHTML=`<span><i class="lg-spine"></i>${esc(N.legend.spine)}</span><span><i class="lg-feed"></i>${esc(N.legend.feed)}</span><span><i class="lg-ext"></i>${esc(N.legend.ext)}</span>`;
+  $('#corr-stats').innerHTML=N.stats.map(s=>`<div><b>${esc(s.v)}</b><span>${esc(s.l)}</span></div>`).join('');
+  $('#corr-world').innerHTML=`Other countries' domestic long-haul markets are smaller: <b>${N.world.map(([c,v])=>`${esc(c)} ~${v} M`).join(', ')}</b> trips a year over 2,500 km (${esc(N.worldNote)}). ${esc(N.worldRank)} <a href="${GH}boom-shield/network-maps/global/global.md" target="_blank" rel="noopener">global.md</a>`;
+})();
+function spineMap(){
+  const N=DATA.corridor, host=$('#spine-map'), W=470, H=262, k=9.6, c=Math.cos(39*Math.PI/180);
+  const sc=(host.clientWidth||700)/W;                    // rendered px per unit: labels keep a constant on-screen size
+  const fS=14/sc, fO=12/sc, hw=3/sc;                     // spine/station labels, other labels, halo width
+  const P=([la,lo])=>[(lo+125)*k*c+12, (49.6-la)*k+12];
+  const pt=code=>P(N.metros[code]);
+  const seg=(a,b)=>{const [x1,y1]=pt(a),[x2,y2]=pt(b); return [x1,y1,x2,y2];};
+  const stn=new Set([...N.spine, ...N.ext.flat()]);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Schematic map of the contiguous US. A ${N.spine_km} km spine runs Las Vegas, Denver, Omaha, Chicago, Cleveland, New York and is shared by all three concepts. BoomShield feeder legs at Mach 1.15 reach Las Vegas from Los Angeles, San Francisco, Phoenix and Seattle, and join in western Pennsylvania from Boston, Philadelphia, Washington and Toronto. The tube concepts extend the spine from Las Vegas to Los Angeles.">`;
+  s+=`<path d="M${N.outline.map(([lo,la])=>P([la,lo]).map(v=>v.toFixed(1)).join(' ')).join(' L')} Z" class="f-surface s-rule" stroke-width="1"/>`;
+  // BoomShield feeders (flown at M1.15, no shield)
+  N.feeders.forEach(([a,b])=>{const [x1,y1,x2,y2]=seg(a,b); s+=`<path d="M${r1(x1)} ${r1(y1)} L${r1(x2)} ${r1(y2)}" class="s-bs" stroke-width="1.4" stroke-dasharray="4 3" fill="none"/>`;});
+  // tube extension: a pair of thin lines either side of the feeder, Skyloop and Hyperloop accents
+  N.ext.forEach(([a,b])=>{const [x1,y1,x2,y2]=seg(a,b), L=Math.hypot(x2-x1,y2-y1), nx=-(y2-y1)/L*3.2, ny=(x2-x1)/L*3.2;
+    [['s-sk',1],['s-hl',-1]].forEach(([cl,sd])=>{s+=`<path d="M${r1(x1+sd*nx)} ${r1(y1+sd*ny)} L${r1(x2+sd*nx)} ${r1(y2+sd*ny)}" class="${cl}" stroke-width="2.2" stroke-linecap="round" fill="none"/>`;});});
+  // shared spine
+  s+=`<path d="M${N.spine.map(code=>pt(code).map(v=>v.toFixed(1)).join(' ')).join(' L')}" class="s-acc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`;
+  // label offsets in ems of the label's own size: [dx, dy, anchor]; null = dot only
+  const L={LAS:[-0.5,-0.55,'end'],DEN:[0,-0.75,'middle'],OMA:[0,-0.75,'middle'],CHI:[-0.1,-0.75,'middle'],CLE:[0,1.35,'middle'],NYC:[0.6,0.3,'start'],
+    LAX:[-0.5,0.95,'end'],SFO:[0.1,-0.7,'middle'],PHX:[0,1.3,'middle'],SEA:[0.5,0.35,'start'],BOS:[0,-0.7,'middle'],WAS:[0,1.35,'middle'],YYZ:[0,-0.7,'middle'],PHL:null,wPA:null};
+  Object.keys(N.metros).forEach(code=>{const [x,y]=pt(code), sp=stn.has(code);
+    if(code==='wPA'){s+=`<circle cx="${r1(x)}" cy="${r1(y)}" r="3" class="f-surface s-bs" stroke-width="2"/>`;return;}
+    s+=`<circle cx="${r1(x)}" cy="${r1(y)}" r="${sp?4.5:3}" class="${sp?'f-ink s-surface':'f-ink3'}" stroke-width="1.5"/>`;
+    const l=L[code]; if(!l) return; const f=sp?fS:fO;
+    s+=`<text x="${r1(x+l[0]*f)}" y="${r1(y+l[1]*f)}" font-size="${r1(f)}" text-anchor="${l[2]}" class="${sp?'f-ink':'f-ink2'} tm halo-s" stroke-width="${r1(hw)}" font-weight="${sp?600:400}">${code}</text>`;});
+  s+=`<text x="16" y="${r1(H-12-fO*1.25)}" font-size="${r1(fO)}" class="f-ink2 tm">${N.spine_km} km spine</text><text x="16" y="${H-12}" font-size="${r1(fO)}" class="f-ink2 tm">~${N.spine_M} M pax/yr</text>`;
+  host.innerHTML=s+'</svg>';
+}
+spineMap();
 hero();
-let lastW=window.innerWidth; window.addEventListener('resize',()=>{if(Math.abs(window.innerWidth-lastW)<4) return; lastW=window.innerWidth; hero();});
+let lastW=window.innerWidth; window.addEventListener('resize',()=>{if(Math.abs(window.innerWidth-lastW)<4) return; lastW=window.innerWidth; hero(); spineMap();});
 
 /* ===== COMPARISON ===== */
 (function(){
