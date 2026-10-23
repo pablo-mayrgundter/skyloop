@@ -2,7 +2,9 @@
 
 A second look at the original Skyloop concept (`docs/`): a buoyant near-vacuum tube at ~20 km carrying pods at Mach 2–6, revisited with the physics and economics machinery built for [BoomShield](../boom-shield/STATUS.md). Screening-level desk study; web sources were checked only at search-summary level.
 
-**Verdict: do not pursue the stratospheric tube. Keep watching ground vactrains.**
+**Verdict: do not pursue the stratospheric tube. Keep a watching brief on ground vactrains, now narrowed to an elevated tube at Mach 3–4 ([Hyperloop, our version](../hyperloop/README.md)).**
+
+Infographic: <https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK>. Comparison with BoomShield and Hyperloop: [SUMMARY](../SUMMARY.md).
 
 ## Physics and engineering ([physics/physics.md](physics/physics.md))
 
@@ -71,3 +73,13 @@ Pods ride a steered maglev guideway in a 10–80 m bore, and wings carry a fract
 - **Energy is the one clear advantage:** 21–85 Wh per passenger-km of electricity against ~340 Wh of jet fuel, so net of fuel and CO₂ the case improves (unlike BoomShield).
 - **B/C (2050 opening, 100 % capture), gross / net of fuel and CO₂:** base cost 0.36 / 0.47 vs subsonic and 0.28 / 0.61 vs Boomless; low cost 1.28 / 1.67 and 1.09 / 2.17. It pays only below ~$40–55 M/km all-in. A ground vactrain on the same network at ~$62 M/km scores higher (0.68 / 0.89 vs subsonic).
 - **Hybrids with BoomShield:** none of the three studied works. The lesson to carry back: ground processing beats Mach.
+
+## Ground tube with compliant gap (Hyperloop, our version) ([../hyperloop/README.md](../hyperloop/README.md))
+
+A follow-on to the hybrid study's finding that a compliant gap would let an elevated ground tube go faster: SC-EDS pods in a ~4 m tube on pylons, routed over real terrain.
+
+- **The compliant gap solves alignment.** An active 0.3 Hz / 0.3 m gap rides a realistic pylon guideway to **M13–20**; rigid EMS fails above ~M0.5–1.
+- **Breach deceleration now limits speed:** 2.5 / 10 / 23 g at M2 / 4 / 6, so **pass to M3, marginal to M6**. Above ~M4 straight right-of-way binds too.
+- **Terrain sets the cost.** Mountains force **690 km of tunnel at M4** (18 % of the rural route), so the route average is **$120 M/km** ($51–300 M) and spine+LAX **$552 B**. The $62 M/km ground vactrain above ignored detours and tunnels; priced with them, it is about level with the floating tube at base cost, not better.
+- **NYC–LAX 2.73 h nonstop at M4. B/C peaks at M3–4:** net vs subsonic **0.50–0.53 base, 1.27–1.36 low cost** (2050, 100 % capture). It pays below ~**$52 M/km**.
+- **Verdict:** no physics veto to ~M6, but a cost and moving-block-certification problem. Keep it as the watching brief at M3–4, gated on a priced elevated km ≤ $50 M including mountains, a path to ~10 s headways and a breach-mitigation demonstration.

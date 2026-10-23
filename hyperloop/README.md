@@ -162,18 +162,20 @@ Comparators: HTT Great Lakes $31–37 M, Hyperloop One $52–75 M, China HSR via
 
 **Comparison** (NYC–LAX; 2050 opening; 100 % capture)
 
-| | BoomShield M2.2 | Skyloop floating, 20 km (M4) | **Hyperloop, elevated (M4)** |
+| | BoomShield M2.2 ¹ | Skyloop floating, 20 km (M4) | **Hyperloop, elevated (M4)** |
 |---|---|---|---|
 | Door to door | 5.08 h | 2.7 h (if buildable) | **2.73 h** nonstop, 3.62 h all-stop |
 | Physics status | acoustics pass a screen | **alignment veto** (8–485 m motion) | **passes to M3, marginal to M6** (breach) |
-| Infrastructure, $M/km | 25 integrated – 186 | 66 run + 157 ramp | 80 standard, **120 route average** (51–300) |
-| Corridor capex | $91 B spine | $569 B spine+LAX | **$552 B** spine+LAX ($233–1,344 B) |
+| Infrastructure, $M/km | 25 integrated – 186 (Concorde-class shield) | 66 run + 157 ramp | 80 standard, **120 route average** (51–300) |
+| Corridor capex | $91 B spine (Concorde-class, integrated) | $569 B spine+LAX | **$552 B** spine+LAX ($233–1,344 B) |
 | Energy, Wh/pax-km | ~1,400 (fuel) | 21–85 | 15 nonstop · 59 all-stop |
 | Capacity | lid cap 10,000 flights/day | 126 M/yr moving block, 9 M brick-wall | same |
-| B/C vs subsonic, gross / net, base | ~5.0 / −5.2 | 0.36 / 0.47 | **0.37 / 0.50** |
+| B/C vs subsonic, gross / net, base | 5.17 / −5.18 | 0.36 / 0.47 | **0.37 / 0.50** |
 | B/C vs subsonic, net, low cost | — | 1.67 | **1.27** |
-| B/C vs Boomless, net, base / low | 0.46 (gross 1.67) | 0.61 / 2.17 | 0.64 / 1.62 |
-| Pays below | ≤ $20/m² shield | $40–55 M/km | **$52 M/km** (net), $34 M (gross) |
+| B/C vs Boomless, net, base / low | 0.46 (gross 1.67), 2050 life-cycle | 0.61 / 2.17 | 0.64 / 1.62 |
+| Pays below | does not pay net in a 2025 year; life-cycle net = 1 only for a ~2075 opening (gate G-D asks ≤ $20/m²) | $40–55 M/km | **$52 M/km** (net), $34 M (gross) |
+
+¹ BoomShield B/C is its 2050-opening life-cycle value (STATUS.md); its cost per km and capex are for the Concorde-class integrated shield (the M2.2 shield is thinner and cheaper).
 
 **Verdict.** "Our" Hyperloop is the review's first tube with no physics veto: the compliant gap turns alignment from fatal into a non-issue to M13–20. What remains is breach deceleration (ceiling ~M6), straight right-of-way (from ~M4), mountain tunnels (18–24 % of the route), relative-braking certification and, above all, cost. At base it reaches half of break-even (0.50 net); at the low end 1.0–1.4 net vs subsonic and 1.5–1.9 vs Boomless, but ~1 vs BoomShield only for a 2060 opening. Faster is not better above ~M4: energy grows as V² and all-stop legs never reach cruise. **Keep it as the ground-vactrain watching brief at M3–4**, gated on a priced elevated km ≤ $50 M including mountains, a regulator's path to ~10 s headways, and a breach-mitigation demonstration (sector valves ≤ 1 s).
 
