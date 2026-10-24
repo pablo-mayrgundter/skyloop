@@ -4,7 +4,7 @@
   
 Skyloop is a vision for a buoyant, near vacuum sky transport system connecting major cities via stratospheric corridors. By suspending lightweight tubes high above the weather for launching and linearly accelerating small gliders inside them, Skyloop aims to deliver intercity travel at Mach 2–6 speeds with energy efficiency and throughput orders of magnitude better than current aviation.  
   
-**Studies summary (October 2026):** [SUMMARY.md](SUMMARY.md) compares BoomShield, the Skyloop re-review and Hyperloop (our version) on one page; the [overview infographic](https://claude.ai/artifact/E75ZQx2eW1CXWKeJgPk6gi) is the visual front door.  
+**Studies summary (October 2026):** [SUMMARY.md](SUMMARY.md) compares BoomShield, the Skyloop re-review and Hyperloop (our version) on one page; the [overview infographic](https://claude.ai/artifact/E75ZQx2eW1CXWKeJgPk6gi) is the visual front door. Standalone copies of all four pages, with screenshots, are in [site/](site/README.md).  
   
 ## Documents  
 - [docs/01-overview.md](docs/01-overview.md): overview of the concept, network design, advantages, and pod classes.  
