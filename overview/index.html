@@ -66,14 +66,21 @@ section{display:grid;gap:22px;min-width:0}
 .family a[aria-current="page"]{color:var(--ink);font-weight:600;border-color:var(--acc)}
 .family .lab{letter-spacing:.12em;text-transform:uppercase;font-size:11px;margin-right:6px}
 /* header */
-header.top{display:grid;gap:14px}
+header.top{display:block}
+header.top>*+*{margin-top:14px}
+header.top::after{content:"";display:block;clear:both}
+.corr-float{float:right;width:min(48%,560px);margin:14px 0 18px 36px;display:grid;gap:8px}
+header.top>.corr-float{margin-top:14px}
+.corr-float h3{font-size:20px}
+.corr-float figcaption{font-size:12.5px;color:var(--ink-2)}
 .title-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 20px}
 .title-row .reg{font:500 13px/1.3 var(--f-mono);color:var(--ink-3)}
-.intro{display:grid;gap:12px;max-width:68ch}
+.intro{display:block}
+.intro p+p{margin-top:12px}
 .intro p{font-size:17px;color:var(--ink-2);max-width:none}
 .intro p:first-child{font-size:19px;color:var(--ink)}
 .intro b{color:var(--ink);font-weight:600}
-.frame{font-size:14px;color:var(--ink-2);border:1px dashed var(--rule);padding:8px 12px;max-width:68ch}
+.frame{display:flow-root;font-size:14px;color:var(--ink-2);border:1px dashed var(--rule);padding:8px 12px;max-width:68ch}
 .frame .stamp{color:var(--ink)}
 /* hero */
 .hero{display:grid;gap:14px}
@@ -173,7 +180,7 @@ table.cmp tr.scen th,table.cmp tr.scen td{border-top:1px dashed var(--rule)}
 .links a{word-break:break-word}
 footer{font-size:12px;color:var(--ink-3);display:grid;gap:6px}
 /* corridor map (ported from the BoomShield page's "spine and its feeders") */
-.corridor{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:22px 40px;align-items:start}
+.corridor{display:grid;gap:14px}
 .corridor figure{margin:0;min-width:0;display:grid;gap:10px}
 .corridor figcaption{font-size:13px;color:var(--ink-2);max-width:92ch}
 .legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink-2)}
@@ -182,7 +189,7 @@ footer{font-size:12px;color:var(--ink-3);display:grid;gap:6px}
 .legend .lg-spine{height:5px;border-radius:3px;background:var(--acc)}
 .legend .lg-feed{height:0;border-top:2px dashed var(--bs)}
 .legend .lg-ext{height:7px;border-top:2px solid var(--sk);border-bottom:2px solid var(--hl)}
-.cstats{display:grid;grid-template-columns:minmax(0,1fr);border-top:2px solid var(--acc)}
+.cstats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));column-gap:20px;border-top:2px solid var(--acc)}
 .cstats div{display:grid;gap:2px;align-content:start;padding:10px 0;border-bottom:1px solid var(--rule);min-width:0}
 .cstats b{font:600 26px/1.1 var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
 .cstats span{font-size:13px;color:var(--ink-2)}
@@ -209,7 +216,10 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 /* responsive */
 @media (max-width:900px){
   .two{grid-template-columns:minmax(0,1fr)}
-  .corridor{grid-template-columns:minmax(0,1fr)}
+  header.top{display:flex;flex-direction:column;gap:14px}
+  header.top>*+*{margin-top:0}
+  .corr-float{float:none;width:auto;margin:4px 0 6px;order:5}
+  header.top>.frame{order:6}
   .cstats{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
   .cstats div:last-child:nth-child(odd){grid-column:1 / -1}
   .links{grid-template-columns:minmax(0,1fr)}
@@ -242,6 +252,12 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 
 <header class="top">
   <nav class="family" aria-label="Related pages"><span class="lab">Three studies</span><a href="#overview" aria-current="page">Overview</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/1GASTWSYperFtVLyLY29VJ" target="_blank" rel="noopener">BoomShield</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/Rvmp18jJLdP7pAPWvuiHHK" target="_blank" rel="noopener">Skyloop</a><span aria-hidden="true">·</span><a href="https://claude.ai/artifact/QbRskhNLJEzpye6SzGC3fB" target="_blank" rel="noopener">Hyperloop (our version)</a></nav>
+  <figure class="corr-float" aria-labelledby="corr-fig-h">
+    <h3 id="corr-fig-h" data-k="corridor.title"></h3>
+    <div class="legend" id="corr-legend"></div>
+    <div id="spine-map"></div>
+    <figcaption data-k="corridor.mapCaption"></figcaption>
+  </figure>
   <div class="eyebrow" id="overview">Overview · three concept studies · <span data-k="meta.status"></span></div>
   <div class="title-row">
     <h1>Megaproject transport studies</h1>
@@ -254,15 +270,10 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
 <section aria-labelledby="corr-h">
   <div class="sec-head">
     <div class="eyebrow" data-k="corridor.eyebrow"></div>
-    <h2 id="corr-h" data-k="corridor.title"></h2>
+    <h2 id="corr-h">The corridor in numbers</h2>
     <p class="lede" data-k="corridor.lede"></p>
   </div>
   <div class="corridor">
-    <figure>
-      <div class="legend" id="corr-legend"></div>
-      <div id="spine-map"></div>
-      <figcaption data-k="corridor.mapCaption"></figcaption>
-    </figure>
     <div class="cside">
       <div class="cstats" id="corr-stats"></div>
       <p class="cworld" id="corr-world"></p>
