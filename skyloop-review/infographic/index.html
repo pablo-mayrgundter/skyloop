@@ -216,6 +216,30 @@ table.mx tr.note td{font-size:12.5px;color:var(--ink-2);padding:0 0 10px;border-
 .repo a{font:500 16px var(--f-mono);word-break:break-word}
 footer{font-size:12px;color:var(--ink-3);display:grid;gap:6px}
 footer code{font-family:var(--f-mono);font-size:11.5px}
+/* corridor map (ported from the overview page's lead map; this concept's line in its accent) */
+.corridor{display:grid;grid-template-columns:minmax(0,1.9fr) minmax(0,1fr);gap:22px 40px;align-items:start}
+.corridor figure{gap:10px}
+.corridor figcaption{max-width:92ch}
+.legend i.lg-line{width:26px;height:5px;border-radius:3px;background:var(--acc);vertical-align:middle}
+.legend i.lg-stn{width:10px;height:10px;border-radius:50%;background:var(--ink);vertical-align:-1px}
+.legend i.lg-feed{width:26px;height:0;border-radius:0;border-top:2px dashed var(--quiet);opacity:.6;vertical-align:middle}
+.cside{display:grid;gap:14px;min-width:0}
+.cside .eyebrow{margin-top:6px}
+.cstats{display:grid;grid-template-columns:minmax(0,1fr);border-top:2px solid var(--ink-3)}
+.cstats.mine{border-top-color:var(--acc)}
+.cstats div{display:grid;gap:2px;align-content:start;padding:10px 0;border-bottom:1px solid var(--rule);min-width:0}
+.cstats b{font:600 26px/1.1 var(--f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.cstats.mine b{color:var(--acc)}
+.cstats span{font-size:13px;color:var(--ink-2)}
+.cworld{font-size:13.5px;color:var(--ink-2)}
+.cworld b{color:var(--ink);font-weight:600}
+svg text.halo-m{paint-order:stroke;stroke:var(--surface);stroke-linejoin:round}
+@media (max-width:900px){
+  .corridor{grid-template-columns:minmax(0,1fr)}
+  .cstats{grid-template-columns:repeat(2,minmax(0,1fr));column-gap:16px}
+  .cstats div:last-child:nth-child(odd){grid-column:1 / -1}
+}
+@media (max-width:640px){ .cstats b{font-size:22px} }
 /* svg classes */
 .f-surface{fill:var(--surface)} .f-bg{fill:var(--bg)} .f-bore{fill:var(--bore)}
 .f-ink{fill:var(--ink)} .f-ink2{fill:var(--ink-2)} .f-ink3{fill:var(--ink-3)}
@@ -285,6 +309,27 @@ svg .td{font-family:var(--f-display);font-weight:600;letter-spacing:.03em}
     <div><b><span data-k="hero.tether_MN"></span> MN</b><span>per tether, V-pairs every <span data-k="hero.tetherSpacing_km"></span> km</span></div>
   </div>
   <p class="scale-note"><span class="stamp">NOT TO SCALE.</span> <span data-k="hero.scaleNote"></span></p>
+</section>
+
+<section aria-labelledby="corr-h">
+  <div class="sec-head">
+    <div class="eyebrow" data-k="corridor.eyebrow"></div>
+    <h2 id="corr-h" data-k="corridor.title"></h2>
+    <p class="lede" data-k="corridor.lede"></p>
+  </div>
+  <div class="corridor">
+    <figure>
+      <div class="legend" id="corr-legend"></div>
+      <div id="spine-map"></div>
+      <figcaption data-k="corridor.mapCaption"></figcaption>
+    </figure>
+    <div class="cside">
+      <div class="cstats" id="corr-stats"></div>
+      <div class="eyebrow" data-k="corridor.mineTitle"></div>
+      <div class="cstats mine" id="corr-mine"></div>
+      <p class="cworld" id="corr-world"></p>
+    </div>
+  </div>
 </section>
 
 <section aria-labelledby="des-h">
@@ -458,6 +503,45 @@ const DATA = {
   hero:{tag:"surviving design, Mach 4", alt_km:20, bore_m:40, envR_m:108, ramp_km:237, rampMach:4, rampG:0.3,
     tetherSpacing_km:3, tether_MN:45, route_km:"3,974", jet_km:[10,12], pressure_Pa:"~80–190", podSeats:50, pod_t:17,
     scaleNote:"Altitude is to scale; distances are not. NYC–LAX is 3,974 km, so the 20 km height would be a sliver 0.5 % of the route's length, and each launch ramp is ~237 km long at Mach 4 and 0.3 g. A 40 m bore in a ~108 m-radius envelope would be invisible at this scale, so the lens magnifies it, and the pod and guideway inside the lens are drawn several times too large. Tube pressure in the best design points is ~80–190 Pa. Numbers are from the review's screening models (hybrid.md, stability.md, physics.md, system.md)."},
+  /* Corridor map, ported from the overview page (DATA.corridor there). Trips: boom-shield/network-maps/coverage/coverage.md (650 M national, 600–700;
+     217 M addressable at M2.0; spine 81 M pax/yr); > 2,500 km: global/demand_bands.csv and coverage Table 1 (109 M modelled markets, ~140 M national;
+     CN 19, RU 11, CA 10, AU 8); spine and feeders: trunk/trunk.md; LAS–LAX 380 km: trunk/greedy_growth.csv (3,993.8 − 3,613.6 km); ranking: global/global.md.
+     Skyloop figures: system/system.md (capacity table: 50-seat pods at M4, 126 M/yr moving block, 9.4 M brick-wall, spine needs 81 M; d2d.csv 2.73 h at M4)
+     and README.md (~9 M). Outline is a coarse schematic (lon, lat). */
+  corridor:{
+    eyebrow:"The corridor · one spine for a continent",
+    title:"The corridor: USA Coast-to-Coast",
+    lede:"Skyloop is sized and costed on the same corridor as the other two studies: one 3,614 km spine that gathers a continent's long-haul flows, plus 380 km on to Los Angeles. NYC–LAX is only the reference trip.",
+    legend:{line:"spine + LAX extension (this concept)", stn:"station", feed:"Boomless feeders (BoomShield, for comparison)"},
+    mapCaption:"Schematic projection, not a surveyed line. The 3,614 km spine LAS–DEN–OMA–CHI–CLE–NYC is common to all three studies; Skyloop's tube serves its stations and adds LAX at the west end. Each leg would run at 20 km, with launch ramps (~237 km at Mach 4) down to ground portals at its ends. The faint dashed lines are BoomShield's unshielded Mach 1.15 feeder legs into Las Vegas and western Pennsylvania (open circle), shown only for comparison. Southern flows (Florida–West, Texas–Northeast) are not captured.",
+    aria:"Schematic map of the contiguous US. Skyloop's line runs Los Angeles, Las Vegas, Denver, Omaha, Chicago, Cleveland, New York: the 3,614 km spine shared by all three studies plus a 380 km extension to Los Angeles. Faint dashed lines show BoomShield's feeder legs from San Francisco, Phoenix and Seattle into Las Vegas, and from Boston, Philadelphia, Washington and Toronto into western Pennsylvania.",
+    corner:["3,614 km spine","+ 380 km LAS–LAX","~81 M pax/yr"],
+    mineTitle:"Skyloop on this corridor",
+    mine:[
+      {v:"126 M", l:"passengers a year per tube pair at Mach 4 with a 10 s moving block (not certified anywhere), against the ~81 M the spine needs; ~9 M (9.4 M) under certified brick-wall braking"},
+      {v:"2.73 h", l:"NYC–LAX door to door at Mach 4, if the floating tube could be built (subsonic jet 7.29 h)"}
+    ],
+    stats:[
+      {v:"~650 M", l:"US domestic one-way air trips a year (600–700 M)"},
+      {v:"~217 M", l:"addressable at Mach 2 (BoomShield's measure: a shield saves ≥ 10 min)"},
+      {v:"~110–140 M", l:"US trips a year over 2,500 km (109 M in the modelled markets, ~140 M scaled to the national total)"},
+      {v:"3,614 km", l:"spine LAS–DEN–OMA–CHI–CLE–NYC; the tubes add 380 km LAS–LAX"},
+      {v:"~81 M", l:"passengers a year on the spine, the demand all three studies size for"}
+    ],
+    worldLead:"Other countries' domestic long-haul markets are smaller, in trips a year over 2,500 km:",
+    world:[["China",19],["Russia",11],["Canada",10],["Australia",8]],
+    worldNote:"gravity estimates, ±2×",
+    worldRank:"In BoomShield's global ranking no corridor outside the US scores better: the best, Europe–Gulf (LON–IST–DXB), reaches 55–65 % of the US spine's B/C.",
+    worldUrl:"https://github.com/pablo-mayrgundter/skyloop/blob/main/boom-shield/network-maps/global/global.md",
+    /* projection and outline exactly as on the overview page: x = (lon − lon0)·k·cos(lat0) + pad, y = (latTop − lat)·k + pad */
+    proj:{W:470, H:262, k:9.6, lat0:39, lon0:-125, latTop:49.6, pad:12},
+    /* lat, lon */
+    metros:{LAS:[36.08,-115.15],DEN:[39.86,-104.67],OMA:[41.30,-95.89],CHI:[41.97,-87.91],CLE:[41.41,-81.85],NYC:[40.78,-73.87],
+      LAX:[33.94,-118.41],SFO:[37.62,-122.38],PHX:[33.43,-112.01],SEA:[47.45,-122.31],BOS:[42.37,-71.01],PHL:[39.87,-75.24],WAS:[38.85,-77.04],YYZ:[43.68,-79.63],wPA:[41.15,-79.3]},
+    line:["LAX","LAS","DEN","OMA","CHI","CLE","NYC"],
+    feeders:[["LAX","LAS"],["SFO","LAS"],["PHX","LAS"],["SEA","LAS"],["BOS","wPA"],["PHL","wPA"],["WAS","wPA"],["YYZ","wPA"]],
+    outline:[[-124.7,48.4],[-123,49],[-95.2,49],[-94.8,49.4],[-89.6,48],[-84.6,46.5],[-82.4,43],[-79,43.3],[-76.3,44.1],[-74.7,45],[-71.5,45],[-70,46.7],[-69.2,47.4],[-67.8,47.1],[-67,45],[-70.2,43.6],[-70.6,42.6],[-70,41.8],[-71.9,41.3],[-74,40.6],[-74.9,38.9],[-76,37],[-75.5,35.2],[-77.9,33.9],[-79.9,32.7],[-81.4,30.7],[-80.6,28.4],[-80.1,26],[-80.4,25.2],[-81.1,25.1],[-81.8,26.7],[-82.7,28],[-83,29.1],[-84.3,30],[-85.4,29.7],[-86.5,30.4],[-88,30.4],[-89.6,30.2],[-89.4,29],[-90.5,29.1],[-92,29.6],[-93.8,29.7],[-94.8,29.3],[-96.8,28],[-97.4,26],[-99.1,26.4],[-99.5,27.5],[-101.4,29.8],[-103.1,29],[-104.7,30],[-106.5,31.8],[-108.2,31.8],[-111.1,31.3],[-114.8,32.5],[-117.1,32.5],[-118.5,34],[-120.6,34.6],[-121.9,36.6],[-122.5,37.8],[-123.8,39.8],[-124.2,41.8],[-124.5,43],[-124,46.3]]
+  },
   v01:{eyebrow:"v0.1 · the original concept, docs/01–08, 2025",
     title:"A floating near-vacuum tube with gliding darts",
     back:"← Back to v0.2 · current",
@@ -729,8 +813,41 @@ function hero(){
   host.innerHTML=s;
 }
 hero();
+/* ===== CORRIDOR MAP: the overview page's lead map (same projection, outline and label offsets), with this concept's line in its accent ===== */
+(function(){
+  const N=DATA.corridor, st=a=>a.map(s=>`<div><b>${esc(s.v)}</b><span>${esc(s.l)}</span></div>`).join('');
+  $('#corr-legend').innerHTML=`<span><i class="lg-line"></i>${esc(N.legend.line)}</span><span><i class="lg-stn"></i>${esc(N.legend.stn)}</span><span><i class="lg-feed"></i>${esc(N.legend.feed)}</span>`;
+  $('#corr-stats').innerHTML=st(N.stats);
+  $('#corr-mine').innerHTML=st(N.mine);
+  $('#corr-world').innerHTML=`${esc(N.worldLead)} <b>${N.world.map(([c,v])=>`${esc(c)} ~${v} M`).join(', ')}</b> (${esc(N.worldNote)}). ${esc(N.worldRank)} <a href="${N.worldUrl}" target="_blank" rel="noopener">global.md</a>`;
+})();
+function spineMap(){
+  const N=DATA.corridor, J=N.proj, host=$('#spine-map'), W=J.W, H=J.H, c=Math.cos(J.lat0*Math.PI/180);
+  const sc=(host.clientWidth||700)/W;                    // rendered px per unit: labels keep a constant on-screen size
+  const fS=14/sc, fO=12/sc, hw=3/sc;                     // station labels, other labels, halo width
+  const P=([la,lo])=>[(lo-J.lon0)*J.k*c+J.pad, (J.latTop-la)*J.k+J.pad];
+  const pt=code=>P(N.metros[code]);
+  const stn=new Set(N.line);
+  let s=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(N.aria)}">`;
+  s+=`<path d="M${N.outline.map(([lo,la])=>P([la,lo]).map(v=>v.toFixed(1)).join(' ')).join(' L')} Z" class="f-surface s-rule" stroke-width="1"/>`;
+  // BoomShield's Boomless feeders, faint, for comparison only
+  N.feeders.forEach(([a,b])=>{const [x1,y1]=pt(a),[x2,y2]=pt(b); s+=`<path d="M${r1(x1)} ${r1(y1)} L${r1(x2)} ${r1(y2)}" class="s-quiet" stroke-width="1.3" stroke-dasharray="4 3" opacity=".5" fill="none"/>`;});
+  // this concept's line: the shared spine plus the LAX extension
+  s+=`<path d="M${N.line.map(code=>pt(code).map(v=>v.toFixed(1)).join(' ')).join(' L')}" class="s-acc" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>`;
+  // label offsets in ems of the label's own size: [dx, dy, anchor]; null = dot only (as on the overview page)
+  const L={LAS:[-0.5,-0.55,'end'],DEN:[0,-0.75,'middle'],OMA:[0,-0.75,'middle'],CHI:[-0.1,-0.75,'middle'],CLE:[0,1.35,'middle'],NYC:[0.6,0.3,'start'],
+    LAX:[-0.5,0.95,'end'],SFO:[0.1,-0.7,'middle'],PHX:[0,1.3,'middle'],SEA:[0.5,0.35,'start'],BOS:[0,-0.7,'middle'],WAS:[0,1.35,'middle'],YYZ:[0,-0.7,'middle'],PHL:null,wPA:null};
+  Object.keys(N.metros).forEach(code=>{const [x,y]=pt(code), sp=stn.has(code);
+    if(code==='wPA'){s+=`<circle cx="${r1(x)}" cy="${r1(y)}" r="3" class="f-surface s-quiet" stroke-width="1.6" opacity=".6"/>`;return;}
+    s+=sp?`<circle cx="${r1(x)}" cy="${r1(y)}" r="4.5" class="f-ink s-surface" stroke-width="1.5"/>`:`<circle cx="${r1(x)}" cy="${r1(y)}" r="2.6" class="f-ink3" opacity=".7"/>`;
+    const l=L[code]; if(!l) return; const f=sp?fS:fO;
+    s+=`<text x="${r1(x+l[0]*f)}" y="${r1(y+l[1]*f)}" font-size="${r1(f)}" text-anchor="${l[2]}" class="${sp?'f-ink':'f-ink3'} tm halo-m" stroke-width="${r1(hw)}" font-weight="${sp?600:400}">${code}</text>`;});
+  N.corner.forEach((t,i)=>{s+=`<text x="16" y="${r1(H-12-(N.corner.length-1-i)*fO*1.25)}" font-size="${r1(fO)}" class="${i===N.corner.length-1?'f-ink2':'f-acc'} tm">${esc(t)}</text>`;});
+  host.innerHTML=s+'</svg>';
+}
+spineMap();
 /* width-dependent figures; skipped while their version panel is hidden, re-run when its tab is shown */
-function redraw(){ const p=$('#panel-v02'); if(p&&p.hidden) return; hero(); d2d(); }
+function redraw(){ const p=$('#panel-v02'); if(p&&p.hidden) return; hero(); spineMap(); d2d(); }
 let lastW=window.innerWidth; window.addEventListener('resize',()=>{if(Math.abs(window.innerWidth-lastW)<4) return; lastW=window.innerWidth; redraw();});
 
 /* ===== v0.1: ORIGINAL CONCEPT + IDEA LEDGER; v0.2: HOW IT DIFFERS ===== */
